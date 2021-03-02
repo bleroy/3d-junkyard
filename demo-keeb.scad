@@ -25,6 +25,18 @@ key_side = 13.95;
 // rounded corner radius
 rounded_corner = 1;
 
+// nut size
+nut_size = 6.25;
+
+// nut thickness
+nut_thickness = 2.25;
+
+// nut depth
+nut_depth = 5;
+
+// screw diameter
+screw_diameter = 2.75;
+
 function maximum(a, i = 0) = (i < len(a)) ? max(a[i], maximum(a, i + 1)) : 0;
 function minimum(a, i = 0) = (i < len(a)) ? min(a[i], minimum(a, i + 1)) : 9999;
 
@@ -58,8 +70,8 @@ module pyramid(bottom_width, bottom_length, top_width, top_length, height) {
 
 module nut_hole(size, height) {
   cylinder($fn = 6, r = size / sqrt(3), h = height, center = true);
-  translate([size / 2, 0, 0])
-    cube([size, size, height], center=true);
+  translate([size * sqrt(3) / 4, 0, 0])
+    cube([size * sqrt(3) / 4, size, height], center=true);
 }
 
 // Build the box
@@ -86,8 +98,13 @@ difference() {
     }
   }
   // Remove nut holes
-
+  translate([
+    row_offsets[0] - (cols - 1) / 2 * (key_side + margin_inner) - key_side / 2 - nut_size / sqrt(3) - margin / 4,
+    ((len(row_offsets) - 1) / 2) * (key_side + margin_inner), 0
+  ]) {
+    translate([0, 0, nut_depth])
+      nut_hole(nut_size, nut_thickness);
+    translate([0, 0, (box_height - top_thickness) / 2 - 1])
+    cylinder(r = screw_diameter / 2, h = box_height - top_thickness + 1, center = true);
+  }
 }
-
-// translate([0,0,20])
-//   nut_hole(10, 3);
