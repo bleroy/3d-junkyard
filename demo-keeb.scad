@@ -74,10 +74,17 @@ module nut_hole(size, height) {
     cube([size * sqrt(3) / 4, size, height], center=true);
 }
 
+module screw_receiver(screw_diameter, screw_depth, nut_thickness, nut_size, nut_depth) {
+  translate([0, 0, nut_depth])
+    nut_hole(nut_size, nut_thickness);
+  translate([0, 0, screw_depth / 2 - 1])
+    cylinder(r = screw_diameter / 2, h = screw_depth + 1, center = true);
+}
+
 // Build the box
 difference() {
   half_box(
-    width = cols * (key_side + margin_inner) - margin_inner + 2 * margin + maximum(row_offsets) - minimum(row_offsets),
+    width = cols * (key_side + margin_inner) - margin_inner + 2 * margin + 2 / sqrt(3) * nut_size + maximum(row_offsets) - minimum(row_offsets),
     depth = len(row_offsets) * (key_side + margin_inner) - margin_inner + 2 * margin,
     height = box_height);
   // Remove key holes
@@ -100,11 +107,28 @@ difference() {
   // Remove nut holes
   translate([
     row_offsets[0] - (cols - 1) / 2 * (key_side + margin_inner) - key_side / 2 - nut_size / sqrt(3) - margin / 4,
-    ((len(row_offsets) - 1) / 2) * (key_side + margin_inner), 0
+    ((len(row_offsets) - 1) / 2) * (key_side + margin_inner) + (key_side - nut_size) / 2, 0
   ]) {
-    translate([0, 0, nut_depth])
-      nut_hole(nut_size, nut_thickness);
-    translate([0, 0, (box_height - top_thickness) / 2 - 1])
-    cylinder(r = screw_diameter / 2, h = box_height - top_thickness + 1, center = true);
+    screw_receiver(screw_diameter, box_height - top_thickness, nut_thickness, nut_size, nut_depth);
+  }
+  translate([
+    row_offsets[len(row_offsets) - 1] - (cols - 1) / 2 * (key_side + margin_inner) - key_side / 2 - nut_size / sqrt(3) - margin / 4,
+    -((len(row_offsets) - 1) / 2) * (key_side + margin_inner) - (key_side - nut_size) / 2, 0
+  ]) {
+    screw_receiver(screw_diameter, box_height - top_thickness, nut_thickness, nut_size, nut_depth);
+  }
+  translate([
+    row_offsets[0] + (cols - 1) / 2 * (key_side + margin_inner) + key_side / 2 + nut_size / sqrt(3) + margin / 4,
+    ((len(row_offsets) - 1) / 2) * (key_side + margin_inner) + (key_side - nut_size) / 2, 0
+  ]) {
+    rotate([0, 0, 180])
+      screw_receiver(screw_diameter, box_height - top_thickness, nut_thickness, nut_size, nut_depth);
+  }
+  translate([
+    row_offsets[len(row_offsets) - 1] + (cols - 1) / 2 * (key_side + margin_inner) + key_side / 2 + nut_size / sqrt(3) + margin / 4,
+    -((len(row_offsets) - 1) / 2) * (key_side + margin_inner) - (key_side - nut_size) / 2, 0
+  ]) {
+    rotate([0, 0, 180])
+      screw_receiver(screw_diameter, box_height - top_thickness, nut_thickness, nut_size, nut_depth);
   }
 }
