@@ -132,6 +132,16 @@ pi_margin = 5;
 pi_nut_size = 3.8;
 pi_nut_thickness = 1.9;
 
+pi_center_x = box_width / 2 - pi_distance_from_wall - (pi_width) / 2;
+pi_pillar_horizontal = pi_width / 2 - pi_hole_horizontal_distance;
+pi_pillar_vertical = pi_depth / 2 - pi_hole_vertical_distance;
+
+module pi_support_screw_hole(hole_radius, height, nut_size, nut_thickness) {
+  cylinder(r = hole_radius, h = height + 1, center = true);
+  translate([0, 0, -height / 2 + nut_thickness - 1])
+    cylinder($fn = 6, r = nut_size / sqrt(3), h = nut_thickness + 1, center = true);
+}
+
 // Part rendering
 difference() {
   union() {
@@ -202,14 +212,14 @@ difference() {
     }
     if (part == "bottom" || part == "all") {
       // Add pi pillars
-      translate([box_width / 2 - pi_distance_from_wall - (pi_width) / 2, 0, -pi_thickness / 2 - pi_board_thickness - 1]) {
-        translate([pi_width / 2 - pi_hole_horizontal_distance, pi_depth / 2 - pi_hole_vertical_distance, 0])
+      translate([pi_center_x, 0, -pi_thickness / 2 - pi_board_thickness - 1]) {
+        translate([pi_pillar_horizontal, pi_pillar_vertical, 0])
           cylinder(r = pi_pillar_radius, h = pi_thickness / 2 - pi_board_thickness + 1, center = true);
-        translate([-pi_width / 2 + pi_hole_horizontal_distance, pi_depth / 2 - pi_hole_vertical_distance, 0])
+        translate([-pi_pillar_horizontal, pi_pillar_vertical, 0])
           cylinder(r = pi_pillar_radius, h = pi_thickness / 2 - pi_board_thickness + 1, center = true);
-        translate([pi_width / 2 - pi_hole_horizontal_distance, -pi_depth / 2 + pi_hole_vertical_distance, 0])
+        translate([pi_pillar_horizontal, -pi_pillar_vertical, 0])
           cylinder(r = pi_pillar_radius, h = pi_thickness / 2 - pi_board_thickness + 1, center = true);
-        translate([-pi_width / 2 + pi_hole_horizontal_distance, -pi_depth / 2 + pi_hole_vertical_distance, 0])
+        translate([-pi_pillar_horizontal, -pi_pillar_vertical, 0])
           cylinder(r = pi_pillar_radius, h = pi_thickness / 2 - pi_board_thickness + 1, center = true);
       }
     }
@@ -217,31 +227,19 @@ difference() {
   // Remove pi pillar screw holes
   if (part == "bottom" || part == "all") {
     // Add pi pillars
-    translate([box_width / 2 - pi_distance_from_wall - (pi_width) / 2, 0, -bottom_height / 2]) {
-      translate([pi_width / 2 - pi_hole_horizontal_distance, pi_depth / 2 - pi_hole_vertical_distance, 0]) {
-        cylinder(r = pi_hole_radius, h = bottom_height + 1, center = true);
-        translate([0, 0, -bottom_height / 2 + pi_nut_thickness - 1])
-          rotate([0, 0, 90])
-            cylinder($fn = 6, r = pi_nut_size / sqrt(3), h = pi_nut_thickness + 1, center = true);
-      }
-      translate([-pi_width / 2 + pi_hole_horizontal_distance, pi_depth / 2 - pi_hole_vertical_distance, 0]) {
-        cylinder(r = pi_hole_radius, h = bottom_height + 1, center = true);
-        translate([0, 0, -bottom_height / 2 + pi_nut_thickness - 1])
-          rotate([0, 0, 90])
-            cylinder($fn = 6, r = pi_nut_size / sqrt(3), h = pi_nut_thickness + 1, center = true);
-      }
-      translate([pi_width / 2 - pi_hole_horizontal_distance, -pi_depth / 2 + pi_hole_vertical_distance, 0]) {
-        cylinder(r = pi_hole_radius, h = bottom_height + 1, center = true);
-        translate([0, 0, -bottom_height / 2 + pi_nut_thickness - 1])
-          rotate([0, 0, 90])
-            cylinder($fn = 6, r = pi_nut_size / sqrt(3), h = pi_nut_thickness + 1, center = true);
-      }
-      translate([-pi_width / 2 + pi_hole_horizontal_distance, -pi_depth / 2 + pi_hole_vertical_distance, 0]) {
-        cylinder(r = pi_hole_radius, h = bottom_height + 1, center = true);
-        translate([0, 0, -bottom_height / 2 + pi_nut_thickness - 1])
-          rotate([0, 0, 90])
-            cylinder($fn = 6, r = pi_nut_size / sqrt(3), h = pi_nut_thickness + 1, center = true);
-      }
+    translate([pi_center_x, 0, -bottom_height / 2]) {
+      translate([pi_pillar_horizontal, pi_pillar_vertical, 0])
+        rotate([0, 0, 90])
+          pi_support_screw_hole(pi_hole_radius, bottom_height, pi_nut_size, pi_nut_thickness);
+      translate([-pi_pillar_horizontal, pi_pillar_vertical, 0])
+        rotate([0, 0, 90])
+          pi_support_screw_hole(pi_hole_radius, bottom_height, pi_nut_size, pi_nut_thickness);
+      translate([pi_pillar_horizontal, -pi_pillar_vertical, 0])
+        rotate([0, 0, 90])
+          pi_support_screw_hole(pi_hole_radius, bottom_height, pi_nut_size, pi_nut_thickness);
+      translate([-pi_pillar_horizontal, -pi_pillar_vertical, 0])
+        rotate([0, 0, 90])
+          pi_support_screw_hole(pi_hole_radius, bottom_height, pi_nut_size, pi_nut_thickness);
     }
   }
 }
