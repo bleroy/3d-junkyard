@@ -9,7 +9,7 @@ stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
 module nil() {}
 
-box_width = 6.45;
+box_width = 6.43;
 box_height = 4.7;
 box_inner_width = 6;
 box_inner_corner_radius = 2;
@@ -17,7 +17,7 @@ box_cross_x_thickness = 1.3;
 box_cross_y_thickness = 1.1;
 box_cross_width = 4;
 box_bottom_thickness = 0.7;
-box_bottom_outer_offset = 0.05;
+box_bottom_outer_offset = 0.02;
 
 module kailh_box() {
   union() {
@@ -40,7 +40,7 @@ module kailh_box() {
 
 atari_box_width = 6.45;
 atari_box_height = 4.7;
-atari_square_width = 3.05;
+atari_square_width = 3.15;
 atari_square_depth = 2.8;
 atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
