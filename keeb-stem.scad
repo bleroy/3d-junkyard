@@ -34,7 +34,7 @@ module kailh_box() {
     cube([box_cross_width, box_cross_x_thickness, box_height], center = true);
     cube([box_cross_y_thickness, box_cross_width, box_height], center = true);
     translate([0, 0, (box_bottom_thickness - box_height) / 2])
-      cube([box_width + box_bottom_outer_offset * 2, box_width + box_bottom_outer_offset * 2, box_bottom_thickness], center = true);
+      cube([box_width, box_width, box_bottom_thickness], center = true);
   }
 }
 
@@ -54,7 +54,7 @@ module atari130xe_box() {
         cylinder(r = atari_square_width * sqrt(2) / 2, h = atari_box_height - atari_square_depth + 0.1);
     }
     translate([0, 0, (atari_box_bottom_thickness - atari_box_height) / 2])
-      cube([atari_box_width + atari_box_bottom_outer_offset * 2, atari_box_width + atari_box_bottom_outer_offset * 2, atari_box_bottom_thickness], center = true);
+      cube([atari_box_width, atari_box_width, atari_box_bottom_thickness], center = true);
   }
 }
 
@@ -77,8 +77,8 @@ kailh_stem_main_hole_depth = 2;
 kailh_stem_main_hole_corner_radius = 0.5;
 kailh_stem_rail_thickness = 0.6;
 kailh_stem_rail_width = 0.5;
-kailh_stem_rail1_x = 0.9;
-kailh_stem_rail2_x = 3.05;
+kailh_stem_rail1_x = 1.0;
+kailh_stem_rail2_x = 3.1;
 kailh_stem_rail3_y = 2.9;
 kailh_clicker_top_height = 1.3;
 kailh_clicker_top_length = 0.3;
