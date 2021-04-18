@@ -7,9 +7,15 @@ cap_type = "Atari130XE"; // [KailhBox, Atari130XE]
 // Stem type
 stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
+// Revision
+rev = "6a";
+
+// Carve revision
+carve_rev = false;
+
 module nil() {}
 
-box_width = 6.44;
+box_width = 6.40;
 box_height = 4.7;
 box_inner_width = 6;
 box_inner_corner_radius = 2;
@@ -38,7 +44,7 @@ module kailh_box() {
   }
 }
 
-atari_box_width = 6.44;
+atari_box_width = 6.40;
 atari_box_height = 4.7;
 atari_square_width = 3.15;
 atari_square_depth = 2.8;
@@ -64,7 +70,7 @@ kailh_stem_spring_column_bottom_diameter = 1.5;
 kailh_stem_spring_column_upper_diameter = 1;
 kailh_stem_spring_column_top_height = 0.3;
 kailh_stem_spring_column_cone_height = 1.5;
-kailh_stem_spring_column_offset = -0.55;
+kailh_stem_spring_column_offset = -0.50;
 kailh_stem_main_height = 5;
 kailh_stem_main_width = box_width;
 kailh_stem_main_depth_left = 4.0;
@@ -151,6 +157,12 @@ module kailh_stem() {
                 cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height + 1, center = true);
             }
           }
+        if (carve_rev) {
+          translate([2.2, -box_width / 2 + 0.4, 2])
+            rotate([90, 180, 0])
+              linear_extrude(height = 0.5)
+                text(rev, size = 3);
+        }
       }
     // Spring cone
     translate([0, kailh_stem_spring_column_offset, kailh_stem_spring_column_height / 2])
