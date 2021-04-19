@@ -8,7 +8,7 @@ cap_type = "Atari130XE"; // [KailhBox, Atari130XE]
 stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
 // Revision
-rev = "6a";
+rev = "7";
 
 // Carve revision
 carve_rev = false;
@@ -46,7 +46,7 @@ module kailh_box() {
 
 atari_box_width = 6.40;
 atari_box_height = 4.7;
-atari_square_width = 3.15;
+atari_square_width = 3.25;
 atari_square_depth = 2.8;
 atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
@@ -157,10 +157,11 @@ module kailh_stem() {
                 cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height + 1, center = true);
             }
           }
+        // Revision number
         if (carve_rev) {
-          translate([2.2, -box_width / 2 + 0.4, 2])
+          translate([2.2, -box_width / 2 + 0.2, 2])
             rotate([90, 180, 0])
-              linear_extrude(height = 0.5)
+              linear_extrude(height = 0.4)
                 text(rev, size = 3);
         }
       }
