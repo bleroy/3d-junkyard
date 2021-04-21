@@ -13,3 +13,8 @@ sweep.scad
 toothed-belt.scad
 trefoil-knot-sweep.scad
 twisted-torus-ring.scad
+*.kicad_pcb-bak
+*.sch-bak
+*-cache.lib
+fp-info-cache
+fp-lib-table
