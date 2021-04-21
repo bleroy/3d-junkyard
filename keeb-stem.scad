@@ -8,7 +8,7 @@ cap_type = "Atari130XE"; // [KailhBox, Atari130XE]
 stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
 // Revision
-rev = "7";
+rev = "8";
 
 // Carve revision
 carve_rev = false;
@@ -50,6 +50,7 @@ atari_square_width = 3.25;
 atari_square_depth = 2.8;
 atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
+atari_circle_radius = atari_square_width * sqrt(2) / 2;
 
 module atari130xe_box() {
   union() {
@@ -57,7 +58,11 @@ module atari130xe_box() {
       cube([atari_box_width, atari_box_width, atari_box_height], center = true);
       cube([atari_square_width, atari_square_width, atari_box_height + 0.1], center = true);
       translate([0, 0, (atari_square_depth - 1) / 2])
-        cylinder(r = atari_square_width * sqrt(2) / 2, h = atari_box_height - atari_square_depth + 0.1);
+        cylinder(r = atari_circle_radius, h = atari_box_height - atari_square_depth + 0.1);
+      // Add a recess at the bottom so if resin residues cling in the angles, they do so without preventing the cap from going in completely.
+      rotate([0, 0, 45])
+        translate([0, 0, 1 - atari_square_depth])
+          cylinder(h = 1, d1 = atari_circle_radius * 2 + 1, d2 = atari_circle_radius * 2, $fn = 4);
     }
     translate([0, 0, (atari_box_bottom_thickness - atari_box_height) / 2])
       cube([atari_box_width, atari_box_width, atari_box_bottom_thickness], center = true);
@@ -66,15 +71,15 @@ module atari130xe_box() {
 
 kailh_stem_horizontal_offset = 0.47;
 kailh_stem_spring_column_height = 6.3;
-kailh_stem_spring_column_bottom_diameter = 1.5;
+kailh_stem_spring_column_bottom_diameter = 1.45;
 kailh_stem_spring_column_upper_diameter = 1;
 kailh_stem_spring_column_top_height = 0.3;
 kailh_stem_spring_column_cone_height = 1.5;
-kailh_stem_spring_column_offset = -0.50;
+kailh_stem_spring_column_offset = -0.60;
 kailh_stem_main_height = 5;
 kailh_stem_main_width = box_width;
 kailh_stem_main_depth_left = 4.0;
-kailh_stem_main_depth_middle = 4.7;
+kailh_stem_main_depth_middle = 4.65;
 kailh_stem_main_depth_right = 3.45;
 kailh_stem_main_extension_width = 1.8;
 kailh_stem_main_hole_diameter = 3.8;
@@ -83,7 +88,7 @@ kailh_stem_main_hole_depth = 2;
 kailh_stem_main_hole_corner_radius = 0.5;
 kailh_stem_rail_thickness = 0.6;
 kailh_stem_rail_width = 0.35;
-kailh_stem_rail1_x = 1.0;
+kailh_stem_rail1_x = 0.9;
 kailh_stem_rail2_x = 3.1;
 kailh_stem_rail3_y = 2.9;
 kailh_clicker_top_height = 1.3;
