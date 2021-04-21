@@ -1736,7 +1736,7 @@
     )
   )
 
-  (module Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F2572)
+  (module Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F2572)
     (at 271.78 20.32)
     (descr "Modified 1.5 footprint for Cherry MX mounted Atari XE function keys")
     (path /60952EEE)
@@ -2124,7 +2124,7 @@
     )
   )
 
-  (module Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F2653)
+  (module Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F2653)
     (at 351.79 20.32)
     (descr "Modified 1.5 footprint for Cherry MX mounted Atari XE function keys")
     (path /608057B8)
@@ -2336,7 +2336,7 @@
     )
   )
 
-  (module Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F26CC)
+  (module Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F26CC)
     (at 378.46 20.32)
     (descr "Modified 1.5 footprint for Cherry MX mounted Atari XE function keys")
     (path /608057BE)
@@ -2416,7 +2416,7 @@
     )
   )
 
-  (module Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F26F7)
+  (module Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F26F7)
     (at 325.12 20.32)
     (descr "Modified 1.5 footprint for Cherry MX mounted Atari XE function keys")
     (path /608057B2)
@@ -2592,7 +2592,7 @@
     )
   )
 
-  (module Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F275E)
+  (module Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB (layer F.Cu) (tedit 607FA9EA) (tstamp 607F275E)
     (at 298.45 20.32)
     (descr "Modified 1.5 footprint for Cherry MX mounted Atari XE function keys")
     (path /608057AC)

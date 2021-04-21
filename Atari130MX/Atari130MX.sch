@@ -459,7 +459,7 @@ U 1 1 608034A0
 P 2000 4600
 F 0 "SW_Spc" H 2000 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2000 4794 50  0000 C CNN
-F 2 "Atari130KB:SW_Cherry_MX_Atari_Space" H 2000 4800 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_Atari_Space" H 2000 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2000 4800 50  0001 C CNN
 	1    2000 4600
 	1    0    0    -1  
@@ -525,7 +525,7 @@ U 1 1 608057AC
 P 7750 5700
 F 0 "SW_Str" H 7750 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 7750 5894 50  0000 C CNN
-F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 7750 5900 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 7750 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7750 5900 50  0001 C CNN
 	1    7750 5700
 	1    0    0    -1  
@@ -536,7 +536,7 @@ U 1 1 608057B2
 P 8450 5700
 F 0 "SW_Sel" H 8450 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 8450 5894 50  0000 C CNN
-F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 8450 5900 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 8450 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 8450 5900 50  0001 C CNN
 	1    8450 5700
 	1    0    0    -1  
@@ -547,7 +547,7 @@ U 1 1 608057B8
 P 9150 5700
 F 0 "SW_Opt" H 9150 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 9150 5894 50  0000 C CNN
-F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 9150 5900 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 9150 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 9150 5900 50  0001 C CNN
 	1    9150 5700
 	1    0    0    -1  
@@ -558,7 +558,7 @@ U 1 1 608057BE
 P 9850 5700
 F 0 "SW_Rst" H 9850 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 9850 5894 50  0000 C CNN
-F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 9850 5900 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 9850 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 9850 5900 50  0001 C CNN
 	1    9850 5700
 	1    0    0    -1  
@@ -613,7 +613,7 @@ U 1 1 60952EEE
 P 2000 5150
 F 0 "SW_Hlp" H 2000 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2000 5344 50  0000 C CNN
-F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 2000 5350 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 2000 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2000 5350 50  0001 C CNN
 	1    2000 5150
 	1    0    0    -1  
