@@ -47,10 +47,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_<1
+L Switch:SW_MEC_5G SW_<
 U 1 1 607E622F
 P 4900 1000
-F 0 "SW_<1" H 4900 1285 50  0000 C CNN
+F 0 "SW_<" H 4900 1285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 1194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 1200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 1200 50  0001 C CNN
@@ -102,10 +102,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_>1
+L Switch:SW_MEC_5G SW_>
 U 1 1 607EDEFD
 P 5600 1000
-F 0 "SW_>1" H 5600 1285 50  0000 C CNN
+F 0 "SW_>" H 5600 1285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 1194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 1200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 1200 50  0001 C CNN
@@ -113,10 +113,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Del1
+L Switch:SW_MEC_5G SW_Del
 U 1 1 607EDF03
 P 6300 1000
-F 0 "SW_Del1" H 6300 1285 50  0000 C CNN
+F 0 "SW_Del" H 6300 1285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 6300 1194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 6300 1200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 6300 1200 50  0001 C CNN
@@ -124,10 +124,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Brk1
+L Switch:SW_MEC_5G SW_Brk
 U 1 1 607EDF09
 P 7000 1000
-F 0 "SW_Brk1" H 7000 1285 50  0000 C CNN
+F 0 "SW_Brk" H 7000 1285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 7000 1194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7000 1200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7000 1200 50  0001 C CNN
@@ -146,10 +146,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Esc1
+L Switch:SW_MEC_5G SW_Esc
 U 1 1 607EEDFD
 P 6300 1600
-F 0 "SW_Esc1" H 6300 1885 50  0000 C CNN
+F 0 "SW_Esc" H 6300 1885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 6300 1794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 6300 1800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 6300 1800 50  0001 C CNN
@@ -157,10 +157,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_I1
+L Switch:SW_MEC_5G SW_I
 U 1 1 607F47F6
 P 2750 2200
-F 0 "SW_I1" H 2750 2485 50  0000 C CNN
+F 0 "SW_I" H 2750 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2750 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2750 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2750 2400 50  0001 C CNN
@@ -168,10 +168,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_O1
+L Switch:SW_MEC_5G SW_O
 U 1 1 607F47FC
 P 3500 2200
-F 0 "SW_O1" H 3500 2485 50  0000 C CNN
+F 0 "SW_O" H 3500 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 3500 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 3500 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 3500 2400 50  0001 C CNN
@@ -179,10 +179,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_P1
+L Switch:SW_MEC_5G SW_P
 U 1 1 607F4802
 P 4200 2200
-F 0 "SW_P1" H 4200 2485 50  0000 C CNN
+F 0 "SW_P" H 4200 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4200 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4200 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4200 2400 50  0001 C CNN
@@ -190,10 +190,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_-1
+L Switch:SW_MEC_5G SW_-
 U 1 1 607F4808
 P 4900 2200
-F 0 "SW_-1" H 4900 2485 50  0000 C CNN
+F 0 "SW_-" H 4900 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 2400 50  0001 C CNN
@@ -201,10 +201,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_=1
+L Switch:SW_MEC_5G SW_=
 U 1 1 607F480E
 P 5600 2200
-F 0 "SW_=1" H 5600 2485 50  0000 C CNN
+F 0 "SW_=" H 5600 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 2400 50  0001 C CNN
@@ -212,10 +212,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Ret1
+L Switch:SW_MEC_5G SW_Ret
 U 1 1 607F4814
 P 6300 2200
-F 0 "SW_Ret1" H 6300 2485 50  0000 C CNN
+F 0 "SW_Ret" H 6300 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 6300 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_PCB" H 6300 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 6300 2400 50  0001 C CNN
@@ -223,10 +223,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_T1
+L Switch:SW_MEC_5G SW_T
 U 1 1 607F6557
 P 2750 2800
-F 0 "SW_T1" H 2750 3085 50  0000 C CNN
+F 0 "SW_T" H 2750 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2750 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2750 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2750 3000 50  0001 C CNN
@@ -234,10 +234,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_R1
+L Switch:SW_MEC_5G SW_R
 U 1 1 607F655D
 P 3500 2800
-F 0 "SW_R1" H 3500 3085 50  0000 C CNN
+F 0 "SW_R" H 3500 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 3500 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 3500 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 3500 3000 50  0001 C CNN
@@ -245,10 +245,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_E1
+L Switch:SW_MEC_5G SW_E
 U 1 1 607F6563
 P 4200 2800
-F 0 "SW_E1" H 4200 3085 50  0000 C CNN
+F 0 "SW_E" H 4200 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4200 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4200 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4200 3000 50  0001 C CNN
@@ -256,10 +256,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_W1
+L Switch:SW_MEC_5G SW_W
 U 1 1 607F6569
 P 4900 2800
-F 0 "SW_W1" H 4900 3085 50  0000 C CNN
+F 0 "SW_W" H 4900 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 3000 50  0001 C CNN
@@ -267,10 +267,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Q1
+L Switch:SW_MEC_5G SW_Q
 U 1 1 607F656F
 P 5600 2800
-F 0 "SW_Q1" H 5600 3085 50  0000 C CNN
+F 0 "SW_Q" H 5600 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 3000 50  0001 C CNN
@@ -278,10 +278,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Tab1
+L Switch:SW_MEC_5G SW_Tab
 U 1 1 607F6575
 P 6300 2800
-F 0 "SW_Tab1" H 6300 3085 50  0000 C CNN
+F 0 "SW_Tab" H 6300 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 6300 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_PCB" H 6300 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 6300 3000 50  0001 C CNN
@@ -289,10 +289,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_J1
+L Switch:SW_MEC_5G SW_J
 U 1 1 60803446
 P 2000 3400
-F 0 "SW_J1" H 2000 3685 50  0000 C CNN
+F 0 "SW_J" H 2000 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2000 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2000 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2000 3600 50  0001 C CNN
@@ -300,10 +300,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_K1
+L Switch:SW_MEC_5G SW_K
 U 1 1 6080344C
 P 2750 3400
-F 0 "SW_K1" H 2750 3685 50  0000 C CNN
+F 0 "SW_K" H 2750 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2750 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2750 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2750 3600 50  0001 C CNN
@@ -311,10 +311,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_L1
+L Switch:SW_MEC_5G SW_L
 U 1 1 60803452
 P 3500 3400
-F 0 "SW_L1" H 3500 3685 50  0000 C CNN
+F 0 "SW_L" H 3500 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 3500 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 3500 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 3500 3600 50  0001 C CNN
@@ -322,10 +322,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_;1
+L Switch:SW_MEC_5G SW_;
 U 1 1 60803458
 P 4200 3400
-F 0 "SW_;1" H 4200 3685 50  0000 C CNN
+F 0 "SW_;" H 4200 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4200 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4200 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4200 3600 50  0001 C CNN
@@ -333,10 +333,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_+1
+L Switch:SW_MEC_5G SW_+
 U 1 1 6080345E
 P 4900 3400
-F 0 "SW_+1" H 4900 3685 50  0000 C CNN
+F 0 "SW_+" H 4900 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 3600 50  0001 C CNN
@@ -344,10 +344,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_*1
+L Switch:SW_MEC_5G SW_*
 U 1 1 60803464
 P 5600 3400
-F 0 "SW_*1" H 5600 3685 50  0000 C CNN
+F 0 "SW_*" H 5600 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 3600 50  0001 C CNN
@@ -355,10 +355,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Ctl1
+L Switch:SW_MEC_5G SW_Ctl
 U 1 1 6080346A
 P 7000 3400
-F 0 "SW_Ctl1" H 7000 3685 50  0000 C CNN
+F 0 "SW_Ctl" H 7000 3685 50  0000 C CNN
 F 1 "SW_MEC_5G" H 7000 3594 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.75u_PCB" H 7000 3600 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7000 3600 50  0001 C CNN
@@ -366,10 +366,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_H1
+L Switch:SW_MEC_5G SW_H
 U 1 1 60803470
 P 2000 4000
-F 0 "SW_H1" H 2000 4285 50  0000 C CNN
+F 0 "SW_H" H 2000 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2000 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2000 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2000 4200 50  0001 C CNN
@@ -377,10 +377,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_G1
+L Switch:SW_MEC_5G SW_G
 U 1 1 60803476
 P 2750 4000
-F 0 "SW_G1" H 2750 4285 50  0000 C CNN
+F 0 "SW_G" H 2750 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2750 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2750 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2750 4200 50  0001 C CNN
@@ -388,10 +388,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_F1
+L Switch:SW_MEC_5G SW_F
 U 1 1 6080347C
 P 3500 4000
-F 0 "SW_F1" H 3500 4285 50  0000 C CNN
+F 0 "SW_F" H 3500 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 3500 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 3500 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 3500 4200 50  0001 C CNN
@@ -399,10 +399,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_D1
+L Switch:SW_MEC_5G SW_D
 U 1 1 60803482
 P 4200 4000
-F 0 "SW_D1" H 4200 4285 50  0000 C CNN
+F 0 "SW_D" H 4200 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4200 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4200 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4200 4200 50  0001 C CNN
@@ -410,10 +410,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_S1
+L Switch:SW_MEC_5G SW_S
 U 1 1 60803488
 P 4900 4000
-F 0 "SW_S1" H 4900 4285 50  0000 C CNN
+F 0 "SW_S" H 4900 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 4200 50  0001 C CNN
@@ -421,10 +421,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_A1
+L Switch:SW_MEC_5G SW_A
 U 1 1 6080348E
 P 5600 4000
-F 0 "SW_A1" H 5600 4285 50  0000 C CNN
+F 0 "SW_A" H 5600 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 4200 50  0001 C CNN
@@ -432,10 +432,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Cps1
+L Switch:SW_MEC_5G SW_Cps
 U 1 1 60803494
 P 6300 4000
-F 0 "SW_Cps1" H 6300 4285 50  0000 C CNN
+F 0 "SW_Cps" H 6300 4285 50  0000 C CNN
 F 1 "SW_MEC_5G" H 6300 4194 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.25u_PCB" H 6300 4200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 6300 4200 50  0001 C CNN
@@ -443,10 +443,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_N1
+L Switch:SW_MEC_5G SW_N
 U 1 1 6080349A
 P 1300 4600
-F 0 "SW_N1" H 1300 4885 50  0000 C CNN
+F 0 "SW_N" H 1300 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 1300 4794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 1300 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1300 4800 50  0001 C CNN
@@ -454,10 +454,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Spc1
+L Switch:SW_MEC_5G SW_Spc
 U 1 1 608034A0
 P 2000 4600
-F 0 "SW_Spc1" H 2000 4885 50  0000 C CNN
+F 0 "SW_Spc" H 2000 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2000 4794 50  0000 C CNN
 F 2 "Atari130KB:SW_Cherry_MX_Atari_Space" H 2000 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2000 4800 50  0001 C CNN
@@ -465,10 +465,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_M1
+L Switch:SW_MEC_5G SW_M
 U 1 1 608034A6
 P 2750 4600
-F 0 "SW_M1" H 2750 4885 50  0000 C CNN
+F 0 "SW_M" H 2750 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2750 4794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2750 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2750 4800 50  0001 C CNN
@@ -476,10 +476,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_,1
+L Switch:SW_MEC_5G SW_,
 U 1 1 608034AC
 P 3500 4600
-F 0 "SW_,1" H 3500 4885 50  0000 C CNN
+F 0 "SW_," H 3500 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 3500 4794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 3500 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 3500 4800 50  0001 C CNN
@@ -487,10 +487,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_.1
+L Switch:SW_MEC_5G SW_.
 U 1 1 608034B2
 P 4200 4600
-F 0 "SW_.1" H 4200 4885 50  0000 C CNN
+F 0 "SW_." H 4200 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4200 4794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4200 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4200 4800 50  0001 C CNN
@@ -498,10 +498,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_/1
+L Switch:SW_MEC_5G SW_/
 U 1 1 608034B8
 P 4900 4600
-F 0 "SW_/1" H 4900 4885 50  0000 C CNN
+F 0 "SW_/" H 4900 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 4794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 4800 50  0001 C CNN
@@ -509,10 +509,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Inv1
+L Switch:SW_MEC_5G SW_Inv
 U 1 1 608034BE
 P 5600 4600
-F 0 "SW_Inv1" H 5600 4885 50  0000 C CNN
+F 0 "SW_Inv" H 5600 4885 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 4794 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 4800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 4800 50  0001 C CNN
@@ -520,10 +520,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Str1
+L Switch:SW_MEC_5G SW_Str
 U 1 1 608057AC
 P 7750 5700
-F 0 "SW_Str1" H 7750 5985 50  0000 C CNN
+F 0 "SW_Str" H 7750 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 7750 5894 50  0000 C CNN
 F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 7750 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7750 5900 50  0001 C CNN
@@ -531,10 +531,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Sel1
+L Switch:SW_MEC_5G SW_Sel
 U 1 1 608057B2
 P 8450 5700
-F 0 "SW_Sel1" H 8450 5985 50  0000 C CNN
+F 0 "SW_Sel" H 8450 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 8450 5894 50  0000 C CNN
 F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 8450 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 8450 5900 50  0001 C CNN
@@ -542,10 +542,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Opt1
+L Switch:SW_MEC_5G SW_Opt
 U 1 1 608057B8
 P 9150 5700
-F 0 "SW_Opt1" H 9150 5985 50  0000 C CNN
+F 0 "SW_Opt" H 9150 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 9150 5894 50  0000 C CNN
 F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 9150 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 9150 5900 50  0001 C CNN
@@ -553,10 +553,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Rst1
+L Switch:SW_MEC_5G SW_Rst
 U 1 1 608057BE
 P 9850 5700
-F 0 "SW_Rst1" H 9850 5985 50  0000 C CNN
+F 0 "SW_Rst" H 9850 5985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 9850 5894 50  0000 C CNN
 F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 9850 5900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 9850 5900 50  0001 C CNN
@@ -564,10 +564,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Y1
+L Switch:SW_MEC_5G SW_Y
 U 1 1 607F6551
 P 1300 2800
-F 0 "SW_Y1" H 1300 3085 50  0000 C CNN
+F 0 "SW_Y" H 1300 3085 50  0000 C CNN
 F 1 "SW_MEC_5G" H 1300 2994 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 1300 3000 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1300 3000 50  0001 C CNN
@@ -575,10 +575,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_U1
+L Switch:SW_MEC_5G SW_U
 U 1 1 607F47F0
 P 1300 2200
-F 0 "SW_U1" H 1300 2485 50  0000 C CNN
+F 0 "SW_U" H 1300 2485 50  0000 C CNN
 F 1 "SW_MEC_5G" H 1300 2394 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 1300 2400 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1300 2400 50  0001 C CNN
@@ -608,10 +608,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Hlp1
+L Switch:SW_MEC_5G SW_Hlp
 U 1 1 60952EEE
 P 2000 5150
-F 0 "SW_Hlp1" H 2000 5435 50  0000 C CNN
+F 0 "SW_Hlp" H 2000 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2000 5344 50  0000 C CNN
 F 2 "Atari130KB:SW_Cherry_MX_1.50u_Atari_Fn_PCB" H 2000 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2000 5350 50  0001 C CNN
@@ -619,10 +619,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_B1
+L Switch:SW_MEC_5G SW_B
 U 1 1 60952EF4
 P 2750 5150
-F 0 "SW_B1" H 2750 5435 50  0000 C CNN
+F 0 "SW_B" H 2750 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 2750 5344 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 2750 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 2750 5350 50  0001 C CNN
@@ -630,10 +630,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_V1
+L Switch:SW_MEC_5G SW_V
 U 1 1 60952EFA
 P 3500 5150
-F 0 "SW_V1" H 3500 5435 50  0000 C CNN
+F 0 "SW_V" H 3500 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 3500 5344 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 3500 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 3500 5350 50  0001 C CNN
@@ -641,10 +641,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_C1
+L Switch:SW_MEC_5G SW_C
 U 1 1 60952F00
 P 4200 5150
-F 0 "SW_C1" H 4200 5435 50  0000 C CNN
+F 0 "SW_C" H 4200 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4200 5344 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4200 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4200 5350 50  0001 C CNN
@@ -652,10 +652,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_X1
+L Switch:SW_MEC_5G SW_X
 U 1 1 60952F06
 P 4900 5150
-F 0 "SW_X1" H 4900 5435 50  0000 C CNN
+F 0 "SW_X" H 4900 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 4900 5344 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4900 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4900 5350 50  0001 C CNN
@@ -663,10 +663,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Z1
+L Switch:SW_MEC_5G SW_Z
 U 1 1 60952F0C
 P 5600 5150
-F 0 "SW_Z1" H 5600 5435 50  0000 C CNN
+F 0 "SW_Z" H 5600 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 5600 5344 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5600 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5600 5350 50  0001 C CNN
@@ -674,10 +674,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5G SW_Sft_Right1
+L Switch:SW_MEC_5G SW_Sft_Right
 U 1 1 60952F12
 P 7000 5150
-F 0 "SW_Sft_Right1" H 7000 5435 50  0000 C CNN
+F 0 "SW_Sft_Right" H 7000 5435 50  0000 C CNN
 F 1 "SW_MEC_5G" H 7000 5344 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.75u_PCB" H 7000 5350 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7000 5350 50  0001 C CNN
@@ -685,10 +685,10 @@ F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic_MountingPin:Conn_02x12_Counter_Clockwise_MountingPin Conn_Main1
+L Connector_Generic_MountingPin:Conn_02x12_Counter_Clockwise_MountingPin Conn_Main
 U 1 1 6096F306
 P 1900 6100
-F 0 "Conn_Main1" V 1904 6680 50  0000 L CNN
+F 0 "Conn_Main" V 1904 6680 50  0000 L CNN
 F 1 "Conn_02x12_Counter_Clockwise_MountingPin" V 1995 6680 50  0000 L CNN
 F 2 "Connector_Hirose:Hirose_DF11-24DP-2DSA_2x12_P2.00mm_Vertical" H 1900 6100 50  0001 C CNN
 F 3 "~" H 1900 6100 50  0001 C CNN
@@ -1301,10 +1301,10 @@ Wire Wire Line
 Wire Wire Line
 	5800 5250 7200 5250
 $Comp
-L Switch:SW_MEC_5G SW_Sft_Left1
+L Switch:SW_MEC_5G SW_Sft_Left
 U 1 1 60866121
 P 7000 4700
-F 0 "SW_Sft_Left1" H 7000 4985 50  0000 C CNN
+F 0 "SW_Sft_Left" H 7000 4985 50  0000 C CNN
 F 1 "SW_MEC_5G" H 7000 4894 50  0000 C CNN
 F 2 "Button_Switch_Keyboard:SW_Cherry_MX_2.25u_PCB" H 7000 4900 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7000 4900 50  0001 C CNN
