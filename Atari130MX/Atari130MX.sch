@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:LED D1
-U 1 1 608063CC
-P 3200 6050
-F 0 "D1" V 3147 6130 50  0000 L CNN
-F 1 "LED" V 3238 6130 50  0000 L CNN
-F 2 "LED_THT:LED_D3.0mm" H 3200 6050 50  0001 C CNN
-F 3 "~" H 3200 6050 50  0001 C CNN
-	1    3200 6050
-	0    1    1    0   
-$EndComp
-$Comp
 L Switch:SW_Push_45deg SW7
 U 1 1 609350ED
 P 1400 950
@@ -635,7 +624,7 @@ U 1 1 6094BE82
 P 6600 3150
 F 0 "SWCtl1" H 6600 3431 50  0000 C CNN
 F 1 "SW_Push_45deg" H 6600 3340 50  0000 C CNN
-F 2 "Atari130MX:SW_Cherry_MX_2.00u_PCB" H 6600 3150 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.75u_PCB" H 6600 3150 50  0001 C CNN
 F 3 "~" H 6600 3150 50  0001 C CNN
 	1    6600 3150
 	1    0    0    -1  
@@ -695,8 +684,6 @@ F 3 "~" H 9250 5350 50  0001 C CNN
 	1    9250 5350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 5900 3200 5800
 Wire Wire Line
 	3000 5100 1950 5100
 Wire Wire Line
@@ -760,7 +747,7 @@ U 1 1 60974EA9
 P 7300 4800
 F 0 "SWRightSft1" H 7300 5081 50  0000 C CNN
 F 1 "SW_Push_45deg" H 7300 4990 50  0000 C CNN
-F 2 "Atari130MX:SW_Cherry_MX_2.00u_PCB" H 7300 4800 50  0001 C CNN
+F 2 "Atari130MX:SW_Cherry_MX_1.75u_PCB" H 7300 4800 50  0001 C CNN
 F 3 "~" H 7300 4800 50  0001 C CNN
 	1    7300 4800
 	1    0    0    -1  
@@ -888,8 +875,6 @@ Wire Wire Line
 Connection ~ 4550 3600
 Wire Wire Line
 	4550 3600 4550 3050
-Wire Wire Line
-	3100 5800 3200 5800
 Wire Wire Line
 	2300 5700 4550 5700
 Wire Wire Line
@@ -1019,7 +1004,7 @@ U 1 1 6093289B
 P 2800 6450
 F 0 "J1" V 2804 7030 50  0000 L CNN
 F 1 "Conn_02x12_Counter_Clockwise" V 2895 7030 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x12_P2.54mm_Horizontal" H 2800 6450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Horizontal" H 2800 6450 50  0001 C CNN
 F 3 "~" H 2800 6450 50  0001 C CNN
 	1    2800 6450
 	0    1    1    0   
@@ -1039,7 +1024,7 @@ Wire Wire Line
 Wire Wire Line
 	3100 5800 3100 6250
 Wire Wire Line
-	3200 6200 3200 6250
+	3250 6250 3200 6250
 Wire Wire Line
 	2500 6950 5850 6950
 Wire Wire Line
@@ -1138,9 +1123,6 @@ Wire Wire Line
 Wire Wire Line
 	6600 5250 7200 5250
 Wire Wire Line
-	3200 5800 6700 5800
-Connection ~ 3200 5800
-Wire Wire Line
 	7400 5450 8050 5450
 Connection ~ 7400 5450
 Connection ~ 8050 5450
@@ -1183,4 +1165,26 @@ Wire Wire Line
 	6700 5800 6700 5450
 Wire Wire Line
 	6700 5450 7400 5450
+Wire Wire Line
+	3100 5800 6700 5800
+Wire Wire Line
+	3150 5900 3150 6250
+Wire Wire Line
+	3150 6250 3100 6250
+Connection ~ 3100 6250
+Wire Wire Line
+	3150 5900 3250 5900
+Wire Wire Line
+	3250 5900 3250 5950
+$Comp
+L Device:LED D1
+U 1 1 608063CC
+P 3250 6100
+F 0 "D1" V 3197 6180 50  0000 L CNN
+F 1 "LED" V 3288 6180 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm" H 3250 6100 50  0001 C CNN
+F 3 "~" H 3250 6100 50  0001 C CNN
+	1    3250 6100
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

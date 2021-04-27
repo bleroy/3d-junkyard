@@ -1,5 +1,5 @@
-(module SixHole (layer F.Cu) (tedit 608512E1)
-  (fp_text reference REF** (at 0 4) (layer F.SilkS)
+(module SixHole (layer F.Cu) (tedit 6087AA87)
+  (fp_text reference REF** (at 0 4) (layer Cmts.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value SixHole (at 0 -4) (layer F.Fab)

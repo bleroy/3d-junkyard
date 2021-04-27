@@ -1,5 +1,5 @@
-(module EightPointFiveHole (layer F.Cu) (tedit 60851154)
-  (fp_text reference REF** (at 0 5) (layer F.SilkS)
+(module EightPointFiveHole (layer F.Cu) (tedit 6087AAD3)
+  (fp_text reference REF** (at 0 5) (layer Cmts.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value EightPointFiveHole (at 0 -5) (layer F.Fab)
