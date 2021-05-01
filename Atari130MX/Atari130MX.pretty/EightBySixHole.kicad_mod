@@ -1,5 +1,5 @@
-(module EightBySixHole (layer F.Cu) (tedit 6087AAB7)
-  (fp_text reference REF** (at 0 4) (layer Cmts.User)
+(module EightBySixHole (layer F.Cu) (tedit 608CCF3D)
+  (fp_text reference REF** (at 0 4) (layer Cmts.User) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value EightBySixHole (at 0 -4) (layer F.Fab)

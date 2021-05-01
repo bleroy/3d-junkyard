@@ -1,5 +1,5 @@
-(module Decent_logo (layer F.Cu) (tedit 6087AA9D)
-  (fp_text reference REF** (at 0.5 3.5) (layer Cmts.User)
+(module Decent_logo (layer F.Cu) (tedit 608CCF4C)
+  (fp_text reference REF** (at 0.5 3.5) (layer Cmts.User) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value Decent_logo (at 2 -4) (layer F.Fab)
@@ -66,7 +66,7 @@
   (fp_line (start -1.344292 1.256949) (end -1.520616 1.553173) (layer F.SilkS) (width 0.2))
   (fp_line (start -1.520616 1.553173) (end -1.591146 1.642149) (layer F.SilkS) (width 0.2))
   (fp_line (start 1.762258 -0.62998) (end 1.744348 -0.73036) (layer F.SilkS) (width 0.2))
-  (fp_text user "(c) Decent Consulting 2021" (at 24.5 0) (layer F.SilkS)
-    (effects (font (size 2 2) (thickness 0.15)))
+  (fp_text user "Decent 130MX" (at 30.5 0) (layer F.SilkS)
+    (effects (font (size 2.5 2.5) (thickness 0.15)) (justify right))
   )
 )
