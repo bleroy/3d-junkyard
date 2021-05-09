@@ -13,7 +13,7 @@ pupil_y_offset = 2;
 wall_thickness = 3.5;
 floor_thickness = 2;
 boudin = 2;
-magnet_diameter = 8.5;
+magnet_diameter = 9;
 magnet_thickness = 2.5;
 magnet_depth_offset = -9;
 
