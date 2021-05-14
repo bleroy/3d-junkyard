@@ -1004,7 +1004,7 @@ U 1 1 6093289B
 P 2800 6450
 F 0 "J1" V 2804 7030 50  0000 L CNN
 F 1 "Conn_02x12_Counter_Clockwise" V 2895 7030 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Horizontal" H 2800 6450 50  0001 C CNN
+F 2 "Atari130MX:PinHeader_1x24_P2.54mm" H 2800 6450 50  0001 C CNN
 F 3 "~" H 2800 6450 50  0001 C CNN
 	1    2800 6450
 	0    1    1    0   
