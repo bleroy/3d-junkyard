@@ -209,3 +209,6 @@ html {
     right: 0;
     bottom: 0;
 }
+.flash {
+    background-color: #00CCCC;
+}

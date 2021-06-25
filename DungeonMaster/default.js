@@ -341,28 +341,40 @@ document.addEventListener('keydown', e => {
 });
 
 document.addEventListener('DOMContentLoaded', e => {
-    command(document.getElementsByClassName('turn-left'), 'q', e => {
+    const turnLeftButton = document.getElementsByClassName('turn-left');
+    command(turnLeftButton, 'q', e => {
         party.turnLeft();
+        flash(turnLeftButton);
     });
 
-    command(document.getElementsByClassName('forward'), ['w', 'ArrowUp'], e => {
+    const forwardButton = document.getElementsByClassName('forward');
+    command(forwardButton, ['w', 'ArrowUp'], e => {
         party.moveForward();
+        flash(forwardButton);
     });
 
-    command(document.getElementsByClassName('turn-right'), 'e', e => {
+    const turnRightButton = document.getElementsByClassName('turn-right');
+    command(turnRightButton, 'e', e => {
         party.turnRight();
+        flash(turnRightButton);
     });
 
-    command(document.getElementsByClassName('left'), ['a', 'ArrowLeft'], e => {
+    const leftButton = document.getElementsByClassName('left');
+    command(leftButton, ['a', 'ArrowLeft'], e => {
         party.moveLeft();
+        flash(leftButton);
     });
 
-    command(document.getElementsByClassName('back'), ['s', 'ArrowDown'], e => {
+    const backButton = document.getElementsByClassName('back');
+    command(backButton, ['s', 'ArrowDown'], e => {
         party.moveBack();
+        flash(backButton);
     });
 
-    command(document.getElementsByClassName('right'), ['d', 'ArrowRight'], e => {
+    const rightButton = document.getElementsByClassName('right');
+    command(rightButton, ['d', 'ArrowRight'], e => {
         party.moveRight();
+        flash(rightButton);
     });
 
     const viewport = document.getElementsByClassName('viewport');
@@ -405,6 +417,13 @@ function setClass(elements, className, condition) {
     [...elements].forEach(el => {
         if (condition) el.classList.add(className);
         else el.classList.remove(className);
+    });
+}
+
+function flash(elements) {
+    [...elements].forEach(el => {
+        el.classList.add("flash");
+        setTimeout(() => el.classList.remove("flash"), 100);
     });
 }
 
