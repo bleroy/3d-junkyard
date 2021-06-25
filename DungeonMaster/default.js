@@ -26,7 +26,7 @@ class Party {
             this.facing === Party.facingDirection.south ? [1, 0] :
             this.facing === Party.facingDirection.east ? [0, 1] :
             [0, -1];
-        moveBy(dx, dy);
+        this.moveBy(dx, dy);
     }
 
     moveBack() {
@@ -35,7 +35,7 @@ class Party {
             this.facing === Party.facingDirection.south ? [-1, 0] :
             this.facing === Party.facingDirection.east ? [0, -1] :
             [0, 1];
-        moveBy(dx, dy);
+        this.moveBy(dx, dy);
     }
 
     moveLeft() {
@@ -44,7 +44,7 @@ class Party {
             this.facing === Party.facingDirection.south ? [0, 1] :
             this.facing === Party.facingDirection.east ? [-1, 0] :
             [1, 0];
-        moveBy(dx, dy);
+        this.moveBy(dx, dy);
     }
 
     moveRight() {
@@ -53,7 +53,7 @@ class Party {
             this.facing === Party.facingDirection.south ? [0, -1] :
             this.facing === Party.facingDirection.east ? [1, 0] :
             [-1, 0];
-        moveBy(dx, dy);
+        this.moveBy(dx, dy);
     }
 
     turnLeft() {
@@ -287,11 +287,11 @@ const level1 = {
         "   XXPXX XQXXXXXXX", // 09
         " R SXX   TXXX    X", // 10
         "     X Z XXXX XX X", // 11
-        "XX   X   XXXX XX X", // 12
-        "XV        X X XX  ", // 13
-        "XX   XXWX   X X   ", // 14
-        "XXXUXXXXXXX   X   ", // 15
-        "XXXXXXXXXXX XXX ^ "  // 16
+        "XX   X   XXXX XX  ", // 12
+        "XV        X X XX X", // 13
+        "XX   XXWX   X XX X", // 14
+        "XXXUXXXXXXX   XX X", // 15
+        "XXXXXXXXXXX XXXX^X"  // 16
     ],
     tiles: {
         " ": {

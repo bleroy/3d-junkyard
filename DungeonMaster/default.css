@@ -1,3 +1,6 @@
+html {
+    background-color: black;
+}
 .viewport {
     display: inline-block;
     position: relative;
@@ -27,13 +30,13 @@
     clip: rect(auto, auto, auto, 382px);
 }
 .alternate .fl1 {
-    clip: rect(auto, 64px, auto, auto);
+    clip: rect(auto, auto, auto, 382px);
 }
 .alternate .ff1 {
-    clip: rect(auto, 392px, auto, 64px);
+    clip: rect(auto, 382px, auto, 64px);
 }
 .alternate .fr1 {
-    clip: rect(auto, auto, auto, 392px);
+    clip: rect(auto, 64px, auto, auto);
 }
 .l1 {
     clip: rect(auto, 122px, auto, 64px);
@@ -57,13 +60,13 @@
     clip: rect(auto, auto, auto, 324px);
 }
 .alternate .fl2 {
-    clip: rect(auto, 122px, auto, auto);
+    clip: rect(auto, auto, auto, 326px);
 }
 .alternate .ff2 {
-    clip: rect(auto, 334px, auto, 122px);
+    clip: rect(auto, 326px, auto, 122px);
 }
 .alternate .fr2 {
-    clip: rect(auto, auto, auto, 334px);
+    clip: rect(auto, 122px, auto, auto);
 }
 .l2 {
     clip: rect(auto, 150px, auto, 122px);
@@ -87,13 +90,13 @@
     clip: rect(auto, auto, auto, 296px);
 }
 .alternate .fl3 {
-    clip: rect(auto, 150px, auto, auto);
+    clip: rect(auto, auto, auto, 298px);
 }
 .alternate .ff3 {
-    clip: rect(auto, 306px, auto, 150px);
+    clip: rect(auto, 298px, auto, 150px);
 }
 .alternate .fr3 {
-    clip: rect(auto, auto, auto, 306px);
+    clip: rect(auto, 150px, auto, auto);
 }
 .l3 {
     clip: rect(auto, auto, auto, 150px);
