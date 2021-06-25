@@ -1,0 +1,208 @@
+.viewport {
+    display: inline-block;
+    position: relative;
+    width: 446px;
+    height: 270px;
+}
+/* trbl */
+.l0 {
+    clip: rect(auto, 64px, auto, auto);
+}
+.r0 {
+    clip: rect(auto, auto, auto, 112px);
+}
+.alternate .l0 {
+    clip: rect(auto, auto, auto, 112px);
+}
+.alternate .r0 {
+    clip: rect(auto, 64px, auto, auto);
+}
+.fl1 {
+    clip: rect(auto, 64px, auto, auto);
+}
+.ff1 {
+    clip: rect(auto, 382px, auto, 64px);
+}
+.fr1 {
+    clip: rect(auto, auto, auto, 382px);
+}
+.alternate .fl1 {
+    clip: rect(auto, 64px, auto, auto);
+}
+.alternate .ff1 {
+    clip: rect(auto, 392px, auto, 64px);
+}
+.alternate .fr1 {
+    clip: rect(auto, auto, auto, 392px);
+}
+.l1 {
+    clip: rect(auto, 122px, auto, 64px);
+}
+.r1 {
+    clip: rect(auto, 112px, auto, 54px);
+}
+.alternate .l1 {
+    clip: rect(auto, 112px, auto, 54px);
+}
+.alternate .r1 {
+    clip: rect(auto, 122px, auto, 64px);
+}
+.fl2 {
+    clip: rect(auto, 122px, auto, auto);
+}
+.ff2 {
+    clip: rect(auto, 324px, auto, 122px);
+}
+.fr2 {
+    clip: rect(auto, auto, auto, 324px);
+}
+.alternate .fl2 {
+    clip: rect(auto, 122px, auto, auto);
+}
+.alternate .ff2 {
+    clip: rect(auto, 334px, auto, 122px);
+}
+.alternate .fr2 {
+    clip: rect(auto, auto, auto, 334px);
+}
+.l2 {
+    clip: rect(auto, 150px, auto, 122px);
+}
+.r2 {
+    clip: rect(auto, 54px, auto, 26px);
+}
+.alternate .l2 {
+    clip: rect(auto, 56px, auto, 26px);
+}
+.alternate .r2 {
+    clip: rect(auto, 150px, auto, 122px);
+}
+.fl3 {
+    clip: rect(auto, 150px, auto, auto);
+}
+.ff3 {
+    clip: rect(auto, 296px, auto, 150px);
+}
+.fr3 {
+    clip: rect(auto, auto, auto, 296px);
+}
+.alternate .fl3 {
+    clip: rect(auto, 150px, auto, auto);
+}
+.alternate .ff3 {
+    clip: rect(auto, 306px, auto, 150px);
+}
+.alternate .fr3 {
+    clip: rect(auto, auto, auto, 306px);
+}
+.l3 {
+    clip: rect(auto, auto, auto, 150px);
+}
+.r3 {
+    clip: rect(auto, 26px, auto, auto);
+}
+.alternate .l3 {
+    clip: rect(auto, 28px, auto, auto);
+}
+.alternate .r3 {
+    clip: rect(auto, auto, auto, 150px);
+}
+.background {
+    background-image: url(Background.png);
+    width: 446px;
+    height: 270px;
+}
+.alternate .background, .alternate .front-wall {
+    transform: scaleX(-1);
+}
+.left-wall {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(WallLeft.png);
+    width: 168px;
+    height: 270px;
+}
+.right-wall {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(WallRight.png);
+    width: 176px;
+    height: 270px;
+}
+.alternate .left-wall {
+    background-image: url(WallRight.png);
+    width: 176px;
+    transform: scaleX(-1);
+}
+.alternate .right-wall {
+    background-image: url(WallLeft.png);
+    width: 168px;
+    transform: scaleX(-1);
+}
+.front-wall-farther {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-image: url(FrontFarther.png);
+    width: 446px;
+    height: 102px;
+}
+.front-wall-far {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background-image: url(FrontFar.png);
+    width: 446px;
+    height: 142px;
+}
+.front-wall-near {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    background-image: url(FrontNear.png);
+    width: 446px;
+    height: 222px;
+}
+.dirpad {
+    display: inline-block;
+    position: relative;
+    background-image: url(Arrows.png);
+    width: 174px;
+    height: 90px;
+}
+.dirpad .button {
+    position: absolute;
+    width: 58px;
+    height: 45px;
+}
+.dirpad .button.turn-left {
+    left: 0;
+    top: 0;
+}
+.dirpad .button.forward {
+    left: 58px;
+    top: 0;
+}
+.dirpad .button.turn-right {
+    right: 0;
+    top: 0;
+}
+.dirpad .button.left {
+    left: 0;
+    bottom: 0;
+}
+.dirpad .button.back {
+    left: 58px;
+    bottom: 0;
+}
+.dirpad .button.right {
+    right: 0;
+    bottom: 0;
+}
