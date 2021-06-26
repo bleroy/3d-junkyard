@@ -29,18 +29,18 @@ c5 = digitalio.DigitalInOut(board.D4)
 
 # Map key coordinates to key codes that are sent to the host
 key_to_code = {
-    (0,0): [Keycode.CONTROL, Keycode.ALT, Keycode.F1],
-    (0,1): [Keycode.CONTROL, Keycode.ALT, Keycode.F2],
-    (0,2): [Keycode.CONTROL, Keycode.ALT, Keycode.F3],
-    (0,3): [Keycode.CONTROL, Keycode.ALT, Keycode.F4],
-    (0,4): [Keycode.CONTROL, Keycode.ALT, Keycode.F4],
-    (1,0): [Keycode.CONTROL, Keycode.ALT, Keycode.F5],
-    (1,1): [Keycode.CONTROL, Keycode.ALT, Keycode.F6],
+    (0,0): [Keycode.SHIFT, Keycode.F1],
+    (0,1): [Keycode.SHIFT, Keycode.F2],
+    (0,2): [Keycode.SHIFT, Keycode.F3],
+    (0,3): [Keycode.SHIFT, Keycode.F4],
+    (0,4): [Keycode.SHIFT, Keycode.F5],
+    (1,0): [Keycode.SHIFT, Keycode.F5],
+    (1,1): [Keycode.SHIFT, Keycode.F6],
     (1,2): [Keycode.Q],
     (1,3): [Keycode.UP_ARROW],
     (1,4): [Keycode.E],
-    (2,0): [Keycode.CONTROL, Keycode.ALT, Keycode.F7],
-    (2,1): [Keycode.CONTROL, Keycode.ALT, Keycode.F8],
+    (2,0): [Keycode.SHIFT, Keycode.F7],
+    (2,1): [Keycode.SHIFT, Keycode.F8],
     (2,2): [Keycode.LEFT_ARROW],
     (2,3): [Keycode.DOWN_ARROW],
     (2,4): [Keycode.RIGHT_ARROW]
@@ -48,6 +48,11 @@ key_to_code = {
 
 # Those keys act on key down and remain active until released
 key_down_keys = [b3, b4, b5, c3, c4, c5]
+
+# Hack to swap to OBS when hitting hot keys
+obs_swap_hack_keys = [a1, a2, a3, a4, a5, b1, b2, c1, c2]
+obs_taskbar_command = [Keycode.WINDOWS, Keycode.FOUR] # OBS is fourth on my taskbar
+obs_away_taskbar_command = [Keycode.WINDOWS, Keycode.ONE] # Some program pinned on the taskbar that's not disrupting if focused. I put the calc app on the same screen as OBS.
 
 row1 = [a1, a2, a3, a4, a5]
 row2 = [b1, b2, b3, b4, b5]
@@ -85,7 +90,14 @@ while True:
             else:
                 if (r, k) == last_key:
                     if not (key in key_down_keys):
-                        keyboard.press(*key_to_code[(r, k)])
+                        if key in obs_swap_hack_keys:
+                            keyboard.press(*obs_away_taskbar_command)
+                            time.sleep(0.1)
+                            keyboard.press(*obs_taskbar_command)
+                            time.sleep(0.1)
+                            keyboard.press(*key_to_code[(r, k)])
+                        else:
+                            keyboard.press(*key_to_code[(r, k)])
                     keyboard.release_all()
                     last_key = (-1, -1)
         color[r] = intensity
