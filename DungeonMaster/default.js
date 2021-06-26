@@ -436,6 +436,8 @@ function render(party, viewport) {
     const l2 = party.peek([-2, -1]);
     const f2 = party.peek([-2, 0]);
     const r2 = party.peek([-2, 1]);
+    const ll3 = party.peek([-3, -2]);
+    const rr3 = party.peek([-3, 2]);
     const l3 = party.peek([-3, -1]);
     const f3 = party.peek([-3, 0]);
     const r3 = party.peek([-3, 1]);
@@ -457,6 +459,8 @@ function render(party, viewport) {
     setVisibility(viewport, 'fr3', r3.blocks);
     setVisibility(viewport, 'l3', l3.blocks);
     setVisibility(viewport, 'r3', r3.blocks);
+    setVisibility(viewport, 'll3', ll3.blocks);
+    setVisibility(viewport, 'rr3', rr3.blocks);
 
     setClass(viewport, "alternate",
         (party.tile.row + party.tile.column +

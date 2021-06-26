@@ -111,11 +111,39 @@ html {
     clip: rect(auto, auto, auto, 150px);
 }
 .background {
-    background-image: url(Background.png);
+    background-image: url(./img/Background.png);
     width: 446px;
     height: 270px;
 }
 .alternate .background, .alternate .front-wall {
+    transform: scaleX(-1);
+}
+.far-left-wall {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 48px;
+    background-image: url(./img/WallFarLeft.png);
+    width: 32px;
+    height: 102px;
+}
+.far-right-wall {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    background-image: url(./img/WallFarRight.png);
+    width: 36px;
+    height: 106px;
+}
+.alternate .far-left-wall {
+    background-image: url(./img/WallFarRight.png);
+    width: 36px;
+    transform: scaleX(-1);
+}
+.alternate .far-right-wall {
+    background-image: url(./img/WallFarLeft.png);
+    width: 32px;
     transform: scaleX(-1);
 }
 .left-wall {
@@ -123,7 +151,7 @@ html {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(WallLeft.png);
+    background-image: url(./img/WallLeft.png);
     width: 168px;
     height: 270px;
 }
@@ -132,17 +160,17 @@ html {
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url(WallRight.png);
+    background-image: url(./img/WallRight.png);
     width: 176px;
     height: 270px;
 }
 .alternate .left-wall {
-    background-image: url(WallRight.png);
+    background-image: url(./img/WallRight.png);
     width: 176px;
     transform: scaleX(-1);
 }
 .alternate .right-wall {
-    background-image: url(WallLeft.png);
+    background-image: url(./img/WallLeft.png);
     width: 168px;
     transform: scaleX(-1);
 }
@@ -151,7 +179,7 @@ html {
     position: absolute;
     left: 0;
     top: 50px;
-    background-image: url(FrontFarther.png);
+    background-image: url(./img/FrontFarther.png);
     width: 446px;
     height: 102px;
 }
@@ -160,7 +188,7 @@ html {
     position: absolute;
     left: 0;
     top: 40px;
-    background-image: url(FrontFar.png);
+    background-image: url(./img/FrontFar.png);
     width: 446px;
     height: 142px;
 }
@@ -169,14 +197,14 @@ html {
     position: absolute;
     left: 0;
     top: 18px;
-    background-image: url(FrontNear.png);
+    background-image: url(./img/FrontNear.png);
     width: 446px;
     height: 222px;
 }
 .dirpad {
     display: inline-block;
     position: relative;
-    background-image: url(Arrows.png);
+    background-image: url(./img/Arrows.png);
     width: 174px;
     height: 90px;
 }
