@@ -27,6 +27,7 @@ c3 = digitalio.DigitalInOut(board.D13)
 c4 = digitalio.DigitalInOut(board.D3)
 c5 = digitalio.DigitalInOut(board.D4)
 
+# Map key coordinates to key codes that are sent to the host
 key_to_code = {
     (0,0): [Keycode.CONTROL, Keycode.ALT, Keycode.F1],
     (0,1): [Keycode.CONTROL, Keycode.ALT, Keycode.F2],
@@ -42,8 +43,11 @@ key_to_code = {
     (2,1): [Keycode.CONTROL, Keycode.ALT, Keycode.F8],
     (2,2): [Keycode.LEFT_ARROW],
     (2,3): [Keycode.DOWN_ARROW],
-    (2,4): [Keycode.RIGHT_ARROW],
+    (2,4): [Keycode.RIGHT_ARROW]
 }
+
+# Those keys act on key down and remain active until released
+key_down_keys = [b3, b4, b5, c3, c4, c5]
 
 row1 = [a1, a2, a3, a4, a5]
 row2 = [b1, b2, b3, b4, b5]
@@ -73,14 +77,18 @@ while True:
         for k, key in enumerate(row):
             if not key.value:
                 intensity += 2**(k + 3)
-                print('Key {}{}'.format(chr(ord('A') + r), k + 1))
+                #print('Key {}{}'.format(chr(ord('A') + r), k + 1))
+                if key in key_down_keys and (r, k) != last_key:
+                    keyboard.press(*key_to_code[(r, k)])
+                    print("down")
                 last_key = (r, k)
             else:
                 if (r, k) == last_key:
-                    keyboard.press(*key_to_code[(r, k)])
+                    if not (key in key_down_keys):
+                        keyboard.press(*key_to_code[(r, k)])
                     keyboard.release_all()
                     last_key = (-1, -1)
         color[r] = intensity
     led.value = color[0] != 0 or color[1] != 0 or color[2] != 0
     pixel.fill((color[0], color[1], color[2]))
-    time.sleep(0.05)
+    time.sleep(0.01)
