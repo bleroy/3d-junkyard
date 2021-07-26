@@ -21,10 +21,10 @@ def on_encoder_pin_down(p):
         else:
             # B went first
             counter -= 1
+    
+        print(counter)
     else:
         previous_A = A
-    
-    print(counter)
 
 # Call update every time one of the pins falls or rises
 encoder_A.irq(on_encoder_pin_down, Pin.IRQ_FALLING | Pin.IRQ_RISING)
