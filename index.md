@@ -2,4 +2,4 @@
 
 Stuff you can check out:
 
-* [Dungeon Master labyrinth rendering](DungeonMaster/index.html)
+* [Dungeon Master labyrinth rendering](DungeonMaster/default.html)
