@@ -1,0 +1,9 @@
+html {
+    background-color: black;
+}
+.viewport {
+    display: inline-block;
+    position: relative;
+    width: 446px;
+    height: 270px;
+}
