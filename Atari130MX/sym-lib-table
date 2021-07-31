@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Atari130MX)(type Legacy)(uri ${KIPRJMOD}/Atari130MX.lib)(options "")(descr ""))
+)
