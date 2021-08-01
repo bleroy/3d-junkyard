@@ -25,11 +25,13 @@ IN = digitalio.Direction.INPUT
 OUT = digitalio.Direction.OUTPUT
 PULLUP = digitalio.Pull.UP
 PULLDOWN = digitalio.Pull.DOWN
+
 def PinIn(id, pull):
     pin = digitalio.DigitalInOut(getattr(board, 'GP' + str(id)))
     pin.direction = digitalio.Direction.INPUT
     pin.pull = pull
     return pin
+    
 def PinOut(id):
     pin = digitalio.DigitalInOut(getattr(board, 'GP' + str(id)))
     pin.direction = digitalio.Direction.OUTPUT
