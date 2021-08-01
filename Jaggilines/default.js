@@ -56,19 +56,23 @@ class Map {
         const halfSize = Math.floor(size / 2);
         this.set(row + halfSize, col + halfSize, varyFromAverage([
             this.get(row, col + halfSize),
-            this.get(row, col - halfSize),
             this.get(row + halfSize, col),
-            this.get(row - halfSize, col)]));
-        // TODO
-        this.#diamond(row + halfSize, col + halfSize, halfSize);
-        this.#diamond(row + halfSize, col + halfSize, halfSize);
-        this.#diamond(row + halfSize, col + halfSize, halfSize);
+            this.get(row + halfSize, col + halfSize * 2),
+            this.get(row + halfSize * 2, col + halfSize)]));
         this.#diamond(row + halfSize, col + halfSize, halfSize);
     }
 
     #diamond(row, col, size) {
         if (size <= 1) return;
-
+        this.set(row + halfSize, col + halfSize, varyFromAverage([
+            this.get(row, col + halfSize),
+            this.get(row, col - halfSize),
+            this.get(row + halfSize, col),
+            this.get(row - halfSize, col)]));
+        this.#square(row, col, halfSize);
+        this.#square(row + halfSize, col, halfSize);
+        this.#square(row, col + halfSize, halfSize);
+        this.#square(row + halfSize, col + halfSize, halfSize);
     }
 }
 
