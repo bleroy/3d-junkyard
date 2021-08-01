@@ -1,9 +1,31 @@
 html {
     background-color: black;
 }
-.viewport {
+.viewportContainer {
     display: inline-block;
     position: relative;
-    width: 446px;
-    height: 270px;
+    width: 640px;
+    height: 480px;
+    border: rgb(255, 136, 0) solid 4px;
+    margin-bottom: 8px;
+}
+
+.mapcontainer {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+.ship {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
 }

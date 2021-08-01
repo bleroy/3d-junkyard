@@ -7,9 +7,14 @@
         <link rel="stylesheet" type="text/css" href="default.css"/>
     </head>
     <body>
-        <canvas id="viewport" width="640" height="480" style="border: rgb(255, 136, 0) solid 4px"></canvas>
+        <div class="viewportContainer">
+            <canvas id="viewport"></canvas>
+        </div>
         <div class="dirpad"></div>
-        <canvas class="map" width="128" height="128" style="border: rgb(255, 136, 0) solid 4px"></canvas>
+        <div class="mapcontainer">
+            <canvas class="map"></canvas>
+            <img class="ship" src="assets/Valkyrie.png"/>
+        </div>
         <script type="text/javascript" src="default.js"></script>
     </body>
 </html>
