@@ -20,7 +20,7 @@ class Map {
         this.#changeHandlers = [];
 
         // Initialize empty map
-        this.#map = Array(size).map(_ => Array(size));
+        this.#map = Array(size).fill().map(_ => Array(size).fill(0));
     }
 
     addChangeListener(handler) {
@@ -35,10 +35,11 @@ class Map {
     }
 
     get(row, col) {
-        return this.#map[row % this.size, col % this.size];
+        return this.#map[row % this.size][col % this.size];
     }
 
     set(row, col, val) {
+        val = Math.floor(val);
         this.#map[row % this.size][col % this.size] = val;
         this.#changeHandlers.forEach(handler => handler(row % this.size, col % this.size, val));
     }
@@ -48,58 +49,59 @@ class Map {
         // There are better algorithms but that will do.
         // Seed the top-left corner
         this.set(0, 0, Math.random() * maxHeight);
-        this.#square(0, 0, this.size);
+        this.#diamond(0, 0, this.size);
     }
 
     #square(row, col, size) {
         if (size <= 1) return;
         const halfSize = Math.floor(size / 2);
         this.set(row + halfSize, col + halfSize, varyFromAverage([
-            this.get(row, col + halfSize),
+            this.get(row - halfSize, col),
             this.get(row + halfSize, col),
-            this.get(row + halfSize, col + halfSize * 2),
-            this.get(row + halfSize * 2, col + halfSize)]));
-        this.#diamond(row + halfSize, col + halfSize, halfSize);
-    }
+            this.get(row, col + halfSize),
+            this.get(row, col - halfSize)]));
+            this.#diamond(row, col, halfSize);
+            this.#diamond(row - halfSize, col, halfSize);
+        }
 
     #diamond(row, col, size) {
         if (size <= 1) return;
+        const halfSize = Math.floor(size / 2);
         this.set(row + halfSize, col + halfSize, varyFromAverage([
-            this.get(row, col + halfSize),
-            this.get(row, col - halfSize),
-            this.get(row + halfSize, col),
-            this.get(row - halfSize, col)]));
-        this.#square(row, col, halfSize);
-        this.#square(row + halfSize, col, halfSize);
-        this.#square(row, col + halfSize, halfSize);
-        this.#square(row + halfSize, col + halfSize, halfSize);
+            this.get(row, col),
+            this.get(row, col + halfSize * 2),
+            this.get(row + halfSize * 2, col),
+            this.get(row + halfSize * 2, col + halfSize * 2)]));
+        this.#square(row + halfSize * 2, col + halfSize, size);
+        this.#square(row + halfSize, col + halfSize * 2, size);
     }
 }
 
 class OverheadMap {
     #context;
-    #pixel;
+    #pixelCanvas;
+    #pixelContext;
 
     constructor(canvas, scale, map, colorScale) {
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
-        const pixelCanvas = document.createElement('canvas');
-        pixelCanvas.width = 1;
-        pixelCanvas.height = 1;
-        const pixelContext = pixelCanvas.getContext('2d');
-        this.#pixel = pixelContext.createImageData(1, 1);
+        const doc = canvas.ownerDocument;
+        this.#pixelCanvas = doc.createElement('canvas');
+        this.#pixelCanvas.width = 1;
+        this.#pixelCanvas.height = 1;
+        this.#pixelContext = this.#pixelCanvas.getContext('2d');
+        this.#pixelContext.imageSmoothingEnabled = false;
         this.scale = scale;
         this.map = map;
         this.colorScale = colorScale;
 
         map.addChangeListener((row, col, val) => {
-            const pixel = this.#pixel;
             const color = this.colorScale(val);
-            pixel[0] = color.r;
-            pixel[1] = color.g;
-            pixel[2] = color.b;
-            this.#context.putImageData(pixel, row, col, 0, 0, this.scale, this.scale);
+            const pixelData = new Uint8ClampedArray([color.r, color.g, color.b, 255]);
+            const pixelImageData = new ImageData(pixelData, 1, 1);
+            this.#pixelContext.putImageData(pixelImageData, 0, 0, 0, 0);
+            this.#context.drawImage(this.#pixelCanvas, row * scale, col * scale, scale, sccale);
         });
     }
 }
