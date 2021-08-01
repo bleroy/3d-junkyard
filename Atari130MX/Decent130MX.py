@@ -1,9 +1,13 @@
 from machine import Pin, Timer, mem32
+import pyb
 import rp2
 import utime
 from keycode import Keycode
+from keyboard import Keyboard
 
 GPIO_BASE = 0xd0000004
+
+keeb = Keyboard(pyb.USB_HID.devices)
 
 led = Pin(2, Pin.OUT)
 timer = Timer()
@@ -29,25 +33,28 @@ key_matrix = [
     [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.END,              None,                           None],
     [None,                    Keycode.F6,    Keycode.B,             Keycode.V,             Keycode.C,               Keycode.X,                   Keycode.Z,                None,                           Keycode.SHIFT]]
 
-shifted_overrides = [
-    [Keycode.QUOTE,           None,          SHIFTED | Keycode.TWO, None,                  None,                    Keycode.HOME,                SHIFTED | Keycode.INSERT, SHIFTED | Keycode.DELETE,       None],
-    [SHIFTED | Keycode.SEVEN, None,          None,                  None,                  SHIFTED | Keycode.QUOTE, None,                        None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    SHIFTED | Keycode.BACKSLASH, None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None],
-    [None,                    None,          None,                  None,                  Keycode.BACKSLASH,       SHIFTED | Keycode.SIX,       None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None],
-    [None,                    None,          Keycode.LEFT_BRACKET,  Keycode.RIGHT_BRACKET, None,                    None,                        None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None]]
+shifted_overrides = dict([
+    (Keycode.SEVEN, Keycode.QUOTE),
+    (Keycode.EIGHT, SHIFTED | Keycode.TWO),
+    (SHIFTED | Keycode.COMMA, Keycode.HOME),
+    (SHIFTED | Keycode.PERIOD, SHIFTED | Keycode.INSERT),
+    (Keycode.BACKSPACE, SHIFTED | Keycode.DELETE),
+    (Keycode.SIX, SHIFTED | Keycode.SEVEN),
+    (Keycode.TWO, SHIFTED | Keycode.QUOTE),
+    (Keycode.MINUS, SHIFTED | Keycode.BACKSLASH),
+    (SHIFTED | Keycode.EQUAL, Keycode.BACKSLASH),
+    (SHIFTED | KeyCode.EIGHT, SHIFTED | KeyCode.SIX),
+    (Keycode.COMMA, Keycode.LEFTBRACKET),
+    (Keycode.PERIOD, Keycode.RIGHTBRACKET)])
 
-controlled_overrides = [
-    [None,                    None,          None,                  None,                  None,                    None,                        Keycode.INSERT,           Keycode.DELETE,                 None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     CONTROLLED | Keycode.BACKSLASH, None],
-    [None,                    None,          None,                  None,                  None,                    Keycode.UP_ARROW,            Keycode.DOWN_ARROW,       None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    Keycode.LEFT_ARROW,          Keycode.RIGHT_ARROW,      None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None],
-    [None,                    None,          None,                  None,                  None,                    None,                        None,                     None,                           None]]
+controlled_overrides = dict([
+    (SHIFTED | Keycode.PERIOD, Keycode.INSERT),
+    (Keycode.BACKSPACE, Keycode.DELETE),
+    (Keycode.ESCAPE, CONTROLLED | Keycode.BACKSLASH),
+    (Keycode.MINUS, Keycode.UP_ARROW),
+    (Keycode.EQUAL, Keycode.DOWN_ARROW),
+    (SHIFTED | Keycode.EQUAL, Keycode.LEFT_ARROW),
+    (SHIFTED | Keycode.EIGHT, Keycode.RIGHT_ARROW)])
 
 row_pins = []
 col_pins = []
@@ -61,39 +68,55 @@ for col_pin_number in col_pin_numbers:
     col_pin_mask = col_pin_mask | 1 << col_pin_number
 
 #print("{0:b}".format(col_pin_mask))
-PC_key = None
+keys_pressed = set()
 def scan_keeb():
-    matrix = []
+    currently_pressed = set()
+    shift_pressed = False
+    control_pressed = False
     global PC_key
     for row_idx, row_pin in enumerate(row_pins):
+        # Light-up this row
         row_pin.value(1)
+        # Get all column pins at once through the hardware register
         set_pins = mem32[GPIO_BASE] & col_pin_mask
         if set_pins != 0:
-            any_key = True
-            matrix.append(set_pins)
             for col_idx, col_pin_number in enumerate(col_pin_numbers):
                 if set_pins & 1 << col_pin_number != 0:
                     #print("Row {0} (pin {1}), Col {2} (pin {3})".format(row_idx, row_pin_numbers[row_idx], col_idx, col_pin_number))
                     key = key_matrix[row_idx][col_idx]
+                    if key == Keycode.SHIFT:
+                        shift_pressed = True
+                    if key == Keycode.CONTROL:
+                        control_pressed = True
                     if not key is None:
-#            print("Row {0} (pin {2}): {1:b}".format(row_idx, set_pins, row_pin_numbers[row_idx]))
-        else:
-            matrix.append(0)
+                        currently_pressed.append(key)
+                    #Row {0} (pin {2}): {1:b}".format(row_idx, set_pins, row_pin_numbers[row_idx]))
+        # Turn off this row so we can scan the next one
         row_pin.value(0)
-        
-    return matrix if any_key else None
+    # Post-process the keys for shifted values, overrides, etc.
+    for key in currently_pressed:
+        if shift_pressed and key in shifted_overrides:
+            key = shifted_overrides[key]
+        if control_pressed and key in controlled_overrides:
+            key = controlled_overrides[key]
+        shift_pressed = shift_pressed or key & SHIFTED != 0
+        control_pressed = control_pressed or key & CONTROLLED != 0
+        if shift_pressed:
+            currently_pressed.append(Keycode.SHIFT)
+        if control_pressed:
+            currently_pressed.append(Keycode.CONTROL)
+        key = key & 0xFF
+    # Press keys not pressed before
+    keeb.press(*(currently_pressed - keys_pressed))
+    # Release keys no lonnger pressed
+    keeb.release(*(keys_pressed - currnelty_pressed))
+    # Update the old set of keys pressed with the current one for the next scan
+    keys_pressed = currently_pressed
+    # Turn on the led if any key was pressed
+    led.value(1 if len(keys_pressed) > 0 else 0)
     
-def tick(timer):
-    global led
-    led.toggle()
-
-timer.init(freq=2.5, mode=Timer.PERIODIC, callback=tick)
-
 while True:
-    matrix = scan_keeb()
-#     if not matrix is None:
-#         print(matrix)
+    scan_keeb()
     utime.sleep(0.001)
 
 print('Ready')
-
