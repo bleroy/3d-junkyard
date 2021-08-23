@@ -1,12 +1,9 @@
 html {
     background-color: black;
 }
-.viewportContainer {
+.viewport {
     display: inline-block;
     position: relative;
-    width: 640px;
-    height: 480px;
-    border: rgb(255, 136, 0) solid 4px;
     margin-bottom: 8px;
 }
 

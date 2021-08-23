@@ -24,6 +24,16 @@ const coordinateBits = mapCoordinateBits + bitsBetweenTops;
 /** The mountain summit map is 16 x 16. */
 const mapSize = 1 << mapCoordinateBits;
 
+/** The number of pixels on the map between peaks. */
+const mapScale = 8;
+
+/** The logical width of the viewport. */
+const viewportWidth = 160;
+/** The logical height of the viewport. */
+const viewportHeight = 48;
+/** The scale of the viewport from logical pixel to physical pixels on the page. */
+const viewportScale = 4;
+
 /** Vertically, mountains range up to 2^12 in height. */
 const maxHeight = 1 << bitsBetweenTops;
 
@@ -143,7 +153,7 @@ class Map {
      * @param {number} row - The row where to set the elevation.
      * @param {number} col - The column where to set the elevation.
      * @param {number} val - The elevation to set at (row, col). */
-     set(row, col, val) {
+    set(row, col, val) {
         val = Math.floor(val);
         row = mod(row, this.size);
         col = mod(col, this.size);
@@ -319,15 +329,21 @@ class Valkyrie {
 document.addEventListener('DOMContentLoaded', e => {
     const map = new Map(mapSize);
     const mapEl = document.getElementsByClassName('map')[0];
+    mapEl.width = mapEl.height = mapSize * mapScale;
     const shipImg = document.getElementsByClassName('ship')[0];
     const ship = new Valkyrie();
-    const overhead = new OverheadMap(mapEl, shipImg, 8, map, ship,
+    const overhead = new OverheadMap(mapEl, shipImg, mapScale, map, ship,
         val => ({
             r: Math.floor(0x68 + 0x80 * val / maxHeight),
             g: Math.floor(0x60 + 0x40 * val / maxHeight),
             b: Math.floor(0 + 0x40 * val / maxHeight)
         }));
     map.generate();
+
+    const viewportEl = document.getElementById('viewport');
+    viewportEl.width = viewportWidth * viewportScale;
+    viewportEl.height = viewportHeight * viewportScale;
+
     setTimeout(gameLoop, tick);
 
     function gameLoop() {
