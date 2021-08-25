@@ -64,8 +64,20 @@ const halfCircle = 180 << angleUnitPowerOfTwo;
 /** Number of units of angle in a full circle. */
 const fullCircle = 360 << angleUnitPowerOfTwo;
 
+/** The color of the sky. */
+let skyColor = {r: 243, g: 143, b: 101};
+
+/** The color of mountains. */
+let mountainColor = {r: 130, g: 60, b: 0};
+
+/** The color of the separation between two mountains. */
+let mountainEdgeColor = {r: 60, g: 0, b: 0}
+
 /** Number of milliseconds between runs of the game loop. */
-const tick = 100;
+const tick = 32;
+
+/** The number of ticks since the game started running. */
+let frame = 0;
 
 // TODO: add a smoothness parameter that changes the probability distribution
 // (rough is centered around 1, smooth is centered around 0)
@@ -106,7 +118,9 @@ const mod = (n, m) => ((n % m) + m) % m;
  * @param {number} col - The column where the change happened.
  * @param {number} val - The new elevation value at (row, col). */
 
-/** A random mountain map. */
+/** A random mountain map.
+ * @property {number} size - The size of the map.
+ */
 class Map {
     /** The 2D array of elevations for this map.
      * @type {Array<Array<number>>} */
@@ -207,20 +221,26 @@ class Map {
  * @param {number} val - The elevation.
  * @returns {Color} - The color. */
 
-/** An overhead visualization of an elevation map with the ship's position over it. */
+/** An overhead visualization of an elevation map with the ship's position over it.
+ * @property {HTMLCanvasElement} canvas - The canvas element where to draw the map.
+ * @property {HTMLImageElement} shipImg - The img element that represents the ship.
+ * @property {number} scale - The distance in pixels between mountain tops on the map.
+ * @property {Valkyrie} ship - The ship object.
+ * @property {ColorScale} colorScale - The color scale to use to render the map.
+ */
 class OverheadMap {
     #context;
     #pixelCanvas;
     #pixelContext;
     #shipEl;
 
-    /** Build and overhead visualization of an elevation map over the provided canvas element.
+    /** Build an overhead visualization of an elevation map over the provided canvas element.
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the map.
-     * @param {HTMLImageElement} shipImg - The img element that represents the ship.
      * @param {number} scale - The distance in pixels between mountain tops on the map.
      * @param {Valkyrie} ship - The ship object.
-     * @param {ColorScale} colorScale - The color scale to use to render the mape. */
+     * @param {ColorScale} colorScale - The color scale to use to render the map. */
     constructor(canvas, shipImg, scale, map, ship, colorScale) {
+        canvas.width = canvas.height = map.size * scale;
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
@@ -255,6 +275,91 @@ class OverheadMap {
         this.#shipEl.style.top = (this.ship.y / (1 << bitsBetweenTops) * this.scale - this.#shipEl.clientHeight / 2) + 'px';
         this.#shipEl.style.left = (this.ship.x / (1 << bitsBetweenTops) * this.scale - this.#shipEl.clientWidth / 2) + 'px';
         this.#shipEl.style.transform = `rotate(${(north - this.ship.heading) >> angleUnitPowerOfTwo}deg)`;
+    }
+}
+
+/** A viewport that can render the 3D subjective view from the ship.
+ * @property {HTMLCanvasElement} canvas - The canvas element where to draw the view.
+ * @property {number} width - The width of the viewport in logical pixels.
+ * @property {number} height - The height of the viewport in logical pixels.
+ * @property {number} scale - The physical pixel size of a logical viewport pixel.
+ * @property {Valkyrie} ship - The ship object. */
+class Viewport {
+    #context;
+    #skyPixel;
+    #mountainPixel;
+    #mountainEdgePixel;
+    #topHeight;
+
+    /** Build a 3D viewport over the provided canvas element.
+     * @param {HTMLCanvasElement} canvas - The canvas element where to draw the view.
+     * @param {number} width - The width of the viewport in logical pixels.
+     * @param {number} height - The height of the viewport in logical pixels.
+     * @param {number} scale - The physical pixel size of a logical viewport pixel.
+     * @param {Valkyrie} ship - The ship object. */
+     constructor(canvas, width, height, scale, ship) {
+        this.width = width;
+        this.height = height;
+        canvas.width = width * scale;
+        canvas.height = height * scale;
+        this.canvas = canvas;
+        this.#context = canvas.getContext('2d');
+        this.#context.imageSmoothingEnabled = false;
+        const doc = canvas.ownerDocument;
+        this.scale = scale;
+        this.ship = ship;
+
+        // Prepare pixel data for each of the colors we need to render
+        this.#skyPixel = this.#preparePixel(doc, skyColor);
+        this.#mountainPixel = this.#preparePixel(doc, mountainColor);
+        this.#mountainEdgePixel = this.#preparePixel(doc, mountainEdgeColor);
+        
+        // Trigger the first rendering
+        this.draw();
+
+        ship.addMoveListener(() => {
+            this.draw();
+        });
+    }
+
+    #preparePixel(doc, color) {
+        const pixelCanvas = doc.createElement('canvas');
+        pixelCanvas.width = pixelCanvas.height = 1;
+        const pixelContext = pixelCanvas.getContext('2d');
+        pixelContext.imageSmoothingEnabled = false;
+        const pixelData = new Uint8ClampedArray([color.r, color.g, color.b, 255]);
+        const pixelImageData = new ImageData(pixelData, 1, 1);
+        pixelContext.putImageData(pixelImageData, 0, 0);
+        return pixelCanvas;
+    }
+
+    /** Draws a column of pixels representing a slice of mountain.
+     * Can be called repeatedly for successive mountains from closest to farthest.
+     * @param {number} x - the logical pixel column to render.
+     * @param {number} mountainTop - the height of the mountain in logical pixels from the bottom of the viewport.
+     */
+    drawMountainColumn(x, mountainTop) {
+        if (this.#topHeight  === -1) { // First mountain we're drawing on this column.
+            this.#context.drawImage(this.#skyPixel, x * this.scale, 0, this.scale, (this.height - mountainTop) * this.scale);
+            this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, mountainTop * this.scale);
+            this.#topHeight = mountainTop;
+        }
+        else if (mountainTop >= this.#topHeight ) { // New mountain (that is farther) is taller -> extend previous.
+            this.#context.drawImage(this.#mountainEdgePixel, x * this.scale, (this.height - this.#topHeight) * this.scale, this.scale, this.scale);
+            this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, (mountainTop - this.#topHeight) * this.scale);
+            this.#topHeight = mountainTop;
+        }
+        // Otherwise, everything is hidden, do nothing.
+    }
+
+    /** Draw a frame. */
+    draw() {
+        for (var x = 0; x < this.width; x++) {
+            this.#topHeight = -1;
+            this.drawMountainColumn(x, Math.floor(30 + 8 * Math.sin((x - frame) * 2 * Math.PI / this.width)));
+            this.drawMountainColumn(x, 30);
+            this.drawMountainColumn(x, Math.floor(30 + 8 * Math.cos((x + frame) * 2 * Math.PI / this.width)));
+        }
     }
 }
 
@@ -328,10 +433,9 @@ class Valkyrie {
 
 document.addEventListener('DOMContentLoaded', e => {
     const map = new Map(mapSize);
-    const mapEl = document.getElementsByClassName('map')[0];
-    mapEl.width = mapEl.height = mapSize * mapScale;
-    const shipImg = document.getElementsByClassName('ship')[0];
     const ship = new Valkyrie();
+    const mapEl = document.getElementsByClassName('map')[0];
+    const shipImg = document.getElementsByClassName('ship')[0];
     const overhead = new OverheadMap(mapEl, shipImg, mapScale, map, ship,
         val => ({
             r: Math.floor(0x68 + 0x80 * val / maxHeight),
@@ -339,15 +443,18 @@ document.addEventListener('DOMContentLoaded', e => {
             b: Math.floor(0 + 0x40 * val / maxHeight)
         }));
     map.generate();
-
     const viewportEl = document.getElementById('viewport');
-    viewportEl.width = viewportWidth * viewportScale;
-    viewportEl.height = viewportHeight * viewportScale;
+    const viewport = new Viewport(viewportEl, viewportWidth, viewportHeight, viewportScale, ship);
 
-    setTimeout(gameLoop, tick);
+    // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
+    setInterval(gameLoop, tick);
 
+    var rendering = false;
     function gameLoop() {
+        frame++;
+        if (rendering) return; // Drop the frame if not done rendering but JS being single-threaded... this is not that useful. Then again, we could offset processing to a worker.
+        rendering = true;
         ship.move();
-        setTimeout(gameLoop, tick);
+        rendering = false;
     }
 });
