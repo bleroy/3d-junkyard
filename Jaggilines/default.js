@@ -100,17 +100,64 @@ const vary = (val, varyBy = maxVariation) => clamp(val + Math.random() * 2 * var
  * @returns {number} A new integer value that is a random number equal to val +/- at most varyBy and clamped between 0 and maxHeight. */
  const varyFromAverage = (vals, varyBy = maxVariation) => vary(vals.reduce((acc, val) => acc + val, 0) / vals.length, varyBy);
 
-/** A table of twelve bits of cos for each unit of angle */
+/** A table of twelve bits of cos for each unit of angle. */
 const cos = [...new Array(fullCircle).keys()].map(angle => Math.floor(Math.cos(angle * Math.PI / halfCircle) * (1 << bitsBetweenTops)));
 
-/** A table of twelve bits of sin for each unit of angle */
+/** A table of twelve bits of sin for each unit of angle. */
 const sin = [...new Array(fullCircle).keys()].map(angle => Math.floor(Math.sin(angle * Math.PI / halfCircle) * (1 << bitsBetweenTops)));
+
+/** A table of fixed-point 16 bits of tangents for each unit of angle between west and north (north excluded, since tan is infinity there).
+ * The fractional point is at 8 bits: [8 bits 15-8 integral part][8 bits 7-0 fractional part]. */
+// The resulting table has 360 entries, meaning a binary search is at most 9 steps.
+// The value of the highest finite tan angle with our precision of 1/4 degree is 89.75 degrees, and tan(89.75deg) = 229.18,
+// requiring 8 bits to store the integral part. If we store the tan values over 16 bits, we can multiply by 256.
+// Entries are then between 0 and 56871, requiring 16 bits to encode.
+// Example: tan(45deg) = 1. 45 degrees are encoded as 180 (45 << 2), so the entry for index 180 should be close to the fixed-point
+// value for 1, which is 1 << 8 = 256.
+const tan = [...new Array(fullCircle >> 2).keys()].map(angle => Math.round(Math.tan(angle * Math.PI / halfCircle) * (1 << 8)));
+console.log(tan);
+
+/** Maps coordinates to angles
+ * @param {number} x - The horizontal coordinate.
+ * @param {number} y - The vertical coordinate.
+ * @returns {number} The angle corresponding to those coordinates. */
+const atan = (x, y) => {
+    if (x == 0) return (y > 0) ? north : south;
+    // We'll map the negative-x or negative-y quadrants by using the symmetries of the tan function when processing the resulting angle.
+    const absX = Math.abs(x);
+    const absY = Math.abs(y);
+    // We need a fixed-point 16 bit ratio with 9 bits of fractional part to map. Anything above that is infinity.
+    if (absY > absX << 8) return (y > 0) ? north : south; // |y| / |x| > 1 << 8
+    // We have to divide here, but we'll do so a fixed number of times per frame: for mountain tops in the field of view.
+    // The rest will be interpolated.
+    // We could even optimize and compute angles for the leftmost and rightmost mountains in the field of view for each row from the ship,
+    // and then interpolate the rest. Since we're not as resource-constrained as coders of the time, we can leave this as an exercise
+    // to the reader and simplify the code, knowing that this optimization would be possible.
+    const ratio = Math.round((absY << 8) / absX); // The result is a 16 bit integer: |y| / |x| <= 1 << 8 so |y| << 8 / |x| <= 1 << 16
+    // ... binary search this ratio in the tan table
+    // ... use x and y signs and tan symmetries to determine the angle
+};
+
+/** Find the index of the value in the table that's closest to the provided value.
+ * @param {number} val - The value to search for.
+ * @param {number[]} table - The table in which to search.
+ * @returns {number} The index in the table of the closest value. */
+const findIndex = (val, table) => {
+    // ...
+};
 
 /** Positive modulo.
  * @param {number} n - The number to get the modulo of.
  * @param {number} m - The modulo.
  * @returns {number} n modulo m (always between 0 and m). */
 const mod = (n, m) => ((n % m) + m) % m;
+
+/** Computes the difference between two angles.
+ * @param {number} a - The first angle.
+ * @param {number} b - The angle to subtract.
+ * @returns {number} The angle `a - b`.
+ */
+const angleSub = (a, b) => mod(a - b, fullCircle);
 
 /** Handler for map elevation changes.
  * @callback MapChangeHandler
@@ -127,7 +174,7 @@ class Map {
     #map;
 
     /** The handlers to notify when elevation values change.
-     * @type {Array<MapChangeHandler>} */
+     * @type {MapChangeHandler[]} */
     #changeHandlers;
 
     /** Constructs a new map.
@@ -225,6 +272,7 @@ class Map {
  * @property {HTMLCanvasElement} canvas - The canvas element where to draw the map.
  * @property {HTMLImageElement} shipImg - The img element that represents the ship.
  * @property {number} scale - The distance in pixels between mountain tops on the map.
+ * @property {Map} map - The map of the landscape to render.
  * @property {Valkyrie} ship - The ship object.
  * @property {ColorScale} colorScale - The color scale to use to render the map.
  */
@@ -237,6 +285,7 @@ class OverheadMap {
     /** Build an overhead visualization of an elevation map over the provided canvas element.
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the map.
      * @param {number} scale - The distance in pixels between mountain tops on the map.
+     * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object.
      * @param {ColorScale} colorScale - The color scale to use to render the map. */
     constructor(canvas, shipImg, scale, map, ship, colorScale) {
@@ -283,6 +332,7 @@ class OverheadMap {
  * @property {number} width - The width of the viewport in logical pixels.
  * @property {number} height - The height of the viewport in logical pixels.
  * @property {number} scale - The physical pixel size of a logical viewport pixel.
+ * @property {Map} map - The map of the landscape to render.
  * @property {Valkyrie} ship - The ship object. */
 class Viewport {
     #context;
@@ -296,8 +346,9 @@ class Viewport {
      * @param {number} width - The width of the viewport in logical pixels.
      * @param {number} height - The height of the viewport in logical pixels.
      * @param {number} scale - The physical pixel size of a logical viewport pixel.
+     * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object. */
-     constructor(canvas, width, height, scale, ship) {
+     constructor(canvas, width, height, scale, map, ship) {
         this.width = width;
         this.height = height;
         canvas.width = width * scale;
@@ -307,6 +358,7 @@ class Viewport {
         this.#context.imageSmoothingEnabled = false;
         const doc = canvas.ownerDocument;
         this.scale = scale;
+        this.map = map;
         this.ship = ship;
 
         // Prepare pixel data for each of the colors we need to render
@@ -352,14 +404,12 @@ class Viewport {
         // Otherwise, everything is hidden, do nothing.
     }
 
+    #mapCoordinatesToScreenColumn(x, y)
+    {
+    }
+
     /** Draw a frame. */
     draw() {
-        for (var x = 0; x < this.width; x++) {
-            this.#topHeight = -1;
-            this.drawMountainColumn(x, Math.floor(30 + 8 * Math.sin((x - frame) * 2 * Math.PI / this.width)));
-            this.drawMountainColumn(x, 30);
-            this.drawMountainColumn(x, Math.floor(30 + 8 * Math.cos((x + frame) * 2 * Math.PI / this.width)));
-        }
     }
 }
 
@@ -444,7 +494,7 @@ document.addEventListener('DOMContentLoaded', e => {
         }));
     map.generate();
     const viewportEl = document.getElementById('viewport');
-    const viewport = new Viewport(viewportEl, viewportWidth, viewportHeight, viewportScale, ship);
+    const viewport = new Viewport(viewportEl, viewportWidth, viewportHeight, viewportScale, map, ship);
 
     // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
     setInterval(gameLoop, tick);
