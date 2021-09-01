@@ -376,7 +376,7 @@ class Viewport {
     #skyPixel;
     #mountainPixel;
     #mountainEdgePixel;
-    #topHeight;
+    #topHeights;
 
     /** Build a 3D viewport over the provided canvas element.
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the view.
@@ -428,25 +428,41 @@ class Viewport {
      * @param {number} mountainTop - the height of the mountain in logical pixels from the bottom of the viewport.
      */
     drawMountainColumn(x, mountainTop) {
-        if (this.#topHeight  === -1) { // First mountain we're drawing on this column.
+        if (this.#topHeights[x]  === -1) { // First mountain we're drawing on this column.
             this.#context.drawImage(this.#skyPixel, x * this.scale, 0, this.scale, (this.height - mountainTop) * this.scale);
             this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, mountainTop * this.scale);
-            this.#topHeight = mountainTop;
+            this.#topHeights[x] = mountainTop;
         }
-        else if (mountainTop >= this.#topHeight ) { // New mountain (that is farther) is taller -> extend previous.
-            this.#context.drawImage(this.#mountainEdgePixel, x * this.scale, (this.height - this.#topHeight) * this.scale, this.scale, this.scale);
-            this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, (mountainTop - this.#topHeight) * this.scale);
-            this.#topHeight = mountainTop;
+        else if (mountainTop >= this.#topHeights[x] ) { // New mountain (that is farther) is taller -> extend previous.
+            this.#context.drawImage(this.#mountainEdgePixel, x * this.scale, (this.height - this.#topHeights[x]) * this.scale, this.scale, this.scale);
+            this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, (mountainTop - this.#topHeights[x]) * this.scale);
+            this.#topHeights[x] = mountainTop;
         }
         // Otherwise, everything is hidden, do nothing.
     }
 
-    #mapCoordinatesToScreenColumn(x, y)
+    #drawMapPointScreenColumn(x, y)
     {
+        const absAngle = angleFromCoordinates((x << bitsBetweenTops) - this.ship.x, (y << bitsBetweenTops) - this.ship.y);
+        const relAngle = angleSub(absAngle, this.ship.heading);
+        const screenCol = (relAngle >> angleUnitPowerOfTwo) - (this.width >> 1);
+        if (screenCol >= 0 && screenCol < this.width) {
+            this.drawMountainColumn(screenCol, this.map.get(x, y));
+        }
     }
 
     /** Draw a frame. */
     draw() {
+        this.#topHeights = new Array(this.width).fill(-1);
+        const [xMap, yMap] = [this.ship.x >> bitsBetweenTops, this.ship.y >> bitsBetweenTops];
+        for (let dist = 1; dist < 5; dist++) {
+            for (let i = -dist; i <= dist; i++) {
+                this.#drawMapPointScreenColumn(xMap - dist, yMap + i);
+                this.#drawMapPointScreenColumn(xMap + dist, yMap + i);
+                this.#drawMapPointScreenColumn(xMap + i, yMap - dist);
+                this.#drawMapPointScreenColumn(xMap + i, yMap + dist);
+            }
+        }
     }
 }
 
