@@ -31,8 +31,8 @@ const mapScale = 8;
 const viewportWidth = 160;
 /** The logical height of the viewport. */
 const viewportHeight = 48;
-/** The scale of the viewport from logical pixel to physical pixels on the page. */
-const viewportScale = 4;
+/** The power of two for the scale of the viewport from logical pixel to physical pixels on the page (2 -> x4 physical pixels). */
+const viewportScalePowerOfTwo = 2;
 
 /** Vertically, mountains range up to 2^12 in height. */
 const maxHeight = 1 << bitsBetweenTops;
@@ -195,6 +195,11 @@ const mod = (n, m) => ((n % m) + m) % m;
  * @returns {number} The angle `a - b`.
  */
 const angleSub = (a, b) => mod(a - b, fullCircle);
+
+/** Converts an angle from to [0, fullCircle] range to the [-halfCircle, halfCircle] range.
+ * @param {number} angle - The angle to convert.
+ * @returns {number} an angle between -halfCircle and halfCircle. */
+const angleToAlgebraic = angle => angle > halfCircle ? angle - fullCircle : angle;
 
 /** Handler for map elevation changes.
  * @callback MapChangeHandler
@@ -368,7 +373,7 @@ class OverheadMap {
  * @property {HTMLCanvasElement} canvas - The canvas element where to draw the view.
  * @property {number} width - The width of the viewport in logical pixels.
  * @property {number} height - The height of the viewport in logical pixels.
- * @property {number} scale - The physical pixel size of a logical viewport pixel.
+ * @property {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
  * @property {Map} map - The map of the landscape to render.
  * @property {Valkyrie} ship - The ship object. */
 class Viewport {
@@ -382,19 +387,19 @@ class Viewport {
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the view.
      * @param {number} width - The width of the viewport in logical pixels.
      * @param {number} height - The height of the viewport in logical pixels.
-     * @param {number} scale - The physical pixel size of a logical viewport pixel.
+     * @param {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
      * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object. */
-     constructor(canvas, width, height, scale, map, ship) {
+     constructor(canvas, width, height, scalePowerOfTwo, map, ship) {
         this.width = width;
         this.height = height;
-        canvas.width = width * scale;
-        canvas.height = height * scale;
+        canvas.width = width << scalePowerOfTwo;
+        canvas.height = height << scalePowerOfTwo;
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
         const doc = canvas.ownerDocument;
-        this.scale = scale;
+        this.scalePowerOfTwo = scalePowerOfTwo;
         this.map = map;
         this.ship = ship;
 
@@ -429,38 +434,48 @@ class Viewport {
      */
     drawMountainColumn(x, mountainTop) {
         if (this.#topHeights[x]  === -1) { // First mountain we're drawing on this column.
-            this.#context.drawImage(this.#skyPixel, x * this.scale, 0, this.scale, (this.height - mountainTop) * this.scale);
-            this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, mountainTop * this.scale);
+            this.#context.drawImage(this.#skyPixel, x << this.scalePowerOfTwo, 0, 1 << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo);
+            this.#context.drawImage(this.#mountainPixel, x << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, mountainTop << this.scalePowerOfTwo);
             this.#topHeights[x] = mountainTop;
         }
         else if (mountainTop >= this.#topHeights[x] ) { // New mountain (that is farther) is taller -> extend previous.
-            this.#context.drawImage(this.#mountainEdgePixel, x * this.scale, (this.height - this.#topHeights[x]) * this.scale, this.scale, this.scale);
-            this.#context.drawImage(this.#mountainPixel, x * this.scale, (this.height - mountainTop) * this.scale, this.scale, (mountainTop - this.#topHeights[x]) * this.scale);
+            this.#context.drawImage(this.#mountainEdgePixel, x << this.scalePowerOfTwo, (this.height - this.#topHeights[x]) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo);
+            this.#context.drawImage(this.#mountainPixel, x << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, (mountainTop - this.#topHeights[x]) << this.scalePowerOfTwo);
             this.#topHeights[x] = mountainTop;
         }
         // Otherwise, everything is hidden, do nothing.
     }
 
-    #drawMapPointScreenColumn(x, y)
+    #drawMapPointScreenColumn(x, y, dist)
     {
-        const absAngle = angleFromCoordinates((x << bitsBetweenTops) - this.ship.x, (y << bitsBetweenTops) - this.ship.y);
-        const relAngle = angleSub(absAngle, this.ship.heading);
-        const screenCol = (relAngle >> angleUnitPowerOfTwo) - (this.width >> 1);
+        // dist is a very rough approximation of the distance of the peaks we're drawing since we've
+        // been drawing concentric squares around the ship rather than circles. The result is that the
+        // calculated height of mountains will be less precise at 45 degree angles.
+        const absAngle = angleFromCoordinates((x << bitsBetweenTops) - this.ship.x, this.ship.y - (y << bitsBetweenTops));
+        const azimuth = angleToAlgebraic(angleSub(absAngle, this.ship.heading)) >> angleUnitPowerOfTwo;
+        const screenCol = azimuth + (this.width >> 1);
+        const altitude = angleToAlgebraic(angleFromCoordinates(dist << bitsBetweenTops, this.map.get(x, y) - this.ship.z)) >> angleUnitPowerOfTwo;
+        const screenRow = (this.height >> 1) - altitude;
         if (screenCol >= 0 && screenCol < this.width) {
-            this.drawMountainColumn(screenCol, this.map.get(x, y));
+            this.drawMountainColumn(screenCol, screenRow);
         }
+        // need to return the screen coordinates for the summits so we can reuse and interpolate between them.
+        return { row: screenRow, col: screenCol };
     }
 
     /** Draw a frame. */
     draw() {
+        // Clear the canvas first, although this will no longer be necessary once rendering code is complete since the whole screen
+        // gets redrawn on every frame.
+        this.#context.clearRect(0, 0, this.width << viewportScalePowerOfTwo, this.height << viewportScalePowerOfTwo);
         this.#topHeights = new Array(this.width).fill(-1);
         const [xMap, yMap] = [this.ship.x >> bitsBetweenTops, this.ship.y >> bitsBetweenTops];
         for (let dist = 1; dist < 5; dist++) {
             for (let i = -dist; i <= dist; i++) {
-                this.#drawMapPointScreenColumn(xMap - dist, yMap + i);
-                this.#drawMapPointScreenColumn(xMap + dist, yMap + i);
-                this.#drawMapPointScreenColumn(xMap + i, yMap - dist);
-                this.#drawMapPointScreenColumn(xMap + i, yMap + dist);
+                this.#drawMapPointScreenColumn(xMap - dist, yMap + i, dist);
+                this.#drawMapPointScreenColumn(xMap + dist, yMap + i, dist);
+                this.#drawMapPointScreenColumn(xMap + i, yMap - dist, dist);
+                this.#drawMapPointScreenColumn(xMap + i, yMap + dist, dist);
             }
         }
     }
@@ -496,7 +511,7 @@ class Valkyrie {
      * @param {number} rollToAngle - The number of units of angle the ship's heading turns by on each tick per roll unit of angle.
      * This determines how quickly the ship turns when rolling.
      */
-    constructor(x = (1 << coordinateBits) >> 1, y = (1 << coordinateBits) >> 1, z = maxHeight, thrust = defaultThrust, heading = north, pitch = 0, roll = 0, rollToAngle = 1) {
+    constructor(x = (1 << coordinateBits) >> 1, y = (1 << coordinateBits) >> 1, z = maxHeight >> 1, thrust = defaultThrust, heading = north, pitch = 0, roll = 0, rollToAngle = 1) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -723,7 +738,7 @@ document.addEventListener('DOMContentLoaded', e => {
         }));
     map.generate();
     const viewportEl = document.getElementById('viewport');
-    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportScale, map, ship);
+    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportScalePowerOfTwo, map, ship);
 
     // Tests
     const testSection = document.getElementById("testSection");
