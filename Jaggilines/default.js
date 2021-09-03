@@ -29,8 +29,13 @@ const mapScale = 8;
 
 /** The logical width of the viewport. */
 const viewportWidth = 160;
+
 /** The logical height of the viewport. */
 const viewportHeight = 48;
+
+/** The vertical coordinate of the horizontal direction on the viewport. */
+const viewportVerticalOffset = 40;
+
 /** The power of two for the scale of the viewport from logical pixel to physical pixels on the page (2 -> x4 physical pixels). */
 const viewportScalePowerOfTwo = 2;
 
@@ -40,11 +45,16 @@ const maxHeight = 1 << bitsBetweenTops;
 /** Variations from summit to summit are at most maxHeight / 16. */
 const maxVariation = maxHeight >> 4;
 
+const viewDistance = 5;
+
 /** Default Valkyrie thrust, or number of distance units per tick. */
 const defaultThrust = 1 << 5;
 
 /** Base-2 log of the number of units of angle in a degree. For 2, the unit of angle is a fourth of a degree. */
 const angleUnitPowerOfTwo = 2;
+
+/** The power of two that gives the number of viewport pixels per unit of angle. */
+const screenPixelPowerOfTwo = 1;
 
 /** North direction in units of angle. */
 const north = 90 << angleUnitPowerOfTwo;
@@ -192,9 +202,22 @@ const mod = (n, m) => ((n % m) + m) % m;
 /** Computes the difference between two angles.
  * @param {number} a - The first angle.
  * @param {number} b - The angle to subtract.
- * @returns {number} The angle `a - b`.
- */
+ * @returns {number} The angle `a - b`. */
 const angleSub = (a, b) => mod(a - b, fullCircle);
+
+/** An fast to evaluate approximation of the distance between two points.
+ * See [https://www.flipcode.com/archives/Fast_Approximate_Distance_Functions.shtml](approximate distance functions).
+ * @param {number} x1 - The x coordinate of the first point.
+ * @param {number} y1 - The y coordinate of the first point.
+ * @param {number} x2 - The x coordinate of the second point.
+ * @param {number} y2 - The y coordinate of the second point.
+ * @returns {number} The octagonal approximation of the distance between the two points. */
+const distance = (x1, y1, x2, y2) => {
+    const dx = x2 > x1 ? x2 - x1 : x1 - x2;
+    const dy = y2 > y1 ? y2 - y1 : y1 - y2;
+    const [max, min] = dx > dy ? [dx, dy] : [dy, dx];
+    return (((max << 8) + (max << 3) - (max << 4) - (max << 1) + (min << 7) - (min << 5) + (min << 3) - (min << 1)) >> 8);
+}
 
 /** Converts an angle from to [0, fullCircle] range to the [-halfCircle, halfCircle] range.
  * @param {number} angle - The angle to convert.
@@ -237,7 +260,7 @@ class Map {
 
     /** Removes a change listener.
      * @param {MapChangeHandler} handler - The change handler to remove. */
-     removeChangeListener(handler) {
+    removeChangeListener(handler) {
         const i = this.#changeHandlers.indexOf(handler);
         if (i !== -1) {
             this.#changeHandlers.splice(i, 1);
@@ -271,6 +294,24 @@ class Map {
         // Seed the top-left corner
         this.set(0, 0, Math.random() * maxHeight);
         this.#diamond(0, 0, this.size);
+    }
+
+    /** Generates a test map that gently slopes down from west to east and from north to south. */
+    generateWestToEastAndNorthToSouthSlope() {
+        for (let x = 0; x < this.size; x++) {
+            for (let y = 0; y < this.size; y++) {
+                this.set(x, y, Math.floor(maxHeight * ((this.size << 1) - x - y) / (this.size << 1)));
+            }
+        }
+    }
+
+    /** Generates a test map that gently slopes down from west to east. */
+    generateWestToEastSlope() {
+        for (let x = 0; x < this.size; x++) {
+            for (let y = 0; y < this.size; y++) {
+                this.set(x, y, Math.floor(maxHeight * (this.size - x) / this.size));
+            }
+        }
     }
 
     #square(row, col, size) {
@@ -373,6 +414,7 @@ class OverheadMap {
  * @property {HTMLCanvasElement} canvas - The canvas element where to draw the view.
  * @property {number} width - The width of the viewport in logical pixels.
  * @property {number} height - The height of the viewport in logical pixels.
+ * @property {number} verticalOffset - The vertical coordinate of the horizontal direction.
  * @property {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
  * @property {Map} map - The map of the landscape to render.
  * @property {Valkyrie} ship - The ship object. */
@@ -387,10 +429,11 @@ class Viewport {
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the view.
      * @param {number} width - The width of the viewport in logical pixels.
      * @param {number} height - The height of the viewport in logical pixels.
+     * @param {number} verticalOffset - The vertical coordinate of the horizontal direction.
      * @param {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
      * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object. */
-     constructor(canvas, width, height, scalePowerOfTwo, map, ship) {
+     constructor(canvas, width, height, verticalOffset, scalePowerOfTwo, map, ship) {
         this.width = width;
         this.height = height;
         canvas.width = width << scalePowerOfTwo;
@@ -399,6 +442,7 @@ class Viewport {
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
         const doc = canvas.ownerDocument;
+        this.verticalOffset = verticalOffset;
         this.scalePowerOfTwo = scalePowerOfTwo;
         this.map = map;
         this.ship = ship;
@@ -429,38 +473,60 @@ class Viewport {
 
     /** Draws a column of pixels representing a slice of mountain.
      * Can be called repeatedly for successive mountains from closest to farthest.
-     * @param {number} x - the logical pixel column to render.
-     * @param {number} mountainTop - the height of the mountain in logical pixels from the bottom of the viewport.
-     */
-    drawMountainColumn(x, mountainTop) {
-        if (this.#topHeights[x]  === -1) { // First mountain we're drawing on this column.
-            this.#context.drawImage(this.#skyPixel, x << this.scalePowerOfTwo, 0, 1 << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo);
-            this.#context.drawImage(this.#mountainPixel, x << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, mountainTop << this.scalePowerOfTwo);
-            this.#topHeights[x] = mountainTop;
+     * @param {number} xScreen - the logical pixel column to render.
+     * @param {number} mountainTop - the height of the mountain in logical pixels from the bottom of the viewport. */
+    #drawMountainColumn(xScreen, mountainTop) {
+        if (xScreen < 0 || xScreen >= this.width) return;
+        const topHeight = this.#topHeights[xScreen];
+        if (topHeight  === -1) { // First mountain we're drawing on this column.
+            this.#context.drawImage(this.#skyPixel, xScreen << this.scalePowerOfTwo, 0, 1 << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo);
+            this.#context.drawImage(this.#mountainPixel, xScreen << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, mountainTop << this.scalePowerOfTwo);
+            this.#topHeights[xScreen] = mountainTop;
         }
-        else if (mountainTop >= this.#topHeights[x] ) { // New mountain (that is farther) is taller -> extend previous.
-            this.#context.drawImage(this.#mountainEdgePixel, x << this.scalePowerOfTwo, (this.height - this.#topHeights[x]) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo);
-            this.#context.drawImage(this.#mountainPixel, x << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, (mountainTop - this.#topHeights[x]) << this.scalePowerOfTwo);
-            this.#topHeights[x] = mountainTop;
+        else if (mountainTop > topHeight) { // New mountain (that is farther) is taller -> extend previous.
+            this.#context.drawImage(this.#mountainEdgePixel, xScreen << this.scalePowerOfTwo, (this.height - topHeight) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo);
+            this.#context.drawImage(this.#mountainPixel, xScreen << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, (mountainTop - topHeight) << this.scalePowerOfTwo);
+            this.#topHeights[xScreen] = mountainTop;
         }
         // Otherwise, everything is hidden, do nothing.
     }
 
-    #drawMapPointScreenColumn(x, y, dist)
-    {
-        // dist is a very rough approximation of the distance of the peaks we're drawing since we've
-        // been drawing concentric squares around the ship rather than circles. The result is that the
-        // calculated height of mountains will be less precise at 45 degree angles.
+    #computeScreenCoordinatesFor(x, y, memo) {
+        const dist = distance(this.ship.x, this.ship.y, x << bitsBetweenTops, y << bitsBetweenTops);
         const absAngle = angleFromCoordinates((x << bitsBetweenTops) - this.ship.x, this.ship.y - (y << bitsBetweenTops));
-        const azimuth = angleToAlgebraic(angleSub(absAngle, this.ship.heading)) >> angleUnitPowerOfTwo;
-        const screenCol = azimuth + (this.width >> 1);
-        const altitude = angleToAlgebraic(angleFromCoordinates(dist << bitsBetweenTops, this.map.get(x, y) - this.ship.z)) >> angleUnitPowerOfTwo;
-        const screenRow = (this.height >> 1) - altitude;
-        if (screenCol >= 0 && screenCol < this.width) {
-            this.drawMountainColumn(screenCol, screenRow);
+        const azimuth = angleToAlgebraic(angleSub(this.ship.heading, absAngle));
+        const screenCol = (this.width >> 1) - (azimuth >> screenPixelPowerOfTwo);
+        const altitude = angleToAlgebraic(angleFromCoordinates(dist, this.map.get(x, y) - this.ship.z));
+        const screenRow = this.verticalOffset - (altitude >> screenPixelPowerOfTwo);
+        // Remember the screen coordinates for the summits so we can reuse and interpolate between them.
+        if (!memo[x]) memo[x] = [];
+        memo[x][y] = { x: screenCol, y: screenRow };
+    }
+
+    /** Recursively interpolates mid-points until all screen columns have been evaluated. */
+    #interpolate(x1, y1, x2, y2) {
+        // A lot more can be done to avoid doing calculations on summits that will not affect the viewport.
+        // We're only excluding interpolation for cases where both points are off-screen.
+        if (((x1 < 0) || (x1 >= this.width)) && ((x2 < 0) || (y2 >= this.width))) return;
+        const midX = (x1 + x2) >> 1;
+        const linearInterpolation = (ya, yb) => (ya + yb) >> 1;
+        if (midX != x1 && midX != x2) {
+            const midY = linearInterpolation(y1, y2);
+            this.#drawMountainColumn(midX, midY);
+            this.#interpolate(x1, y1, midX, midY);
+            this.#interpolate(midX, midY, x2, y2);
         }
-        // need to return the screen coordinates for the summits so we can reuse and interpolate between them.
-        return { row: screenRow, col: screenCol };
+    }
+
+    #drawMountainColumnFromMemo(memo, xMap, yMap) {
+        const m = memo[xMap][yMap];
+        this.#drawMountainColumn(m.x, m.y);
+    }
+
+    #interpolateFromMemo(memo, xMap1, yMap1, xMap2, yMap2) {
+        const m1 = memo[xMap1][yMap1];
+        const m2 = memo[xMap2][yMap2];
+        this.#interpolate(m1.x, m1.y, m2.x, m2.y);
     }
 
     /** Draw a frame. */
@@ -470,12 +536,36 @@ class Viewport {
         this.#context.clearRect(0, 0, this.width << viewportScalePowerOfTwo, this.height << viewportScalePowerOfTwo);
         this.#topHeights = new Array(this.width).fill(-1);
         const [xMap, yMap] = [this.ship.x >> bitsBetweenTops, this.ship.y >> bitsBetweenTops];
-        for (let dist = 1; dist < 5; dist++) {
+        const memo = [];
+        this.#computeScreenCoordinatesFor(xMap, yMap, memo);
+        for (let dist = 1; dist < viewDistance; dist++) {
+            // Compute the screen coordinates for the new summits on the perimeter of the square at this distance.
             for (let i = -dist; i <= dist; i++) {
-                this.#drawMapPointScreenColumn(xMap - dist, yMap + i, dist);
-                this.#drawMapPointScreenColumn(xMap + dist, yMap + i, dist);
-                this.#drawMapPointScreenColumn(xMap + i, yMap - dist, dist);
-                this.#drawMapPointScreenColumn(xMap + i, yMap + dist, dist);
+                this.#computeScreenCoordinatesFor(xMap - dist, yMap + i, memo);
+                this.#computeScreenCoordinatesFor(xMap + dist, yMap + i, memo);
+                this.#computeScreenCoordinatesFor(xMap + i, yMap - dist, memo);
+                this.#computeScreenCoordinatesFor(xMap + i, yMap + dist, memo);
+            }
+            // Interpolate between the previous summit square and the new.
+            for (let i = -dist + 1; i < dist; i++) {
+                this.#interpolateFromMemo(memo, xMap - dist + 1, yMap + i, xMap - dist, yMap + i);
+                this.#interpolateFromMemo(memo, xMap + dist - 1, yMap + i, xMap + dist, yMap + i);
+                this.#interpolateFromMemo(memo, xMap + i, yMap - dist + 1, xMap + i, yMap - dist);
+                this.#interpolateFromMemo(memo, xMap + i, yMap + dist - 1, xMap + i, yMap + dist);
+            }
+            // Interpolate between the new summits on the perimeter of the square at this distance.
+            for (let i = -dist; i < dist; i++) {
+                this.#interpolateFromMemo(memo, xMap - dist, yMap + i, xMap - dist, yMap + i + 1);
+                this.#interpolateFromMemo(memo, xMap + dist, yMap + i, xMap + dist, yMap + i + 1);
+                this.#interpolateFromMemo(memo, xMap + i, yMap - dist, xMap + i + 1, yMap - dist);
+                this.#interpolateFromMemo(memo, xMap + i, yMap + dist, xMap + i + 1, yMap + dist);
+            }
+            // Finally, render the new summits.
+            for (let i = -dist; i <= dist; i++) {
+                this.#drawMountainColumnFromMemo(memo, xMap - dist, yMap + i, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + dist, yMap + i, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap - dist, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap + dist, dist);
             }
         }
     }
@@ -511,7 +601,7 @@ class Valkyrie {
      * @param {number} rollToAngle - The number of units of angle the ship's heading turns by on each tick per roll unit of angle.
      * This determines how quickly the ship turns when rolling.
      */
-    constructor(x = (1 << coordinateBits) >> 1, y = (1 << coordinateBits) >> 1, z = maxHeight >> 1, thrust = defaultThrust, heading = north, pitch = 0, roll = 0, rollToAngle = 1) {
+    constructor(x = (1 << coordinateBits) >> 1, y = (1 << coordinateBits) >> 1, z = maxHeight, thrust = defaultThrust, heading = north, pitch = 0, roll = 0, rollToAngle = 1) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -738,7 +828,7 @@ document.addEventListener('DOMContentLoaded', e => {
         }));
     map.generate();
     const viewportEl = document.getElementById('viewport');
-    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportScalePowerOfTwo, map, ship);
+    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportVerticalOffset, viewportScalePowerOfTwo, map, ship);
 
     // Tests
     const testSection = document.getElementById("testSection");
@@ -764,7 +854,7 @@ document.addEventListener('DOMContentLoaded', e => {
             [-10, 10], [-10, 10], 10, 1,
             "angleFromCoordinates");
         testField(
-            (x, y) => ({amplitude: Math.sqrt(x * x + y * y) / 5}),
+            (x, y) => ({amplitude: distance(0, 0, x, y) >> 2}),
             [-10, 10], [-10, 10], 10, 1,
             "distanceFromCenter");
     });
