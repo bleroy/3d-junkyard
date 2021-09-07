@@ -34,17 +34,24 @@ const viewportWidth = 160;
 const viewportHeight = 48;
 
 /** The vertical coordinate of the horizontal direction on the viewport. */
-const viewportVerticalOffset = 40;
+const viewportVerticalOffset = 50;
 
 /** The power of two for the scale of the viewport from logical pixel to physical pixels on the page (2 -> x4 physical pixels). */
 const viewportScalePowerOfTwo = 2;
 
+/** The power of two that gives the number of viewport pixels per unit of angle. */
+const viewPortScreenPixelPowerOfTwo = 1;
+
 /** Vertically, mountains range up to 2^12 in height. */
-const maxHeight = 1 << bitsBetweenTops;
+const maxHeightBits = 12;
+
+/** Maximum mountain height */
+const maxHeight = 1 << maxHeightBits;
 
 /** Variations from summit to summit are at most maxHeight / 16. */
 const maxVariation = maxHeight >> 4;
 
+/** Clipping distance, how many rows of mountains away from the ship can the viewport show. */
 const viewDistance = 5;
 
 /** Default Valkyrie thrust, or number of distance units per tick. */
@@ -52,9 +59,6 @@ const defaultThrust = 1 << 5;
 
 /** Base-2 log of the number of units of angle in a degree. For 2, the unit of angle is a fourth of a degree. */
 const angleUnitPowerOfTwo = 2;
-
-/** The power of two that gives the number of viewport pixels per unit of angle. */
-const screenPixelPowerOfTwo = 1;
 
 /** North direction in units of angle. */
 const north = 90 << angleUnitPowerOfTwo;
@@ -127,7 +131,7 @@ const sinTable = [...new Array(fullCircle).keys()].map(angle => Math.floor(Math.
 /** The sinus of an angle in local units, expressed as a signed 12-bit integer.
  * @param {number} angle - The angle in local units of angle.
  * @returns {number} the sinus of the angle as a signed 12-bit integer. */
- const sin = angle => sinTable[mod(angle, fullCircle)];
+const sin = angle => sinTable[mod(angle, fullCircle)];
 
 /** A table of fixed-point 16 bits of tangents for each unit of angle between west and north (north excluded, since tan is infinity there).
  * The fractional point is at 8 bits: [8 bits 15-8 integral part][8 bits 7-0 fractional part]. */
@@ -157,7 +161,7 @@ const tan = angle => {
  * @param {number} y - The vertical coordinate.
  * @returns {number} The angle corresponding to those coordinates. */
 const angleFromCoordinates = (x, y) => {
-    if (x == 0) return (y > 0) ? north : south;
+    if (x == 0) return (y < 0) ? south : north;
     // We'll map the negative-x or negative-y quadrants by using the symmetries of the tan function when processing the resulting angle.
     const absX = Math.abs(x);
     const absY = Math.abs(y);
@@ -410,6 +414,40 @@ class OverheadMap {
     }
 }
 
+/** Interpolation algorithm.
+ * @callback InterpolationAlgorithm
+ * @param {number} yMountain1 - The altitude on the map of the first summit coordinate.
+ * @param {number} yMountain2 - The altitude on the map of the second summit coordinate.
+ * @param {number} xScreen1 - The first x screen coordinate.
+ * @param {number} xScreen2 - The second x screen coordinate.
+ * @param {number} yScreen1 - The first y screen coordinate.
+ * @param {number} yScreen2 - The second y screen coordinate.
+ * @param {number} bisections - The number of bisections that have been performed to get there.
+ * @returns {number[]} The interpolated y screen coordinate at the mid-point. */
+
+/** A linear interpolation algorithm.
+ * @type {InterpolationAlgorithm} */
+const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen1, yScreen2, bisections) =>
+    [(yMountain1 + yMountain2) >> 1, (yScreen1 + yScreen2) >> 1];
+
+/** A fractal interpolation algorithm.
+ * A deterministic but chaotic displacement is added to the linear interpolation.
+ * This is our best attempt at interpreting the transcript of a letter from Loren Carpenter dated April 18, 1989.
+ * @type {InterpolationAlgorithm} */
+ const fractalInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen1, yScreen2, bisections) => {
+    const displacementAttenuationPower = 2;
+    const sum = (yMountain1 & 0xFF) + (yMountain2 & 0xFF);
+     // if overflow, we do linear interpolation without displacement.
+    if (sum > 0xFF) return [(yMountain1 + yMountain2) >> 1, (yScreen1 + yScreen2) >> 1];
+    const absoluteDisplacement = 1 << (bitsBetweenTops - bisections - displacementAttenuationPower); // Displacement is edge_length / 4.
+    // The screen displacement should be proportional to the absolute one
+    // with the same factor as the difference in x screen coordinates is to the difference in map coordinates.
+    const screenDisplacement = (xScreen2 > xScreen1 ? xScreen2 - xScreen1 : xScreen1 - xScreen2) >> (bisections + displacementAttenuationPower);
+    if (sum & 0x80) // If sum is a negative 8-bit number, we subtract the displacement, otherwise we add it.
+        return [((yMountain1 + yMountain2) >> 1) - absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) - screenDisplacement];
+    return [((yMountain1 + yMountain2) >> 1) + absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) + screenDisplacement];
+};
+
 /** A viewport that can render the 3D subjective view from the ship.
  * @property {HTMLCanvasElement} canvas - The canvas element where to draw the view.
  * @property {number} width - The width of the viewport in logical pixels.
@@ -417,8 +455,9 @@ class OverheadMap {
  * @property {number} verticalOffset - The vertical coordinate of the horizontal direction.
  * @property {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
  * @property {Map} map - The map of the landscape to render.
- * @property {Valkyrie} ship - The ship object. */
-class Viewport {
+ * @property {Valkyrie} ship - The ship object.
+ * @property {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains. */
+ class Viewport {
     #context;
     #skyPixel;
     #mountainPixel;
@@ -432,8 +471,9 @@ class Viewport {
      * @param {number} verticalOffset - The vertical coordinate of the horizontal direction.
      * @param {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
      * @param {Map} map - The map of the landscape to render.
-     * @param {Valkyrie} ship - The ship object. */
-     constructor(canvas, width, height, verticalOffset, scalePowerOfTwo, map, ship) {
+     * @param {Valkyrie} ship - The ship object.
+     * @param {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains. */
+     constructor(canvas, width, height, verticalOffset, scalePowerOfTwo, map, ship, interpolation) {
         this.width = width;
         this.height = height;
         canvas.width = width << scalePowerOfTwo;
@@ -446,6 +486,7 @@ class Viewport {
         this.scalePowerOfTwo = scalePowerOfTwo;
         this.map = map;
         this.ship = ship;
+        this.interpolation = interpolation;
 
         // Prepare pixel data for each of the colors we need to render
         this.#skyPixel = this.#preparePixel(doc, skyColor);
@@ -495,26 +536,26 @@ class Viewport {
         const dist = distance(this.ship.x, this.ship.y, x << bitsBetweenTops, y << bitsBetweenTops);
         const absAngle = angleFromCoordinates((x << bitsBetweenTops) - this.ship.x, this.ship.y - (y << bitsBetweenTops));
         const azimuth = angleToAlgebraic(angleSub(this.ship.heading, absAngle));
-        const screenCol = (this.width >> 1) - (azimuth >> screenPixelPowerOfTwo);
+        const screenCol = (this.width >> 1) - (azimuth >> viewPortScreenPixelPowerOfTwo);
         const altitude = angleToAlgebraic(angleFromCoordinates(dist, this.map.get(x, y) - this.ship.z));
-        const screenRow = this.verticalOffset - (altitude >> screenPixelPowerOfTwo);
+        const screenRow = this.verticalOffset + (altitude >> viewPortScreenPixelPowerOfTwo);
         // Remember the screen coordinates for the summits so we can reuse and interpolate between them.
         if (!memo[x]) memo[x] = [];
         memo[x][y] = { x: screenCol, y: screenRow };
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
-    #interpolate(x1, y1, x2, y2) {
-        // A lot more can be done to avoid doing calculations on summits that will not affect the viewport.
-        // We're only excluding interpolation for cases where both points are off-screen.
+    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, bisections = 0) {
+        // A lot more can be done to avoid doing calculations on summits that will not affect the viewport but
+        // for this, we're only excluding interpolation for cases where both points are off-screen.
         if (((x1 < 0) || (x1 >= this.width)) && ((x2 < 0) || (y2 >= this.width))) return;
+
         const midX = (x1 + x2) >> 1;
-        const linearInterpolation = (ya, yb) => (ya + yb) >> 1;
-        if (midX != x1 && midX != x2) {
-            const midY = linearInterpolation(y1, y2);
-            this.#drawMountainColumn(midX, midY);
-            this.#interpolate(x1, y1, midX, midY);
-            this.#interpolate(midX, midY, x2, y2);
+        if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
+            const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, x1, x2, y1, y2, bisections);
+            this.#drawMountainColumn(midX, midScreenY);
+            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, bisections + 1);
+            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, bisections + 1);
         }
     }
 
@@ -526,14 +567,14 @@ class Viewport {
     #interpolateFromMemo(memo, xMap1, yMap1, xMap2, yMap2) {
         const m1 = memo[xMap1][yMap1];
         const m2 = memo[xMap2][yMap2];
-        this.#interpolate(m1.x, m1.y, m2.x, m2.y);
+        this.#interpolate(this.map.get(xMap1, yMap1), this.map.get(xMap2, yMap2), m1.x, m2.x, m1.y, m2.y);
     }
 
     /** Draw a frame. */
     draw() {
         // Clear the canvas first, although this will no longer be necessary once rendering code is complete since the whole screen
         // gets redrawn on every frame.
-        this.#context.clearRect(0, 0, this.width << viewportScalePowerOfTwo, this.height << viewportScalePowerOfTwo);
+        this.#context.clearRect(0, 0, this.width << this.scalePowerOfTwo, this.height << this.scalePowerOfTwo);
         this.#topHeights = new Array(this.width).fill(-1);
         const [xMap, yMap] = [this.ship.x >> bitsBetweenTops, this.ship.y >> bitsBetweenTops];
         const memo = [];
@@ -634,7 +675,7 @@ class Valkyrie {
         this.heading = mod(this.heading + this.roll * this.rollToAngle, fullCircle);
         this.x = mod(this.x + ((this.thrust * cosTable[this.heading] * cosTable[this.pitch]) >> bitsBetweenTops >> bitsBetweenTops), 1 << coordinateBits);
         this.y = mod(this.y - ((this.thrust * sinTable[this.heading] * cosTable[this.pitch]) >> bitsBetweenTops >> bitsBetweenTops), 1 << coordinateBits);
-        this.z = clamp(this.z + (this.thrust * sinTable[this.pitch]) >> bitsBetweenTops, 1 << coordinateBits);
+        this.z = clamp(this.z + ((this.thrust * sinTable[this.pitch]) >> bitsBetweenTops), 1 << coordinateBits);
         this.#moveHandlers.forEach(handler => handler(this));
     }
 }
@@ -828,7 +869,7 @@ document.addEventListener('DOMContentLoaded', e => {
         }));
     map.generate();
     const viewportEl = document.getElementById('viewport');
-    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportVerticalOffset, viewportScalePowerOfTwo, map, ship);
+    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportVerticalOffset, viewportScalePowerOfTwo, map, ship, fractalInterpolation);
 
     // Tests
     const testSection = document.getElementById("testSection");
