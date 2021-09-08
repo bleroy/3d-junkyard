@@ -27,17 +27,17 @@ const mapSize = 1 << mapCoordinateBits;
 /** The number of pixels on the map between peaks. */
 const mapScale = 8;
 
-/** The logical width of the viewport. */
-const viewportWidth = 160;
-
-/** The logical height of the viewport. */
-const viewportHeight = 48;
-
-/** The vertical coordinate of the horizontal direction on the viewport. */
-const viewportVerticalOffset = 50;
-
 /** The power of two for the scale of the viewport from logical pixel to physical pixels on the page (2 -> x4 physical pixels). */
 const viewportScalePowerOfTwo = 2;
+
+/** The logical width of the viewport. */
+const viewportWidth = 640 / (1 << viewportScalePowerOfTwo);
+
+/** The logical height of the viewport. */
+const viewportHeight = 192 / (1 << viewportScalePowerOfTwo);
+
+/** The vertical coordinate of the horizontal direction on the viewport. */
+const viewportVerticalOffset = 200 / (1 << viewportScalePowerOfTwo);;
 
 /** The power of two that gives the number of viewport pixels per unit of angle. */
 const viewPortScreenPixelPowerOfTwo = 1;
@@ -680,6 +680,26 @@ class Valkyrie {
     }
 }
 
+class Compass {
+    #el;
+    #elWidth;
+
+    constructor(el, ship) {
+        this.#el = el;
+        this.#elWidth = el.scrollWidth / 5;
+        this.ship = ship;
+
+        ship.addMoveListener(() => {
+            this.update();
+        });
+    }
+
+    update() {
+        const offset = this.#elWidth * (mod((fullCircle - this.ship.heading) / quarterCircle - 3, 4) + 0.5);
+        this.#el.style.left = -offset + 'px';
+    }
+}
+
 /** Creates an element of the supplied tag type and with the specified attributes.
  * @param {HTMLElement} parentEl - A parent element to append the new element to.
  * @param {string} tag - The tag name.
@@ -858,7 +878,7 @@ const graphTester = parentEl =>
 
 document.addEventListener('DOMContentLoaded', e => {
     const map = new Map(mapSize);
-    const ship = new Valkyrie();
+    const ship = new Valkyrie((1 << coordinateBits) >> 1, (1 << coordinateBits) >> 1, maxHeight, defaultThrust, north, 0, 0, 1);
     const mapEl = document.getElementsByClassName('map')[0];
     const shipImg = document.getElementsByClassName('ship')[0];
     new OverheadMap(mapEl, shipImg, mapScale, map, ship,
@@ -868,6 +888,8 @@ document.addEventListener('DOMContentLoaded', e => {
             b: Math.floor(0 + 0x40 * val / maxHeight)
         }));
     map.generate();
+    const compassEl = document.getElementsByClassName('compass')[0];
+    new Compass(compassEl, ship);
     const viewportEl = document.getElementById('viewport');
     new Viewport(viewportEl, viewportWidth, viewportHeight, viewportVerticalOffset, viewportScalePowerOfTwo, map, ship, fractalInterpolation);
 

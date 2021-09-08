@@ -58,3 +58,30 @@ html {
 .pass {
     color: green;
 }
+
+.compass-band {
+    display: block;
+    background-color: #6B6B6B;
+    text-align: center;
+    height: 24px;
+    width: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compass-band .compass-box {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 16px;
+    width: 48px;
+    height: 18px;
+    background-color: #464646;
+    color: #FFB086;
+    overflow-x: hidden;
+}
+
+.compass-band .compass-box .compass {
+    position: relative;
+    left: 0;
+}
