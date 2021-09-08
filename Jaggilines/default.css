@@ -2,13 +2,26 @@ html {
     background-color: white;
     color: black;
 }
-.viewport {
-    display: inline-block;
+
+.viewport-container {
     position: relative;
+    height: 336px;
     margin-bottom: 8px;
 }
 
-.mapcontainer {
+.viewport {
+    display: inline-block;
+    position: absolute;
+    margin-bottom: 8px;
+}
+
+.cockpit {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.map-container {
     position: relative;
     top: 0;
     left: 0;
