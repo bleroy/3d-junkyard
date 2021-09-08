@@ -20,10 +20,28 @@
             <canvas id="viewport"></canvas>
             <img class="cockpit" src="assets/cockpit.png"></div>
         </div>
-        <div class="dirpad"></div>
-        <div class="map-container">
-            <canvas class="map"></canvas>
-            <img class="ship" src="assets/Valkyrie.png"/>
+        <div class="dashboard">
+            <div class="map-container">
+                <canvas class="map"></canvas>
+                <img class="ship" src="assets/Valkyrie.png"/>
+            </div>
+            <div class="dirpad">
+                <span class="btn-col other">
+                    <button class="land-btn small">Land</button>
+                    <button class="systems-btn small">Systems</button>
+                    <button class="Boosters-btn small">Boosters</button>
+                </span>
+                <span class="btn-col">
+                    <button class="increase-thrust-btn">+</button>
+                    <button class="decrease-thrust-btn">-</button>
+                </span>
+                <button class="left-btn btn-col">⮜</button>
+                <span class="btn-col">
+                    <button class="up-btn">⮝</button>
+                    <button class="down-btn">⮟</button>
+                </span>
+                <button class="right-btn btn-col">⮞</button>
+            </div>
         </div>
         <div id="testSection">
             <button id="runTests">Run tests</button>

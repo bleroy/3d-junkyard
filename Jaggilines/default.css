@@ -3,6 +3,10 @@ html {
     color: black;
 }
 
+body {
+    width: 640px;
+}
+
 .viewport-container {
     position: relative;
     height: 336px;
@@ -19,27 +23,6 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.map-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 130px;
-}
-
-.map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0;
-}
-
-.ship {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 16px;
 }
 
 #testSection {
@@ -97,4 +80,78 @@ html {
 .compass-band .compass-box .compass {
     position: relative;
     left: 0;
+}
+
+.dashboard {
+    position: relative;
+}
+
+.map-container {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 130px;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+.ship {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+}
+
+.dirpad {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    right: 0;
+    top: 0;
+}
+
+.dirpad .btn-col {
+    width: 48px;
+    margin: 8px;
+}
+
+.dirpad .btn-col.other {
+    width: 96px;
+    margin: 8px;
+}
+
+.dirpad .btn-col.other button {
+    width: 100%;
+}
+
+.dirpad button {
+    border: solid 1px black;
+    cursor: pointer;
+    font-size: 40px;
+    margin-bottom: 8px;
+    min-width: 48px;
+    text-align: center;
+}
+
+.dirpad button.small {
+    font-size: 20px;
+}
+.dirpad .left-btn {
+}
+
+.dirpad .right-btn {
+}
+
+.dirpad .up-btn {
+    display: block;
+}
+
+.dirpad .down-btn {
+    display: block;
 }
