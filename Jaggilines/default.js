@@ -90,6 +90,20 @@ let mountainColor = {r: 130, g: 60, b: 0};
 /** The color of the separation between two mountains. */
 let mountainEdgeColor = {r: 60, g: 0, b: 0}
 
+/** Compute a color intermediate between two colors.
+ * @param {Color} color1 - The first color.
+ * @param {Color} color2 - The second color.
+ * @param {number} fadeFactor - A number between 0 and 1 that expresses how to mix the colors.
+ * 0 means 100% of the first color, 1 means 100% of the second color, and numbers in between mix the two colors proportionally. */
+const fadeColors = (color1, color2, fadeFactor) => {
+    fadeFactor = Math.min(1, Math.max(0, fadeFactor));
+    return {
+        r: (1 - fadeFactor) * color1.r + fadeFactor * color2.r,
+        g: (1 - fadeFactor) * color1.g + fadeFactor * color2.g,
+        b: (1 - fadeFactor) * color1.b + fadeFactor * color2.b
+    }
+};
+
 /** Number of milliseconds between runs of the game loop. */
 const tick = 32;
 
@@ -318,6 +332,14 @@ class Map {
         }
     }
 
+    generatePlateau() {
+        for (let x = 0; x < this.size; x++) {
+            for (let y = 0; y < this.size; y++) {
+                this.set(x, y, maxHeight >> 1);
+            }
+        }
+    }
+
     #square(row, col, size) {
         if (size <= 1) return;
         const halfSize = size >> 1;
@@ -437,15 +459,29 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
  const fractalInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen1, yScreen2, bisections) => {
     const displacementAttenuationPower = 2;
     const sum = (yMountain1 & 0xFF) + (yMountain2 & 0xFF);
-     // if overflow, we do linear interpolation without displacement.
+    // if overflow, we do linear interpolation without displacement.
     if (sum > 0xFF) return [(yMountain1 + yMountain2) >> 1, (yScreen1 + yScreen2) >> 1];
     const absoluteDisplacement = 1 << (bitsBetweenTops - bisections - displacementAttenuationPower); // Displacement is edge_length / 4.
     // The screen displacement should be proportional to the absolute one
     // with the same factor as the difference in x screen coordinates is to the difference in map coordinates.
     const screenDisplacement = (xScreen2 > xScreen1 ? xScreen2 - xScreen1 : xScreen1 - xScreen2) >> (bisections + displacementAttenuationPower);
-    if (sum & 0x80) // If sum is a negative 8-bit number, we subtract the displacement, otherwise we add it.
-        return [((yMountain1 + yMountain2) >> 1) - absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) - screenDisplacement];
-    return [((yMountain1 + yMountain2) >> 1) + absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) + screenDisplacement];
+    if (sum & 0x80) // If sum is a negative 8-bit number, we add the displacement, otherwise we subtract it.
+        return [((yMountain1 + yMountain2) >> 1) + absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) + screenDisplacement];
+    return [((yMountain1 + yMountain2) >> 1) - absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) - screenDisplacement];
+};
+
+/** Shader algorithm.
+ * @callback Shader
+ * @param {number} distance - The distance from the observer to the mountain column.
+ * @returns {Color[]} The colors for the mountain and mountain edge. */
+
+/** A shader that fades the mountains to the sky color */
+const fogShader = distance => {
+    const fadeFactor = distance / viewDistance / (1 << bitsBetweenTops);
+    return [
+        fadeColors(mountainColor, skyColor, fadeFactor),
+        fadeColors(mountainEdgeColor, skyColor, fadeFactor)
+    ];
 };
 
 /** A viewport that can render the 3D subjective view from the ship.
@@ -456,7 +492,9 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
  * @property {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
  * @property {Map} map - The map of the landscape to render.
  * @property {Valkyrie} ship - The ship object.
- * @property {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains. */
+ * @property {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains.
+ * @property {Shader} shader - A function that computes the colors to render a mountain column with.
+ *  The default draws a solid shade of brown that doesn't change with distance.  */
  class Viewport {
     #context;
     #skyPixel;
@@ -472,8 +510,10 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
      * @param {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
      * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object.
-     * @param {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains. */
-     constructor(canvas, width, height, verticalOffset, scalePowerOfTwo, map, ship, interpolation) {
+     * @param {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains.
+     * @param {Shader} shader - A function that computes the colors to render a mountain column with.
+     *  The default draws a solid shade of brown that doesn't change with distance.  */
+     constructor(canvas, width, height, verticalOffset, scalePowerOfTwo, map, ship, interpolation, shader) {
         this.width = width;
         this.height = height;
         canvas.width = width << scalePowerOfTwo;
@@ -481,17 +521,12 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
-        const doc = canvas.ownerDocument;
         this.verticalOffset = verticalOffset;
         this.scalePowerOfTwo = scalePowerOfTwo;
         this.map = map;
         this.ship = ship;
         this.interpolation = interpolation;
-
-        // Prepare pixel data for each of the colors we need to render
-        this.#skyPixel = this.#preparePixel(doc, skyColor);
-        this.#mountainPixel = this.#preparePixel(doc, mountainColor);
-        this.#mountainEdgePixel = this.#preparePixel(doc, mountainEdgeColor);
+        this.shader = shader;
         
         // Trigger the first rendering
         this.draw();
@@ -501,32 +536,27 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
         });
     }
 
-    #preparePixel(doc, color) {
-        const pixelCanvas = doc.createElement('canvas');
-        pixelCanvas.width = pixelCanvas.height = 1;
-        const pixelContext = pixelCanvas.getContext('2d');
-        pixelContext.imageSmoothingEnabled = false;
-        const pixelData = new Uint8ClampedArray([color.r, color.g, color.b, 255]);
-        const pixelImageData = new ImageData(pixelData, 1, 1);
-        pixelContext.putImageData(pixelImageData, 0, 0);
-        return pixelCanvas;
-    }
-
     /** Draws a column of pixels representing a slice of mountain.
      * Can be called repeatedly for successive mountains from closest to farthest.
-     * @param {number} xScreen - the logical pixel column to render.
-     * @param {number} mountainTop - the height of the mountain in logical pixels from the bottom of the viewport. */
-    #drawMountainColumn(xScreen, mountainTop) {
+     * @param {number} xScreen - The logical pixel column to render.
+     * @param {number} mountainTop - The height of the mountain in logical pixels from the bottom of the viewport.
+     * @param {number} distance - The distance from the observer to the mountain column. */
+    #drawMountainColumn(xScreen, mountainTop, distance) {
         if (xScreen < 0 || xScreen >= this.width) return;
         const topHeight = this.#topHeights[xScreen];
+        const shadedColors = this.shader ? this.shader(distance) : [mountainColor, mountainEdgeColor];
         if (topHeight  === -1) { // First mountain we're drawing on this column.
-            this.#context.drawImage(this.#skyPixel, xScreen << this.scalePowerOfTwo, 0, 1 << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo);
-            this.#context.drawImage(this.#mountainPixel, xScreen << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, mountainTop << this.scalePowerOfTwo);
+            this.#context.fillStyle = `rgb(${skyColor.r},${skyColor.g},${skyColor.b})`;
+            this.#context.fillRect(xScreen << this.scalePowerOfTwo, 0, 1 << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo);
+            this.#context.fillStyle = `rgb(${shadedColors[0].r},${shadedColors[0].g},${shadedColors[0].b})`;
+            this.#context.fillRect(xScreen << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, mountainTop << this.scalePowerOfTwo);
             this.#topHeights[xScreen] = mountainTop;
         }
         else if (mountainTop > topHeight) { // New mountain (that is farther) is taller -> extend previous.
-            this.#context.drawImage(this.#mountainEdgePixel, xScreen << this.scalePowerOfTwo, (this.height - topHeight) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo);
-            this.#context.drawImage(this.#mountainPixel, xScreen << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, (mountainTop - topHeight) << this.scalePowerOfTwo);
+            this.#context.fillStyle = `rgb(${shadedColors[1].r},${shadedColors[1].g},${shadedColors[1].b})`;
+            this.#context.fillRect(xScreen << this.scalePowerOfTwo, (this.height - topHeight) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo);
+            this.#context.fillStyle = `rgb(${shadedColors[0].r},${shadedColors[0].g},${shadedColors[0].b})`;
+            this.#context.fillRect(xScreen << this.scalePowerOfTwo, (this.height - mountainTop) << this.scalePowerOfTwo, 1 << this.scalePowerOfTwo, (mountainTop - topHeight) << this.scalePowerOfTwo);
             this.#topHeights[xScreen] = mountainTop;
         }
         // Otherwise, everything is hidden, do nothing.
@@ -535,17 +565,17 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
     #computeScreenCoordinatesFor(x, y, memo) {
         const dist = distance(this.ship.x, this.ship.y, x << bitsBetweenTops, y << bitsBetweenTops);
         const absAngle = angleFromCoordinates((x << bitsBetweenTops) - this.ship.x, this.ship.y - (y << bitsBetweenTops));
-        const azimuth = angleToAlgebraic(angleSub(this.ship.heading, absAngle));
+        const azimuth = angleToAlgebraic(angleSub(absAngle, this.ship.heading));
         const screenCol = (this.width >> 1) - (azimuth >> viewPortScreenPixelPowerOfTwo);
         const altitude = angleToAlgebraic(angleFromCoordinates(dist, this.map.get(x, y) - this.ship.z));
         const screenRow = this.verticalOffset + (altitude >> viewPortScreenPixelPowerOfTwo);
         // Remember the screen coordinates for the summits so we can reuse and interpolate between them.
         if (!memo[x]) memo[x] = [];
-        memo[x][y] = { x: screenCol, y: screenRow };
+        memo[x][y] = { x: screenCol, y: screenRow, d: dist };
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
-    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, bisections = 0) {
+    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, d1, d2, bisections = 0) {
         // A lot more can be done to avoid doing calculations on summits that will not affect the viewport but
         // for this, we're only excluding interpolation for cases where both points are off-screen.
         if (((x1 < 0) || (x1 >= this.width)) && ((x2 < 0) || (y2 >= this.width))) return;
@@ -553,21 +583,24 @@ const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen
         const midX = (x1 + x2) >> 1;
         if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
             const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, x1, x2, y1, y2, bisections);
-            this.#drawMountainColumn(midX, midScreenY);
-            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, bisections + 1);
-            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, bisections + 1);
+            const midDistance = (d1 + d2) >> 1;
+            this.#drawMountainColumn(midX, midScreenY, midDistance);
+            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, d1, midDistance, bisections + 1);
+            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, midDistance, d2, bisections + 1);
         }
     }
 
     #drawMountainColumnFromMemo(memo, xMap, yMap) {
         const m = memo[xMap][yMap];
-        this.#drawMountainColumn(m.x, m.y);
+        this.#drawMountainColumn(m.x, m.y, m.d);
     }
 
     #interpolateFromMemo(memo, xMap1, yMap1, xMap2, yMap2) {
         const m1 = memo[xMap1][yMap1];
         const m2 = memo[xMap2][yMap2];
-        this.#interpolate(this.map.get(xMap1, yMap1), this.map.get(xMap2, yMap2), m1.x, m2.x, m1.y, m2.y);
+        if (m1.x !== m2.x) {
+            this.#interpolate(this.map.get(xMap1, yMap1), this.map.get(xMap2, yMap2), m1.x, m2.x, m1.y, m2.y, m1.d, m2.d);
+        }
     }
 
     /** Draw a frame. */
@@ -892,11 +925,21 @@ document.addEventListener('DOMContentLoaded', e => {
             g: Math.floor(0x60 + 0x40 * val / maxHeight),
             b: Math.floor(0 + 0x40 * val / maxHeight)
         }));
-    map.generate();
+    // map.generate();
+    map.generatePlateau();
     const compassEl = document.getElementsByClassName('compass')[0];
     new Compass(compassEl, ship);
     const viewportEl = document.getElementById('viewport');
-    new Viewport(viewportEl, viewportWidth, viewportHeight, viewportVerticalOffset, viewportScalePowerOfTwo, map, ship, fractalInterpolation);
+    new Viewport(
+        viewportEl,
+        viewportWidth,
+        viewportHeight,
+        viewportVerticalOffset,
+        viewportScalePowerOfTwo,
+        map,
+        ship,
+        fractalInterpolation,
+        fogShader);
 
     // Tests
     const testSection = document.getElementById("testSection");
