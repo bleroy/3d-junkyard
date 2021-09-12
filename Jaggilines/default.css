@@ -46,6 +46,10 @@ body {
     padding: 5px;
 }
 
+#testSection input[type="number"] {
+    width: 5em;
+}
+
 .fail {
     font-weight: bold;
     color: red;
@@ -84,6 +88,7 @@ body {
 
 .dashboard {
     position: relative;
+    height: 140px;
 }
 
 .map-container {

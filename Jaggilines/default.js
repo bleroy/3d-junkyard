@@ -24,20 +24,20 @@ const coordinateBits = mapCoordinateBits + bitsBetweenTops;
 /** The mountain summit map is 16 x 16. */
 const mapSize = 1 << mapCoordinateBits;
 
-/** The number of pixels on the map between peaks. */
-const mapScale = 8;
+/** The power of two of the number of pixels on the map between peaks. */
+const mapScalePowerOfTwo = 3;
 
 /** The power of two for the scale of the viewport from logical pixel to physical pixels on the page (2 -> x4 physical pixels). */
 const viewportScalePowerOfTwo = 2;
 
 /** The logical width of the viewport. */
-const viewportWidth = 640 / (1 << viewportScalePowerOfTwo);
+const viewportWidth = 640 >> viewportScalePowerOfTwo;
 
 /** The logical height of the viewport. */
-const viewportHeight = 192 / (1 << viewportScalePowerOfTwo);
+const viewportHeight = 192 >> viewportScalePowerOfTwo;
 
 /** The vertical coordinate of the horizontal direction on the viewport. */
-const viewportVerticalOffset = 200 / (1 << viewportScalePowerOfTwo);;
+const viewportVerticalOffset = 150 >> viewportScalePowerOfTwo;
 
 /** The power of two that gives the number of viewport pixels per unit of angle. */
 const viewPortScreenPixelPowerOfTwo = 1;
@@ -49,7 +49,7 @@ const maxHeightBits = 12;
 const maxHeight = 1 << maxHeightBits;
 
 /** Variations from summit to summit are at most maxHeight / 16. */
-const maxVariation = maxHeight >> 4;
+const maxVariation = maxHeight >> 2;
 
 /** Clipping distance, how many rows of mountains away from the ship can the viewport show. */
 const viewDistance = 5;
@@ -104,32 +104,44 @@ const fadeColors = (color1, color2, fadeFactor) => {
     }
 };
 
+/** Power of two used as attenuation of the fractal displacement used in the fractal interpolation algorithm. Fractalus uses 2, which maps to edge_length / 4. */
+const displacementAttenuationPower = 2;
+
 /** Number of milliseconds between runs of the game loop. */
 const tick = 32;
 
 /** The number of ticks since the game started running. */
 let frame = 0;
 
-// TODO: add a smoothness parameter that changes the probability distribution
-// (rough is centered around 1, smooth is centered around 0)
-
 /** Clamps the closest integer lower than the value between 0 and the max height
  * @param {number} val - The value to clamp.
  * @param {number} max - The maximum value.
  * @returns {number} The clamped value, between 0 and maxHeight. */
-const clamp = (val, max = maxHeight) => val < 0 ? 0 : val > max ? max : Math.floor(val);
+const clamp = (val, max) => val < 0 ? 0 : val > max ? max : Math.floor(val);
+
+/** Generates a random integer number in [0, top[
+ * @param {number} top - The value under which the random number is.
+ * @returns {number} A random number between 0 and top (non included). */
+const rnd = top => Math.floor(Math.random() * top);
+
+/** Generates an even random number smaller than top.
+ * @param {number} top - The value under which the random number is.
+ * @returns {number} A random even number between 0 and top (non included). */
+ const rndEven = top => rnd(top >> 1) << 1;
 
 /** Adds a random variation to the value, then clamps the result.
  * @param {number} val - The value to vary around.
  * @param {number} varyBy - The maximum variation around val.
+ * @param {number} max - The maximum value.
  * @returns {number} A new integer value that is a random number equal to val +/- at most varyBy and clamped between 0 and maxHeight. */
-const vary = (val, varyBy = maxVariation, max = maxHeight) => clamp(val + Math.random() * 2 * varyBy - varyBy, max);
+const vary = (val, varyBy, max) => clamp(val + Math.random() * 2 * varyBy - varyBy, max);
 
 /** Adds a random variation around the average of the provided values, then clamps the result.
  * @param {number} val - The value to vary around.
  * @param {number} varyBy - The maximum variation around val.
+ * @param {number} max - The maximum value.
  * @returns {number} A new integer value that is a random number equal to val +/- at most varyBy and clamped between 0 and maxHeight. */
- const varyFromAverage = (vals, varyBy = maxVariation) => vary(vals.reduce((acc, val) => acc + val, 0) / vals.length, varyBy);
+ const varyFromAverage = (vals, varyBy, max) => vary(vals.reduce((acc, val) => acc + val, 0) / vals.length, varyBy, max);
 
 /** A table of twelve bits of cos for each unit of angle. */
 const cosTable = [...new Array(fullCircle).keys()].map(angle => Math.floor(Math.cos(angle * Math.PI / halfCircle) * (1 << bitsBetweenTops)));
@@ -306,12 +318,91 @@ class Map {
     }
 
     /** Generates a random elevation at each node on the map. */
-    generate() {
+    generateDiamondSquare(binary = true) {
         // Apply more or less [diamond-square algorithm](https://en.wikipedia.org/wiki/Diamond-square_algorithm)
         // There are better algorithms but that will do.
         // Seed the top-left corner
         this.set(0, 0, Math.random() * maxHeight);
         this.#diamond(0, 0, this.size);
+        if (binary) {
+            // Post-process to round everything to top or zero:
+            for (let i = 0; i < this.size; i++) {
+                for (let j = 0; j < this.size; j++) {
+                    this.set(i, j, this.get(i, j) > maxHeight * 0.3 ? maxHeight : 0);
+                }
+            }
+        }
+    }
+
+    #square(row, col, size) {
+        if (size <= 1) return;
+        const halfSize = size >> 1;
+        const height = varyFromAverage(
+            [
+                this.get(row - halfSize, col),
+                this.get(row + halfSize, col),
+                this.get(row, col + halfSize),
+                this.get(row, col - halfSize)
+            ],
+            maxVariation * size,
+            maxHeight);
+        this.set(row + halfSize, col + halfSize, height);
+            this.#diamond(row, col, halfSize);
+            this.#diamond(row - halfSize, col, halfSize);
+        }
+
+    #diamond(row, col, size) {
+        if (size <= 1) return;
+        const halfSize = size >> 1;
+        const halfSizex2 = halfSize << 1;
+        const height = varyFromAverage(
+            [
+                this.get(row, col),
+                this.get(row, col + halfSizex2),
+                this.get(row + halfSizex2, col),
+                this.get(row + halfSizex2, col + halfSizex2)
+            ],
+            maxVariation * size,
+            maxHeight);
+        this.set(row + halfSize, col + halfSize, height);
+        this.#square(row + halfSizex2, col + halfSize, size);
+        this.#square(row + halfSize, col + halfSizex2, size);
+    }
+
+    /** Generates a maze-like map */
+    generateMaze() {
+        // Prepare the ground state
+        for (let i = 0; i < this.size; i++) {
+            for (let j = 0; j < this.size; j++) {
+                this.set(i, j, 0);
+            }
+        }
+        // Then, recursively add walls
+        this.#mazeCell(0, 0, this.size, this.size);
+    }
+
+    #mazeCell(x, y, w, h) {
+        if (w < 2 || h < 2) return;
+        // draw two random walls
+        const randX = 1 + rndEven(w);
+        const randY = 1 + rndEven(h);
+        for (let i = 0; i < h; i++) {
+            this.set(x + randX, y + i, maxHeight);
+        }
+        for (let i = 0; i < w; i++) {
+            this.set(x + i, y + randY, maxHeight);
+        }
+        // Remove a random cell in three of the walls
+        const whichWallHasNoDoor = rnd(4);
+        if (whichWallHasNoDoor !== 0) this.set(x + randX, y + rndEven(randY), 0);
+        if (whichWallHasNoDoor !== 1) this.set(x + randX, y + randY + 1 + rndEven(h - randY - 1), 0);
+        if (whichWallHasNoDoor !== 2) this.set(x + rndEven(randX), y + randY, 0);
+        if (whichWallHasNoDoor !== 3) this.set(x + randX + 1 + rndEven(w - randX - 1), y + randY, 0);
+        // Recurse
+        this.#mazeCell(x, y, randX, randY);
+        this.#mazeCell(x + randX + 1, y, w - randX - 1, randY);
+        this.#mazeCell(x, y + randY + 1, randX, h - randY - 1);
+        this.#mazeCell(x + randX + 1, y + randY + 1, w - randX - 1, h - randY - 1);
     }
 
     /** Generates a test map that gently slopes down from west to east and from north to south. */
@@ -332,37 +423,12 @@ class Map {
         }
     }
 
-    generatePlateau() {
+    generatePlateau(height = maxHeight >> 1) {
         for (let x = 0; x < this.size; x++) {
             for (let y = 0; y < this.size; y++) {
-                this.set(x, y, maxHeight >> 1);
+                this.set(x, y, height);
             }
         }
-    }
-
-    #square(row, col, size) {
-        if (size <= 1) return;
-        const halfSize = size >> 1;
-        this.set(row + halfSize, col + halfSize, varyFromAverage([
-            this.get(row - halfSize, col),
-            this.get(row + halfSize, col),
-            this.get(row, col + halfSize),
-            this.get(row, col - halfSize)], maxVariation * size));
-            this.#diamond(row, col, halfSize);
-            this.#diamond(row - halfSize, col, halfSize);
-        }
-
-    #diamond(row, col, size) {
-        if (size <= 1) return;
-        const halfSize = size >> 1;
-        const halfSizex2 = halfSize << 1;
-        this.set(row + halfSize, col + halfSize, varyFromAverage([
-            this.get(row, col),
-            this.get(row, col + halfSizex2),
-            this.get(row + halfSizex2, col),
-            this.get(row + halfSizex2, col + halfSizex2)], maxVariation * size));
-        this.#square(row + halfSizex2, col + halfSize, size);
-        this.#square(row + halfSize, col + halfSizex2, size);
     }
 }
 
@@ -393,12 +459,12 @@ class OverheadMap {
 
     /** Build an overhead visualization of an elevation map over the provided canvas element.
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the map.
-     * @param {number} scale - The distance in pixels between mountain tops on the map.
+     * @param {number} scalePowerOfTwo - The power of two for the distance in pixels between mountain tops on the map.
      * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object.
      * @param {ColorScale} colorScale - The color scale to use to render the map. */
-    constructor(canvas, shipImg, scale, map, ship, colorScale) {
-        canvas.width = canvas.height = map.size * scale;
+    constructor(canvas, shipImg, scalePowerOfTwo, map, ship, colorScale) {
+        canvas.width = canvas.height = map.size << scalePowerOfTwo;
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
@@ -408,7 +474,7 @@ class OverheadMap {
         this.#pixelCanvas.height = 1;
         this.#pixelContext = this.#pixelCanvas.getContext('2d');
         this.#pixelContext.imageSmoothingEnabled = false;
-        this.scale = scale;
+        this.scalePowerOfTwo = scalePowerOfTwo;
         this.map = map;
         this.colorScale = colorScale;
         this.ship = ship;
@@ -417,10 +483,8 @@ class OverheadMap {
 
         map.addChangeListener((row, col, val) => {
             const color = this.colorScale(val);
-            const pixelData = new Uint8ClampedArray([color.r, color.g, color.b, 255]);
-            const pixelImageData = new ImageData(pixelData, 1, 1);
-            this.#pixelContext.putImageData(pixelImageData, 0, 0);
-            this.#context.drawImage(this.#pixelCanvas, row * scale, col * scale, scale, scale);
+            this.#context.fillStyle = `rgb(${color.r},${color.g},${color.b})`;
+            this.#context.fillRect(row << scalePowerOfTwo, col << scalePowerOfTwo, 1 << scalePowerOfTwo, 1 << scalePowerOfTwo);
         });
         ship.addMoveListener(() => {
             this.moveShip();
@@ -429,9 +493,8 @@ class OverheadMap {
 
     /** Update the position of the ship on the map. */
     moveShip() {
-        // This isn't part of the reverse-engineering, so any math will do
-        this.#shipEl.style.top = (this.ship.y / (1 << bitsBetweenTops) * this.scale - this.#shipEl.clientHeight / 2) + 'px';
-        this.#shipEl.style.left = (this.ship.x / (1 << bitsBetweenTops) * this.scale - this.#shipEl.clientWidth / 2) + 'px';
+        this.#shipEl.style.top = ((this.ship.y << this.scalePowerOfTwo >> bitsBetweenTops) - (this.#shipEl.clientHeight >> 1) + (1 << this.scalePowerOfTwo >> 1)) + 'px';
+        this.#shipEl.style.left = ((this.ship.x << this.scalePowerOfTwo >> bitsBetweenTops) - (this.#shipEl.clientWidth >> 1) + (1 << this.scalePowerOfTwo >> 1)) + 'px';
         this.#shipEl.style.transform = `rotate(${(north - this.ship.heading) >> angleUnitPowerOfTwo}deg)`;
     }
 }
@@ -440,34 +503,35 @@ class OverheadMap {
  * @callback InterpolationAlgorithm
  * @param {number} yMountain1 - The altitude on the map of the first summit coordinate.
  * @param {number} yMountain2 - The altitude on the map of the second summit coordinate.
- * @param {number} xScreen1 - The first x screen coordinate.
- * @param {number} xScreen2 - The second x screen coordinate.
  * @param {number} yScreen1 - The first y screen coordinate.
  * @param {number} yScreen2 - The second y screen coordinate.
+ * @param {number} screenDisplacement - The current displacement amplitude in screen pixels.
  * @param {number} bisections - The number of bisections that have been performed to get there.
  * @returns {number[]} The interpolated y screen coordinate at the mid-point. */
 
 /** A linear interpolation algorithm.
  * @type {InterpolationAlgorithm} */
-const linearInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen1, yScreen2, bisections) =>
+const linearInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screenDisplacement, bisections) =>
     [(yMountain1 + yMountain2) >> 1, (yScreen1 + yScreen2) >> 1];
 
 /** A fractal interpolation algorithm.
  * A deterministic but chaotic displacement is added to the linear interpolation.
  * This is our best attempt at interpreting the transcript of a letter from Loren Carpenter dated April 18, 1989.
  * @type {InterpolationAlgorithm} */
- const fractalInterpolation = (yMountain1, yMountain2, xScreen1, xScreen2, yScreen1, yScreen2, bisections) => {
-    const displacementAttenuationPower = 2;
-    const sum = (yMountain1 & 0xFF) + (yMountain2 & 0xFF);
-    // if overflow, we do linear interpolation without displacement.
-    if (sum > 0xFF) return [(yMountain1 + yMountain2) >> 1, (yScreen1 + yScreen2) >> 1];
-    const absoluteDisplacement = 1 << (bitsBetweenTops - bisections - displacementAttenuationPower); // Displacement is edge_length / 4.
-    // The screen displacement should be proportional to the absolute one
-    // with the same factor as the difference in x screen coordinates is to the difference in map coordinates.
-    const screenDisplacement = (xScreen2 > xScreen1 ? xScreen2 - xScreen1 : xScreen1 - xScreen2) >> (bisections + displacementAttenuationPower);
-    if (sum & 0x80) // If sum is a negative 8-bit number, we add the displacement, otherwise we subtract it.
-        return [((yMountain1 + yMountain2) >> 1) + absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) + screenDisplacement];
-    return [((yMountain1 + yMountain2) >> 1) - absoluteDisplacement, ((yScreen1 + yScreen2) >> 1) - screenDisplacement];
+const fractalInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screenDisplacement, bisections) => {
+    const sum = (yMountain1 + yMountain2) & 0xFF; //>> maxHeightBits >> 1;
+    // Displacement is edge_length / 4
+    const absoluteDisplacement = 1 << (bitsBetweenTops - bisections - displacementAttenuationPower);
+    // The screen displacement amplitude gets divided by two on each subdivision.
+    if (sum & 0x80) // If sum is a negative 8-bit number, we subtract the displacement, otherwise we add it.
+        return [
+            ((yMountain1 + yMountain2) >> 1) + absoluteDisplacement,
+            ((yScreen1 + yScreen2) >> 1) + screenDisplacement
+        ];
+    return [
+        ((yMountain1 + yMountain2) >> 1) - absoluteDisplacement,
+        ((yScreen1 + yScreen2) >> 1) - screenDisplacement
+    ];
 };
 
 /** Shader algorithm.
@@ -497,9 +561,6 @@ const fogShader = distance => {
  *  The default draws a solid shade of brown that doesn't change with distance.  */
  class Viewport {
     #context;
-    #skyPixel;
-    #mountainPixel;
-    #mountainEdgePixel;
     #topHeights;
 
     /** Build a 3D viewport over the provided canvas element.
@@ -575,18 +636,25 @@ const fogShader = distance => {
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
-    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, d1, d2, bisections = 0) {
+    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, d1, d2, screenDisplacement = -1, bisections = 0) {
         // A lot more can be done to avoid doing calculations on summits that will not affect the viewport but
         // for this, we're only excluding interpolation for cases where both points are off-screen.
-        if (((x1 < 0) || (x1 >= this.width)) && ((x2 < 0) || (y2 >= this.width))) return;
+        if (((x1 < 0) || (x1 >= this.width) || (y1 < 0)) &&
+            ((x2 < 0) || (x2 >= this.width) || (y2 < 0))) return;
+
+        // if (y2 > this.height || y1 > this.height) debugger;
 
         const midX = (x1 + x2) >> 1;
         if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
-            const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, x1, x2, y1, y2, bisections);
+            // We compute the displacement amplitude once before bisecting recursively, and recursive displacements will just be bit operations.
+            if (screenDisplacement === -1) {
+                screenDisplacement = ((y1 + y2) & 0xFFEF) >> 5 - 1;
+            }
+            const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, y1, y2, screenDisplacement, bisections);
             const midDistance = (d1 + d2) >> 1;
             this.#drawMountainColumn(midX, midScreenY, midDistance);
-            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, d1, midDistance, bisections + 1);
-            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, midDistance, d2, bisections + 1);
+            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, d1, midDistance, screenDisplacement >> 1, bisections + 1);
+            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, midDistance, d2, screenDisplacement >> 1, bisections + 1);
         }
     }
 
@@ -612,6 +680,7 @@ const fogShader = distance => {
         const [xMap, yMap] = [this.ship.x >> bitsBetweenTops, this.ship.y >> bitsBetweenTops];
         const memo = [];
         this.#computeScreenCoordinatesFor(xMap, yMap, memo);
+        this.#drawMountainColumnFromMemo(memo, xMap, yMap);
         for (let dist = 1; dist < viewDistance; dist++) {
             // Compute the screen coordinates for the new summits on the perimeter of the square at this distance.
             for (let i = -dist; i <= dist; i++) {
@@ -636,10 +705,10 @@ const fogShader = distance => {
             }
             // Finally, render the new summits.
             for (let i = -dist; i <= dist; i++) {
-                this.#drawMountainColumnFromMemo(memo, xMap - dist, yMap + i, dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + dist, yMap + i, dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap - dist, dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap + dist, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap - dist, yMap + i);
+                this.#drawMountainColumnFromMemo(memo, xMap + dist, yMap + i);
+                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap - dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap + dist);
             }
         }
     }
@@ -754,6 +823,75 @@ class Compass {
     parentEl.appendChild(el);
     return el;
 }
+
+/** Creates a function that appends an interpolation graph to the supplied element.
+ * @param {HTMLElement} parentEl - The parent element to which the returned function will append the interpolation graph.
+ * @returns {TestInterpolationGrapher} - A function that can append an interpolation graph to the provided parent element. */
+ const interpolationTester = parentEl =>
+    /** Graphs an interpolation function.
+     * @callback TestInterpolationGrapher
+     * @param {InterpolationAlgorithm} fn - The interpolation algorithm to graph.
+     * @param {number} width - The width of the graph.
+     * @param {number} height - The height of the graph.
+     * @param {string} title - An optional title for the graph. If not provided, tha name of the function is used. */
+     (fn, width, height, title) => {
+        createEl(parentEl, 'h1', {innerText: title || fn.name});
+        const div = createEl(parentEl, 'div');
+        const first = createEl(div, 'input', {
+            type: 'number',
+            min: 0,
+            max: height - 1,
+            value: height / 4,
+            required: true,
+            title: "left"
+        });
+        const second = createEl(div, 'input', {
+            type: 'number',
+            min: 0,
+            max: height - 1,
+            value: 3 * height / 4,
+            required: true,
+            title: "right"
+        });
+        const displacement = createEl(div, 'input', {
+            type: 'number',
+            min: 0,
+            max: height - 1,
+            value: height / 2 - 1,
+            required: true,
+            title: "displacement"
+        });
+        const canvas = createEl(div, 'canvas', {
+            width: width,
+            height: height
+        });
+        const ctx = canvas.getContext('2d');
+        const recurse = (x1, x2, y1, y2, displacement = -1, bisections = 0) => {
+            const midX = (x1 + x2) >> 1;
+            if (x1 === midX || x2 === midX) return;
+            const midY = fn(y1, y2, y1, y2, displacement, bisections)[1];
+            ctx.beginPath();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'black';
+            ctx.moveTo(midX, canvas.height);
+            ctx.lineTo(midX, canvas.height - midY)
+            ctx.stroke();
+    
+            recurse(x1, midX, y1, midY, displacement >> 1, bisections + 1);
+            recurse(midX, x2, midY, y2, displacement >> 1, bisections + 1);
+        };
+        const draw = () => {
+            ctx.clearRect(0, 0, width, height);
+            const one = parseFloat(first.value);
+            const two = parseFloat(second.value);
+            const disp = parseFloat(displacement.value);
+            recurse(0, width, one, two, disp);
+        };
+        draw();
+        first.addEventListener('change', draw);
+        second.addEventListener('change', draw);
+        displacement.addEventListener('change', draw);
+    };
 
 /** Creates a function that appends a graph to the supplied element.
  * @param {HTMLElement} parentEl - The parent element to which the returned function will append graphs.
@@ -900,7 +1038,7 @@ const graphTester = parentEl =>
                 if (fieldValue) {
                     if (fieldValue.angle) {
                         ctx.moveTo(screenX, screenY);
-                        const amplitude = fieldValue.amplitude || (step * scale / 2);
+                        const amplitude = fieldValue.amplitude || (step * scale * 0.75);
                         const angleInRadians = fieldValue.angle * Math.PI / halfCircle;
                         ctx.lineTo(screenX + amplitude * Math.cos(angleInRadians), screenY - amplitude * Math.sin(angleInRadians));
                         ctx.stroke();
@@ -916,17 +1054,23 @@ const graphTester = parentEl =>
 
 document.addEventListener('DOMContentLoaded', e => {
     const map = new Map(mapSize);
-    const ship = new Valkyrie((1 << coordinateBits) >> 1, (1 << coordinateBits) >> 1, maxHeight, defaultThrust, north, 0, 0, 1);
+    const ship = new Valkyrie(
+        (1 << coordinateBits) >> 1,
+        (1 << coordinateBits) >> 1,
+        maxHeight + 10,
+        defaultThrust,
+        north, 0, 0, 1);
     const mapEl = document.getElementsByClassName('map')[0];
     const shipImg = document.getElementsByClassName('ship')[0];
-    new OverheadMap(mapEl, shipImg, mapScale, map, ship,
+    new OverheadMap(mapEl, shipImg, mapScalePowerOfTwo, map, ship,
         val => ({
             r: Math.floor(0x68 + 0x80 * val / maxHeight),
             g: Math.floor(0x60 + 0x40 * val / maxHeight),
             b: Math.floor(0 + 0x40 * val / maxHeight)
         }));
-    // map.generate();
-    map.generatePlateau();
+    map.generateMaze();
+    // map.generatePlateau(maxHeight/3);
+    // map.generateWestToEastAndNorthToSouthSlope();
     const compassEl = document.getElementsByClassName('compass')[0];
     new Compass(compassEl, ship);
     const viewportEl = document.getElementById('viewport');
@@ -939,13 +1083,14 @@ document.addEventListener('DOMContentLoaded', e => {
         map,
         ship,
         fractalInterpolation,
-        fogShader);
+        null/*fogShader*/);
 
     // Tests
     const testSection = document.getElementById("testSection");
     const testGraph = graphTester(testSection);
     const testRange = rangeTester(testSection);
     const testField = fieldTester(testSection);
+    const testInterpolation = interpolationTester(testSection);
     const runTestsButton = document.getElementById("runTests");
     runTestsButton.addEventListener("click", () => {
         testSection.innerHTML = "";
@@ -968,6 +1113,8 @@ document.addEventListener('DOMContentLoaded', e => {
             (x, y) => ({amplitude: distance(0, 0, x, y) >> 2}),
             [-10, 10], [-10, 10], 10, 1,
             "distanceFromCenter");
+        testInterpolation(linearInterpolation, 512, 256, 'linear interpolation');
+        testInterpolation(fractalInterpolation, 512, 256, 'linear interpolation');
     });
 
     // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
