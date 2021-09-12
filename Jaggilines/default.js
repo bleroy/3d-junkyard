@@ -51,6 +51,13 @@ const maxHeight = 1 << maxHeightBits;
 /** Variations from summit to summit are at most maxHeight / 16. */
 const maxVariation = maxHeight >> 2;
 
+/** Determines the mountain density on the maze-algorithm-generated maps.
+ * Values closer to 0 have more mountains, fewer valleys.
+ * Higher values have fewer mountains.
+ * 0.8 is a balanced value with mostly isolated mountains with a few chains
+ * that are not too long. It seems to look closely like Fractalus landscapes. */
+const mazeHoleiness = 0.8;
+
 /** Clipping distance, how many rows of mountains away from the ship can the viewport show. */
 const viewDistance = 5;
 
@@ -386,18 +393,19 @@ class Map {
         // draw two random walls
         const randX = 1 + rndEven(w);
         const randY = 1 + rndEven(h);
-        for (let i = 0; i < h; i++) {
-            this.set(x + randX, y + i, maxHeight);
-        }
         for (let i = 0; i < w; i++) {
             this.set(x + i, y + randY, maxHeight);
         }
-        // Remove a random cell in three of the walls
-        const whichWallHasNoDoor = rnd(4);
-        if (whichWallHasNoDoor !== 0) this.set(x + randX, y + rndEven(randY), 0);
-        if (whichWallHasNoDoor !== 1) this.set(x + randX, y + randY + 1 + rndEven(h - randY - 1), 0);
-        if (whichWallHasNoDoor !== 2) this.set(x + rndEven(randX), y + randY, 0);
-        if (whichWallHasNoDoor !== 3) this.set(x + randX + 1 + rndEven(w - randX - 1), y + randY, 0);
+        for (let i = 0; i < h; i++) {
+            this.set(x + randX, y + i, maxHeight);
+        }
+        // Punch random holes in those walls
+        for (let i = 0; i < w * mazeHoleiness; i++) {
+            this.set(x + rndEven(w), y + randY, 0);
+        }
+        for (let i = 0; i < h * mazeHoleiness; i++) {
+            this.set(x + randX, y + rndEven(h), 0);
+        }
         // Recurse
         this.#mazeCell(x, y, randX, randY);
         this.#mazeCell(x + randX + 1, y, w - randX - 1, randY);
