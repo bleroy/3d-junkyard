@@ -515,29 +515,33 @@ class OverheadMap {
  * @param {number} yScreen2 - The second y screen coordinate.
  * @param {number} screenDisplacement - The current displacement amplitude in screen pixels.
  * @param {number} bisections - The number of bisections that have been performed to get there.
+ * @param {number} flipBit - The index of the bit that flips the displacement.
  * @returns {number[]} The interpolated y screen coordinate at the mid-point. */
 
 /** A linear interpolation algorithm.
  * @type {InterpolationAlgorithm} */
-const linearInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screenDisplacement, bisections) =>
+const linearInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2) =>
     [(yMountain1 + yMountain2) >> 1, (yScreen1 + yScreen2) >> 1];
 
 /** A fractal interpolation algorithm.
  * A deterministic but chaotic displacement is added to the linear interpolation.
  * This is our best attempt at interpreting the transcript of a letter from Loren Carpenter dated April 18, 1989.
  * @type {InterpolationAlgorithm} */
-const fractalInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screenDisplacement, bisections) => {
-    const sum = (yMountain1 + yMountain2) & 0xFF; //>> maxHeightBits >> 1;
-    // Displacement is edge_length / 4
+const fractalInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screenDisplacement, bisections, flipBit = 5) => {
+    const sum = yMountain1 + yMountain2;
+    // If sum overflows, do linear interpolation (this avoids excessive variations far above the max height)
+    if (sum > (maxHeight << 1)) {
+        return [sum >> 1, (yScreen1 + yScreen2) >> 1];
+    }
+    // Absolute displacement is edge_length / 4 (the screen displacement amplitude gets divided by two on each subdivision).
     const absoluteDisplacement = 1 << (bitsBetweenTops - bisections - displacementAttenuationPower);
-    // The screen displacement amplitude gets divided by two on each subdivision.
-    if (sum & 0x80) // If sum is a negative 8-bit number, we subtract the displacement, otherwise we add it.
+    if (sum & (1 << flipBit)) // Depending on some flip bit on the sum of altitudes, we add or subtract the displacement.
         return [
-            ((yMountain1 + yMountain2) >> 1) + absoluteDisplacement,
+            (sum >> 1) + absoluteDisplacement,
             ((yScreen1 + yScreen2) >> 1) + screenDisplacement
         ];
     return [
-        ((yMountain1 + yMountain2) >> 1) - absoluteDisplacement,
+        (sum >> 1) - absoluteDisplacement,
         ((yScreen1 + yScreen2) >> 1) - screenDisplacement
     ];
 };
@@ -638,13 +642,18 @@ const fogShader = distance => {
         const screenCol = (this.width >> 1) - (azimuth >> viewPortScreenPixelPowerOfTwo);
         const altitude = angleToAlgebraic(angleFromCoordinates(dist, this.map.get(x, y) - this.ship.z));
         const screenRow = this.verticalOffset + (altitude >> viewPortScreenPixelPowerOfTwo);
+        // We compute the screen displacement corresponding to a 0-maxHeight amplitude at this point.
+        // This will be used as a starting point for the amplitude later.
+        const altitude0 = angleToAlgebraic(angleFromCoordinates(dist, - this.ship.z));
+        const altitudeMax = angleToAlgebraic(angleFromCoordinates(dist, maxHeight - this.ship.z));
+        const displacement = (altitudeMax - altitude0) >> viewPortScreenPixelPowerOfTwo >> displacementAttenuationPower;
         // Remember the screen coordinates for the summits so we can reuse and interpolate between them.
         if (!memo[x]) memo[x] = [];
-        memo[x][y] = { x: screenCol, y: screenRow, d: dist };
+        memo[x][y] = { x: screenCol, y: screenRow, d: dist, displacement };
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
-    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, d1, d2, screenDisplacement = -1, bisections = 0) {
+    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, d1, d2, screenDisplacement, bisections = 0) {
         // A lot more can be done to avoid doing calculations on summits that will not affect the viewport but
         // for this, we're only excluding interpolation for cases where both points are off-screen.
         if (((x1 < 0) || (x1 >= this.width) || (y1 < 0)) &&
@@ -654,10 +663,6 @@ const fogShader = distance => {
 
         const midX = (x1 + x2) >> 1;
         if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
-            // We compute the displacement amplitude once before bisecting recursively, and recursive displacements will just be bit operations.
-            if (screenDisplacement === -1) {
-                screenDisplacement = ((y1 + y2) & 0xFFEF) >> 5 - 1;
-            }
             const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, y1, y2, screenDisplacement, bisections);
             const midDistance = (d1 + d2) >> 1;
             this.#drawMountainColumn(midX, midScreenY, midDistance);
@@ -675,7 +680,22 @@ const fogShader = distance => {
         const m1 = memo[xMap1][yMap1];
         const m2 = memo[xMap2][yMap2];
         if (m1.x !== m2.x) {
-            this.#interpolate(this.map.get(xMap1, yMap1), this.map.get(xMap2, yMap2), m1.x, m2.x, m1.y, m2.y, m1.d, m2.d);
+            // We use the average displacement amplitude between the two points
+            // before bisecting recursively, and recursive displacements will just be bit operations.
+            const screenDisplacement = (m1.displacement + m2.displacement) >> 1;
+            // Introduce a seed of chaos to the mountain heights to cause variations in mountain shapes
+            // and so they don't all look the same.
+            const chaos = ((xMap1 << mapCoordinateBits) + yMap1 + (yMap2 << mapCoordinateBits) + xMap2) >> 1;
+            this.#interpolate(
+                this.map.get(xMap1, yMap1) - chaos,
+                this.map.get(xMap2, yMap2),
+                m1.x,
+                m2.x,
+                m1.y,
+                m2.y,
+                m1.d,
+                m2.d,
+                screenDisplacement);
         }
     }
 
@@ -841,43 +861,66 @@ class Compass {
      * @param {InterpolationAlgorithm} fn - The interpolation algorithm to graph.
      * @param {number} width - The width of the graph.
      * @param {number} height - The height of the graph.
+     * @param {number} left - The height of the mountain on the left.
+     * @param {number} right - The height ofthe mountain on the right.
+     * @param {number} leftScreen - The screen y coordinate on the left.
+     * @param {number} rightScreen - The screen y coordinate on the right.
      * @param {string} title - An optional title for the graph. If not provided, tha name of the function is used. */
-     (fn, width, height, title) => {
+     (fn, width, height, left, right, leftScreen = 0, rightScreen = 255, displacement = 63, title) => {
         createEl(parentEl, 'h1', {innerText: title || fn.name});
         const div = createEl(parentEl, 'div');
-        const first = createEl(div, 'input', {
+        const firstScreenInput = createEl(div, 'input', {
             type: 'number',
-            min: 0,
-            max: height - 1,
-            value: height / 4,
+            value: leftScreen,
             required: true,
-            title: "left"
+            title: "left screen Y"
         });
-        const second = createEl(div, 'input', {
+        const secondScreenInput = createEl(div, 'input', {
             type: 'number',
-            min: 0,
-            max: height - 1,
-            value: 3 * height / 4,
+            value: rightScreen,
             required: true,
-            title: "right"
+            title: "right screen Y"
         });
-        const displacement = createEl(div, 'input', {
+        const firstMountainInput = createEl(div, 'input', {
+            type: 'number',
+            min: 0,
+            value: left,
+            required: true,
+            title: "left mountain Y"
+        });
+        const secondMountainInput = createEl(div, 'input', {
+            type: 'number',
+            min: 0,
+            value: right,
+            required: true,
+            title: "right mountain Y"
+        });
+        const displacementInput = createEl(div, 'input', {
             type: 'number',
             min: 0,
             max: height - 1,
-            value: height / 2 - 1,
+            value: displacement,
             required: true,
             title: "displacement"
+        });
+        const flipBitInput = createEl(div, 'input', {
+            type: 'number',
+            min: 0,
+            step: 1,
+            max: 15,
+            value: 5,
+            required: true,
+            title: "flip bit"
         });
         const canvas = createEl(div, 'canvas', {
             width: width,
             height: height
         });
         const ctx = canvas.getContext('2d');
-        const recurse = (x1, x2, y1, y2, displacement = -1, bisections = 0) => {
+        const recurse = (yMountain1, yMountain2, x1, x2, y1, y2, displacement, bisections, flipBit) => {
             const midX = (x1 + x2) >> 1;
             if (x1 === midX || x2 === midX) return;
-            const midY = fn(y1, y2, y1, y2, displacement, bisections)[1];
+            const [midMountainY, midY] = fn(yMountain1, yMountain2, y1, y2, displacement, bisections, flipBit);
             ctx.beginPath();
             ctx.lineWidth = 1;
             ctx.strokeStyle = 'black';
@@ -885,20 +928,28 @@ class Compass {
             ctx.lineTo(midX, canvas.height - midY)
             ctx.stroke();
     
-            recurse(x1, midX, y1, midY, displacement >> 1, bisections + 1);
-            recurse(midX, x2, midY, y2, displacement >> 1, bisections + 1);
+            recurse(yMountain1, midMountainY, x1, midX, y1, midY, displacement >> 1, bisections + 1, flipBit);
+            recurse(midMountainY, yMountain2, midX, x2, midY, y2, displacement >> 1, bisections + 1, flipBit);
         };
         const draw = () => {
             ctx.clearRect(0, 0, width, height);
-            const one = parseFloat(first.value);
-            const two = parseFloat(second.value);
-            const disp = parseFloat(displacement.value);
-            recurse(0, width, one, two, disp);
+            const one = parseFloat(firstScreenInput.value);
+            const two = parseFloat(secondScreenInput.value);
+            const oneMountain = parseFloat(firstMountainInput.value);
+            const twoMountain = parseFloat(secondMountainInput.value);
+            const disp = parseFloat(displacementInput.value);
+            const flipBit = parseInt(flipBitInput.value, 10);
+            recurse(oneMountain, twoMountain, 0, width, one, two, disp, flipBit);
         };
         draw();
-        first.addEventListener('change', draw);
-        second.addEventListener('change', draw);
-        displacement.addEventListener('change', draw);
+        [
+            firstScreenInput,
+            secondScreenInput,
+            firstMountainInput,
+            secondMountainInput,
+            displacementInput,
+            flipBitInput
+        ].forEach(el => el.addEventListener('change', draw));
     };
 
 /** Creates a function that appends a graph to the supplied element.
@@ -1121,8 +1172,13 @@ document.addEventListener('DOMContentLoaded', e => {
             (x, y) => ({amplitude: distance(0, 0, x, y) >> 2}),
             [-10, 10], [-10, 10], 10, 1,
             "distanceFromCenter");
-        testInterpolation(linearInterpolation, 512, 256, 'linear interpolation');
-        testInterpolation(fractalInterpolation, 512, 256, 'linear interpolation');
+        const lowScreenY = 64;
+        const highScreenY = 255;
+        const interpolationDisplacement = (highScreenY - lowScreenY) >> displacementAttenuationPower;
+        testInterpolation(linearInterpolation, 512, 256, 0, maxHeight, lowScreenY, highScreenY, interpolationDisplacement, 'linear interpolation');
+        testInterpolation(fractalInterpolation, 512, 256, 0, maxHeight, lowScreenY, highScreenY, interpolationDisplacement, 'fractal interpolation 0-max');
+        testInterpolation(fractalInterpolation, 512, 256, 0, 0, lowScreenY, lowScreenY, interpolationDisplacement, 'fractal interpolation 0-0');
+        testInterpolation(fractalInterpolation, 512, 256, maxHeight, maxHeight, highScreenY, highScreenY, interpolationDisplacement, 'fractal interpolation max-max');
     });
 
     // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
