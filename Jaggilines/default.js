@@ -261,6 +261,36 @@ const distance = (x1, y1, x2, y2) => {
  * @returns {number} an angle between -halfCircle and halfCircle. */
 const angleToAlgebraic = angle => angle > halfCircle ? angle - fullCircle : angle;
 
+/** An integer hash function. */
+const hash = n => {
+    n = ((n >> 16) ^ n) * 0x45d9f3b;
+    n = ((n >> 16) ^ n) * 0x45d9f3b;
+    n = (n >> 16) ^ n;
+    return n;
+};
+
+/**
+ * Seeds a deterministic random number generator using sfc32.
+ * See https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
+ * This is not crypto or anything like that, just a convenient source of deterministic chaos.
+ * @param {number} a - The first seed to create the random number genrator from.
+ * @param {number} b - The second seed to create the random number genrator from.
+ * @param {number} c - The third seed to create the random number genrator from.
+ * @param {number} d - The fourth seed to create the random number genrator from.
+ * @returns a random number generator that uses the provided seed. */
+const seedRnd = (a, b, c, d) => () => {
+    a = hash(a); b = hash(b); c = hash(c); d = hash(d);
+    a >>>= 0; b >>>= 0; c >>>= 0; d >>>= 0;
+    let t = (a + b) | 0;
+    a = b ^ b >>> 9;
+    b = c + (c << 3) | 0;
+    c = (c << 21 | c >>> 11);
+    d = d + 1 | 0;
+    t = t + d | 0;
+    c = c + t | 0;
+    return t >>> 0;
+};
+
 /** Handler for map elevation changes.
  * @callback MapChangeHandler
  * @param {number} row - The row where the change happened.
@@ -529,13 +559,11 @@ const linearInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2) =>
  * @type {InterpolationAlgorithm} */
 const fractalInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screenDisplacement, bisections, flipBit = 5) => {
     const sum = yMountain1 + yMountain2;
-    // If sum overflows, do linear interpolation (this avoids excessive variations far above the max height)
-    if (sum > (maxHeight << 1)) {
-        return [sum >> 1, (yScreen1 + yScreen2) >> 1];
-    }
     // Absolute displacement is edge_length / 4 (the screen displacement amplitude gets divided by two on each subdivision).
     const absoluteDisplacement = 1 << (bitsBetweenTops - bisections - displacementAttenuationPower);
-    if (sum & (1 << flipBit)) // Depending on some flip bit on the sum of altitudes, we add or subtract the displacement.
+    // Depending on some flip bit on the sum of altitudes, we add or subtract the displacement.
+    // We also subtract when the new value would go over the max height.
+    if ((sum >> 1) + absoluteDisplacement <= maxHeight && sum & (1 << flipBit))
         return [
             (sum >> 1) + absoluteDisplacement,
             ((yScreen1 + yScreen2) >> 1) + screenDisplacement
@@ -553,7 +581,7 @@ const fractalInterpolation = (yMountain1, yMountain2, yScreen1, yScreen2, screen
 
 /** A shader that fades the mountains to the sky color */
 const fogShader = distance => {
-    const fadeFactor = distance / viewDistance / (1 << bitsBetweenTops);
+    const fadeFactor = distance / viewDistance;
     return [
         fadeColors(mountainColor, skyColor, fadeFactor),
         fadeColors(mountainEdgeColor, skyColor, fadeFactor)
@@ -653,30 +681,27 @@ const fogShader = distance => {
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
-    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, d1, d2, screenDisplacement, bisections = 0) {
+    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, dist, screenDisplacement, bisections = 0) {
         // A lot more can be done to avoid doing calculations on summits that will not affect the viewport but
         // for this, we're only excluding interpolation for cases where both points are off-screen.
         if (((x1 < 0) || (x1 >= this.width) || (y1 < 0)) &&
             ((x2 < 0) || (x2 >= this.width) || (y2 < 0))) return;
 
-        // if (y2 > this.height || y1 > this.height) debugger;
-
         const midX = (x1 + x2) >> 1;
         if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
             const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, y1, y2, screenDisplacement, bisections);
-            const midDistance = (d1 + d2) >> 1;
-            this.#drawMountainColumn(midX, midScreenY, midDistance);
-            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, d1, midDistance, screenDisplacement >> 1, bisections + 1);
-            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, midDistance, d2, screenDisplacement >> 1, bisections + 1);
+            this.#drawMountainColumn(midX, midScreenY, dist);
+            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, dist, screenDisplacement >> 1, bisections + 1);
+            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, dist, screenDisplacement >> 1, bisections + 1);
         }
     }
 
-    #drawMountainColumnFromMemo(memo, xMap, yMap) {
+    #drawMountainColumnFromMemo(memo, xMap, yMap, dist) {
         const m = memo[xMap][yMap];
-        this.#drawMountainColumn(m.x, m.y, m.d);
+        this.#drawMountainColumn(m.x, m.y, dist);
     }
 
-    #interpolateFromMemo(memo, xMap1, yMap1, xMap2, yMap2) {
+    #interpolateFromMemo(memo, xMap1, yMap1, xMap2, yMap2, dist) {
         const m1 = memo[xMap1][yMap1];
         const m2 = memo[xMap2][yMap2];
         if (m1.x !== m2.x) {
@@ -685,7 +710,7 @@ const fogShader = distance => {
             const screenDisplacement = (m1.displacement + m2.displacement) >> 1;
             // Introduce a seed of chaos to the mountain heights to cause variations in mountain shapes
             // and so they don't all look the same.
-            const chaos = ((xMap1 << mapCoordinateBits) + yMap1 + (yMap2 << mapCoordinateBits) + xMap2) >> 1;
+            const chaos = seedRnd(xMap1, yMap1, yMap2, xMap2)() & 0xFF;
             this.#interpolate(
                 this.map.get(xMap1, yMap1) - chaos,
                 this.map.get(xMap2, yMap2),
@@ -693,8 +718,7 @@ const fogShader = distance => {
                 m2.x,
                 m1.y,
                 m2.y,
-                m1.d,
-                m2.d,
+                dist,
                 screenDisplacement);
         }
     }
@@ -708,7 +732,7 @@ const fogShader = distance => {
         const [xMap, yMap] = [this.ship.x >> bitsBetweenTops, this.ship.y >> bitsBetweenTops];
         const memo = [];
         this.#computeScreenCoordinatesFor(xMap, yMap, memo);
-        this.#drawMountainColumnFromMemo(memo, xMap, yMap);
+        this.#drawMountainColumnFromMemo(memo, xMap, yMap, 1);
         for (let dist = 1; dist < viewDistance; dist++) {
             // Compute the screen coordinates for the new summits on the perimeter of the square at this distance.
             for (let i = -dist; i <= dist; i++) {
@@ -719,24 +743,24 @@ const fogShader = distance => {
             }
             // Interpolate between the previous summit square and the new.
             for (let i = -dist + 1; i < dist; i++) {
-                this.#interpolateFromMemo(memo, xMap - dist + 1, yMap + i, xMap - dist, yMap + i);
-                this.#interpolateFromMemo(memo, xMap + dist - 1, yMap + i, xMap + dist, yMap + i);
-                this.#interpolateFromMemo(memo, xMap + i, yMap - dist + 1, xMap + i, yMap - dist);
-                this.#interpolateFromMemo(memo, xMap + i, yMap + dist - 1, xMap + i, yMap + dist);
+                this.#interpolateFromMemo(memo, xMap - dist + 1, yMap + i, xMap - dist, yMap + i, dist);
+                this.#interpolateFromMemo(memo, xMap + dist - 1, yMap + i, xMap + dist, yMap + i, dist);
+                this.#interpolateFromMemo(memo, xMap + i, yMap - dist + 1, xMap + i, yMap - dist, dist);
+                this.#interpolateFromMemo(memo, xMap + i, yMap + dist - 1, xMap + i, yMap + dist, dist);
             }
             // Interpolate between the new summits on the perimeter of the square at this distance.
             for (let i = -dist; i < dist; i++) {
-                this.#interpolateFromMemo(memo, xMap - dist, yMap + i, xMap - dist, yMap + i + 1);
-                this.#interpolateFromMemo(memo, xMap + dist, yMap + i, xMap + dist, yMap + i + 1);
-                this.#interpolateFromMemo(memo, xMap + i, yMap - dist, xMap + i + 1, yMap - dist);
-                this.#interpolateFromMemo(memo, xMap + i, yMap + dist, xMap + i + 1, yMap + dist);
+                this.#interpolateFromMemo(memo, xMap - dist, yMap + i, xMap - dist, yMap + i + 1, dist);
+                this.#interpolateFromMemo(memo, xMap + dist, yMap + i, xMap + dist, yMap + i + 1, dist);
+                this.#interpolateFromMemo(memo, xMap + i, yMap - dist, xMap + i + 1, yMap - dist, dist);
+                this.#interpolateFromMemo(memo, xMap + i, yMap + dist, xMap + i + 1, yMap + dist, dist);
             }
             // Finally, render the new summits.
             for (let i = -dist; i <= dist; i++) {
-                this.#drawMountainColumnFromMemo(memo, xMap - dist, yMap + i);
-                this.#drawMountainColumnFromMemo(memo, xMap + dist, yMap + i);
-                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap - dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap + dist);
+                this.#drawMountainColumnFromMemo(memo, xMap - dist, yMap + i, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + dist, yMap + i, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap - dist, dist);
+                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap + dist, dist);
             }
         }
     }
@@ -1142,7 +1166,7 @@ document.addEventListener('DOMContentLoaded', e => {
         map,
         ship,
         fractalInterpolation,
-        null/*fogShader*/);
+        fogShader);
 
     // Tests
     const testSection = document.getElementById("testSection");
