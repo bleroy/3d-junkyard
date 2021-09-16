@@ -992,7 +992,7 @@ U 1 1 6093289B
 P 2800 6450
 F 0 "J1" V 2804 7030 50  0000 L CNN
 F 1 "Conn_02x12_Counter_Clockwise" V 2895 7030 50  0000 L CNN
-F 2 "Connector_IDC:IDC-Header_2x12_P2.54mm_Horizontal" H 2800 6450 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x12_P2.54mm_Vertical" H 2800 6450 50  0001 C CNN
 F 3 "~" H 2800 6450 50  0001 C CNN
 	1    2800 6450
 	0    1    1    0   
@@ -1503,4 +1503,5 @@ Wire Wire Line
 	10200 2100 10200 3000
 Wire Wire Line
 	10200 3000 10800 3000
+NoConn ~ 3300 6250
 $EndSCHEMATC
