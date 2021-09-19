@@ -4,19 +4,19 @@
     fortyfive_degree
   )
   (autoroute_settings
-    (fanout off)
+    (fanout on)
     (autoroute on)
     (postroute on)
-    (vias off)
+    (vias on)
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 6891)
+    (start_pass_no 5843)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 3.6)
+      (against_preferred_direction_trace_costs 3.5)
     )
     (layer_rule B.Cu
       (active on)
@@ -63,11 +63,11 @@
     )
   )
   (class "kicad_default"
-    "Net-(D1-Pad2)" "Net-(J1-Pad24)" "Net-(J1-Pad23)" "Net-(J1-Pad22)" "Net-(J1-Pad21)" "Net-(J1-Pad20)" "Net-(J1-Pad19)" "Net-(J1-Pad18)"
-    "Net-(J1-Pad17)" "Net-(J1-Pad16)" "Net-(J1-Pad15)" "Net-(J1-Pad14)" "Net-(J1-Pad13)" "Net-(J1-Pad12)" "Net-(J1-Pad11)" "Net-(J1-Pad10)"
-    "Net-(J1-Pad9)" "Net-(J1-Pad8)" "Net-(J1-Pad7)" "Net-(J1-Pad6)" "Net-(J1-Pad5)" "Net-(J1-Pad4)" "Net-(J1-Pad1)" GND
-    "Net-(J2-Pad14)" "Net-(J2-Pad13)" "Net-(J2-Pad12)" "Net-(J2-Pad11)" "Net-(J2-Pad10)" "Net-(J2-Pad9)" "Net-(J2-Pad8)" "Net-(J2-Pad7)"
-    "Net-(J2-Pad6)" "Net-(J2-Pad5)" "Net-(J2-Pad4)" "Net-(J2-Pad3)" "Net-(J2-Pad2)"
+    GND "Net-(D1-Pad2)" "Net-(J2-Pad14)" "Net-(J2-Pad13)" "Net-(J2-Pad12)" "Net-(J2-Pad11)" "Net-(J2-Pad10)" "Net-(J2-Pad9)"
+    "Net-(J2-Pad8)" "Net-(J2-Pad7)" "Net-(J2-Pad6)" "Net-(J2-Pad5)" "Net-(J2-Pad4)" "Net-(J2-Pad3)" "Net-(J2-Pad2)" "Net-(J0-Pad26)"
+    "Net-(J0-Pad25)" "Net-(J0-Pad24)" "Net-(J0-Pad23)" "Net-(J0-Pad22)" "Net-(J0-Pad21)" "Net-(J0-Pad20)" "Net-(J0-Pad19)" "Net-(J0-Pad18)"
+    "Net-(J0-Pad17)" "Net-(J0-Pad16)" "Net-(J0-Pad15)" "Net-(J0-Pad14)" "Net-(J0-Pad13)" "Net-(J0-Pad12)" "Net-(J0-Pad11)" "Net-(J0-Pad10)"
+    "Net-(J0-Pad8)" "Net-(J0-Pad6)" "Net-(J0-Pad5)" "Net-(J0-Pad4)" "Net-(J0-Pad1)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
