@@ -67,6 +67,9 @@
     )
   )
   (placement
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+      (place R1 37220 -68045 front 90 (PN R100))
+    )
     (component "Connector_FFC-FPC:Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal"
       (place J0 322970 -47090 back 0 (PN Conn_01x26))
     )
@@ -83,11 +86,11 @@
       (place MX1 171840 -47090 back 0 (PN KeyboardMatrixSilk))
     )
     (component Atari130MX:ScreamingAtTheRadio
-      (place GB0 320430 -133450 back 0 (PN LOGO))
+      (place GB0 321065 -137895 back 0 (PN LOGO))
       (place GF0 42300 -39470 front 0 (PN LOGO))
     )
     (component Atari130MX:Decent_logo
-      (place LABEL1 270900 -39470 back 0 (PN Decent_logo))
+      (place LABEL1 319795 -128370 back 0 (PN Decent_logo))
     )
     (component "Atari130MX:IDC-Header_2x12_P2.54mm_Vertical"
       (place J1 270900 -45820 back 90 (PN Conn_02x12_Odd_Even))
@@ -189,6 +192,26 @@
     )
   )
   (library
+    (image Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+      (outline (path signal 50  8670 1500  -1050 1500))
+      (outline (path signal 50  8670 -1500  8670 1500))
+      (outline (path signal 50  -1050 -1500  8670 -1500))
+      (outline (path signal 50  -1050 1500  -1050 -1500))
+      (outline (path signal 120  7080 -1370  7080 -1040))
+      (outline (path signal 120  540 -1370  7080 -1370))
+      (outline (path signal 120  540 -1040  540 -1370))
+      (outline (path signal 120  7080 1370  7080 1040))
+      (outline (path signal 120  540 1370  7080 1370))
+      (outline (path signal 120  540 1040  540 1370))
+      (outline (path signal 100  7620 0  6960 0))
+      (outline (path signal 100  0 0  660 0))
+      (outline (path signal 100  6960 1250  660 1250))
+      (outline (path signal 100  6960 -1250  6960 1250))
+      (outline (path signal 100  660 -1250  6960 -1250))
+      (outline (path signal 100  660 1250  660 -1250))
+      (pin Oval[A]Pad_1600x1600_um 2 7620 0)
+      (pin Round[A]Pad_1600_um 1 0 0)
+    )
     (image "Connector_FFC-FPC:Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal"
       (outline (path signal 100  15050 1060  15050 710))
       (outline (path signal 100  15050 710  -15050 710))
@@ -1223,6 +1246,11 @@
       (outline (path signal 200  -1520.62 -1553.17  -1591.15 -1642.15))
       (outline (path signal 200  1762.26 629.98  1744.35 730.36))
     )
+    (padstack Round[A]Pad_1600_um
+      (shape (circle F.Cu 1600))
+      (shape (circle B.Cu 1600))
+      (attach off)
+    )
     (padstack Round[A]Pad_1700_um
       (shape (circle F.Cu 1700))
       (shape (circle B.Cu 1700))
@@ -1236,6 +1264,11 @@
     (padstack Round[A]Pad_2200_um
       (shape (circle F.Cu 2200))
       (shape (circle B.Cu 2200))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1600x1600_um
+      (shape (path F.Cu 1600  0 0  0 0))
+      (shape (path B.Cu 1600  0 0  0 0))
       (attach off)
     )
     (padstack Oval[A]Pad_1700x1700_um
@@ -1302,12 +1335,11 @@
   )
   (network
     (net "Net-(D1-Pad2)"
-      (pins J0-2 U1-4 U1-4@1 J1-2 D1-2)
+      (pins R1-2 J0-2 J1-2 D1-2)
     )
     (net GND
-      (pins J0-3 U1-3 U1-8 U1-13 U1-18 U1-23 U1-28 U1-38 U1-3@1 U1-8@1 U1-13@1 U1-18@1
-        U1-38@1 U1-28@1 U1-23@1 U1-42 U1-42@1 J2-1 J1-3 SWStart1-2 SWSelect1-2 SWReset1-2
-        SWOption1-2 D1-1)
+      (pins J0-26 J0-3 U1-38 U1-38@1 J2-1 J1-3 SWStart1-2 SWSelect1-2 SWReset1-2 SWOption1-2
+        D1-1)
     )
     (net "Net-(J2-Pad14)"
       (pins U1-34 U1-34@1 J2-14)
@@ -1317,9 +1349,6 @@
     )
     (net "Net-(J2-Pad12)"
       (pins U1-31 U1-31@1 J2-12)
-    )
-    (net "Net-(J2-Pad11)"
-      (pins U1-5 U1-5@1 J2-11)
     )
     (net "Net-(J2-Pad10)"
       (pins U1-41 U1-41@1 J2-10)
@@ -1348,73 +1377,65 @@
     (net "Net-(J2-Pad2)"
       (pins U1-37 U1-37@1 J2-2)
     )
-    (net "Net-(J0-Pad26)"
-      (pins J0-26 U1-2 U1-2@1 J1-24 SWReset1-1)
-    )
-    (net "Net-(J0-Pad25)"
-      (pins J0-25 U1-1 U1-1@1 J1-23 SWOption1-1)
-    )
     (net "Net-(J0-Pad24)"
-      (pins J0-24 U1-29 U1-29@1 J1-22 SWSelect1-1)
+      (pins J0-24 U1-2 U1-2@1 J1-24 SWReset1-1)
     )
     (net "Net-(J0-Pad23)"
-      (pins J0-23 U1-27 U1-27@1 J1-21 SWStart1-1)
+      (pins J0-23 U1-1 U1-1@1 J1-23 SWOption1-1)
     )
     (net "Net-(J0-Pad22)"
-      (pins J0-22 U1-26 U1-26@1 J1-20 SWRightSft1-1 SWCtl1-1 SWLeftSft1-1 SWBrk1-1)
+      (pins J0-22 U1-29 U1-29@1 J1-22 SWSelect1-1)
     )
     (net "Net-(J0-Pad21)"
-      (pins J0-21 U1-25 U1-25@1 J1-19 SWY1-1 SWU1-1 SWN1-1 SW7-1 SW6-1)
+      (pins J0-21 U1-27 U1-27@1 J1-21 SWStart1-1)
     )
     (net "Net-(J0-Pad20)"
-      (pins J0-20 U1-24 U1-24@1 J1-18 SWS1-2 SWH1-2 SWG1-2 SWF1-2 SWD1-2 SWCps1-2
-        SWA1-2)
+      (pins J0-20 U1-26 U1-26@1 J1-20 SWRightSft1-1 SWCtl1-1 SWLeftSft1-1 SWBrk1-1)
     )
     (net "Net-(J0-Pad19)"
-      (pins J0-19 U1-22 U1-22@1 J1-17 SWZ1-1 SWStar1-1 SWQ1-1 SWInv1-1 SWGT1-1 SWEqual1-1
-        SWA1-1 SW1-1)
+      (pins J0-19 U1-25 U1-25@1 J1-19 SWY1-1 SWU1-1 SWN1-1 SW7-1 SW6-1)
     )
     (net "Net-(J0-Pad18)"
-      (pins J0-18 U1-21 U1-21@1 J1-16 SWTab1-1 SWRet1-1 SWEsc1-1 SWDel1-1 SWCps1-1)
+      (pins J0-18 U1-24 U1-24@1 J1-18 SWS1-2 SWH1-2 SWG1-2 SWF1-2 SWD1-2 SWCps1-2
+        SWA1-2)
     )
     (net "Net-(J0-Pad17)"
-      (pins J0-17 U1-20 U1-20@1 J1-15 SWY1-2 SWW1-2 SWTab1-2 SWT1-2 SWR1-2 SWQ1-2
-        SWE1-2)
+      (pins J0-17 U1-22 U1-22@1 J1-17 SWZ1-1 SWStar1-1 SWQ1-1 SWInv1-1 SWGT1-1 SWEqual1-1
+        SWA1-1 SW1-1)
     )
     (net "Net-(J0-Pad16)"
-      (pins J0-16 U1-19 U1-19@1 J1-14 SWEsc1-2 SW6-2 SW5-2 SW4-2 SW3-2 SW2-2 SW1-2)
+      (pins J0-16 U1-21 U1-21@1 J1-16 SWTab1-1 SWRet1-1 SWEsc1-1 SWDel1-1 SWCps1-1)
     )
     (net "Net-(J0-Pad15)"
-      (pins J0-15 U1-17 U1-17@1 J1-13 SWLT1-2 SWGT1-2 SWDel1-2 SWBrk1-2 SW9-2 SW8-2
-        SW7-2 SW0-2)
+      (pins J0-15 U1-20 U1-20@1 J1-15 SWY1-2 SWW1-2 SWTab1-2 SWT1-2 SWR1-2 SWQ1-2
+        SWE1-2)
     )
     (net "Net-(J0-Pad14)"
-      (pins J0-14 U1-16 U1-16@1 J1-12 SWU1-2 SWRet1-2 SWP1-2 SWO1-2 SWI1-2 SWEqual1-2
-        SWDash1-2)
+      (pins J0-14 U1-19 U1-19@1 J1-14 SWEsc1-2 SW6-2 SW5-2 SW4-2 SW3-2 SW2-2 SW1-2)
     )
     (net "Net-(J0-Pad13)"
-      (pins J0-13 U1-15 U1-15@1 J1-11 SWX1-1 SWW1-1 SWSlash1-1 SWS1-1 SWPlus1-1 SWLT1-1
-        SWDash1-1 SW2-1)
+      (pins J0-13 U1-17 U1-17@1 J1-13 SWLT1-2 SWGT1-2 SWDel1-2 SWBrk1-2 SW9-2 SW8-2
+        SW7-2 SW0-2)
     )
     (net "Net-(J0-Pad12)"
-      (pins J0-12 U1-14 U1-14@1 J1-10 SWSemi1-1 SWPeriod1-1 SWP1-1 SWE1-1 SWD1-1 SWC1-1
-        SW3-1 SW0-1)
+      (pins J0-12 U1-16 U1-16@1 J1-12 SWU1-2 SWRet1-2 SWP1-2 SWO1-2 SWI1-2 SWEqual1-2
+        SWDash1-2)
     )
     (net "Net-(J0-Pad11)"
-      (pins J0-11 U1-12 U1-12@1 J1-9 SWV1-1 SWR1-1 SWO1-1 SWL1-1 SWF1-1 SWComma1-1
-        SW9-1 SW4-1)
+      (pins J0-11 U1-15 U1-15@1 J1-11 SWX1-1 SWW1-1 SWSlash1-1 SWS1-1 SWPlus1-1 SWLT1-1
+        SWDash1-1 SW2-1)
     )
     (net "Net-(J0-Pad10)"
-      (pins J0-10 U1-11 U1-11@1 J1-8 SWT1-1 SWM1-1 SWK1-1 SWI1-1 SWG1-1 SWB1-1 SW8-1
-        SW5-1)
+      (pins J0-10 U1-14 U1-14@1 J1-10 SWSemi1-1 SWPeriod1-1 SWP1-1 SWE1-1 SWD1-1 SWC1-1
+        SW3-1 SW0-1)
     )
     (net "Net-(J0-Pad8)"
-      (pins J0-9 J0-8 U1-10 U1-10@1 J1-7 SWCtl1-2 SWStar1-2 SWSemi1-2 SWPlus1-2 SWL1-2
-        SWK1-2 SWJ1-2)
+      (pins J0-8 U1-11 U1-11@1 J1-8 SWT1-1 SWM1-1 SWK1-1 SWI1-1 SWG1-1 SWB1-1 SW8-1
+        SW5-1)
     )
     (net "Net-(J0-Pad6)"
-      (pins J0-7 J0-6 U1-9 U1-9@1 J1-6 SWRightSft1-2 SWLeftSft1-2 SWHlp1-2 SWZ1-2
-        SWX1-2 SWV1-2 SWC1-2 SWB1-2)
+      (pins J0-6 U1-9 U1-9@1 J1-6 SWRightSft1-2 SWLeftSft1-2 SWHlp1-2 SWZ1-2 SWX1-2
+        SWV1-2 SWC1-2 SWB1-2)
     )
     (net "Net-(J0-Pad5)"
       (pins J0-5 U1-7 U1-7@1 J1-5 SWSpc1-2 SWSlash1-2 SWPeriod1-2 SWN1-2 SWM1-2 SWInv1-2
@@ -1424,17 +1445,51 @@
       (pins J0-4 U1-6 U1-6@1 J1-4 SWHlp1-1 SWSpc1-1 SWJ1-1 SWH1-1)
     )
     (net "Net-(J0-Pad1)"
-      (pins J0-1 J1-1)
+      (pins J0-25 J0-1 U1-5 U1-5@1 J2-11 J1-1)
+    )
+    (net "Net-(U1-Pad3)"
+      (pins U1-3 U1-3@1)
+    )
+    (net "Net-(U1-Pad8)"
+      (pins U1-8 U1-8@1)
+    )
+    (net "Net-(U1-Pad13)"
+      (pins U1-13 U1-13@1)
+    )
+    (net "Net-(U1-Pad18)"
+      (pins U1-18 U1-18@1)
+    )
+    (net "Net-(U1-Pad42)"
+      (pins U1-42 U1-42@1)
+    )
+    (net "Net-(R1-Pad1)"
+      (pins R1-1 U1-4 U1-4@1)
+    )
+    (net "Net-(J0-Pad9)"
+      (pins J0-9 U1-12 U1-12@1 J1-9 SWV1-1 SWR1-1 SWO1-1 SWL1-1 SWF1-1 SWComma1-1
+        SW9-1 SW4-1)
+    )
+    (net "Net-(J0-Pad7)"
+      (pins J0-7 U1-10 U1-10@1 J1-7 SWCtl1-2 SWStar1-2 SWSemi1-2 SWPlus1-2 SWL1-2
+        SWK1-2 SWJ1-2)
+    )
+    (net "Net-(U1-Pad23)"
+      (pins U1-23 U1-23@1)
+    )
+    (net "Net-(U1-Pad28)"
+      (pins U1-28 U1-28@1)
     )
     (class kicad_default "" GND "Net-(D1-Pad2)" "Net-(J0-Pad1)" "Net-(J0-Pad10)"
       "Net-(J0-Pad11)" "Net-(J0-Pad12)" "Net-(J0-Pad13)" "Net-(J0-Pad14)"
       "Net-(J0-Pad15)" "Net-(J0-Pad16)" "Net-(J0-Pad17)" "Net-(J0-Pad18)"
       "Net-(J0-Pad19)" "Net-(J0-Pad20)" "Net-(J0-Pad21)" "Net-(J0-Pad22)"
       "Net-(J0-Pad23)" "Net-(J0-Pad24)" "Net-(J0-Pad25)" "Net-(J0-Pad26)"
-      "Net-(J0-Pad4)" "Net-(J0-Pad5)" "Net-(J0-Pad6)" "Net-(J0-Pad8)" "Net-(J2-Pad10)"
-      "Net-(J2-Pad11)" "Net-(J2-Pad12)" "Net-(J2-Pad13)" "Net-(J2-Pad14)"
-      "Net-(J2-Pad2)" "Net-(J2-Pad3)" "Net-(J2-Pad4)" "Net-(J2-Pad5)" "Net-(J2-Pad6)"
-      "Net-(J2-Pad7)" "Net-(J2-Pad8)" "Net-(J2-Pad9)"
+      "Net-(J0-Pad4)" "Net-(J0-Pad5)" "Net-(J0-Pad6)" "Net-(J0-Pad7)" "Net-(J0-Pad8)"
+      "Net-(J0-Pad9)" "Net-(J1-Pad16)" "Net-(J2-Pad10)" "Net-(J2-Pad11)" "Net-(J2-Pad12)"
+      "Net-(J2-Pad13)" "Net-(J2-Pad14)" "Net-(J2-Pad2)" "Net-(J2-Pad3)" "Net-(J2-Pad4)"
+      "Net-(J2-Pad5)" "Net-(J2-Pad6)" "Net-(J2-Pad7)" "Net-(J2-Pad8)" "Net-(J2-Pad9)"
+      "Net-(R1-Pad1)" "Net-(U1-Pad13)" "Net-(U1-Pad18)" "Net-(U1-Pad23)" "Net-(U1-Pad28)"
+      "Net-(U1-Pad3)" "Net-(U1-Pad42)" "Net-(U1-Pad8)"
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
