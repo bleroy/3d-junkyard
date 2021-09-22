@@ -82,6 +82,8 @@ The space bar is more problematic because the metal part that comes with the XE 
 
 The [Atari130MX KiCad project](Atari130MX.pro) should have everything you need to order a 2 layer PCB from any manufacturing house.
 
+![The 130MX main board](Atari130MX_PCB_Front.png)
+
 * Optimal: [130MX main board](Atari130MX.pro)
 
 ### Plate
