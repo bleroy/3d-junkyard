@@ -1,6 +1,6 @@
 # Atari 130MX mechanical keyboard replacement for Atari XE computers
 
-There's been a number of previous projects to put a modern keyboard on Atari 8-bit computers. I don't think anyone's done it while preserving the original keycaps though (would love to be proven wrong). This is exactly what I did, by 3D-printing modified stems for Kailh Box Pink switches that take the Atari XE key footprint instead of the Cherry MX cross. Cheap resin printers can print at an amazing 50 micron resolution, which is enough to print very small parts with very fine details. Switch stems are such parts, and must be printed very precisely to reproduce the touch and feel from the original. It took a lot of tinkering to get there, and trying a lot of different resins (in the end, Elegoo black and translucent red were the most reliable), but the keyboard feels absolutely great. What's more, you can't tell the difference from an aesthetic point of view... Check this out:
+There's been a number of previous projects to put a modern keyboard on Atari 8-bit computers. I don't think anyone's done it while preserving the original keycaps though (would love to be proven wrong). This is exactly what I did, by 3D-printing modified stems for Kailh Box Pink switches that take the Atari XE key footprint instead of the Cherry MX cross. Cheap resin printers can print at an amazing 50 micron resolution, which is enough to print very small parts with very fine details. Switch stems are such parts, and must be printed very precisely to reproduce the touch and feel from the original. It took a lot of tinkering to get there, and trying a lot of different resins, but the keyboard feels absolutely great. What's more, you can't tell the difference from an aesthetic point of view... Check this out:
 
 ![The end result](Reference/Atari130MX.jpg)
 
@@ -14,7 +14,8 @@ The stabilizer metal parts are also preserved, but the one for the space bar has
 
 Here's [a video showing the end result (Rev. B)](https://youtu.be/r8T07Rskkgs):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r8T07Rskkgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Atari 130XE keyboard rebuild](https://img.youtube.com/vi/r8T07Rskkgs/0.jpg)](https://www.youtube.com/watch?v=r8T07Rskkgs)
+
 
 ## Bill of materials
 
@@ -29,7 +30,7 @@ The project is designed around the conservation of the vintage look of Atari XE 
 It is also possible however to build and use this keyboard and use it with an emulator on a PC or Mac. In this way, you can get closer to the original experience even if you don't have access to the original hardware.
 
 * Optimal: Atari XE computer
-* Fine: a PC or mac with [an emulator](https://www.virtualdub.org/altirra.html)
+* Fine: a PC, mac or a MiSTer with [an emulator](https://www.virtualdub.org/altirra.html)
 
 ### Key caps
 
@@ -50,7 +51,7 @@ The starting point for modified switches that work with vintage caps was Kailh b
 
 The stems are the part of the switch that attaches to the cap, and goes up and down with it. This is the part that I had to design a replacement for. The replacement has a different shape of hole on the top in order to accommodate the Atari XE key caps, but the bottom part should be as close as possible to the original. Because the shape of that bottom part varies from switch to switch, I can only guarantee my design will work with Kailh box pinks.
 
-In order to print them, you'll need a resin printer with a resolution of 50 micrometers (1/20th of a millimeter) or better. I use an [Elegoo Mars 2 Pro](https://www.elegoo.com/products/elegoo-mars-2-pro-mono-lcd-3d-printer), which is both excellent and inexpensive. The printing bed si rather small, so you may want to go for something larger, but keep in mind that resin printers involve a lot of cleanup and potential mess, and a larger bed means even more of that. There are alternatives to the Elegoo Mars, of course.
+In order to print them, you'll need a resin printer with a resolution of 50 micrometers (1/20th of a millimeter) or better. I use an [Elegoo Mars 2 Pro](https://www.elegoo.com/products/elegoo-mars-2-pro-mono-lcd-3d-printer), which is both excellent and inexpensive. The printing bed is rather small, so you may want to go for something larger, but keep in mind that resin printers involve a lot of cleanup and potential mess, and a larger bed means even more of that. There are alternatives to the Elegoo Mars, of course.
 
 If you don't own a resin printer, or don't want or can't buy one (a good reason not to adopt one is if you live in an apartment, for example), there is probably a maker space not far from your home or workplace where you can access one.
 
@@ -61,7 +62,7 @@ The choice of resin is very important, as the same design on the same printer ca
 * Optimal:
     * access to a resin printer
     * precision resin
-    * key switch and stabilizer lube
+    * lube for key switches and stabilizers
 * Fine: if you're not using vintage caps, you don't need 3D printed stems
 
 ### Stabilizers
@@ -70,13 +71,13 @@ The Atari XE keyboard has stabilizers on the left SHIFT key and on the space bar
 
 The left shift stabilizer is made with a standard metal bar that fits in standard costar stabilizers, for which the plate is designed. Those stabilizers can be bought for a very reasonable price from many places. You could print your own but I'm not providing design files for them at this time.
 
-The space bar is more problematic because the metal part that comes with the XE keyboard is much thicker than the standard costar stabilizers can accommodate, so we need either alternative metal bars to te right dimensions and the right diameter, or we need to print stabilizers with a larger diameter hole. I went for the printed part, but it should be possible to make the metal part instead. I just haven't tried that, so you're on your own if you want to go that route.
+The space bar is more problematic because the metal part that comes with the XE keyboard is much thicker than the standard costar stabilizers can accommodate, so we need either alternative metal bars to the right dimensions and the right diameter, or we need to print stabilizers with a larger diameter hole. I went for the printed part, but it should be possible to make the metal part instead. I just haven't tried that, so you're on your own if you want to go that route.
 
 * Optimal:
     * original Atari XE stabilizer metal parts
     * access to a resin printer and some resin
     * 2 standard costar stabilizers
-* Fine: if not using vintage caps, I'm not surewhat you;d need for the space bar stabilizer, but 4 standard ones plus a custom space bar metal part may be doable
+* Fine: if not using vintage caps, I'm not sure what you'd need for the space bar stabilizer, but 4 standard ones plus a custom space bar metal part may be doable
 
 ### Main board
 
@@ -102,11 +103,11 @@ I'm currently considering what options would enable using a regular PCB, but tha
 In all cases, you should also add some spacers between the board and the plate, in addition to the switches themselves. There are holes for 5 fasteners around the main board and the plate:
 
 * Optimal:
-    * 5 3.5mm screws less than 3.2mm in diameter
+    * 5 3.5mm long screws
     * 5 3.1mm tall spacers compatible with the screws
     * 5 nuts compatible with the screws
 * Good:
-    * 5 3.5mm screws less than 3.2mm in diameter
+    * 5 3.5mm long screws
     * 20 washers compatible with the screws
     * 5 nuts compatible with the screws
 * Fine:
@@ -119,12 +120,12 @@ The original Atari XE keyboard's connector was just a part of the mylar membrane
 ![The Atari 130MX cable adapter](Atari130MX-adapter/Atari130MX-adapter-front.png)
 
 * Optimal:
-    * 2 [FFC 26 position 1mm connectors](https://www.digikey.com/en/products/detail/molex/0522072660/5170985)
+    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/molex/0522072660/5170985)
     * [FFC 26 position 1mm ribbon cable](https://www.digikey.com/en/products/detail/molex/0152670441/4427307)
     * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro)
     * 1x24 2.54mm pin headers
 * Very good:
-    * 2 [2x12 position connectors](https://www.digikey.com/product-detail/en/adam-tech/BHR-24-VUA/2057-BHR-24-VUA-ND/9832347)
+    * 2 [2x12 position 2.54mm pitch connectors](https://www.digikey.com/product-detail/en/adam-tech/BHR-24-VUA/2057-BHR-24-VUA-ND/9832347)
     * [24 position 2.54mm ribbon cable](https://www.digikey.com/product-detail/en/3m/3365-24-100/3M157996-5-ND/9479206)
     * 2 [2x12 flat cable sockets](https://www.digikey.com/product-detail/en/adam-tech/FCS-24-SG/2057-FCS-24-SG-ND/9832255)
     * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro)
@@ -144,7 +145,7 @@ The original Atari XE keyboard's connector was just a part of the mylar membrane
     * 100 Ohm resitor
     * Micro-USB cable
 
-**NOTE** Do **not** connect the Pi PICO through USB at the same time as the keyboard is connected to an Atari XE motherboard. The board is not designed for those to be used together, and bad things would probably happen if you tried. There is no hardware protections in place.
+**NOTE** Do **not** connect the Pi PICO through USB at the same time as the keyboard is connected to an Atari XE motherboard. The board is not designed for those to be used together, and bad things would probably happen if you tried. There are no hardware protections in place.
 
 ## Fabrication and assembly instruction
 
@@ -176,7 +177,7 @@ Here's some additional general advice about resin printing:
 
 ### Replacing the stems with the printed ones
 
-The Kailh switches can be disassembled easily by carefully inserting a prying tool (avoid anything too sharp, don't injure yourself) between the white bottm part of the switch and the two wings of the top transparent cover.
+The Kailh switches can be disassembled easily by carefully inserting a prying tool (avoid anything too sharp, don't injure yourself) between the white bottom part of the switch and the two wings of the top transparent cover.
 
 You can then slide the stem out of the switch while being careful not to lose the spring and the extremely tiny part that pushes the contact rod out of the way when the switch operates.
 
@@ -198,7 +199,7 @@ Lube the horizontal round holes at the back of the stabilizers, then insert the 
 
 ### Assemble the key caps
 
-This should be pretty easy. Find the right key for each switch and carefully press them into position. Resin can break, so be gentle. We do the cap assembly at this step and not later because if you break a stem, it will be easy to replace without having to desolder the other 62 switches...
+This should be pretty easy. Find the right key for each switch and carefully press them into position. Resin can break, so be gentle. We do the cap assembly at this step and not later because if you break a stem, it will be easy to replace without having to desolder anything...
 
 The left shift and space bar are a little different because of the stabilizers. Before you insert the cap into the stem, align both ends of the stabilizer metal bar into the corresponding holes in the caps, then diagonally align the cap with the stem. Carefully rotate it into place without letting the metal bar drop out of its holes, then press fit.
 
@@ -217,16 +218,16 @@ Another choice is a 2.54mm pitch 24 positions ribbon cable. The connectors for t
 Before we assemble the switches onto the PCB, we need to add any through-hole components while both sides of the PCB are still accessible, but it's also a good time to do any surface mount components as well:
 
 * Solder your chosen connector onto the board. The connectors go on the bottom side, which is the one that *doesn't* have key indicators on the silkscreen.
-* If you're adding a Raspberry Pi PICO, solder it in place. Surface-mount is fine, but if you prefer, you can place it on haders. The Pi PICO also goes on the underside of the board, opposite the key indicators. Solder the 100 Ohm resistor (either side is fine).
+* If you're adding a Raspberry Pi PICO, solder it in place. Surface-mount is fine, but if you prefer, you can place it on headers. The Pi PICO also goes on the underside of the board, opposite the key indicators. Solder the 100 Ohm resistor (either side is fine).
 * Solder the LED. Short leg goes to GND, which is indicated on the silkscreen with a square pad. Bend the LED to be horizontal pointing to the bottom of the board.
 
 ### Soldering the switches
 
 The plate should ensure proper relative alignment of the switches. Turn the whole assembly contact up, then put the main PCB on top of it, key silkscreen on the bottom.
 
-Ensure proper alignment, then solder two diagonally opposed switches for stability. Then solder the rest of the switches.
+Add the spacers or washers, screws and nuts in the 5 holes.
 
-Add the spacers or washers, screws and nuts in the 5 holes to finish assembling the PCB and plate.
+Ensure proper alignment, then solder two diagonally opposed switches for stability. Then solder the rest of the switches.
 
 ### Soldering the adapter
 
