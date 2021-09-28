@@ -69,7 +69,12 @@ const tan = angle => {
     return clampedAngle > quarterCircle ? - absResult : absResult;
 }
 
-/** Maps coordinates to angles
+/** Maps coordinates to angles.
+ * Note that these are usual cartesian coordinates, with an orientation different from map coordinates:
+ * y
+ * ^
+ * |
+ * 0 --> x
  * @param {number} x - The horizontal coordinate.
  * @param {number} y - The vertical coordinate.
  * @returns {number} The angle corresponding to those coordinates. */
@@ -91,6 +96,17 @@ const angleFromCoordinates = (x, y) => {
         y > 0 ? angle : fullCircle - angle :
         y > 0 ? halfCircle - angle : halfCircle + angle;
 };
+
+/** Maps map coordinates to angles.
+ * Note that these are not usual cartesian coordinates, they are map coordinates:
+ * 0 --> y
+ * |
+ * v
+ * x
+ * @param {number} x - The vertical (row) coordinate on the map.
+ * @param {number} y - The horizontal (column) coordinate on the map.
+ * @returns {number} The angle corresponding to those coordinates. */
+ const angleFromMapCoordinates = (x, y) => angleFromCoordinates(y, -x);
 
 /** Find the index of the value in the table that's closest to the provided value.
  * @param {number} val - The value to search for.
@@ -143,5 +159,5 @@ const angleToAlgebraic = angle => angle > halfCircle ? angle - fullCircle : angl
  
 export {
     north, east, south, west, quarterCircle, halfCircle, fullCircle, angleUnitPowerOfTwo,
-    cos, sin, tan, angleFromCoordinates, mod, angleSub, distance, angleToAlgebraic, findIndexOf
+    cos, sin, tan, angleFromCoordinates, angleFromMapCoordinates, mod, angleSub, distance, angleToAlgebraic, findIndexOf
 }

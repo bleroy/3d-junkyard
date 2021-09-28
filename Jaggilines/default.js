@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', e => {
         north, 0, 0, 1);
     const mapEl = document.getElementsByClassName('map')[0];
     const shipImg = document.getElementsByClassName('ship')[0];
-    new OverheadMap(mapEl, shipImg, overheadMapScalePowerOfTwo, map, ship, fractalusColorScale(maxHeight), bitsBetweenTops);
+    const coordContainer = document.getElementsByClassName('coord-container')[0];
+    new OverheadMap(mapEl, shipImg, overheadMapScalePowerOfTwo, map, ship, coordContainer, fractalusColorScale(maxHeight), bitsBetweenTops);
     map.generateMaze(mazeHoleiness);
     const compassEl = document.getElementsByClassName('compass')[0];
     new Compass(compassEl, ship);

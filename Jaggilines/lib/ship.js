@@ -13,6 +13,11 @@ import { mod, cos, sin, fullCircle } from './trigo.js';
  * @param {number} val - The new elevation value at (row, col). */
 
 /** Our ship.
+ * The coordinate system is first coordinate from north to south, and the second from west to east:
+ * 0 --> y
+ * |
+ * v
+ * x
  * @property {number} x - The x coordinate.
  * @property {number} y - The y coordinate.
  * @property {number} z - The z coordinate.
@@ -80,8 +85,8 @@ class Valkyrie {
     move() {
         // TODO: handle mountain collision and top altitude
         this.heading = mod(this.heading + this.roll * this.rollToAngle, fullCircle);
-        this.x = mod(this.x + (this.thrust * cos(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
-        this.y = mod(this.y - (this.thrust * sin(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
+        this.x = mod(this.x - (this.thrust * sin(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
+        this.y = mod(this.y + (this.thrust * cos(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
         this.z = clamp(this.z + (this.thrust * sin(this.pitch) >> this.bitsBetweenTops), 1 << this.coordinateBits);
         this.#moveHandlers.forEach(handler => handler(this));
     }

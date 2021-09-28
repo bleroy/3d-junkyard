@@ -17,6 +17,12 @@ import { mod, north, angleUnitPowerOfTwo } from './trigo.js';
  */
 class Map {
     /** The 2D array of elevations for this map.
+     * First coordinate is the row, from north to south, the second the column, from west to east
+     * 
+     * 0 --> y
+     * |
+     * v
+     * x
      * @type {Array<Array<number>>} */
     #map;
 
@@ -205,9 +211,10 @@ class Map {
      * @param {number} scalePowerOfTwo - The power of two for the distance in pixels between mountain tops on the map.
      * @param {Map} map - The map of the landscape to render.
      * @param {Valkyrie} ship - The ship object.
+     * @param {HTMLElement} coordContainer - The element that contains the coordinate display.
      * @param {ColorScale} colorScale - The color scale to use to render the map.
      * @param {number} bitsBetweenTops - The power of two for the number of distance units between mountain tops. */
-    constructor(canvas, shipImg, scalePowerOfTwo, map, ship, colorScale, bitsBetweenTops) {
+    constructor(canvas, shipImg, scalePowerOfTwo, map, ship, coordContainer, colorScale, bitsBetweenTops) {
         canvas.width = canvas.height = map.size << scalePowerOfTwo;
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
@@ -224,6 +231,7 @@ class Map {
         this.colorScale = colorScale;
         this.bitsBetweenTops = bitsBetweenTops;
         this.#shipEl = shipImg;
+        this.coordContainer = coordContainer;
         this.moveShip();
 
         map.addChangeListener((row, col, val) => {
@@ -238,10 +246,16 @@ class Map {
 
     /** Update the position of the ship on the map. */
     moveShip() {
-        this.#shipEl.style.top = ((this.ship.y << this.scalePowerOfTwo >> this.bitsBetweenTops) - (this.#shipEl.clientHeight >> 1) + (1 << this.scalePowerOfTwo >> 1)) + 'px';
-        this.#shipEl.style.left = ((this.ship.x << this.scalePowerOfTwo >> this.bitsBetweenTops) - (this.#shipEl.clientWidth >> 1) + (1 << this.scalePowerOfTwo >> 1)) + 'px';
+        this.#shipEl.style.top = ((this.ship.x << this.scalePowerOfTwo >> this.bitsBetweenTops) - (this.#shipEl.clientHeight >> 1) + (1 << this.scalePowerOfTwo >> 1)) + 'px';
+        this.#shipEl.style.left = ((this.ship.y << this.scalePowerOfTwo >> this.bitsBetweenTops) - (this.#shipEl.clientWidth >> 1) + (1 << this.scalePowerOfTwo >> 1)) + 'px';
         this.#shipEl.style.transform = `rotate(${(north - this.ship.heading) >> angleUnitPowerOfTwo}deg)`;
-    }
+        if (this.coordContainer) {
+            const xEl = this.coordContainer.getElementsByClassName('coord-x')[0];
+            const yEl = this.coordContainer.getElementsByClassName('coord-y')[0];
+            if (xEl) xEl.innerHTML = (this.ship.x / (1 << this.bitsBetweenTops)).toFixed(2);
+            if (yEl) yEl.innerHTML = (this.ship.y / (1 << this.bitsBetweenTops)).toFixed(2);
+        }
+}
 }
 
 export { Map, OverheadMap }

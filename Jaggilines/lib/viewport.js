@@ -3,7 +3,7 @@
 
 'use strict';
 
-import { distance, angleFromCoordinates, angleToAlgebraic, angleSub } from './trigo.js';
+import { distance, angleFromCoordinates, angleFromMapCoordinates, angleToAlgebraic, angleSub } from './trigo.js';
 import { skyColor, mountainColor, mountainEdgeColor } from './color.js';
 import { seedRnd } from './random.js';
 
@@ -108,7 +108,7 @@ import { seedRnd } from './random.js';
 
     #computeScreenCoordinatesFor(x, y, memo) {
         const dist = distance(this.ship.x, this.ship.y, x << this.bitsBetweenTops, y << this.bitsBetweenTops);
-        const absAngle = angleFromCoordinates((x << this.bitsBetweenTops) - this.ship.x, this.ship.y - (y << this.bitsBetweenTops));
+        const absAngle = angleFromMapCoordinates((x << this.bitsBetweenTops) - this.ship.x, (y << this.bitsBetweenTops) - this.ship.y);
         const azimuth = angleToAlgebraic(angleSub(absAngle, this.ship.heading));
         const screenCol = (this.width >> 1) - (azimuth >> this.screenPixelPerAngleUnitPowerOfTwo);
         const altitude = angleToAlgebraic(angleFromCoordinates(dist, this.map.get(x, y) - this.ship.z));
@@ -168,44 +168,44 @@ import { seedRnd } from './random.js';
         }
     }
 
+    #computeScreenCoordinateAndDrawColumn(memo, xMap, yMap, dist) {
+        this.#computeScreenCoordinatesFor(xMap, yMap, memo);
+        this.#drawMountainColumnFromMemo(memo, xMap, yMap, dist);
+    }
+
     /** Draw a frame. */
     draw() {
         // Clear the canvas first, although this will no longer be necessary once rendering code is complete since the whole screen
         // gets redrawn on every frame.
         this.#context.clearRect(0, 0, this.width << this.scalePowerOfTwo, this.height << this.scalePowerOfTwo);
         this.#topHeights = new Array(this.width).fill(-1);
-        const [xMap, yMap] = [this.ship.x >> this.bitsBetweenTops, this.ship.y >> this.bitsBetweenTops];
+        const [xMap, yMap] = [(this.ship.x >> this.bitsBetweenTops) + 1, this.ship.y >> this.bitsBetweenTops];
         const memo = [];
-        this.#computeScreenCoordinatesFor(xMap, yMap, memo);
-        this.#drawMountainColumnFromMemo(memo, xMap, yMap, 1);
-        for (let dist = 1; dist < this.viewDistance; dist++) {
-            // Compute the screen coordinates for the new summits on the perimeter of the square at this distance.
-            for (let i = -dist; i <= dist; i++) {
-                this.#computeScreenCoordinatesFor(xMap - dist, yMap + i, memo);
-                this.#computeScreenCoordinatesFor(xMap + dist, yMap + i, memo);
-                this.#computeScreenCoordinatesFor(xMap + i, yMap - dist, memo);
-                this.#computeScreenCoordinatesFor(xMap + i, yMap + dist, memo);
+        for (let dist = 0; dist < this.viewDistance; dist++) {
+            // Bootstrap the new square by computing the screen coordinates on the perimeter of the square at this distance.
+            // Also draw these columns.
+            for (let i = -dist; i < dist + 1; i++) {
+                this.#computeScreenCoordinateAndDrawColumn(memo, xMap + dist, yMap + i, dist);
+                this.#computeScreenCoordinateAndDrawColumn(memo, xMap - dist - 1, yMap + i + 1, dist);
+                this.#computeScreenCoordinateAndDrawColumn(memo, xMap - i - 1, yMap - dist, dist);
+                this.#computeScreenCoordinateAndDrawColumn(memo, xMap - i, yMap + dist + 1, dist);
             }
-            // Interpolate between the previous summit square and the new.
-            for (let i = -dist + 1; i < dist; i++) {
-                this.#interpolateFromMemo(memo, xMap - dist + 1, yMap + i, xMap - dist, yMap + i, dist);
-                this.#interpolateFromMemo(memo, xMap + dist - 1, yMap + i, xMap + dist, yMap + i, dist);
-                this.#interpolateFromMemo(memo, xMap + i, yMap - dist + 1, xMap + i, yMap - dist, dist);
-                this.#interpolateFromMemo(memo, xMap + i, yMap + dist - 1, xMap + i, yMap + dist, dist);
+            // Skip connecting with the previous square when there's no such thing
+            if (dist > 0) {
+                // Interpolate between the new summit square and the previous.
+                for (let i = -dist + 1; i < dist + 1; i++) {
+                    this.#interpolateFromMemo(memo, xMap + dist, yMap + i, xMap + dist - 1, yMap + i, dist);
+                    this.#interpolateFromMemo(memo, xMap - dist - 1, yMap + i, xMap - dist, yMap + i, dist);
+                    this.#interpolateFromMemo(memo, xMap - i, yMap - dist + 1, xMap - i, yMap - dist, dist);
+                    this.#interpolateFromMemo(memo, xMap - i, yMap + dist, xMap - i, yMap + dist + 1, dist);
+                }
             }
             // Interpolate between the new summits on the perimeter of the square at this distance.
-            for (let i = -dist; i < dist; i++) {
-                this.#interpolateFromMemo(memo, xMap - dist, yMap + i, xMap - dist, yMap + i + 1, dist);
+            for (let i = -dist; i < dist + 1; i++) {
+                this.#interpolateFromMemo(memo, xMap - dist - 1, yMap + i, xMap - dist - 1, yMap + i + 1, dist);
                 this.#interpolateFromMemo(memo, xMap + dist, yMap + i, xMap + dist, yMap + i + 1, dist);
-                this.#interpolateFromMemo(memo, xMap + i, yMap - dist, xMap + i + 1, yMap - dist, dist);
-                this.#interpolateFromMemo(memo, xMap + i, yMap + dist, xMap + i + 1, yMap + dist, dist);
-            }
-            // Finally, render the new summits.
-            for (let i = -dist; i <= dist; i++) {
-                this.#drawMountainColumnFromMemo(memo, xMap - dist, yMap + i, dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + dist, yMap + i, dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap - dist, dist);
-                this.#drawMountainColumnFromMemo(memo, xMap + i, yMap + dist, dist);
+                this.#interpolateFromMemo(memo, xMap - i - 1, yMap - dist, xMap - i, yMap - dist, dist);
+                this.#interpolateFromMemo(memo, xMap - i - 1, yMap + dist + 1, xMap - i, yMap + dist, dist);
             }
         }
     }

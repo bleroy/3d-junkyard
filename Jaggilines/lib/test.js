@@ -4,6 +4,7 @@
 'use strict';
 
 import { createEl } from './html.js';
+import { halfCircle } from './trigo.js';
 
 /** Creates a function that appends an interpolation graph to the supplied element.
  * @param {HTMLElement} parentEl - The parent element to which the returned function will append the interpolation graph.

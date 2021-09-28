@@ -113,6 +113,14 @@ body {
     width: 16px;
 }
 
+.coord-container {
+    position: absolute;
+    display: inline-block;
+    left: 130px;
+    top: 0;
+    font-family: monospace;
+}
+
 .dirpad {
     position: absolute;
     display: inline-flex;
