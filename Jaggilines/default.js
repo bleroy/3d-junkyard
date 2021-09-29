@@ -66,6 +66,31 @@ document.addEventListener('DOMContentLoaded', e => {
         fractalInterpolation(bitsBetweenTops, maxHeight, displacementAttenuationPower, fractalFlipBit),
         fogShader(viewDistance));
 
+    // Controls
+    let paused = false;
+    const playBtn = document.getElementsByClassName('play-btn')[0];
+    playBtn.addEventListener('click', () => {
+        paused = false;
+    });
+    const pauseBtn = document.getElementsByClassName('pause-btn')[0];
+    pauseBtn.addEventListener('click', () => {
+        paused = true;
+    });
+
+    // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
+    setInterval(gameLoop, tick);
+
+    var rendering = false;
+    function gameLoop() {
+        if (!paused) {
+            frame++;
+            if (rendering) return; // Drop the frame if not done rendering but JS being single-threaded... this is not that useful. Then again, we could offset processing to a worker.
+            rendering = true;
+            ship.move();
+            rendering = false;
+        }
+    }
+
     // Tests
     const testSection = document.getElementById("testSection");
     const testGraph = graphTester(testSection);
@@ -103,16 +128,4 @@ document.addEventListener('DOMContentLoaded', e => {
         testInterpolation(fractalAlgorithm, 512, 256, 0, 0, lowScreenY, lowScreenY, interpolationDisplacement, 'fractal interpolation 0-0');
         testInterpolation(fractalAlgorithm, 512, 256, maxHeight, maxHeight, highScreenY, highScreenY, interpolationDisplacement, 'fractal interpolation max-max');
     });
-
-    // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
-    setInterval(gameLoop, tick);
-
-    var rendering = false;
-    function gameLoop() {
-        frame++;
-        if (rendering) return; // Drop the frame if not done rendering but JS being single-threaded... this is not that useful. Then again, we could offset processing to a worker.
-        rendering = true;
-        ship.move();
-        rendering = false;
-    }
 });

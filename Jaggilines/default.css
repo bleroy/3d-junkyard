@@ -7,6 +7,10 @@ body {
     width: 640px;
 }
 
+button {
+    cursor: pointer;
+}
+
 .viewport-container {
     position: relative;
     height: 336px;
@@ -88,7 +92,7 @@ body {
 
 .dashboard {
     position: relative;
-    height: 140px;
+    height: 170px;
 }
 
 .map-container {
@@ -121,6 +125,13 @@ body {
     font-family: monospace;
 }
 
+.jog-container {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 130px;
+}
+
 .dirpad {
     position: absolute;
     display: inline-flex;
@@ -144,8 +155,6 @@ body {
 }
 
 .dirpad button {
-    border: solid 1px black;
-    cursor: pointer;
     font-size: 40px;
     margin-bottom: 8px;
     min-width: 48px;
