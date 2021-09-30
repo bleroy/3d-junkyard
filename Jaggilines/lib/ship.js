@@ -26,6 +26,7 @@ import { mod, cos, sin, fullCircle } from './trigo.js';
  * @property {number} pitch - The pitch angle of the ship. 0 means horizontal, positive values point up.
  * @property {number} roll - The roll angle of the ship. 0 means horizontal, positive values roll to the left.
  * @property {number} rollToAngle - The number of units of angle the ship's heading turns by on each tick per roll unit of angle.
+ * @property {bool} reverse - Go in reverse.
  * This determines how quickly the ship turns when rolling. */
 class Valkyrie {
     #moveHandlers;
@@ -63,6 +64,7 @@ class Valkyrie {
         this.pitch = pitch;
         this.roll = roll;
         this.rollToAngle = rollToAngle;
+        this.reverse = false;
         this.#moveHandlers = [];
     }
 
@@ -84,10 +86,11 @@ class Valkyrie {
     /** Perform the changes in ship state for the next tick. */
     move() {
         // TODO: handle mountain collision and top altitude
-        this.heading = mod(this.heading + this.roll * this.rollToAngle, fullCircle);
-        this.x = mod(this.x - (this.thrust * sin(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
-        this.y = mod(this.y + (this.thrust * cos(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
-        this.z = clamp(this.z + (this.thrust * sin(this.pitch) >> this.bitsBetweenTops), 1 << this.coordinateBits);
+        const dir = this.reverse ? -1 : 1;
+        this.heading = mod(this.heading + dir * this.roll * this.rollToAngle, fullCircle);
+        this.x = mod(this.x - dir * (this.thrust * sin(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
+        this.y = mod(this.y + dir * (this.thrust * cos(this.heading) * cos(this.pitch) >> this.bitsBetweenTops >> this.bitsBetweenTops), 1 << this.coordinateBits);
+        this.z = clamp(this.z + dir * (this.thrust * sin(this.pitch) >> this.bitsBetweenTops), 1 << this.coordinateBits);
         this.#moveHandlers.forEach(handler => handler(this));
     }
 }

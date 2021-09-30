@@ -71,9 +71,29 @@ document.addEventListener('DOMContentLoaded', e => {
     const playBtn = document.getElementsByClassName('play-btn')[0];
     playBtn.addEventListener('click', () => {
         paused = false;
+        ship.reverse = false;
     });
     const pauseBtn = document.getElementsByClassName('pause-btn')[0];
     pauseBtn.addEventListener('click', () => {
+        paused = true;
+    });
+    const backwardsBtn = document.getElementsByClassName('backwards-btn')[0];
+    backwardsBtn.addEventListener('click', () => {
+        paused = false;
+        ship.reverse = true;
+    });
+    const stepBackBtn = document.getElementsByClassName('step-back-btn')[0];
+    stepBackBtn.addEventListener('click', () => {
+        ship.reverse = true;
+        paused = false;
+        gameLoop();
+        paused = true;
+    });
+    const stepForwardBtn = document.getElementsByClassName('step-forward-btn')[0];
+    stepForwardBtn.addEventListener('click', () => {
+        ship.reverse = false;
+        paused = false;
+        gameLoop();
         paused = true;
     });
 
