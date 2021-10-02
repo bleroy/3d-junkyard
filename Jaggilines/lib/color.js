@@ -3,11 +3,15 @@
 
 'use strict';
 
+import { clamp } from './random.js';
+
 /** A color
  * @typedef {object} Color
  * @property {number} r - The red component of the color.
  * @property {number} g - The green component of the color.
  * @property {number} b - The blue component of the color. */
+
+const minInterpolatedAltitude = -2560;
 
 /** A function that maps an elevation to a color.
  * @callback ColorScale
@@ -17,11 +21,14 @@
 /** A function that returns a Fractalus color scale for the provided maximum height.
  * @param {number} maxHeight - The maximum height.
  * @returns {ColorScale} The color scale. */
-const fractalusColorScale = maxHeight => val => ({
-    r: Math.floor(0x68 + 0x80 * val / maxHeight),
-    g: Math.floor(0x60 + 0x40 * val / maxHeight),
-    b: Math.floor(0 + 0x40 * val / maxHeight)
-});
+const fractalusColorScale = maxHeight => val => {
+    val = clamp(val - minInterpolatedAltitude, maxHeight - minInterpolatedAltitude) / (maxHeight - minInterpolatedAltitude);
+    return {
+        r: Math.floor(0x68 + 0x80 * val),
+        g: Math.floor(0x60 + 0x40 * val),
+        b: Math.floor(0 + 0x40 * val)
+    };
+}
 
 /** The color of the sky. */
 let skyColor = {r: 243, g: 143, b: 101};

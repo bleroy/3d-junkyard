@@ -33,7 +33,8 @@ import { interpolationTester, graphTester, rangeTester, fieldTester } from './li
 let frame = 0;
 
 document.addEventListener('DOMContentLoaded', e => {
-    const map = new Map(mapSize, maxHeight);
+    const interpolation = fractalInterpolation(bitsBetweenTops, maxHeight, displacementAttenuationPower, fractalFlipBit);
+    const map = new Map(mapSize, maxHeight, interpolation);
     const ship = new Valkyrie(
         bitsBetweenTops,
         coordinateBits,
@@ -45,7 +46,16 @@ document.addEventListener('DOMContentLoaded', e => {
     const mapEl = document.getElementsByClassName('map')[0];
     const shipImg = document.getElementsByClassName('ship')[0];
     const coordContainer = document.getElementsByClassName('coord-container')[0];
-    new OverheadMap(mapEl, shipImg, overheadMapScalePowerOfTwo, map, ship, coordContainer, fractalusColorScale(maxHeight), bitsBetweenTops);
+    new OverheadMap(
+        mapEl,
+        shipImg,
+        overheadMapScalePowerOfTwo,
+        map,
+        ship,
+        coordContainer,
+        fractalusColorScale(maxHeight),
+        bitsBetweenTops,
+        interpolation);
     map.generateMaze(mazeHoleiness);
     const compassEl = document.getElementsByClassName('compass')[0];
     new Compass(compassEl, ship);
@@ -63,7 +73,7 @@ document.addEventListener('DOMContentLoaded', e => {
         displacementAttenuationPower,
         map,
         ship,
-        fractalInterpolation(bitsBetweenTops, maxHeight, displacementAttenuationPower, fractalFlipBit),
+        interpolation,
         fogShader(viewDistance));
 
     // Controls

@@ -12,7 +12,11 @@ import { seedRnd } from './random.js';
  * @property {number} width - The width of the viewport in logical pixels.
  * @property {number} height - The height of the viewport in logical pixels.
  * @property {number} verticalOffset - The vertical coordinate of the horizontal direction.
+ * @property {number} viewDistance - the maximum distance for objects to be visible in the viewport.
  * @property {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
+ * @property {number} bitsBetweenTops - The power of two that gives the distance between mountain tops.
+ * @property {number} maxHeight - The maximum height of mountains.
+ * @property {number} displacementAttenuationPower - The power of two attenuation to use in the interpolation algorithm.
  * @property {Map} map - The map of the landscape to render.
  * @property {Valkyrie} ship - The ship object.
  * @property {InterpolationAlgorithm} interpolation - The interpolation algorithm to use to render the mountains.
@@ -21,6 +25,7 @@ import { seedRnd } from './random.js';
  class Viewport {
     #context;
     #topHeights;
+    #debugCache;
 
     /** Build a 3D viewport over the provided canvas element.
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the view.

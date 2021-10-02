@@ -11,7 +11,8 @@
  * @param {number} yScreen2 - The second y screen coordinate.
  * @param {number} screenDisplacement - The current displacement amplitude in screen pixels.
  * @param {number} bisections - The number of bisections that have been performed to get there.
- * @returns {number[]} The interpolated y screen coordinate at the mid-point. */
+ * @returns {number[]} An array containing the interpolated absolute altitude at the mid-point
+ * as the first element and the interpolated y screen coordinate as the second element. */
 
 /** A linear interpolation algorithm.
  * @type {InterpolationAlgorithm} */
