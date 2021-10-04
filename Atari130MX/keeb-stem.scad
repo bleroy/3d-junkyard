@@ -50,9 +50,9 @@ atari_box_height = 4.7;
 atari_square_width = 3.2;
 atari_square_depth = 2.8;
 atari_square_circle_radius = atari_square_width * sqrt(2) / 2;
-atari_circle_inner_diameter = 4.34;
-atari_circle_wing_thickness = 1.47;
-atari_circle_depth = 4.8;
+atari_circle_inner_diameter = 4.3;
+atari_circle_wing_thickness = 1.45;
+atari_circle_depth = 4.0;
 atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
 
@@ -77,7 +77,7 @@ module atarixe_circle() {
   union() {
     cylinder(r = atari_circle_inner_diameter / 2, h = atari_circle_depth + extra_floor);
     translate([0, 0, (atari_circle_depth + extra_floor) / 2])
-      cube([atari_circle_wing_thickness, atari_box_width, atari_circle_depth + extra_floor], center = true);
+      cube([atari_circle_wing_thickness, atari_box_width - 0.2, atari_circle_depth + extra_floor], center = true);
   }
 }
 

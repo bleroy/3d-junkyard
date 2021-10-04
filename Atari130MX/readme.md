@@ -153,7 +153,9 @@ Once you've sourced all the components, it's time to assemble. The following ins
 
 ### Printing the stems
 
-In this repository, you'll find [OpenScad files for the stems](keeb-stem.scad) as well as the [STL files](keeb-stem.stl). If you need to modify anything about the stems, you'd need to regenerate the STL from the OpenScad file. Otherwise, just load the STL in your printer's slicer software and follow the instructions specific to your printer.
+There are two known shapes of key caps, requiring distinct stems. The first type of key cap is double-shot with square stems, while the second are printed and have circular stems.
+
+In this repository, you'll find [OpenScad](keeb-stem.scad) and [STL](keeb-stem.stl) files for [both types](keeb-stem-circle.stl) of stems. If you need to modify anything about the stems, you'd need to regenerate the STL from the OpenScad file. There is [a single OpenScad file](keeb-stem.scad) that covers both types of stems through configuration. Otherwise, just load the STL in your printer's slicer software and follow the instructions specific to your printer.
 
 Depending on the size of your printer bed, given the size of the part, you should be able to print in batches. You'll need 63 stems total for the whole keyboard. I still recommend you experiment with a single part first to verify your printer and choice of resin are appropriate. Even when you've ensured that, chances are any batch will have bad parts so quality control is important. Don't hesitate to reject any part that seems defective, as only perfectly printed parts will operate smoothly.
 
