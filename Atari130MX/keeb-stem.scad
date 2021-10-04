@@ -2,13 +2,13 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari130XE"; // [KailhBox, Atari130XE]
+cap_type = "Atari XE ■"; // [KailhBox, Atari XE ■, Atari XE ◎]
 
 // Stem type
 stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
 // Revision
-rev = "9";
+rev = "10";
 
 // Carve revision
 carve_rev = false;
@@ -24,6 +24,7 @@ box_cross_y_thickness = 1.1;
 box_cross_width = 4;
 box_bottom_thickness = 0.7;
 box_bottom_outer_offset = 0.02;
+extra_floor = 1;
 
 module kailh_box() {
   union() {
@@ -48,24 +49,35 @@ atari_box_width = 6.40;
 atari_box_height = 4.7;
 atari_square_width = 3.2;
 atari_square_depth = 2.8;
+atari_square_circle_radius = atari_square_width * sqrt(2) / 2;
+atari_circle_inner_diameter = 4.34;
+atari_circle_wing_thickness = 1.47;
+atari_circle_depth = 4.8;
 atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
-atari_circle_radius = atari_square_width * sqrt(2) / 2;
 
-module atari130xe_box() {
+module atarixe_square() {
   union() {
     difference() {
       cube([atari_box_width, atari_box_width, atari_box_height], center = true);
       cube([atari_square_width, atari_square_width, atari_box_height + 0.1], center = true);
       translate([0, 0, (atari_square_depth - 1) / 2])
-        cylinder(r = atari_circle_radius, h = atari_box_height - atari_square_depth + 0.1);
+        cylinder(r = atari_square_circle_radius, h = atari_box_height - atari_square_depth + 0.1);
       // Add a recess at the bottom so if resin residues cling in the angles, they do so without preventing the cap from going in completely.
       rotate([0, 0, 45])
         translate([0, 0, 1 - atari_square_depth])
-          cylinder(h = 1, d1 = atari_circle_radius * 2 + 1, d2 = atari_circle_radius * 2, $fn = 4);
+          cylinder(h = 1, d1 = atari_square_circle_radius * 2 + 1, d2 = atari_square_circle_radius * 2, $fn = 4);
     }
     translate([0, 0, (atari_box_bottom_thickness - atari_box_height) / 2])
       cube([atari_box_width, atari_box_width, atari_box_bottom_thickness], center = true);
+  }
+}
+
+module atarixe_circle() {
+  union() {
+    cylinder(r = atari_circle_inner_diameter / 2, h = atari_circle_depth + extra_floor);
+    translate([0, 0, (atari_circle_depth + extra_floor) / 2])
+      cube([atari_circle_wing_thickness, atari_box_width, atari_circle_depth + extra_floor], center = true);
   }
 }
 
@@ -153,16 +165,17 @@ module kailh_stem() {
         }
         translate([0, kailh_stem_spring_column_offset, 0])
           union() {
-            cylinder(r = kailh_stem_main_hole_diameter / 2, h = kailh_stem_height + 1, center = true);
+            translate([0, 0, -extra_floor/2 - 0.5])
+              cylinder(r = kailh_stem_main_hole_diameter / 2, h = kailh_stem_height - extra_floor + 1, center = true);
             hull() {
-              translate([kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_width / 2, -kailh_stem_main_hole_corner_radius, 0])
-                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height + 1, center = true);
-              translate([kailh_stem_main_hole_width / 2 - kailh_stem_main_hole_corner_radius, -kailh_stem_main_hole_corner_radius, 0])
-                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height + 1, center = true);
-              translate([kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_width / 2, kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_depth, 0])
-                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height + 1, center = true);
-              translate([kailh_stem_main_hole_width / 2 - kailh_stem_main_hole_corner_radius, kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_depth, 0])
-                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height + 1, center = true);
+              translate([kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_width / 2, -kailh_stem_main_hole_corner_radius, -extra_floor])
+                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height - extra_floor + 1, center = true);
+              translate([kailh_stem_main_hole_width / 2 - kailh_stem_main_hole_corner_radius, -kailh_stem_main_hole_corner_radius, -extra_floor])
+                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height - extra_floor + 1, center = true);
+              translate([kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_width / 2, kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_depth, -extra_floor])
+                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height - extra_floor + 1, center = true);
+              translate([kailh_stem_main_hole_width / 2 - kailh_stem_main_hole_corner_radius, kailh_stem_main_hole_corner_radius - kailh_stem_main_hole_depth, -extra_floor])
+                cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height - extra_floor + 1, center = true);
             }
           }
         // Revision number
@@ -212,9 +225,13 @@ union() {
     translate([0, 0, box_height / 2])
       kailh_box();
   }
-  if (cap_type == "Atari130XE") {
+  if (cap_type == "Atari XE ■") {
     translate([0, 0, atari_box_height / 2])
-      atari130xe_box();
+      atarixe_square();
+  }
+  if (cap_type == "Atari XE ◎") {
+    extra_floor = 1;
+    atarixe_circle();
   }
   if (stem_type == "KailhBoxPink") {
     translate([0, kailh_stem_horizontal_offset, -kailh_stem_height / 2])
