@@ -57,7 +57,7 @@ If you don't own a resin printer, or don't want or can't buy one (a good reason 
 
 I'd stay away from online printing services, they are very expensive and are not used to that kind of batch of small parts.
 
-The choice of resin is very important, as the same design on the same printer can give wildly varying qualities of print. For instance, I stay away from all grey Elegoo resins, as I found them to blur the design and be very unreliable. The resins I've had the best results with are Elegoo's [clear red](https://www.elegoo.com/collections/resin/products/elegoo-standard-resin?variant=32365787807792) and [black](https://www.elegoo.com/collections/resin/products/elegoo-standard-resin?variant=32365787938864).
+The choice of resin is very important, as the same design on the same printer can give wildly varying qualities of print. For instance, I stay away from all grey Elegoo resins, as I found them to blur the design and be very unreliable. The resin I've had the best results with is Elegoo's [clear red](https://www.elegoo.com/collections/resin/products/elegoo-standard-resin?variant=32365787807792).
 
 * Optimal:
     * access to a resin printer
@@ -67,7 +67,7 @@ The choice of resin is very important, as the same design on the same printer ca
 
 ### Stabilizers
 
-The Atari XE keyboard has stabilizers on the left SHIFT key and on the space bar.
+The Atari XE keyboard has stabilizers on the left SHIFT key and on the space bar. Some versions also have stabilizers on control and right shift, but those are both 1.75 units wide and can work well without stabilizers. 
 
 The left shift stabilizer is made with a standard metal bar that fits in standard costar stabilizers, for which the plate is designed. Those stabilizers can be bought for a very reasonable price from many places. You could print your own but I'm not providing design files for them at this time.
 
@@ -93,11 +93,14 @@ While it is possible to build and operate a keyboard without a plate, it will no
 
 ![My 1.5mm laser-cut steel plate](Reference/steel-plate.jpg)
 
-I'm currently considering what options would enable using a regular PCB, but that's not yet ready.
+Note that the SVG design currently only accommodates the square version of XE keyboards, not the circular one, so check your key caps before you order an expensive plate.
+
+I've also designed a [PCB version](Atari130MXPlate/Atari130MXPlate.pro) that can be made in 1.6mm aluminum for a much more reasonable price. That version can accommodate both known versions of XE keyboards.
+
+![The aluminum PCB version of the plate all assembled](Reference/Atari130MX-aluminum.JPG)
 
 * Optimal: laser-cut 1.5mm steel plate (cost me ~$75 with tax & shipping)
-* Very good: laser-cut 1.6mm aluminum plate
-* Fine, maybe: PCB?
+* Very good: 1.6mm aluminum PCB. Aluminum PCBs can be made for similar prices as regular PCBs nowadays, and that constitutes the best price / performance compromise currently available.
 * Not fine: laser-cut acrylic. Really, don't even try, it'll shatter. Some other laser-cut plastics may be OK, but I can't help you with that, I don't know.
 
 In all cases, you should also add some spacers between the board and the plate, in addition to the switches themselves. There are holes for 5 fasteners around the main board and the plate:
@@ -119,16 +122,20 @@ The original Atari XE keyboard's connector was just a part of the mylar membrane
 
 ![The Atari 130MX cable adapter](Atari130MX-adapter/Atari130MX-adapter-front.png)
 
+Note that the clearance between the Atari XE motherboard and the bottom of the keyboard is very small at about 16mm. Depending on the layout of your motherboard, the adapter may or may not fit. FFC connectors are much lower profile than IDC connectors, so they are the preferred connection, but they are surface-mounted.
+
+The adapter can in theory fit into the original Atari motheboard's keyboard connector if made in 0.6-0.8mm. I prefer to replace that connector with pin headers that offer more flexibility.
+
 * Optimal:
     * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/molex/0522072660/5170985)
     * [FFC 26 position 1mm ribbon cable](https://www.digikey.com/en/products/detail/molex/0152670441/4427307)
-    * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro)
+    * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro) fabricated in 0.6-0.8mm thickness
     * 1x24 2.54mm pin headers
 * Very good:
-    * 2 [2x12 position 2.54mm pitch connectors](https://www.digikey.com/product-detail/en/adam-tech/BHR-24-VUA/2057-BHR-24-VUA-ND/9832347)
+    * 2 [IDC 2x12 position 2.54mm pitch connectors](https://www.digikey.com/product-detail/en/adam-tech/BHR-24-VUA/2057-BHR-24-VUA-ND/9832347)
     * [24 position 2.54mm ribbon cable](https://www.digikey.com/product-detail/en/3m/3365-24-100/3M157996-5-ND/9479206)
     * 2 [2x12 flat cable sockets](https://www.digikey.com/product-detail/en/adam-tech/FCS-24-SG/2057-FCS-24-SG-ND/9832255)
-    * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro)
+    * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro) fabricated in 0.6-0.8mm thickness
     * 1x24 2.54mm pin headers
 * Fine:
     * 1x24 right-angle 2.54mm pin headers
@@ -221,6 +228,7 @@ Before we assemble the switches onto the PCB, we need to add any through-hole co
 
 * Solder your chosen connector onto the board. The connectors go on the bottom side, which is the one that *doesn't* have key indicators on the silkscreen.
 * If you're adding a Raspberry Pi PICO, solder it in place. Surface-mount is fine, but if you prefer, you can place it on headers. The Pi PICO also goes on the underside of the board, opposite the key indicators. Solder the 100 Ohm resistor (either side is fine).
+  ![Raspberry Pi Pico mounted under the keyboard](Reference/Atari130MX-pi.JPG)
 * Solder the LED. Short leg goes to GND, which is indicated on the silkscreen with a square pad. Bend the LED to be horizontal pointing to the bottom of the board.
 
 ### Soldering the switches
