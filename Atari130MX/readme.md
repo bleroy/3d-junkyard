@@ -99,6 +99,8 @@ I've also designed a [PCB version](Atari130MXPlate/Atari130MXPlate.pro) that can
 
 ![The aluminum PCB version of the plate all assembled](Reference/Atari130MX-aluminum.JPG)
 
+In terms of weight, the keyboard assembled with a steel plate is about 575g, and with aluminum that falls down to 430g.
+
 * Optimal: laser-cut 1.5mm steel plate (cost me ~$75 with tax & shipping)
 * Very good: 1.6mm aluminum PCB. Aluminum PCBs can be made for similar prices as regular PCBs nowadays, and that constitutes the best price / performance compromise currently available.
 * Not fine: laser-cut acrylic. Really, don't even try, it'll shatter. Some other laser-cut plastics may be OK, but I can't help you with that, I don't know.
