@@ -227,7 +227,7 @@ Another choice is a 2.54mm pitch 24 positions ribbon cable. The connectors for t
 Before we assemble the switches onto the PCB, we need to add any through-hole components while both sides of the PCB are still accessible, but it's also a good time to do any surface mount components as well:
 
 * Solder your chosen connector onto the board. The connectors go on the bottom side, which is the one that *doesn't* have key indicators on the silkscreen.
-* If you're adding a Raspberry Pi PICO, solder it in place. Surface-mount is fine, but if you prefer, you can place it on headers. The Pi PICO also goes on the underside of the board, opposite the key indicators. Solder the 100 Ohm resistor (either side is fine).
+* If you're adding a Raspberry Pi PICO, solder it in place. Surface-mount is fine in theory, but good luck with the USB connection if you do that. Place it on headers instead. I've used female headers on the board side and male headers on the Pi, and this way the Pi is easily removeable. The Pi PICO also goes on the underside of the board, opposite the key indicators. Solder the 100 Ohm resistor (either side is fine).
   ![Raspberry Pi Pico mounted under the keyboard](Reference/Atari130MX-pi.JPG)
 * Solder the LED. Short leg goes to GND, which is indicated on the silkscreen with a square pad. Bend the LED to be horizontal pointing to the bottom of the board.
 
