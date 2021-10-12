@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Atari 130XE Mechanical Keyboard"
-Date "2021-09-14"
-Rev "C"
+Title "Atari XE Mechanical Keyboard"
+Date "2021-10-11"
+Rev "D"
 Comp "Decent Consulting"
 Comment1 ""
 Comment2 ""
@@ -725,7 +725,7 @@ Wire Wire Line
 	4750 4900 5400 4900
 Connection ~ 4750 4900
 Wire Wire Line
-	5400 4900 6700 4900
+	5400 4900 6050 4900
 Connection ~ 5400 4900
 $Comp
 L Switch:SW_Push_45deg SWRightSft1
@@ -758,7 +758,7 @@ Wire Wire Line
 	4750 3250 5400 3250
 Connection ~ 4750 3250
 Wire Wire Line
-	5400 3250 6700 3250
+	5400 3250 6050 3250
 Connection ~ 5400 3250
 Wire Wire Line
 	2600 4700 2600 4150
@@ -912,7 +912,7 @@ Wire Wire Line
 	5850 2500 5850 1950
 Connection ~ 5850 3600
 Wire Wire Line
-	5850 3600 5850 2500
+	5850 3600 5850 3050
 Wire Wire Line
 	5850 3600 5850 4000
 Connection ~ 5200 1400
@@ -999,7 +999,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 2500 2600 2250
 Wire Wire Line
-	1300 4150 1300 2500
+	1300 4150 1300 3050
 Wire Wire Line
 	6500 4700 6500 4100
 $Comp
@@ -1378,7 +1378,7 @@ Wire Wire Line
 	5100 6700 4650 6700
 Connection ~ 4650 6700
 Wire Wire Line
-	1300 4150 1300 5150
+	1300 4150 1300 4700
 Wire Wire Line
 	10000 2800 10000 5600
 Wire Wire Line
@@ -1431,7 +1431,7 @@ Connection ~ 2250 6300
 Wire Wire Line
 	1250 6400 1250 4900
 Wire Wire Line
-	1250 4900 2150 4900
+	1250 4900 1500 4900
 Connection ~ 1250 6400
 Connection ~ 2150 4900
 Wire Wire Line
@@ -1459,7 +1459,7 @@ Connection ~ 6100 6500
 Wire Wire Line
 	6100 6500 6100 6700
 Wire Wire Line
-	5850 4000 5850 7050
+	5850 4000 5850 4700
 Wire Wire Line
 	6500 4700 6500 7150
 Wire Wire Line
@@ -1630,4 +1630,74 @@ Wire Wire Line
 	6800 950  7800 950 
 Connection ~ 4750 6600
 Connection ~ 7800 950 
+$Comp
+L Switch:SW_Push_45deg SWFn2
+U 1 1 6166FD56
+P 5950 3150
+F 0 "SWFn2" H 5950 3431 50  0000 C CNN
+F 1 "SW_Push_45deg" H 5950 3340 50  0000 C CNN
+F 2 "Atari130MX:SW_Kailh_1.50u_Atari_Fn_PCB" H 5950 3150 50  0001 C CNN
+F 3 "~" H 5950 3150 50  0001 C CNN
+	1    5950 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 3050
+Wire Wire Line
+	5850 3050 5850 2500
+Connection ~ 6050 3250
+Wire Wire Line
+	6050 3250 6700 3250
+$Comp
+L Switch:SW_Push_45deg SWFn4
+U 1 1 616701C3
+P 5950 4800
+F 0 "SWFn4" H 5950 5081 50  0000 C CNN
+F 1 "SW_Push_45deg" H 5950 4990 50  0000 C CNN
+F 2 "Atari130MX:SW_Kailh_1.50u_Atari_Fn_PCB" H 5950 4800 50  0001 C CNN
+F 3 "~" H 5950 4800 50  0001 C CNN
+	1    5950 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 4700
+Wire Wire Line
+	5850 4700 5850 7050
+Connection ~ 6050 4900
+Wire Wire Line
+	6050 4900 6700 4900
+$Comp
+L Switch:SW_Push_45deg SWFn3
+U 1 1 616708EC
+P 1400 4800
+F 0 "SWFn3" H 1400 5081 50  0000 C CNN
+F 1 "SW_Push_45deg" H 1400 4990 50  0000 C CNN
+F 2 "Atari130MX:SW_Kailh_1.50u_Atari_Fn_PCB" H 1400 4800 50  0001 C CNN
+F 3 "~" H 1400 4800 50  0001 C CNN
+	1    1400 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 1300 4700
+Wire Wire Line
+	1300 4700 1300 5150
+Connection ~ 1500 4900
+Wire Wire Line
+	1500 4900 2150 4900
+$Comp
+L Switch:SW_Push_45deg SWFn1
+U 1 1 61671278
+P 1400 3150
+F 0 "SWFn1" H 1400 3431 50  0000 C CNN
+F 1 "SW_Push_45deg" H 1400 3340 50  0000 C CNN
+F 2 "Atari130MX:SW_Kailh_1.50u_Atari_Fn_PCB" H 1400 3150 50  0001 C CNN
+F 3 "~" H 1400 3150 50  0001 C CNN
+	1    1400 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1300 3050
+Wire Wire Line
+	1300 3050 1300 2500
+Wire Wire Line
+	1500 3250 2150 3250
+Connection ~ 2150 3250
+Wire Wire Line
+	2150 3250 2250 3250
 $EndSCHEMATC
