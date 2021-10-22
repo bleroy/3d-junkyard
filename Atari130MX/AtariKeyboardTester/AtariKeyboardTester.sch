@@ -2653,8 +2653,8 @@ Wire Notes Line
 	9100 10700 600  10700
 Wire Notes Line
 	600  7650 9100 7650
-Text Notes 7100 10800 0    50   ~ 0
-Key matrix column to LED matrix column couplings
+Text Notes 8400 10650 0    50   ~ 0
+Column switching
 $Comp
 L Device:LED D_LED_1
 U 1 1 61696432
@@ -3171,8 +3171,8 @@ Wire Notes Line
 Text GLabel 3500 7200 3    50   Input ~ 0
 COL_14
 NoConn ~ 3250 7200
-Text Notes 9100 13300 2    50   ~ 0
-Row and column LEDs
+Text Notes 9050 13150 2    50   ~ 0
+Row switching
 Wire Wire Line
 	10000 13450 10000 13550
 Connection ~ 10000 13450
@@ -4421,8 +4421,8 @@ F 3 "~" H 10250 5300 50  0001 C CNN
 $EndComp
 Text GLabel 9650 5400 0    50   BiDi ~ 0
 CONN_1
-Text Notes 9350 13900 0    50   ~ 0
-Key matrix row to LED matrix row couplings
+Text Notes 9950 13750 0    50   ~ 0
+Connector pin activity LEDs
 Wire Notes Line
 	9200 13800 9200 5150
 Wire Notes Line
