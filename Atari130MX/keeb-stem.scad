@@ -2,13 +2,13 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari XE ■"; // [KailhBox, Atari XE ■, Atari XE ◎]
+cap_type = "Atari XE ◎"; // [KailhBox, Atari XE ■, Atari XE ◎]
 
 // Stem type
 stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
 // Revision
-rev = "10";
+rev = "11";
 
 // Carve revision
 carve_rev = false;
@@ -50,8 +50,8 @@ atari_box_height = 4.7;
 atari_square_width = 3.2;
 atari_square_depth = 2.8;
 atari_square_circle_radius = atari_square_width * sqrt(2) / 2;
-atari_circle_inner_diameter = 4.3;
-atari_circle_wing_thickness = 1.45;
+atari_circle_inner_diameter = 4.25;
+atari_circle_wing_thickness = 1.40;
 atari_circle_depth = 4.0;
 atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
@@ -83,7 +83,7 @@ module atarixe_circle() {
 
 kailh_stem_horizontal_offset = 0.47;
 kailh_stem_spring_column_height = 6.3;
-kailh_stem_spring_column_bottom_diameter = 1.45;
+kailh_stem_spring_column_bottom_diameter = 1.40;
 kailh_stem_spring_column_upper_diameter = 1;
 kailh_stem_spring_column_top_height = 0.3;
 kailh_stem_spring_column_cone_height = 1.5;
@@ -100,6 +100,7 @@ kailh_stem_main_hole_depth = 2;
 kailh_stem_main_hole_corner_radius = 0.5;
 kailh_stem_rail_thickness = 0.6;
 kailh_stem_rail_width = 0.35;
+kailh_stem_rail3_width = 4.70;
 kailh_stem_left_rail1_x = 0.8;
 kailh_stem_left_rail2_x = 3.2;
 kailh_stem_left_rail3_y = 2.9;
@@ -122,13 +123,13 @@ kailh_breaker_bottom = -0.4;
 
 kailh_stem_height = kailh_stem_spring_column_height;
 
-module kailh_rails(rail1_x, rail2_x, rail3_y, rail_width, rail_thickness) {
+module kailh_rails(rail1_x, rail2_x, rail3_y, rail_width, rail_thickness, rail3_width) {
   translate([0, rail1_x, (kailh_stem_spring_column_height - kailh_stem_main_height) / 2])
     cube([rail_thickness, rail_width, kailh_stem_main_height], center = true);
   translate([0, rail2_x, (kailh_stem_spring_column_height - kailh_stem_main_height) / 2])
     cube([rail_thickness, rail_width, kailh_stem_main_height], center = true);
-  translate([0, (rail2_x + rail1_x) / 2, rail3_y])
-    cube([rail_thickness, rail2_x - rail1_x - rail_width, rail_width], center = true);
+  translate([0, (rail2_x + rail1_x) / 2, rail3_y - rail3_width / 2])
+    cube([rail_thickness, rail2_x - rail1_x - rail_width, rail3_width], center = true);
 }
 
 module kailh_stem() {
@@ -200,9 +201,9 @@ module kailh_stem() {
           ], convexity = 4);
     // Rails
     translate([-(kailh_stem_main_width + kailh_stem_rail_thickness) / 2, -kailh_stem_main_width / 2, 0])
-      kailh_rails(kailh_stem_left_rail1_x, kailh_stem_left_rail2_x, kailh_stem_left_rail3_y, kailh_stem_rail_width, kailh_stem_rail_thickness);
+      kailh_rails(kailh_stem_left_rail1_x, kailh_stem_left_rail2_x, kailh_stem_left_rail3_y, kailh_stem_rail_width, kailh_stem_rail_thickness, kailh_stem_rail3_width);
     translate([(kailh_stem_main_width + kailh_stem_rail_thickness) / 2, -kailh_stem_main_width / 2, 0])
-      kailh_rails(kailh_stem_right_rail1_x, kailh_stem_right_rail2_x, kailh_stem_right_rail3_y, kailh_stem_rail_width, kailh_stem_rail_thickness);
+      kailh_rails(kailh_stem_right_rail1_x, kailh_stem_right_rail2_x, kailh_stem_right_rail3_y, kailh_stem_rail_width, kailh_stem_rail_thickness, kailh_stem_rail3_width);
     // Clicker
     kailh_clicker_height = kailh_clicker_flat_length + kailh_clicker_gentle_slope_length + kailh_clicker_top_length + kailh_clicker_steep_slope_length;
     translate([kailh_stem_main_width / 2, -box_width / 2, kailh_stem_height / 2])
