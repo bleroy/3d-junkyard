@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title "Atari XEMX keyboard adapter"
 Date "2021-09-19"
 Rev "A"
@@ -461,10 +461,10 @@ Connection ~ 1600 1900
 Wire Wire Line
 	1600 1900 3400 1900
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0102
 U 1 1 61C049A4
 P 2000 1800
-F 0 "#PWR?" H 2000 1650 50  0001 C CNN
+F 0 "#PWR0102" H 2000 1650 50  0001 C CNN
 F 1 "+5V" H 2015 1973 50  0000 C CNN
 F 2 "" H 2000 1800 50  0001 C CNN
 F 3 "" H 2000 1800 50  0001 C CNN
@@ -474,4 +474,293 @@ $EndComp
 Connection ~ 2000 1800
 Wire Wire Line
 	2000 1800 3600 1800
+$Sheet
+S 5150 550  5850 2700
+U 617E17B5
+F0 "FFC" 50
+F1 "Atari130MX-adapter-FFC.sch" 50
+$EndSheet
+$Sheet
+S 5150 3500 5850 2800
+U 617E1947
+F0 "IDC" 50
+F1 "Atari130MX-adapter-IDC.sch" 50
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x24 J4
+U 1 1 617E1ACA
+P 6500 5700
+F 0 "J4" H 6580 5692 50  0000 L CNN
+F 1 "Conn_01x24" H 6580 5601 50  0000 L CNN
+F 2 "Atari130MX:1x24_P1.27mm_Edge_Back" H 6500 5700 50  0001 C CNN
+F 3 "~" H 6500 5700 50  0001 C CNN
+	1    6500 5700
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x12_Odd_Even J6
+U 1 1 617E32C8
+P 9300 4650
+F 0 "J6" V 9304 3962 50  0000 R CNN
+F 1 "Conn_02x12_Odd_Even" V 9395 3962 50  0000 R CNN
+F 2 "Connector_IDC:IDC-Header_2x12_P2.54mm_Vertical" H 9300 4650 50  0001 C CNN
+F 3 "~" H 9300 4650 50  0001 C CNN
+	1    9300 4650
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7700 5500 9900 5500
+Wire Wire Line
+	9900 5500 9900 4950
+Wire Wire Line
+	7600 5500 7600 4400
+Wire Wire Line
+	7600 4400 9900 4400
+Wire Wire Line
+	9900 4400 9900 4450
+Wire Wire Line
+	7500 5500 7500 5450
+Wire Wire Line
+	7500 5450 9800 5450
+Wire Wire Line
+	9800 5450 9800 4950
+Wire Wire Line
+	7400 5500 7400 4350
+Wire Wire Line
+	7400 4350 9800 4350
+Wire Wire Line
+	9800 4350 9800 4450
+Wire Wire Line
+	7300 5500 7300 5400
+Wire Wire Line
+	7300 5400 9700 5400
+Wire Wire Line
+	9700 5400 9700 4950
+Wire Wire Line
+	7200 5500 7200 4300
+Wire Wire Line
+	7200 4300 9700 4300
+Wire Wire Line
+	9700 4300 9700 4450
+Wire Wire Line
+	7100 5500 7100 5350
+Wire Wire Line
+	7100 5350 9600 5350
+Wire Wire Line
+	9600 5350 9600 4950
+Wire Wire Line
+	7000 5500 7000 4250
+Wire Wire Line
+	7000 4250 9600 4250
+Wire Wire Line
+	9600 4250 9600 4450
+Wire Wire Line
+	6900 5500 6900 5300
+Wire Wire Line
+	6900 5300 9500 5300
+Wire Wire Line
+	9500 5300 9500 4950
+Wire Wire Line
+	6800 5500 6800 4200
+Wire Wire Line
+	6800 4200 9500 4200
+Wire Wire Line
+	9500 4200 9500 4450
+Wire Wire Line
+	6700 5500 6700 5250
+Wire Wire Line
+	6700 5250 9400 5250
+Wire Wire Line
+	9400 5250 9400 4950
+Wire Wire Line
+	6600 4150 9400 4150
+Wire Wire Line
+	9400 4150 9400 4450
+Wire Wire Line
+	6500 5500 6500 5200
+Wire Wire Line
+	6500 5200 9300 5200
+Wire Wire Line
+	9300 5200 9300 4950
+Wire Wire Line
+	6400 5500 6400 4100
+Wire Wire Line
+	6400 4100 9300 4100
+Wire Wire Line
+	9300 4100 9300 4450
+Wire Wire Line
+	6600 5500 6600 4150
+Wire Wire Line
+	6300 5500 6300 5150
+Wire Wire Line
+	6300 5150 9200 5150
+Wire Wire Line
+	9200 5150 9200 4950
+Wire Wire Line
+	6200 5500 6200 4050
+Wire Wire Line
+	6200 4050 9200 4050
+Wire Wire Line
+	9200 4050 9200 4450
+Wire Wire Line
+	6100 5500 6100 5100
+Wire Wire Line
+	6100 5100 9100 5100
+Wire Wire Line
+	9100 5100 9100 4950
+Wire Wire Line
+	6000 5500 6000 4000
+Wire Wire Line
+	6000 4000 9100 4000
+Wire Wire Line
+	9100 4000 9100 4450
+Wire Wire Line
+	5900 5500 5900 5050
+Wire Wire Line
+	5900 5050 9000 5050
+Wire Wire Line
+	9000 5050 9000 4950
+Wire Wire Line
+	5800 5500 5800 4450
+Wire Wire Line
+	5800 3950 9000 3950
+Wire Wire Line
+	9000 3950 9000 4450
+Wire Wire Line
+	5700 5500 5700 5000
+Wire Wire Line
+	5700 5000 8900 5000
+Wire Wire Line
+	8900 5000 8900 4950
+Wire Wire Line
+	5600 5500 5600 4450
+Wire Wire Line
+	5600 3900 8900 3900
+Wire Wire Line
+	8900 3900 8900 4450
+Wire Wire Line
+	5500 5500 5500 4950
+Wire Wire Line
+	5500 4950 8800 4950
+Wire Wire Line
+	5400 5500 5400 3850
+Wire Wire Line
+	5400 3850 8800 3850
+Wire Wire Line
+	8800 3850 8800 4450
+$Comp
+L Connector_Generic:Conn_01x24 J1
+U 1 1 61939095
+P 6500 2600
+F 0 "J1" H 6580 2592 50  0000 L CNN
+F 1 "Conn_01x24" H 6580 2501 50  0000 L CNN
+F 2 "Atari130MX:1x24_P1.27mm_Edge_Back" H 6500 2600 50  0001 C CNN
+F 3 "~" H 6500 2600 50  0001 C CNN
+	1    6500 2600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x26 J5
+U 1 1 6193B24C
+P 6600 1200
+F 0 "J5" H 6680 1192 50  0000 L CNN
+F 1 "Conn_01x26" H 6680 1101 50  0000 L CNN
+F 2 "Connector_FFC-FPC:Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal" H 6600 1200 50  0001 C CNN
+F 3 "~" H 6600 1200 50  0001 C CNN
+	1    6600 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5400 2400 5400 1450
+Wire Wire Line
+	5500 1400 5500 2400
+Wire Wire Line
+	5600 2400 5600 1900
+Wire Wire Line
+	5700 1400 5700 2400
+Wire Wire Line
+	5800 2400 5800 1400
+Wire Wire Line
+	5900 2400 5900 1400
+Wire Wire Line
+	6000 2400 6000 1400
+Wire Wire Line
+	6100 2400 6100 1400
+Wire Wire Line
+	6200 2400 6200 1400
+Wire Wire Line
+	6300 2400 6300 1400
+Wire Wire Line
+	6400 2400 6400 1400
+Wire Wire Line
+	6500 2400 6500 1400
+Wire Wire Line
+	6600 2400 6600 1400
+Wire Wire Line
+	6700 2400 6700 1400
+Wire Wire Line
+	6800 2400 6800 1400
+Wire Wire Line
+	6900 2400 6900 1400
+Wire Wire Line
+	7000 2400 7000 1400
+Wire Wire Line
+	7100 2400 7100 1400
+Wire Wire Line
+	7200 2400 7200 1400
+Wire Wire Line
+	7300 2400 7300 1400
+Wire Wire Line
+	7400 2400 7400 1400
+Wire Wire Line
+	7500 2400 7500 1400
+Wire Wire Line
+	7600 2400 7600 1400
+Wire Wire Line
+	7700 2400 7700 1400
+Wire Wire Line
+	5400 1450 7800 1450
+Wire Wire Line
+	7800 1450 7800 1400
+Connection ~ 5400 1450
+Wire Wire Line
+	5400 1450 5400 1400
+Wire Wire Line
+	5600 1550 7900 1550
+Wire Wire Line
+	7900 1550 7900 1400
+Connection ~ 5600 1550
+Wire Wire Line
+	5600 1550 5600 1400
+$Comp
+L power:GND3 #PWR0103
+U 1 1 61776772
+P 5600 4450
+F 0 "#PWR0103" H 5600 4200 50  0001 C CNN
+F 1 "GND3" V 5605 4322 50  0000 R CNN
+F 2 "" H 5600 4450 50  0001 C CNN
+F 3 "" H 5600 4450 50  0001 C CNN
+	1    5600 4450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5800 4450
+Wire Wire Line
+	5800 4450 5800 3950
+$Comp
+L power:GND2 #PWR0104
+U 1 1 61776FF6
+P 5600 1900
+F 0 "#PWR0104" H 5600 1650 50  0001 C CNN
+F 1 "GND2" V 5605 1772 50  0000 R CNN
+F 2 "" H 5600 1900 50  0001 C CNN
+F 3 "" H 5600 1900 50  0001 C CNN
+	1    5600 1900
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5600 1900
+Wire Wire Line
+	5600 1900 5600 1550
+Connection ~ 5600 4450
+Wire Wire Line
+	5600 4450 5600 3900
 $EndSCHEMATC
