@@ -185,6 +185,8 @@ Here's some additional general advice about resin printing:
 * Cure the parts with UV light. A curing station is great for that, but also be aware the stems have two holes that the UV may have trouble reaching in your curing station. I shine my UV flashlight directly into the hole to make sure all surfaces are cured.
 * Don't overcure: resin can become brittle if overexposed. A few minutes of exposition should be more than enough. You'll see and feel it when it's cured, the surface texture should be noticeably different when its done: not sticky, looking smooth and dry, and feeling hard under touch.
 * Clean all surfaces that have been in contact with uncured resin with isopropyl alcohol, then expose paper towels with UV light before disposing.
+* Make sure your FEP is in good condition, and change it if not. The state of the FEP has drastic effects on the quality of the print, and we need all the resolution we can get for this project.
+* Move the parts around from one batch to the next: you're going to need multiple batches (I do batches of 15 to keep parts near the center where the printer is most reliable), and if they are all at the same position, you will repeatedly stress the same spots on the FEP, leading to its accelerated degradation.
 
 ### Replacing the stems with the printed ones
 
