@@ -6,6 +6,7 @@
 import { rndEven, varyFromAverage } from './random.js';
 import { bitsBetweenTops } from './settings.js';
 import { mod, north, angleUnitPowerOfTwo } from './trigo.js';
+import { createEl } from './html.js';
 
 /** Handler for map elevation changes.
  * @callback MapChangeHandler
@@ -245,9 +246,8 @@ class Map {
  * @property {InterpolationAlgorithm} interpolation - An interpolation algorithm to compute altitudes between summits. */
 class OverheadMap {
     #context;
-    #pixelCanvas;
-    #pixelContext;
     #shipEl;
+    #highlight;
 
     /** Build an overhead visualization of an elevation map over the provided canvas element.
      * @param {HTMLCanvasElement} canvas - The canvas element where to draw the map.
@@ -264,12 +264,6 @@ class OverheadMap {
         this.canvas = canvas;
         this.#context = canvas.getContext('2d');
         this.#context.imageSmoothingEnabled = false;
-        const doc = canvas.ownerDocument;
-        this.#pixelCanvas = doc.createElement('canvas');
-        this.#pixelCanvas.width = 1;
-        this.#pixelCanvas.height = 1;
-        this.#pixelContext = this.#pixelCanvas.getContext('2d');
-        this.#pixelContext.imageSmoothingEnabled = false;
         this.scalePowerOfTwo = scalePowerOfTwo;
         this.map = map;
         this.ship = ship;
@@ -286,6 +280,36 @@ class OverheadMap {
         ship.addMoveListener(() => {
             this.moveShip();
         });
+    }
+
+    /** Highlights the specified segment on the map.
+     * Calling the method repeatedly only keeps the last highlight.
+     * Call without parameters to remove the highlight.
+     * @param {Number} x1 - The x coordinate of the first point.
+     * @param {Number} y1 - The y coordinate of the first point.
+     * @param {Number} x2 - The x coordinate of the second point.
+     * @param {Number} y2 - The x coordinate of the second point.
+     */
+    highlight(x1, y1, x2, y2) {
+        if (this.#highlight) {
+            this.#highlight.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+        else {
+            const highlightCanvas = createEl(this.canvas.parentElement, 'canvas', {
+                width: this.canvas.width,
+                height: this.canvas.height,
+                style: "position:relative;top:0;left:0"
+            });
+            this.#highlight = highlightCanvas.getContext('2d');
+            this.#highlight.imageSmoothingEnabled = false;
+        }
+        const ctx = this.#highlight;
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'red';
+        ctx.moveTo(y1 << this.scalePowerOfTwo, x1 << this.scalePowerOfTwo);
+        ctx.lineTo(y2 << this.scalePowerOfTwo, x2 << this.scalePowerOfTwo);
+        ctx.stroke();
     }
 
     #paint(x, y, z) {

@@ -129,7 +129,7 @@ import { seedRnd } from './random.js';
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
-    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, dist, screenDisplacement, bisections = 0) {
+    #interpolate(yMountain1, yMountain2, x1, x2, y1, y2, dist, screenDisplacement, bisections = 0, debugData = {}) {
         // A lot more can be done to avoid doing calculations on summits that will not affect the viewport but
         // for this, we're only excluding interpolation for cases where both points are off-screen.
         // TODO: not so fast, parts of a line might still end up on the screen.
@@ -140,9 +140,15 @@ import { seedRnd } from './random.js';
         const midX = (x1 + x2) >> 1;
         if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
             const [midMountainY, midScreenY] = this.interpolation(yMountain1, yMountain2, y1, y2, screenDisplacement, bisections);
+            // Keep some data around for debugging
+            const columnCache = this.#debugCache[midX] || [];
+            columnCache.push({top: midScreenY, summits: debugData});
+            this.#debugCache[midX] = columnCache;
+            // Draw the current column
             this.#drawMountainColumn(midX, midScreenY, dist);
-            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, dist, screenDisplacement >> 1, bisections + 1);
-            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, dist, screenDisplacement >> 1, bisections + 1);
+            // Interpolate the new midpoints before and after the current one.
+            this.#interpolate(yMountain1, midMountainY, x1, midX, y1, midScreenY, dist, screenDisplacement >> 1, bisections + 1, debugData);
+            this.#interpolate(midMountainY, yMountain2, midX, x2, midScreenY, y2, dist, screenDisplacement >> 1, bisections + 1, debugData);
         }
     }
 
@@ -169,7 +175,9 @@ import { seedRnd } from './random.js';
                 m1.y,
                 m2.y,
                 dist,
-                screenDisplacement);
+                screenDisplacement,
+                0,
+                {xMap1, yMap1, xMap2, yMap2});
         }
     }
 
@@ -186,6 +194,7 @@ import { seedRnd } from './random.js';
         this.#topHeights = new Array(this.width).fill(-1);
         const [xMap, yMap] = [(this.ship.x >> this.bitsBetweenTops) + 1, this.ship.y >> this.bitsBetweenTops];
         const memo = [];
+        this.#debugCache = [];
         for (let dist = 0; dist < this.viewDistance; dist++) {
             // Bootstrap the new square by computing the screen coordinates on the perimeter of the square at this distance.
             // Also draw these columns.
@@ -212,6 +221,17 @@ import { seedRnd } from './random.js';
                 this.#interpolateFromMemo(memo, xMap - i - 1, yMap - dist, xMap - i, yMap - dist, dist);
                 this.#interpolateFromMemo(memo, xMap - i - 1, yMap + dist + 1, xMap - i, yMap + dist, dist);
             }
+        }
+    }
+
+    /** Gets debug information from screen coordinates.
+     * @param {Numner} x - the x coordinate.
+     * @param {Number} y - the y coordinate. */
+    getDebugData(x, y) {
+        const dataForX = this.#debugCache[x];
+        if (!dataForX) return null;
+        for (const cacheItem of dataForX) {
+            if (y <= cacheItem.top) return cacheItem.summits;
         }
     }
 }

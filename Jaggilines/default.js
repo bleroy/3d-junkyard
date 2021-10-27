@@ -28,6 +28,7 @@ import { Viewport } from './lib/viewport.js';
 import { Compass } from './lib/compass.js';
 import { Valkyrie } from './lib/ship.js';
 import { interpolationTester, graphTester, rangeTester, fieldTester } from './lib/test.js';
+import { Debugger } from './lib/debug.js';
 
 /** The number of ticks since the game started running. */
 let frame = 0;
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const mapEl = document.getElementsByClassName('map')[0];
     const shipImg = document.getElementsByClassName('ship')[0];
     const coordContainer = document.getElementsByClassName('coord-container')[0];
-    new OverheadMap(
+    const overheadMap = new OverheadMap(
         mapEl,
         shipImg,
         overheadMapScalePowerOfTwo,
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const compassEl = document.getElementsByClassName('compass')[0];
     new Compass(compassEl, ship);
     const viewportEl = document.getElementById('viewport');
-    new Viewport(
+    const viewport = new Viewport(
         viewportEl,
         viewportWidth,
         viewportHeight,
@@ -106,6 +107,9 @@ document.addEventListener('DOMContentLoaded', e => {
         gameLoop();
         paused = true;
     });
+    
+    // Setup the visual debugger component
+    const visualDebugger = new Debugger(viewport, overheadMap);
 
     // To make the game smoother, we prefer dropped frames to uneven timing -> setInterval, not setTimeout
     setInterval(gameLoop, tick);
