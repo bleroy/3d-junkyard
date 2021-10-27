@@ -3,7 +3,7 @@
 
 'use strict';
 
-import { distance, angleFromCoordinates, angleFromMapCoordinates, angleToAlgebraic, angleSub } from './trigo.js';
+import { distance, angleFromCoordinates, angleFromMapCoordinates, angleToAlgebraic, angleSub, mod, quarterCircle, halfCircle } from './trigo.js';
 import { skyColor, mountainColor, mountainEdgeColor } from './color.js';
 import { seedRnd } from './random.js';
 
@@ -114,9 +114,19 @@ import { seedRnd } from './random.js';
     #computeScreenCoordinatesFor(x, y, memo) {
         const dist = distance(this.ship.x, this.ship.y, x << this.bitsBetweenTops, y << this.bitsBetweenTops);
         const absAngle = angleFromMapCoordinates((x << this.bitsBetweenTops) - this.ship.x, (y << this.bitsBetweenTops) - this.ship.y);
-        const azimuth = angleToAlgebraic(angleSub(absAngle, this.ship.heading));
-        const screenCol = (this.width >> 1) - (azimuth >> this.screenPixelPerAngleUnitPowerOfTwo);
+        let azimuth = angleToAlgebraic(angleSub(absAngle, this.ship.heading));
         const altitude = angleToAlgebraic(angleFromCoordinates(dist, this.map.get(x, y) - this.ship.z));
+        // Deal with points behind us, which may still interpolate to visible points
+        let behind = false;
+        if (azimuth > quarterCircle) {
+            azimuth = halfCircle - azimuth;
+            behind = true;
+        }
+        if (azimuth < -quarterCircle) {
+            azimuth = -halfCircle - azimuth;
+            behind = true;
+        }
+        const screenCol = (this.width >> 1) - (azimuth >> this.screenPixelPerAngleUnitPowerOfTwo);
         const screenRow = this.verticalOffset + (altitude >> this.screenPixelPerAngleUnitPowerOfTwo);
         // We compute the screen displacement corresponding to a 0-maxHeight amplitude at this point.
         // This will be used as a starting point for the amplitude later.
@@ -125,7 +135,15 @@ import { seedRnd } from './random.js';
         const displacement = (altitudeMax - altitude0) >> this.screenPixelPerAngleUnitPowerOfTwo >> this.displacementAttenuationPower;
         // Remember the screen coordinates for the summits so we can reuse and interpolate between them.
         if (!memo[x]) memo[x] = [];
-        memo[x][y] = { x: screenCol, y: screenRow, d: dist, displacement };
+        memo[x][y] = {
+            x: screenCol,
+            y: screenRow,
+            d: dist,
+            displacement,
+            xMap: mod(x, this.map.size),
+            yMap: mod(y, this.map.size),
+            behind
+        };
     }
 
     /** Recursively interpolates mid-points until all screen columns have been evaluated. */
@@ -154,30 +172,30 @@ import { seedRnd } from './random.js';
 
     #drawMountainColumnFromMemo(memo, xMap, yMap, dist) {
         const m = memo[xMap][yMap];
-        this.#drawMountainColumn(m.x, m.y, dist);
+        if (!m.behind) this.#drawMountainColumn(m.x, m.y, dist);
     }
 
     #interpolateFromMemo(memo, xMap1, yMap1, xMap2, yMap2, dist) {
-        const m1 = memo[xMap1][yMap1];
-        const m2 = memo[xMap2][yMap2];
-        if (m1.x !== m2.x) {
+        const point1 = memo[xMap1][yMap1];
+        const point2 = memo[xMap2][yMap2];
+        if (point1.x !== point2.x && (!point1.behind || !point2.behind)) {
             // We use the average displacement amplitude between the two points
             // before bisecting recursively, and recursive displacements will just be bit operations.
-            const screenDisplacement = (m1.displacement + m2.displacement) >> 1;
+            const screenDisplacement = (point1.displacement + point2.displacement) >> 1;
             // Introduce a seed of chaos to the mountain heights to cause variations in mountain shapes
             // and so they don't all look the same.
             const chaos = seedRnd(xMap1, yMap1, yMap2, xMap2)() & 0xFF;
             this.#interpolate(
                 this.map.get(xMap1, yMap1) - chaos,
                 this.map.get(xMap2, yMap2),
-                m1.x,
-                m2.x,
-                m1.y,
-                m2.y,
+                point1.x,
+                point2.x,
+                point1.y,
+                point2.y,
                 dist,
                 screenDisplacement,
                 0,
-                {xMap1, yMap1, xMap2, yMap2});
+                { point1, point2 });
         }
     }
 
@@ -219,7 +237,7 @@ import { seedRnd } from './random.js';
                 this.#interpolateFromMemo(memo, xMap - dist - 1, yMap + i, xMap - dist - 1, yMap + i + 1, dist);
                 this.#interpolateFromMemo(memo, xMap + dist, yMap + i, xMap + dist, yMap + i + 1, dist);
                 this.#interpolateFromMemo(memo, xMap - i - 1, yMap - dist, xMap - i, yMap - dist, dist);
-                this.#interpolateFromMemo(memo, xMap - i - 1, yMap + dist + 1, xMap - i, yMap + dist, dist);
+                this.#interpolateFromMemo(memo, xMap - i - 1, yMap + dist, xMap - i, yMap + dist, dist);
             }
         }
     }
