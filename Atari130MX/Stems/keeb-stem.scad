@@ -2,13 +2,13 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari XE ◎"; // [KailhBox, Atari XE ■, Atari XE ◎, Atari XL Alps ▬, Atari XL ✚, Atari XL ⧇]
+cap_type = "Atari XE ◎"; // [KailhBox, Atari XE ■, Atari XE ◎, Atari XL Alps ▬]
 
 // Stem type
-stem_type = "KailhBoxPink"; // [KailhBoxPink, MX Adapter]
+stem_type = "KailhBoxPink"; // [KailhBoxPink]
 
 // Revision
-rev = "12";
+rev = "11";
 
 // Carve revision
 carve_rev = false;
@@ -82,8 +82,8 @@ module atarixe_circle() {
   }
 }
 
-atari_alps_width = 4.6;
-atari_alps_depth = 2.3;
+atari_alps_width = 4.45;
+atari_alps_depth = 2.25;
 atari_alps_height = box_height - 2;
 atari_alps_offset = 0;
 atari_alps_teeth_width = 0.4;
@@ -104,29 +104,6 @@ module atarixl_alps() {
     };
     translate([0, 0, (box_bottom_thickness - box_height) / 2])
       cube([box_width, box_width, box_bottom_thickness], center = true);
-  }
-}
-
-atarixl_cross_thickness = 1.3;
-atarixl_cross_size = 4.4;
-atarixl_cross_height = 3.5;
-
-module atarixl_cross() {
-  translate([0, 0, -0.05])
-    union() {
-      cube([atarixl_cross_thickness, atarixl_cross_size, atarixl_cross_height + 0.1], center = true);
-      cube([atarixl_cross_size, atarixl_cross_thickness, atarixl_cross_height + 0.1], center = true);
-    }
-}
-
-atarixl_square_size = 4.7;
-atarixl_square_height = 4;
-
-module atarixl_square() {
-  union() {
-    cube([atarixl_square_size, atarixl_square_size, atarixl_square_height], center = true);
-    translate([0, 0, -atarixl_square_height / 2])
-      cube([atarixl_square_size / 2, atarixl_square_size / 2, 0.1], center = true);
   }
 }
 
@@ -270,22 +247,6 @@ module kailh_stem() {
   }
 }
 
-mxadapter_stem_height = 3.5;
-mxadapter_stem_diameter = 5.55;
-mxadapter_cross_thickness = 1.35;
-mxadapter_cross_size = 4.2;
-mxadapter_floor_thickness = 0.1;
-
-module mx_adapter() {
-  difference() {
-    cylinder(r = mxadapter_stem_diameter / 2, h = mxadapter_stem_height, center = true);
-    translate([0, 0, -mxadapter_floor_thickness * 1.5]) {
-      cube([mxadapter_cross_thickness, mxadapter_cross_size, mxadapter_stem_height + mxadapter_floor_thickness], center = true);
-      cube([mxadapter_cross_size, mxadapter_cross_thickness, mxadapter_stem_height + mxadapter_floor_thickness], center = true);
-    }
-  }
-}
-
 union() {
   if (cap_type == "KailhBox") {
     translate([0, 0, box_height / 2])
@@ -303,20 +264,8 @@ union() {
     translate([0, 0, box_height / 2])
       atarixl_alps();
   }
-  if (cap_type == "Atari XL ✚") {
-    translate([0, 0, atarixl_cross_height / 2])
-      atarixl_cross();
-  }
-  if (cap_type == "Atari XL ⧇") {
-    translate([0, 0, atarixl_square_height / 2])
-      atarixl_square();
-  }
   if (stem_type == "KailhBoxPink") {
     translate([0, kailh_stem_horizontal_offset, -kailh_stem_height / 2])
       kailh_stem();
-  }
-  if (stem_type == "MX Adapter") {
-    translate([0, 0, -mxadapter_stem_height / 2])
-      mx_adapter();
   }
 }

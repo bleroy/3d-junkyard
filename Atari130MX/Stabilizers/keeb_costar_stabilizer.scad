@@ -1,10 +1,15 @@
 $fa = 1;
 $fs = 0.2;
 
+// Cap type
+cap_type = "Atari XE ◎"; // [Atari XE ■, Atari XE ◎]
+
 rod_diameter = 1.7;
 rod_diameter_tolerance = 0.6;
 tolerance = 0.1;
 rod_entry_point_offset = 0.6;
+rod_entry_point_depth = cap_type == "Atari XE ◎" ? 1 : 2;
+rod_entry_point_cut = cap_type == "Atari XE ◎" ? 1.7 : 3.2;
 
 total_length = 15.3;
 base_width = 5.3;
@@ -18,7 +23,7 @@ under_plate = 1.5;
 height_above_plate = 6;
 total_height = height_above_plate + plate_thickness + under_plate;
 bar_side_height = 7 - plate_thickness - under_plate;
-rod_hole_offset = 6.5;
+rod_hole_offset = cap_type == "Atari XE ◎" ? 5 : 6.5;
 
 sqrt2 = sqrt(2);
 
@@ -50,9 +55,13 @@ difference() {
   translate([0, total_length / 2 + 1.3, -plate_thickness - plate_tolerance - under_plate / 2])
     rotate([-30, 0, 0])
       cube([base_width * 2, 3, 3], center = true);
-  translate([0, total_length / 2 + 4.4, 5])
-    rotate([20, 0, 0])
-      cube([base_width * 2, 10, 10], center = true);
-  translate([0, total_length / 2 + 2, bar_side_height / 2])
+  translate([0, total_length / 2 + rod_entry_point_cut, 8])
+    union() {
+      translate([0, 2.1, -1.4])
+        cube([base_width * 2, 10, 10], center = true);
+      rotate([20, 0, 0])
+        cube([base_width * 2, 10, 10], center = true);
+    }
+  translate([0, total_length / 2 + rod_entry_point_depth, bar_side_height / 2])
     cube([base_width * 2, 7, rod_diameter + rod_diameter_tolerance - rod_entry_point_offset], center = true);
 }
