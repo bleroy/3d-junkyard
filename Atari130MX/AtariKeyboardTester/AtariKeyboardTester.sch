@@ -5,8 +5,8 @@ $Descr A3 11693 16535 portrait
 encoding utf-8
 Sheet 1 1
 Title "Atari keyboard tester board"
-Date "2021-10-11"
-Rev "A"
+Date "2021-11-09"
+Rev "B"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -2090,13 +2090,7 @@ Text Notes 10550 1050 2    50   ~ 0
 COL
 Wire Notes Line
 	950  6500 950  7050
-Wire Notes Line
-	950  7050 1550 7050
-Wire Notes Line
-	1550 7050 1550 6500
-Wire Notes Line
-	1550 6500 950  6500
-Text Notes 1550 7150 2    50   ~ 0
+Text Notes 2000 7150 2    50   ~ 0
 POWER
 Text Notes 9100 7650 2    50   ~ 0
 XL/XE CONFIGURATION
@@ -2238,7 +2232,7 @@ F 3 "~" H 1900 8200 50  0001 C CNN
 	1    1900 8200
 	1    0    0    -1  
 $EndComp
-Text GLabel 1450 6850 1    50   Input ~ 0
+Text GLabel 1900 6850 1    50   Input ~ 0
 GND
 Text GLabel 1050 6850 1    50   Output ~ 0
 VCC
@@ -4530,7 +4524,7 @@ Wire Wire Line
 Wire Wire Line
 	1050 6850 1050 6900
 Wire Wire Line
-	1450 6850 1450 6900
+	1900 6850 1900 6900
 Wire Wire Line
 	1650 7900 1700 7900
 Wire Wire Line
@@ -4551,12 +4545,12 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 6D5B210C
-P 1450 6850
-F 0 "#FLG0102" H 1450 6925 50  0001 C CNN
-F 1 "PWR_FLAG" V 1450 6978 50  0000 L CNN
-F 2 "" H 1450 6850 50  0001 C CNN
-F 3 "~" H 1450 6850 50  0001 C CNN
-	1    1450 6850
+P 1900 6850
+F 0 "#FLG0102" H 1900 6925 50  0001 C CNN
+F 1 "PWR_FLAG" V 1900 6978 50  0000 L CNN
+F 2 "" H 1900 6850 50  0001 C CNN
+F 3 "~" H 1900 6850 50  0001 C CNN
+	1    1900 6850
 	0    1    1    0   
 $EndComp
 Text Label 5700 5300 3    50   ~ 0
@@ -4804,14 +4798,33 @@ GND
 $Comp
 L Device:Battery BT1
 U 1 1 6DED3E62
-P 1250 6900
-F 0 "BT1" H 1358 6946 50  0000 L CNN
-F 1 "Battery" H 1358 6855 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_2468_2xAAA" V 1250 6960 50  0001 C CNN
-F 3 "~" V 1250 6960 50  0001 C CNN
-	1    1250 6900
+P 1700 6900
+F 0 "BT1" H 1808 6946 50  0000 L CNN
+F 1 "Battery" H 1808 6855 50  0000 L CNN
+F 2 "Battery:BatteryHolder_MPD_BA9VPC_1xPP3" V 1700 6960 50  0001 C CNN
+F 3 "~" V 1700 6960 50  0001 C CNN
+	1    1700 6900
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 61958EDB
+P 1250 6900
+F 0 "SW1" H 1250 7135 50  0000 C CNN
+F 1 "SW_SPST" H 1250 7044 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_E-Switch_EG1224_SPDT_Angled" H 1250 6900 50  0001 C CNN
+F 3 "~" H 1250 6900 50  0001 C CNN
+	1    1250 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 6900 1500 6900
+Wire Notes Line
+	950  7050 2000 7050
+Wire Notes Line
+	2000 7050 2000 6500
+Wire Notes Line
+	2000 6500 950  6500
 Wire Bus Line
 	950  6300 8400 6300
 Wire Bus Line
