@@ -271,9 +271,11 @@ module kailh_stem() {
 }
 
 kailh_choc_height = 3.0 * 2;
-kailh_choc_base_dimensions = [7.0, 3.5, 1.0];
+kailh_choc_base_dimensions = [9.0, 3.95, 1.0];
 kailh_choc_insert_distance = 5.7;
-kailh_choc_insert_dimensions = [1.2, 3.0, 3.0];
+kailh_choc_insert_dimensions = [1.0, 2.6, 3.6];
+//kailh_choc_height_under_cap = cap_type == "Atari XL ✚" ? 2.8 : 0; // Atari XL ⧇: 1.9
+//kailh_choc_switch_top_height = 2.5;
 
 module kailh_choc() {
   translate([0, 0, kailh_choc_height / 2])

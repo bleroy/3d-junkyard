@@ -34,7 +34,7 @@ It is also possible however to build and use this keyboard and use it with an em
 
 ### Key caps
 
-The best result will be obtained with the vintage key caps from an Atari XE computer. If you don't have access to a set of the original keys, you can build the keyboard with any MX-compatible switches and caps. This is a considerably easier option since no 3D printing is required, but the aesthetic qualities of the results will be clearly inferior.
+The best result will be obtained with the vintage key caps from an Atari XE computer. Old-new stock of XE keyboards is also currently available without too much trouble and for a reasonable price. If you don't have access to a set of the original keys, you can build the keyboard with any MX-compatible switches and caps. This is a considerably easier option since no 3D printing is required, but the aesthetic qualities of the results will be clearly inferior.
 
 * Optimal: vintage set of XE key caps
 * Fine: MX-compatible set of key caps
@@ -122,15 +122,15 @@ In all cases, you should also add some spacers between the board and the plate, 
 
 The original Atari XE keyboard's connector was just a part of the mylar membrane. We need a replacement for that, and there are many options.
 
-![The Atari 130MX cable adapter](Atari130MX-adapter/Atari130MX-adapter-front.png)
+![The Atari 130MX cable adapters](Atari130MX-adapter/Atari130MX-FFC-front.png)
 
 Note that the clearance between the Atari XE motherboard and the bottom of the keyboard is very small at about 16mm. Depending on the layout of your motherboard, the adapter may or may not fit. FFC connectors are much lower profile than IDC connectors, so they are the preferred connection, but they are surface-mounted.
 
 The adapter can in theory fit into the original Atari motheboard's keyboard connector if made in 0.6-0.8mm. I prefer to replace that connector with pin headers that offer more flexibility.
 
 * Optimal:
-    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/molex/0522072660/5170985)
-    * [FFC 26 position 1mm ribbon cable](https://www.digikey.com/en/products/detail/molex/0152670441/4427307)
+    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/molex/0522072633/4444523)
+    * [FFC 26 position 1mm ribbon cable](https://www.digikey.com/en/products/detail/molex/0152670430/4143369)
     * [130MX Adapter](Atari130MX-adapter/Atari130MX-adapter.pro) fabricated in 0.6-0.8mm thickness
     * 1x24 2.54mm pin headers
 * Very good:
@@ -177,15 +177,16 @@ On the Elegoo Mars 2 Pro, I'm able to print batches of 18 stems with not too man
 Here's some additional general advice about resin printing:
 
 * Wear eye and hand protection, and even a respirator if operating in sub-optimal ventilation conditions any time you're manipulating uncured resin. But you should not have sub-optimal ventilation. That stuff is toxic and messy. UV light is also bad for your skin and eyes.
-* Treat uncured resin as the toxic waste that it is, as well as alcohol that has been mixed with uncured resin. It's a good idea to expose any paper towel you use to clean up uncured resin with a UV flashlight before disposing of them. Also cure support and any rejected part before disposing of them.
+* Treat uncured resin as the toxic waste that it is, as well as alcohol that has been mixed with uncured resin. Expose any paper towel you use to clean up uncured resin with a UV flashlight before disposing of them. Also cure support and any rejected part before disposing of them.
 * Consult your local waste disposal authority on proper ways of disposing of uncured resin or contaminated material.
-* After printing, be careful when separating the parts from the printing surface. It is possible to seriously injure your hands if you're not careful. I wear additional leather gloves when I do that because I know how clumsy I am and I like my hands. Also, toxic resin is not good inside your hands.
-* Clean the parts in a bath of >90% isopropyl alcohol. Some light brushing with a toothbrush can help.
-* After cleaning, cut the parts away from the support using a pair of cutting pliers. Your pliers will get sticky with uncured resin over time even if you clean them with isopropyl alcohol after each usage, and will be deteriorating fast, be aware of that when you buy them.
-* Cure the parts with UV light. A curing station is great for that, but also be aware the stems have two holes that the UV may have trouble reaching in your curing station. I shine my UV flashlight directly into the hole to make sure all surfaces are cured.
+* When generating the sliced print file from the model, make sure to apply the proper exposition settings from your printer and resin manufacturers. Exposition times are not the same depending on the resin you use, and may result in drastic variations in quality. I use [the settings provided by Elegoo](https://www.elegoo.com/blogs/3d-printer-user-guide/elegoo-printers-resin-setting-sheet) since that's the brand of printer and resin I use.
+* Clean the parts in a bath of 99% isopropyl alcohol. Some light brushing with a toothbrush can help. [Specialized curing stations](https://www.elegoo.com/collections/clean-cure-series/products/washing-and-curing-station-v2-0) are great if you can afford them thanks to their large capacity and built-in agitation and timer. My print quality went up considerably since I bought one of these.
+* After cleaning, carefully separate the parts from the printing plate. This will be a lot easier if you used reasonably-sized support. It's possible for the tool to slip and do damage to you or your surroundings, so proceed carefully.
+* Cure the parts with UV light for a few minutes. A curing station is great for that, but also be aware the stems have two holes that the UV may have trouble reaching in your curing station. I shine my UV flashlight directly into the hole to make sure all surfaces are cured.
 * Don't overcure: resin can become brittle if overexposed. A few minutes of exposition should be more than enough. You'll see and feel it when it's cured, the surface texture should be noticeably different when its done: not sticky, looking smooth and dry, and feeling hard under touch.
+* After curing. cut the parts away from the support using a pair of cutting pliers. Your pliers can get sticky with uncured resin over time even if you clean them with isopropyl alcohol after each usage, and will be deteriorating fast, be aware of that when you buy them.
 * Clean all surfaces that have been in contact with uncured resin with isopropyl alcohol, then expose paper towels with UV light before disposing.
-* Make sure your FEP is in good condition, and change it if not. The state of the FEP has drastic effects on the quality of the print, and we need all the resolution we can get for this project.
+* Make sure your FEP is in good condition, and change it when it's starting to show visible damage. The state of the FEP has drastic effects on the quality of the print, and we need all the resolution we can get for this project.
 * Move the parts around from one batch to the next: you're going to need multiple batches (I do batches of 15 to keep parts near the center where the printer is most reliable), and if they are all at the same position, you will repeatedly stress the same spots on the FEP, leading to its accelerated degradation.
 
 ### Replacing the stems with the printed ones
@@ -194,7 +195,7 @@ The Kailh switches can be disassembled easily by carefully inserting a prying to
 
 You can then slide the stem out of the switch while being careful not to lose the spring and the extremely tiny part that pushes the contact rod out of the way when the switch operates.
 
-Apply some key switch lube on the sides of the printed stem before placing it back into the transparent cover where the original was. Reassemble the stem and cover with the base of the switch. Operate it to verify that it slides smoothly.
+Optionally apply some key switch lube on the sides of the printed stem before placing it back into the transparent cover where the original was. Check that the stem travels freely in the transparent top part of the switch before reassembling. Reject any stem that doesn't. Reassemble the stem and cover with the base of the switch. Operate it to verify that it slides smoothly.
 
 Do that with all 63 switches.
 
@@ -206,7 +207,9 @@ Next, press the switches into the holes in the plate. Make sure they are properl
 
 Print the space bar stabilizers following the same instructions as for the stems. Printing a batch of four should ensure you get the two parts you need even if the print doesn't go optimally.
 
-Add the standard stabilizers into the rectangular holes on both sides of the left shift key, and the printed ones into the rectangular holes on both sides of the space bar.
+Note that there are two variants of the stabilizers for the space bar, depending on whether you have the square or circle variant of the key caps. The stabilizers also mount in a different orientation depending on the variant (bar under for circles, and over for squares) and may require some gentle bending to go around the switch in the case of the circle variant (modern stabilizers come out of the factory with that bend already built-in, but the old Atari ones don't).
+
+Add the standard stabilizers into the rectangular holes on both sides of the left shift key (pick the hole corresponding to your key cap variant), and the printed ones into the holes on both sides of the space bar  (pick the hole corresponding to your key cap variant).
 
 Lube the horizontal round holes at the back of the stabilizers, then insert the metal bars for both keys into them.
 
@@ -222,7 +225,7 @@ The connection between the keyboard and the motherboard can be made in a number 
 
 The easiest, but not the most stable, is to replace the motherboard connector with 24 pin headers, use two rows of 12 pin headers on the keyboard side, and then make the connection with 24 manually positioned header cables. You can tape them together with electrical tape for stability.
 
-A better choice is a 26 positions 1mm pitch ribbon cable. For that, you'll need to solder the appropriate surface mount connectors on the keyboard side and on the adapter.
+A much better choice is a 26 positions 1mm pitch ribbon cable. For that, you'll need to solder the appropriate surface mount connectors on the keyboard side and on the adapter.
 
 Another choice is a 2.54mm pitch 24 positions ribbon cable. The connectors for those are through hole and relatively easier to solder, and the cables themselves are easily assembled.
 
@@ -237,7 +240,7 @@ Before we assemble the switches onto the PCB, we need to add any through-hole co
 
 ### Soldering the switches
 
-The plate should ensure proper relative alignment of the switches. Turn the whole assembly contact up, then put the main PCB on top of it, key silkscreen on the bottom.
+The plate should ensure proper relative alignment of the switches. Turn the whole assembly contact up, then put the main PCB on top of it, key silkscreen on the bottom. Make sure all the pins make it through the holes.
 
 Add the spacers or washers, screws and nuts in the 5 holes.
 
@@ -245,7 +248,7 @@ Ensure proper alignment, then solder two diagonally opposed switches for stabili
 
 ### Soldering the adapter
 
-If you're using the adapter on the Atari side, solder the connectors you need. You have a choice here, be consistent with what you chose on the other side.
+If you're using an adapter on the Atari side, solder the connectors you need. You have a choice here, be consistent with what you chose on the other side.
 
 For the motherboard connection, you can choose to insert the adapter PCB into place, or replace the motherboard connector with pin headers. You may also want to assemble the adapter with a female header, or solder it permanently onto the pin headers you added to the motherboard.
 
@@ -255,7 +258,7 @@ We're almost done.
 
 If you're going to use the keyboard as a PC keyboard, all you have to do is connect a micro-USB cable between the Pi PICO and the computer. Flash the Pico with [CircuitPython](https://circuitpython.org/board/raspberry_pi_pico/) and [the Python script](Decent130MX.py).
 
-If you're connecting to the Atari motherboard, put the adapter (if using it) into place on the motherboard, insert your chosen cable on both ends, then set the new keyboard into the case, and reassenble the rest of your Atari.
+If you're connecting to the Atari motherboard, put the adapter (if using it) into place on the motherboard, insert your chosen cable on both ends, then set the new keyboard into the case, and reassemble the rest of your Atari.
 
 Remember, don't do both at the same time: it's either used as a PC keyboard, or as an Atari XE keyboard. Dont'power both simultaneously.
 
