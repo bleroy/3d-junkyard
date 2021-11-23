@@ -110,23 +110,36 @@ module atarixl_alps() {
 atarixl_cross_thickness = 1.3;
 atarixl_cross_size = 4.4;
 atarixl_cross_height = 3.5;
+atarixl_cross_teeth_width = 0.4;
+atarixl_cross_teeth_depth = 0.05;
 
 module atarixl_cross() {
   translate([0, 0, -0.05])
     union() {
       cube([atarixl_cross_thickness, atarixl_cross_size, atarixl_cross_height + 0.1], center = true);
       cube([atarixl_cross_size, atarixl_cross_thickness, atarixl_cross_height + 0.1], center = true);
+      // Teeth:
+      translate([3 * atarixl_cross_size / 8, 0, 0])
+        cube([atarixl_cross_teeth_width, atarixl_cross_thickness + atarixl_cross_teeth_depth * 2, atarixl_cross_height], center = true);
+      translate([-3 * atarixl_cross_size / 8, 0, 0])
+        cube([atarixl_cross_teeth_width, atarixl_cross_thickness + atarixl_cross_teeth_depth * 2, atarixl_cross_height], center = true);
+      translate([0, 3 * atarixl_cross_size / 8, 0])
+        cube([atarixl_cross_thickness + atarixl_cross_teeth_depth * 2, atarixl_cross_teeth_width, atarixl_cross_height], center = true);
+      translate([0, -3 * atarixl_cross_size / 8, 0])
+        cube([atarixl_cross_thickness + atarixl_cross_teeth_depth * 2, atarixl_cross_teeth_width, atarixl_cross_height], center = true);
     }
 }
 
 atarixl_square_size = 4.7;
 atarixl_square_height = 4;
+atarixl_square_teeth_width = 0.4;
+atarixl_square_teeth_depth = 0.05;
 
 module atarixl_square() {
   union() {
     cube([atarixl_square_size, atarixl_square_size, atarixl_square_height], center = true);
-    translate([0, 0, -atarixl_square_height / 2])
-      cube([atarixl_square_size / 2, atarixl_square_size / 2, 0.1], center = true);
+    cube([atarixl_square_size + atarixl_square_teeth_depth * 2, atarixl_square_teeth_width, atarixl_square_height], center = true);
+    cube([atarixl_square_teeth_width, atarixl_square_size + atarixl_square_teeth_depth * 2, atarixl_square_height], center = true);
   }
 }
 
@@ -274,16 +287,23 @@ kailh_choc_height = 3.0 * 2;
 kailh_choc_base_dimensions = [9.0, 3.95, 1.0];
 kailh_choc_insert_distance = 5.7;
 kailh_choc_insert_dimensions = [1.0, 2.6, 3.6];
-//kailh_choc_height_under_cap = cap_type == "Atari XL ✚" ? 2.8 : 0; // Atari XL ⧇: 1.9
-//kailh_choc_switch_top_height = 2.5;
+kailh_choc_insert_teeth_width = 0.4;
+kailh_choc_insert_teeth_depth = 0.05;
 
 module kailh_choc() {
   translate([0, 0, kailh_choc_height / 2])
     cube(kailh_choc_base_dimensions, center = true);
   translate([kailh_choc_insert_distance / 2, 0, kailh_choc_height / 4])
-    cube(kailh_choc_insert_dimensions, center = true);
+    union() {
+      cube(kailh_choc_insert_dimensions, center = true);
+      // Tooth
+      cube([kailh_choc_insert_dimensions[0] + kailh_choc_insert_teeth_depth * 2, kailh_choc_insert_teeth_width, kailh_choc_insert_dimensions[2]], center = true);
+    }
   translate([-kailh_choc_insert_distance / 2, 0, kailh_choc_height / 4])
-    cube(kailh_choc_insert_dimensions, center = true);
+    union() {
+      cube(kailh_choc_insert_dimensions, center = true);
+      cube([kailh_choc_insert_dimensions[0] + kailh_choc_insert_teeth_depth * 2, kailh_choc_insert_teeth_width, kailh_choc_insert_dimensions[2]], center = true);
+    }
 }
 
 mxadapter_stem_height = 3.5;
