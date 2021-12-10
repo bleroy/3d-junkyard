@@ -795,8 +795,6 @@ Connection ~ 3350 4050
 Wire Wire Line
 	3350 2950 3350 3500
 Connection ~ 3350 3500
-Wire Wire Line
-	3350 2950 3350 2700
 Connection ~ 3350 2950
 Connection ~ 3350 2400
 Wire Wire Line
@@ -993,9 +991,6 @@ F 3 "" H 10100 800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 6150 3150
-Connection ~ 3350 2700
-Wire Wire Line
-	3350 2700 3350 2400
 $Comp
 L Connector_Generic:Conn_01x14 J2
 U 1 1 61C4EFF7
@@ -1034,8 +1029,6 @@ Wire Wire Line
 Wire Wire Line
 	3550 4250 4200 4250
 Connection ~ 1600 4800
-Wire Wire Line
-	3100 2700 3350 2700
 Wire Wire Line
 	7350 950  8000 950 
 NoConn ~ 4150 7050
@@ -3534,4 +3527,6 @@ Wire Wire Line
 Connection ~ 9650 6000
 Text GLabel 8700 5800 0    50   Input ~ 0
 GPIO26_ADC0
+Wire Wire Line
+	3350 2400 3350 2950
 $EndSCHEMATC
