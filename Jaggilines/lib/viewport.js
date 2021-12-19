@@ -34,6 +34,7 @@ import { seedRnd } from './random.js';
      * @param {number} verticalOffset - The vertical coordinate of the horizontal direction.
      * @param {number} viewDistance - the maximum distance for objects to be visible in the viewport.
      * @param {number} scalePowerOfTwo - The power of two that gives the physical pixel size of a logical viewport pixel.
+     * @param {number} angleUnitsPerPixelPowerOfTwo - The power of two that gives the number of angle units per screen pixel.
      * @param {number} bitsBetweenTops - The power of two that gives the distance between mountain tops.
      * @param {number} maxHeight - The maximum height of mountains.
      * @param {number} displacementAttenuationPower - The power of two attenuation to use in the interpolation algorithm.
@@ -49,7 +50,7 @@ import { seedRnd } from './random.js';
         verticalOffset,
         viewDistance,
         scalePowerOfTwo,
-        screenPixelPerAngleUnitPowerOfTwo,
+        angleUnitsPerPixelPowerOfTwo,
         bitsBetweenTops,
         maxHeight,
         displacementAttenuationPower,
@@ -68,7 +69,7 @@ import { seedRnd } from './random.js';
         this.verticalOffset = verticalOffset;
         this.viewDistance = viewDistance;
         this.scalePowerOfTwo = scalePowerOfTwo;
-        this.screenPixelPerAngleUnitPowerOfTwo = screenPixelPerAngleUnitPowerOfTwo;
+        this.angleUnitsPerPixelPowerOfTwo = angleUnitsPerPixelPowerOfTwo;
         this.bitsBetweenTops = bitsBetweenTops;
         this.maxHeight = maxHeight;
         this.displacementAttenuationPower = displacementAttenuationPower;
@@ -111,6 +112,12 @@ import { seedRnd } from './random.js';
         // Otherwise, everything is hidden, do nothing.
     }
 
+    #shift(val, bits) {
+        if (bits === 0) return val;
+        if (bits > 0) return val >> bits;
+        return val << -bits;
+    }
+
     #computeScreenCoordinatesFor(x, y, memo) {
         const dist = distance(this.ship.x, this.ship.y, x << this.bitsBetweenTops, y << this.bitsBetweenTops);
         const absAngle = angleFromMapCoordinates((x << this.bitsBetweenTops) - this.ship.x, (y << this.bitsBetweenTops) - this.ship.y);
@@ -126,13 +133,13 @@ import { seedRnd } from './random.js';
             azimuth = -halfCircle - azimuth;
             behind = true;
         }
-        const screenCol = (this.width >> 1) - (azimuth >> this.screenPixelPerAngleUnitPowerOfTwo);
-        const screenRow = this.verticalOffset + (altitude >> this.screenPixelPerAngleUnitPowerOfTwo);
+        const screenCol = (this.width >> 1) - this.#shift(azimuth,this.angleUnitsPerPixelPowerOfTwo);
+        const screenRow = this.verticalOffset + this.#shift(altitude, this.angleUnitsPerPixelPowerOfTwo);
         // We compute the screen displacement corresponding to a 0-maxHeight amplitude at this point.
         // This will be used as a starting point for the amplitude later.
         const altitude0 = angleToAlgebraic(angleFromCoordinates(dist, - this.ship.z));
         const altitudeMax = angleToAlgebraic(angleFromCoordinates(dist, this.maxHeight - this.ship.z));
-        const displacement = (altitudeMax - altitude0) >> this.screenPixelPerAngleUnitPowerOfTwo >> this.displacementAttenuationPower;
+        const displacement = this.#shift(altitudeMax - altitude0, this.angleUnitsPerPixelPowerOfTwo + this.displacementAttenuationPower);
         // Remember the screen coordinates for the summits so we can reuse and interpolate between them.
         if (!memo[x]) memo[x] = [];
         memo[x][y] = {
@@ -152,8 +159,8 @@ import { seedRnd } from './random.js';
         // for this, we're only excluding interpolation for cases where both points are off-screen.
         // TODO: not so fast, parts of a line might still end up on the screen.
         // TODO: investigate weird additional mountains that show in high resolution.
-        if (((x1 < 0) || (x1 >= this.width) || (y1 < 0)) &&
-            ((x2 < 0) || (x2 >= this.width) || (y2 < 0))) return;
+        if (((x1 < 0) || (x1 >= this.width)) &&
+            ((x2 < 0) || (x2 >= this.width))) return;
 
         const midX = (x1 + x2) >> 1;
         if (midX != x1 && midX != x2) { // Stop the recursion when the midpoint coincides with one of the bounds.
@@ -182,7 +189,7 @@ import { seedRnd } from './random.js';
             // We use the average displacement amplitude between the two points
             // before bisecting recursively, and recursive displacements will just be bit operations.
             const screenDisplacement = (point1.displacement + point2.displacement) >> 1;
-            // Introduce a seed of chaos to the mountain heights to cause variations in mountain shapes
+            // Introduce a determinic seed of chaos to the mountain heights to cause variations in mountain shapes
             // and so they don't all look the same.
             const chaos = seedRnd(xMap1, yMap1, yMap2, xMap2)() & 0xFF;
             this.#interpolate(

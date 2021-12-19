@@ -19,7 +19,7 @@ const coordinateBits = mapCoordinateBits + bitsBetweenTops;
 const overheadMapScalePowerOfTwo = 3;
 
 /** The power of two for the scale of the viewport from logical pixel to physical pixels on the page (2 -> x4 physical pixels). */
-const viewportScalePowerOfTwo = 2;
+const viewportScalePowerOfTwo = 0;
 
 /** The physical width of the viewport. */
 const viewportPhysicalWidth = 640;
@@ -40,7 +40,7 @@ const viewportPhysicalVerticalOffset = 150;
 const viewportVerticalOffset = viewportPhysicalVerticalOffset >> viewportScalePowerOfTwo;
 
 /** The power of two that gives the number of viewport pixels per unit of angle. */
-const viewportPowerOfTwoScreenPixelPerAngleUnit = 1;
+const viewportPowerOfTwoAngleUnitPerScreenPixel = viewportScalePowerOfTwo - 1;
 
 /** Vertically, mountains range up to 2^12 in height. */
 const maxHeightBits = 12;
@@ -64,16 +64,20 @@ const viewDistance = 5;
 /** Default Valkyrie thrust, or number of distance units per tick. */
 const defaultThrust = 1 << 5;
 
+/** Minimum and maximum thrust values */
+const minThrust = defaultThrust / 5;
+const maxThrust = defaultThrust * 1.5;
+
 /** Power of two used as attenuation of the fractal displacement used in the fractal interpolation algorithm. Fractalus uses 2, which maps to edge_length / 4. */
 const displacementAttenuationPower = 2;
 
 /** Which bit in the sum of heights flips the sign of the deviation of the fractal algorithm. */
-const fractalFlipBit = 5;
+const fractalFlipBit = 7;
 
 /** Number of milliseconds between runs of the game loop. */
 const tick = 32;
 
 export { mapCoordinateBits, mapSize, bitsBetweenTops, coordinateBits, overheadMapScalePowerOfTwo, viewportScalePowerOfTwo,
     viewportPhysicalWidth, viewportPhysicalHeight, viewportWidth, viewportHeight, viewportPhysicalVerticalOffset, viewportVerticalOffset,
-    viewportPowerOfTwoScreenPixelPerAngleUnit, maxHeightBits, maxHeight, maxDiamondSquareVariation, mazeHoleiness, viewDistance, defaultThrust,
-    displacementAttenuationPower, fractalFlipBit, tick }
+    viewportPowerOfTwoAngleUnitPerScreenPixel, maxHeightBits, maxHeight, maxDiamondSquareVariation, mazeHoleiness, viewDistance, defaultThrust,
+    minThrust, maxThrust, displacementAttenuationPower, fractalFlipBit, tick }
