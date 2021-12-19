@@ -62,6 +62,8 @@ const fadeColors = (color1, color2, fadeFactor) => {
  * @param {number} viewDistance - The maximum distance at which objects are visible.
  * @returns {Shader} a fog shader for the provided vew distance. */
 const fogShader = viewDistance => distance => {
+    // Only start fading beyond distance 1
+    if (distance <= 1) return [mountainColor, mountainEdgeColor];
     const fadeFactor = distance / viewDistance;
     return [
         fadeColors(mountainColor, skyColor, fadeFactor),

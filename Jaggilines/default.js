@@ -13,8 +13,8 @@
 'use strict';
 
 import {
-    mapSize, bitsBetweenTops, coordinateBits, overheadMapScalePowerOfTwo, viewportScalePowerOfTwo, viewportPowerOfTwoScreenPixelPerAngleUnit,
-    viewportWidth, viewportHeight, viewportVerticalOffset, maxHeight, mazeHoleiness, viewDistance, defaultThrust,
+    mapSize, bitsBetweenTops, coordinateBits, overheadMapScalePowerOfTwo, viewportScalePowerOfTwo, viewportPowerOfTwoAngleUnitPerScreenPixel,
+    viewportWidth, viewportHeight, viewportVerticalOffset, maxHeight, mazeHoleiness, viewDistance, defaultThrust, minThrust, maxThrust,
     displacementAttenuationPower, fractalFlipBit, tick
 } from './lib/settings.js';
 import {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', e => {
         viewportVerticalOffset,
         viewDistance,
         viewportScalePowerOfTwo,
-        viewportPowerOfTwoScreenPixelPerAngleUnit,
+        viewportPowerOfTwoAngleUnitPerScreenPixel,
         bitsBetweenTops,
         maxHeight,
         displacementAttenuationPower,

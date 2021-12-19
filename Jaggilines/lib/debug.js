@@ -20,8 +20,10 @@ class Debugger {
             const x = (e.clientX - parent.offsetLeft) >> this.viewport.scalePowerOfTwo;
             const y = (e.clientY - parent.offsetTop) >> this.viewport.scalePowerOfTwo;
             const debugData = this.viewport.getDebugData(x, this.viewport.height - y);
-            this.overheadmap.highlight(debugData.point1.xMap, debugData.point1.yMap, debugData.point2.xMap, debugData.point2.yMap);
-            console.log(debugData);
+            if (debugData) {
+                this.overheadmap.highlight(debugData.point1.xMap, debugData.point1.yMap, debugData.point2.xMap, debugData.point2.yMap);
+                console.log(debugData);
+            }
         });
     }
 }

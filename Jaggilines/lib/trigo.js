@@ -138,20 +138,20 @@ const mod = (n, m) => ((n % m) + m) % m;
   * @returns {number} The angle `a - b`. */
 const angleSub = (a, b) => mod(a - b, fullCircle);
  
- /** An fast to evaluate approximation of the distance between two points.
-  * See [https://www.flipcode.com/archives/Fast_Approximate_Distance_Functions.shtml](approximate distance functions).
-  * @param {number} x1 - The x coordinate of the first point.
-  * @param {number} y1 - The y coordinate of the first point.
-  * @param {number} x2 - The x coordinate of the second point.
-  * @param {number} y2 - The y coordinate of the second point.
-  * @returns {number} The octagonal approximation of the distance between the two points. */
+/** A fast to evaluate approximation of the distance between two points.
+ * See [https://www.flipcode.com/archives/Fast_Approximate_Distance_Functions.shtml](approximate distance functions).
+ * @param {number} x1 - The x coordinate of the first point.
+ * @param {number} y1 - The y coordinate of the first point.
+ * @param {number} x2 - The x coordinate of the second point.
+ * @param {number} y2 - The y coordinate of the second point.
+ * @returns {number} The octagonal approximation of the distance between the two points. */
 const distance = (x1, y1, x2, y2) => {
     const dx = x2 > x1 ? x2 - x1 : x1 - x2;
     const dy = y2 > y1 ? y2 - y1 : y1 - y2;
     const [max, min] = dx > dy ? [dx, dy] : [dy, dx];
     return (((max << 8) + (max << 3) - (max << 4) - (max << 1) + (min << 7) - (min << 5) + (min << 3) - (min << 1)) >> 8);
 }
- 
+
  /** Converts an angle from to [0, fullCircle] range to the [-halfCircle, halfCircle] range.
   * @param {number} angle - The angle to convert.
   * @returns {number} an angle between -halfCircle and halfCircle. */
