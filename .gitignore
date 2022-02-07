@@ -20,3 +20,4 @@ fp-info-cache
 fp-lib-table
 _autosave*
 .vscode
+*-backups
