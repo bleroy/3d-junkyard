@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "(6.0.1)"
     },
-    "CreationDate": "2022-02-09T16:23:40-08:00"
+    "CreationDate": "2022-02-12T19:55:07-08:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "AtariChocXE",
       "GUID": "41746172-6943-4686-9f63-58452e6b6963",
-      "Revision": "F"
+      "Revision": "10"
     },
     "Size": {
       "X": 329.25,
@@ -27,7 +27,7 @@
       "PadToPad": 0.0,
       "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.25,
+      "MinLineWidth": 0.3048,
       "TrackToRegion": 0.508,
       "RegionToRegion": 0.508
     }
