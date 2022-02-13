@@ -286,7 +286,7 @@ module kailh_stem() {
 kailh_choc_height = 3.0 * 2;
 kailh_choc_base_dimensions = [9.0, 3.95, 1.0];
 kailh_choc_insert_distance = 5.7;
-kailh_choc_insert_dimensions = [1.0, 2.6, 3.6];
+kailh_choc_insert_dimensions = [0.90, 2.6, 3.6];
 kailh_choc_insert_teeth_width = 0.4;
 kailh_choc_insert_teeth_depth = 0.05;
 
