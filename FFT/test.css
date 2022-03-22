@@ -1,0 +1,43 @@
+html {
+    background-color: white;
+    color: black;
+}
+
+body {
+    width: 640px;
+    font-family: sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.succeeded {
+    color: green;
+}
+
+.succeeded:before {
+    content: "✅";
+    padding-right: 5px;
+}
+
+.failed {
+    color: red;
+}
+
+.failed:before {
+    content: "❌";
+    padding-right: 5px;
+}
+
+.label {
+    color: black;
+}
+
+.stack-trace {
+    font-family: monospace;
+}
