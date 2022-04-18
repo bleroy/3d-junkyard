@@ -7,14 +7,20 @@ const precision = 16;
 
 class Complex {
     constructor(real, imaginary) {
-        this.real = real;
-        this.imaginary = imaginary;
+        if (real instanceof Complex) {
+            this.real = real.real;
+            this.imaginary = real.imaginary;
+        }
+        else {
+            this.real = real;
+            this.imaginary = imaginary || 0;
+        }
     }
 
-    static FromReal(real) { return new Complex(real, 0); }
-    static FromImaginary(imaginary) { return new Complex(0, imaginary); }
-    static FromParts(real, imaginary) { return new Complex(real, imaginary); }
-    static FromPolar(modulus, argument) { return new Complex(modulus * Math.cos(argument), modulus * Math.sin(argument)); }
+    static fromReal(real) { return new Complex(real, 0); }
+    static fromImaginary(imaginary) { return new Complex(0, imaginary); }
+    static fromParts(real, imaginary) { return new Complex(real, imaginary); }
+    static fromPolar(modulus, argument) { return new Complex(modulus * Math.cos(argument), modulus * Math.sin(argument)); }
     static i = new Complex(0, 1);
     static zero = new Complex(0, 0);
     static one = new Complex(1, 0);
@@ -28,7 +34,10 @@ class Complex {
 
     // Until JS has operator overload (https://github.com/tc39/proposal-operator-overloading)...
     equals(other) {
-        if (typeof(other) === 'number') return this.real === other && this.imaginary === 0;
+        if (typeof(other) === 'number') {
+            return this.real.toPrecision(precision) === other.toPrecision(precision)
+                && this.imaginary.toPrecision(precision) === (0).toPrecision(precision);
+        }
         return this.real.toPrecision(precision) === other.real.toPrecision(precision)
             && this.imaginary.toPrecision(precision) === other.imaginary.toPrecision(precision);
     }

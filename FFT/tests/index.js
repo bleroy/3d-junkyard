@@ -4,8 +4,14 @@
 
 'use strict';
 
+import chicory from './chicory.js';
 import complex from './complex.js';
+import func from './func.js';
+import fft from './fft.js';
 
 export default [
-    complex
+    chicory,
+    complex,
+    func,
+    fft
 ];

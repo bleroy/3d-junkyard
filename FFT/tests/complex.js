@@ -1,28 +1,28 @@
 // Tests for the Complex class
-// (c) 2022 Bertrand Le Roy
+// (c) Bertrand Le Roy
 // Licensed under MIT
 
 'use strict';
 
-import { assert, describe, it } from '../lib/complexChicory.js';
-import Complex from '../complex.js';
+import { assert, describe, it } from '../lib/chicory.js';
+import Complex from '../lib/complex.js';
 const they = it;
 
 export default describe('Complex numbers', () => {
     they("can be obtained from a real number", () => {
-        assert.that(Complex.FromReal(2.4)).equals(new Complex(2.4, 0));
+        assert.that(Complex.fromReal(2.4)).equals(new Complex(2.4, 0));
     });
 
     they("can be obtained from an imaginary number", () => {
-        assert.that(Complex.FromImaginary(4.2)).equals(new Complex(0, 4.2));
+        assert.that(Complex.fromImaginary(4.2)).equals(new Complex(0, 4.2));
     });
 
     they("can be obtained from real and imaginary parts", () => {
-        assert.that(Complex.FromParts(1.2, 4.3)).equals(new Complex(1.2, 4.3));
+        assert.that(Complex.fromParts(1.2, 4.3)).equals(new Complex(1.2, 4.3));
     });
 
     they("can be obtained from their polar representation", () => {
-        assert.that(Complex.FromPolar(2, Math.PI / 3))
+        assert.that(Complex.fromPolar(2, Math.PI / 3))
             .equals(new Complex(1, Math.sqrt(3)));
     });
 

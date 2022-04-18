@@ -44,20 +44,27 @@ describe.after = () => {
     console.groupEnd();
 }
 
-it.callback = (msg, testStack) => {
+it.callback.push((msg, testStack, result) => {
     count++;
     const path = testStack.join(' / ');
     appendEl(msg, 'li', 'succeeded');
+    if (result && result.element instanceof HTMLElement) {
+        elStack[elStack.length - 1].append(result.element);
+    }
     console.log('✅ %c' + msg, "color: green");
     successes++;
-}
-it.errorCallback = (description, err, testStack) => {
+});
+
+it.errorCallback.push((description, err, testStack, result) => {
     const path = testStack.join(' : ');
     failures.push({path, message: err.message, error: err});
     appendEl(description, 'li', 'failed');
-    console.error(description + ': ' + err.message);
+    if (result && result.element instanceof HTMLElement) {
+        elStack[elStack.length - 1].append(result.element);
+    }
+    console.error(description + ': ' + err);
     count++;
-};
+});
 
 tests.forEach(test => {
     test();
@@ -72,8 +79,8 @@ if (failures.length > 0) {
     failures.forEach(failure => {
         pushEl('li');
         appendEl(failure.path, 'h4');
-        appendEl(failure.message, 'div');
-        appendEl(failure.error.stack.replace(/\n/g, '<br/>'), 'div', 'stack-trace');
+        appendEl(failure.message.replace(/\n/g, '\n<br/>'), 'div');
+        appendEl(failure.error.stack.replace(/\n/g, '\n<br/>'), 'div', 'stack-trace');
     });
     popEl();
 }
