@@ -6,7 +6,7 @@
 
 import { describe, it, graph, assert } from '../lib/chicoryFunc.js';
 import { range, cosine, gaussian } from '../lib/func.js';
-import { spectrum, dft } from '../lib/fft.js';
+import { spectrum, dft, idft } from '../lib/fft.js';
 import Complex from '../lib/complex.js';
 
 export default describe('Fast Fourier Transform', () => {
@@ -54,5 +54,12 @@ export default describe('Fast Fourier Transform', () => {
         const gaussianSpectrum = spectrum(gauss);
         return graph(expected(sd), gaussianSpectrum,
             [0, 255], [0, 130 * sd], 2, 2 / sd, 1.8);
+    });
+
+    it("can be reversed", () => {
+        const gauss = gaussian(0, 1, 1);
+        const transformed = dft(gauss);
+        const reversed = idft(transformed);
+        assert.that(reversed).approximates(gauss, 1E-15);
     });
 });

@@ -25,8 +25,8 @@ function dft(signal, start = 0, N = signal.length, step = 1) {
 }
 
 function idft(signal) {
-    return dft(signal.map(xk => new Complex(xk).conjugate()))
-        .map(Xk => Xk.conjugate().over(signal.length));
+    return dft(signal.map(xk => new Complex(xk).conjugate))
+        .map(Xk => Xk.conjugate.over(signal.length));
 }
 
 function spectrum(signal) {
