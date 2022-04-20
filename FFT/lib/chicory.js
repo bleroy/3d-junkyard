@@ -55,12 +55,12 @@ function check(condition, err) {
     if (!condition) throw new Error(err);
 }
 
-function isTrue() { check(!!this, "Expected true.") }
-function isFalse() { check(!this, "Expected false.") }
-function isNull() { check(this === null, "Expected null.") }
-function isNotNull() { check(this !== null, "Expected not null.") }
-function isUndefined() { check(this === undefined, "Expected undefined.") }
-function isNotUndefined() { check(this !== undefined, "Expected not undefined.") }
+function isTrue(err) { check(!!this, err || "Expected true.") }
+function isFalse(err) { check(!this, err ||"Expected false.") }
+function isNull(err) { check(this === null, err || "Expected null.") }
+function isNotNull(err) { check(this !== null, err || "Expected not null.") }
+function isUndefined(err) { check(this === undefined, err || "Expected undefined.") }
+function isNotUndefined(err) { check(this !== undefined, err || "Expected not undefined.") }
 
 function equals(expected) {
     if (expected === null) {

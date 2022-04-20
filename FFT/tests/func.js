@@ -10,7 +10,11 @@ import { range, func, sine, delta } from '../lib/func.js';
 export default describe('Function samples', () => {
     describe('Range', () => {
         it("creates ranges from zero to the parameter", () => {
-            assert.that(range(5)).equals([0, 1, 2, 3, 4]);
+            assert.that([...range(5)]).equals([0, 1, 2, 3, 4]);
+        });
+
+        it("creates ranges between the two parameters", () => {
+            assert.that([...range(2, 5)]).equals([2, 3, 4]);
         });
     });
 
@@ -26,11 +30,10 @@ export default describe('Function samples', () => {
     });
 
     describe('Sine', () => {
-        const sin = x => Math.sin(x);
+        const sin = Math.sin;
         it("samples the sine function", () => {
             const scale = 512 / 2 / Math.PI;
-            assert.that(sine).samples(sin, 0, 2 * Math.PI);
-            return graph(sin, sine, [0, 2 * Math.PI], [-1.1, 1.1], scale, scale);
+            return graph(sin, sine(2 * Math.PI), [0, 2 * Math.PI], [-1.1, 1.1], scale, scale, 10E-16);
         });
     });
 
@@ -43,7 +46,6 @@ export default describe('Function samples', () => {
         it("samples the delta function", () => {
             const scale = 1;
             const x0 = 255;
-            assert.that(delta(x0)).samples(expected(x0), 0, 511);
             return graph(expected(x0), delta(x0), [0, 512], [-0.1, 1.1], scale, 50);
         });
     });

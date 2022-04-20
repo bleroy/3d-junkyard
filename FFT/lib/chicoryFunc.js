@@ -6,7 +6,7 @@
 import { assert, describe, it } from './chicory.js';
 import Complex from '../lib/complex.js';
 
-assert.extend(
+assert.extend([
     function samples(expected, lower, higher) {
         for (let i = 0, x = lower;
             i < this.length;
@@ -18,8 +18,23 @@ assert.extend(
                 throw new Error(`Value at index ${i} (x = ${x}) should be ${expected(x)} but was ${this[i]}.`);
             }
         }
+    },
+    function approximates(expected, tolerance) {
+        if (typeof(this) === 'number') {
+            assert.that(Math.abs(this - expected) < tolerance)
+                .isTrue(`${this} is more than ${tolerance} away from the expected ${expected}.`);
+        } else if (this instanceof Complex) {
+            assert.that(this.minus(expected).modulus < tolerance)
+            .isTrue(`${this} is more than ${tolerance} away from the expected ${expected}.`);
+        } else if (this.length !== expected.length) {
+            throw new Error(`Expected ${expected.length} items but got ${this.length}.`);
+        } else {
+            for (let i = 0; i < this.length; i++) {
+                assert.that(this[i]).approximates(expected[i], tolerance);
+            }
+        }
     }
-);
+]);
 
 /** Creates an element of the supplied tag type and with the specified attributes.
  * @param {string} tag - The tag name.
@@ -78,7 +93,7 @@ const graph = (fn, samples, xRange, yRange, scaleX, scaleY, tolerance = 0) => {
             const screenY = - y * scaleY + orgY;
             ctx.beginPath();
             ctx.lineWidth = 1;
-            ctx.strokeStyle = 'rgb(240, 240, 240, 80)';
+            ctx.strokeStyle = 'rgba(240, 240, 240, 80)';
             ctx.moveTo(screenX, screenY - scaledTolerance);
             ctx.lineTo(screenX, screenY + scaledTolerance);
             ctx.stroke();
