@@ -62,24 +62,27 @@ assert.extend([
  * @param {number} tolerance - The allowed deviation for each sample from the reference function.
  * @returns {HTMLCanvasElement} a canvas containing the graph of the function. */
 const graph = (fn, samples, xRange, yRange, scaleX, scaleY, tolerance = 0) => {
+    const margin = 20;
     const canvas = createEl('canvas', {
-        width: Math.ceil((xRange[1] - xRange[0]) * scaleX),
-        height: Math.ceil((yRange[1] - yRange[0]) * scaleY)
+        width: Math.ceil((xRange[1] - xRange[0]) * scaleX) + margin,
+        height: Math.ceil((yRange[1] - yRange[0]) * scaleY) + margin
     });
     const ctx = canvas.getContext('2d');
     const orgX = -xRange[0] * scaleX;
-    const orgY = canvas.height + yRange[0] * scaleY;
+    const orgY = canvas.height - margin + yRange[0] * scaleY;
+    function toScreenX(x) { return x * scaleX + orgX + margin; }
+    function toScreenY(y) { return -y * scaleY + orgY; }
     // Draw the axes
     ctx.beginPath();
     ctx.lineWidth = 1;
-    ctx.strokeStyle = 'blue';
-    if (orgX > 0 && orgX < canvas.width) {
-        ctx.moveTo(orgX, 0);
-        ctx.lineTo(orgX, canvas.height);
+    ctx.strokeStyle = 'grey';
+    if (orgX > 0 && orgX < canvas.width - margin) {
+        ctx.moveTo(toScreenX(0), 0);
+        ctx.lineTo(toScreenX(0), canvas.height - margin);
     }
-    if (orgY > 0 && orgY < canvas.height) {
-        ctx.moveTo(0, orgY);
-        ctx.lineTo(canvas.width, orgY);
+    if (orgY > 0 && orgY < canvas.height - margin) {
+        ctx.moveTo(margin, toScreenY(0));
+        ctx.lineTo(canvas.width + margin, toScreenY(0));
     }
     ctx.stroke();
     const scaledTolerance = tolerance * scaleY;
@@ -87,13 +90,13 @@ const graph = (fn, samples, xRange, yRange, scaleX, scaleY, tolerance = 0) => {
     // Draw the samples
     for (let i = 0; i < samples.length; i++) {
         const x = (xRange[0] + i * (xRange[1] - xRange[0]) / (samples.length - 1))
-        const screenX = x * scaleX + orgX;
+        const screenX = toScreenX(x);
         const y = samples[i];
         if (!isNaN(y)) {
-            const screenY = - y * scaleY + orgY;
+            const screenY = toScreenY(y);
             ctx.beginPath();
             ctx.lineWidth = 1;
-            ctx.strokeStyle = 'rgba(240, 240, 240, 80)';
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.moveTo(screenX, screenY - scaledTolerance);
             ctx.lineTo(screenX, screenY + scaledTolerance);
             ctx.stroke();
@@ -114,7 +117,7 @@ const graph = (fn, samples, xRange, yRange, scaleX, scaleY, tolerance = 0) => {
     let previousWasDefined = false;
     for (let x = xRange[0]; x <= xRange[1]; x += 1 / scaleX) {
         const y = fn(x);
-        const screenX = x * scaleX + orgX;
+        const screenX = toScreenX(x);
         if (isNaN(y)) {
             ctx.stroke();
             ctx.beginPath();
@@ -126,7 +129,7 @@ const graph = (fn, samples, xRange, yRange, scaleX, scaleY, tolerance = 0) => {
             previousWasDefined = false;
             continue;
         }
-        const screenY = - y * scaleY + orgY;
+        const screenY = toScreenY(y);
         if (previousWasDefined) {
             ctx.lineTo(screenX, screenY);
         }
@@ -136,6 +139,43 @@ const graph = (fn, samples, xRange, yRange, scaleX, scaleY, tolerance = 0) => {
         previousWasDefined = true;
     }
     ctx.stroke();
+    // Clear margins
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, margin, canvas.height);
+    ctx.fillRect(0, canvas.height - margin, canvas.width, margin);
+    // Draw the box
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'grey';
+    ctx.moveTo(margin, 0);
+    ctx.lineTo(canvas.width - 1, 0);
+    ctx.lineTo(canvas.width - 1, canvas.height - margin);
+    ctx.lineTo(margin, canvas.height - margin);
+    ctx.lineTo(margin, 0);
+    ctx.stroke();
+    // Determine scales
+    const horizontalScale = Math.pow(10, Math.floor(Math.log10(Math.abs(xRange[1] - xRange[0]))));
+    const verticalScale = Math.pow(10, Math.floor(Math.log10(Math.abs(xRange[1] - xRange[0]))));
+    // Draw scale ticks
+    ctx.font = '10px sans-serif';
+    ctx.textBaseline = 'top';
+    ctx.textAlign = 'left';
+    for (let x = Math.ceil(xRange[0] / horizontalScale) * horizontalScale; x <= xRange[1]; x += horizontalScale) {
+        const screenX = toScreenX(x);
+        ctx.moveTo(screenX, canvas.height - margin);
+        ctx.lineTo(screenX, canvas.height - margin + 3);
+        ctx.strokeText(x, screenX + 2, canvas.height - margin + 3);
+        ctx.stroke();
+    }
+    ctx.textBaseline = 'alphabetic';
+    ctx.textAlign = 'right';
+    for (let y = Math.ceil(yRange[0] / verticalScale) * verticalScale; y <= yRange[1]; y += verticalScale) {
+        const screenY = toScreenY(y);
+        ctx.moveTo(margin, screenY);
+        ctx.lineTo(margin - 3, screenY);
+        ctx.strokeText(y, margin - 3, screenY);
+        ctx.stroke();
+    }
     const error = errors.length > 0
         ? new Error("Samples out of range.\r\n" + errors.join("\r\n"))
         : null;
