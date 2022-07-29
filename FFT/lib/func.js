@@ -57,7 +57,7 @@ const step = period => func(
  * @param {number} sd the standard deviation
  * @param {number} height the y coordinate of the maximum
  * @returns {number[]} an array filled with the n sampled values of the function between low and high (included) */
- const gaussian = (xp, sd, height = 1 / Math.sqrt(2 * Math.PI)) => func(
+ const gaussian = (xp, sd, height = 1) => func(
     x => height * Math.pow(Math.E, -(x - xp) * (x - xp) / (2 * sd * sd)),
     512, 0, 2 * Math.PI);
 
