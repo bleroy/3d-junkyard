@@ -1,20 +1,21 @@
 $fa = 1;
-$fs = 0.2;
+$fs = 0.5;
 
 eye = "right"; // [right, left]
-eye_outer_width = 90;
-eye_outer_height = 80;
-cup_depth_left = 19;
-cup_depth_right = 16;
-pupil_width = 54;
-pupil_height = 58;
+eye_interior_shape = "tubular"; // [tubular, spherical]
+eye_outer_width = 96;
+eye_outer_height = 86;
+cup_depth_left = 12;
+cup_depth_right = 10;
+pupil_width = 65;
+pupil_height = 73;
 pupil_x_offset = 2.5;
-pupil_y_offset = 2;
+pupil_y_offset = 1;
 wall_thickness = 3.5;
-floor_thickness = 2;
-boudin = 2;
+floor_thickness = 3;
+boudin = 5;
 magnet_diameter = 9;
-magnet_thickness = 2.5;
+magnet_thickness = 0;
 magnet_depth_offset = -9;
 
 cup_total_height = cup_depth_left + wall_thickness;
@@ -42,12 +43,23 @@ scale([eye == "right" ? 1 : -1, 1, 1]) {
       }
 
     // Dig cup cavity
-    scale([1, eye_outer_height / eye_outer_width, 1]) {
-      translate([0, 0, -(cup_total_height + floor_thickness)])
-        minkowski() {
-          cylinder(h = cup_total_height - floor_thickness, r = eye_outer_width / 2 - wall_thickness - boudin);
-          sphere(r = boudin);
-        }
+    if (eye_interior_shape == "tubular") {
+      scale([1, eye_outer_height / eye_outer_width, 1]) {
+        translate([0, 0, -(cup_total_height + floor_thickness)])
+          minkowski() {
+            cylinder(h = cup_total_height - floor_thickness, r = eye_outer_width / 2 - wall_thickness - boudin);
+            sphere(r = boudin);
+          }
+      }
+    }
+    if (eye_interior_shape == "spherical") {
+        translate([0, 0, floor_thickness - cup_total_height])
+          scale([
+            eye_outer_width / 2 - wall_thickness,
+            eye_outer_height / 2 - wall_thickness,
+            cup_total_height + wall_thickness]) {
+            sphere(r = 1);
+          }
     }
 
     // Remove magnet holes
