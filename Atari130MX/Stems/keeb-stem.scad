@@ -1,3 +1,7 @@
+// Stems and adapters to connect vintage key caps to modern switches
+// (c) Bertrand Le Roy
+// Licensed under MIT
+
 $fa = 1;
 $fs = 0.2;
 
