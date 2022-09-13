@@ -1,8 +1,8 @@
 (footprint "SW_Kailh_6.25u_PCB" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 631E8F33)
+  (tedit 6320113F)
   (attr through_hole)
-  (fp_text reference "REF**" (at 0 -8.334375 unlocked) (layer "F.SilkS")
+  (fp_text reference "REF**" (at 0 -8.334375 unlocked) (layer "F.SilkS") hide
     (effects (font (size 1 1) (thickness 0.15)))
     (tstamp ebfa3bc5-489a-4b1a-8067-da3c91cb3045)
   )
