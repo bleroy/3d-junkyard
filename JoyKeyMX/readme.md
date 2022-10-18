@@ -23,11 +23,11 @@ The pins correspond to LEDs as follows:
 
 #### Separate power
 
-To power LEDs through a single separate source, apply power to J3 and solder closed jumpers JP1 to JP7.
+To power LEDs through a single separate source, apply power to J3 and solder jumpers JP1 to JP7 closed.
 
 #### Use Atari connector power
 
-To power the LEDs through the Atari connector's 5V pin (pin 7), colder closed jumpers JP1 to JP7 as well as JP10. Note that this connects pin 1 of J3 to J1 pin 7 and J2 pin 7.
+To power the LEDs through the Atari connector's 5V pin (pin 7), solder jumpers JP1 to JP7 as well as JP10 closed. Note that this connects pin 1 of J3 to J1 pin 7 and J2 pin 7.
 
 ### JP8 - Right button / paddle
 
