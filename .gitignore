@@ -22,6 +22,6 @@ _autosave*
 .vscode
 *-backups
 JoyKeyMX/Universal-Switch-Footprint
-JoyKeyMX/#auto_saved_files#
+*/#auto_saved_files#
 *.kicad_sch-bak
 *.tmp
