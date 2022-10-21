@@ -256,7 +256,7 @@ For the motherboard connection, you can choose to insert the adapter PCB into pl
 
 We're almost done.
 
-If you're going to use the keyboard as a PC keyboard, all you have to do is connect a micro-USB cable between the Pi PICO and the computer. Flash the Pico with [CircuitPython](https://circuitpython.org/board/raspberry_pi_pico/) and [the Python script](Decent130MX.py).
+If you're going to use the keyboard as a PC keyboard, all you have to do is connect a micro-USB cable between the Pi PICO and the computer. Flash the Pico with [CircuitPython](https://circuitpython.org/board/raspberry_pi_pico/) and [the Python script](Firmware/Decent130MX.py).
 
 If you're connecting to the Atari motherboard, put the adapter (if using it) into place on the motherboard, insert your chosen cable on both ends, then set the new keyboard into the case, and reassemble the rest of your Atari.
 
