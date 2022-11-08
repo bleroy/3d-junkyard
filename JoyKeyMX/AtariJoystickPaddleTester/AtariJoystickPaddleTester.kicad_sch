@@ -2592,7 +2592,7 @@
     (property "Value" "SWITCH" (id 1) (at 243.9851 54.61 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile" (id 2) (at 246.38 54.61 0)
+    (property "Footprint" "Library:Slide Switch 3-pin" (id 2) (at 246.38 54.61 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 246.38 54.61 0)
@@ -2780,7 +2780,7 @@
       (reference "R11") (unit 1) (value "3.83k") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/e6c32bfe-2a10-452d-8622-3b0fb981ddf9"
-      (reference "SW1") (unit 1) (value "SWITCH") (footprint "Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile")
+      (reference "SW1") (unit 1) (value "SWITCH") (footprint "Library:Slide Switch 3-pin")
     )
     (path "/81316103-1aa7-4cdf-838f-26fdbe06c5b0"
       (reference "U1") (unit 1) (value "LM7809_TO220") (footprint "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown")
