@@ -1,6 +1,6 @@
 (footprint "Slide Switch 3-pin" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 636A05EF)
+  (tedit 636B2BB4)
   (descr "Slide switch with three pins Datasheet: https://www.ckswitches.com/media/1423/l.pdf Source: https://www.digikey.com/en/products/detail/c-k/L102011MS02Q/484143")
   (tags "switch SPDT On-On")
   (attr through_hole)
@@ -53,9 +53,9 @@
     (scale (xyz 0.3937 0.3937 0.3937))
     (rotate (xyz 0 0 0))
   )
-  (model "C:/Projects/3d-junkyard/JoyKeyMX/Models/SlidingSwitch-Body.wrl"
-    (offset (xyz 4.6 -2.35 0))
-    (scale (xyz 0.3937 0.3937 0.3937))
+  (model "C:/Projects/3d-junkyard/JoyKeyMX/Models/SlidingSwitch.step"
+    (offset (xyz 4.6 -8.24 1))
+    (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
 )
