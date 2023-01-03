@@ -55,7 +55,9 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|322866289|47552001|00000000-0000-0000-0000-000061425593|00000000-0000-0000-0000-000061481338"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
