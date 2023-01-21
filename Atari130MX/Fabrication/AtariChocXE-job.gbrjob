@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "(6.0.1)"
+      "Version": "(6.0.10)"
     },
-    "CreationDate": "2022-02-12T19:55:07-08:00"
+    "CreationDate": "2023-01-14T18:43:18-08:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "AtariChocXE",
       "GUID": "41746172-6943-4686-9f63-58452e6b6963",
-      "Revision": "10"
+      "Revision": "11"
     },
     "Size": {
       "X": 329.25,
@@ -27,7 +27,7 @@
       "PadToPad": 0.0,
       "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.3048,
+      "MinLineWidth": 0.25,
       "TrackToRegion": 0.508,
       "RegionToRegion": 0.508
     }
