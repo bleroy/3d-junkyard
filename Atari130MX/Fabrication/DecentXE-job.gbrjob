@@ -5,12 +5,12 @@
       "Application": "Pcbnew",
       "Version": "(6.0.10)"
     },
-    "CreationDate": "2023-01-22T18:02:13-08:00"
+    "CreationDate": "2023-01-28T23:24:39-08:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "AtariChocXE",
-      "GUID": "41746172-6943-4686-9f63-58452e6b6963",
+      "Name": "DecentXE",
+      "GUID": "44656365-6e74-4584-952e-6b696361645f",
       "Revision": "11"
     },
     "Size": {
@@ -24,8 +24,8 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.0,
-      "PadToTrack": 0.0,
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
       "MinLineWidth": 0.25,
       "TrackToRegion": 0.508,
@@ -34,37 +34,37 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "AtariChocXE-F_Cu.gbr",
+      "Path": "DecentXE-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "AtariChocXE-B_Cu.gbr",
+      "Path": "DecentXE-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "AtariChocXE-F_Silkscreen.gbr",
+      "Path": "DecentXE-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "AtariChocXE-B_Silkscreen.gbr",
+      "Path": "DecentXE-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "AtariChocXE-F_Mask.gbr",
+      "Path": "DecentXE-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "AtariChocXE-B_Mask.gbr",
+      "Path": "DecentXE-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "AtariChocXE-Edge_Cuts.gbr",
+      "Path": "DecentXE-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
