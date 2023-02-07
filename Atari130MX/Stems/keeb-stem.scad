@@ -6,10 +6,10 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari XE ◎"; // [KailhBox, Atari XE ■, Atari XE ◎, Atari XL Alps ▬, Atari XL ✚, Atari XL ⧇]
+cap_type = "Atari Fn"; // [Atari Fn, Atari XE ■, Atari XE ◎, Atari XL Alps ▬, Atari XL ✚, Atari XL ⧇, KailhBox]
 
 // Stem type
-stem_type = "Kailh Box Pink"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter]
+stem_type = "MX Adapter"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter]
 
 // Revision
 rev = "12";
@@ -326,6 +326,38 @@ module mx_adapter() {
   }
 }
 
+module atari_fn() {
+  fn_side = 26.5;
+  fn_depth = 18.3;
+  fn_height = 7;
+  fn_long_side = fn_depth / cos(45);
+  fn_fillet = 5;
+  translate([-(fn_depth + fn_side) / 2, -fn_depth / 2, 0])
+    difference() {
+      union() {
+        difference() {
+          cube([fn_depth + fn_side, fn_depth, fn_height]);
+          translate([0, 0, fn_height - fn_fillet])
+            rotate([45, 0, 0])
+              cube([fn_side * 1.5, fn_fillet / cos(45), fn_fillet / cos(45)]);
+        }
+        translate([0, fn_fillet, fn_height - fn_fillet])
+          rotate([0, 90, 0])
+            difference() {
+              cylinder(r = fn_fillet, h = fn_side * 1.3);
+              translate([0, -fn_fillet * 1.1, -fn_side * 0.1])
+                cube([fn_fillet + 1, fn_fillet * 2.2, fn_side * 1.5]);
+            }
+      }
+      translate([0, 0, -0.5])
+        rotate([0, 0, 45])
+          cube([fn_long_side, fn_long_side, fn_height + 1]);
+      translate([fn_side, 0, -0.5])
+        rotate([0, 0, -45])
+          cube([fn_long_side, fn_long_side, fn_height + 1]);
+    }
+}
+
 union() {
   if (cap_type == "KailhBox") {
     translate([0, 0, box_height / 2])
@@ -350,6 +382,10 @@ union() {
   if (cap_type == "Atari XL ⧇") {
     translate([0, 0, atarixl_square_height / 2])
       atarixl_square();
+  }
+  if (cap_type == "Atari Fn") {
+    translate([0, 0, 0])
+      atari_fn();
   }
   if (stem_type == "Kailh Box Pink") {
     translate([0, kailh_stem_horizontal_offset, -kailh_stem_height / 2])
