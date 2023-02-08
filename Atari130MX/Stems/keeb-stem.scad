@@ -11,11 +11,8 @@ cap_type = "Atari Fn"; // [Atari Fn, Atari XE ■, Atari XE ◎, Atari XL Alps �
 // Stem type
 stem_type = "MX Adapter"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter]
 
-// Revision
-rev = "12";
-
-// Carve revision
-carve_rev = false;
+// Legend
+legend = ""; // ["", Start, Option, Select, Help, Reset, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
 
 module nil() {}
 
@@ -245,13 +242,6 @@ module kailh_stem() {
                 cylinder(r = kailh_stem_main_hole_corner_radius, h = kailh_stem_height - extra_floor + 1, center = true);
             }
           }
-        // Revision number
-        if (carve_rev) {
-          translate([2.2, -box_width / 2 + 0.2, 2])
-            rotate([90, 180, 0])
-              linear_extrude(height = 0.4)
-                text(rev, size = 3);
-        }
       }
     // Spring cone
     translate([0, kailh_stem_spring_column_offset, kailh_stem_spring_column_height / 2])
@@ -327,34 +317,60 @@ module mx_adapter() {
 }
 
 module atari_fn() {
-  fn_side = 26.5;
-  fn_depth = 18.3;
+  fn_side = 26.4;
+  fn_depth = fn_side * cos(45);
   fn_height = 7;
-  fn_long_side = fn_depth / cos(45);
   fn_fillet = 5;
-  translate([-(fn_depth + fn_side) / 2, -fn_depth / 2, 0])
+  fn_top_thickness = fn_height - 4.5;
+  fn_hole_diameter = 17.2;
+  fn_stabilizer_diameter = 3;
+  fn_stabilizer_distance = 12;
+  fn_stabilizer_length = 7.5;
+  fn_legend_distance = 5;
+  fn_legend_depth = 0.5;
+  fn_legend_size = 2.5;
+
+  translate([-(fn_depth + fn_side) / 2, -fn_depth / 2, -(fn_height - fn_top_thickness)])
     difference() {
       union() {
         difference() {
+          // Start with a big block
           cube([fn_depth + fn_side, fn_depth, fn_height]);
+          // Remove an edge where the fillet will go
           translate([0, 0, fn_height - fn_fillet])
             rotate([45, 0, 0])
               cube([fn_side * 1.5, fn_fillet / cos(45), fn_fillet / cos(45)]);
         }
+        // Add the fillet (which is a half-cylinder)
         translate([0, fn_fillet, fn_height - fn_fillet])
           rotate([0, 90, 0])
             difference() {
               cylinder(r = fn_fillet, h = fn_side * 1.3);
+              // Remove the unused half of the cylinder
               translate([0, -fn_fillet * 1.1, -fn_side * 0.1])
                 cube([fn_fillet + 1, fn_fillet * 2.2, fn_side * 1.5]);
             }
+        // Add the stabilizers
+        translate([(fn_depth + fn_side) / 2 + fn_stabilizer_distance * cos(22.5), fn_depth / 2 + fn_stabilizer_distance * sin(22.5), -fn_stabilizer_length])
+          cylinder(r = fn_stabilizer_diameter / 2, h = fn_stabilizer_length + 0.1);
+        translate([(fn_depth + fn_side) / 2 - fn_stabilizer_distance * cos(22.5), fn_depth / 2 - fn_stabilizer_distance * sin(22.5), -fn_stabilizer_length])
+          cylinder(r = fn_stabilizer_diameter / 2, h = fn_stabilizer_length + 0.1);
       }
+      // Remove the angled part on the left
       translate([0, 0, -0.5])
         rotate([0, 0, 45])
-          cube([fn_long_side, fn_long_side, fn_height + 1]);
+          cube([fn_side, fn_side, fn_height + 1]);
+      // And the angled part on the right
       translate([fn_side, 0, -0.5])
         rotate([0, 0, -45])
-          cube([fn_long_side, fn_long_side, fn_height + 1]);
+          cube([fn_side, fn_side, fn_height + 1]);
+      // Dig a cylinder in the underside to make room for the switch
+      translate([(fn_depth + fn_side) / 2, fn_depth / 2, -0.1])
+        cylinder(r = fn_hole_diameter / 2, h = fn_height - fn_top_thickness + 0.1);
+      // Carve the legend
+      translate([fn_depth, fn_depth - fn_legend_distance, fn_height - fn_legend_depth])
+        linear_extrude(height = fn_legend_depth + 0.1)
+          text(legend, size = fn_legend_size, font = "Microsoft Sans Serif:style=Regular", valign = "baseline");
     }
 }
 
