@@ -9,7 +9,7 @@ $fs = 0.2;
 cap_type = "Atari Fn"; // [Atari Fn, Atari XE ■, Atari XE ◎, Atari XL Alps ▬, Atari XL ✚, Atari XL ⧇, KailhBox]
 
 // Stem type
-stem_type = "MX Adapter"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter]
+stem_type = "MX Adapter"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter, Low-pro adapter]
 
 // Legend
 legend = ""; // ["", Start, Option, Select, Help, Reset, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
@@ -47,11 +47,11 @@ module kailh_box() {
 }
 
 atari_box_width = 6.40;
-atari_box_height = 4.7;
+atari_box_height = 4;
 atari_square_width = 3.2;
 atari_square_depth = 2.8;
 atari_square_circle_radius = atari_square_width * sqrt(2) / 2;
-atari_box_bottom_thickness = 0.7;
+//atari_box_bottom_thickness = 0.7;
 atari_box_bottom_outer_offset = 0.05;
 
 module atarixe_square() {
@@ -63,11 +63,11 @@ module atarixe_square() {
         cylinder(r = atari_square_circle_radius, h = atari_box_height - atari_square_depth + 0.1);
       // Add a recess at the bottom so if resin residues cling in the angles, they do so without preventing the cap from going in completely.
       rotate([0, 0, 45])
-        translate([0, 0, 1 - atari_square_depth])
+        translate([0, 0, 1 - atari_square_depth - 0.1])
           cylinder(h = 1, d1 = atari_square_circle_radius * 2 + 1, d2 = atari_square_circle_radius * 2, $fn = 4);
     }
-    translate([0, 0, (atari_box_bottom_thickness - atari_box_height) / 2])
-      cube([atari_box_width, atari_box_width, atari_box_bottom_thickness], center = true);
+    //translate([0, 0, (atari_box_bottom_thickness - atari_box_height) / 2])
+    //  cube([atari_box_width, atari_box_width, atari_box_bottom_thickness], center = true);
   }
 }
 
@@ -138,7 +138,7 @@ atarixl_square_teeth_depth = 0.05;
 
 module atarixl_square() {
   union() {
-    cube([atarixl_square_size, atarixl_square_size, atarixl_square_height], center = true);
+    #ube([atarixl_square_size, atarixl_square_size, atarixl_square_height], center = true);
     cube([atarixl_square_size + atarixl_square_teeth_depth * 2, atarixl_square_teeth_width, atarixl_square_height], center = true);
     cube([atarixl_square_teeth_width, atarixl_square_size + atarixl_square_teeth_depth * 2, atarixl_square_height], center = true);
   }
@@ -300,18 +300,19 @@ module kailh_choc() {
     }
 }
 
-mxadapter_stem_height = 3.5;
+low_pro_adapter_height = 3.0;
+mxadapter_stem_height = stem_type == "Low-pro adapter" ? low_pro_adapter_height : 3.5;
 mxadapter_stem_diameter = 5.55;
 mxadapter_cross_thickness = 1.35;
 mxadapter_cross_size = 4.2;
-mxadapter_floor_thickness = 0.1;
+mxadapter_floor_thickness = 0.;
 
 module mx_adapter() {
   difference() {
     cylinder(r = mxadapter_stem_diameter / 2, h = mxadapter_stem_height, center = true);
     translate([0, 0, -mxadapter_floor_thickness * 1.5]) {
-      cube([mxadapter_cross_thickness, mxadapter_cross_size, mxadapter_stem_height + mxadapter_floor_thickness], center = true);
-      cube([mxadapter_cross_size, mxadapter_cross_thickness, mxadapter_stem_height + mxadapter_floor_thickness], center = true);
+      cube([mxadapter_cross_thickness, mxadapter_cross_size, mxadapter_stem_height + mxadapter_floor_thickness + 0.2], center = true);
+      cube([mxadapter_cross_size, mxadapter_cross_thickness, mxadapter_stem_height + mxadapter_floor_thickness + 0.2], center = true);
     }
   }
 }
@@ -416,7 +417,7 @@ union() {
     translate([0, 0, -kailh_choc_height / 2])
       kailh_choc();
   }
-  if (stem_type == "MX Adapter") {
+  if (stem_type == "MX Adapter" || stem_type == "Low-pro adapter") {
     translate([0, 0, -mxadapter_stem_height / 2])
       mx_adapter();
   }
