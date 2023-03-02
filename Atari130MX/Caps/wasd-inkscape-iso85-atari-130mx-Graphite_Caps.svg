@@ -7,7 +7,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="wasd-inkscape-iso85-atari-130mx-LIGHT_legends.svg"
+   sodipodi:docname="wasd-inkscape-iso85-atari-130mx-Graphite.Caps.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -173,9 +173,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.0000008"
-     inkscape:cx="1193.8124"
-     inkscape:cy="173.37498"
+     inkscape:zoom="1.0000001"
+     inkscape:cx="778.49992"
+     inkscape:cy="369.99996"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2902,7 +2902,7 @@
      inkscape:groupmode="layer"
      id="layer32"
      inkscape:label="Key Grids (Not Printed)"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
        inkscape:connector-curvature="0"
@@ -6152,6 +6152,10 @@
        style="display:inline;fill:#e6e6e6;stroke-width:0.200001"
        d="m 1258.9062,390.33927 v 15 h -15 -15 v -15 -15 h 15 15 z m -15.1,0 -14.1989,14.20001 h 14.2494 14.2495 v -14.20001 c 0,-7.81001 -0.023,-14.20001 -0.051,-14.20001 -0.028,0 -6.44,6.39 -14.2494,14.20001 z"
        id="path31095-5" />
+    <path
+       style="display:inline;fill:#e6e6e6;stroke-width:0.123502"
+       d="m 161.31766,380.37173 v 9.96754 h -8.60753 -8.60753 v -9.96754 -9.96753 h 8.60753 8.60753 z m -8.66491,0 -8.14783,9.43594 h 8.17681 8.17687 v -9.43594 c 0,-5.18977 -0.0132,-9.43593 -0.0293,-9.43593 -0.0161,0 -3.6955,4.24616 -8.17681,9.43593 z"
+       id="path31095-5-8" />
     <g
        id="g1791">
       <path
