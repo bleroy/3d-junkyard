@@ -26,3 +26,4 @@ JoyKeyMX/Universal-Switch-Footprint
 *.kicad_sch-bak
 *.tmp
 *.ods#
+.~lock.*.csv#
