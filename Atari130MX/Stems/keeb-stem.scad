@@ -14,6 +14,12 @@ stem_type = "MX Adapter"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter, Low-pro
 // Legend
 legend = ""; // ["", Start, Option, Select, Help, Reset, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
 
+// Repeat rows
+rows = 1; // [1:1:10]
+
+// Repeat columns
+columns = 1; // [1:1:10]
+
 module nil() {}
 
 box_width = 6.40;
@@ -301,7 +307,7 @@ module kailh_choc() {
 }
 
 low_pro_adapter_height = 3.0;
-mxadapter_stem_height = stem_type == "Low-pro adapter" ? low_pro_adapter_height : 3.5;
+mxadapter_stem_height = stem_type == "Low-pro adapter" ? low_pro_adapter_height : 3;
 mxadapter_stem_diameter = 5.55;
 mxadapter_cross_thickness = 1.35;
 mxadapter_cross_size = 4.2;
@@ -322,14 +328,15 @@ module atari_fn() {
   fn_depth = fn_side * cos(45);
   fn_height = 7;
   fn_fillet = 5;
-  fn_top_thickness = fn_height - 4.5;
-  fn_hole_diameter = 17;
+  fn_top_thickness = fn_height - 6.5;
+  fn_hole_diameter = 16 * sqrt(2);
   fn_stabilizer_diameter = 3.9;
   fn_stabilizer_distance = 12;
-  fn_stabilizer_length = 7.5;
+  fn_stabilizer_length = 5;
   fn_legend_distance = 5;
   fn_legend_depth = 0.5;
   fn_legend_size = 2.5;
+  fn_distance = 28.575;
 
   translate([-(fn_depth + fn_side) / 2, -fn_depth / 2, -(fn_height - fn_top_thickness)])
     difference() {
@@ -350,9 +357,6 @@ module atari_fn() {
             translate([(fn_depth + fn_side) / 2 - fn_stabilizer_distance * cos(22.5), fn_depth / 2 - fn_stabilizer_distance * sin(22.5), -fn_stabilizer_length])
               cylinder(r = fn_stabilizer_diameter / 2, h = fn_stabilizer_length + 0.1);
           }
-          // Dig a cylinder in the underside to make room for the switch
-          translate([(fn_depth + fn_side) / 2, fn_depth / 2, -0.1])
-            cylinder(r = fn_hole_diameter / 2, h = fn_height - fn_top_thickness + 0.1);
           // Carve the legend
           translate([fn_depth, fn_depth - fn_legend_distance, fn_height - fn_legend_depth])
             linear_extrude(height = fn_legend_depth + 0.1)
@@ -366,7 +370,7 @@ module atari_fn() {
               // Remove the unused half of the cylinder
               translate([fn_fillet * 0.5, -fn_fillet * 1.2, -fn_side * 0.1])
                 rotate([0, 0, 45])
-                  cube([fn_fillet *2.2, fn_fillet * 2.2, fn_side * 1.5]);
+                  cube([fn_fillet *2.2, fn_fillet * 6, fn_side * 1.5]);
             }
       }
       // Remove the angled part on the left
@@ -377,48 +381,69 @@ module atari_fn() {
       translate([fn_side, 0, -0.5])
         rotate([0, 0, -45])
           cube([fn_side, fn_side, fn_height + 1]);
+      // Dig a pyramid in the underside to make room for the switch,
+      // plus two others on either side to make room for the adjacent switches
+      translate([(fn_depth + fn_side) / 2, fn_depth / 2, -0.1])
+        rotate([0, 0, 45])
+          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 2 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
+      translate([(fn_depth + fn_side) / 2 + fn_distance, fn_depth / 2, -0.1])
+        rotate([0, 0, 45])
+          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 2 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
+      translate([(fn_depth + fn_side) / 2 - fn_distance, fn_depth / 2, -0.1])
+        rotate([0, 0, 45])
+          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 2 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
     }
 }
 
 union() {
-  if (cap_type == "KailhBox") {
-    translate([0, 0, box_height / 2])
-      kailh_box();
-  }
-  if (cap_type == "Atari XE ■") {
-    translate([0, 0, atari_box_height / 2])
-      atarixe_square();
-  }
-  if (cap_type == "Atari XE ◎") {
-    extra_floor = 1;
-    atarixe_circle();
-  }
-  if (cap_type == "Atari XL Alps ▬") {
-    translate([0, 0, box_height / 2])
-      atarixl_alps();
-  }
-  if (cap_type == "Atari XL ✚") {
-    translate([0, 0, atarixl_cross_height / 2])
-      atarixl_cross();
-  }
-  if (cap_type == "Atari XL ⧇") {
-    translate([0, 0, atarixl_square_height / 2])
-      atarixl_square();
-  }
-  if (cap_type == "Atari Fn") {
-    translate([0, 0, 0])
-      atari_fn();
-  }
-  if (stem_type == "Kailh Box Pink") {
-    translate([0, kailh_stem_horizontal_offset, -kailh_stem_height / 2])
-      kailh_stem();
-  }
-  if (stem_type == "Kailh Choc v1") {
-    translate([0, 0, -kailh_choc_height / 2])
-      kailh_choc();
-  }
-  if (stem_type == "MX Adapter" || stem_type == "Low-pro adapter") {
-    translate([0, 0, -mxadapter_stem_height / 2])
-      mx_adapter();
+  horiz_offset = 8;
+  vert_offset = 8;
+  for (row = [1:rows]) {
+    for (col = [1:columns]) {
+      translate([row * vert_offset, col * horiz_offset, 0]) {
+        union() {
+          if (cap_type == "KailhBox") {
+            translate([0, 0, box_height / 2])
+              kailh_box();
+          }
+          if (cap_type == "Atari XE ■") {
+            translate([0, 0, atari_box_height / 2])
+              atarixe_square();
+          }
+          if (cap_type == "Atari XE ◎") {
+            extra_floor = 1;
+            atarixe_circle();
+          }
+          if (cap_type == "Atari XL Alps ▬") {
+            translate([0, 0, box_height / 2])
+              atarixl_alps(); 
+          }
+          if (cap_type == "Atari XL ✚") {
+            translate([0, 0, atarixl_cross_height / 2])
+              atarixl_cross();
+          }
+          if (cap_type == "Atari XL ⧇") {
+            translate([0, 0, atarixl_square_height / 2])
+              atarixl_square();
+          }
+          if (cap_type == "Atari Fn") {
+            translate([0, 0, 0])
+              atari_fn();
+          }
+          if (stem_type == "Kailh Box Pink") {
+            translate([0, kailh_stem_horizontal_offset, -kailh_stem_height / 2])
+              kailh_stem();
+          }
+          if (stem_type == "Kailh Choc v1") {
+            translate([0, 0, -kailh_choc_height / 2])
+              kailh_choc();
+          }
+          if (stem_type == "MX Adapter" || stem_type == "Low-pro adapter") {
+            translate([0, 0, -mxadapter_stem_height / 2])
+              mx_adapter();
+          }
+        }
+      }
+    }
   }
 }
