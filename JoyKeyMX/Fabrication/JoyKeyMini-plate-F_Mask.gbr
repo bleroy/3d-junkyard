@@ -1,0 +1,35 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,(7.0.0)*%
+%TF.CreationDate,2023-03-02T11:53:53-08:00*%
+%TF.ProjectId,JoyKeyMini-plate,4a6f794b-6579-44d6-996e-692d706c6174,1*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Soldermask,Top*%
+%TF.FilePolarity,Negative*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW (7.0.0)) date 2023-03-02 11:53:53*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%ADD10C,3.200000*%
+%ADD11O,2.000000X3.200000*%
+G04 APERTURE END LIST*
+D10*
+%TO.C,REF\u002A\u002A*%
+X109326165Y-69363850D03*
+%TD*%
+%TO.C,REF\u002A\u002A*%
+X26474165Y-69363850D03*
+%TD*%
+%TO.C,REF\u002A\u002A*%
+X26474165Y-28206350D03*
+%TD*%
+D11*
+%TO.C,*%
+X53061799Y-26587599D03*
+%TD*%
+D10*
+%TO.C,REF\u002A\u002A*%
+X109326165Y-28138850D03*
+%TD*%
+M02*
