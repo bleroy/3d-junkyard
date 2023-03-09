@@ -1,7 +1,0 @@
-"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
-1;",";"";2;"";;;
-2;"REF**";"OSH_logo";1;"OSH_logo";;;
-3;"G***";"ScreamingLogo";1;"LOGO";;;
-4;"SW1,SW6,SW4,SW5,SW3";"MX-1-00U-LED";5;"SW_WITHLED";;;
-5;"R7,R6,R5,R4,R1";"R_0603_1608Metric_Pad0.98x0.95mm_HandSolder";5;"100";;;
-6;"J1";"DSUB-9_Female_Horizontal_P2.77x2.54mm_EdgePinOffset9.40mm";1;"DB9_Female";;;
