@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "(7.0.0)"
     },
-    "CreationDate": "2023-03-04T23:54:57-08:00"
+    "CreationDate": "2023-03-20T18:55:59-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -39,8 +39,18 @@
       "FilePolarity": "Positive"
     },
     {
+      "Path": "JoyKeyMini-B_Cu.gbr",
+      "FileFunction": "Copper,L2,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
       "Path": "JoyKeyMini-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "JoyKeyMini-B_Paste.gbr",
+      "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
@@ -49,8 +59,18 @@
       "FilePolarity": "Positive"
     },
     {
+      "Path": "JoyKeyMini-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
       "Path": "JoyKeyMini-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "JoyKeyMini-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {

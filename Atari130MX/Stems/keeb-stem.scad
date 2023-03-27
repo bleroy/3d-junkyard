@@ -23,6 +23,9 @@ columns = 1; // [1:1:10]
 // Rotate switch 90 degrees
 rotate_switch = false;
 
+// Accurate production
+accurate = true;
+
 row_count = rows;
 column_count = cap_type == "Atari Fn Set" ? 5 : columns;
 
@@ -60,7 +63,7 @@ module kailh_box() {
 
 atari_box_width = 6.40;
 atari_box_height = 4;
-atari_square_width = 3.2;
+atari_square_width = accurate ? 3.05 : 3.2;
 atari_square_depth = 2.8;
 atari_square_circle_radius = atari_square_width * sqrt(2) / 2;
 //atari_box_bottom_thickness = 0.7;
@@ -83,9 +86,9 @@ module atarixe_square() {
   }
 }
 
-atari_circle_inner_diameter = 4.25;
-atari_circle_wing_thickness = 1.40;
-atari_circle_depth = 4.0;
+atari_circle_inner_diameter = accurate ? 4.40 : 4.25;
+atari_circle_wing_thickness = accurate ? 1.45 : 1.40;
+atari_circle_depth = accurate ? 4.8 : 4.0;
 
 module atarixe_circle() {
   union() {
@@ -150,7 +153,7 @@ atarixl_square_teeth_depth = 0.05;
 
 module atarixl_square() {
   union() {
-    #ube([atarixl_square_size, atarixl_square_size, atarixl_square_height], center = true);
+    cube([atarixl_square_size, atarixl_square_size, atarixl_square_height], center = true);
     cube([atarixl_square_size + atarixl_square_teeth_depth * 2, atarixl_square_teeth_width, atarixl_square_height], center = true);
     cube([atarixl_square_teeth_width, atarixl_square_size + atarixl_square_teeth_depth * 2, atarixl_square_height], center = true);
   }
@@ -292,7 +295,7 @@ module kailh_stem() {
 kailh_choc_height = 3.0 * 2;
 kailh_choc_base_dimensions = [9.0, 3.95, 1.0];
 kailh_choc_insert_distance = 5.7;
-kailh_choc_insert_dimensions = [0.90, 2.6, 3.6];
+kailh_choc_insert_dimensions = accurate ? [1.15, 2.9, 4.0] : [0.90, 2.6, 3.6];
 kailh_choc_insert_teeth_width = 0.4;
 kailh_choc_insert_teeth_depth = 0.05;
 
@@ -315,8 +318,8 @@ module kailh_choc() {
 low_pro_adapter_height = 3.0;
 mxadapter_stem_height = stem_type == "Low-pro adapter" ? low_pro_adapter_height : 3;
 mxadapter_stem_diameter = 5.55;
-mxadapter_cross_thickness = 1.35;
-mxadapter_cross_size = 4.2;
+mxadapter_cross_thickness = accurate ? 1.1 : 1.35;
+mxadapter_cross_size = accurate ? 4 : 4.2;
 mxadapter_floor_thickness = 0.;
 mxadapter_resin_drain_diameter = mxadapter_cross_thickness;
 
@@ -340,7 +343,7 @@ module mx_adapter() {
 
 fn_side = 26.4;
 fn_depth = fn_side * cos(45) - 0.5;
-fn_height = 7.5;
+fn_height = accurate ? 8.2 : 7.5;
 fn_fillet = 5;
 fn_top_thickness = fn_height - 6.5;
 fn_hole_diameter = 16 * sqrt(2);
@@ -348,7 +351,7 @@ fn_stabilizer_diameter = 3.9;
 fn_stabilizer_distance = 12;
 fn_stabilizer_length = 5;
 fn_legend_distance = 5;
-fn_legend_depth = 0.2;
+fn_legend_depth = accurate ? 0.3 : 0.2;
 fn_legend_size = 2.5;
 fn_distance = 28.575;
 
@@ -424,7 +427,7 @@ union() {
     20;
   horiz_conn_length = cap_type == "Atari XE ◎" ? horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter + 0.1 :
     cap_type == "Atari XE ■" ? horiz_offset - atari_box_width + 0.1 :
-    cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? horiz_offset - fn_depth :
+    cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? horiz_offset - fn_depth + 0.2 :
     horiz_offset;
   vert_conn_radius = stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? atari_circle_wing_thickness / 2 :
     stem_type == "Kailh Choc v1" ? kailh_choc_base_dimensions[2] / 2 :
@@ -491,11 +494,11 @@ union() {
               mx_adapter();
           }
           if (row > 1) {
-            translate([0, -horiz_offset / 2 + 0.05, horiz_conn_altitude])
+            #translate([0, -horiz_offset / 2 + 0.05, horiz_conn_altitude])
               rotate([90, 0, 0])
                 cylinder(r = horiz_conn_radius, h = horiz_conn_length, center = true);
           }
-          #if (col > 1) {
+          if (col > 1) {
             translate([-vert_offset / 2 - 0.05, 0, vert_conn_altitude])
               rotate([0, 90, cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? -45 : 0])
                 cylinder(r = vert_conn_radius, h = vert_conn_length, center = true);
