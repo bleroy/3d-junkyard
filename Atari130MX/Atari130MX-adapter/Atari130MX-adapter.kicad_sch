@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "Atari XEMX keyboard adapter")
-    (date "2021-09-19")
-    (rev "A")
+    (title "Atari XE keyboard adapter")
+    (date "2023-03-31")
+    (rev "F")
     (company "Decent Consulting")
   )
 
