@@ -81,8 +81,6 @@ module atarixe_square() {
         translate([0, 0, 1 - atari_square_depth - 0.1])
           cylinder(h = 1, d1 = atari_square_circle_radius * 2 + 1, d2 = atari_square_circle_radius * 2, $fn = 4);
     }
-    //translate([0, 0, (atari_box_bottom_thickness - atari_box_height) / 2])
-    //  cube([atari_box_width, atari_box_width, atari_box_bottom_thickness], center = true);
   }
 }
 
@@ -331,12 +329,14 @@ module mx_adapter() {
       cube([mxadapter_cross_thickness, mxadapter_cross_size, mxadapter_stem_height + mxadapter_floor_thickness + 0.2], center = true);
       cube([mxadapter_cross_size, mxadapter_cross_thickness, mxadapter_stem_height + mxadapter_floor_thickness + 0.2], center = true);
     }
-    // Some resin drainage pipes
-    translate([0, 0, -mxadapter_floor_thickness * 1.5 + mxadapter_stem_height / 2 - mxadapter_resin_drain_diameter / 2]) {
-      rotate([90, 0, 0])
-        cylinder(r = mxadapter_resin_drain_diameter / 2, h = mxadapter_stem_diameter, center = true);
-      rotate([0, 90, 0])
-        cylinder(r = mxadapter_resin_drain_diameter / 2, h = mxadapter_stem_diameter, center = true);
+    if (!accurate) {
+      // Some resin drainage pipes
+      translate([0, 0, -mxadapter_floor_thickness * 1.5 + mxadapter_stem_height / 2 - mxadapter_resin_drain_diameter / 2 - 0.1]) {
+        rotate([90, 0, 0])
+          cylinder(r = mxadapter_resin_drain_diameter / 2, h = mxadapter_stem_diameter, center = true);
+        rotate([0, 90, 0])
+          cylinder(r = mxadapter_resin_drain_diameter / 2, h = mxadapter_stem_diameter, center = true);
+      }
     }
   }
 }
@@ -414,10 +414,10 @@ module atari_fn(legend) {
 }
 
 union() {
-  horiz_conn_radius = cap_type == "Atari XE ◎" ? atari_circle_wing_thickness / 2 :
+  horiz_conn_radius = cap_type == "Atari XE ◎" ? atari_circle_wing_thickness / 2  :
     cap_type == "Atari XE ■" ? 0.75 :
     0.75;
-  horiz_conn_altitude = cap_type == "Atari XE ◎" ? atari_circle_depth + extra_floor - horiz_conn_radius :
+  horiz_conn_altitude = cap_type == "Atari XE ◎" ? rotate_switch ? extra_floor - horiz_conn_radius : atari_circle_depth + extra_floor - horiz_conn_radius :
     cap_type == "Atari XE ■" ? horiz_conn_radius :
     cap_type == "Atari Fn Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
     20;
@@ -425,12 +425,12 @@ union() {
     cap_type == "Atari XE ■" ? 10 :
     cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? fn_depth + 2 :
     20;
-  horiz_conn_length = cap_type == "Atari XE ◎" ? horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter + 0.1 :
+  horiz_conn_length = cap_type == "Atari XE ◎" ? (horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter) * (rotate_switch ? 2 : 1) + 0.1 :
     cap_type == "Atari XE ■" ? horiz_offset - atari_box_width + 0.1 :
     cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? horiz_offset - fn_depth + 0.2 :
     horiz_offset;
   vert_conn_radius = stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? atari_circle_wing_thickness / 2 :
-    stem_type == "Kailh Choc v1" ? kailh_choc_base_dimensions[2] / 2 :
+    stem_type == "Kailh Choc v1" ? max(kailh_choc_base_dimensions[2] / 2, 0.5) :
     0.75;
   vert_conn_altitude = cap_type == "Atari Fn Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? vert_conn_radius - mxadapter_stem_height :
@@ -459,7 +459,8 @@ union() {
           }
           if (cap_type == "Atari XE ◎") {
             extra_floor = 1;
-            atarixe_circle();
+            rotate([0, 0, rotate_switch ? 90 : 0])
+              atarixe_circle();
           }
           if (cap_type == "Atari XL Alps ▬") {
             translate([0, 0, box_height / 2])
@@ -486,20 +487,19 @@ union() {
           }
           if (stem_type == "Kailh Choc v1") {
             translate([0, 0, -kailh_choc_height / 2])
-              rotate([0, 0, rotate_switch ? 90 : 0])
-                kailh_choc();
+              kailh_choc();
           }
           if (stem_type == "MX Adapter" || stem_type == "Low-pro adapter") {
             translate([0, 0, -mxadapter_stem_height / 2])
               mx_adapter();
           }
           if (row > 1) {
-            #translate([0, -horiz_offset / 2 + 0.05, horiz_conn_altitude])
+            translate([0, -horiz_offset / 2 + 0.05, horiz_conn_altitude])
               rotate([90, 0, 0])
                 cylinder(r = horiz_conn_radius, h = horiz_conn_length, center = true);
           }
           if (col > 1) {
-            translate([-vert_offset / 2 - 0.05, 0, vert_conn_altitude])
+            translate([-vert_offset / 2, 0, vert_conn_altitude])
               rotate([0, 90, cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? -45 : 0])
                 cylinder(r = vert_conn_radius, h = vert_conn_length, center = true);
           }
