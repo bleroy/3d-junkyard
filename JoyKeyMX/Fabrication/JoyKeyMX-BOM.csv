@@ -1,0 +1,9 @@
+Comment,Designator,Footprint,JLCPCB Part #,Quantity
+SW_WITHLED,"SW7,SW6,SW5,SW4,SW3,SW2,SW1",MX-1-00U-LED,C2297,7
+560,"R9,R8",R_0603_1608Metric,C23204 ,2
+100,"R7,R6,R5,R4,R3,R2,R1",R_0603_1608Metric,C22775,7
+DPDT,JP1,SW_CuK_JS202011AQN_DPDT_Angled,,1
+Conn_01x02,"J4,J3",PinHeader_1x02_P2.54mm_Vertical,,2
+Conn_01x09,J2,PinHeader_1x09_P2.54mm_Vertical,,1
+DB9_Female,J1,DSUB-9_Female_Horizontal_P2.77x2.54mm_EdgePinOffset9.40mm,,1
+1M,"RV1,RV2",Potentiometer (centered),,2
