@@ -22,7 +22,7 @@ As I made the project public on [Atariage forums](https://forums.atariage.com/to
 
 The stabilizers were costar stabilizers for the left shift, which required some creative bending of the vintage stabilizer rod and always remained a little clunky. The space bar rod has a larger diameter and necessitated 3D-printed stabilizers that were, to be frank, terrible. They sorta did the job, just poorly.
 
-![Stems and stabilizers, comparison with stock parts](Reference/stems-and-stabilizers.jpg)
+![Stems and stabilizers, comparison with stock parts](Media/stems-and-stabilizers.jpg)
 
 The first plate I made was water-jet-cut steel. That was expensive and rusty. I quickly realized after that first attempt that PCB fabrication houses can make aluminum PCBs for cheap. Those are machined rather than laser or water-jet cut, but the quality is perfectly adequate for a fraction of the price. They are just PCBs without circuitry on them. I later learned how other handmade keyboard makers use the same trick, including with regular PCBs, although aluminum is clearly superior for this application.
 
