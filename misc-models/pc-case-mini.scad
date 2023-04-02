@@ -32,7 +32,10 @@ front_thickness = 6.7;
 glass_margin = 2.5;
 
 // Grille hole diameter
-grille_hole_diameter = 0.5;
+grille_hole_diameter = 0.6;
+
+// Grille hole depth
+grille_hole_depth = 0.6;
 
 // Grille hole distance
 grille_hole_distance = 1.5;
@@ -87,7 +90,7 @@ difference() {
         for (i = [1 : floor(case_width / grille_hole_distance) - 1]) {
             translate([(j % 2) * grille_hole_distance / 2 + i * grille_hole_distance - case_width / 2, -case_depth / 2, y + lower_block_height -case_height / 2])
                 rotate([90, 0, 0])
-                    cylinder(r = grille_hole_diameter, h = 0.2, center=true, $fn=8);
+                    cylinder(r = grille_hole_diameter, h = grille_hole_depth * 2, center=true, $fn=8);
         }
     }
     // Back windows
