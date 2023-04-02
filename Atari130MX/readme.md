@@ -4,16 +4,17 @@ Whether you have an old Atari XE computer with a dead keyboard membrane, would l
 
 ![The DecentXE keyboard with modern graphite key caps](Media/ModernGraphite.jpg)
 
-There are two versions of the keyboard: 
+There are two versions of the keyboard: modern and vintage. Modern uses brand new key MX-compatible key caps, while vintage uses the original Atari key caps and adapts them to modern switches.
+
 There's been a number of previous projects to put a modern keyboard on Atari 8-bit computers. I don't think anyone's done it while preserving the original keycaps though (would love to be proven wrong). Once assembled, you can't tell the difference from an aesthetic point of view... Check this out:
+
+![Vintage DecentXE keyboard](Media/Atari130MX.jpg)
 
 But wait!... That's not all. Since the project started, there's been multiple revisions, adaptations to all kinds of demands from other Atari enthusiasts, and you now have many options to build the keyboard of your dreams...
 
 ## Project history
 
 My first attempt at this was to replace the stem in a [Kailh Box Pink switch](https://novelkeys.com/collections/switches/products/kailh-box-switches?variant=40598132129959) with a 3D-printed version that replaces the regular MX cap footprint with an Atari XE cap footprint. The modified stems were printed with my first printer, an Elegoo Mars 2 Pro. Its 50 micron resolution was essential when replacing such a small and precise part.
-
-![The first prototype](Media/Atari130MX.jpg)
 
 This worked great, with switches that were a little more gritty than the originals but still a huge improvement over the mushy XE keyboard I was replacing.
 
