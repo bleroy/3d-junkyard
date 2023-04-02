@@ -1,42 +1,44 @@
-# JoyKeyMX - an Atari-compatible joystick built with mechanical switches
+# JoyKey - an Atari-compatible joystick built with mechanical switches
+
+## JoyKey Mini vs. JoyKey XL
+
+There are two models of JoyKey: JoyKey Mini and JoyKey XL.
+
+The Mini is a small and simple four directions and fire controller with a 9-pin Atari-compatible plug. It's designed with Atari 8-bit computers and consoles in mind, but it can be used with any compatible retro systemm such as the C64.
+
+The XL is designed to maximize the potential of the Atari 8-bit joystick port.
+It has the same four directions and fire as the Mini, but adds two fire buttons using the Atari 7800 wiring and two analog paddles.
 
 ## Configuration
 
+The Mini has no configuration, just plug and play. The XL has a single switch in the back to choose to use the paddles or the two additional fire buttons.
+In paddle mode, the additional fires act as the regular fire button.
+
 ### LED configuration
 
-The LED circuit is independent and optional. If you go for lighting, you can either use the 5V from pin 7 to power it, or provide power to the J3 LED power connector.
-Another option is to address each LED separately through pins 10-16 on J2.
+The LED circuit is using the 5V from pin 7 and ground from pin 8 by default.
+If the device you're connecting the JoyKey to doesn't have 5V on pin 7, or if you want to externally provide power, you can choose to not connect those pins on the JoyKey and instead privide power through the J3 LED power connector.
 
-#### Individual power for each LED
+## Schematic
 
-LEDs can be powered individually, enabling for any effect you want. For this, leave jumpers JP1 to JP10 open and power the LEDs through pins 10-16 of J2.
+### JoyKey Mini
 
-The pins correspond to LEDs as follows:
+![JoyKey Mini Schematic](JoyKeyMini_schematic.png)
 
-- 10: Button 1 / main fire
-- 11: Button 2 / right fire
-- 12: Button 3 / left fire
-- 13: Up
-- 14: Down
-- 15: Left
-- 16: Right
+### JoyKey XL
 
-#### Separate power
+![JoyKey XL Schematic](JoyKeyXL_Schematic.png)
 
-To power LEDs through a single separate source, apply power to J3 and solder jumpers JP1 to JP7 closed.
+## Fabrication
 
-#### Use Atari connector power
-
-To power the LEDs through the Atari connector's 5V pin (pin 7), solder jumpers JP1 to JP7 as well as JP10 closed. Note that this connects pin 1 of J3 to J1 pin 7 and J2 pin 7.
-
-### JP8 - Right button / paddle
-
-JP8 can be set to position 1-2 to enable the right button as an independent button (connecting pins 5 and 6), or to position 2-3 to enable the right paddle (connecting pins 7 and 5 with pot RV2).
-
-### JP9 - Left button / paddle
-
-JP9 can be set to position 1-2 to enable the left button as an independent button (connecting pins 6 and 9), or to position 2-3 to enable the left paddle (connecting pins 7 and 9 with pot RV1).
-
-## Dependencies
-
-This board uses [se7en9057's universal switch footprint](https://github.com/se7en9057/Universal-Switch-Footprint), which can take pretty much any type of switch on both sides of the board and include a LED.
+* [JoyKey Mini Gerber files](Fabrication/JoyKeyMini.zip)
+* [JoyKey Mini BOM](Fabrication/JoyKeyMini-BOM.csv)
+* [JoyKey Mini Positions](Fabrication/JoyKeyMini-all-pos.csv)
+* [JoyKey Mini Enclosure bottom part](Case/JoyKeyMiniCase-Bottom.stl)
+* [JoyKey Mini Enclosure top part](Case/JoyKeyMiniCase-Top.stl)
+* [JoyKey XL Gerber files](Fabrication/JoyKeyXL.zip)
+* [JoyKey XL BOM](Fabrication/JoyKeyMX-BOM.csv)
+* [JoyKey XL Positions](Fabrication/JoyKeyMX-top-pos.csv)
+* [JoyKey XL Al plate Gerber files](Fabrication/JoyKeyMX-plate.zip)
+* [JoyKey XL Enclosure bottom part](Case/JoyKeyMiniCase-Bottom.stl)
+* [JoyKey XL Enclosure top part](Case/JoyKeyMiniCase-Top.stl)
