@@ -4,7 +4,7 @@ Whether you have an old Atari XE computer with a dead keyboard membrane, would l
 
 ![The DecentXE keyboard with modern graphite key caps](Media/ModernGraphite.jpg)
 
-There are two versions of the keyboard: modern and vintage. Modern uses brand new key MX-compatible key caps, while vintage uses the original Atari key caps and adapts them to modern switches.
+There are two versions of the keyboard: modern and vintage. Modern uses brand new MX-compatible key caps, while vintage uses the original Atari key caps and adapts them to modern switches.
 
 There's been a number of previous projects to put a modern keyboard on Atari 8-bit computers. I don't think anyone's done it while preserving the original keycaps though (would love to be proven wrong). Once assembled, you can't tell the difference from an aesthetic point of view... Check this out:
 
