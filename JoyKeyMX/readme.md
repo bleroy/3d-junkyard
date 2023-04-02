@@ -23,7 +23,7 @@ If the device you're connecting the JoyKey to doesn't have 5V on pin 7, or if yo
 
 ### JoyKey Mini
 
-![JoyKey Mini Schematic](JoyKeyMini_schematic.png)
+![JoyKey Mini Schematic](JoyKeyMini_Schematic.png)
 
 ### JoyKey XL
 
