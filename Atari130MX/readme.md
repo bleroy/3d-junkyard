@@ -100,7 +100,7 @@ The best result will be obtained with [new key caps](Caps/wasd-inkscape-iso85-at
 ![Modern layout](Caps/wasd-inkscape-iso85-atari-130mx-White_Caps.svg)
 
 Vintage key caps from an Atari XE computer can also be used to maintain a look that is indistinguishable from the original. Old-new stock of XE keyboards is also currently available without too much trouble and for a reasonable price.
-h
+
 * Optimal: MX-compatible set of key caps
 * Fine: vintage set of XE key caps
 
@@ -135,7 +135,7 @@ If you don't own a resin printer, or don't want or can't buy one (a good reason 
 Online printing services have recently become very inexpensive, and the quality of their prints can't be rivalled by any hobbyist printer available today. The trick for small parts such as these adapters is to group them in [batches](Stems/kailh-choc-to-xe-circle-set.stl) so they count as a single part. I stopped printing locally after the prototyping phase, and am now ordering all my 3D prints from JLCPCB.
 
 * Optimal: order from a fab house such as JLCPCB
-    - 7x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 1x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
+    - 7x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 1x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
 * Fine: print your own with a resin printer
 
 ### Stabilizers
@@ -150,7 +150,7 @@ The space bar can use Durock v2 stabilizers, for which I've made adapters for bo
 
 * Optimal (modern caps): 1x 6.5U and 3x 2U Durock v2 stabilizers
 * Fine (vintage caps):
-    * original Atari XE left shift stabilizer metal part
+    * Vintage Atari XE left shift stabilizer metal part
     * 2x standard costar stabilizers
     * 1x 6.5U Durock v2 stabilizer set
     * 3D-printed [stabilizer adapters](Stabilizers/durock-v2-spacebar-circle-adapter.stl)
