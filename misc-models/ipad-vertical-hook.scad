@@ -8,7 +8,7 @@ $fs = 0.2;
 hole_width = 9;
 
 // Depth of the support hole
-hole_depth = 14;
+hole_depth = 12.5;
 
 // Back and front holder depth
 holder_depth = 5;

@@ -1,0 +1,3 @@
+Comment,Designator,Footprint,Quantity,Designation,JCLPCB part #
+SMD LED mounted on switch footprint,"SW1,SW6,SW4,SW5,SW3",MX-1-00U-LED,5,SW_WITHLED,C193191
+SMD Resistor,"R7,R6,R5,R4,R1",R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,5,100,C22775

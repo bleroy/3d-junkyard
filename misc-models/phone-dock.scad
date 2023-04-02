@@ -11,7 +11,7 @@ phone_width = 76;
 phone_height = 150;
 
 // Radius of the phone's rounded corners
-phone_rounded_corners = 8;
+phone_rounded_corners = 5;
 
 // Thickness of the phone
 phone_thickness = 8.5;
