@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "(7.0.0)"
     },
-    "CreationDate": "2023-03-01T21:10:47-08:00"
+    "CreationDate": "2023-04-05T18:56:48-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "DecentXE",
       "GUID": "44656365-6e74-4584-952e-6b696361645f",
-      "Revision": "11"
+      "Revision": "12"
     },
     "Size": {
       "X": 329.25,
@@ -24,8 +24,8 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.0,
-      "PadToTrack": 0.0,
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
       "MinLineWidth": 0.25,
       "TrackToRegion": 0.508,
