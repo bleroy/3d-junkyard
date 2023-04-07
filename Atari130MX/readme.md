@@ -134,8 +134,12 @@ If you don't own a resin printer, or don't want or can't buy one (a good reason 
 
 Online printing services have recently become very inexpensive, and the quality of their prints can't be rivalled by any hobbyist printer available today. The trick for small parts such as these adapters is to group them in [batches](Stems/kailh-choc-to-xe-circle-set.stl) so they count as a single part. I stopped printing locally after the prototyping phase, and am now ordering all my 3D prints from JLCPCB.
 
+Finally, there's two types of low-profile switches that can be used with the DecentXE PCB: Kailh Choc v1 and MX-like (Gateron and RedDragon). There are adapters in the repo for all combinations of those switch types and vintage Atari caps.
+
+The Choc type with circle caps combination has the additional complication that it's not symmetrical with respect to a 90 degree rotation. Because three of the switches (return, delete and break) are rotated 90 degrees in the vintage layout, we also need three adapters that are rotated 90 degrees so we can fit the caps in their correct orientation.
+
 * Optimal: order from a fab house such as JLCPCB
-    - 7x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 1x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
+    - 6x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 3x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
 * Fine: print your own with a resin printer
 
 ### Stabilizers
@@ -262,7 +266,7 @@ I do sell assembled vintage keyboards, but you still need to get those into your
 
 Usually this will come with the adapters for your flavor of vintage keys in a small bag. You'll need to separate each adapter using nippers. The small parts linking the adapters during fabrication are positioned to not get in the way, but it's still a good idea to cut them as flush as possible.
 
-Insert each adapter into one of the switches. Note that the return key is the only one for which the switch is rotated 90 degrees, so this one needs a different adapter.
+Insert each adapter into one of the switches. Note that the delete, break and return keys are the only ones for which the switches are rotated 90 degrees, so they need different adapters.
 
 Use a key cap extractor to remove the keys from your vintage keyboard (a key extractor is the best way to make sure you don't damage the caps). Make sure to be especially gentle if you have the square variant, those break easily.
 
@@ -352,7 +356,7 @@ Solder two jumper wires to the left of the PCB to configure it for Control. This
 
 #### Mount the switches onto the plate
 
-Insert switches into the aluminum or aluminium plate depending on whether you are in the US :D with the LED window to the back and the pins to the front. The exceptions to this are the delete switch and the break switch that are upside down, and the return switch that has its pins to the right and LED window to the left. If your switches have two smaller legs around the center cylinder, you may have to nip the bottom one so it can get in place correctly.
+Insert switches into the aluminum or aluminium plate depending on whether you are in the US :D with the LED window to the back and the pins to the front. The exceptions to this are the delete, break and return switches that are rotated 90 degrees. If your switches have two smaller legs around the center cylinder, you may have to nip the bottom one for the return key so it can get in place correctly.
 
 #### Get the plate and PCB together
 
