@@ -10,6 +10,7 @@ cap_type = "Atari XE ■ Space bar"; // [Atari XE ◎ Space bar, Atari XE ■ Sp
 
 duroc_thickness = 1.8 + 0;
 duroc_size = 4.2 + 0;
+wiggle_room = 0.5; // Extra wiggle room so the stabilizers can stand vertical despite small variations in position
 
 if (cap_type == "Atari XE ■ Space bar") {
     adapter_width = 30;
@@ -23,8 +24,8 @@ if (cap_type == "Atari XE ■ Space bar") {
 
         translate([7, adapter_depth / 2, adapter_height / 2]) {
             union() {
-                cube([duroc_thickness, duroc_size, adapter_height * 1.1], center = true);
-                cube([duroc_size, duroc_thickness, adapter_height * 1.1], center = true);
+                cube([duroc_thickness + wiggle_room, duroc_size, adapter_height * 1.1], center = true);
+                cube([duroc_size + wiggle_room, duroc_thickness, adapter_height * 1.1], center = true);
             }
         }
         translate([adapter_x_offset, 3.5 + adapter_thickness / 2, adapter_height / 2])
@@ -47,8 +48,8 @@ else {
 
         translate([31, adapter_depth / 2, adapter_height / 2]) {
             union() {
-                cube([duroc_thickness, duroc_size, adapter_height * 1.1], center = true);
-                cube([duroc_size, duroc_thickness, adapter_height * 1.1], center = true);
+                cube([duroc_thickness+ wiggle_room, duroc_size, adapter_height * 1.1], center = true);
+                cube([duroc_size + wiggle_room, duroc_thickness, adapter_height * 1.1], center = true);
             }
         }
         translate([0, adapter_depth / 2, adapter_height / 2])
