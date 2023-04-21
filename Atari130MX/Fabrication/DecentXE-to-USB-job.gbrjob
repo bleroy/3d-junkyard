@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "(6.0.10)"
+      "Version": "(7.0.0)"
     },
-    "CreationDate": "2023-01-29T19:44:21-08:00"
+    "CreationDate": "2023-04-21T14:06:02-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "DecentXE-to-USB",
       "GUID": "44656365-6e74-4584-952d-746f2d555342",
-      "Revision": "rev?"
+      "Revision": "2"
     },
     "Size": {
       "X": 50.646,
@@ -24,8 +24,8 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
+      "PadToPad": 0.0,
+      "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
       "MinLineWidth": 0.25,
       "TrackToRegion": 0.508,

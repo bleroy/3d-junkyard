@@ -1,0 +1,6 @@
+Comment,Designator,Footprint,JLCPCB Part #,Quantity,Fitted
+100,"R1,R4,R8,R7,R9,R3,R5,R6",R_0603_1608Metric,C22775,8,Y
+DNP_Pico,U1,RPi_Pico_SMD_TH,,1,N
+DNP_Conn_01x09,J2,DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm,,1,N
+4514,U2,SOIC-24W_7.5x15.4mm_P1.27mm,C496122 ,1,Y
+Conn_01x26,J1,Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal,C60248,1,Y
