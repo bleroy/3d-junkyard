@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        How to draw when all you have is add and shift
+    </title>
+    <style>
+        canvas { border: solid 1px grey; }
+    </style>
+</head>
+<body>
+    <canvas id="circle" width="800" height="600"></canvas>
+    <script src="circle.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            drawCircle(document.getElementById("circle"), 400, 300, 299);
+        });
+    </script>
+</body>
