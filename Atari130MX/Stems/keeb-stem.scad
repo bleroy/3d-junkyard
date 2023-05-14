@@ -6,7 +6,7 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari Fn"; // [Atari Fn, Atari XE ■, Atari XE ◎, Atari XL Alps ▬, Atari XL ✚, Atari XL ⧇, KailhBox, Atari Fn Set]
+cap_type = "Atari Fn"; // [Atari Fn, Atari XE ■, Atari XE ◎, Atari XL Alps ▬, Atari XL ✚, Atari XL ⧇, KailhBox, Atari Console Set, Atari F1-4 Set]
 
 // Stem type
 stem_type = "MX Adapter"; // [Kailh Box Pink, Kailh Choc v1, MX Adapter, Low-pro adapter]
@@ -27,7 +27,7 @@ rotate_switch = false;
 accurate = true;
 
 row_count = rows;
-column_count = cap_type == "Atari Fn Set" ? 5 : columns;
+column_count = cap_type == "Atari Console Set" ? 5 : cap_type == "Atari F1-4 Set" ? 4 : columns;
 
 module nil() {}
 
@@ -343,9 +343,9 @@ module mx_adapter() {
 
 fn_side = 26.4;
 fn_depth = fn_side * cos(45) - 0.5;
-fn_height = accurate ? 8.2 : 7.5;
+fn_height = 7;
 fn_fillet = 5;
-fn_top_thickness = fn_height - 6.5;
+fn_top_thickness = stem_type == "MX Adapter" ? fn_height - 6.5 : fn_height;
 fn_hole_diameter = 16 * sqrt(2);
 fn_stabilizer_diameter = 3.9;
 fn_stabilizer_distance = 12;
@@ -354,9 +354,10 @@ fn_legend_distance = 5;
 fn_legend_depth = accurate ? 0.3 : 0.2;
 fn_legend_size = 2.5;
 fn_distance = 28.575;
+fn_z_offset = stem_type == "Kailh Choc v1" ? -0.5 : 0;
 
 module atari_fn(legend) {
-  translate([-(fn_depth + fn_side) / 2, -fn_depth / 2, -(fn_height - fn_top_thickness)])
+  translate([-(fn_depth + fn_side) / 2, -fn_depth / 2, fn_z_offset - (fn_height - fn_top_thickness)])
     difference() {
       union() {
         difference() {
@@ -403,13 +404,13 @@ module atari_fn(legend) {
       // plus two others on either side to make room for the adjacent switches
       translate([(fn_depth + fn_side) / 2, fn_depth / 2, -0.1])
         rotate([0, 0, 45])
-          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 2 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
+          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 1.5 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
       translate([(fn_depth + fn_side) / 2 + fn_distance, fn_depth / 2, -0.1])
         rotate([0, 0, 45])
-          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 2 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
+          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 1.5 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
       translate([(fn_depth + fn_side) / 2 - fn_distance, fn_depth / 2, -0.1])
         rotate([0, 0, 45])
-          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 2 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
+          cylinder(r1 = fn_hole_diameter / 2, r2 = fn_hole_diameter / 2 - 1.5 * sqrt(2), h = fn_height - fn_top_thickness + 0.1, $fn = 4);
     }
 }
 
@@ -419,28 +420,28 @@ union() {
     0.75;
   horiz_conn_altitude = cap_type == "Atari XE ◎" ? rotate_switch ? extra_floor - horiz_conn_radius : atari_circle_depth + extra_floor - horiz_conn_radius :
     cap_type == "Atari XE ■" ? horiz_conn_radius :
-    cap_type == "Atari Fn Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
+    cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
     20;
   horiz_offset = cap_type == "Atari XE ◎" ? 8 : 
     cap_type == "Atari XE ■" ? 10 :
-    cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? fn_depth + 2 :
+    cap_type == "Atari Fn" || cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" ? fn_depth + 2 :
     20;
   horiz_conn_length = cap_type == "Atari XE ◎" ? (horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter) * (rotate_switch ? 2 : 1) + 0.1 :
     cap_type == "Atari XE ■" ? horiz_offset - atari_box_width + 0.1 :
-    cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? horiz_offset - fn_depth + 0.2 :
+    cap_type == "Atari Fn" || cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" ? horiz_offset - fn_depth + 0.2 :
     horiz_offset;
   vert_conn_radius = stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? atari_circle_wing_thickness / 2 :
     stem_type == "Kailh Choc v1" ? max(kailh_choc_base_dimensions[2] / 2, 0.5) :
     0.75;
-  vert_conn_altitude = cap_type == "Atari Fn Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
+  vert_conn_altitude = cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? vert_conn_radius - mxadapter_stem_height :
     stem_type == "Kailh Choc v1" ? 0 :
     20;
-  vert_offset = cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? fn_side + 2 :
+  vert_offset = cap_type == "Atari Fn" || cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" ? fn_side + 2 :
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? 8 :
     stem_type == "Kailh Choc v1" ? 10 :
     20;
-  vert_conn_length = cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? 2.1 :
+  vert_conn_length = cap_type == "Atari Fn" || cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" ? 2.1 :
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? vert_offset - mxadapter_stem_diameter + 0.3 :
     stem_type == "Kailh Choc v1" ? vert_offset - kailh_choc_base_dimensions[0] + 0.1 :
     20;
@@ -477,8 +478,11 @@ union() {
           if (cap_type == "Atari Fn") {
             atari_fn(legend);
           }
-          if (cap_type == "Atari Fn Set") {
+          if (cap_type == "Atari Console Set") {
             atari_fn(["Start", "Option", "Select", "Help", "Reset"][col - 1]);
+          }
+          if (cap_type == "Atari F1-4 Set") {
+            atari_fn(["F1", "F2", "F3", "F4"][col - 1]);
           }
           if (stem_type == "Kailh Box Pink") {
             translate([0, kailh_stem_horizontal_offset, -kailh_stem_height / 2])
@@ -500,7 +504,7 @@ union() {
           }
           if (col > 1) {
             translate([-vert_offset / 2, 0, vert_conn_altitude])
-              rotate([0, 90, cap_type == "Atari Fn" || cap_type == "Atari Fn Set" ? -45 : 0])
+              rotate([0, 90, cap_type == "Atari Fn" || cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" ? -45 : 0])
                 cylinder(r = vert_conn_radius, h = vert_conn_length, center = true);
           }
         }

@@ -12,6 +12,16 @@ There's been a number of previous projects to put a modern keyboard on Atari 8-b
 
 But wait!... That's not all. Since the project started, there's been multiple revisions, adaptations to all kinds of demands from other Atari enthusiasts, and you now have many options to build the keyboard of your dreams...
 
+## Current version
+
+The current revision of the DecentXE keyboard is: **rev. 13**.
+
+## Can I buy one?
+
+The project is open-source, and I'm encouraging everyone to try to build their own. I do sell kits and assembled keyboards (both modern and vintage) for those who are not comfortable with ordering parts, PCBs or using a soldering iron. If you'd like to order something, [drop me a personal message on AtariAge](https://forums.atariage.com/profile/76850-screamingattheradio/). Keyboards and kits are made to order, so expect several weeks between ordering and receiving.
+
+How expensive is it? It depends on what you're ordering, but this is a made-to-order custom mechanical keyboard, so, not cheap.
+
 ## Project history
 
 My first attempt at this was to replace the stem in a [Kailh Box Pink switch](https://novelkeys.com/collections/switches/products/kailh-box-switches?variant=40598132129959) with a 3D-printed version that replaces the regular MX cap footprint with an Atari XE cap footprint. The modified stems were printed with my first printer, an Elegoo Mars 2 Pro. Its 50 micron resolution was essential when replacing such a small and precise part.
@@ -48,6 +58,26 @@ I also moved the Raspberry Pi Pico connection off the board to a separate USB ad
 
 It was also a good time to update the stabilizer design. For modern caps, there was no reason not to use the better alternative that are Durock v2 stabilizers. For vintage caps, I wasn't able to swap left switch stabilizers because the way vintage shift keys are built doesn't leave space for 2U Durock v2 stabilizers.
 
+That was where we were with revision 11, which shipped as a pre-order to readers of [the AtariAge forum thread](https://forums.atariage.com/topic/324588-atari-130xe-keyboard-rebuild-vintage-keycaps-on-modern-switches/).
+
+**Revision 12** moved the FFC connector to the top side of the board so it could be assembled at the fab house with the other surface-mount components, and moved to the bottom-right of the board, next to the break key. The FFC cable is now routed to the front between the two halves of the shield.
+
+The power LED is now surface-mount like the backlight LEDs.
+
+The optional function keys (F1-4) pins are now duplicated on a separate header on the top-right of the board to enable easy wiring of those pins to keys placed for example in an extension device.
+
+The adatper that plugs into the motherboard is now smaller, leaving more space above and removing the requirement to replace the Atari keyboard connector and replace it with pin headers (although that is still recommended). The adapter's FFC connector is now moved to the left of the connector instead of above it.
+
+The plate outline has been modified to let more power LED light through.
+
+The silkscreen has been updated to give clearer instructions about configuring the keyboard for vintage or modern modes.
+
+**Revision 13** changes console keys (Help, Start, Select, Option and Reset) to use low-profile switches, which enables thinner 3D-printed key caps that better fit the XE case.
+
+The PCB now has a visual representation of the keyboard matrix with pin numbers, making debugging easier.
+
+The PCB and plate have a consistent Harry Fatt typeface, and each key gets all its glyphs represented, which makes it easier to use the keyboard without caps.
+
 That's pretty much where we are today.
 
 ## Options
@@ -74,9 +104,16 @@ Here's [a video showing revision B of the project)](https://youtu.be/r8T07Rskkgs
 
 [![Atari 130XE keyboard rebuild](https://img.youtube.com/vi/r8T07Rskkgs/0.jpg)](https://www.youtube.com/watch?v=r8T07Rskkgs)
 
-And here's [another](https://youtu.be/FDqwOca9oRQ/) showing the latest revision with modern caps:
+And here's [another](https://youtu.be/FDqwOca9oRQ/) showing the revision 11 with modern caps:
 
 [![DecentXE keeb](https://img.youtube.com/vi/FDqwOca9oRQ/0.jpg)](https://www.youtube.com/watch?v=r8T07Rskkgs)
+
+<style>
+    img[src$='.svg'] {
+        background-color: white;
+    }
+</style>
+![DecentXE schematic](./DecentXE-schematic.svg)
 
 ## Bill of materials
 
@@ -104,11 +141,11 @@ Vintage key caps from an Atari XE computer can also be used to maintain a look t
 * Optimal: MX-compatible set of key caps
 * Fine: vintage set of XE key caps
 
-### Function keys
+### Console keys (Help, Start, Select, Option, Reset)
 
-If you're using modern key caps, you'll need to make a choice for function keys.
+If you're using modern key caps, you'll need to make a choice for console keys.
 
-The first solution is to [3D-print your own](Caps/fn.stl) and then paint them. I recommend [Tamiya Sea Grey model paint](https://www.tamiyausa.com/shop/acrylic-paint-flat-mini-10ml/acrylic-mini-xf-83-m-sea-gray/) for a pretty good match with the Atari XE case color. You can mask the legends when painting to make them stand out.
+The first solution is to [3D-print your own](Caps/fn-choc.stl) and then paint them. I recommend [Tamiya Sea Grey model paint](https://www.tamiyausa.com/shop/acrylic-paint-flat-mini-10ml/acrylic-mini-xf-83-m-sea-gray/) for a pretty good match with the Atari XE case color. You can mask the legends when painting to make them stand out.
 
 The alternative is to use vintage function keys on adapters. That choice will require using low-profile switches for those five keys.
 
@@ -119,7 +156,7 @@ The alternative is to use vintage function keys on adapters. That choice will re
 
 A choice of switches is highly personal and there are many options here. Get a sample set if you don't have a preferred kind. You can choose between MX-compatible switches for modern caps, Kailh Choc v1, Gateron or RedDragon low-profiles for vintage caps.
 
-* Optimal: 62 MX-compatible switches of your preferred brand and kind (for modern caps)
+* Optimal: 57 MX-compatible switches of your preferred brand and kind (for modern caps) + 5 Kailh Choc v1 switches for the console keys
 * Fine: 62 Kailh Choc v1, Gateron or RedDragon low-profile switches (for vintage caps)
 
 ### Adapters
@@ -134,8 +171,12 @@ If you don't own a resin printer, or don't want or can't buy one (a good reason 
 
 Online printing services have recently become very inexpensive, and the quality of their prints can't be rivalled by any hobbyist printer available today. The trick for small parts such as these adapters is to group them in [batches](Stems/kailh-choc-to-xe-circle-set.stl) so they count as a single part. I stopped printing locally after the prototyping phase, and am now ordering all my 3D prints from JLCPCB.
 
+Finally, there's two types of low-profile switches that can be used with the DecentXE PCB: Kailh Choc v1 and MX-like (Gateron and RedDragon). There are adapters in the repo for all combinations of those switch types and vintage Atari caps.
+
+The Choc type with circle caps combination has the additional complication that it's not symmetrical with respect to a 90 degree rotation. Because three of the switches (return, delete and break) are rotated 90 degrees in the vintage layout, we also need three adapters that are rotated 90 degrees so we can fit the caps in their correct orientation.
+
 * Optimal: order from a fab house such as JLCPCB
-    - 7x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 1x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
+    - 6x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 3x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
 * Fine: print your own with a resin printer
 
 ### Stabilizers
@@ -144,7 +185,7 @@ If you're using modern caps, just use Durock v2 stabilizers for backspace, Retur
 
 The Atari XE keyboard has stabilizers on the left SHIFT key and on the space bar. Some versions also have stabilizers on control and right shift, but anything 2U and smaller can work well without stabilizers.
 
-The left shift stabilizer is made with a standard metal bar that fits in standard costar stabilizers, for which the plate is designed. Those stabilizers can be bought for a very reasonable price from many places. You could print your own but I'm not providing design files for them at this time.
+The left shift stabilizer is made with a standard metal bar that fits in standard costar stabilizers, for which the plate is designed. There are two possible orientations for the costar stabilizers that work best for the circle and square variants of vintage key caps. Those stabilizers can be bought for a very reasonable price from many places. You could print your own but I'm not providing design files for them at this time.
 
 The space bar can use Durock v2 stabilizers, for which I've made adapters for both types of vintage Atari space bars.
 
@@ -170,13 +211,9 @@ The [Atari130MX KiCad project](DecentXE.kicad_pro) should have everything you ne
 
 While it is possible to build and operate a keyboard without a plate, it will not be as nicely aligned and won't feel as solid as it would with a proper plate.
 
-![The plate](DecentXE-plate-brd.svg)
+![The plate](Media/DecentXE-plate.png)
 
-There's a number of possible materials that the plate can be manufactured from. [The SVG file for it](DecentXE-plate-brd.svg) should be all you need if you decide to go with any laser-cuttable material, and nowadays that includes metal. The price will depend on the material you choose, but there is a better and cheaper alternative.
-
-I've also designed a [PCB version](DecentXE-plate.kicad_pro) that can be made in 1.6mm aluminum for a much more reasonable price.
-
-![The aluminum PCB version of the plate all assembled](Media/AlPlate.jpg)
+There's a number of possible materials that the plate can be manufactured from. [The SVG file for it](DecentXE-plate-brd.svg) should be all you need if you decide to go with any laser-cuttable material, and nowadays that includes metal. The price will depend on the material you choose, but there is a better and cheaper alternative: I've also designed a [PCB version](DecentXE-plate.kicad_pro) that can be made in 1.6mm aluminum for a much more reasonable price.
 
 In terms of weight, the keyboard assembled with an aluminum plate is about 430g.
 
@@ -196,31 +233,25 @@ The original Atari XE keyboard's connector was just a part of the mylar membrane
 The adapter can fit into the original Atari motheboard's keyboard connector if made in 0.6mm thickness. You can also replace that connector with pin headers that offer more flexibility.
 
 * Optimal:
-    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/molex/0522072633/4444523)
-    * FFC 26 position 1mm Type B (contacts on opposite sides) ribbon cable, 15cm at least
+    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/amphenol-cs-fci/F52R-1A7H1-11026/11564733)
+    * [FFC 26 position 1mm Type A](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5386/16129671?s=N4IgTCBcDaIIwFsEAIAOBLALgYwBbLADY10A7EAXQF8g) (contacts on the same side on both ends) ribbon cable, 15cm at least
     * [XE keyboard Adapter](Fabrication/DecentXE-adapter.zip) fabricated in 0.6mm thickness
     * [6mm horizontal rotary potentiometer, 2kOhms](https://www.digikey.com/en/products/detail/cui-devices/PTN06-D02CB20/17141151) for backlighting dimming
     * Optional: 1x24 2.54mm pin headers
 * Terrible:
     * 24 wires and some permanent soldering you should be ashamed of
 
-### Misc & optional components
-
-* Power LED, white or red (you can re-use the one from your old XE keyboard)
-
 ## Fabrication and assembly instruction
 
 Once you've sourced all the components, it's time to assemble. The following instructions attempt to reflect all the choices you may have made in selecting components.
 
-### Printing function caps and adapters (optional)
+### Printing console caps and adapters (optional)
 
-There are two known shapes of key caps, requiring distinct adapters. The first type of key cap has square stems, while the second have circular stems.
+There are two known shapes of vintage key caps, requiring distinct adapters. The first type of key cap has square stems, while the second have circular stems.
 
 In this repository, you'll find [OpenScad](Stems/keeb-stem.scad) and [STL](Stems) files for [both](Stems/kailh-choc-to-xe-square.stl) [types](Stems/kailh-choc-to-xe-circle.stl) of stems. If you need to modify anything about the stems, you'd need to regenerate the STL from the OpenScad file. There is [a single OpenScad file](Stems/keeb-stem.scad) that covers both types of stems through configuration. Otherwise, just load the STL in your printer's slicer software.
 
-Depending on the size of your printer bed, given the size of the part, you should be able to print in batches. You'll need 62 stems total for the whole keyboard. I still recommend you experiment with a single part first to verify your printer and choice of resin are appropriate. Even when you've ensured that, chances are any batch will have bad parts so quality control is important. Don't hesitate to reject any part that seems defective, as only perfectly printed parts will operate smoothly.
-
-When slicing the model, do use support. I orient the model with the Atari key side (the square hole) towards the printer's plate, away from the screen, which is probably the bottom in your slicing software (because resin printers print upside down).
+Depending on the size of your printer bed, given the size of the part, you should be able to print in batches. You'll need 62 adapters total for the whole keyboard. I still recommend you experiment with a single part first to verify your printer and choice of resin are appropriate. Even when you've ensured that, chances are any batch will have bad parts so quality control is important. Don't hesitate to reject any part that seems defective, as only perfectly printed parts will operate smoothly.
 
 It's often a good idea with resin printers to rotate the model 30 degrees, but the stems will actually come out better being printed vertically.
 
@@ -250,9 +281,9 @@ I do recommend unsoldering the Atari connector from the motherboard and replacin
 
 I do sell assembled modern keyboards, but you still need to get those into your Atari. This section goes through the details of doing that.
 
-You may have to separate your printed Fn keys using some nippers and then press fit them on the corresponding switches.
+You may have to separate your printed console keys using some nippers and then press fit them on the corresponding switches.
 
-The FFC cable should already be attached to the back of the keyboard. Verify the connection is solid and readjust if necessary (the connectors have two tabs on the side that you can pull to free the cable; the cable should be fully inserted with the contacts facing away from the PCB; make sure the tabs are both fully pushed back to ensure a solid connection).
+The FFC cable should already be attached to the back of the keyboard. Verify the connection is solid and readjust if necessary (the connectors have two tabs on the side that you can pull to free the cable; the cable should be fully inserted with the contacts facing the PCB; make sure the tabs are both fully pushed back to ensure a solid connection).
 
 [skip to the common section](#common-section-inserting-the-adapter)
 
@@ -262,11 +293,11 @@ I do sell assembled vintage keyboards, but you still need to get those into your
 
 Usually this will come with the adapters for your flavor of vintage keys in a small bag. You'll need to separate each adapter using nippers. The small parts linking the adapters during fabrication are positioned to not get in the way, but it's still a good idea to cut them as flush as possible.
 
-Insert each adapter into one of the switches. Note that the return key is the only one for which the switch is rotated 90 degrees, so this one needs a different adapter.
+Insert each adapter into one of the switches. Note that the delete, break and return keys are the only ones for which the switches are rotated 90 degrees, so they need different adapters.
 
 Use a key cap extractor to remove the keys from your vintage keyboard (a key extractor is the best way to make sure you don't damage the caps). Make sure to be especially gentle if you have the square variant, those break easily.
 
-Put the two space bar stabilizer adapters into your vintage space bar. You can set aside the old metal rod for this key, you won't need it.
+Put the two space bar stabilizer adapters into your vintage space bar. You can set aside the old metal rod for this key, you won't need it. The alignment of the stabilizers and the adapters is not always perfect. If that's a problem in your build, you can try to adjust the OpenScad model to move the footprint and better align with your space bar. Even with good alignment, I recommend salvaging the spring from the original keyboard and inserting it into the new keyboard. It does make a big difference for vintage builds.
 
 Remove the stabilizer rod for your left shift key. You'll need to slightly bend this so it can go around the new switch and into the new stabilizer. This may require some fiddling. In the worst case, the left shift stabilizer can be omitted if you can't find a way to make it work. This is my least favorite part of those keyboards...
 
@@ -286,10 +317,6 @@ Once the stabilizers are assembled, you can put them in their respective places 
 
 Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw. Repeat this for the space stabilizer, the left shift and the return key. Do not do it for the backspace / del key as the screw would get in the way of the FFC connector. This is a minor design flaw that I'll remove in a future revision, but it's fine, the stabilizer won't move if you've properly installed it.
 
-#### Solder the power LED
-
-Use needle-nose pliers to fold the legs of the power LED to the correct length so the LED when laid flat has its whole body outside of the PCB's perimeter, but just so. The long leg (the anode) goes to the right, its short leg to the left (you can see that pad is connected to the ground plane of the PCB). Solder that in place and cut the extra length of the legs. You can reuse those cut legs for the next step.
-
 #### Configure the keyboard for the modern layout
 
 Solder two jumper wires to the left of the PCB to configure it for Caps. This rewires the key that's above left shift and that's normally Control on a vintage keyboard. Control on the modern keyboard goes to the left of the space bar, and this key is reconfigured to be Caps. The two wires should short from the middle position to the right position. The silkscreen has helper text for this.
@@ -297,6 +324,8 @@ Solder two jumper wires to the left of the PCB to configure it for Caps. This re
 #### Mount the switches onto the plate
 
 Insert switches into the aluminum or aluminium plate depending on whether you are in the US :D with the LED window to the back and the pins to the front. The exception to this is the return key that should have its LED window to the right and pins to the left. Note that there are some differences with the vintage layout: the del/backspace key is two units wide, so put the switch in the middle position (there are three positions to accommodate for vintage layouts). Same for return, put it in the middle position among the three available vertically on the right of the board. There are also two additional positions around the space bar, each with its own switch. You might want to not position the del and return switches before the plate is in place as it may move, and it's fine to insert it later.
+
+Note that the console keys do not have a place on the plate. That's because they use low-profile switches that wouldn't reach the height of the plate. We'll aassemble those later.
 
 #### Get the plate and PCB together
 
@@ -306,21 +335,23 @@ After making sure all the switch pins are vertical and none are bent out of plac
 
 Solder each switch onto the PCB.
 
-#### Solder the FFC connector
+Once you've done all the full-size switches, add the low-profile switches for the console keys. Since those do not mount on the plate, take extra precautions to align the switches precisely. A ruler and some removable glue or tape can help stabilize the assembly while you solder.
 
-Solder the FFC connector in place. This is the only SMT component you'll have to solder. There are several methods to do that, and the 1mm pitch is not too bad. If you're not used to SMD soldering, I'd recommend trying your hand on one of the training boards that you can find online. There's also plenty of tutorials out there to get you started.
-
-I recommend at this point to test your work. Get your multimeter and set it in continuity mode, then verify the connection in order between each of the holes next to the FFC connector and the pins of the connector. Directions here assume you put the connector to the bottom-right of your work area. You'll want to touch very gently on the connector side so you don't artificially create a connection by pushing on the pin. Hole one is marked as such on the silkscreen and corresponds to the connector pin closest to it. Once you've got a solid beep for the first pin, move one of your probes to the next hole and check the beeping stops (if it doesn't, that means the pin you were testing and the next are shorted). Hole numbers go like this: move down one hole, then up and left diagonally, then repeat. The pins just go in order going to the left.
-
-You should be able to test all the pins this way to pin 24. The connector has two more lines for the LED backlighting. They should be connected to two of the four holes you can see aligned vertically on the board to the right of the connector.
+Even after soldering, you can make small adjustments by melting the solder around one of the pins and carefully moving the switch, then reflow the other pin of the same switch to relieve constraints or further adjust.
 
 #### Add the cable
 
-And then you're pretty much done for the keyboard itself, just pull the two tabs for the connector, insert the cable all the way with contacts facing away from the PCB, then push the tabs back in.
+And then you're pretty much done for the keyboard itself, just pull the two tabs for the connector, insert the cable all the way with contacts facing the PCB, then push the tabs back in.
 
 #### Assemble the adapter
 
-Now you need to assemble your adapter. The process is pretty much a repeat of the procedure to assemble the connector on the main board. To check your work, you'll verify continuity between the connector pins and the edge contacts on the bottom of this little board, in reverse order (start on the left of the edge connector and on the right of the FFC connector). For the last two pins, one is connected to edge contact 1 and the other to the bottom-left contact of the pot that you're going to solder next (look for the three holes to the left of the FFC connector).
+Now you need to assemble your adapter.
+
+Solder the FFC connector in place. This is the only SMT component you'll have to solder. There are several methods to do that, and the 1mm pitch is not too bad. If you're not used to SMD soldering, I'd recommend trying your hand on one of the training boards that you can find online. There's also plenty of tutorials out there to get you started.
+
+You should be able to test all the pins this way to pin 24. The connector has two more lines for the LED backlighting. They should be connected to two of the four holes you can see aligned vertically on the board to the right of the connector.
+
+To check your work, you'll verify continuity with a multimeter between the connector pins and the edge contacts on the bottom of this little board, in reverse order (start on the left of the edge connector and on the right of the FFC connector). For the last two pins, one is connected to edge contact 1 and the other to the bottom-left contact of the pot that you're going to solder next (look for the three holes to the left of the FFC connector).
 
 Solder the small pot. If you don't care about backlighting or about being able to change the intensity, you could leave it open, short it or put a resistor in its place.
 
@@ -338,37 +369,27 @@ Once the stabilizer is assembled, you can put both ends in their respective plac
 
 Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw.
 
-#### Assemble the left shift stabilizer
-
-The left shift stabilizer is more problematic and potentially the most frustrating part of this build. Worst case, it may be fine to just omit this stabilizer because if improperly installed it can make things worse. The stabilizer consists of two plastic parts that should fit into slots around the switch's position. Depending on whether you have circle or square caps, it should be installed upside up or upside down. Those stabilizers are very tricky to put in place. Once they are in place, you'll need (later, we'll get back to that) to get the metal rod from your vintage left shift, remove it, then bend it slightly so it can go around the switch and still be inserted into the new stabilizer. I'm not kidding when I say this is frustrating.
-
-#### Assemble the power LED
-
-Use needle-nose pliers to fold the legs of the power LED to the correct length so the LED when laid flat has its whole body outside of the PCB's perimeter, but just so. The long leg (the anode) goes to the right, its short leg to the left (you can see that pad is connected to the ground plane of the PCB). Solder that in place and cut the extra length of the legs. You can reuse those cut legs for the next step.
-
 #### Configure the keyboard for the vintage layout
 
 Solder two jumper wires to the left of the PCB to configure it for Control. This keeps the vintage layout wiring for the Control key. The two wires should short from the middle position to the left position. The silkscreen has helper text for this and should make it clear you are wiring for Control.
 
 #### Mount the switches onto the plate
 
-Insert switches into the aluminum or aluminium plate depending on whether you are in the US :D with the LED window to the back and the pins to the front. The exceptions to this are the delete switch and the break switch that are upside down, and the return switch that has its pins to the right and LED window to the left. If your switches have two smaller legs around the center cylinder, you may have to nip the bottom one so it can get in place correctly.
+Insert switches into the aluminum or aluminium plate depending on whether you are in the US :D with the LED window to the back and the pins to the front. The exceptions to this are the delete, break and return switches that are rotated 90 degrees. If your switches have two smaller legs around the center cylinder, you may have to nip the bottom one for the return key so it can get in place correctly.
 
 #### Get the plate and PCB together
 
 After making sure all the switch pins are vertical and none are bent out of place, carefully align the plate and switches with the stabilizers and the PCB. Slowly and carefully complete that assembly, making sure no pins get bent. Once that is done, the plate and PCB should be a few millimeters apart, more or less evenly spaced across the whole surface. Low-profile switches have a tendency to not attach to the plate as well as full-sized switches, so don't worry if some of these fall out during assembly, you'll have a chance to set them back in later. At this point, you want to have enough to ensure proper alignment. Another thing with low-profile switches is that they're not as good at maintaining the distance between PCB and plate. To make that distane more even with the distance imposed by the space stabilizer, I glue a couple of washers between plate and PCB on the top of the assembly to keep them apart. You may want  to also secure them together with tape or clothespins until you've soldered enough switches.
 
+#### Assemble the left shift stabilizer
+
+The left shift stabilizer is more problematic and potentially the most frustrating part of this build. Worst case, it may be fine to just omit this stabilizer because if improperly installed it can make things worse. The stabilizer consists of two plastic parts that should fit into slots around the switch's position. Depending on whether you have circle or square caps, it should be installed upside up or upside down. Those stabilizers are very tricky to put in place. Once they are in place, you'll need (later, we'll get back to that) to get the metal rod from your vintage left shift, remove it, then bend it slightly so it can go around the switch and still be inserted into the new stabilizer. I'm not kidding when I say this is frustrating.
+
 #### Solder the switches
 
-Solder the switches onto the PCB.
+Solder the switches onto the PCB. Dont's forget the console keys. Since those do not mount on the plate, take extra precautions to align the switches precisely. A ruler and some removable glue or tape can help stabilize the assembly while you solder.
 
-#### Solder the FFC connector
-
-Solder the FFC connector in place. This is the only SMT component you'll have to solder. There are several methods to do that, and the 1mm pitch is not too bad. If you're not used to SMD soldering, I'd recommend trying your hand on one of the training boards that you can find online. There's also plenty of tutorials out there to get you started.
-
-I recommend at this point to test your work. Get your multimeter and set it in continuity mode, then verify the connection in order between each of the holes next to the FFC connector and the pins of the connector. Directions here assume you put the connector to the bottom-right of your work area. You'll want to touch very gently on the connector side so you don't artificially create a connection by pushing on the pin. Hole one is marked as such on the silkscreen and corresponds to the connector pin closest to it. Once you've got a solid beep for the first pin, move one of your probes to the next hole and check the beeping stops (if it doesn't, that means the pin you were testing and the next are shorted). Hole numbers go like this: move down one hole, then up and left diagonally, then repeat. The pins just go in order going to the left.
-
-You should be able to test all the pins this way to pin 24. The connector has two more lines for the LED backlighting. They should be connected to two of the four holes you can see aligned vertically on the board to the right of the connector.
+Even after soldering, you can make small adjustments by melting the solder around one of the pins and carefully moving the switch, then reflow the other pin of the same switch to relieve constraints or further adjust.
 
 #### Add the cable
 
@@ -376,7 +397,13 @@ And then you're pretty much done for the keyboard itself, just pull the two tabs
 
 #### Assemble the adapter
 
-Now you need to assemble your adapter. The process is pretty much a repeat of the procedure to assemble the connector on the main board. To check your work, you'll verify continuity between the connector pins and the edge contacts on the bottom of this little board, in reverse order (start on the left of the edge connector and on the right of the FFC connector). For the last two pins, one is connected to edge contact 1 and the other to the bottom-left contact of the pot that you're going to solder next (look for the three holes to the left of the FFC connector).
+Now you need to assemble your adapter.
+
+Solder the FFC connector in place. This is the only SMT component you'll have to solder. There are several methods to do that, and the 1mm pitch is not too bad. If you're not used to SMD soldering, I'd recommend trying your hand on one of the training boards that you can find online. There's also plenty of tutorials out there to get you started.
+
+You should be able to test all the pins this way to pin 24. The connector has two more lines for the LED backlighting. They should be connected to two of the four holes you can see aligned vertically on the board to the right of the connector.
+
+To check your work, you'll verify continuity with a multimeter between the connector pins and the edge contacts on the bottom of this little board, in reverse order (start on the left of the edge connector and on the right of the FFC connector). For the last two pins, one is connected to edge contact 1 and the other to the bottom-left contact of the pot that you're going to solder next (look for the three holes to the left of the FFC connector).
 
 Solder the small pot. If you don't care about backlighting or about being able to change the intensity, you could leave it open, short it or put a resistor in its place.
 
