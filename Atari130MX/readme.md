@@ -108,11 +108,6 @@ And here's [another](https://youtu.be/FDqwOca9oRQ/) showing the revision 11 with
 
 [![DecentXE keeb](https://img.youtube.com/vi/FDqwOca9oRQ/0.jpg)](https://www.youtube.com/watch?v=r8T07Rskkgs)
 
-<style>
-    img[src$='.svg'] {
-        background-color: white;
-    }
-</style>
 ![DecentXE schematic](./DecentXE-schematic.svg)
 
 ## Bill of materials
