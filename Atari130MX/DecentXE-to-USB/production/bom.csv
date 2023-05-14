@@ -1,0 +1,7 @@
+Designator,Footprint,Quantity,Value,LCSC Part #,Fitted
+J1,Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal,1,Conn_01x26,C60248,Y
+J2,DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm,1,Conn_01x09,,N
+"R1, R5, R6, R7, R8, R9",0603,6,100,C22775,Y
+R2,0603,1,1k,C2765616,Y
+U1,RPi_Pico_SMD_TH,1,Pico,,N
+U2,SOIC-24W_7.5x15.4mm_P1.27mm,1,4514,C496122,Y
