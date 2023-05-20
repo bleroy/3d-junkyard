@@ -228,8 +228,8 @@ The original Atari XE keyboard's connector was just a part of the mylar membrane
 The adapter can fit into the original Atari motheboard's keyboard connector if made in 0.6mm thickness. You can also replace that connector with pin headers that offer more flexibility.
 
 * Optimal:
-    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/amphenol-cs-fci/F52R-1A7H1-11026/11564733)
-    * [FFC 26 position 1mm Type A](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5386/16129671?s=N4IgTCBcDaIIwFsEAIAOBLALgYwBbLADY10A7EAXQF8g) (contacts on the same side on both ends) ribbon cable, 15cm at least
+    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/amphenol-cs-fci/F52R-1A7H1-11026/11564733).
+    * [FFC 26 position 1mm Type A](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5386/16129671?s=N4IgTCBcDaIIwFsEAIAOBLALgYwBbLADY10A7EAXQF8g) (contacts on the same side on both ends) ribbon cable, 15cm at least.  Here's also [an Amazon source](https://www.amazon.com/uxcell-Flexible-Cable-Ribbon-Player/dp/B07RWRX6YT/r).
     * [XE keyboard Adapter](Fabrication/DecentXE-adapter.zip) fabricated in 0.6mm thickness
     * [6mm horizontal rotary potentiometer, 2kOhms](https://www.digikey.com/en/products/detail/cui-devices/PTN06-D02CB20/17141151) for backlighting dimming
     * Optional: 1x24 2.54mm pin headers
