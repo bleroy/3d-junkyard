@@ -100,7 +100,7 @@ def pin_in(id, pull):
     pin.direction = digitalio.Direction.INPUT
     pin.pull = pull
     return pin
-    
+
 def pin_out(id):
     """Helper to setup an output pin from its number"""
     pin = digitalio.DigitalInOut(getattr(board, 'GP' + str(id)))
@@ -164,7 +164,7 @@ def lightup(index):
 def probe_col(col):
     """
     Lights up a specific column on the keyboard matrix by passing its encoded row number to the decoder.
-    
+
     Result is a list or rows for key presses on the specified column.
     """
     global row_pins
@@ -224,7 +224,7 @@ def scan_keeb():
             normalized_pressed.add(Keycode.CONTROL)
         normalized_pressed.add(key & 0xFF)
     currently_pressed = normalized_pressed
-    
+
     # Press keys not pressed before
     keeb.press(*(currently_pressed - keys_pressed))
     # Release keys no longer pressed
