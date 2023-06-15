@@ -351,7 +351,7 @@ fn_stabilizer_diameter = 3.9;
 fn_stabilizer_distance = 12;
 fn_stabilizer_length = 5;
 fn_legend_distance = 5;
-fn_legend_depth = accurate ? 0.3 : 0.2;
+fn_legend_depth = accurate ? 0.5 : 0.4;
 fn_legend_size = 2.5;
 fn_distance = 28.575;
 fn_z_offset = stem_type == "Kailh Choc v1" ? -0.5 : 0;
