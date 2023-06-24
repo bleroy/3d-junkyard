@@ -1,0 +1,8 @@
+.sourcemode on
+.echo
+.echo "Loading executable..."
+.echo
+bc *
+.onexerun .echo "Launching executable..."
+bp "`c:\Projects\3d-junkyard\SidecarXE85\Driver\sidecar.asm:161`"
+.echo 1 breakpoints from 1 files have been set
