@@ -35,7 +35,7 @@ top_dam_depth = 24;
 top_dam_extra_height = 8;
 
 // Round the model
-rounded = true;
+rounded = false;
 
 // Rounding radius
 rounding = 1;
