@@ -20,10 +20,10 @@ holder_height = 23;
 top_height = 10;
 
 // Top or bottom gutter
-gutter_position = "Top"; // [Top, Bottom]
+gutter_position = "Bottom"; // [Top, Bottom]
 
 // Gutter depth
-gutter_depth = 14;
+gutter_depth = 20;
 
 // Gutter height
 gutter_height = 5;
@@ -35,7 +35,7 @@ top_dam_depth = 24;
 top_dam_extra_height = 8;
 
 // Round the model
-rounded = false;
+rounded = true;
 
 // Rounding radius
 rounding = 1;
