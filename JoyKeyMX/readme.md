@@ -42,3 +42,11 @@ If the device you're connecting the JoyKey to doesn't have 5V on pin 7, or if yo
 * [JoyKey XL Al plate Gerber files](Fabrication/JoyKeyMX-plate.zip)
 * [JoyKey XL Enclosure bottom part](Case/JoyKeyMiniCase-Bottom.stl)
 * [JoyKey XL Enclosure top part](Case/JoyKeyMiniCase-Top.stl)
+
+## License
+
+All hardware in this repository is licensed under [CERN Open Hardware License v2](https://ohwr.org/cern_ohl_p_v2.pdf).
+All software in this repository is licensed under the [MIT license](https://mit-license.org/).
+All documentation in this repository is licensed under [Creative Commons Creative Commons Attribution-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+
+Full terms can be found in the [LICENSE](./LICENSE) file or on the web sites linked above.
