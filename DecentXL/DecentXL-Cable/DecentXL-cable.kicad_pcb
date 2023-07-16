@@ -243,8 +243,6 @@
 
   (gr_rect (start 98.9 95.4) (end 159.4 101.4)
     (stroke (width 0.15) (type default)) (fill none) (layer "F.SilkS") (tstamp 1bbdba96-5cf3-421e-88f1-b506dd3aac13))
-  (gr_rect (start 123.4 28.6) (end 150.5 41)
-    (stroke (width 0.15) (type default)) (fill none) (layer "F.SilkS") (tstamp 444ca5c7-e4e2-4b1b-b645-57e3e94aa913))
   (gr_arc (start 151.348 53.636) (mid 150.713097 52.573429) (end 150.525 51.35)
     (stroke (width 0.1) (type solid)) (layer "Edge.Cuts") (tstamp 00095e80-a430-44f9-ba0a-5ff723ea1d2b))
   (gr_line (start 159.445 63) (end 159.445 98.65)
