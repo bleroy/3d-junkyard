@@ -1,0 +1,9 @@
+Designator,Footprint,Quantity,Value,LCSC Part #
+"SW0, SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SWA1, SWB1, SWC1, SWComma1, SWD1, SWDash1, SWE1, SWEqual1, SWEsc1, SWF1, SWFn1, SWFn2, SWFn3, SWFn4, SWG1, SWGT1, SWH1, SWI1, SWInv1, SWJ1, SWK1, SWL1, SWLT1, SWM1, SWN1, SWO1, SWP1, SWPeriod1, SWPlus1, SWQ1, SWR1, SWS1, SWSemi1, SWSlash1, SWStar1, SWT1, SWU1, SWV1, SWW1, SWX1, SWY1, SWZ1",MX-1-00U-Hole,52,SW_Push_45deg,
+"SWBrk1, SWCtl1",MX-1-25U-Hole,2,SW_Push_45deg,
+SWBrk2,MX-2-00U-2x1.00U-Hole,1,SW_Push_45deg,
+"SWCtlCaps1, SWRightSft1",MX-1-75U-Hole,2,SW_Push_45deg,
+SWLeftSft1,MX-2-25U-Hole,1,SW_Push_45deg,
+SWRet1,MX-ISO-RETURN-Option-Hole,1,SWITCH,
+SWSpc1,MX-6-25U-Hole,1,SW_Push_45deg,
+SWTab1,MX-1-50U-Hole,1,SW_Push_45deg,
