@@ -31,8 +31,6 @@
     (stroke (width 0.12) (type solid)) (layer "Edge.Cuts") (tstamp 9034e56b-4948-43ce-8770-610c03c55c97))
   (fp_line (start -17.64925 0.508) (end -17.64925 6.1468)
     (stroke (width 0.12) (type solid)) (layer "Edge.Cuts") (tstamp 03451934-6ea7-4ee8-83f3-704d64d73516))
-  (fp_line (start -17.64925 0.508) (end -17.64925 6.1468)
-    (stroke (width 0.12) (type solid)) (layer "Edge.Cuts") (tstamp d73cbb39-c80c-434d-bf3a-498219aaabe1))
   (fp_line (start -15.84325 6.1468) (end -17.64925 6.1468)
     (stroke (width 0.12) (type solid)) (layer "Edge.Cuts") (tstamp f15e40fc-7282-4131-8391-12a23547d63c))
   (fp_line (start -15.84325 6.1468) (end -15.84325 7.3152)

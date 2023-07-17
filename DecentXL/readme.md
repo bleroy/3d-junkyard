@@ -22,14 +22,6 @@ How expensive is it? It depends on what you're ordering, but this is a made-to-o
 
 This is a brand new design that uses a lot of lessons learned from building the [DecentXE keyboards](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX), but adapts to the many complicated subtleties of the XL line of computers.
 
-## Acknowledgements
-
-I want to thank [XLFreak](https://forums.atariage.com/profile/63723-xl-freak/) for designing the modern key cap set for this project.
-
-Thanks to [Wildstar87](https://forums.atariage.com/profile/29638-wildstar87/) who has been loaning me various XL keyboards and case parts to check their footprints and design adapters.
-
-And of course, many thanks to all those who provided feedback on the [DecentXE keyboard](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) over its 13 revisions or bought a keyboard.
-
 ## Options
 
 ### Key caps: modern or vintage?
@@ -148,9 +140,23 @@ You'll just need to add the switches and [the backlighting modulation pot](https
 
 The plate is just an aluminum PCB. Download [the Gerber for the MX / Kailh Choc v2](./DecentXL-plate/production-plate/gerber.zip) or [Alps](./DecentXL-plate/production-plate-alps/gerber.zip) and have it produced.
 
-### Connector
+![DecentXL aluminum plate](./Media/DecentXL-plate-mx-choc.png)
 
-The connector is [a flexible PCB](./DecentXL-Cable/production/gerber.zip). The fabrication house will usually ask you to specify whatzones to apply rigidifiers to. There's a rectangle on the silkscreen that specifies that.
+![DecentXL aluminum plate for Alps switches](./Media/DecentXL-plate-alps.png)
+
+### Connectors
+
+The connector to the motherboard is [a flexible PCB](./DecentXL-Cable/production/gerber.zip). The fabrication house will usually ask you to specify whatzones to apply rigidifiers to. There's a rectangle on the silkscreen that specifies that.
+
+The connector between the main board and the daughter board is a [0.5mm pitch 10 pin FFC cable with contacts on the same side](https://www.aliexpress.us/item/3256805404128305.html?spm=a2g0o.order_list.order_list_main.5.1f031802ttMIvh&gatewayAdapt=glo2usa).
+
+### Brackets
+
+The XL keyboard is mounted to the top of the Atari case. On the original keyboard, a metal plate has bent parts that extend beyond the PCB or membrane and fit the corresponding screw columns on the top shell of the case.
+
+![One of the DecentXL brackets](./Media/DecentXL-Right-Bracket.png)
+
+For our keyboards, we can't ufortunately just have correctly placed holes in the PCBs because the columns extend beyond the planes where they need to be located. Instead, the columns go through the PCB and fit into 3D-printed adapters that hold the PCBs in place and receive the screws.
 
 ## Assembly
 
@@ -216,4 +222,16 @@ Close the case. Congratulations, you're done! Turn your computer on and enjoy yo
 
 ## Troubleshooting
 
-Defects and mistakes happen. If when testing your keyboard, you notice a key or a bunch of them don't work, testing and fixing the keyboard is usually quite easy. The back of the board shows the matrix the keyboard is built on. It's easy, from the indications there to figure out what pins a switch is supposed to connect. It's like coordinates, the keyboard is essentially a matrix of switches. You can test continuity using the empty pinout connector footprint above the FFC connector. Connect your multimeter, press the switch. You can also test the switch directly, and test continuity from it to its neighbours and to the connectors. Most problems can be found this way, and if the keyboard needs repairs, it's usually easy to pull an additional wire to fix a damaged trace.
+Defects and mistakes happen. If when testing your keyboard, you notice a key or a bunch of them don't work, testing and fixing the keyboard is usually quite easy.
+
+![The back of the PCBs](./Media/DecentXL-keyboard-back.png)
+
+The back of the board shows the matrix the keyboard is built on. It's easy, from the indications there to figure out what pins a switch is supposed to connect. It's like coordinates: the keyboard is essentially a matrix of switches. You can test continuity using the empty pinout connector footprint above the FFC connector. Connect your multimeter, press the switch. Be aware that there's an anti-ghosting diode in series with each switch, so setup your multimeter accordingly or you may get false negatives. You can also test the switch directly, and test continuity from it to its neighbours and to the connectors. Most problems can be found this way, and if the keyboard needs repairs, it's usually easy to pull an additional wire to fix a damaged trace.
+
+## Acknowledgements
+
+I want to thank [XLFreak](https://forums.atariage.com/profile/63723-xl-freak/) for designing the modern key cap set for this project.
+
+Thanks to [Wildstar87](https://forums.atariage.com/profile/29638-wildstar87/) who has been loaning me various XL keyboards and case parts to check their footprints and design adapters.
+
+And of course, many thanks to all those who provided feedback on the [DecentXE keyboard](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) over its 13 revisions or bought a keyboard.
