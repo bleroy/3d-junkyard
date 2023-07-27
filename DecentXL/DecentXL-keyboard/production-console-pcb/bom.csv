@@ -1,0 +1,7 @@
+Designator,Footprint,Quantity,Value,LCSC Part #
+D0,0603,1,LED,C2286
+D11,D_SOD-123,1,1N4148W,C81598
+J4,PinHeader_1x10_P2.54mm_Vertical,1,Conn_01x10,
+J5,Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal,1,Conn_01x10,C709365
+"R11, R64, R65, R67, R68",0603,5,R,C22775
+"SWHlp1, SWOption1, SWReset1, SWSelect1, SWStart1",MX-1-00U-LED,5,SW_Push_45deg,C193191
