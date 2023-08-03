@@ -1,8 +1,0 @@
-Designator,Footprint,Quantity,Value,LCSC Part #
-"SW0, SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SWA1, SWB1, SWC1, SWComma1, SWD1, SWDash1, SWE1, SWEqual1, SWF1, SWG1, SWGT1_3, SWGT1_2, SWGT1, SWH1, SWI1, SWInv1, SWJ1, SWK1, SWL1, SWLT1, SWM1, SWN1, SWO1, SWP1, SWPeriod1, SWPlus1, SWQ1, SWR1, SWS1, SWSemi1, SWSlash1, SWStar1, SWT1, SWU1, SWV1, SWW1, SWX1, SWY1, SWZ1",1-00U-Alps-Hole,49,SW_Push_45deg,
-SWCtlCaps1,2-00U-Alps-Hole,1,SW_Push_45deg,
-"SWEsc1_2, SWEsc1",1-25U-Alps-Hole,2,SW_Push_45deg,
-SWLeftSft1,2-50U-Alps-Hole,1,SW_Push_45deg,
-"SWRightSft1, SWTab1_2",1-75U-Alps-Hole,2,SW_Push_45deg,
-SWSpc1,9-00U-Alps-Hole,1,SW_Push_45deg,
-SWTab1,1-50U-Alps-Hole,1,SW_Push_45deg,
