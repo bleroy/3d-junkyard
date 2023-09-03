@@ -1,5 +1,7 @@
 # Decent XE mechanical keyboard replacements for Atari XE computers
 
+![Open source licenses](./Media/oshw_facts.svg)
+
 Whether you have an old Atari XE computer with a dead keyboard membrane, would like to use a XE keyboard with your favorite PC emulators, or just want to build a more modern XE keyboard, this is the project for you.
 
 ![The DecentXE keyboard with modern graphite key caps](Media/ModernGraphite.jpg)
@@ -310,7 +312,7 @@ The stabilizers consist of a larger part that has the threaded part, a smaller p
 
 Once the stabilizers are assembled, you can put them in their respective places on the top side of the PCB. Insert the bottom, non-threaded part first, try to lay the stabilizer's surface flat on the PCB, and push the top threaded part into place. This usually moves the other end a bit, so make sure both ends are properly inserted all the way into the holes in the PCB.
 
-Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw. Repeat this for the space stabilizer, the left shift and the return key. Do not do it for the backspace / del key as the screw would get in the way of the FFC connector. This is a minor design flaw that I'll remove in a future revision, but it's fine, the stabilizer won't move if you've properly installed it.
+Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw. Repeat this for the space stabilizer, the left shift and the return key.
 
 #### Configure the keyboard for the modern layout
 
@@ -427,3 +429,7 @@ All software in this repository is licensed under the [MIT license](https://mit-
 All documentation in this repository is licensed under [Creative Commons Creative Commons Attribution-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Full terms can be found in the [LICENSE](./LICENSE) file or on the web sites linked above.
+
+## Certification
+
+This project is [certified open source hardware by OSHWA](https://certification.oshwa.org/us002378.html).
