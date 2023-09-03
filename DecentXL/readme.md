@@ -181,7 +181,7 @@ The backlighting luminosity can be changed with a [2kOhms 6mm potentiometer](htt
 
 ### Spring
 
-If you went for a vintage keyboard, the wide space bar will need a spring. The original spring from the Atari keyboard will work, but you can also [source a new 17mm x 8.5 one](https://www.mcmaster.com/9434K52/).
+If you went for a vintage keyboard, the wide space bar will need a spring. The original spring from the Atari keyboard will work, but you can also source a new 17mm x 9mm one.
 
 ### Hardware
 
