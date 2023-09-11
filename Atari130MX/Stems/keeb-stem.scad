@@ -416,13 +416,15 @@ module atari_fn(legend) {
 
 union() {
   horiz_conn_radius = cap_type == "Atari XE ◎" ? atari_circle_wing_thickness / 2  :
+    cap_type == "Atari XL ✚" ? atarixl_cross_thickness / 2 :
     cap_type == "Atari XE ■" ? 0.75 :
     0.75;
   horiz_conn_altitude = cap_type == "Atari XE ◎" ? rotate_switch ? extra_floor - horiz_conn_radius : atari_circle_depth + extra_floor - horiz_conn_radius :
-    cap_type == "Atari XE ■" ? horiz_conn_radius :
+    cap_type == "Atari XE ■" || cap_type == "Atari XL ✚" ? horiz_conn_radius :
     cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" || cap_type == "Atari Fn" ? fn_top_thickness - fn_height + horiz_conn_radius :
     20;
-  horiz_offset = cap_type == "Atari XE ◎" ? 8 : 
+  horiz_offset = cap_type == "Atari XE ◎" ? 8 :
+    cap_type == "Atari XL ✚" ? 6 : 
     cap_type == "Atari XE ■" ? 10 :
     cap_type == "Atari Fn" || cap_type == "Atari Console Set" || cap_type == "Atari F1-4 Set" ? fn_depth + 2 :
     20;
