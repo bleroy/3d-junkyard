@@ -6,8 +6,8 @@
 
   (title_block
     (title "DecentXL")
-    (date "2023-08-05")
-    (rev "1.1")
+    (date "2023-09-12")
+    (rev "2")
     (comment 1 "Replacement keyboard for Atari XL computers")
   )
 
