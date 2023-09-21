@@ -1,11 +1,11 @@
 (footprint "MX-1-00_1-25U-LED" (version 20221018) (generator pcbnew)
   (layer "F.Cu")
   (descr "1.00U MX / 1.25 Kailh Choc footprint with non-addressable monochromatic backlight LED")
-  (fp_text reference "REF**" (at 1.190625 -3.12) (layer "Cmts.User")
+  (fp_text reference "REF**" (at 1.190625 -3.12) (layer "Cmts.User") hide
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp 9c97db98-dfe2-455c-80b1-cf93c801bc35)
   )
-  (fp_text value "MX/LowPro" (at 5.953125 13.462) (layer "F.Fab")
+  (fp_text value "MX/LowPro" (at 5.953125 13.462) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp 1b4c13d1-006a-417b-92e7-8e372f30505c)
   )
