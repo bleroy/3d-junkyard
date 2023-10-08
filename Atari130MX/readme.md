@@ -16,13 +16,13 @@ But wait!... That's not all. Since the project started, there's been multiple re
 
 ## Current version
 
-The current revision of the DecentXE keyboard is: **rev. 13**.
+The current revision of the DecentXE keyboard is: **rev. 14**.
 
 ## Can I buy one?
 
 The project is open-source, and I'm encouraging everyone to try to build their own. I do sell kits and assembled keyboards (both modern and vintage) for those who are not comfortable with ordering parts, PCBs or using a soldering iron. If you'd like to order something, [drop me a personal message on AtariAge](https://forums.atariage.com/profile/76850-screamingattheradio/). Keyboards and kits are made to order, so expect several weeks between ordering and receiving.
 
-How expensive is it? It depends on what you're ordering, but this is a made-to-order custom mechanical keyboard, so, not cheap.
+How expensive is it? It depends on what you're ordering, but this is a made-to-order custom mechanical keyboard, so, not cheap. You can find all the prices [in this thread](https://forums.atariage.com/topic/352558-decent-xe-mechanical-keyboard-for-atari-xe-computers-how-to-order-one/).
 
 ## Project history
 
@@ -82,13 +82,15 @@ The PCB and plate have a consistent Harry Fatt typeface, and each key gets all i
 
 That's pretty much where we are today.
 
+**Revision 14** replaces the adapter and flat cable with a flexible PCB. The backlighting potentiometer is moved to the main board.
+
 ## Options
 
 ### Key caps: vintage or modern?
 
-My own preference was to use the original key caps from a vintage Atari XE computer. They can be scavenged from an existing computer, or from new old stock that's still available at the usual places. The result is, like above, visually indistinguishable from the original keyboard, but feels oh so much better.
+My own original preference was to use the original key caps from a vintage Atari XE computer. They can be scavenged from an existing computer, or from new old stock that's still available at the usual places. The result is, like above, visually indistinguishable from the original keyboard, but feels oh so much better.
 
-XLFreak has been working on new caps in the style of old Atari caps, but that can be produced in small quantities. The nice thing about those is that no adapter is necessary and the end result is an amazing keyboard that is and feels in every way like a great modern keyboard.
+XLFreak has been working on new caps in the style of old Atari caps, but that can be produced in small quantities. The nice thing about those is that no adapter is necessary and the end result is an amazing keyboard that is and feels in every way like a great modern keyboard. This is now my preferred option to upgrade Atari XE keyboards.
 
 ### Switches
 
@@ -129,13 +131,13 @@ It is also possible however to build and use this keyboard and use it with an em
 
 ### Key caps
 
-The best result will be obtained with [new key caps](Caps/wasd-inkscape-iso85-atari-130mx-White_Caps.svg).
+The best result will be obtained with [new key caps](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html).
 
 ![Modern layout](Caps/wasd-inkscape-iso85-atari-130mx-White_Caps.svg)
 
 Vintage key caps from an Atari XE computer can also be used to maintain a look that is indistinguishable from the original. Old-new stock of XE keyboards is also currently available without too much trouble and for a reasonable price.
 
-* Optimal: MX-compatible set of key caps
+* Optimal: [MX-compatible set of key caps](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html)
 * Fine: vintage set of XE key caps
 
 ### Console keys (Help, Start, Select, Option, Reset)
@@ -146,35 +148,50 @@ The first solution is to [3D-print your own](Caps/fn-choc.stl) and then paint th
 
 The alternative is to use vintage function keys on adapters. That choice will require using low-profile switches for those five keys.
 
-* Optimal: 3D-printed
-* Fine: vintage function keys on adapters
+* Good: 3D-printed
+* Optimal: vintage function keys on adapters
+
+I can also sell you a set of printed keys.
 
 ### Switches
 
 A choice of switches is highly personal and there are many options here. Get a sample set if you don't have a preferred kind. You can choose between MX-compatible switches for modern caps, Kailh Choc v1, Gateron or RedDragon low-profiles for vintage caps.
+
+Console keys should now be mounted on low-profile switches, so you'll need to buy 5 that match the characteristics of your main keyboard choice (clicky, linear or tactile).
 
 * Optimal: 57 MX-compatible switches of your preferred brand and kind (for modern caps) + 5 Kailh Choc v1 switches for the console keys
 * Fine: 62 Kailh Choc v1, Gateron or RedDragon low-profile switches (for vintage caps)
 
 ### Adapters
 
-The switch adapters link vintage caps to modern switches. As such, you don't need them if you opted for modern caps.
+The switch adapters link vintage caps to modern switches. As such, you don't need them if you opted for all modern caps. If you're using vintage console keys, you'll need 5 adapters.
 
-In order to print them, you'll need a resin printer with a resolution of 50 micrometers (1/20th of a millimeter) or better. I use an [Elegoo Mars 2 Pro](https://www.elegoo.com/products/elegoo-mars-2-pro-mono-lcd-3d-printer), which is both excellent and inexpensive. The printing bed is rather small, so you may want to go for something larger, but keep in mind that resin printers involve a lot of cleanup and potential mess, and a larger bed means even more of that. There are alternatives to the Elegoo Mars, of course.
-
-The choice of resin is very important, as the same design on the same printer can give wildly varying qualities of print. For instance, I stay away from all grey Elegoo resins, as I found them to blur the design and be very unreliable. The resin I've had the best results with is Elegoo's [clear red](https://www.elegoo.com/collections/resin/products/elegoo-standard-resin?variant=32365787807792).
-
-If you don't own a resin printer, or don't want or can't buy one (a good reason not to adopt one is if you live in an apartment, for example), there is probably a maker space not far from your home or workplace where you can access one.
+The best option today is to simply have the adapters printed, for example by JLCPCB.
 
 Online printing services have recently become very inexpensive, and the quality of their prints can't be rivalled by any hobbyist printer available today. The trick for small parts such as these adapters is to group them in [batches](Stems/kailh-choc-to-xe-circle-set.stl) so they count as a single part. I stopped printing locally after the prototyping phase, and am now ordering all my 3D prints from JLCPCB.
 
-Finally, there's two types of low-profile switches that can be used with the DecentXE PCB: Kailh Choc v1 and MX-like (Gateron and RedDragon). There are adapters in the repo for all combinations of those switch types and vintage Atari caps.
+If you decide to print them, you'll need a resin printer with a resolution of 50 micrometers (1/20th of a millimeter) or better. I use an [Elegoo Mars 2 Pro](https://www.elegoo.com/products/elegoo-mars-2-pro-mono-lcd-3d-printer), which is both excellent and inexpensive. The printing bed is rather small, so you may want to go for something larger, but keep in mind that resin printers involve a lot of cleanup and potential mess, and a larger bed means even more of that. There are alternatives to the Elegoo Mars, of course.
+
+The choice of resin is very important, as the same design on the same printer can give wildly varying qualities of print. For instance, I stay away from all grey Elegoo resins, as I found them to blur the design and be very unreliable. The resin I've had the best results with is Elegoo's [clear red](https://www.elegoo.com/collections/resin/products/elegoo-standard-resin?variant=32365787807792).
+
+Finally, there's two types of low-profile switches that can be used with the DecentXE PCB: Kailh Choc v1 and MX-like (Gateron and RedDragon). There are adapters in the repo for all combinations of those switch types and vintage Atari caps. You can even generate your own combination by using [the OpenScad model](./Stems/keeb-stem.scad), which is fully parametric.
 
 The Choc type with circle caps combination has the additional complication that it's not symmetrical with respect to a 90 degree rotation. Because three of the switches (return, delete and break) are rotated 90 degrees in the vintage layout, we also need three adapters that are rotated 90 degrees so we can fit the caps in their correct orientation.
 
 * Optimal: order from a fab house such as JLCPCB
-    - 6x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 3x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl)
+    - 6x [set of circle adapters](Stems/kailh-choc-to-xe-circle-set.stl) plus 3x [90 degree circle adapter for the return key](Stems/kailh-choc-to-xe-circle-90.stls) or 7x [set of square adapters](Stems/kailh-choc-to-xe-square-set.stl) if you're going full vintage.
+    - 5 adapters, circle or square. You can use one of the sets above (10 adapters per set).
 * Fine: print your own with a resin printer
+
+I also sell adapters separately from keyboards.
+
+### Board padding
+
+For the most stable results, you can add two [padding 3D-printed parts](./Stabilizers/HeightPadding.stl) on top of the main board at the bottom left and right:
+
+![board padding, photo courtesy of Clint Thompson](https://content.invisioncic.com/r322239/monthly_2023_09/BracketsInstalled.thumb.jpg.fe8f180f29bf525ebd031a59c5525a9e.jpg)
+
+Those can be printed on any 3D printer as they don't require a lot of precision.
 
 ### Stabilizers
 
@@ -202,7 +219,7 @@ The [Atari130MX KiCad project](DecentXE.kicad_pro) should have everything you ne
 * Optimal:
     - [DecentXE main board Gerber files](Fabrication/DecentXE.zip)
     - [DecentXE BOM file](Fabrication/DecentXE-BOM.csv)
-    - [DecentXE Position file](Fabrication/DecentXE-POS.csv)
+    - [DecentXE Position file](Fabrication/DecentXE-positions.csv)
 
 ### Plate
 
@@ -221,22 +238,29 @@ In terms of weight, the keyboard assembled with an aluminum plate is about 430g.
 
 When using vintage caps, you may need to add some spacers between the board and the plate while building, in addition to the switches themselves. I'm using stacked washers that I glue in place.
 
-### Connectors and adapters
+There's a smaller, 3D-printed plate for the console keys that also adjusts the height of the switches relative to the PCB:
+
+* [Console key plate](./Stabilizers/LowProRaiserPlate.stl)
+
+### Connector
 
 The original Atari XE keyboard's connector was just a part of the mylar membrane. We need a replacement for that. Note that the clearance between the Atari XE motherboard and the bottom of the keyboard is very small at about 16mm.
 
-![The Atari 130MX cable adapters](Media/Adapter.png)
+The current solution is a custom flexible PCB that can plug directly into the Atari motherboard connector, and is compatible with a modern 1mm 26 positions surface-mounted connector on the other side:
 
-The adapter can fit into the original Atari motheboard's keyboard connector if made in 0.6mm thickness. You can also replace that connector with pin headers that offer more flexibility.
+![The Decent flexible PCB](Media/Decent-cable.jpg)
+
+If your Atari connector is damaged, or you don't have one, it's also possible to solder an adapter and a standard 1mm pitch 26 position flat cable.
+
+![The flat cable 24 x 2.54mm to 26 x 1mm adapter](./Media/Adapter.png)
 
 * Optimal:
-    * 2 [FFC 26 position 1mm pitch connectors](https://www.digikey.com/en/products/detail/amphenol-cs-fci/F52R-1A7H1-11026/11564733).
+    * [Flexible PCB]().
+* Fine:
     * [FFC 26 position 1mm Type A](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5386/16129671?s=N4IgTCBcDaIIwFsEAIAOBLALgYwBbLADY10A7EAXQF8g) (contacts on the same side on both ends) ribbon cable, 15cm at least.  Here's also [an Amazon source](https://www.amazon.com/uxcell-Flexible-Cable-Ribbon-Player/dp/B07RWRX6YT/r).
-    * [XE keyboard Adapter](Fabrication/DecentXE-adapter.zip) fabricated in 0.6mm thickness
+    * [XE keyboard Adapter](Fabrication/DecentXE-adapter.zip)
     * [6mm horizontal rotary potentiometer, 2kOhms](https://www.digikey.com/en/products/detail/cui-devices/PTN06-D02CB20/17141151) for backlighting dimming
-    * Optional: 1x24 2.54mm pin headers
-* Terrible:
-    * 24 wires and some permanent soldering you should be ashamed of
+    * 1x24 2.54mm pin headers
 
 ## Fabrication and assembly instruction
 
@@ -272,25 +296,19 @@ Here's some additional general advice about resin printing:
 
 ### Optional: replace the Atari connector
 
-I do recommend unsoldering the Atari connector from the motherboard and replacing it with some pin headers to gain some vertical space in your XE case. You can then solder the adapter onto those headers parallel to the motherboard. This should ensure there's plenty of space and no excessive mechanical constraints on the hardware. I understand some of you will prefer not to touch their precious XE motherboards, and the latest version of the adapter should also leave enough vertical space.
+If you lack the original Atari connector on your motherboard, you may want to use an adapter and solder that in.
 
 ### Installing a modern keyboard (assembled)
 
 I do sell assembled modern keyboards, but you still need to get those into your Atari. This section goes through the details of doing that.
 
-You may have to separate your printed console keys using some nippers and then press fit them on the corresponding switches.
-
-The FFC cable should already be attached to the back of the keyboard. Verify the connection is solid and readjust if necessary (the connectors have two tabs on the side that you can pull to free the cable; the cable should be fully inserted with the contacts facing the PCB; make sure the tabs are both fully pushed back to ensure a solid connection).
+The FFC cable should already be attached to the keyboard.
 
 [skip to the common section](#common-section-inserting-the-adapter)
 
 ### Installing a vintage keyboard (assembled)
 
 I do sell assembled vintage keyboards, but you still need to get those into your Atari. This section goes through the details of doing that.
-
-Usually this will come with the adapters for your flavor of vintage keys in a small bag. You'll need to separate each adapter using nippers. The small parts linking the adapters during fabrication are positioned to not get in the way, but it's still a good idea to cut them as flush as possible.
-
-Insert each adapter into one of the switches. Note that the delete, break and return keys are the only ones for which the switches are rotated 90 degrees, so they need different adapters.
 
 Use a key cap extractor to remove the keys from your vintage keyboard (a key extractor is the best way to make sure you don't damage the caps). Make sure to be especially gentle if you have the square variant, those break easily.
 
@@ -312,7 +330,7 @@ The stabilizers consist of a larger part that has the threaded part, a smaller p
 
 Once the stabilizers are assembled, you can put them in their respective places on the top side of the PCB. Insert the bottom, non-threaded part first, try to lay the stabilizer's surface flat on the PCB, and push the top threaded part into place. This usually moves the other end a bit, so make sure both ends are properly inserted all the way into the holes in the PCB.
 
-Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw. Repeat this for the space stabilizer, the left shift and the return key.
+Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw. Repeat this for the space stabilizer, the left shift, the delete key and the return key.
 
 #### Configure the keyboard for the modern layout
 
@@ -332,25 +350,13 @@ After making sure all the switch pins are vertical and none are bent out of plac
 
 Solder each switch onto the PCB.
 
-Once you've done all the full-size switches, add the low-profile switches for the console keys. Since those do not mount on the plate, take extra precautions to align the switches precisely. A ruler and some removable glue or tape can help stabilize the assembly while you solder.
+Once you've done all the full-size switches, insert the low-profile switches for the console keys into their 3D-printed plate, then align that to the PCB. Solder the switches.
 
 Even after soldering, you can make small adjustments by melting the solder around one of the pins and carefully moving the switch, then reflow the other pin of the same switch to relieve constraints or further adjust.
 
 #### Add the cable
 
-And then you're pretty much done for the keyboard itself, just pull the two tabs for the connector, insert the cable all the way with contacts facing the PCB, then push the tabs back in.
-
-#### Assemble the adapter
-
-Now you need to assemble your adapter.
-
-Solder the FFC connector in place. This is the only SMT component you'll have to solder. There are several methods to do that, and the 1mm pitch is not too bad. If you're not used to SMD soldering, I'd recommend trying your hand on one of the training boards that you can find online. There's also plenty of tutorials out there to get you started.
-
-You should be able to test all the pins this way to pin 24. The connector has two more lines for the LED backlighting. They should be connected to two of the four holes you can see aligned vertically on the board to the right of the connector.
-
-To check your work, you'll verify continuity with a multimeter between the connector pins and the edge contacts on the bottom of this little board, in reverse order (start on the left of the edge connector and on the right of the FFC connector). For the last two pins, one is connected to edge contact 1 and the other to the bottom-left contact of the pot that you're going to solder next (look for the three holes to the left of the FFC connector).
-
-Solder the small pot. If you don't care about backlighting or about being able to change the intensity, you could leave it open, short it or put a resistor in its place.
+And then you're pretty much done for the keyboard itself, insert the flexible PCB from below the PCB into its slot, so the contacts can face the bottom of the board. Pull the two tabs for the connector, insert the cable all the way with contacts facing the PCB, then push the tabs back in.
 
 [skip to the common section](#common-section-inserting-the-adapter)
 
@@ -376,7 +382,7 @@ Insert switches into the aluminum or aluminium plate depending on whether you ar
 
 #### Get the plate and PCB together
 
-After making sure all the switch pins are vertical and none are bent out of place, carefully align the plate and switches with the stabilizers and the PCB. Slowly and carefully complete that assembly, making sure no pins get bent. Once that is done, the plate and PCB should be a few millimeters apart, more or less evenly spaced across the whole surface. Low-profile switches have a tendency to not attach to the plate as well as full-sized switches, so don't worry if some of these fall out during assembly, you'll have a chance to set them back in later. At this point, you want to have enough to ensure proper alignment. Another thing with low-profile switches is that they're not as good at maintaining the distance between PCB and plate. To make that distane more even with the distance imposed by the space stabilizer, I glue a couple of washers between plate and PCB on the top of the assembly to keep them apart. You may want  to also secure them together with tape or clothespins until you've soldered enough switches.
+After making sure all the switch pins are vertical and none are bent out of place, carefully align the plate and switches with the stabilizers and the PCB. Slowly and carefully complete that assembly, making sure no pins get bent. Once that is done, the plate and PCB should be a few millimeters apart, more or less evenly spaced across the whole surface. Low-profile switches have a tendency to not attach to the plate as well as full-sized switches, so don't worry if some of these fall out during assembly, you'll have a chance to set them back in later. At this point, you want to have enough to ensure proper alignment. Another thing with low-profile switches is that they're not as good at maintaining the distance between PCB and plate. To make that distane more even with the distance imposed by the space stabilizer, there are two holes for M2 screws at the top of the plate and main board. Use three M2 nuts to keep the correct distance between the plate and PCB. Secure everything from the top with one final nut.
 
 #### Assemble the left shift stabilizer
 
@@ -384,39 +390,29 @@ The left shift stabilizer is more problematic and potentially the most frustrati
 
 #### Solder the switches
 
-Solder the switches onto the PCB. Dont's forget the console keys. Since those do not mount on the plate, take extra precautions to align the switches precisely. A ruler and some removable glue or tape can help stabilize the assembly while you solder.
+Solder the switches onto the PCB.
+
+Dont's forget the console keys. Since those do not mount on the plate, use a 3D-printed console key plate to align the switches precisely and keep the switches at the correct height.
 
 Even after soldering, you can make small adjustments by melting the solder around one of the pins and carefully moving the switch, then reflow the other pin of the same switch to relieve constraints or further adjust.
 
 #### Add the cable
 
-And then you're pretty much done for the keyboard itself, just pull the two tabs for the connector, insert the cable all the way with contacts facing away from the PCB, then push the tabs back in.
-
-#### Assemble the adapter
-
-Now you need to assemble your adapter.
-
-Solder the FFC connector in place. This is the only SMT component you'll have to solder. There are several methods to do that, and the 1mm pitch is not too bad. If you're not used to SMD soldering, I'd recommend trying your hand on one of the training boards that you can find online. There's also plenty of tutorials out there to get you started.
-
-You should be able to test all the pins this way to pin 24. The connector has two more lines for the LED backlighting. They should be connected to two of the four holes you can see aligned vertically on the board to the right of the connector.
-
-To check your work, you'll verify continuity with a multimeter between the connector pins and the edge contacts on the bottom of this little board, in reverse order (start on the left of the edge connector and on the right of the FFC connector). For the last two pins, one is connected to edge contact 1 and the other to the bottom-left contact of the pot that you're going to solder next (look for the three holes to the left of the FFC connector).
-
-Solder the small pot. If you don't care about backlighting or about being able to change the intensity, you could leave it open, short it or put a resistor in its place.
-
-[skip to the "Vintage keyboard (assembled)" section](#installing-a-vintage-keyboard-assembled)
+And then you're pretty much done for the keyboard itself, insert the flexible PCB from below the PCB into its slot, so the contacts can face the bottom of the board. Pull the two tabs for the connector, insert the cable all the way with contacts facing the PCB, then push the tabs back in.
 
 ### Common section: inserting the adapter
 
 Remove your existing keyboard, pulling the membrane connector carefully using both hands to avoid accidentally folding it.
 
-Insert the adapter (or do the replacement described above). The FFC connector should face the front of the case. There's also a little triangular mark on the part of the adapter that plugs into the Atari; that should be on the left (pin 1).
+Insert the flexible PCB into the connector on the motherboard.
 
-Then position the keyboard to the back of the XE case so you have enough space to work and the cable can reach the adapter's connector. Open the connector, insert the cable with the contacts facing away from the board, then push back the two tabs, making sure the connection is solid and the cable can't move.
+Add the height padding on top of your keyboard's main PCB, to the bottom left and right.
 
 You can now power your computer. The power LED on the keyboard should go on and the backlighting should too. It's a good idea to go to the diagnostics and try the keyboard diagnostics. I've already done that on all the keyboards I shipped, but you never know what could happen in transit.
 
-The little pot on the adapter can be rotated with a small screwdriver. This adjusts the brightness of the backlight LEDs (this can also limit the current the backlighting draws).
+The little pot on the bottom-right of the PCB can be rotated with a small screwdriver. This adjusts the brightness of the backlight LEDs (this can also limit the current the backlighting draws).
+
+Once you've verified everything works, just add the top of the case back.
 
 And that's it. Let me know if you have any questions or need to troubleshoot anything.
 
