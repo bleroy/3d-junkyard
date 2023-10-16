@@ -28,3 +28,5 @@ JoyKeyMX/Universal-Switch-Footprint
 *.ods#
 .~lock.*.csv#
 *.lck
+*.FCStd1
+misc-models/*.stl
