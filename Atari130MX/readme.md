@@ -144,7 +144,7 @@ Vintage key caps from an Atari XE computer can also be used to maintain a look t
 
 If you're using modern key caps, you'll need to make a choice for console keys.
 
-The first solution is to [3D-print your own](Caps/fn-choc.stl) and then paint them. I recommend [Tamiya Sea Grey model paint](https://www.tamiyausa.com/shop/acrylic-paint-flat-mini-10ml/acrylic-mini-xf-83-m-sea-gray/) for a pretty good match with the Atari XE case color. You can mask the legends when painting to make them stand out.
+The first solution is to [3D-print your own](./Caps/fn-console-set-choc.stl) and then paint them. I recommend [Tamiya Sea Grey model paint](https://www.tamiyausa.com/shop/acrylic-paint-flat-mini-10ml/acrylic-mini-xf-83-m-sea-gray/) for a pretty good match with the Atari XE case color. You can mask the legends when painting to make them stand out.
 
 The alternative is to use vintage function keys on adapters. That choice will require using low-profile switches for those five keys.
 
