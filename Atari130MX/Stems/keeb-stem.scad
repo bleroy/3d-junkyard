@@ -6,7 +6,7 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari XE ◎"; // [Atari XE ◎, Atari XE ■, Atari XE Console Key, Atari XE Console Set, Atari XE F1-4 Set, Atari XL ✚, Atari XL Alps ▬, Atari XL ⧇, Atari XL Console Key, KailhBox]
+cap_type = "Atari XE ◎"; // [Atari XE ◎, Atari XE ■, Atari XE Console Key, Atari XE Console Set, Atari XE F1-4 Set, Atari XL ✚, Atari XL Alps ▬, Atari XL ⧇, Atari XL Console Key, Atari 1200XL Console Key, KailhBox]
 
 // Stem type
 stem_type = "Low-pro adapter"; // [Low-pro adapter, Kailh Choc v1, Kailh Box Pink, MX Adapter]
@@ -24,7 +24,7 @@ columns = 1; // [1:1:10]
 link_models = false;
 
 // Support from under
-support = true;
+support = false;
 
 // Rotate switch 90 degrees
 rotate_switch = false;
@@ -434,16 +434,16 @@ module atari_fn(legend) {
 
 xl_console_size = 18.1;
 xl_console_height = 6.15;
-xl_console_wall = 2;
-xl_console_hole_depth = stem_type == "Kailh Choc v1" ? 0 : 4.9;
-xl_console_fillet = 0.5;
+xl_console_wall = 1.2;
+xl_console_hole_depth = cap_type == "Atari 1200XL Console Key" ? 5 : stem_type == "Kailh Choc v1" ? 0 : 4.9;
+xl_console_fillet = 1.5;
 
 module xl_console() {
   translate([0, 0, xl_console_height / 2 - xl_console_hole_depth])
     difference() {
       minkowski() {
-        cube([xl_console_size - xl_console_fillet * 2, xl_console_size - xl_console_fillet * 2, xl_console_height - xl_console_fillet * 2], center = true);
-        sphere(r = xl_console_fillet);
+        cube([xl_console_size - xl_console_fillet * 2, xl_console_size - xl_console_fillet * 2, xl_console_height - 1], center = true);
+        cylinder(r = xl_console_fillet, h = 1);
       }
       translate([0, 0, (xl_console_hole_depth - xl_console_height) / 2 - 0.1])
         cube([xl_console_size - 2 * xl_console_wall, xl_console_size - 2 * xl_console_wall, xl_console_hole_depth + 0.2], center = true);
@@ -467,7 +467,7 @@ union() {
     cap_type == "Atari XE ■" ? 0.75 :
     0.75;
   horiz_conn_altitude = cap_type == "Atari XE ◎" ? rotate_switch ? extra_floor - horiz_conn_radius : atari_circle_depth + extra_floor - horiz_conn_radius :
-    cap_type == "Atari XL Console Key" ? -xl_console_hole_depth / 2 + horiz_conn_radius :
+    cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? -xl_console_hole_depth / 2 + horiz_conn_radius :
     cap_type == "Atari XE ■" || cap_type == "Atari XL ✚" ? horiz_conn_radius :
     cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_top_thickness - fn_height + horiz_conn_radius :
     20;
@@ -479,23 +479,23 @@ union() {
   horiz_conn_length = cap_type == "Atari XE ◎" ? (horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter) * (rotate_switch ? 2 : 1) + 0.1 :
     cap_type == "Atari XE ■" ? horiz_offset - atari_box_width + 0.1 :
     cap_type == "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? horiz_offset - fn_depth + 0.2 :
-    cap_type == "Atari XL Console Key" ? 20.5 + xl_console_fillet * 2 - xl_console_size :
+    cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? 20.5 + xl_console_fillet * 2 - xl_console_size :
     horiz_offset;
   vert_conn_radius = stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? atari_circle_wing_thickness / 2 :
     stem_type == "Kailh Choc v1" ? max(kailh_choc_base_dimensions[2] / 2, 0.5) :
     0.75;
   vert_conn_altitude = cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_top_thickness - fn_height + horiz_conn_radius :
-    cap_type == "Atari XL Console Key" ? -xl_console_hole_depth / 2 + vert_conn_radius:
+    cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? -xl_console_hole_depth / 2 + vert_conn_radius:
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? vert_conn_radius - mxadapter_stem_height :
     stem_type == "Kailh Choc v1" ? 0 :
     20;
   vert_offset = cap_type == "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? fn_side + 2 :
-    cap_type == "Atari XL Console Key" ? 20 :
+    cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? 20 :
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? 8 :
     stem_type == "Kailh Choc v1" ? 10 :
     20;
   vert_conn_length = cap_type == "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? 2.1 :
-    cap_type == "Atari XL Console Key" ? 20.5 + xl_console_fillet * 2 - xl_console_size :
+    cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? 20.5 + xl_console_fillet * 2 - xl_console_size :
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? vert_offset - mxadapter_stem_diameter + 0.3 :
     stem_type == "Kailh Choc v1" ? vert_offset - kailh_choc_base_dimensions[0] + 0.1 :
     20;
@@ -544,7 +544,7 @@ union() {
           if (cap_type == "Atari XE F1-4 Set") {
             atari_fn(["F1", "F2", "F3", "F4"][col - 1]);
           }
-          if (cap_type == "Atari XL Console Key") {
+          if (cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key") {
             xl_console();
           }
           if (stem_type == "Kailh Box Pink") {
@@ -553,7 +553,7 @@ union() {
                 kailh_stem();
           }
           if (stem_type == "Kailh Choc v1") {
-            translate([0, 0, -kailh_choc_height / 2])
+            translate([0, 0, -kailh_choc_height / 2 + kailh_choc_base_dimensions[2] / 2])
               kailh_choc();
           }
           if (stem_type == "MX Adapter" || stem_type == "Low-pro adapter") {
