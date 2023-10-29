@@ -352,7 +352,7 @@ module mx_adapter() {
 
 fn_side = 26.4;
 fn_depth = fn_side * cos(45) - 0.5;
-fn_height = 7;
+fn_height = 9;
 fn_fillet = 5;
 fn_top_thickness = stem_type == "MX Adapter" ? fn_height - 6.5 : fn_height;
 fn_hole_diameter = 16 * sqrt(2);

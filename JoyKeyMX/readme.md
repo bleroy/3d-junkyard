@@ -1,5 +1,7 @@
 # JoyKey - an Atari-compatible joystick built with mechanical switches
 
+![Open source licenses](./Media/oshw_facts.svg)
+
 ## JoyKey Mini vs. JoyKey XL
 
 There are two models of JoyKey: JoyKey Mini and JoyKey XL.
@@ -50,3 +52,7 @@ All software in this repository is licensed under the [MIT license](https://mit-
 All documentation in this repository is licensed under [Creative Commons Creative Commons Attribution-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Full terms can be found in the [LICENSE](./LICENSE) file or on the web sites linked above.
+
+## OSHW certification
+
+This project is [certified open source hardware by OSHWA](https://certification.oshwa.org/us002379.html).

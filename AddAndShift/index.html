@@ -9,6 +9,11 @@
 </head>
 <body>
     <canvas id="circle" width="800" height="600"></canvas>
+    <fieldset>
+        <legend>Settings</legend>
+        <input type="checkbox" id="chk-diff-circle" checked/>
+        <label for="chk-diff-circle">Draw a circle using additions and shifts (differential equation method)</label>
+    </fieldset>
     <script src="circle.js"></script>
     <script>
         window.addEventListener("load", () => {
