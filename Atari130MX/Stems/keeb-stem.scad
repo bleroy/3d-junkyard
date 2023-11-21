@@ -137,7 +137,7 @@ atarixl_cross_teeth_width = 0.4;
 atarixl_cross_teeth_depth = 0.05;
 
 module atarixl_cross() {
-  translate([0, 0, -0.05])
+  translate([0, 0, 0.05])
     union() {
       cube([atarixl_cross_thickness, atarixl_cross_size, atarixl_cross_height + 0.1], center = true);
       cube([atarixl_cross_size, atarixl_cross_thickness, atarixl_cross_height + 0.1], center = true);
@@ -468,12 +468,13 @@ union() {
     0.75;
   horiz_conn_altitude = cap_type == "Atari XE ◎" ? rotate_switch ? extra_floor - horiz_conn_radius : atari_circle_depth + extra_floor - horiz_conn_radius :
     cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? -xl_console_hole_depth / 2 + horiz_conn_radius :
-    cap_type == "Atari XE ■" || cap_type == "Atari XL ✚" ? horiz_conn_radius :
+    cap_type == "Atari XE ■" || cap_type == "Atari XL ✚" || cap_type == "Atari XL ⧇" ? horiz_conn_radius :
     cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_top_thickness - fn_height + horiz_conn_radius :
     20;
   horiz_offset = cap_type == "Atari XE ◎" ? 8 :
     cap_type == "Atari XL ✚" ? 6 : 
     cap_type == "Atari XE ■" ? 10 :
+    cap_type == "Atari XL ⧇" ? 6 :
     cap_type == "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? fn_depth + 2 :
     20;
   horiz_conn_length = cap_type == "Atari XE ◎" ? (horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter) * (rotate_switch ? 2 : 1) + 0.1 :
@@ -487,7 +488,7 @@ union() {
   vert_conn_altitude = cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_top_thickness - fn_height + horiz_conn_radius :
     cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? -xl_console_hole_depth / 2 + vert_conn_radius:
     stem_type == "MX Adapter" || stem_type == "Low-pro adapter" ? vert_conn_radius - mxadapter_stem_height :
-    stem_type == "Kailh Choc v1" ? 0 :
+    stem_type == "Kailh Choc v1" ? 0.5 :
     20;
   vert_offset = cap_type == "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? fn_side + 2 :
     cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? 20 :
