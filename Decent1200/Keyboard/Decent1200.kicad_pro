@@ -51,7 +51,6 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         "hole_near_hole|321627000|78805500|e7e9b6b1-a156-4c92-9bcc-c8d073d8e9b9|cd803788-d258-4b12-bac0-6ea5d147b13e",
-        "solder_mask_bridge|60250000|144730000|c5d9e8d5-680b-4fc6-a127-689073a61ef5|47824916-62e6-4d90-915a-a54bbc45b023",
         "solder_mask_bridge|75613046|29942357|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
         "solder_mask_bridge|79464648|39415041|4bc4fa50-4946-4966-afef-e68c3edf76c7|dec5a49c-8382-421f-b0c4-155dab5d4f87",
         "solder_mask_bridge|79662534|39307466|4bc4fa50-4946-4966-afef-e68c3edf76c7|dec5a49c-8382-421f-b0c4-155dab5d4f87",
