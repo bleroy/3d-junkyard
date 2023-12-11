@@ -5,19 +5,85 @@
     </title>
     <style>
         canvas { border: solid 1px grey; }
+        .indent { margin-left: 2em; }
     </style>
 </head>
 <body>
     <canvas id="circle" width="800" height="600"></canvas>
     <fieldset>
         <legend>Settings</legend>
-        <input type="checkbox" id="chk-diff-circle" checked/>
-        <label for="chk-diff-circle">Draw a circle using additions and shifts (differential equation method)</label>
-    </fieldset>
+        <div>
+            <input type="checkbox" id="chk-canvas-circle" checked/>
+            <label for="chk-canvas-circle">Draw a circle using canvas (standard library)</label>
+            <span id="canvas-circle-timing"></span>
+        </div><div>
+            <input type="checkbox" id="chk-diff-circle" checked/>
+            <label for="chk-diff-circle">Draw a circle using additions and shifts (differential equation method)</label>
+            <span id="diff-circle-timing"></span>
+            <div class="indent">
+                <input type="checkbox" id="chk-sine"/>
+                <label for="chk-sine">Draw a graph of the sine and cosine functions (with values generated as a side effect of drawing the circle with the differential equation method)</label>
+            </div>
+        </div><div>
+            <input type="checkbox" id="chk-disc-circle" checked/>
+            <label for="chk-disc-circle">Draw a circle using additions and shifts (discriminating function method)</label>
+            <span id="disc-circle-timing"></span>
+        </div><div>
+            <input type="checkbox" id="chk-benchmark"/>
+            <label for="chk-benchmark">Benchmark each algorithm</label>
+        </div>
+</fieldset>
     <script src="circle.js"></script>
     <script>
         window.addEventListener("load", () => {
-            drawCircle(document.getElementById("circle"), 400, 300, 299);
+            let drawCanvasCircle = true;
+            let drawDiffCircle = true;
+            let drawSine = false;
+            let drawDiscCircle = true;
+
+            const chkBenchmark = document.getElementById("chk-benchmark");
+            function redraw() {
+                const benchmark = chkBenchmark.checked;
+                const [tCanvas, tDiff, tDisc] = drawCircle(
+                    document.getElementById("circle"), 400, 300, 299,
+                    drawCanvasCircle, drawDiffCircle, drawSine, drawDiscCircle,
+                    benchmark ? 1000 : 1);
+                if (benchmark) {
+                    document.getElementById("canvas-circle-timing").innerText = `${tCanvas} ms`;
+                    document.getElementById("diff-circle-timing").innerText = `${tDiff} ms`;
+                    document.getElementById("disc-circle-timing").innerText = `${tDisc} ms`;
+                }
+            }
+            chkBenchmark.addEventListener("change", e => {
+                document.getElementById("canvas-circle-timing").innerText = "";
+                document.getElementById("diff-circle-timing").innerText = "";
+                document.getElementById("disc-circle-timing").innerText = "";
+                redraw();
+            });
+            
+            redraw();
+
+            const chkCanvasCircle = document.getElementById("chk-canvas-circle");
+            chkCanvasCircle.addEventListener("change", e => {
+                drawCanvasCircle = e.target.checked;
+                redraw();
+            });
+            const chkDiffCircle = document.getElementById("chk-diff-circle");
+            chkDiffCircle.addEventListener("change", e => {
+                drawDiffCircle = e.target.checked;
+                chkSine.disabled = !drawDiffCircle;
+                redraw();
+            });
+            const chkSine = document.getElementById("chk-sine");
+            chkSine.addEventListener("change", e => {
+                drawSine = e.target.checked;
+                redraw();
+            });
+            const chkDiscCircle = document.getElementById("chk-disc-circle");
+            chkDiscCircle.addEventListener("change", e => {
+                drawDiscCircle = e.target.checked;
+                redraw();
+            });
         });
     </script>
 </body>
