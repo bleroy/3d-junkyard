@@ -43,6 +43,10 @@ function drawCircle(canvas, xc, yc, r,
         ctx.fillStyle = "black";
         const before = performance.now();
 
+        // We'll need this later... Prepare arrays to receive sine and cosine values
+        // as side effects of drawing a circle
+        const sine = [], cosine = [];
+
         for (let i = 0; i < loops; i++) {
             // This algorithm relies on the differential equation system for a circle.
             // From:
@@ -60,10 +64,6 @@ function drawCircle(canvas, xc, yc, r,
             // This, by the way, is also the simplest algorithm for integer logarithm of base 2
             let n = 0;
             for (let twopown = 1; twopown < r; n++, twopown <<= 1);
-
-            // We'll need this later... Prepare arrays to receive sine and cosine values
-            // as side effects of drawing a circle
-            const sine = [], cosine = [];
 
             // Now we can start from (r, 0) and apply the differential equations at each step
             let x = r << bdp, y = 0, t = 0;
