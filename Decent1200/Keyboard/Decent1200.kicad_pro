@@ -49,17 +49,7 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        "hole_near_hole|321627000|78805500|e7e9b6b1-a156-4c92-9bcc-c8d073d8e9b9|cd803788-d258-4b12-bac0-6ea5d147b13e",
-        "solder_mask_bridge|75613046|29942357|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
-        "solder_mask_bridge|79464648|39415041|4bc4fa50-4946-4966-afef-e68c3edf76c7|dec5a49c-8382-421f-b0c4-155dab5d4f87",
-        "solder_mask_bridge|79662534|39307466|4bc4fa50-4946-4966-afef-e68c3edf76c7|dec5a49c-8382-421f-b0c4-155dab5d4f87",
-        "solder_mask_bridge|86537466|39319067|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
-        "solder_mask_bridge|86735352|39426642|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
-        "solder_mask_bridge|90586954|29930756|4bc4fa50-4946-4966-afef-e68c3edf76c7|dec5a49c-8382-421f-b0c4-155dab5d4f87",
-        "starved_thermal|61080000|144980000|b3cd2859-1095-46ab-9de4-8db0dc93f5a7|47824916-62e6-4d90-915a-a54bbc45b023|F.Cu",
-        "starved_thermal|69550000|148520000|c76442c3-2f2f-4b8c-9b41-371ef0ec9b62|4e8f0d24-a971-4fc2-be24-482e45d11eea|B.Cu"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
