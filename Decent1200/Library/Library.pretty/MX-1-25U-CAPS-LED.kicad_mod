@@ -67,7 +67,7 @@
     (stroke (width 0.1524) (type solid)) (layer "Eco2.User") (tstamp ba6f7dec-bb28-49f5-af18-02428007dbee))
   (pad "" np_thru_hole circle (at 11.08 0 270) (size 5.25 5.25) (drill 5.25) (layers "F&B.Cu" "*.Mask") (tstamp 5d6da4ec-71f9-44db-a119-f2c22d474ba1))
   (pad "" np_thru_hole oval (at 11.08 5.33) (size 1.8 2.2) (drill oval 1.8 2.2) (layers "F&B.Cu" "*.Mask") (tstamp c3dce679-dc24-4a58-a047-bed22d504c96))
-  (pad "1" thru_hole circle (at 16.98 0 180) (size 2.2 2.2) (drill 1.2) (layers "*.Cu" "*.Mask") (tstamp 949f8304-cb62-4014-8dc3-9146e947ad99))
+  (pad "1" thru_hole circle (at 16.98 0 180) (size 1.8 1.8) (drill 1.2) (layers "*.Cu" "*.Mask") (tstamp 949f8304-cb62-4014-8dc3-9146e947ad99))
   (pad "2" thru_hole circle (at 14.88 5) (size 2.2 2.2) (drill 1.2) (layers "*.Cu" "*.Mask") (tstamp d66f0618-b22b-4dba-be10-76e1c17d543c))
   (pad "3" smd rect (at 0 -0.75 180) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp daee1fbd-030c-4152-a4c1-3548ae1d5fad))
   (pad "4" smd rect (at 0 0.75 90) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 9f565822-f307-4eb0-afe4-4ee11e8bf37e))
