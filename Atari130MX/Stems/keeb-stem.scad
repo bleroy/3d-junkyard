@@ -6,7 +6,7 @@ $fa = 1;
 $fs = 0.2;
 
 // Cap type
-cap_type = "Atari XE ◎"; // [Atari XE ◎, Atari XE ■, Atari XE Console Key, Atari XE Console Set, Atari XE F1-4 Set, Atari XL ✚, Atari XL Alps ▬, Atari XL ⧇, Atari XL Console Key, Atari 1200XL Console Key, KailhBox]
+cap_type = "Atari XE ◎"; // [Atari XE ◎, Atari XE ■, Atari XE Console Key, Atari XE Console Set, Atari XE F1-4 Set, Atari XL ✚, Atari XL Alps ▬, Atari XL ⧇, Atari 800 ■, Atari XL Console Key, Atari 1200XL Console Key, KailhBox]
 
 // Stem type
 stem_type = "Low-pro adapter"; // [Low-pro adapter, Kailh Choc v1, Kailh Box Pink, MX Adapter]
@@ -153,8 +153,8 @@ module atarixl_cross() {
     }
 }
 
-atarixl_square_size = 4.7;
-atarixl_square_height = 4;
+atarixl_square_size = cap_type == "Atari 800 ■" ? 4.7 : 5.0;
+atarixl_square_height = cap_type == "Atari 800 ■" ? 4 : 7;
 atarixl_square_teeth_width = 0.4;
 atarixl_square_teeth_depth = 0.05;
 
@@ -468,13 +468,14 @@ union() {
     0.75;
   horiz_conn_altitude = cap_type == "Atari XE ◎" ? rotate_switch ? extra_floor - horiz_conn_radius : atari_circle_depth + extra_floor - horiz_conn_radius :
     cap_type == "Atari XL Console Key" || cap_type == "Atari 1200XL Console Key" ? -xl_console_hole_depth / 2 + horiz_conn_radius :
-    cap_type == "Atari XE ■" || cap_type == "Atari XL ✚" || cap_type == "Atari XL ⧇" ? horiz_conn_radius :
+    cap_type == "Atari XE ■" || cap_type == "Atari XL ✚" || cap_type == "Atari XL ⧇" || cap_type == "Atari 800 ■" || cap_type == "Atari XL Alps ▬" ? horiz_conn_radius :
     cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_top_thickness - fn_height + horiz_conn_radius :
     20;
   horiz_offset = cap_type == "Atari XE ◎" ? 8 :
     cap_type == "Atari XL ✚" ? 6 : 
     cap_type == "Atari XE ■" ? 10 :
-    cap_type == "Atari XL ⧇" ? 6 :
+    cap_type == "Atari XL ⧇" || cap_type == "Atari 800 ■" ? 6 :
+    cap_type == "Atari XL Alps ▬" ? 8 :
     cap_type == "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? fn_depth + 2 :
     20;
   horiz_conn_length = cap_type == "Atari XE ◎" ? (horiz_offset - atari_circle_wing_thickness - atari_circle_inner_diameter) * (rotate_switch ? 2 : 1) + 0.1 :
@@ -532,7 +533,7 @@ union() {
             translate([0, 0, atarixl_cross_height / 2])
               atarixl_cross();
           }
-          if (cap_type == "Atari XL ⧇") {
+          if (cap_type == "Atari XL ⧇" || cap_type == "Atari 800 ■") {
             translate([0, 0, atarixl_square_height / 2])
               atarixl_square();
           }
