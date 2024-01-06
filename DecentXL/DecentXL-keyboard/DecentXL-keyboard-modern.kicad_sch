@@ -8017,7 +8017,7 @@
           (reference "D83") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D16") (unit 1)
         )
@@ -8054,7 +8054,7 @@
           (reference "R48") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R48") (unit 1)
         )
@@ -8091,7 +8091,7 @@
           (reference "R49") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R49") (unit 1)
         )
@@ -8128,7 +8128,7 @@
           (reference "D105") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D38") (unit 1)
         )
@@ -8165,7 +8165,7 @@
           (reference "D95") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D28") (unit 1)
         )
@@ -8202,7 +8202,7 @@
           (reference "R30") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R30") (unit 1)
         )
@@ -8241,7 +8241,7 @@
           (reference "SWFn2") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWFn2") (unit 1)
         )
@@ -8278,7 +8278,7 @@
           (reference "D127") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D60") (unit 1)
         )
@@ -8317,7 +8317,7 @@
           (reference "SWF1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWF1") (unit 1)
         )
@@ -8354,7 +8354,7 @@
           (reference "R43") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R43") (unit 1)
         )
@@ -8391,7 +8391,7 @@
           (reference "D99") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D32") (unit 1)
         )
@@ -8430,7 +8430,7 @@
           (reference "SWRightSft1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWRightSft1") (unit 1)
         )
@@ -8467,7 +8467,7 @@
           (reference "D103") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D36") (unit 1)
         )
@@ -8504,7 +8504,7 @@
           (reference "R25") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R25") (unit 1)
         )
@@ -8541,7 +8541,7 @@
           (reference "R4") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R4") (unit 1)
         )
@@ -8578,7 +8578,7 @@
           (reference "D89") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D22") (unit 1)
         )
@@ -8617,7 +8617,7 @@
           (reference "SW3") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW3") (unit 1)
         )
@@ -8656,7 +8656,7 @@
           (reference "SWB1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWB1") (unit 1)
         )
@@ -8693,7 +8693,7 @@
           (reference "R11") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R11") (unit 1)
         )
@@ -8732,7 +8732,7 @@
           (reference "SW9") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW9") (unit 1)
         )
@@ -8769,7 +8769,7 @@
           (reference "D76") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D9") (unit 1)
         )
@@ -8808,7 +8808,7 @@
           (reference "SWLT1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWLT1") (unit 1)
         )
@@ -8845,7 +8845,7 @@
           (reference "R14") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R14") (unit 1)
         )
@@ -8884,7 +8884,7 @@
           (reference "SWTab1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWTab1") (unit 1)
         )
@@ -8921,7 +8921,7 @@
           (reference "R24") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R24") (unit 1)
         )
@@ -8958,7 +8958,7 @@
           (reference "R19") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R19") (unit 1)
         )
@@ -8995,7 +8995,7 @@
           (reference "R7") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R7") (unit 1)
         )
@@ -9032,7 +9032,7 @@
           (reference "D123") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D56") (unit 1)
         )
@@ -9069,7 +9069,7 @@
           (reference "R35") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R35") (unit 1)
         )
@@ -9106,7 +9106,7 @@
           (reference "D82") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D15") (unit 1)
         )
@@ -9143,7 +9143,7 @@
           (reference "D86") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D19") (unit 1)
         )
@@ -9182,7 +9182,7 @@
           (reference "SWComma1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWComma1") (unit 1)
         )
@@ -9221,7 +9221,7 @@
           (reference "SWRet1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWRet2") (unit 1)
         )
@@ -9258,7 +9258,7 @@
           (reference "R55") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R55") (unit 1)
         )
@@ -9295,7 +9295,7 @@
           (reference "D113") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D46") (unit 1)
         )
@@ -9332,7 +9332,7 @@
           (reference "D116") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D49") (unit 1)
         )
@@ -9355,7 +9355,7 @@
     (property "Datasheet" "~" (at 198.12 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "JLCPCB Part #" "C81598" (at 198.12 154.94 0)
+    (property "JLCPCB Part #" "C2286" (at 198.12 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "JLCPCB Rotation Offset" "" (at 198.12 154.94 0)
@@ -9369,7 +9369,7 @@
           (reference "D1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D0") (unit 1)
         )
@@ -9408,7 +9408,7 @@
           (reference "SWInv1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWInv1") (unit 1)
         )
@@ -9447,7 +9447,7 @@
           (reference "SWLeftSft1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWLeftSft1") (unit 1)
         )
@@ -9484,7 +9484,7 @@
           (reference "D101") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D34") (unit 1)
         )
@@ -9521,7 +9521,7 @@
           (reference "D73") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D6") (unit 1)
         )
@@ -9560,7 +9560,7 @@
           (reference "SWGT1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWGT1") (unit 1)
         )
@@ -9597,7 +9597,7 @@
           (reference "R64") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R65") (unit 1)
         )
@@ -9634,7 +9634,7 @@
           (reference "R38") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R38") (unit 1)
         )
@@ -9671,7 +9671,7 @@
           (reference "D74") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D7") (unit 1)
         )
@@ -9710,7 +9710,7 @@
           (reference "SWN1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWN1") (unit 1)
         )
@@ -9747,7 +9747,7 @@
           (reference "R46") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R46") (unit 1)
         )
@@ -9784,7 +9784,7 @@
           (reference "R28") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R28") (unit 1)
         )
@@ -9821,7 +9821,7 @@
           (reference "D107") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D40") (unit 1)
         )
@@ -9858,7 +9858,7 @@
           (reference "D96") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D29") (unit 1)
         )
@@ -9897,7 +9897,7 @@
           (reference "SWS1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWS1") (unit 1)
         )
@@ -9934,7 +9934,7 @@
           (reference "D106") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D39") (unit 1)
         )
@@ -9971,7 +9971,7 @@
           (reference "D80") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D13") (unit 1)
         )
@@ -10008,7 +10008,7 @@
           (reference "D100") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D33") (unit 1)
         )
@@ -10045,7 +10045,7 @@
           (reference "R56") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R56") (unit 1)
         )
@@ -10082,7 +10082,7 @@
           (reference "R65") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R67") (unit 1)
         )
@@ -10121,7 +10121,7 @@
           (reference "SW1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW1") (unit 1)
         )
@@ -10155,7 +10155,7 @@
     (pin "3" (uuid 6d434f82-3a9f-4a60-a68a-0a2e28ced9dd))
     (pin "4" (uuid 8965b67d-e64e-42c9-9e6f-7ee6a9116e04))
     (instances
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWDel1") (unit 1)
         )
@@ -10192,7 +10192,7 @@
           (reference "D92") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D25") (unit 1)
         )
@@ -10229,7 +10229,7 @@
           (reference "R10") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R10") (unit 1)
         )
@@ -10266,7 +10266,7 @@
           (reference "R17") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R17") (unit 1)
         )
@@ -10305,7 +10305,7 @@
           (reference "SWY1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWY1") (unit 1)
         )
@@ -10342,7 +10342,7 @@
           (reference "D109") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D42") (unit 1)
         )
@@ -10379,7 +10379,7 @@
           (reference "R8") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R8") (unit 1)
         )
@@ -10416,7 +10416,7 @@
           (reference "R32") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R32") (unit 1)
         )
@@ -10453,7 +10453,7 @@
           (reference "R36") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R36") (unit 1)
         )
@@ -10492,7 +10492,7 @@
           (reference "SWPlus1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWPlus1") (unit 1)
         )
@@ -10531,7 +10531,7 @@
           (reference "SWX1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWX1") (unit 1)
         )
@@ -10570,7 +10570,7 @@
           (reference "SWEqual1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWEqual1") (unit 1)
         )
@@ -10609,7 +10609,7 @@
           (reference "SWG1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWG1") (unit 1)
         )
@@ -10648,7 +10648,7 @@
           (reference "SWK1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWK1") (unit 1)
         )
@@ -10685,7 +10685,7 @@
           (reference "R62") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R63") (unit 1)
         )
@@ -10724,7 +10724,7 @@
           (reference "SWStart1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWStart1") (unit 1)
         )
@@ -10763,7 +10763,7 @@
           (reference "SWFn3") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWFn3") (unit 1)
         )
@@ -10800,7 +10800,7 @@
           (reference "R29") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R29") (unit 1)
         )
@@ -10837,7 +10837,7 @@
           (reference "D104") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D37") (unit 1)
         )
@@ -10876,7 +10876,7 @@
           (reference "SWL1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWL1") (unit 1)
         )
@@ -10915,7 +10915,7 @@
           (reference "SWSlash1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWSlash1") (unit 1)
         )
@@ -10952,7 +10952,7 @@
           (reference "R13") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R13") (unit 1)
         )
@@ -10991,7 +10991,7 @@
           (reference "SWFn4") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWFn4") (unit 1)
         )
@@ -11028,7 +11028,7 @@
           (reference "D69") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D1") (unit 1)
         )
@@ -11065,7 +11065,7 @@
           (reference "D93") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D26") (unit 1)
         )
@@ -11102,7 +11102,7 @@
           (reference "D88") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D21") (unit 1)
         )
@@ -11139,7 +11139,7 @@
           (reference "R22") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R22") (unit 1)
         )
@@ -11176,7 +11176,7 @@
           (reference "R12") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R12") (unit 1)
         )
@@ -11215,7 +11215,7 @@
           (reference "J3") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "J3") (unit 1)
         )
@@ -11254,7 +11254,7 @@
           (reference "SWFn1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWFn1") (unit 1)
         )
@@ -11293,7 +11293,7 @@
           (reference "SWD1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWD1") (unit 1)
         )
@@ -11332,7 +11332,7 @@
           (reference "SWW1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWW1") (unit 1)
         )
@@ -11369,7 +11369,7 @@
           (reference "R2") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R2") (unit 1)
         )
@@ -11406,7 +11406,7 @@
           (reference "R62") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R61") (unit 1)
         )
@@ -11443,7 +11443,7 @@
           (reference "R61") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R59") (unit 1)
         )
@@ -11480,7 +11480,7 @@
           (reference "R34") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R34") (unit 1)
         )
@@ -11517,7 +11517,7 @@
           (reference "R26") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R26") (unit 1)
         )
@@ -11554,7 +11554,7 @@
           (reference "D72") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D5") (unit 1)
         )
@@ -11591,7 +11591,7 @@
           (reference "R63") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R64") (unit 1)
         )
@@ -11628,7 +11628,7 @@
           (reference "R40") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R40") (unit 1)
         )
@@ -11660,7 +11660,7 @@
     (pin "1" (uuid f853907b-721e-485e-b7c4-6644aad95e20))
     (pin "2" (uuid 3504dafc-a098-4e21-bce0-a565b142271b))
     (instances
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R53") (unit 1)
         )
@@ -11697,7 +11697,7 @@
           (reference "R5") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R5") (unit 1)
         )
@@ -11734,7 +11734,7 @@
           (reference "R59") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R60") (unit 1)
         )
@@ -11773,7 +11773,7 @@
           (reference "SWQ1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWQ1") (unit 1)
         )
@@ -11812,7 +11812,7 @@
           (reference "SW8") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW8") (unit 1)
         )
@@ -11849,7 +11849,7 @@
           (reference "R39") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R39") (unit 1)
         )
@@ -11888,7 +11888,7 @@
           (reference "SWCtl1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWCtl1") (unit 1)
         )
@@ -11927,7 +11927,7 @@
           (reference "SW0") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW0") (unit 1)
         )
@@ -11964,7 +11964,7 @@
           (reference "R53") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R52") (unit 1)
         )
@@ -12001,7 +12001,7 @@
           (reference "D108") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D41") (unit 1)
         )
@@ -12038,7 +12038,7 @@
           (reference "R23") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R23") (unit 1)
         )
@@ -12077,7 +12077,7 @@
           (reference "SWSemi1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWSemi1") (unit 1)
         )
@@ -12116,7 +12116,7 @@
           (reference "SWZ1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWZ1") (unit 1)
         )
@@ -12153,7 +12153,7 @@
           (reference "D121") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D54") (unit 1)
         )
@@ -12190,7 +12190,7 @@
           (reference "D79") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D12") (unit 1)
         )
@@ -12229,7 +12229,7 @@
           (reference "SW2") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW2") (unit 1)
         )
@@ -12266,7 +12266,7 @@
           (reference "D110") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D43") (unit 1)
         )
@@ -12305,7 +12305,7 @@
           (reference "SWM1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWM1") (unit 1)
         )
@@ -12342,7 +12342,7 @@
           (reference "D111") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D44") (unit 1)
         )
@@ -12379,7 +12379,7 @@
           (reference "R16") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R16") (unit 1)
         )
@@ -12416,7 +12416,7 @@
           (reference "D69") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D2") (unit 1)
         )
@@ -12453,7 +12453,7 @@
           (reference "D126") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D59") (unit 1)
         )
@@ -12490,7 +12490,7 @@
           (reference "JP4") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "JP2") (unit 1)
         )
@@ -12527,7 +12527,7 @@
           (reference "R31") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R31") (unit 1)
         )
@@ -12566,7 +12566,7 @@
           (reference "SWStar1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWStar1") (unit 1)
         )
@@ -12603,7 +12603,7 @@
           (reference "R41") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R41") (unit 1)
         )
@@ -12640,7 +12640,7 @@
           (reference "D75") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D8") (unit 1)
         )
@@ -12677,7 +12677,7 @@
           (reference "D70") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D3") (unit 1)
         )
@@ -12714,7 +12714,7 @@
           (reference "D97") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D30") (unit 1)
         )
@@ -12753,7 +12753,7 @@
           (reference "SWP1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWP1") (unit 1)
         )
@@ -12814,7 +12814,7 @@
           (reference "J2") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "J2") (unit 1)
         )
@@ -12851,7 +12851,7 @@
           (reference "D84") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D17") (unit 1)
         )
@@ -12888,7 +12888,7 @@
           (reference "D117") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D50") (unit 1)
         )
@@ -12925,7 +12925,7 @@
           (reference "D128") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D61") (unit 1)
         )
@@ -12962,7 +12962,7 @@
           (reference "D81") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D14") (unit 1)
         )
@@ -13001,7 +13001,7 @@
           (reference "SWT1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWT1") (unit 1)
         )
@@ -13040,7 +13040,7 @@
           (reference "SWOption1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWOption1") (unit 1)
         )
@@ -13077,7 +13077,7 @@
           (reference "R45") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R45") (unit 1)
         )
@@ -13114,7 +13114,7 @@
           (reference "D124") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D57") (unit 1)
         )
@@ -13146,7 +13146,7 @@
     (pin "1" (uuid ea30d2ad-38b6-49f3-b415-f4dac2e933db))
     (pin "2" (uuid caa9a6fe-e80c-4088-850d-2b670effc153))
     (instances
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D52") (unit 1)
         )
@@ -13183,7 +13183,7 @@
           (reference "R3") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R3") (unit 1)
         )
@@ -13220,7 +13220,7 @@
           (reference "R18") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R18") (unit 1)
         )
@@ -13257,7 +13257,7 @@
           (reference "D102") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D35") (unit 1)
         )
@@ -13294,7 +13294,7 @@
           (reference "D90") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D23") (unit 1)
         )
@@ -13333,7 +13333,7 @@
           (reference "SW6") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW6") (unit 1)
         )
@@ -13370,7 +13370,7 @@
           (reference "D94") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D27") (unit 1)
         )
@@ -13407,7 +13407,7 @@
           (reference "D125") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D58") (unit 1)
         )
@@ -13446,7 +13446,7 @@
           (reference "SWA1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWA1") (unit 1)
         )
@@ -13485,7 +13485,7 @@
           (reference "SWJ1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWJ1") (unit 1)
         )
@@ -13524,7 +13524,7 @@
           (reference "SWReset1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWReset1") (unit 1)
         )
@@ -13561,7 +13561,7 @@
           (reference "R44") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R44") (unit 1)
         )
@@ -13600,7 +13600,7 @@
           (reference "SWDash1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWDash1") (unit 1)
         )
@@ -13639,7 +13639,7 @@
           (reference "SWR1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWR1") (unit 1)
         )
@@ -13676,7 +13676,7 @@
           (reference "D91") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D24") (unit 1)
         )
@@ -13713,7 +13713,7 @@
           (reference "R50") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R50") (unit 1)
         )
@@ -13752,7 +13752,7 @@
           (reference "SWV1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWV1") (unit 1)
         )
@@ -13789,7 +13789,7 @@
           (reference "D122") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D55") (unit 1)
         )
@@ -13828,7 +13828,7 @@
           (reference "SWEsc1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWEsc1") (unit 1)
         )
@@ -13865,7 +13865,7 @@
           (reference "D118") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D51") (unit 1)
         )
@@ -13902,7 +13902,7 @@
           (reference "R47") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R47") (unit 1)
         )
@@ -13939,7 +13939,7 @@
           (reference "D114") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D47") (unit 1)
         )
@@ -13978,7 +13978,7 @@
           (reference "SWCps1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWCps1") (unit 1)
         )
@@ -14017,7 +14017,7 @@
           (reference "SW5") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW5") (unit 1)
         )
@@ -14054,7 +14054,7 @@
           (reference "R15") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R15") (unit 1)
         )
@@ -14091,7 +14091,7 @@
           (reference "R58") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R58") (unit 1)
         )
@@ -14130,7 +14130,7 @@
           (reference "SWO1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWO1") (unit 1)
         )
@@ -14167,7 +14167,7 @@
           (reference "D115") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D48") (unit 1)
         )
@@ -14204,7 +14204,7 @@
           (reference "D98") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D31") (unit 1)
         )
@@ -14243,7 +14243,7 @@
           (reference "SWE1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWE1") (unit 1)
         )
@@ -14280,7 +14280,7 @@
           (reference "D112") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D45") (unit 1)
         )
@@ -14317,7 +14317,7 @@
           (reference "R20") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R20") (unit 1)
         )
@@ -14354,7 +14354,7 @@
           (reference "R9") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R9") (unit 1)
         )
@@ -14387,7 +14387,7 @@
     (pin "2" (uuid c5596677-b5d0-487a-9598-ec25d4c2a179))
     (pin "3" (uuid b9b5d0d0-8e98-4e41-b951-589628051881))
     (instances
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "RV1") (unit 1)
         )
@@ -14424,7 +14424,7 @@
           (reference "R51") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R51") (unit 1)
         )
@@ -14463,7 +14463,7 @@
           (reference "SWPeriod1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWPeriod1") (unit 1)
         )
@@ -14500,7 +14500,7 @@
           (reference "R33") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R33") (unit 1)
         )
@@ -14539,7 +14539,7 @@
           (reference "SWBrk2") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWBrk1") (unit 1)
         )
@@ -14576,7 +14576,7 @@
           (reference "R2") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R1") (unit 1)
         )
@@ -14615,7 +14615,7 @@
           (reference "SWI1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWI1") (unit 1)
         )
@@ -14652,7 +14652,7 @@
           (reference "R37") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R37") (unit 1)
         )
@@ -14691,7 +14691,7 @@
           (reference "SWHlp1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWHlp1") (unit 1)
         )
@@ -14730,7 +14730,7 @@
           (reference "SW4") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW4") (unit 1)
         )
@@ -14767,7 +14767,7 @@
           (reference "D85") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D18") (unit 1)
         )
@@ -14804,7 +14804,7 @@
           (reference "R54") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R54") (unit 1)
         )
@@ -14841,7 +14841,7 @@
           (reference "D78") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D11") (unit 1)
         )
@@ -14878,7 +14878,7 @@
           (reference "R42") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R42") (unit 1)
         )
@@ -14915,7 +14915,7 @@
           (reference "R66") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R68") (unit 1)
         )
@@ -14954,7 +14954,7 @@
           (reference "SWSelect1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWSelect1") (unit 1)
         )
@@ -14991,7 +14991,7 @@
           (reference "R6") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R6") (unit 1)
         )
@@ -15050,7 +15050,7 @@
           (reference "J1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "J1") (unit 1)
         )
@@ -15089,7 +15089,7 @@
           (reference "SWC1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWC1") (unit 1)
         )
@@ -15126,7 +15126,7 @@
           (reference "R27") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R27") (unit 1)
         )
@@ -15163,7 +15163,7 @@
           (reference "D120") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D53") (unit 1)
         )
@@ -15200,7 +15200,7 @@
           (reference "D87") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D20") (unit 1)
         )
@@ -15239,7 +15239,7 @@
           (reference "SWH1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWH1") (unit 1)
         )
@@ -15278,7 +15278,7 @@
           (reference "SWU1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWU1") (unit 1)
         )
@@ -15315,7 +15315,7 @@
           (reference "R21") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R21") (unit 1)
         )
@@ -15352,7 +15352,7 @@
           (reference "D71") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D4") (unit 1)
         )
@@ -15389,7 +15389,7 @@
           (reference "R57") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "R57") (unit 1)
         )
@@ -15428,7 +15428,7 @@
           (reference "SW6") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SW7") (unit 1)
         )
@@ -15465,7 +15465,7 @@
           (reference "D77") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "D10") (unit 1)
         )
@@ -15504,7 +15504,7 @@
           (reference "SWSpc1") (unit 1)
         )
       )
-      (project "DecentXL-keyboard"
+      (project "DecentXL-keyboard-modern"
         (path "/a9892182-6906-43e4-9038-45744b4ac951"
           (reference "SWSpc1") (unit 1)
         )
