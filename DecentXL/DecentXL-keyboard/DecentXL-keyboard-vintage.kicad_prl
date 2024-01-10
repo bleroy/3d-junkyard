@@ -22,7 +22,7 @@
       "lockedItems": false,
       "otherItems": false,
       "pads": false,
-      "text": false,
+      "text": true,
       "tracks": true,
       "vias": true,
       "zones": false
@@ -68,7 +68,7 @@
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "DecentXL-keyboard.kicad_prl",
+    "filename": "DecentXL-keyboard-vintage.kicad_prl",
     "version": 3
   },
   "project": {

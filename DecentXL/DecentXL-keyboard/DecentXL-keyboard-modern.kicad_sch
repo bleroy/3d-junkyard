@@ -9349,7 +9349,7 @@
     (property "Value" "LED" (at 200.66 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "LED_SMD:LED_0201_0603Metric" (at 198.12 154.94 0)
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 198.12 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 198.12 154.94 0)

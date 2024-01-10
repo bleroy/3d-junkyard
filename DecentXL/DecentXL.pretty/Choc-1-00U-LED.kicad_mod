@@ -5,7 +5,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp 9c97db98-dfe2-455c-80b1-cf93c801bc35)
   )
-  (fp_text value "MX/LowPro" (at 4.7625 13.462) (layer "F.Fab")
+  (fp_text value "Choc" (at 4.7625 13.462) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp 1b4c13d1-006a-417b-92e7-8e372f30505c)
   )
