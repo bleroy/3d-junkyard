@@ -266,6 +266,10 @@ If your Atari connector is damaged, or you don't have one, it's also possible to
 
 Once you've sourced all the components, it's time to assemble. The following instructions attempt to reflect all the choices you may have made in selecting components.
 
+Jan Beta ha a great video where he shows the full assembly process (just don't make the same mistake he makes with the config jumpers ;p ).
+
+[![Jan Beta's build](https://i.ytimg.com/vi/BoW_3545O0c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAcICik7P0jZZsuk3aPNOoPVTIaxA)](https://www.youtube.com/watch?v=BoW_3545O0c)
+
 ### Printing console caps and adapters (optional)
 
 There are two known shapes of vintage key caps, requiring distinct adapters. The first type of key cap has square stems, while the second have circular stems.
@@ -334,7 +338,7 @@ Turn the PCB over. Position one of the small washers around each of the screw ho
 
 #### Configure the keyboard for the modern layout
 
-Solder two jumper wires to the left of the PCB to configure it for Caps. This rewires the key that's above left shift and that's normally Control on a vintage keyboard. Control on the modern keyboard goes to the left of the space bar, and this key is reconfigured to be Caps. The two wires should short from the middle position to the right position. The silkscreen has helper text for this.
+Solder two jumper wires to the left of the PCB to configure it for Caps. This rewires the key that's above left shift and that's normally Control on a vintage keyboard. Control on the modern keyboard goes to the left of the space bar, and this key is reconfigured to be Caps. **The two wires should short from the middle position to the right position**. The jumper wires are very short, follow the brackets on the silkscreen, not the longer lines. 
 
 #### Mount the switches onto the plate
 
@@ -374,7 +378,7 @@ Turn the PCB over. Position one of the small washers around each of the screw ho
 
 #### Configure the keyboard for the vintage layout
 
-Solder two jumper wires to the left of the PCB to configure it for Control. This keeps the vintage layout wiring for the Control key. The two wires should short from the middle position to the left position. The silkscreen has helper text for this and should make it clear you are wiring for Control.
+Solder two jumper wires to the left of the PCB to configure it for Control. This keeps the vintage layout wiring for the Control key. **The two wires should short from the middle position to the left position**. The jumper wires are very short, follow the brackets on the silkscreen, not the longer lines.
 
 #### Mount the switches onto the plate
 
