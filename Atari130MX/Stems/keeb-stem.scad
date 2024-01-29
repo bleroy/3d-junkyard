@@ -432,10 +432,10 @@ module atari_fn(legend) {
     }
 }
 
-xl_console_size = 18.1;
+xl_console_size = 17.5;
 xl_console_height = 6.15;
 xl_console_wall = 1.2;
-xl_console_hole_depth = cap_type == "Atari 1200XL Console Key" ? 5 : stem_type == "Kailh Choc v1" ? 1 : 4.9;
+xl_console_hole_depth = cap_type == "Atari 1200XL Console Key" ? 5 : stem_type == "Kailh Choc v1" ? 2 : 4.9;
 xl_console_fillet = 1.5;
 
 module xl_console() {
