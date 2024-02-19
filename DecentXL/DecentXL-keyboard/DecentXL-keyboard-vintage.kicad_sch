@@ -13631,7 +13631,7 @@
     (property "JLCPCB Part #" "C193191" (at 218.44 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "JLCPCB Rotation Offset" "270" (at 218.44 46.99 0)
+    (property "JLCPCB Rotation Offset" "180" (at 218.44 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2dd53f6c-31db-487b-a6b0-f1edd7ce51fe))
