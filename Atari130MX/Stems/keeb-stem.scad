@@ -449,7 +449,7 @@ module xl_console() {
         cube([xl_console_size - 2 * xl_console_wall, xl_console_size - 2 * xl_console_wall, xl_console_hole_depth + 0.2], center = true);
   }
   if (support) {
-    support_pillar_distance = xl_console_size / 2 - xl_console_wall / 2;
+    support_pillar_distance = xl_console_size / 2 + (1-sqrt(2)) / sqrt(2) * xl_console_fillet - support_diameter / 2 / sqrt(2);
     support_pillar_height = support_height - support_plate_height + (stem_type == "Kailh Choc v1" ? kailh_choc_insert_dimensions[2] : 0) + 0.1;
     translate([0, 0, 0.05 - support_pillar_height]) {
       translate([support_pillar_distance, support_pillar_distance, 0])

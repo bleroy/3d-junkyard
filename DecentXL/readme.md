@@ -6,15 +6,15 @@ Whether you have a vintage Atari 800XL or 600XL computer with a deficient keyboa
 
 There are two versions of the keyboard: modern and vintage. Modern uses brand new MX-compatible key caps and switches, while vintage keeps the original vintage Atari caps and adapts them to modern switches.
 
-The vintage version can use Kailh Choc v2 low-profile switches, in which case 3D-printed adapters bridge one of the supported variants of XL key caps to the Choc switches' MX footprint, or [Alps-compatible switches](http://matias.ca/switches/) if you're fortunate enough to own one of the Alps XL keyboards, without needing any adapters[^1].
+The vintage version can use Kailh Choc v2 low-profile switches, in which case 3D-printed adapters bridge one of the supported variants of XL key caps to the Choc switches' MX footprint.
 
-There's been a number of mechanical keyboard builds for Atari computers that are all great but tend to be one-off projects that are not designed to be reproduced or commercially produced. None of them let you keep the vintage key caps. This project does all that and more.
+There's been a number of mechanical keyboard builds for Atari computers that are all great but tend to be one-off projects that are not designed to be reproduced or commercially produced. This project does all that and more.
 
-If you're looking to modify an XE computer, head over to [my previous project](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX).
+If you're looking to modify an XE computer, head over to [the DecentXE project](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX).
 
 ## Current version
 
-The current revision of the DecentXL keyboard is: rev. 3.
+The current revision of the DecentXL keyboard is: rev. 4 (4v designates the vintage version, and 4m the modern version).
 
 ## Can I buy one?
 
@@ -32,22 +32,24 @@ The DecentXL keyboard won first prize at the [2023 ABBUC hardware contest](https
 
 ### Key caps: modern or vintage?
 
-If you want to keep the look and layout of your keyboard as close to the original as possible, you should use vintage caps (scavenged from the computer you're modifying or bought new old stock or used). The result would be visually indistinguishable from the original, if it wasn't for the backlighting, but feels oh so much better...
+The modern versions of Decent keyboards are the best quality keyboards. It's a solid design that feels great. In comparison, the vintage versions tend to feel more wobbly and are generally of lower quality. They are also more difficult to build, which is why I stopped producing them myself. I want to keep the quality of the assembled keyboards I build as high as possible.
+
+The modern version also has a slightly modified layout with large delete and return keys, and relocated break and control keys around the shorter space bar. Caps is relocated to where it is on a modern keyboard, above left shift (that's where Atari originally placed the control key, now left of space).
+
+If you absolutely want to keep the look and layout of your keyboard as close to the original as possible, you can use vintage caps (scavenged from the computer you're modifying or bought new old stock or used), but be aware of the quality difference. The result is visually indistinguishable from the original, if it wasn't for the backlighting, but does feel much better than the original... You'll have to buld it yourself since I no longer ship assembled vintage versions. See building instructions below to get a feel of the build difficulty.
 
 If you don't have access to a good-looking full set of vintage keys, or want to go for something modernized, the modern caps look great and have a new layout with large return and delete keys, and control and break relocalized around the shorter space bar.
 
 ### Switches
 
-Switches are largely a matter of taste. The DecentXL PCB can be mounted with MX-compatible switches, Alps-compatible switches, or Kailh Choc v1 switches.
+Switches are largely a matter of taste. The DecentXL modern PCB can be mounted with MX-compatible switches. The vintage PCB can be mounted with Kailh Choc v1 switches.
 
-![Alps and MX switches](./Media/MX-Alps.jpg)
 ![Kailh Choc v1 switches](./Media/KailhChocv1.jpg)
 
 It's your choice of caps that determines what type of switch to use:
 
-* Vintage Alps: choose Alps-compatible switches
-* Vintage other: choose Kailh Choc v1
 * Modern: choose MX-compatible switches
+* Vintage: choose Kailh Choc v1
 
 With any type of switch, there is a wide array of choices. If you're new to the world of mechanical keyboards, there are 3 main families of switch experiences:
 
@@ -61,14 +63,13 @@ With any type of switch, there is a wide array of choices. If you're new to the 
 
 The DecentXL project is constituted of the following parts (this is not a BOM but a list of custom parts created for this project; see below for the actual BOM):
 
-* A main PCB with surface-mounted anti-ghosting diodes, adjustable blue backlighting and flexible cable connection.
-* A daughter board for the backlighted console keys and red surface-mounted power LED. The daughter board is connected to the main board with a 10-pin flexible cable.
-* An aluminum plate to hold the switches firmly aligned and rigidify the assembly. Available in Alps version and MX/Choc version.
+* A PCB with surface-mounted anti-ghosting diodes, adjustable blue backlighting and flexible cable connection (revisions before rev. 4 have two PCBs, as the console keys are separate).
+* An aluminum plate to hold the switches firmly aligned and rigidify the assembly.
 * A custom set of MX-compatible modern key caps.
-* 3D-printed adapters for non-Alps vintage caps.
-* 3D-printed console keys.
+* 3D-printed adapters for vintage caps.
+* 3D-printed console keys with vinyl texture stickers.
 * A flexible PCB to connect the main board to the Atari motherboard.
-* 3D-printed brackets to hold the daughter board in place slightly below the main board's level, and to connect the boards to the XL top case shell.
+* 3D-printed brackets to connect the boards to the XL top case shell (when rails are not available or using a revision lower than 3).
 
 ## Bill of materials
 
@@ -78,13 +79,13 @@ It's also an approach that can be easily adapted to other vintage computer keybo
 
 ### Atari 600XL or 800XL computer
 
-The project is designed around the conservation of the vintage look of the Atari XL computers and the integration of the keyboard in its original case. As such, ideally you'd have a donor XL computer and a host XL computer to receive the end product.
+The project is designed around the conservation of the vintage look of the Atari XL computers and the integration of the keyboard in its original case. As such, ideally you'd have a host XL computer to receive the end product.
 
 ### Key caps and adapters
 
 You'll need a set of caps.
 
-If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/). Make sure to specify you want a 2.25U left shift.
+If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html). Make sure to specify a 2.25U left shift.
 
 ![The DecentXL modern layout](./Caps/DecentXL-Charcoal-Caps.svg)
 
@@ -96,67 +97,87 @@ If you have a complete set of vintage key caps, identify the type of cap by look
   
   ![Alps footprint](./Media/Footprint-Alps.png)
 
-  No adapters are necessary, just make sure to buy Alps-compatible switches [^1].
+  You'll need 62 [Alps adapters](../Adapters/kailh-choc-to-xl-alps-x10.stl) (more affordable if printed as 7x sets of 10).
 
-* Cross:
+* Cross (AWC):
 
   ![Cross footprint](./Media/Footprint-cross.png)
 
-  You'll need 62 [cross adapters](../Adapters/low-pro-to-XL-cross.stl) (more affordable if printed as 7x [sets of 10](../Adapters/low-pro-to-XL-cross-set.stl)).
+  You'll need 63 [cross adapters](../Adapters/kailh-choc-to-xl-cross-x10.stl) (more affordable if printed as 7x sets of 10).
 
-* Square:
+* Square (Stackpole):
 
   ![Square footprint](./Media/Footprint-square.png)
 
-  You'll need 62 [square adapters](../Adapters/low-pro-to-XL-square.stl) (more affordable if printed as 7x [sets of 10](../Adapters/low-pro-to-XL-square-set.stl)).
+  You'll need 62 [square adapters](../Adapters/kailh-choc-to-xl-square-stackpole-x10.stl) (more affordable if printed as 7x sets of 10).
 
 If your key caps look nothing like those above (there are many different XL key footprints), please contact me. If you're OK sending me a key, I can measure it and make a new adapter for it, after which I'll send your key back.
 
-[PCBWay](https://www.pcbway.com/) is an example of a fabrication house that can produce high-quality prints of adapters for cheap, but there's plenty of other places where these can be done. You can also print your own (with a resin printer).
+[JLCPCB](https://jlcpcb.com/) and [PCBWay](https://www.pcbway.com/) are examples of fabrication houses that can produce high-quality prints of adapters for cheap, but there's plenty of other places where these can be done. You can also print your own (with a resin printer).
 
 ### Console keys (Help, Start, Select, Option and Reset)
 
-You can re-use your existing vintage console keys if you went for a vintage keyboard. Just use the same adapters as for other keys. Models also exist for new 3D printed console keys if you lost one.
-
-If you're building a modern keyboard, you'll need new [3D-printed console keys](./Caps/ConsoleXL-MX-Single.stl) (more affordable if printed as a [set of five](./Caps/ConsoleXL-MX-Set-5.stl) or [ten](./Caps/ConsoleXL-MX-Set-10.stl)).
+You'll need new [3D-printed console keys](./Caps/ConsoleXL-Choc-Single.stl) (more affordable if printed as a [set of five](./Caps/Console-set-XL-Choc-x5.stl) or [ten](./Caps/Console-set-XL-Choc-x10.stl)). The printed console keys fit on top of Kailh Choc v1 switches, not the MX switches used for the rest of the keyboard.
 
 3D-printed console keys will look great if you apply a [brushed metal vinyl sticker](https://www.amazon.com/dp/B08L4GZRDY/ref=sspa_dk_detail_2?pd_rd_i=B087KRL4NY&pd_rd_w=HzYnW&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_p=f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_r=VYGSYS1YEDTZ7QRRJN26&pd_rd_wg=Nd7sq&pd_rd_r=3f4a2c8d-a713-44c7-b8ae-544c3b0b1f53&s=automotive&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1).
 
-If you want modern caps for the main keyboard, but want to keep your original console keys, you can use low-profile switches and adapters for console keys, and MX switches for the rest of the keyboard.
+If using a revision before 4, you can re-use your existing vintage console keys for a vintage keyboard. Just use the same adapters as for other keys.
 
 ### Switches
 
-62 switches corresponding to your cap type (MX for modern, Matias for vintage Alps, Kailh Choc v2 for non-Alps vintage). You need 57 switches for the main keyboard, and 5 for the console keys.
+For a modern layout, you'll need 62 switches total corresponding to your cap type. You need 57 switches for the main keyboard, and 5 for the console keys. That means that you'll need 57 MX switches and 5 Kailh Choc v1 switches.
+
+Vintage uses all Kailh Choc switches for both main keyboard and console keys (62). Some vintage variants require additional switches that are used as stabilizers. For instance, Alps has two switches for the space bar. Both cross and Alps use two switches on the sides for the left shift, and remove the central switch. That means Alps needs two additional switches, bringing the total to 64, and cross (AWC) one additional switches for a total of 63.
 
 ### Stabilizers and adapters
 
-All keyboards need one 2U Durock v2 stabilizer for the left shift and a 6.5U for the space bar.
+#### Left shift
+
+All keyboards except Alps and cross (AWC) need one 2U Durock v2 stabilizer for the left shift.
+
+For modern keyboards, the stabilizer can be used as-is.
+
+For Alps, you'll need special adapters specifically for left shift (not yet available).
+
+For cross (AWC), you can use the same adapters as for other keys.
+
+For square (Stackpole), you'll need in-key adapters (not yet available).
+
+#### Space bar
+
+Modern keyboards use a 6.25U space bar and as such can use a standard 6.25U Durock v2 stabilizer.
+
+Vintage keyboards use a 9U spacebar for which no off-the-shelf modern stabilizer exist.
+
+Alps keyboards have a second stabilizing switch to the right of the center one. This may be enough to stabilize the space bar, but it should also be possible to add a Durock stabilizer with a hand-made custom-length stabilizer rod made from [1/16" copper rods](https://www.mcmaster.com/8859K511/) and custom printed stems (not yet available).
+
+Cross (AWC) keyboards require a Durock stabilizer with a hand-made custom-length stabilizer rod made from [1/16" copper rods](https://www.mcmaster.com/8859K511/) and custom printed stems (not yet available).
+
+#### Delete and return
 
 I recommend also stabilizing the delete and return keys with 2U stabilizers for the modern layout.
 
-Vintage keys will need a stabilizer adapter fit into the key caps so they can attach to the stabilizers. The stabilizer adapters 3D models for each supported type of key cap will be added at a future date.
-
 Contact me if you have an as yet unsupported shape of vintage cap. If you're OK sending me your space and left shift for measurements, I can design new adapters and send you back your caps.
 
-### Main and daughter boards
+### PCB
 
-Use [the Gerber](./DecentXL-keyboard/production-pcb/gerber.zip), [BOM](./DecentXL-keyboard/production-pcb/bom.csv) and [position](./DecentXL-keyboard/production-pcb/positions.csv) files to order a PCB with all the SMD parts assembled.
+For the modern version, use [the Gerber](./DecentXL-keyboard/production/DecentXL_keyboard_4.1m.zip), [BOM](./DecentXL-keyboard/production/DecentXL_keyboard_4.1m-bom.csv) and [position](./DecentXL-keyboard/production/DecentXL_keyboard_4.1m-positions.csv) files to order a PCB with all the SMD parts assembled.
 
-![The DecentXL PCB](./Media/DecentXL-keyboard-front.png)
+![The DecentXL Modern PCB](./Media/DecentXL-keyboard-modern-front.png)
 
-The daughter board is a separate order with its own [Gerber](./DecentXL-keyboard/production-console-pcb/gerber.zip), [BOM](./DecentXL-keyboard/production-console-pcb/bom.csv and [position](./DecentXL-keyboard/production-console-pcb/positions.csv) files.
+For vintage versions, use [the Gerber](./DecentXL-keyboard/production/DecentXL_keyboard_4v.zip), [BOM](./DecentXL-keyboard/production/DecentXL_keyboard_4v-bom.csv) and [position](./DecentXL-keyboard/production/DecentXL_keyboard_4v-positions.csv) files to order a PCB with all the SMD parts assembled.
 
-[<img src="./Media/DecentXL-console-front.png" alt="The DecentXL PCB" height="300"/>](./Media/DecentXL-console-front.png)
-
-You'll just need to add the switches.
+![The DecentXL Modern PCB](./Media/DecentXL-keyboard-vintage-front.png)
 
 ### Plate
 
-The plate is just an aluminum PCB. Download [the Gerber for the MX / Kailh Choc v1](./DecentXL-plate/production-plate/gerber.zip) or [Alps](./DecentXL-plate/production-plate-alps/gerber.zip) and have it produced. I recommend having this done in black as it will be visible through the gaps between keys and on the sides.
+The plate is just an aluminum PCB. Download [the Gerber for the modern](./DecentXL-plate/production/DecentXL_modern_plate_4m.zip) or [vintage](./DecentXL-plate/production/DecentXL_vintage_plate_4v.zip) and have it produced. I recommend having this done in black as it will be visible through the gaps between keys and on the sides.
 
-![DecentXL aluminum plate](./Media/DecentXL-plate-mx-choc.png)
+![DecentXL modern aluminum plate](./Media/DecentXL-plate-modern.png)
 
-![DecentXL aluminum plate for Alps switches](./Media/DecentXL-plate-alps.png)
+![DecentXL vintage aluminum plate](./Media/DecentXL-plate-mx-choc.png)
+
+There's also a printed plate to help with the alignment of console keys (to be made available shortly).
 
 ### Connectors
 
@@ -164,11 +185,9 @@ The connector to the motherboard is [a flexible PCB](./DecentXL-Cable/production
 
 [<img src="./Media/DecentXL-cable.png" alt="The custom flexible PCB" height="300"/>](./Media/DecentXL-cable.png)
 
-The connector between the main board and the daughter board is a [0.5mm pitch 10 pin 50mm FFC cable with contacts on the same side](https://www.aliexpress.us/item/3256805404128305.html?spm=a2g0o.order_list.order_list_main.5.1f031802ttMIvh&gatewayAdapt=glo2usa).
-
 ### Brackets
 
-The XL keyboard is mounted to the top of the Atari case. On the original keyboard, a metal plate has bent parts that extend beyond the PCB or membrane and fit the corresponding screw columns on the top shell of the case.
+The XL keyboard is mounted to the top of the Atari case. On some original keyboards, a metal plate has bent parts that extend beyond the PCB or membrane and fit the corresponding screw columns on the top shell of the case. Some models have a pair of metal rails that can be re-used for both modern and vintage versions of the keyboard. If your original keyboard had those, then you don't need to print brackets and can just use those rails.
 
 * [STL file for the left bracket](./Brackets/DecentXL-Left-Bracket.stl)
   ![Left bracket](./Media/DecentXL-Left-Bracket.png)
@@ -179,7 +198,7 @@ For our keyboards, we can't unfortunately just have correctly placed holes in th
 
 ### Spring
 
-If you went for a vintage keyboard, the wide space bar will need a spring. The original spring from the Atari keyboard will work, but you can also source a new 17mm x 9mm one.
+If you went for a vintage keyboard, the wide space bar may need a spring. The original spring from the Atari keyboard should work, but you can also source a new 17mm x 9mm one.
 
 ### Hardware
 
@@ -187,7 +206,7 @@ When using MX or Alps switches, the plate will usually naturally be held at a co
 
 ## Assembly
 
-Once you've gathered all the parts, you can assemble them in this order:
+Once you've gathered all the parts, you can assemble them in the following order:
 
 ### Mount the stabilizers
 
@@ -197,19 +216,31 @@ Once the stabilizers are assembled, you can put them in their respective places 
 
 Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw.
 
-### Configure the keyboard for your layout
+#### Special vintage stabilizers
 
-Solder two jumper wires to the left of the PCB to configure it for Caps or Control. This rewires the key that's above left shift and that's normally Control on an original keyboard. Control on the modern keyboard goes to the left of the space bar, and this key is reconfigured to be Caps. The two wires should short from the middle position to the right position for modern, and from the middle to the left for vintage. The silkscreen has helper text for this.
+Stabilizing vintage caps can be challenging. If you went down that route, be patient: it can be done, but it's difficult.
+
+Bending a copper rod to be the correct distance between stabilizers is hard, but can be done with a good pair of pliers, and fulsh cutters.
+
+In some cases you'll have to print adapters that either fit inside the key cap or replace the stem of a Durock stabilizer.
+
+### Configure the keyboard for your layout (Rev. 2 and 3 only!)
+
+Solder two small jumper wires **horizontally** to the left of the PCB to configure it for Caps or Control. This rewires the key that's above left shift and that's normally Control on an original keyboard. Control on the modern keyboard goes to the left of the space bar, and this key is reconfigured to be Caps. The two wires should short from the middle position to the right position for modern, and from the middle to the left for vintage. The silkscreen has helper text for this.
+
+Revisions 4 and after require no configuration because modern and vintage are separate, pre-configured PCBs.
 
 ### Mount the switches onto the plate
 
 Insert switches into the aluminum plate with the LED window to the back and the pins to the front.
 
-On modern layouts, the exception to this is the return key that should have its LED window to the right and pins to the left. Note that there are some differences with the vintage layout: the del/backspace key is two units wide, so put the switch in the middle position (there are three positions to accommodate for vintage layouts). Same for return, put it in the middle position among the three available vertically on the right of the board. There are also two additional positions around the space bar, each with its own switch. You might want to not position the del and return switches before the plate is in place as it may move, and it's fine to insert it later.
+On modern layouts, the exception to this is the return key that should have its LED window to the left and pins to the right.
 
-On vintage layouts, delete, return and caps have a different orientation. It's more practical to wait and add those at the next step, while soldering the switches.
+On vintage revisions preceding 4, delete, return and caps have a different orientation. It's more practical to wait and add those at the next step, while soldering the switches.
 
-Note that the console keys do not have a place on the plate. That's because they will be on the daughter board that doesn't use a plate.
+Note that the console keys do not have a place on the plate. That's because they will be aligned using a separate printed plate.
+
+ There are 4 additional positions around the space bar, control and break keys for F1-4 optional keys. Usually you won't mount switches onto those, just ignore them unless you have a modified case that can accommodate them.
 
 ### Get the plate and PCB together
 
@@ -221,49 +252,59 @@ You can secure the boards together with tape or clothespins until you've soldere
 
 ### Solder the switches onto the PCBs
 
-Solder each switch onto the PCBs. There are 4 additional positions around the space bar, control and break keys for F1-4 optional keys. Usually you won't mount switches onto those, just ignore them unless you have a modified case that can accommodate them.
+Solder each switch onto the PCBs. Use a printed plate to align the console keys before soldering them.
 
-### Assemble the daughter board
+### Assemble the daughter board (Rev. 2 and 3 only!)
 
-Carefully align the switches on the daughter board and solder them in place. Mounting the caps before soldering can help achieve better alignment. Soldering one leg, adjusting orientation, then soldering the second leg, is a way to improve alignment in the absence of a guiding plate.
+This is only for older revisions of the boards. The current versions don't have a daughter board.
 
-Apply brushed metal stickers if using 3D-printed console keys.
-
-![3D-printed console keys](./Media/PrintedConsoleKeys.JPG)
+Carefully align the switches on the daughter board using the printed console plate. Solder them in place. Mounting the caps before soldering can help achieve better alignment. Soldering one leg, adjusting orientation, then soldering the second leg, is a way to improve alignment, especially in the absence of a guiding plate.
 
 ### Assemble the brackets
+
+If you have rails, you can skip this part.
 
 Gently insert the PCBs into the brackets. There is some lateral freedom in the assembly to allow for the 0.25U narrower modern layout to be centered in the case: if you're using the modern layout, you'll want to shift the main board a few millimeters to the right to perfectly center the keyboard.
 
 ### Plug the cables
 
-Add the cable linking the daughter board to the main board.
+If you're on a rev. 2 or rev. 3 PCB, add the cable linking the daughter board to the main board.
 
-Pass the smaller end of the custom cable through the hole in the bracket and then plug it into the connector on the bottom-right of the keyboard PCB.
+The cable that connects the keyboard to the motherboard is a flexible PCB. Pass the smaller end of the custom cable through the hole in the bracket (if using bracckets, through the hole in the PCB otherwise) and then plug it into the connector on the bottom-right of the keyboard PCB. This can be tricky to get right: make sure the cable is inserted sufficiently that closing the connector will hold it in place and properly connected. You can verify continuity on the pads at the extremities to verify you got this right.
 
-For both cables, contacts go on the bottom side.
+Contacts go on the bottom side.
 
 ### Add cap adapters
 
-If you need them, add the cap adapters to your switches.
+If you need them (vintage), add the cap adapters to your switches.
 
 ### Add the key caps
 
 Assemble the key caps onto the switches or cap adapters. If needed, don't forget to insert the stabilizer adapters into the relevant key caps before you press fit them onto the switches and stabilizers.
 
+Apply brushed metal stickers to the console keys. I find that holding the stickers with an Exacto knife is a good way to get the alignment precisely right. Take you time for this, as misalignments tend to be very visible with the keys so close to one another.
+
+![3D-printed console keys](./Media/PrintedConsoleKeys.JPG)
+
 Your keyboard is now assembled. Let's mount it into the computer.
 
 ## Mounting the keyboard into the computer
 
-Align the bracket screw holes with the correct columns on the top shell of your Atari XL case and screw the keyboard in place. If using the modern layout, use this time to precisely center your keyboard in its window, then secure the screws in place.
+You might want to briefly connect the keyboard before mounting it and turn the computer on to check the LEDs light up. If you need to tune the brightness of the backlight to the desired level, this is a good time to do it by turning the pot on the bottom-right of the board. If you do it later, you may have to remove the keyboard from the case.
+
+If you have rails, mounting the keyboard should be very easy: just position your keyboard on the back of the top case, then screw the rails on top of that. You have some freedom on the horizontal alignment of the keyboard (not a lot, but enough to get your console keys properly centered).
+
+![DecentXL keyboard mounted into a 600XL using rails. Make sure that unlike me, you've installed the cable before mounting the keyboard.](./Media/DecentXL-on-rails.jpg)
+
+If using brackets, align the bracket screw holes with the correct columns on the top shell of your Atari XL case and screw the keyboard in place. Make sure to precisely center your keyboard in its window, moving it in the barckets if necessary, then secure the screws in place. This can take some trial and error. Take your time so your keyboard is nicely centered.
 
 ![Mounted keyboard](./Media/MountedKeyboard.JPG)
 
-Plug the larger end of the custom cable into the Atari motherboard's connector. You might want to briefly turn the computer on to check the LEDs light up and set the brightness to the desired level by turning the pot on the bottom-right of the board.
+Plug the larger end of the custom cable into the Atari motherboard's connector.
 
 ![Backlighting](./Media/DecentXL-Backlighting.jpg)
 
-Close the case. Congratulations, you're done! Turn your computer on and enjoy your mechanical keyboard. It's a good idea to go into the Atari diagnostics and check every key works.
+Close the case. Congratulations, you're done! Turn your computer on and enjoy your mechanical keyboard. It's a good idea to go into the Atari diagnostics or BASIC and check every key works.
 
 ## Troubleshooting
 
@@ -281,8 +322,4 @@ Thanks to [Wildstar87](https://forums.atariage.com/profile/29638-wildstar87/) wh
 
 Thanks to ABBUC members for voting for this project and giving it first prize at the 2023 hardware contest.
 
-And of course, many thanks to all those who provided feedback on the [DecentXE keyboard](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) over its 13 revisions or bought a keyboard.
-
-## Footnotes
-
-[^1]: Alps configuration untested as of 7/28
+And of course, many thanks to all those who provided feedback on the [DecentXE keyboard](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) over its many revisions or bought a keyboard.
