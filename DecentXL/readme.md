@@ -70,6 +70,7 @@ The DecentXL project is constituted of the following parts (this is not a BOM bu
 * 3D-printed console keys with vinyl texture stickers.
 * A flexible PCB to connect the main board to the Atari motherboard.
 * 3D-printed brackets to connect the boards to the XL top case shell (when rails are not available or using a revision lower than 3).
+* A 3D-printed LED diffuser.
 
 ## Bill of materials
 
@@ -204,6 +205,12 @@ If you went for a vintage keyboard, the wide space bar may need a spring. The or
 
 When using MX or Alps switches, the plate will usually naturally be held at a constant height by the switches. When using low-profile switches however, it's a little trickier and I recommend using the two mounting holes at the top of the main PCB and plate to add screws and nuts or [standoffs that keep the plate at a constant distance of 3.5mm (or 1/8 freedom units)](https://www.mcmaster.com/92510A400/) from the PCB.
 
+### LED diffuser
+
+The new power LED is quite small, and it's a good idea to diffuse its light. There's [a part that you can print in transparent filament or resin](https://github.com/bleroy/3d-junkyard/blob/main/DecentXL/readme.md). It should fit in the LED hole of the top shell of the case.
+
+[Model for the LED diffuser](./Misc/LedDiffuser600XL.stl)
+
 ## Assembly
 
 Once you've gathered all the parts, you can assemble them in the following order:
@@ -291,6 +298,8 @@ Your keyboard is now assembled. Let's mount it into the computer.
 ## Mounting the keyboard into the computer
 
 You might want to briefly connect the keyboard before mounting it and turn the computer on to check the LEDs light up. If you need to tune the brightness of the backlight to the desired level, this is a good time to do it by turning the pot on the bottom-right of the board. If you do it later, you may have to remove the keyboard from the case.
+
+Before you assemble the keyboard into the top shell, make sure you've inserted the printed LED diffuser into the LED hole. It should just fit into 600XL cases, and require some tape to hold it in place on 800XL.
 
 If you have rails, mounting the keyboard should be very easy: just position your keyboard on the back of the top case, then screw the rails on top of that. You have some freedom on the horizontal alignment of the keyboard (not a lot, but enough to get your console keys properly centered).
 
