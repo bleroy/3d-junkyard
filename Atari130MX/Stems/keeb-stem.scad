@@ -450,8 +450,8 @@ module xl_console() {
   }
   if (support) {
     support_pillar_distance = xl_console_size / 2 + (1-sqrt(2)) / sqrt(2) * xl_console_fillet - support_diameter / 2 / sqrt(2);
-    support_pillar_height = support_height - support_plate_height + (stem_type == "Kailh Choc v1" ? kailh_choc_insert_dimensions[2] : 0) + 0.1;
-    translate([0, 0, 0.05 - support_pillar_height]) {
+    support_pillar_height = support_height;
+    #translate([0, 0, 0.05 - support_pillar_height / 2 - xl_console_hole_depth]) {
       translate([support_pillar_distance, support_pillar_distance, 0])
         cylinder(r = support_diameter / 2, h = support_pillar_height);
       translate([-support_pillar_distance, -support_pillar_distance, 0])
@@ -506,7 +506,11 @@ union() {
   support_plate_width = column_count * vert_offset;
   support_z_offset = -support_plate_height -
     (cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_height  :
+    cap_type == "Atari 1200XL Console Key" ? 6 :
     stem_type == "Kailh Choc v1" ? kailh_choc_insert_dimensions[2] : 0);
+
+  echo(str("support_z_offset = ", support_z_offset));
+  echo(str("vert_offset = ", vert_offset));
 
   for (row = [1:row_count]) {
     for (col = [1:column_count]) {
@@ -580,6 +584,6 @@ union() {
   }
   if (support) {
     translate([-vert_offset / 2, -horiz_offset / 2, support_z_offset])
-      cube([support_plate_width, support_plate_length, support_plate_height]);
+      #cube([support_plate_width, support_plate_length, support_plate_height]);
   }
 }

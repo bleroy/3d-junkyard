@@ -36,9 +36,7 @@ The modern versions of Decent keyboards are the best quality keyboards. It's a s
 
 The modern version also has a slightly modified layout with large delete and return keys, and relocated break and control keys around the shorter space bar. Caps is relocated to where it is on a modern keyboard, above left shift (that's where Atari originally placed the control key, now left of space).
 
-If you absolutely want to keep the look and layout of your keyboard as close to the original as possible, you can use vintage caps (scavenged from the computer you're modifying or bought new old stock or used), but be aware of the quality difference. The result is visually indistinguishable from the original, if it wasn't for the backlighting, but does feel much better than the original... You'll have to buld it yourself since I no longer ship assembled vintage versions. See building instructions below to get a feel of the build difficulty.
-
-If you don't have access to a good-looking full set of vintage keys, or want to go for something modernized, the modern caps look great and have a new layout with large return and delete keys, and control and break relocalized around the shorter space bar.
+If you absolutely want to keep the look and layout of your keyboard as close to the original as possible, you can use vintage caps (scavenged from the computer you're modifying or bought new old stock or used), but be aware of the quality difference. The result is visually indistinguishable from the original, if it wasn't for the backlighting, and does feel much better than the original, but is significantly less nice than the modern version... You'll also have to build it yourself since I no longer ship assembled vintage versions. See building instructions below to get a feel of the build difficulty.
 
 ### Switches
 
@@ -98,19 +96,19 @@ If you have a complete set of vintage key caps, identify the type of cap by look
   
   ![Alps footprint](./Media/Footprint-Alps.png)
 
-  You'll need 62 [Alps adapters](../Adapters/kailh-choc-to-xl-alps-x10.stl) (more affordable if printed as 7x sets of 10).
+  You'll need 62 [Alps adapters](./Adapters/kailh-choc-to-xl-alps-x10.stl) (more affordable if printed as 7x sets of 10).
 
 * Cross (AWC):
 
   ![Cross footprint](./Media/Footprint-cross.png)
 
-  You'll need 63 [cross adapters](../Adapters/kailh-choc-to-xl-cross-x10.stl) (more affordable if printed as 7x sets of 10).
+  You'll need 63 [cross adapters](./Adapters/kailh-choc-to-xl-cross-x10.stl) (more affordable if printed as 7x sets of 10).
 
 * Square (Stackpole):
 
   ![Square footprint](./Media/Footprint-square.png)
 
-  You'll need 62 [square adapters](../Adapters/kailh-choc-to-xl-square-stackpole-x10.stl) (more affordable if printed as 7x sets of 10).
+  You'll need 62 [square adapters](./Adapters/kailh-choc-to-xl-square-stackpole-x10.stl) (more affordable if printed as 7x sets of 10).
 
 If your key caps look nothing like those above (there are many different XL key footprints), please contact me. If you're OK sending me a key, I can measure it and make a new adapter for it, after which I'll send your key back.
 
@@ -247,7 +245,7 @@ On vintage revisions preceding 4, delete, return and caps have a different orien
 
 Note that the console keys do not have a place on the plate. That's because they will be aligned using a separate printed plate.
 
- There are 4 additional positions around the space bar, control and break keys for F1-4 optional keys. Usually you won't mount switches onto those, just ignore them unless you have a modified case that can accommodate them.
+There are 4 additional positions around the space bar, control and break keys for F1-4 optional keys. Usually you won't mount switches onto those, just ignore them unless you have a modified case that can accommodate them.
 
 ### Get the plate and PCB together
 
