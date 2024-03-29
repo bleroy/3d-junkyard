@@ -1,4 +1,3 @@
-print("Hello World!")
 # SPDX-License-Identifier: MIT
 
 """
@@ -179,8 +178,6 @@ def scan_keeb():
     keeb.release(*(keys_pressed - currently_pressed))
     # Update the old set of keys pressed with the current one for the next scan
     keys_pressed = currently_pressed
-
-print("Starting keyboard scan")
 
 while(True):
     scan_keeb()
