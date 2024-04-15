@@ -29,24 +29,24 @@ CONTROLLED = 0x200
 
 # Map of the Atari 400 keyboard matrix to key codes
 key_matrix = [
-    [Keycode.SEVEN,           None,          Keycode.EIGHT,         Keycode.NINE,          Keycode.ZERO,            SHIFTED | Keycode.COMMA,     SHIFTED | Keycode.PERIOD, Keycode.BACKSPACE,              Keycode.PAUSE],
+    [Keycode.SEVEN,           None,          Keycode.EIGHT,         Keycode.NINE,          Keycode.ZERO,            SHIFTED | Keycode.COMMA,     SHIFTED | Keycode.PERIOD, Keycode.BACKSPACE,              Keycode.F8],
     [Keycode.SIX,             None,          Keycode.FIVE,          Keycode.FOUR,          Keycode.THREE,           Keycode.TWO,                 Keycode.ONE,              Keycode.ESCAPE,                 None],
     [Keycode.U,               None,          Keycode.I,             Keycode.O,             Keycode.P,               Keycode.MINUS,               Keycode.EQUALS,           Keycode.RETURN,                 None],
     [Keycode.Y,               None,          Keycode.T,             Keycode.R,             Keycode.E,               Keycode.W,                   Keycode.Q,                Keycode.TAB,                    None],
     [Keycode.F9,              Keycode.J,     Keycode.K,             Keycode.L,             Keycode.SEMICOLON,       SHIFTED | Keycode.EQUALS,    SHIFTED | Keycode.EIGHT,  Keycode.F10,                    Keycode.CONTROL],
     [None,                    Keycode.H,     Keycode.G,             Keycode.F,             Keycode.D,               Keycode.S,                   Keycode.A,                Keycode.CAPS_LOCK,              None],
-    [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.END,              None,                           None],
+    [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.APPLICATION,      None,                           None],
     [Keycode.F11,             Keycode.F6,    Keycode.B,             Keycode.V,             Keycode.C,               Keycode.X,                   Keycode.Z,                Keycode.F12,                    Keycode.SHIFT]]
 
 # Shifted Atari keys have a different layout than PC shifted keys; this maps between the two so the character typed on the Atari keyboard results in the right character on the PC
 shifted_overrides = dict([
     (Keycode.SEVEN, Keycode.QUOTE),
-    (Keycode.EIGHT, SHIFTED | Keycode.TWO),
+    (Keycode.EIGHT, SHIFTED | Keycode.QUOTE),
     (SHIFTED | Keycode.COMMA, Keycode.HOME),
     (SHIFTED | Keycode.PERIOD, SHIFTED | Keycode.INSERT),
     (Keycode.BACKSPACE, SHIFTED | Keycode.DELETE),
     (Keycode.SIX, SHIFTED | Keycode.SEVEN),
-    (Keycode.TWO, SHIFTED | Keycode.QUOTE),
+#    (Keycode.TWO, SHIFTED | Keycode.QUOTE),
     (Keycode.EQUALS, SHIFTED | Keycode.BACKSLASH),
     (SHIFTED | Keycode.EQUALS, Keycode.BACKSLASH),
     (SHIFTED | Keycode.EIGHT, SHIFTED | Keycode.SIX),
@@ -89,8 +89,6 @@ def pin_out(id):
 # Setup LED brightness through PWM and pull ground pins down
 power_led = set_brightness(board.GP0, power_led_brightness)
 pico_led = set_brightness(board.LED, pico_led_brightness)
-
-print("LED should light up")
 
 # pin numbers for keyboard rows in order
 row_pin_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -145,13 +143,13 @@ def scan_keeb():
                     currently_pressed.add(key)
     # Look for the additional row, which is pull-up to ground
     if not start_pin.value:
-        currently_pressed.add(Keycode.F2)
+        currently_pressed.add(Keycode.F7)
     if not select_pin.value:
-        currently_pressed.add(Keycode.F3)
+        currently_pressed.add(Keycode.F6)
     if not option_pin.value:
-        currently_pressed.add(Keycode.F4)
-    if not reset_pin.value:
         currently_pressed.add(Keycode.F5)
+    if not reset_pin.value:
+        currently_pressed.add(Keycode.F1)
     # Post-process the keys for shifted values, overrides, etc.
     normalized_pressed = set()
     for key in currently_pressed:
