@@ -3,10 +3,6 @@
 	".type": "keymap",
 	"mappings": [
 		{
-			"scancode": 259,
-			"vk": 3
-		},
-		{
 			"scancode": 52,
 			"vk": 8
 		},
@@ -1084,6 +1080,11 @@
 			"scancode": 116,
 			"vk": 46,
 			"modifiers": 9
+		},
+		{
+			"scancode": 259,
+			"vk": 3,
+			"modifiers": 10
 		},
 		{
 			"scancode": 246,

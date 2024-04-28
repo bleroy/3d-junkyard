@@ -39,16 +39,15 @@ SHIFTED = 0x100
 CONTROLLED = 0x200
 
 # Map of the Atari XE keyboard matrix to key codes
-# Note: arbitrary mapping of Atari F1-4 keys if they exist to F9-12, as Altirra doesn't support them anyway:
 key_matrix = [
     [Keycode.SEVEN,           None,          Keycode.EIGHT,         Keycode.NINE,          Keycode.ZERO,            SHIFTED | Keycode.COMMA,     SHIFTED | Keycode.PERIOD, Keycode.BACKSPACE,              Keycode.PAUSE],
     [Keycode.SIX,             None,          Keycode.FIVE,          Keycode.FOUR,          Keycode.THREE,           Keycode.TWO,                 Keycode.ONE,              Keycode.ESCAPE,                 None],
     [Keycode.U,               None,          Keycode.I,             Keycode.O,             Keycode.P,               Keycode.MINUS,               Keycode.EQUALS,           Keycode.RETURN,                 None],
     [Keycode.Y,               None,          Keycode.T,             Keycode.R,             Keycode.E,               Keycode.W,                   Keycode.Q,                Keycode.TAB,                    None],
-    [Keycode.F9,              Keycode.J,     Keycode.K,             Keycode.L,             Keycode.SEMICOLON,       SHIFTED | Keycode.EQUALS,    SHIFTED | Keycode.EIGHT,  Keycode.F10,                    Keycode.CONTROL],
+    [Keycode.F1,              Keycode.J,     Keycode.K,             Keycode.L,             Keycode.SEMICOLON,       SHIFTED | Keycode.EQUALS,    SHIFTED | Keycode.EIGHT,  Keycode.F2,                    Keycode.CONTROL],
     [None,                    Keycode.H,     Keycode.G,             Keycode.F,             Keycode.D,               Keycode.S,                   Keycode.A,                Keycode.CAPS_LOCK,              None],
-    [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.END,              None,                           None],
-    [Keycode.F11,             Keycode.F6,    Keycode.B,             Keycode.V,             Keycode.C,               Keycode.X,                   Keycode.Z,                Keycode.F12,                    Keycode.SHIFT]]
+    [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.GRAVE_ACCENT,     None,                           None],
+    [Keycode.F3,              Keycode.F10,   Keycode.B,             Keycode.V,             Keycode.C,               Keycode.X,                   Keycode.Z,                Keycode.F4,                    Keycode.SHIFT]]
 
 # Shifted Atari keys have a different layout than PC shifted keys; this maps between the two so the character typed on the Atari keyboard results in the right character on the PC
 shifted_overrides = dict([
@@ -198,13 +197,13 @@ def scan_keeb():
                     currently_pressed.add(key)
     # Look for the additional row, which is pull-up to ground
     if not start_pin.value:
-        currently_pressed.add(Keycode.F2)
-    if not select_pin.value:
-        currently_pressed.add(Keycode.F3)
-    if not option_pin.value:
-        currently_pressed.add(Keycode.F4)
-    if not reset_pin.value:
         currently_pressed.add(Keycode.F5)
+    if not select_pin.value:
+        currently_pressed.add(Keycode.F6)
+    if not option_pin.value:
+        currently_pressed.add(Keycode.F7)
+    if not reset_pin.value:
+        currently_pressed.add(Keycode.F8)
     # Post-process the keys for shifted values, overrides, etc.
     normalized_pressed = set()
     for key in currently_pressed:
