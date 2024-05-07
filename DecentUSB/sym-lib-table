@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DecentUSB_Library")(type "KiCad")(uri "${KIPRJMOD}/DecentUSB_Library.kicad_sym")(options "")(descr ""))
+)

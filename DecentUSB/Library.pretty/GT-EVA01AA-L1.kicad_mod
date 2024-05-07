@@ -1,0 +1,171 @@
+(footprint "GT-EVA01AA-L1"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "SMD Rotary Encoder with switch")
+	(tags "Rotary Encoder,Switch,Rotary,Encoder")
+	(property "Reference" "REF**"
+		(at 0 -2.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "259887af-45ec-48e9-be00-1c7022460b35")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "GT-EVA01AA-L1"
+		(at 0 5.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "034e8fa5-c94e-43fc-908d-895d8f996925")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "GT-EVA01AA-L1"
+		(at 0 4.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e4893fdb-90fa-45ed-85e4-5bafb9e17c7c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309121406_G-Switch-GT-EVA01AA-L1_C17702124.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "34d15e70-aec0-4e86-a8f3-f72037563ede")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "SMD Rotary Encoder with switch"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "06f25536-9475-447e-b105-7ad5ba9f2f36")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "JLC Ref" "C17702124"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "1f0551d5-baf3-49c2-bdb5-59fe63b3e1ae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -2.4 -1.75)
+		(end 2.4 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "84f9db21-4e88-49ed-9d1b-9d84ee9df8b1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 6.7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c43ba64c-294e-455d-8954-8917aeffb344")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" smd rect
+		(at -2.6 -0.7)
+		(size 0.8 0.95)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "b1dc23d9-63e1-468d-94b0-231125518f70")
+	)
+	(pad "" np_thru_hole circle
+		(at -1.5 1.4)
+		(size 0.6 0.6)
+		(drill 0.6)
+		(layers "*.Mask" "F.Cu")
+		(uuid "b2df17f1-3d7c-479c-8dc9-7ded5c38c024")
+	)
+	(pad "" np_thru_hole circle
+		(at 1.5 1.4)
+		(size 0.6 0.6)
+		(drill 0.6)
+		(layers "*.Mask" "F.Cu")
+		(uuid "9f503a79-d184-4ac7-bd9b-f845df1fdff3")
+	)
+	(pad "" smd rect
+		(at 2.6 -0.68)
+		(size 0.8 0.95)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "aa8f4f0d-c916-4ed9-8879-ed56ecd9714d")
+	)
+	(pad "A" smd roundrect
+		(at -1.5 3)
+		(size 0.8 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "802916de-a5d5-4ba6-9a70-e3848ae2e310")
+	)
+	(pad "B" smd roundrect
+		(at 1.5 3)
+		(size 0.8 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "89bfd151-6a87-4145-960a-c773157300e1")
+	)
+	(pad "C" smd roundrect
+		(at 0 3)
+		(size 0.8 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "cde3f86c-3cfb-486d-affa-f5870f12a940")
+	)
+	(pad "S1" smd rect
+		(at -0.75 2)
+		(size 0.5 0.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "764b4f48-70f5-4c48-bfac-f5a089b59b99")
+	)
+	(pad "S2" smd rect
+		(at 0.75 2)
+		(size 0.5 0.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "04a98a96-a269-43c3-8f32-1976a4bac29f")
+	)
+)
