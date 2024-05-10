@@ -1,0 +1,161 @@
+(footprint "SSD1306"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "I2C 0.91\" OLED Module 128x32")
+	(tags "OLED,I2C")
+	(property "Reference" "REF**"
+		(at -18.2 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f49f813b-1b8d-491b-b64c-ff492257435e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SSD1306"
+		(at -18.2 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2e39ee65-3e53-432f-b47f-a59d69e10d18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SSD1306"
+		(at -18.2 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fdd412ec-eca5-4de3-8ce4-7d6aa7571ad1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -18.2 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2210da29-3129-40cd-8b07-89587db54c3b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "https://www.aliexpress.us/item/3256801450279611.html?spm=a2g0o.order_list.order_list_main.238.5e0f18028HUUwX&gatewayAdapt=glo2usa#nav-specification"
+		(at -18.2 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5132887b-75a3-436f-ae67-e2e72d90c22c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -19.95 -6.1)
+		(end 19.05 6.1)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "55a696c0-3b70-4880-b211-88d193a72135")
+	)
+	(fp_line
+		(start -13 -5.75)
+		(end 13 5.75)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "c12f7fe2-f988-4ffa-bc42-e755d057ed87")
+	)
+	(fp_line
+		(start 13 -5.75)
+		(end -13 5.75)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "b9b3b26e-c0a4-4d32-a5ec-625237079f3a")
+	)
+	(fp_rect
+		(start -13 -5.75)
+		(end 13 5.75)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "95a63c41-ed48-417b-90a1-ac5982716379")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -18.2 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "059687ad-333b-4609-9cdb-f2b8100959d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -18.2 -3.81)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9b111516-874f-4c06-a7c6-30d9a2cf16c6")
+	)
+	(pad "2" thru_hole circle
+		(at -18.2 -1.27)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2adc0ce3-c88b-4b1f-b1b7-3af0f5deb41f")
+	)
+	(pad "3" thru_hole circle
+		(at -18.2 1.3)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "40fa3933-bbd4-42bc-8b3d-227e9ec61375")
+	)
+	(pad "4" thru_hole circle
+		(at -18.2 3.81)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "28006c09-4a9c-40a1-af0f-9b88941bdc79")
+	)
+)
