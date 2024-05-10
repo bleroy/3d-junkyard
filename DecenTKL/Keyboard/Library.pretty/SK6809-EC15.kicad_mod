@@ -1,0 +1,146 @@
+(footprint "SK6809-EC15"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Addressable LED 1.5mmx1.5mm")
+	(tags "RGB,LED,Addressable")
+	(property "Reference" "REF**"
+		(at 0 -3.1 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "df92ee2e-298a-46b5-9cfa-61d3d14aeda2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SK6809-EC15"
+		(at 0 3.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d7300ad2-9fd8-4548-9fa3-c9485e4ce683")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SK6809-EC15"
+		(at 0 2.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "575aaae2-5f79-41cc-8acb-471a6ab58344")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.digikey.com/en/htmldatasheets/production/5261914/0/0/1/4492"
+		(at 0 2.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e6161aab-5fad-4ba5-bf02-e22319cc4531")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Addressable LED 1.5mmx1.5mm"
+		(at 0 2.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "678100d1-7828-44d2-b2d0-22b717d77065")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.2 -1.2)
+		(end -1.2 -0.5)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b202962e-660d-480e-b2d5-d7e5bf9f121d")
+	)
+	(fp_line
+		(start -0.5 -1.2)
+		(end -1.2 -1.2)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "4d71fd1d-8af5-4599-a6ec-7244ed5595a6")
+	)
+	(fp_rect
+		(start -1 -1)
+		(end 1 1)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "55e0c3c5-3eec-4210-856c-80ea09b036eb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 4.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e5c71b06-dc80-45ee-8a55-0193ecfddeee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.475 0.475)
+		(size 0.55 0.55)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "add3fe00-c6a7-4b64-9298-6195e50cd9de")
+	)
+	(pad "2" smd rect
+		(at 0.475 0.475)
+		(size 0.55 0.55)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "a47f87c0-0e4b-4dd9-98e5-6b0510725aa3")
+	)
+	(pad "3" smd rect
+		(at 0.475 -0.475)
+		(size 0.55 0.55)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "e87c9e3f-7b93-4122-a650-615d85130f2c")
+	)
+	(pad "4" smd rect
+		(at -0.475 -0.475)
+		(size 0.55 0.55)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "101c42b5-34aa-4165-a10f-e70c48fbff52")
+	)
+)
