@@ -14,11 +14,11 @@ If you're looking to modify an XE computer, head over to [the DecentXE project](
 
 ## Current version
 
-The current revision of the Decent 1200 keyboard is: rev. 3.
+The current revision of the Decent 1200 keyboard is: rev. 4m.
 
 ## Can I buy one?
 
-The project is open-source, and I encourage everyone to build their own. I also sell kits and assembled keyboards (both modern and vintage) for those who are not comfortable with ordering parts, PCBs or using a soldering iron.
+The project is open-source, and I encourage everyone to build their own. I also sell modern kits and assembled modern keyboards for those who are not comfortable with ordering parts, PCBs or using a soldering iron.
 
 How expensive is it? It depends on what you're ordering, but this is a made-to-order custom mechanical keyboard, so not cheap.
 
@@ -32,13 +32,13 @@ This is a brand new design that uses a lot of lessons learned from building the 
 
 The modern versions of Decent keyboards are the best quality keyboards. It's a solid design that just feels great. In comparison, the vintage versions tend to feel more wobbly and are generally of lower quality. They are also more difficult to build, which is why I stopped producing them myself. I want to keep the quality of the assembled keyboards I build as high as possible.
 
-The modern version also has a slightly modified layout with a large return keys, and relocated control keys around the shorter space bar. Caps is relocated to where it is on a modern keyboard, above left shift (that's where Atari originally placed the control key, now left of space).
+The modern version also has a slightly modified layout with a large return key, and relocated control keys around the shorter space bar. Caps is relocated to where it is on a PC keyboard, above left shift (that's where Atari originally placed the control key).
 
 If you absolutely want to keep the look and layout of your keyboard as close to the original as possible, you can use vintage caps (scavenged from the computer you're modifying or bought new old stock or used), but be aware of the quality difference. The result is visually indistinguishable from the original, if it wasn't for the backlighting, and does feel much better than the original, but is significantly less nice than the modern version... You'll also have to build it yourself since I no longer ship assembled vintage versions. See building instructions below to get a feel of the build difficulty.
 
 ### Switches
 
-Switches are largely a matter of taste. The Decent 1200 PCB can be mounted with either MX-compatible switches or with Kailh Choc v1 switches.
+Switches are largely a matter of taste. The Decent 1200 PCB can be mounted with any MX-compatible switch. Version 3, which is the last one to support vintage, can be mounted with MX-compatible or Kailh Choc v1 switches.
 
 It's your choice of caps that determines what type of switch to use:
 
@@ -78,7 +78,7 @@ The project is designed around the conservation of the vintage look of the Atari
 
 You'll need a set of caps.
 
-If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html). Make sure to specify a 2.25U left shift.
+If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html).
 
 ![The Decent 1200 modern layout](./Media/decent_atari_1200xl-layout.png)
 
@@ -88,7 +88,7 @@ If you have a complete set of vintage key caps, you'll need 55 [adapters](../Dec
 
 ### Console keys (Help, Start, Select, Option, Reset, F1-F4, Break, Reverse video)
 
-You'll need 11 new [3D-printed console keys](./Caps/Decent1200-console-choc.stl) (more affordable if printed as a [set of twelve](./Caps/Console-set-XL-Choc-x12.stl)). The printed console keys fit on top of Kailh Choc v1 switches, not the MX switches used for the rest of the keyboard.
+You'll need 11 new [3D-printed console keys](./Caps/Decent1200-console-choc.stl) (more affordable if printed as [sets](./Caps/Decent1200-console-choc-x10.stl)). The printed console keys fit on top of Kailh Choc v1 switches, not the MX switches used for the rest of the keyboard.
 
 3D-printed console keys will look great if you apply a [brushed metal vinyl sticker](https://www.amazon.com/dp/B08L4GZRDY/ref=sspa_dk_detail_2?pd_rd_i=B087KRL4NY&pd_rd_w=HzYnW&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_p=f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_r=VYGSYS1YEDTZ7QRRJN26&pd_rd_wg=Nd7sq&pd_rd_r=3f4a2c8d-a713-44c7-b8ae-544c3b0b1f53&s=automotive&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1). The stickers can be cut with a simple vinyl cutter such as a Cricut using [this template](./PrintedParts/ConsoleKeyStickers.svg).
 
@@ -112,7 +112,7 @@ Shift and delete keys use two lateral switches as a stabilizing method.
 
 ### PCB
 
-Use [the Gerber](./Keyboard/production/Decent1200_keyboard_3.zip), [BOM](./Keyboard/production/Decent1200_keyboard_3-bom.csv) and [position](./Keyboard/production/Decent1200_keyboard_3-positions.csv) files to order a PCB with all the SMD parts assembled. That includes a pair of 4051 chips that decode and encode queries to the keyboard matrix. The 1200XL is the only Atari computer to have those chips on the keyboard and not on the motherboard, which reduces the number of wires necessary in the connector, but makes the keyboard slightly more expensive. It also makes it necessary to have a PCB for the keyboard, a requirement Atari dropped in later computers for the much cheaper membrane-based keyboards in some XL computers and in the XE computers. Note that the PCB has through-hole footprints for the original 4051 chips Atari was using in their keyboards. This is usually going to remain unpopulated, and is only there to allow using vintage chips instead of the modern surface-mounted ones that should come assembled on the PCBs.
+Use [the Gerber](./Keyboard/production/Decent1200_modern_keyboard_4m.zip), [BOM](./Keyboard/production/Decent1200_modern_keyboard_4m-bom.csv) and [position](./Keyboard/production/Decent1200_modern_keyboard_4m-positions.csv) files to order a PCB with all the SMD parts assembled (vintage versions: [Gerber](./Keyboard/production/Decent1200_keyboard_3.zip), [BOM](./Keyboard/production/Decent1200_keyboard_3-bom.csv) and [position](./Keyboard/production/Decent1200_keyboard_3-positions.csv)). That includes a pair of 4051 chips that decode and encode queries to the keyboard matrix. The 1200XL is the only Atari computer to have those chips on the keyboard and not on the motherboard, which reduces the number of wires necessary in the connector, but makes the keyboard slightly more expensive. It also makes it necessary to have a PCB for the keyboard, a requirement Atari dropped in later computers for the much cheaper membrane-based keyboards in some XL computers and in the XE computers. Note that the vintage PCB has through-hole footprints for the original 4051 chips Atari was using in their keyboards. This is usually going to remain unpopulated, and is only there to allow using vintage chips instead of the modern surface-mounted ones that should come assembled on the PCBs.
 
 ### Plate
 
@@ -120,7 +120,7 @@ The plate is just an aluminum PCB. Download [the Gerber](./Plate/production/Dece
 
 ![Decent 1200 aluminum plate](./Media/Decent1200-plate.png)
 
-There's also a printed plate to help with the alignment of console keys (to be made available shortly).
+There's also [a printed plate](./Adapters/ConsoleKeyKeyPads.stl) to help with the alignment of vintage console keys if you go for the difficult choice of using vintage console keys (which again I really don't recommend). There's [a separate plate for reset](./Adapters/ResetKeyPad.stl). The console keys in this case use smaller standard tactile switches instead of mechanical switches and are mounted on [printed stems](./Adapters/ConsoleKeyAdapter1200-x12.stl).
 
 ### Connectors
 
@@ -139,10 +139,12 @@ For our keyboards, we can't unfortunately just have correctly placed holes in th
 
 ### Padding
 
-There's some space in the 1200XL case under the keyboard, which can cause some buckling in the middle. To prevent that, you can print two padding parts that sit on top of the RF shield and support the keyboard around the middle.
+There's some space in the 1200XL case under the keyboard, which can cause some buckling in the middle. To prevent that, you can print a padding part that sit on top of the RF shield and supports the keyboard around the middle.
 
-* [STL file for the support pads](./PrintedParts/KeyboardMiddleSupport1200.stl)
+* [STL file for the support pad](./PrintedParts/KeyboardMiddleSupport1200.stl)
   ![Support pad](./Media/Decent1200-support-pad.png)
+
+This is easy to print upside-down without support.
 
 ### Spring
 
@@ -150,7 +152,7 @@ If you went for a vintage keyboard, the wide space bar may need a spring. The or
 
 ### Hardware
 
-When using MX or Alps switches, the plate will usually naturally be held at a constant height by the switches. When using low-profile switches however, it's a little trickier and I recommend using the two mounting holes at the top of the main PCB and plate to add screws and nuts or [standoffs that keep the plate at a constant distance of 3.5mm (or 1/8 freedom units)](https://www.mcmaster.com/92510A400/) from the PCB.
+When using MX switches, the plate will usually naturally be held at a constant height by the switches. When using low-profile switches however, it's a little trickier and I recommend using the two mounting holes at the top of the main PCB and plate to add screws and nuts or [standoffs that keep the plate at a constant distance of 3.5mm (or 1/8 freedom units)](https://www.mcmaster.com/92510A400/) from the PCB.
 
 ## Assembly
 
@@ -166,9 +168,9 @@ Turn the PCB over. Position one of the small washers around each of the screw ho
 
 The vintage Decent 1200 keyboard only uses a stabilizer for the space bar (the other stabilized keys just have additional switches), but since the space bar is 9U and the cap footprint is different from MX caps, you'll need additional parts. First you'll need custom-printed stems for the stabilizers, that you'll assemble into the Durock stabilizers like you would the standard ones. Then you'll need a custom-length rod made from 1.6mm copper rods (see BOM for source). The rod must be cut to measured dimensions and bent carefully before being added to the stabilizers.
 
-### Configure the keyboard for your layout
+### Configure the keyboard for your layout (vintage only)
 
-Solder two small jumper wires **horizontally** to the left of the PCB to configure it for Caps or Control. This rewires the key that's above left shift and that's normally Control on an original keyboard. Control on the modern keyboard goes to the left of the space bar, and this key is reconfigured to be Caps. The two wires should short from the middle position to the right position for modern, and from the middle to the left for vintage. The silkscreen has helper text for this.
+Solder two small jumper wires **horizontally** to the left of the PCB to configure it for Control.The two wires should short from the middle position to the left for vintage. The silkscreen has helper text for this.
 
 ### Mount the switches onto the plate
 
@@ -178,7 +180,7 @@ On the modern layout, the exception to this is the return key that should have i
 
 On the vintage layout, delete, return, shift and caps have a different orientation. It's more practical to wait and add those at the next step, while soldering the switches. Also note that stabilized keys need two switches on the vintage layout.
 
-Note that the console keys do not have a place on the plate. That's because they will be aligned using a separate printed plate.
+Note that the console keys do not have a place on the plate.
 
 ### Get the plate and PCB together
 
@@ -192,9 +194,9 @@ You can secure the boards together with tape or clothespins until you've soldere
 
 Solder each switch onto the PCBs.
 
-Use a printed plate to align the console keys before soldering them. Note the console keys use Kailh Choc v1 switches on both vintage and modern versions.
+Note the console keys use Kailh Choc v1 switches on both vintage and modern versions.
 
-Each console key, as well as Esc, Tab, Caps/Control, left shift and space have two possible positions, because the keyboard doesn't have the same width for vintage and modern. For modern, choose the position to the right, and for vintage, choose the leftmost one.
+On the vintage version, each console key, as well as Esc, Tab, Caps/Control, left shift and space have two possible positions, because the keyboard doesn't have the same width for vintage and modern. For vintage, choose the leftmost position.
 
 ### Plug the cables
 
@@ -212,21 +214,37 @@ Apply brushed metal stickers to the console keys. I find that holding the sticke
 
 Your keyboard is now assembled. Let's mount it into the computer.
 
+### Removing the old keyboard
+
+Opening the Atari 1200 is easy. Remove all the screws on the bottom of the computer, then hold the case together as you carefully put it back upside up. Carefully lift the top of the case to the left, making sure not to pull on the cables to the front-left. Carefully unplug the connectors for the LED board and the keyboard.
+
+![Opening the case](./Media/assembly-1.png)
+
+Remove the four screws holding the keyboard to the top of the case, then remove the keyboard.
+
+![Removing the old keyboard](./Media/assembly-2.png)
+
 ### Assemble the brackets
 
-You might want to briefly connect the keyboard before mounting it and turn the computer on to check the LEDs light up. If you need to tune the brightness of the backlight to the desired level, this is a good time to do it by turning the pot on the bottom-right of the board. If you do it later, you may have to remove the keyboard from the case.
+You might want to briefly connect the new keyboard before mounting it and turn the computer on to check the LEDs light up. If you need to tune the brightness of the backlight to the desired level, this is a good time to do it by turning the pot on the bottom-right of the board. If you do it later, you may have to remove the keyboard from the case.
 
-Set the keyboard in its place under the top shell of the case and add the brackets on top of it, so the columns are fully insertd into them. There is some lateral freedom in the assembly to allow for the 0.25U narrower modern layout to be centered in the case: if you're using the modern layout, you'll want to shift the main board a few millimeters to the right to perfectly center the keyboard. Console keys should be a good guide of the proper alignment is you soldered them correctly.
+Set the keyboard in its place under the top shell of the case and add [the brackets](./PrintedParts/Decent1200Brackets.stl) on top of it, so the columns are fully insertd into them. Console keys should be a good guide of the proper alignment.
+
+![Setting the new keyboard in place](./Media/assembly-3.png)
 
 Once everything looks properly aligned, add the screws.
 
-Plug the other end of the cables into the Atari motherboard's connector.
+Add [the support bracket](./PrintedParts/KeyboardMiddleSupport1200.stl) that prevents the keyboard from buckling in the middle. Find the best fitting position in the trench in front of the PCB.
 
-Close the case. Congratulations, you're done! Turn your computer on and enjoy your mechanical keyboard. It's a good idea to go into the Atari diagnostics or BASIC and check every key works.
+![Adding the support bracket](./Media/assembly-4.png)
+
+Plug the other end of the cables into the Atari motherboard's connector. Also plug the LED connector back in.
+
+Close the case and screw it shut. Congratulations, you're done! Turn your computer on and enjoy your mechanical keyboard. It's a good idea to go into the Atari diagnostics or BASIC and check every key works.
 
 ## Troubleshooting
 
-Defects and mistakes happen. If when testing your keyboard, if you notice a key or a bunch of them don't work, testing and fixing the keyboard is usually quite easy.
+Defects and mistakes happen. If when testing your keyboard, you notice a key or a bunch of them don't work, testing and fixing the keyboard is usually quite easy.
 
 ![The back of the PCB](./Media/Decent1200-keyboard-back.png)
 
@@ -247,5 +265,7 @@ The only reasonable solution I found is to add the footprint of small tactile bu
 I want to thank [XLFreak](https://forums.atariage.com/profile/63723-xl-freak/) for designing the modern key cap set for this project.
 
 Thanks to [Jamm](https://forums.atariage.com/profile/61205-jamm/) who has been very patiently loaning me his 1200XL for months so I could design this keyboard.
+
+Thanks to [Mi1ez](https://forums.atariage.com/profile/40716-mi1ez/) for sharing his assembly photos.
 
 And of course, many thanks to all those who provided feedback on the [DecentXE keyboard](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) over its many revisions or bought a keyboard.
