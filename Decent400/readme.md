@@ -64,7 +64,7 @@ The project is designed around the conservation of the vintage look of the Atari
 
 You'll need a set of caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html).
 
-![The Decent 400 modern layout](./Caps/Decent_Atari_400_REAL400_Black.svg)
+[![The Decent 400 modern layout](./Caps/Decent_Atari_400_REAL400_Black_MakerPreview.png)](./Caps/Decent_Atari_400_REAL400_Black.svg)
 
 ### Switches
 
