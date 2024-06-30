@@ -82,7 +82,7 @@ The plate is just an aluminum PCB. Download [the Gerber](./Plate/production/Dece
 
 ### Connectors
 
-The connector to the motherboard is a pair of cables with male Dupont connectors on one end and female Dupont connector on the other end. LED power comes through a pair of wires that get soldered onto the power board on one end, and should have female Dupont connectors on the other side. We need 22 pins spaced 2.54mm (0.1") on a single line for the main keyboard signals and two for LED power. The cables should be at least 10cm long, but 15cm or 20cm will be more comfortable.
+The connector to the motherboard is a pair of cables with female Dupont connectors on both ends. LED power comes through a pair of wires that get soldered onto the power board on one end, and should have female Dupont connectors on the other side. We need 22 pins spaced 2.54mm (0.1") on a single line for the main keyboard signals and two for LED power. The cables should be at least 10cm long, but 15cm or 20cm will be more comfortable.
 
 You'll also need a 24 pin 2.54mm angled header.
 
@@ -98,11 +98,15 @@ Once the stabilizers are assembled, you can put them in their respective places 
 
 Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw.
 
+### Solder the connector
+
+The 24-pin angled header needs to be soldered before assembling the switches because the solder points will be between the PCB and the plate. That will make some switch solder points a little more difficult as they will be partially under the pins.
+
+Solder the 24-pin angled header under the PCB (solder on the top of the PCB, header under). Make sure to leave enough space between the PCB and the pins.
+
 ### Mount the switches onto the plate
 
 Insert switches into the aluminum plate with the LED window to the back and the pins to the front.
-
-Note that the console keys do not have a place on the plate.
 
 ### Get the plate and PCB together
 
@@ -118,7 +122,7 @@ Note the console keys need to be soldered separately after being carefully align
 
 ### Plug the cables
 
-Solder the 24-pin angled header under the PCB (solder on the top of the PCB, header under). Make sure to leave enough space between the PCB and the pins. Plug one end of your cables onto those headers.
+Plug one end of your cables onto those headers.
 
 ### Add the key caps
 
@@ -128,45 +132,43 @@ Your keyboard is now assembled. Let's mount it into the computer.
 
 ### Removing the old keyboard
 
-Opening the Atari 400 can be tricky if you haven't done it before. There are some great tutorials and videos showing how to do that. You only need to remove the top of the case, no need to fully disassemble the computer.
+Opening the Atari 800 can be tricky if you haven't done it before. There are some great tutorials and videos showing how to do that. You only need to remove the top of the case, no need to fully disassemble the computer.
 
-Once the top of the case is free, carefully lift it and unplug the keyboard ribbon cable from the connector on the motherboard.
+Once the top of the case is free, carefully lift it and unplug the keyboard cable from the connector on the motherboard.
 
-Carefully remove the membrane abomination from the top of the case, taking care not to break the two very small pegs that hold it on the bottom. Some bending will be necessary.
+Carefully unscrew the old keyboard from the top of the case. Leave the "pull open" part in place (unlike what's on the photo below, that was a mistake).
 
-Get the new keyboard in place under the top of the case. Getting the console key switches through is usually the trickiest part. Also take care to get the PCB in place on the bottom.
+Get the new keyboard in place under the top of the case. The fit is very tight as the plate should actually enter the hole and only the main PCB should remain visible.
 
-![Positioning the new keyboard in the case](./Media/Decent400i-assembly.jpg)
+![Positioning the new keyboard in the case](./Media/Decent800-assembly.jpg)
 
-The top will still be floating, but it will be held by the shielding when we reassemble the computer.
+Add the four printed parts to hold the keyboard in place like on the above photo.
 
 ### Connect the LED power lines
 
-The keyboard's backlighting need to get power from the 400 board since the keyboard connector doesn't have a 5V line. Power and ground taps can be found on the power board.
+The keyboard's backlighting needs to get power from the 800 board since the keyboard connector doesn't have a 5V line. Power and ground tap vias can be found on the power board. Use wires with Dupont female connectors on one end, and nothing on the other end. I just cut and tin jumper cables for those.
 
-![Connecting backlighting power lines](./Media/Decent400i-connection.jpg)
+![Connecting backlighting power lines](./Media/Decent800-power.jpg)
 
-The black wire is ground and the red one is 5V.
+The black wire is ground and the white one is 5V.
 
 ### Connect the keyboard
 
-Carefully insert the male connectors into the motherboard's keyboard connector. It's very easy to bend those Dupont connectors, so be gentle.
+Carefully insert the connectors into the motherboard's keyboard connector.
 
 Connect the two power lines to the remaining two pins on the keyboard's connector. LED ground is the bottom pin, and 5V goes right above that.
 
 ### Close the case
 
-Close the case, making sure to hold the keyboard while you're doing it and screw it shut. Now would be a good time to add those console key caps.
+Close the case (follow whatever tutorial you followed for disassembling the computer in reverse).
 
 Congratulations, you're done! Turn your computer on and enjoy your mechanical keyboard. It's a good idea to go into BASIC and check every key works. There are also [keyboard testers](https://forums.atariage.com/index.php?app=core&module=attach&section=attach&attach_rel_module=post&attach_id=443022) that will allow for a complete check.
-
-![Turning it on](./Media/Decent400i-on.jpg)
 
 ## Troubleshooting
 
 Defects and mistakes happen. If when testing your keyboard, you notice a key or a bunch of them don't work, testing and fixing the keyboard is usually quite easy.
 
-![The back of the Decent400 PCB](./Media/Decent400i-keyboard-back.png)
+![The back of the Decent800 PCB](./Media/Decent800-keyboard-back.png)
 
 The back of the board shows the matrix the keyboard is built on. It's easy, from the indications there to figure out what pins a switch is supposed to connect. It's like coordinates: the keyboard is essentially a matrix of switches with diodes behind them. You can test continuity using the connector pins and the diode testing mode of your multimeter. Connect your multimeter, press the switch. You can also test the switch directly, and test continuity from it to its neighbours and to the connectors. Most problems can be found this way, and if the keyboard needs repairs, it's usually easy to pull an additional wire to fix a damaged trace.
 
@@ -176,9 +178,13 @@ I want to thank [XLFreak](https://forums.atariage.com/profile/63723-xl-freak/) f
 
 And of course, many thanks to all those who provided feedback on the [DecentXE keyboard](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) over its many revisions or bought a keyboard.
 
-## Known vintage keyboards:
+## What about vintage?
+
+The current PCB suports vintage versions of the keyboard through the use of Kailh Choc v1 switches and printed adapters that bridge the gap between the footprint of the Kailh switches and the Atari key caps. The adapters can be printed from models that are in [the SCAD file for all adapters](../Atari130MX/Stems/keeb-stem.scad). Wide keys are offset, which necessitates weird positioning of the switch footprints on the PCB.
+
+There's a reason why I stopped producing vintage keyboards: they are of much lower quality than the modern ones, so if you want to go that route, you're on your own, sorry...
+
+The types of keyboards I've seen so far for the 800 are:
 
 * [Mitsumi KSD](https://deskthority.net/wiki/Mitsumi_KSD_Type): 1.6mm cross pattern
 * [Hi-Tek High Profile](https://deskthority.net/wiki/Hi-Tek_High_Profile): square pattern, flat-top variant
-
-Larger keys are offset.
