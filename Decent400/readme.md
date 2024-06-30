@@ -1,6 +1,6 @@
 # Decent 400 mechanical keyboard replacement for Atari 400 computers
 
-![The Decent 40 keyboard](./Media/Decent400i.jpg)
+![The Decent 400 keyboard](./Media/Decent400i.jpg)
 
 If you always wished the Atari 400 had a real keyboard, this is the project for you.
 
@@ -108,8 +108,6 @@ Turn the PCB over. Position one of the small washers around each of the screw ho
 
 Insert switches into the aluminum plate with the LED window to the back and the pins to the front.
 
-Note that the console keys do not have a place on the plate.
-
 ### Get the plate and PCB together
 
 After making sure all the switch pins are vertical and none are bent out of place, carefully align the plate and switches with the stabilizers and the PCB. Slowly and carefully complete that assembly, making sure no pins get bent. Once that is done, the plate and PCB should be a few millimeters apart, evenly spaced across the whole surface.
@@ -148,7 +146,7 @@ The top will still be floating, but it will be held by the shielding when we rea
 
 ### Connect the LED power lines
 
-The keyboard's backlighting need to get power from the 400 board since the keyboard connector doesn't have a 5V line. Power and ground taps can be found on the power board.
+The keyboard's backlighting needs to get power from the 400 board since the keyboard connector doesn't have a 5V line. Power and ground taps can be found on the power board.
 
 ![Connecting backlighting power lines](./Media/Decent400i-connection.jpg)
 

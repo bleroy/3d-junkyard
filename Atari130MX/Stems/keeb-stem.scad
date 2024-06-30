@@ -304,7 +304,7 @@ kailh_choc_base_dimensions = [9.0, 3.95, 1.0];
 kailh_choc_insert_distance = 5.7;
 kailh_choc_insert_dimensions = accurate ? [1.15, 2.9, 4.0] : [0.90, 2.6, 3.6];
 kailh_choc_insert_teeth_width = 0.4;
-kailh_choc_insert_teeth_depth = 0.05;
+kailh_choc_insert_teeth_depth = "Atari XE Console Key" || cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" ? 0.1 : 0.05;
 
 module kailh_choc() {
   translate([0, 0, kailh_choc_height / 2])
@@ -505,8 +505,8 @@ union() {
   support_plate_length = row_count * horiz_offset;
   support_plate_width = column_count * vert_offset;
   support_z_offset = -support_plate_height -
-    (cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_height  :
-    cap_type == "Atari 1200XL Console Key" ? 6 :
+    (cap_type == "Atari XE Console Set" || cap_type == "Atari XE F1-4 Set" || cap_type == "Atari XE Console Key" ? fn_height - 1.7  :
+    cap_type == "Atari 1200XL Console Key" ? 5.5 :
     stem_type == "Kailh Choc v1" ? kailh_choc_insert_dimensions[2] : 0);
 
   echo(str("support_z_offset = ", support_z_offset));
