@@ -1,0 +1,73 @@
+(footprint "FlatCable24Hole"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 4 0)
+		(layer "Cmts.User")
+		(hide yes)
+		(uuid "76035bf0-d815-41a8-9102-ab27f5805ba2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "FlatCable24Hole"
+		(at 0 -4 0)
+		(layer "F.Fab")
+		(uuid "28a3f44f-0f55-4a42-bf42-52535b410c84")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aa4de44b-e084-4c75-8a78-b79b1bd5102c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dc17bdae-c0f8-4863-b080-b72fc6c4efba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6afc7b4f-bc1a-4050-a679-100e16f79ecf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "" np_thru_hole oval
+		(at 0 0)
+		(size 71 5)
+		(drill oval 71 5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "38714c80-a0f6-451a-a45e-8500c236e94b")
+	)
+)

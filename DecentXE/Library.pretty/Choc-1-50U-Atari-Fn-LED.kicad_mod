@@ -1,0 +1,240 @@
+(footprint "Choc-1-50U-Atari-Fn-LED"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "1.5U Kailh Choc low-pro footprint with non-addressable monochromatic backlight LED with Atari function key outline")
+	(property "Reference" "REF**"
+		(at 0 -3.12 0)
+		(layer "Cmts.User")
+		(hide yes)
+		(uuid "9c97db98-dfe2-455c-80b1-cf93c801bc35")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Choc"
+		(at 0 13.462 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1b4c13d1-006a-417b-92e7-8e372f30505c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b158f936-4753-45c6-9f2d-6b6b8c20d170")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72de8de5-6b02-483b-aaa3-de26b1ae5b64")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f62f907-66f2-43ec-89a4-a800be7509a8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -23.8125 14.605)
+		(end -4.7625 -4.445)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "31661a0e-1491-413b-954a-1bcd23432c00")
+	)
+	(fp_line
+		(start -4.7625 -4.445)
+		(end 23.8125 -4.445)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "49915c20-7948-4f12-8042-adfcd9782917")
+	)
+	(fp_line
+		(start 0.61 -0.51)
+		(end 1.26 -0.51)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4d099af8-1550-4729-ad20-0f8b39826640")
+	)
+	(fp_line
+		(start 0.61 0.52)
+		(end 1.26 0.52)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "873678cc-9e55-4b32-9005-5f72b7e7a60c")
+	)
+	(fp_line
+		(start 1.26 -0.51)
+		(end 1.26 -0.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "20ad5c61-cc8d-43c7-bfa9-119572b20fb4")
+	)
+	(fp_line
+		(start 1.26 0.52)
+		(end 1.26 0.38)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "55dd2830-ea6d-4911-9618-81e84834da22")
+	)
+	(fp_line
+		(start 4.7625 14.605)
+		(end -23.8125 14.605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "763a8ac4-32c4-4735-99a3-ad91d6d9ff14")
+	)
+	(fp_line
+		(start 23.8125 -4.445)
+		(end 4.7625 14.605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "05ed6cf6-c26c-498c-a604-8fdfd32d16b5")
+	)
+	(fp_line
+		(start -6.35 -1.27)
+		(end 6.35 -1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "5a0dca76-90c4-4b7d-bdb3-71ff3950408d")
+	)
+	(fp_line
+		(start -6.35 11.43)
+		(end -6.35 -1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "b3816e0f-b791-4943-99f4-3c29acd029f8")
+	)
+	(fp_line
+		(start 6.35 -1.27)
+		(end 6.35 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "4d6dc74b-0bb1-4b7e-82f7-4161ff8ec701")
+	)
+	(fp_line
+		(start 6.35 11.43)
+		(end -6.35 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "89a713b8-4382-438f-b389-781f51338e95")
+	)
+	(pad "" np_thru_hole oval
+		(at -5.33 5.08 270)
+		(size 1.8 2.2)
+		(drill oval 1.8 2.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "91921585-8b73-4ecc-874c-d537346ceb41")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 5.08 180)
+		(size 5.25 5.25)
+		(drill 5.25)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "f575eeb7-5e38-488d-b00d-33027c46a343")
+	)
+	(pad "" np_thru_hole oval
+		(at 5.33 5.08 270)
+		(size 1.8 2.2)
+		(drill oval 1.8 2.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "7d5aedfb-1264-40ee-982c-c2f9cbea08f7")
+	)
+	(pad "1" thru_hole circle
+		(at -5 8.88)
+		(size 2.5 2.5)
+		(drill 1.4986)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d264d3ed-9fbf-473d-af45-4763c14ad883")
+	)
+	(pad "2" thru_hole circle
+		(at 0 10.98 90)
+		(size 2.5 2.5)
+		(drill 1.4986)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b3776fcb-5fdd-4ff3-9998-217a8b43d582")
+	)
+	(pad "3" smd rect
+		(at 0.75 0 90)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "f0026f28-69b3-48b1-b75b-dfcc3209685d")
+	)
+	(pad "4" smd rect
+		(at -0.75 0 90)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "acf1b86a-9b82-4509-bb7c-9d2acfaf2d48")
+	)
+)
