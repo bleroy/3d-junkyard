@@ -65,7 +65,7 @@ def translate_horizontally(pixel_index, offset):
     for i in range(len(line_intervals)):
         start, end = line_intervals[i]
         if pixel_index >= start and pixel_index <= end:
-            translated = pixel_index + offset * (-1 ^ (i % 2))
+            translated = pixel_index + offset * (1 if i % 2 == 0 else -1)
             return -1 if translated > end or translated < start else translated
     return -1
 
@@ -200,19 +200,21 @@ class FlashingMessage(Animation):
     def __init__(self, pixels=pixels, num_pixels=num_pixels, setting_count=1):
         super().__init__(pixels, num_pixels, setting_count)
         self.messages = [
+            "The Will Of The People",
+            "MUSE",
             "Merry Christmas",
             "Happy Holidays",
             "Happy New Year",
             "Happy Halloween"
         ]
-        self.message = (self.messages[0] + "    ").upper()
+        self.message = (self.messages[0] + "   ").upper()
         self.setting_count = len(self.messages)
     def next(self):
         super().next()
-        self.message = (self.messages[self.setting] + "    ").upper()
+        self.message = (self.messages[self.setting] + "   ").upper()
     def previous(self):
         super().previous()
-        self.message = (self.messages[self.setting] + "    ").upper()
+        self.message = (self.messages[self.setting] + "   ").upper()
     def pixel_color(self, index, r, angle):
         c = self.message[(self.frame_number // 2) % len(self.message)] if self.frame_number % 2 == 0 else " "
         return self.pixel_for_char(index, c)
@@ -262,30 +264,56 @@ class FlashingMessage(Animation):
         }[c] else BLACK
 
 class ScrollingMessage(FlashingMessage):
+    def __init__(self, pixels=pixels, num_pixels=num_pixels, setting_count=1):
+        super().__init__(pixels, num_pixels, setting_count)
+        self.new_frame = True
+        self.current_index = 0
+        self.current_offset = -6
     def prepare_frame(self):
-        current_index = (self.frame_number // 6) % len(self.message)
-        current_c = self.message[current_index]
-        next_c = self.message[current_index + 1] if current_index + 1 < len(self.message) else " "
+        current_c = self.message[self.current_index]
+        next_c = self.message[self.current_index + 1] if self.current_index + 1 < len(self.message) else " "
+        next_offset = self.current_offset - 6
 
         for i in range(self.num_pixels):
-            current_translated_index = translate_horizontally(i, -(self.frame_number % 6))
+            current_translated_index = translate_horizontally(i, self.current_offset)
+            self.frame.set_pixel(i, BLACK)
             if current_translated_index != -1:
                 pixel = super().pixel_for_char(current_translated_index, current_c)
-                self.frame.set_pixel(current_translated_index, pixel)
-            next_translated_index = translate_horizontally(i, 6 - (self.frame_number % 6))
+                if pixel != BLACK:
+                    self.frame.set_pixel(i, pixel)
+            next_translated_index = translate_horizontally(i, next_offset)
             if next_translated_index != -1:
                 pixel = super().pixel_for_char(next_translated_index, next_c)
-                self.frame.set_pixel(next_translated_index, pixel)
-
-class Life(Animation):
-    def __inti__(self), pixels=pixels, num_pixels=num_pixels, setting_count=1):
-        super().__init__(pixels, num_pixels, setting_count)
+                if pixel != BLACK:
+                    self.frame.set_pixel(i, pixel)
+        # On step 12, there are temporarily 3 active characters on the display
+        # The 3rd char can have only one pixel in screen, pixel 28
+        if self.frame_number == 12 and self.current_index + 2 < len(self.message):
+            third_char = self.message[self.current_index + 2]
+            pixel = super().pixel_for_char(28, third_char)
+            if pixel != BLACK:
+                self.frame.set_pixel(34, pixel)
+        self.new_frame = False
+    def next_frame(self):
+        super().next_frame()
+        if (self.frame_number == 13):
+            self.frame_number = 7
+            self.current_index += 1
+            if self.current_index >= len(self.message):
+                self.current_index = 0
+                self.current_offset = -6
+                self.frame_number = 0
+            else:
+                self.current_offset = self.current_offset - 5
+        else:
+            self.current_offset += 1
+        self.new_frame = True
 
 class White(Animation):
     def pixel_color(self, index, r, angle):
         return WHITE
 
-animations = [FlashingMessage(), Rainbow(), Radiate(), Pulsate(), WakaWaka(), BeatingHeart(), White(), Off()]
+animations = [ScrollingMessage(), Rainbow(), Radiate(), Pulsate(), WakaWaka(), BeatingHeart(), White(), Off()]
 animation = animations[0]
 animation_index = 0
 
