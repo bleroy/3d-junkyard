@@ -11,15 +11,14 @@ Both the hardware and the software are work in progress but the proof of concept
 
 The DecentUSB Host aims at being a low-cost extension for Atari 8-bit computers that brings USB,
 Bluetooh and Wifi capabilities to the platform.
-It's open source both in hardware and software to allow for the community to easily build new features.
+It's open source both in hardware and software to allow the community to easily build new features.
 
 The device is a multi-function interface to keyboards, gamepads or memory devices
 in a single board that costs less than $15 to build.
 
 The Raspberry Pi Pico has been a fantastic booster for retro-computer extensions.
 Its fast PIO state machines and its extremely low price enable applications involving precise timing
-of signals at a very cheap price point and without involving FPGAs, which also means a lower barrier
-to entry.
+of signals with a much lower barrier to entry than FPGAs.
 
 Specifically, the Pico-W can act as a USB host, a Bluetooth host, and a WiFi card.
 By connecting it internally to the relevant Atari 8-bit buses and signals, we can interface modern
@@ -31,9 +30,10 @@ Once drivers have been built, we should be able to support the following scenari
 
 * USB and Bluetooth keyboards
 * USB and Bluetooth gamepads
+* USB and Bluetooth mouses
 * USB stick drives and SD cards
-* Internet access (possibly in a FujiNet-compatible way)
-* Atari to PC communication (possibly in a SIO2PC-compatible way)
+* Internet access (potentially in a FujiNet-compatible way)
+* Atari to PC communication (potentially in a SIO2PC-compatible way)
 
 ## Internal interfaces
 
@@ -44,7 +44,7 @@ The DecentUSB Host board exposes pins that connect to the following signals insi
 * Start, select, option, reset: enables console key control, for example through an external keyboard
 * SIO clock in/out, data in/out and command: enables SIO device simulation
 * Joystick port 1 up, down, left, right and fire as well as A_POT: enables joystick simulation
-* Potentially other signals, including analog, using the extra free GPIOs on the Pi
+* Potentially other signals using the remaining free GPIOs on the Pi
 
 ## External interfaces
 
@@ -95,7 +95,7 @@ If necessary, there could be optimized versions for each model or form factor.
 The prototype relies on the Pi to host a USB port on GPIOs using the USB host library.
 One of the disadvantages of this approach is that we're using the Pi's computing resources to wait for USB data.
 The USB host library supports only one USB port and can only work in a blocking or polling way, meaning
-that it's very difficult to multitask and handle other tasks while waiting for USB data without missing
+that it's very difficult to handle other tasks while waiting for USB data without missing
 any of it.
 
 For those reasons, the next version of the hardware will include a specialized USB hosting chip such as
@@ -104,7 +104,10 @@ and a 2-port USB hub chip such as
 [the Microchip USB2422 2-port USB hub controller](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/00001726B.pdf) to have two active USB ports without having to connect a hub.
 
 The prototype was all through hole components, which is great for experimentation.
-The production version of the board will use SMD components, which are easier to source.
+The production version of the board will use SMD components, which are easier to source and
+will allow for an even more compact design.
+
+I might also add enough GPIO extenders to plug into the PBI.
 
 ### Software
 
