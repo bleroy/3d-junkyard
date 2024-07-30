@@ -31,3 +31,4 @@ JoyKeyMX/Universal-Switch-Footprint
 *.FCStd1
 Decent400/Enclosure/*.stl
 */*/production/backups
+**/production/backups
