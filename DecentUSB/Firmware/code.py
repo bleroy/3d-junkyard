@@ -1,19 +1,18 @@
 # DecentUSB (c) 2024 Bertrand Le Roy
 # A USB host for Atari 8-bit computers
-# This is work in progress.
-# This firmware doesn't entirely work yet.
-# It will be rewritten in PIO assembly and C to ensure reliable timing.
 
 import asyncio
 import digitalio
 import board
+import rp2pio
 import array
 import usb_host
 import usb.core
 
+import adafruit_pioasm
 import adafruit_usb_host_descriptors
 import adafruit_ssd1306
-from adafruit_mcp230xx.mcp23017 import MCP23017
+# from adafruit_mcp230xx.mcp23017 import MCP23017
 
 import busio as io
 
@@ -189,54 +188,51 @@ class Shared:
         self.select = False
         self.option = False
         self.reset = False
+        self.pokey_sm = None
 
-async def discover_usb_devices(shared):
+def discover_usb_devices(shared):
     print("Starting USB discovery")
     # HID protocol reference: https://usb.org/sites/default/files/hid1_11.pdf
-    while True:
-        for device in usb.core.find(find_all=True):
-            #log(f"pid {hex(device.idProduct)}")
-            #log(f"vid {hex(device.idVendor)}")
-            #log(f"man {device.manufacturer}")
-            #log(f"product {device.product}")
-            #log(f"serial {device.serial_number}")
-            #log(f"class {adafruit_usb_host_descriptors.get_device_descriptor(device)[4]:02x} subclass {adafruit_usb_host_descriptors.get_device_descriptor(device)[5]:02x} protocol {adafruit_usb_host_descriptors.get_device_descriptor(device)[6]:02x}")
-            #log("config[0]:")
-            config_descriptor = adafruit_usb_host_descriptors.get_configuration_descriptor(
-                device, 0
-            )
+    for device in usb.core.find(find_all=True):
+        #log(f"pid {hex(device.idProduct)}")
+        #log(f"vid {hex(device.idVendor)}")
+        #log(f"man {device.manufacturer}")
+        #log(f"product {device.product}")
+        #log(f"serial {device.serial_number}")
+        #log(f"class {adafruit_usb_host_descriptors.get_device_descriptor(device)[4]:02x} subclass {adafruit_usb_host_descriptors.get_device_descriptor(device)[5]:02x} protocol {adafruit_usb_host_descriptors.get_device_descriptor(device)[6]:02x}")
+        #log("config[0]:")
+        config_descriptor = adafruit_usb_host_descriptors.get_configuration_descriptor(
+            device, 0
+        )
 
-            i = 0
-            while i < len(config_descriptor):
-                descriptor_len = config_descriptor[i]
-                descriptor_type = config_descriptor[i + 1]
-                if descriptor_type == adafruit_usb_host_descriptors.DESC_CONFIGURATION:
-                    config_value = config_descriptor[i + 5]
-                    #log(f" value {config_value:d}")
-                elif descriptor_type == adafruit_usb_host_descriptors.DESC_INTERFACE:
-                    interface_number = config_descriptor[i + 2]
-                    interface_class = config_descriptor[i + 5]
-                    interface_subclass = config_descriptor[i + 6]
-                    interface_protocol = config_descriptor[i + 7]
-                    #log(f" interface[{interface_number:d}]")
-                    #log(
-                    #    f"  class {interface_class:02x} subclass {interface_subclass:02x} protocol {interface_protocol:02x}"
-                    #)
-                    if interface_protocol == 1 and shared.keyboard == None:
-                        log(f"{device.product}")
-                        shared.keyboard = device
-                elif descriptor_type == adafruit_usb_host_descriptors.DESC_ENDPOINT:
-                    endpoint_address = config_descriptor[i + 2]
-                    if (endpoint_address & DIR_IN) and device == shared.keyboard and interface_protocol == 1:
-                        shared.keyboard_interface_address = endpoint_address
-                        #log(f"Found keyboard interface IN {endpoint_address:02x}")
-                i += descriptor_len
+        i = 0
+        while i < len(config_descriptor):
+            descriptor_len = config_descriptor[i]
+            descriptor_type = config_descriptor[i + 1]
+            if descriptor_type == adafruit_usb_host_descriptors.DESC_CONFIGURATION:
+                config_value = config_descriptor[i + 5]
+                #log(f" value {config_value:d}")
+            elif descriptor_type == adafruit_usb_host_descriptors.DESC_INTERFACE:
+                interface_number = config_descriptor[i + 2]
+                interface_class = config_descriptor[i + 5]
+                interface_subclass = config_descriptor[i + 6]
+                interface_protocol = config_descriptor[i + 7]
+                #log(f" interface[{interface_number:d}]")
+                #log(
+                #    f"  class {interface_class:02x} subclass {interface_subclass:02x} protocol {interface_protocol:02x}"
+                #)
+                if interface_protocol == 1 and shared.keyboard == None:
+                    log(f"{device.product}")
+                    shared.keyboard = device
+            elif descriptor_type == adafruit_usb_host_descriptors.DESC_ENDPOINT:
+                endpoint_address = config_descriptor[i + 2]
+                if (endpoint_address & DIR_IN) and device == shared.keyboard and interface_protocol == 1:
+                    shared.keyboard_interface_address = endpoint_address
+                    #log(f"Found keyboard interface IN {endpoint_address:02x}")
+            i += descriptor_len
 
-        if shared.keyboard != None and shared.keyboard_interface_address != None:
-            shared.keyboard.set_configuration()
-            await asyncio.sleep(0)
-        else:
-            await asyncio.sleep(5)
+    if shared.keyboard != None and shared.keyboard_interface_address != None:
+        shared.keyboard.set_configuration()
 
 async def receive_usb_keyboard(shared):
     global shift, control, alt, win, current_raw_code, current_key_code, current_modifier, char, start, select, option, reset
@@ -295,6 +291,10 @@ async def receive_usb_keyboard(shared):
                         shared.char_col = mapped[2]
                 
                 if current_key_code != 0:
+                    scan_pokey(shared)
+                if shared.pokey_sm != None:
+                    shared.pokey_sm.write(current_key_code)
+                if current_key_code != 0:
                     ch(("CTRL + " if shared.control else "") + ("ALT + " if shared.alt else "") + ("SHIFT + " if shared.shift else "") + ("WIN + " if shared.win else "") + shared.char if shared.char != "" else "0x{:02x}".format(current_key_code))
             except usb.core.USBTimeoutError:
                 pass
@@ -303,64 +303,98 @@ async def receive_usb_keyboard(shared):
                 shared.keyboard_interface_address = None
         await asyncio.sleep(0)
 
-# 
-pio_scan_pokey = """
+# For now does only the main matrix, no shift or control (or break)
+# Also the Pi is currently starved for available state machines by the USB
+# library, so we can't run it at the same time as USB. Next revision of
+# the hardware won't need the USB host library, so can use PIO Pokey scanning.
+def scan_pokey_pio(shared):
+    pio_scan_pokey = """
 .program pokeyscan
+.side_set 1
 .wrap_target
+    out y 6                 ; Read current key code as set from USB
 loop:
-    in  x, pins          ; Current pokey scan code -> x
-    jmp !y nope         ; If no active scan code, do nothing
+    mov x pins              ; Current pokey scan code -> x
+    jmp !y loop             ; If no active scan code, do nothing
 cmp:
-    jmp x!=y set_high
-    out pins, 1
-    jmp loop
-set_high:
-    out pins, 0
+    jmp x!=y loop   side 1  ; If the current key code is different from GPIO state, keep KR2 high (should be eventually left floating)
+    jmp loop        side 0  ; If the codes coincide, set KR2 low
 nope:
     nop
 .wrap
 """
+    program = adafruit_pioasm.assemble(pio_scan_pokey)
+    sm = rp2pio.StateMachine(
+        program = program,
+        frequency = 1908,
+        first_sideset_pin = board.GP19, # Eventually we'll go through the GPIO extender for KR1. For the moment going through GPIO19 directly despite the voltage mismatch
+        sideset_pin_count = 1,
+        first_in_pin = board.GP6,
+        in_pin_count = 6, # KR2 not yet handled, so no shifted or controlled keys yet
+        auto_pull = True,
+        pull_threshold = 6
+    )
+    shared.pokey_sm = sm
+    print("Started Pokey PIO state machine")
 
-async def scan_pokey(shared):
-    K0 = digitalio.DigitalInOut(board.GP11)
-    K1 = digitalio.DigitalInOut(board.GP10)
-    K2 = digitalio.DigitalInOut(board.GP9)
-    K3 = digitalio.DigitalInOut(board.GP8)
-    K4 = digitalio.DigitalInOut(board.GP7)
-    K5 = digitalio.DigitalInOut(board.GP6)
-    KR2 = digitalio.DigitalInOut(board.GP12)
+K0 = digitalio.DigitalInOut(board.GP11)
+K1 = digitalio.DigitalInOut(board.GP10)
+K2 = digitalio.DigitalInOut(board.GP9)
+K3 = digitalio.DigitalInOut(board.GP8)
+K4 = digitalio.DigitalInOut(board.GP7)
+K5 = digitalio.DigitalInOut(board.GP6)
+KR2 = digitalio.DigitalInOut(board.GP12)
 
-    for line in [K0, K1, K2, K3, K4, K5, KR2]:
-        line.direction = digitalio.Direction.INPUT
-        line.pull = None
+for line in [K0, K1, K2, K3, K4, K5, KR2]:
+    line.direction = digitalio.Direction.INPUT
+    line.pull = None
 
-    mcp_I2C = io.I2C(board.GP1, board.GP0)
-    mcp = MCP23017(mcp_I2C)
-    KR1 = mcp.get_pin(7)
-    KR1.direction = digitalio.Direction.OUTPUT
+#mcp_I2C = io.I2C(board.GP1, board.GP0)
+#mcp = MCP23017(mcp_I2C)
+#KR1 = mcp.get_pin(19)
+KR1 = digitalio.DigitalInOut(board.GP28)
+KR1.direction = digitalio.Direction.OUTPUT
 
-    print("Starting Pokey scanning")
-    while True:
-        if shared.keyboard != None:
+KR1_LOW_CYCLES = 10
+
+def scan_pokey(shared):
+    #global K0, K1, K2, K3, K4, K5, KR1, KR2
+    #print("Starting Pokey scanning")
+    print(f"Scanning for ({shared.char_row}, {shared.char_col}): {(K0.value, K1.value, K2.value, K3.value, K4.value, K5.value)}")
+    cycles = KR1_LOW_CYCLES
+    if shared.keyboard != None:
+        while cycles > 0:
             # Scan Pokey lines K0-5
+            # To improve timing reliability here we should anticipate on the next
+            # state: reading all six pins takes time we don't have and we can't
+            # read them in parallel in CircuitPython without PIO state machines.
+            # We don't have enough PIO state machines if we continue to use
+            # the USB host library.
+            # For that reason, I'm skipping this code change for this proof of
+            # concept and will finish the timing design on the next revision of
+            # the hardware which will have a dedicated USB host chip and new
+            # firmware written with C and PIO state machines for all I/O.
             row = K_to_row[(K3.value, K4.value, K5.value)]
             col = K_to_col[(K0.value, K1.value, K2.value)]
-            #print(f"({row}, {col}): {(K0.value, K1.value, K2.value, K3.value, K4.value, K5.value)}")
             if row == shared.char_row and col == shared.char_col:
                 KR1.value = False
-                #print(f"({row}, {col})")
-            else:
+                # Add some ghetto delay to adjust the width of the pulse
+                for i in range(0, 20):
+                    pass
                 KR1.value = True
-        #await asyncio.sleep(0)
+                cycles -= 1
+                #print(f"({row}, {col})")
+        #print(f"Sent ({row}, {col}) for {KR1_LOW_CYCLES} cycles")
+
+# Currently doing things more sequentially than we'd want for the production design:
+# the USB host library is very preemptive and doesn't play well at all with multitasking / async.
+# Next revision of the hardware will make it unnecessary to rely on the USB host library.
+shared = Shared(None, None)
+while shared.keyboard == None:
+    discover_usb_devices(shared) # Eventually we'll continuously scan for USB device changes
+#scan_pokey_pio(shared) # Start the state machine
 
 async def main():
-    shared = Shared(None, None)
-    discover_usb_devices_task = asyncio.create_task(discover_usb_devices(shared))
-    pokey_task = asyncio.create_task(scan_pokey(shared))
-    #usb_task = asyncio.create_task(receive_usb_keyboard(shared))
-    # Simulate a static key press for now
-    #shared.char_row = 6
-    #shared.char_col = 5
-    await asyncio.gather(pokey_task)
+    await receive_usb_keyboard(shared) # Start scanning the USB keyboard
 
 asyncio.run(main())
