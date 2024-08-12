@@ -1168,26 +1168,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 87.63) (xy 168.91 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2de8f8eb-673c-4e44-baf1-79674e9aefad")
-	)
-	(wire
-		(pts
-			(xy 149.86 90.17) (xy 168.91 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ed0c7c8-b37d-4eee-9bb6-4cc00723430e")
-	)
-	(wire
-		(pts
 			(xy 121.92 97.79) (xy 142.24 97.79)
 		)
 		(stroke
@@ -1408,7 +1388,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 87.63) (xy 142.24 87.63)
+			(xy 121.92 87.63) (xy 168.91 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1508,7 +1488,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 90.17) (xy 142.24 90.17)
+			(xy 121.92 90.17) (xy 168.91 90.17)
 		)
 		(stroke
 			(width 0)
@@ -2277,82 +2257,6 @@
 			(project ""
 				(path "/6006c9e6-0998-4bf1-8941-7a78a8f6670f"
 					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 146.05 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4177830d-b01e-46d1-8993-40e0611b8dc5")
-		(property "Reference" "R18"
-			(at 150.368 86.614 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "470"
-			(at 146.05 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 146.05 89.408 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 146.05 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 146.05 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part #" "C23179"
-			(at 146.05 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "97321d43-58fb-4e38-aab9-57d9037635c0")
-		)
-		(pin "2"
-			(uuid "c9412abb-9138-4668-ad0d-61dc95289f12")
-		)
-		(instances
-			(project "600XL-keyboard-RN"
-				(path "/6006c9e6-0998-4bf1-8941-7a78a8f6670f"
-					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -3265,82 +3169,6 @@
 			(project "600XL-keyboard-RN"
 				(path "/6006c9e6-0998-4bf1-8941-7a78a8f6670f"
 					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 146.05 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "abed4b14-ca41-4d46-9123-d0db7286c111")
-		(property "Reference" "R19"
-			(at 150.368 89.154 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "470"
-			(at 146.05 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 146.05 91.948 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 146.05 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 146.05 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part #" "C23179"
-			(at 146.05 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "81bacc84-0b55-4bb9-8370-3fe026f261d9")
-		)
-		(pin "2"
-			(uuid "b7430d51-0888-42fe-a863-0bd738d2b9cc")
-		)
-		(instances
-			(project "600XL-keyboard-RN"
-				(path "/6006c9e6-0998-4bf1-8941-7a78a8f6670f"
-					(reference "R19")
 					(unit 1)
 				)
 			)
