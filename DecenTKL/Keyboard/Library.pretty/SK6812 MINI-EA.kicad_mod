@@ -1,0 +1,123 @@
+(footprint "SK6812 MINI-EA"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "A RGB LED with integrated controller that can be mounted under the board and shine through to the top")
+	(tags "RGB Neopixel SMD under-board")
+	(property "Reference" "REF**"
+		(at 0 -8.16 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "949fddfe-0627-42a3-a815-eb4d640ca781")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SK6812 MINI-EA"
+		(at 0 -6.66 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "cd657cc4-8821-444c-8520-9178a0e4890e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 -7.66 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "81b16e5f-83a4-4d87-8b07-38da006a74b8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304101800_OPSCO-Optoelectronics-SK6812MINI-EA_C5378731.pdf"
+		(at 0 -7.66 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8692a627-812b-49b7-8154-af4a264224a9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 -7.66 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d6c84742-b610-4930-80ee-e0b703a5c08d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -1.8 -1.6)
+		(end 1.8 1.6)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "8f376d9a-b392-43a3-bc92-50881282be8d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -5.16 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c0d01998-cb14-4ffa-8b96-4ddfd7a750bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.775 0.755)
+		(size 0.75 0.82)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "a1a39fca-ac3e-4f4a-88a6-97239d1fc38d")
+	)
+	(pad "2" smd rect
+		(at 2.78 0.755)
+		(size 0.75 0.82)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "3bb31428-1942-409e-b24c-5cb0984b79bd")
+	)
+	(pad "3" smd rect
+		(at 2.78 -0.755)
+		(size 0.75 0.82)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "18e1140a-5869-4a7e-8502-2e8f59034f1f")
+	)
+	(pad "4" smd rect
+		(at -2.79 -0.76)
+		(size 0.75 0.82)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "717d66d4-bbdc-4bf8-920d-9d043a904346")
+	)
+)
