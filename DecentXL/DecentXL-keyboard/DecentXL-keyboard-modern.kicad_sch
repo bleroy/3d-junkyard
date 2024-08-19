@@ -32007,7 +32007,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DecentXL:Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal"
+		(property "Footprint" "footprints:AMPHENOL_F52R-1A7H1-11026"
 			(at 88.9 181.61 0)
 			(effects
 				(font
