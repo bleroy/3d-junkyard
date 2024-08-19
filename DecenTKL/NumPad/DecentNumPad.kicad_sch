@@ -5598,7 +5598,7 @@
 		(at 262.89 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5640,6 +5640,15 @@
 			)
 		)
 		(property "Description" "9-pin male plug pin D-SUB connector"
+			(at 262.89 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Position Offset" ""
 			(at 262.89 62.23 0)
 			(effects
 				(font
@@ -5820,7 +5829,7 @@
 		(at 262.89 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5862,6 +5871,15 @@
 			)
 		)
 		(property "Description" "9-pin male plug pin D-SUB connector"
+			(at 262.89 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Position Offset" ""
 			(at 262.89 97.79 0)
 			(effects
 				(font
@@ -6569,7 +6587,7 @@
 		(at 171.45 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e09f1c0f-e8c5-4468-a131-d54ee84b3389")
@@ -6616,6 +6634,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Position Offset" ""
+			(at 171.45 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fafaed96-81b3-45a1-b162-2fc18ab2cb7b")
 		)
@@ -6636,7 +6663,7 @@
 		(at 238.76 142.24 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6678,6 +6705,15 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x20, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 238.76 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Position Offset" ""
 			(at 238.76 142.24 0)
 			(effects
 				(font
@@ -6836,7 +6872,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 115.57 172.0346 0)
 			(effects
 				(font
@@ -6972,7 +7008,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 53.34 131.3946 0)
 			(effects
 				(font
@@ -7050,7 +7086,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 83.82 112.3446 0)
 			(effects
 				(font
@@ -7128,7 +7164,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 83.82 131.3946 0)
 			(effects
 				(font
@@ -7206,7 +7242,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 83.82 151.7146 0)
 			(effects
 				(font
@@ -7284,7 +7320,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 115.57 112.3446 0)
 			(effects
 				(font
@@ -7440,7 +7476,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 22.86 192.3546 0)
 			(effects
 				(font
@@ -7596,7 +7632,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 53.34 151.7146 0)
 			(effects
 				(font
@@ -7674,7 +7710,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 22.86 112.3446 0)
 			(effects
 				(font
@@ -7810,7 +7846,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 22.86 151.7146 0)
 			(effects
 				(font
@@ -7888,7 +7924,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 115.57 131.3946 0)
 			(effects
 				(font
@@ -7966,7 +8002,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 83.82 192.3546 0)
 			(effects
 				(font
@@ -8044,7 +8080,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 53.34 112.3446 0)
 			(effects
 				(font
@@ -8122,7 +8158,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 22.86 172.0346 0)
 			(effects
 				(font
@@ -8200,7 +8236,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 83.82 172.0346 0)
 			(effects
 				(font
@@ -8336,7 +8372,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 22.86 131.3946 0)
 			(effects
 				(font
@@ -8472,7 +8508,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "../Keyboard/key.kicad_sch"
 			(at 53.34 172.0346 0)
 			(effects
 				(font
