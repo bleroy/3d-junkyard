@@ -260,7 +260,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "NumPadPlate.step",
       "svg": "",
       "vrml": ""
     },

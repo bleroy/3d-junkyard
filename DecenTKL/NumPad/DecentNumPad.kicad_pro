@@ -58,7 +58,40 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|65118999|57935001|ded72c8a-5ceb-4e83-af11-9a42f9cc10e1|e6973ef8-a9fb-4076-bd84-e414dada03bb",
+        "courtyards_overlap|68674999|57935001|75a86186-13b2-4b24-922a-6e6c76d3cc54|e6973ef8-a9fb-4076-bd84-e414dada03bb",
+        "courtyards_overlap|78932999|57935001|5cdf5c0f-7f37-4c95-87db-a90ba537fab8|e6973ef8-a9fb-4076-bd84-e414dada03bb",
+        "hole_clearance|32668750|22295000|4e458d03-b6a8-4736-a9e5-39c7d2d82344|e007996c-bd51-4247-b222-5c42751bf95e",
+        "hole_clearance|32668750|22295000|89e668b1-ca22-4e8e-a0b4-15869aab68ee|e007996c-bd51-4247-b222-5c42751bf95e",
+        "hole_clearance|38768750|22295000|bdde7717-2cab-4191-9764-9a17836dcff6|4b4c0ffe-055d-4e60-a061-c11a99bb5b32",
+        "hole_clearance|38768750|22295000|e9d5b674-ee54-44ac-89f2-968b1673c924|4b4c0ffe-055d-4e60-a061-c11a99bb5b32",
+        "solder_mask_bridge|58465000|21990001|71eb3fc0-b495-47ad-a366-fc91a868f880|1d67e2c0-463c-4464-be8c-fe5bbf0d4cb8",
+        "solder_mask_bridge|63148386|159608797|f8de36fa-6374-401f-93bf-f247b8562b87|ff5577c5-3924-4854-9bc2-32e59c64e3cd",
+        "solder_mask_bridge|91221228|159663183|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
+        "solder_mask_bridge|91363706|159585729|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
+        "solder_mask_bridge|98162836|19003745|71eb3fc0-b495-47ad-a366-fc91a868f880|1d67e2c0-463c-4464-be8c-fe5bbf0d4cb8",
+        "solder_mask_bridge|99229287|152834499|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
+        "starved_thermal|27490000|144315001|d2778940-e10a-40d3-8e52-4293bc927ab8|44de2b53-bf2f-4ff1-83a4-fffd5f1d978b|B.Cu",
+        "starved_thermal|30920000|140305001|d2778940-e10a-40d3-8e52-4293bc927ab8|cca3dcd9-aacf-4fb7-a7a0-5eb6d98858c2|B.Cu",
+        "starved_thermal|32518750|22795000|d2778940-e10a-40d3-8e52-4293bc927ab8|4e458d03-b6a8-4736-a9e5-39c7d2d82344|B.Cu",
+        "starved_thermal|32518750|22795000|d2778940-e10a-40d3-8e52-4293bc927ab8|89e668b1-ca22-4e8e-a0b4-15869aab68ee|B.Cu",
+        "starved_thermal|34343427|46971846|d2778940-e10a-40d3-8e52-4293bc927ab8|4ada97a1-ac74-4e69-bf54-33462f129637|F.Cu",
+        "starved_thermal|37465000|26733001|d2778940-e10a-40d3-8e52-4293bc927ab8|8cd03e52-5fe1-47ff-b454-aff8b6e73b97|B.Cu",
+        "starved_thermal|40240000|125532501|d2778940-e10a-40d3-8e52-4293bc927ab8|586f5ba7-e765-4a3b-8f40-0db0e7777661|B.Cu",
+        "starved_thermal|40240000|68382501|d2778940-e10a-40d3-8e52-4293bc927ab8|d1490942-745e-4eeb-b2a5-63e7af7d386c|B.Cu",
+        "starved_thermal|42525000|62275000|d2778940-e10a-40d3-8e52-4293bc927ab8|50999e4b-a502-40fa-a6d2-96bcd0ed4d0a|B.Cu",
+        "starved_thermal|49750000|144575001|d2778940-e10a-40d3-8e52-4293bc927ab8|de87d2ae-f385-430c-8b6b-5022bd876f28|B.Cu",
+        "starved_thermal|50145000|62275000|d2778940-e10a-40d3-8e52-4293bc927ab8|251f7597-595b-499d-9c85-995c3cf36f7e|F.Cu",
+        "starved_thermal|55162000|36932500|d2778940-e10a-40d3-8e52-4293bc927ab8|e8707283-9dba-4873-a3fc-70d2520455e7|B.Cu",
+        "starved_thermal|55486000|49276001|d2778940-e10a-40d3-8e52-4293bc927ab8|68808dec-4933-4f8b-9c9c-8c7f90557d88|B.Cu",
+        "starved_thermal|65385000|62275000|d2778940-e10a-40d3-8e52-4293bc927ab8|6b03df28-2849-469e-8bc8-a2f5a7cf7e17|B.Cu",
+        "starved_thermal|69715000|66890001|d2778940-e10a-40d3-8e52-4293bc927ab8|a9e1604e-7ed6-44cb-9620-55e489adf16a|B.Cu",
+        "starved_thermal|71940000|54690001|d2778940-e10a-40d3-8e52-4293bc927ab8|78fd5905-55c1-4e49-b148-afa80371598d|B.Cu",
+        "starved_thermal|78340000|87432501|d2778940-e10a-40d3-8e52-4293bc927ab8|fad0bcd3-a81a-4818-be81-c692d0241395|B.Cu",
+        "starved_thermal|83165000|59735000|d2778940-e10a-40d3-8e52-4293bc927ab8|18dfb99d-0f2a-4a25-a7d4-715d11e494a5|B.Cu",
+        "starved_thermal|83165000|59735000|d2778940-e10a-40d3-8e52-4293bc927ab8|18dfb99d-0f2a-4a25-a7d4-715d11e494a5|F.Cu"
+      ],
       "meta": {
         "version": 2
       },
@@ -484,9 +517,9 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "DecentNumPad.step",
       "svg": "",
-      "vrml": ""
+      "vrml": "DecentNumPad.wrl"
     },
     "page_layout_descr_file": ""
   },
@@ -583,6 +616,12 @@
           "group_by": false,
           "label": "JLCPCB Position Offset",
           "name": "JLCPCB Position Offset",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Layer Override",
+          "name": "JLCPCB Layer Override",
           "show": false
         }
       ],

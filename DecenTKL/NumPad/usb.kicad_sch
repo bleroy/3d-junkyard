@@ -3004,6 +3004,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 196.85 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "57df1d7d-371a-447d-9b1a-f39168eebe1a")
 		)
@@ -3222,6 +3231,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 132.08 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a6c2dd86-e234-4b21-9dff-3adbc7a70716")
 		)
@@ -3300,6 +3318,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" "0,1.3"
+			(at 215.9 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 215.9 95.25 0)
 			(effects
 				(font
@@ -3438,6 +3465,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 151.13 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8c4c2d54-6143-44df-b04b-f8457a0504c7")
 		)
@@ -3518,6 +3554,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 196.85 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 196.85 114.3 0)
 			(effects
 				(font
@@ -3679,7 +3724,7 @@
 		(at 44.45 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -3728,6 +3773,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 44.45 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 44.45 96.52 0)
 			(effects
 				(font
@@ -4030,6 +4084,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 105.41 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ab64b53a-dbb7-4878-b1d5-57513b49ec9e")
 		)
@@ -4108,6 +4171,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 120.65 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 120.65 102.87 0)
 			(effects
 				(font
@@ -4203,7 +4275,7 @@
 		(at 44.45 127 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -4252,6 +4324,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 44.45 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 44.45 127 0)
 			(effects
 				(font
@@ -4359,6 +4440,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 105.41 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 105.41 86.36 0)
 			(effects
 				(font
@@ -4762,6 +4852,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 105.41 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bbd2016d-7945-434d-9951-3c9e084d13f6")
 		)
@@ -4839,6 +4938,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 196.85 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 196.85 102.87 0)
 			(effects
 				(font
@@ -4934,7 +5042,7 @@
 		(at 44.45 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -4983,6 +5091,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 44.45 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 44.45 66.04 0)
 			(effects
 				(font
@@ -5077,6 +5194,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 168.91 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 168.91 111.76 0)
 			(effects
 				(font

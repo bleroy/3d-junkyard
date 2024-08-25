@@ -5657,6 +5657,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 262.89 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "9"
 			(uuid "ad9d9971-060b-40bd-8d2a-d1d84ffdfb0b")
 		)
@@ -5880,6 +5889,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 262.89 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 262.89 97.79 0)
 			(effects
 				(font
@@ -6643,6 +6661,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 171.45 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fafaed96-81b3-45a1-b162-2fc18ab2cb7b")
 		)
@@ -6714,6 +6741,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 238.76 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 238.76 142.24 0)
 			(effects
 				(font

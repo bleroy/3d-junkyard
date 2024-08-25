@@ -844,6 +844,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 158.75 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8ffc4698-a6b3-4e38-8719-cc18c1a2bc6d")
 		)
@@ -1006,6 +1015,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 137.16 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 137.16 88.9 0)
 			(effects
 				(font

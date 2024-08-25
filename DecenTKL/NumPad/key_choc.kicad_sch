@@ -1119,6 +1119,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Layer Override" ""
+			(at 132.08 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4925fa45-a71b-4839-a00d-be863e3c0522")
 		)
@@ -1212,6 +1221,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 179.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 179.07 95.25 0)
 			(effects
 				(font
@@ -1326,7 +1344,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "MX"
 			(at 127 99.568 0)
 			(effects
 				(font
@@ -1361,7 +1379,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C5333465"
+		(property "JLCPCB Part #" "C5156480"
 			(at 127 97.79 0)
 			(effects
 				(font
@@ -1380,6 +1398,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 127 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" "B.Cu"
 			(at 127 97.79 0)
 			(effects
 				(font
@@ -1542,6 +1569,15 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
+			(at 157.48 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Layer Override" ""
 			(at 157.48 95.25 0)
 			(effects
 				(font
