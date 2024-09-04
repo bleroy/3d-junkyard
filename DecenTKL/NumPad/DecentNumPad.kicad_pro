@@ -66,7 +66,6 @@
         "hole_clearance|32668750|22295000|89e668b1-ca22-4e8e-a0b4-15869aab68ee|e007996c-bd51-4247-b222-5c42751bf95e",
         "hole_clearance|38768750|22295000|bdde7717-2cab-4191-9764-9a17836dcff6|4b4c0ffe-055d-4e60-a061-c11a99bb5b32",
         "hole_clearance|38768750|22295000|e9d5b674-ee54-44ac-89f2-968b1673c924|4b4c0ffe-055d-4e60-a061-c11a99bb5b32",
-        "solder_mask_bridge|58465000|21990001|71eb3fc0-b495-47ad-a366-fc91a868f880|1d67e2c0-463c-4464-be8c-fe5bbf0d4cb8",
         "solder_mask_bridge|63148386|159608797|f8de36fa-6374-401f-93bf-f247b8562b87|ff5577c5-3924-4854-9bc2-32e59c64e3cd",
         "solder_mask_bridge|91221228|159663183|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
         "solder_mask_bridge|91363706|159585729|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
@@ -514,8 +513,8 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
-      "pos_files": "",
+      "plot": "production/",
+      "pos_files": "production/",
       "specctra_dsn": "",
       "step": "DecentNumPad.step",
       "svg": "",
@@ -542,6 +541,12 @@
       "fields_ordered": [
         {
           "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "Reference",
           "name": "Reference",
           "show": true
@@ -554,8 +559,8 @@
         },
         {
           "group_by": false,
-          "label": "Datasheet",
-          "name": "Datasheet",
+          "label": "JLCPCB Part #",
+          "name": "JLCPCB Part #",
           "show": true
         },
         {
@@ -566,8 +571,8 @@
         },
         {
           "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
+          "label": "Datasheet",
+          "name": "Datasheet",
           "show": true
         },
         {
@@ -581,12 +586,6 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "JLCPCB Part #",
-          "name": "JLCPCB Part #",
-          "show": true
         },
         {
           "group_by": false,
@@ -616,20 +615,20 @@
           "group_by": false,
           "label": "JLCPCB Position Offset",
           "name": "JLCPCB Position Offset",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "JLCPCB Layer Override",
           "name": "JLCPCB Layer Override",
-          "show": false
+          "show": true
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "${QUANTITY}"
     },
     "connection_grid_size": 50.0,
     "drawing": {

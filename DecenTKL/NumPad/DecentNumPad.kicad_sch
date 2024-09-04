@@ -6605,7 +6605,7 @@
 		(at 171.45 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "e09f1c0f-e8c5-4468-a131-d54ee84b3389")
@@ -6625,7 +6625,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx83-2LFS"
+		(property "Footprint" "DecenTKL:SW_Push_1P1T_XKB_TS-1177A-C"
 			(at 171.45 30.48 0)
 			(effects
 				(font
@@ -6662,6 +6662,15 @@
 			)
 		)
 		(property "JLCPCB Layer Override" ""
+			(at 171.45 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part #" "C883269"
 			(at 171.45 35.56 0)
 			(effects
 				(font
@@ -6908,7 +6917,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "key_2Uv.kicad_sch"
 			(at 115.57 172.0346 0)
 			(effects
 				(font
@@ -7512,7 +7521,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "key_2U.kicad_sch"
 			(at 22.86 192.3546 0)
 			(effects
 				(font
@@ -7960,7 +7969,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../Keyboard/key.kicad_sch"
+		(property "Sheetfile" "key_2Uv.kicad_sch"
 			(at 115.57 131.3946 0)
 			(effects
 				(font

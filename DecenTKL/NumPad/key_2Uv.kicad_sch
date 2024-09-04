@@ -1030,7 +1030,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27dcf7ff-17b9-40c3-9fe3-ed614424cfc6")
-		(property "Reference" "D17"
+		(property "Reference" "D31"
 			(at 134.112 92.7678 90)
 			(effects
 				(font
@@ -1137,60 +1137,12 @@
 		)
 		(instances
 			(project "DecentNumPad"
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cb17e06-ad04-4d50-9565-8a9ba4ebdba3"
-					(reference "D17")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/18c8f163-3d8a-4716-81f3-570f85beeb80"
+					(reference "D31")
 					(unit 1)
 				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cc9818f-a1dd-49a1-a797-eead680f9c13"
-					(reference "D9")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/47263e08-18bb-4baa-bfdc-fd2b73c55f2c"
-					(reference "D19")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/50e112f8-7db7-4509-8296-ed8f130c3b51"
-					(reference "D23")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/5e50d4f3-eef1-4e8a-b10b-a2ad6b689406"
-					(reference "D11")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8ad9e23f-c013-482d-8b93-6b9c6e6b27e1"
-					(reference "D21")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8dd4f9a9-bc7c-4230-be17-825ff531f36d"
-					(reference "D5")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/928c8ada-72cc-4e10-8ca5-ddd099677834"
-					(reference "D27")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/cadcb80c-ec17-4247-82a6-215f9a6caa08"
-					(reference "D37")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d3d1d945-161b-405a-bf56-811636d5130f"
-					(reference "D7")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d6cd3d3d-b01a-48c9-bc9d-cdd0d81339fe"
-					(reference "D33")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d8d7c9d6-0d55-4f8c-8727-e74c7394d356"
-					(reference "D29")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/e9257e38-6586-415d-baf8-64aa60d6b392"
-					(reference "D15")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/ee3ad1b0-d2dd-4554-bb3d-1ecbb9d48397"
-					(reference "D25")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/bb965b78-0047-4004-9f39-4a3bd3410e34"
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -1336,7 +1288,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e080fc0-1d58-4def-8d03-7cc9c89c78f2")
-		(property "Reference" "#PWR083"
+		(property "Reference" "#PWR090"
 			(at 179.07 91.44 0)
 			(effects
 				(font
@@ -1385,60 +1337,12 @@
 		)
 		(instances
 			(project "DecentNumPad"
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cb17e06-ad04-4d50-9565-8a9ba4ebdba3"
-					(reference "#PWR083")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/18c8f163-3d8a-4716-81f3-570f85beeb80"
+					(reference "#PWR090")
 					(unit 1)
 				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cc9818f-a1dd-49a1-a797-eead680f9c13"
-					(reference "#PWR079")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/47263e08-18bb-4baa-bfdc-fd2b73c55f2c"
-					(reference "#PWR084")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/50e112f8-7db7-4509-8296-ed8f130c3b51"
-					(reference "#PWR086")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/5e50d4f3-eef1-4e8a-b10b-a2ad6b689406"
-					(reference "#PWR080")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8ad9e23f-c013-482d-8b93-6b9c6e6b27e1"
-					(reference "#PWR085")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8dd4f9a9-bc7c-4230-be17-825ff531f36d"
-					(reference "#PWR077")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/928c8ada-72cc-4e10-8ca5-ddd099677834"
-					(reference "#PWR088")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/cadcb80c-ec17-4247-82a6-215f9a6caa08"
-					(reference "#PWR093")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d3d1d945-161b-405a-bf56-811636d5130f"
-					(reference "#PWR078")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d6cd3d3d-b01a-48c9-bc9d-cdd0d81339fe"
-					(reference "#PWR091")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d8d7c9d6-0d55-4f8c-8727-e74c7394d356"
-					(reference "#PWR089")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/e9257e38-6586-415d-baf8-64aa60d6b392"
-					(reference "#PWR082")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/ee3ad1b0-d2dd-4554-bb3d-1ecbb9d48397"
-					(reference "#PWR087")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/bb965b78-0047-4004-9f39-4a3bd3410e34"
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -1454,7 +1358,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c2e010d-36c6-4f9d-94e3-53a4b270f764")
-		(property "Reference" "C9"
+		(property "Reference" "C16"
 			(at 181.991 94.0378 0)
 			(effects
 				(font
@@ -1543,60 +1447,12 @@
 		)
 		(instances
 			(project "DecentNumPad"
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cb17e06-ad04-4d50-9565-8a9ba4ebdba3"
-					(reference "C9")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/18c8f163-3d8a-4716-81f3-570f85beeb80"
+					(reference "C16")
 					(unit 1)
 				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cc9818f-a1dd-49a1-a797-eead680f9c13"
-					(reference "C5")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/47263e08-18bb-4baa-bfdc-fd2b73c55f2c"
-					(reference "C10")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/50e112f8-7db7-4509-8296-ed8f130c3b51"
-					(reference "C12")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/5e50d4f3-eef1-4e8a-b10b-a2ad6b689406"
-					(reference "C6")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8ad9e23f-c013-482d-8b93-6b9c6e6b27e1"
-					(reference "C11")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8dd4f9a9-bc7c-4230-be17-825ff531f36d"
-					(reference "C3")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/928c8ada-72cc-4e10-8ca5-ddd099677834"
-					(reference "C14")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/cadcb80c-ec17-4247-82a6-215f9a6caa08"
-					(reference "C19")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d3d1d945-161b-405a-bf56-811636d5130f"
-					(reference "C4")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d6cd3d3d-b01a-48c9-bc9d-cdd0d81339fe"
-					(reference "C17")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d8d7c9d6-0d55-4f8c-8727-e74c7394d356"
-					(reference "C15")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/e9257e38-6586-415d-baf8-64aa60d6b392"
-					(reference "C8")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/ee3ad1b0-d2dd-4554-bb3d-1ecbb9d48397"
-					(reference "C13")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/bb965b78-0047-4004-9f39-4a3bd3410e34"
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -1612,7 +1468,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa0d5935-44fa-4492-b598-9fc312c35438")
-		(property "Reference" "SW10"
+		(property "Reference" "SW17"
 			(at 127 90.7245 0)
 			(effects
 				(font
@@ -1620,7 +1476,7 @@
 				)
 			)
 		)
-		(property "Value" "MX"
+		(property "Value" "2UvMX"
 			(at 127 93.1488 0)
 			(effects
 				(font
@@ -1628,7 +1484,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DecenTKL:Kailh_socket_MX_1-00U"
+		(property "Footprint" "DecenTKL:Kailh_socket_MX_2-00U_V"
 			(at 127 92.71 0)
 			(effects
 				(font
@@ -1664,7 +1520,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Rotation Offset" ""
+		(property "JLCPCB Rotation Offset" "180"
 			(at 127 97.79 0)
 			(effects
 				(font
@@ -1673,7 +1529,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Position Offset" ""
+		(property "JLCPCB Position Offset" "0.635,3.81"
 			(at 127 97.79 0)
 			(effects
 				(font
@@ -1699,60 +1555,12 @@
 		)
 		(instances
 			(project "DecentNumPad"
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cb17e06-ad04-4d50-9565-8a9ba4ebdba3"
-					(reference "SW10")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/18c8f163-3d8a-4716-81f3-570f85beeb80"
+					(reference "SW17")
 					(unit 1)
 				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/3cc9818f-a1dd-49a1-a797-eead680f9c13"
-					(reference "SW6")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/47263e08-18bb-4baa-bfdc-fd2b73c55f2c"
-					(reference "SW11")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/50e112f8-7db7-4509-8296-ed8f130c3b51"
-					(reference "SW13")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/5e50d4f3-eef1-4e8a-b10b-a2ad6b689406"
-					(reference "SW7")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8ad9e23f-c013-482d-8b93-6b9c6e6b27e1"
-					(reference "SW12")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/8dd4f9a9-bc7c-4230-be17-825ff531f36d"
-					(reference "SW4")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/928c8ada-72cc-4e10-8ca5-ddd099677834"
-					(reference "SW15")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/cadcb80c-ec17-4247-82a6-215f9a6caa08"
-					(reference "SW20")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d3d1d945-161b-405a-bf56-811636d5130f"
-					(reference "SW5")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d6cd3d3d-b01a-48c9-bc9d-cdd0d81339fe"
-					(reference "SW18")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/d8d7c9d6-0d55-4f8c-8727-e74c7394d356"
-					(reference "SW16")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/e9257e38-6586-415d-baf8-64aa60d6b392"
-					(reference "SW9")
-					(unit 1)
-				)
-				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/ee3ad1b0-d2dd-4554-bb3d-1ecbb9d48397"
-					(reference "SW14")
+				(path "/2c073ed7-8422-482e-9fe5-a73c0717c131/bb965b78-0047-4004-9f39-4a3bd3410e34"
+					(reference "SW8")
 					(unit 1)
 				)
 			)

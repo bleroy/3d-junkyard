@@ -1,0 +1,209 @@
+(footprint "SW_Push_1P1T_XKB_TS-1177A-C"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "SMD Tactile Switch, http://www.helloxkb.com/public/images/pdf/TS-1187A-X-X-X.pdf")
+	(tags "SPST Tactile Switch")
+	(property "Reference" "SW1"
+		(at 0 -6.477 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ae1c1a53-da1d-4b26-986f-5e917d1381c4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BOOTSEL"
+		(at 0 3.75 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e8502eb2-16f9-4301-8515-c7ce0ea8bde4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
+		(at 0 7.0104 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8ad64664-1395-4cc6-97be-d1d3bb3b3efd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a791d172-66db-4728-9fc6-a1ab96873070")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Push button switch, generic, two pins"
+		(at 0 5.2832 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "075d5e7b-436f-4eea-b74a-6f9d5fd3a0ff")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "JLCPCB Position Offset" ""
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2f3a57e2-94cc-4ac0-8cba-de07fb438ce6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "JLCPCB Layer Override" ""
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6208f56e-fc8d-44d6-bffd-eb81fec31987")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "JLCPCB Part #" "C883269"
+		(at 0 -5.207 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f384fc07-002f-4437-b79a-612add73de2d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.4 -1.6)
+		(end 2.4 -1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "16d5cea7-8139-430a-9224-ce0dddefceff")
+	)
+	(fp_line
+		(start -2.4 1.6)
+		(end -2.4 -1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c8688a00-eeb2-4485-a2f4-2df5e0a3cfc9")
+	)
+	(fp_line
+		(start -2.4 1.6)
+		(end 2.4 1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b7fd3922-bb69-431b-9323-c89efeceef52")
+	)
+	(fp_line
+		(start 2.4 -1.6)
+		(end 2.4 1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "412ba5b0-2cdc-47b8-90d1-d55464b11648")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "e282f5a7-247a-4d81-a00c-d52210635f8c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -3.75 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "458620af-c288-4143-960c-71c8975d3b2b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.7 -1)
+		(size 1 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "8748b400-7894-4d63-ba92-d3231d1f6939")
+	)
+	(pad "1" smd rect
+		(at 1.7 -1)
+		(size 1 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b38fd445-5b46-4790-af81-4a48a7067a4c")
+	)
+	(pad "2" smd rect
+		(at -1.7 1)
+		(size 1 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "17f43996-76a5-4297-9437-bbfb4d86071c")
+	)
+	(pad "2" smd rect
+		(at 1.7 1)
+		(size 1 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "8d9304a0-ffa8-4e28-968e-8adcbf1faa7d")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

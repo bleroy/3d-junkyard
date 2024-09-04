@@ -1344,7 +1344,7 @@
 				)
 			)
 		)
-		(property "Value" "MX"
+		(property "Value" "Choc"
 			(at 127 99.568 0)
 			(effects
 				(font
@@ -1352,7 +1352,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DecenTKL:Kailh_socket_MX_1-00U"
+		(property "Footprint" "DecenTKL:Kailh_socket_Choc_1-50U-XE"
 			(at 127 92.71 0)
 			(effects
 				(font
@@ -1379,7 +1379,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C5156480"
+		(property "JLCPCB Part #" "C5333465"
 			(at 127 97.79 0)
 			(effects
 				(font
