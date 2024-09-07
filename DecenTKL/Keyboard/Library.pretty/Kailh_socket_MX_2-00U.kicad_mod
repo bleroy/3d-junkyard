@@ -39,6 +39,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -51,6 +52,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -63,6 +65,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -250,6 +253,17 @@
 		(uuid "6e3a4692-694f-47ec-9bd3-6236cef96e3c")
 	)
 	(fp_rect
+		(start -15.91 -12.44)
+		(end -9.16 6.56)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "1e2752ea-8952-4ce0-9633-58ef6dfa1b2c")
+	)
+	(fp_rect
 		(start -2.635 -9.81)
 		(end 1.365 -7.31)
 		(stroke
@@ -259,6 +273,17 @@
 		(fill none)
 		(layer "Dwgs.User")
 		(uuid "7137c17e-db15-4963-8ab9-a097f4ce0db8")
+	)
+	(fp_rect
+		(start 7.89 -12.44)
+		(end 14.64 6.56)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "b318998e-67e0-43a3-b3a1-2282e85542e1")
 	)
 	(fp_circle
 		(center 0 0)
