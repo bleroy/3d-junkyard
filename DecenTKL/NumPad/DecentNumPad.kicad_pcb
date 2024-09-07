@@ -20735,6 +20735,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "180"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9f6721b2-0547-4c0e-a0dc-e8c41023541c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED*SK6812MINI*PLCC*3.5x3.5mm*P1.75mm*")
 		(path "/7628d00f-9e3d-4cab-b942-743bdaf9e232/e46f3ca7-9ddf-4fe1-97b0-c4d41abaee67")
 		(sheetname "Zero")
