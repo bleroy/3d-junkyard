@@ -88,6 +88,139 @@ right side of the case in front of the joystick ports.
 In other machines such as the 600XL or XEGS, the back of the case can let the USB port through.
 If necessary, there could be optimized versions for each model or form factor.
 
+### Pokey keyboard scanning
+
+The way the Pokey chip scans keyboards is with 6 clock signals and two return lines.
+
+The 6 clock lines, K0 to K5, have frequencies divided by two with each one, starting with K0 at 7.85kHz,
+continuing to K1 at 3.925kHz and so on down to K5 at 245Hz.
+The set of clock signals creates a binary counter that goes through all values from 0 to 63 in about 4ms,
+or 245 times per second.
+
+The 6 bits of this counter are split into two sets of 3 bits that are sent to [4051 decoder chips (U24 and U25)](https://www.digikey.com/htmldatasheets/production/63891/0/0/1/cd4051-53bc.pdf)
+that activate one of their 8 I/O lines.
+One chip (U25) is used for rows on the keyboard matrix and the other (U24) for columns.
+The chip used for rows is setup in sending mode by pulling its in/out signal (pin 3) down to ground.
+The chip used for columns is setup in receiving mode by leaving in/out pulled up to 5V but connected to
+Pokey's KR1 line (pin 25).
+
+Note that the "active" state of a line is low.
+When the key at the intersection of the row and column being scanned is not pressed, KR1 remains high.
+When the key is pressed, the selected line on the row and column 4051s are connected, which brings
+KR1 to become low.
+
+The values of the K0-K5 lines at any moment when KR1 is low is what becomes the new keyboard scan code
+through a simple bit inversion and using K5 as the most significant bit.
+
+For example, if K0-K5 have the following state: `011111`, transform that into `000001`, which is `0x01`,
+the scan code for `J`.
+
+Another example, the space key, has scan code 33, or `0x21`, which transforms into K0-K5 `011110`
+
+Here's what it looks like in logic analyzer with lines K0 to K5, then KR2 and KR1:
+
+![Space](./Reference/PokeyCycle_Space.png)
+
+Here's another example, the escape key, which has scan code 28, `0x1C`, which translates to `110001`:
+
+![Esc](./Reference/PokeyCycle_Esc.png)
+
+Here's a table of all scan codes and their translation:
+
+|Key   |Scan code| K0-K5|
+|------|---------|------|
+|Esc   |       28|110001|
+|1     |       31|000001|
+|2     |       30|100001|
+|3     |       26|101001|
+|4     |       24|111001|
+|5     |       29|010001|
+|6     |       27|001001|
+|7     |       51|001100|
+|8     |       53|010100|
+|9     |       48|111100|
+|0     |       50|101100|
+|&lt;  |       54|100100|
+|&gt;  |       55|000100|
+|Del   |       52|110100|
+|Tab   |       44|110010|
+|Q     |       47|000010|
+|W     |       46|100010|
+|E     |       42|101010|
+|R     |       40|111010|
+|T     |       45|010010|
+|Y     |       43|001010|
+|U     |       11|001011|
+|I     |       13|010011|
+|O     |        8|111011|
+|P     |       10|101011|
+|-     |       14|100011|
+|=     |       15|000011|
+|Return|       12|110011|
+|A     |       63|000000|
+|S     |       62|100000|
+|D     |       58|101000|
+|F     |       56|111000|
+|G     |       61|010000|
+|H     |       57|011000|
+|J     |        1|011111|
+|K     |        5|010111|
+|L     |        0|111111|
+|;     |        2|101111|
+|+     |        6|100111|
+|*     |        7|000111|
+|Caps  |       60|110000|
+|Z     |       23|000101|
+|X     |       22|100101|
+|C     |       18|101101|
+|V     |       16|111101|
+|B     |       21|010101|
+|N     |       35|001110|
+|M     |       37|010110|
+|,     |       32|111110|
+|.     |       34|101110|
+|/     |       38|100110|
+|Atari |       39|000110|
+|Space |       33|011110|
+|F1    |        3|001111|
+|F2    |        4|110111|
+|F3    |       19|001101|
+|F4    |       20|110101|
+|Help  |       17|011101|
+
+This is enough to encode all keys except for the start, select, option and reset console keys
+(which have their own line on the keyboard connector and are not handled by Pokey) and shift, control
+and break.
+Shift, control and break are on a special "ninth column" on the keyboard matrix, that is read from
+Pokey's KR2 (pin 16) line and do not go through U24.
+Because the signal for KR2 never goes through U24, which handles K0, K1 and K3, the low pulse
+for those three keys 
+
+Break corresponds to K3, K4 and K5 100, control is 111 and shift is 101.
+
+On the following timeline, one can see what's going on when the break key is pressed:
+
+![Break](./Reference/PokeyCycle_Break.png)
+
+Here's shift:
+
+![Shift](./Reference/PokeyCycle_Shift.png)
+
+Here's control:
+
+![Control](./Reference/PokeyCycle_Control.png)
+
+And here's shift + control:
+
+![Shift + Control](./Reference/PokeyCycle_Shift_Control.png)
+
+Because the three modifier keys go through a separate reading line, any combination of
+shift, control and any other key correspond to different scan codes.
+A shifted key has the same scan code as the unshifted key, plus 64.
+A controlled key has the same scan code as the uncontrolled key, plus 128.
+Of course, shift and control pressed simultaneously add 128 + 64 = 192 to the regular
+scan code.
+
 ## Future developments
 
 ### Hardware
