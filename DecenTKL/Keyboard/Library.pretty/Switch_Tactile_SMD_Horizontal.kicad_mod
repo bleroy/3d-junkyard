@@ -1,0 +1,252 @@
+(footprint "Switch_Tactile_SMD_Horizontal"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "SMD horizontal tactile switch")
+	(tags "tactile;horizontal;switch;smd")
+	(property "Reference" "REF**"
+		(at 0 -8 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "a30eca21-3c08-47ed-8fa8-4d3cd9e0c2b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Switch_Tactile_SMD_Horizontal"
+		(at 0 9 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9ac06991-6939-4b1d-8222-8797caf04b23")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2673582c-3911-468f-b39e-a18c1370ed52")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2108072230_BZCN-TSB001A3526B_C2846768.pdf"
+		(at 0 12 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b85dd41c-00cd-4b15-8670-397eae323c8f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "SMD horizontal tactile switch"
+		(at 0 7.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f89f8d36-ea2e-414d-8f3b-8c75a289c67d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer part #" "BZCN TSB001A3526B"
+		(at 0 6.5 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d0ec2351-12b5-44d4-9e35-f69fb228cc4d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.55 1.45)
+		(end -3.55 0.55)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "eca6522a-9428-4e6b-be32-4e301d78bedb")
+	)
+	(fp_line
+		(start -2.8 1.45)
+		(end -3.55 1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "bf5a1843-bee7-44da-a0ba-5b5679d0e725")
+	)
+	(fp_line
+		(start -2.6 -1)
+		(end 2.6 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "d7d8afb7-6eaa-44c3-a8e0-9e33e2db4e1f")
+	)
+	(fp_line
+		(start -1.5 -2.05)
+		(end 1.5 -2.05)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "37c6189b-f695-480f-87f7-799741a07fbc")
+	)
+	(fp_line
+		(start -1.5 -1)
+		(end -1.5 -2.05)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "37018f1c-bcc6-4ddd-bde7-099cc89bddee")
+	)
+	(fp_line
+		(start -1.4 1.45)
+		(end 1.4 1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "a4bae62d-030a-456b-88c9-92c535cfc2bb")
+	)
+	(fp_line
+		(start 1.5 -2.05)
+		(end 1.5 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "22ee94ac-21ab-4c70-87ae-3f70e1c6db2c")
+	)
+	(fp_line
+		(start 2.8 1.45)
+		(end 3.5 1.45)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "512b82a1-b117-4e99-8907-5b678d5777c4")
+	)
+	(fp_line
+		(start 3.5 1.45)
+		(end 3.5 0.55)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "b595845c-5298-446d-9a43-3c13ab7ee001")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 10.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c091db76-1285-47fd-8847-9227bdd49b7d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" smd custom
+		(at -3.7 -0.85)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(options
+			(clearance outline)
+			(anchor rect)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.4 -0.4) (xy 1 -0.4) (xy 1 0.4) (xy 0.4 0.4) (xy 0.4 1.3) (xy -0.4 1.3)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "e69fd239-c366-491b-b213-5e0ce3fe1992")
+	)
+	(pad "" np_thru_hole circle
+		(at -1.15 0)
+		(size 0.8 0.8)
+		(drill 0.8)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "bda4e9b2-ef98-4457-ab9f-8df506770a0e")
+	)
+	(pad "" np_thru_hole circle
+		(at 1.15 0)
+		(size 0.8 0.8)
+		(drill 0.8)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "388caea9-efee-4c5d-b627-17ea4fd60bb0")
+	)
+	(pad "" smd custom
+		(at 3.7 -0.85)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(options
+			(clearance outline)
+			(anchor rect)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy 0.4 -0.4) (xy -1 -0.4) (xy -1 0.4) (xy -0.4 0.4) (xy -0.4 1.3) (xy 0.4 1.3)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "2a01f6b0-94d8-4d07-8d9b-d9f4024d700b")
+	)
+	(pad "1" smd rect
+		(at -2.1 1.45)
+		(size 1.2 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "2bed4e91-3656-49ec-be95-77fb3f09e85a")
+	)
+	(pad "2" smd rect
+		(at 2.1 1.45)
+		(size 1.2 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "55de90ee-0339-44aa-90db-e29453f8c818")
+	)
+)

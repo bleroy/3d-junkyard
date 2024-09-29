@@ -1,0 +1,198 @@
+(footprint "Tactile_Switch_Basic_XKB_TS-1187A"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Basic tactile switch")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "f9531639-e663-453f-8798-dcb7fde54505")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Tactile_Switch_Basic_XKB_TS-1187A"
+		(at 0 3.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b985ee34-7193-4a45-bf18-b88a5faadff9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a2bed556-be9f-4986-b91f-fc53c75644b3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf"
+		(at 0 7.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2a58b5ea-0d4a-4f98-878d-aabf729cf97f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Basic tactile switch"
+		(at 0 3.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1cbdae7f-72dd-4642-a88c-aad101e1be9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.55 -1.3)
+		(end -2.55 1.3)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "81c1e6b6-875a-4eef-9986-df6ae42e924b")
+	)
+	(fp_line
+		(start -2.4 -1.55)
+		(end -1.4 -2.55)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7735e246-52e5-42e6-8a42-5c4369f04f25")
+	)
+	(fp_line
+		(start -2.4 1.45)
+		(end -1.4 2.45)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "637a8f78-7d60-4308-a41b-25fffe9936c8")
+	)
+	(fp_line
+		(start -1.4 -2.55)
+		(end 1.4 -2.55)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "78daa517-d815-4d1c-9aaf-6207abd53ce7")
+	)
+	(fp_line
+		(start -1.4 2.45)
+		(end 1.4 2.45)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b8e020b4-1b0b-43b8-b7b6-87c7dfa9ff90")
+	)
+	(fp_line
+		(start 1.4 -2.55)
+		(end 2.4 -1.55)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "e654276d-a3bd-4324-8f4a-fe91eaeb8422")
+	)
+	(fp_line
+		(start 1.4 2.45)
+		(end 2.4 1.45)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "96be27f7-4d09-469e-8753-c3030b90f0f7")
+	)
+	(fp_line
+		(start 2.55 -1.3)
+		(end 2.55 1.3)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ba053323-518d-4f59-afc8-905adb421f06")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2 0)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "93a0c452-c487-4435-836f-0f8f831b1091")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 5.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "126ffb5f-9fd8-4624-abb8-3df0789ab88d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3 -1.875)
+		(size 1 0.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "1442ab19-e41a-4167-821f-66ae6456c993")
+	)
+	(pad "1" smd rect
+		(at 3 -1.875)
+		(size 1 0.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "34905651-2cfe-44ba-b8e7-e340f0d54119")
+	)
+	(pad "2" smd rect
+		(at -3 1.875)
+		(size 1 0.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "8a53ba34-601a-40e5-8038-2b2bec22bf3c")
+	)
+	(pad "2" smd rect
+		(at 3 1.875)
+		(size 1 0.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "8dadb26a-0d1b-40c4-957b-4c47fdde1be3")
+	)
+)
