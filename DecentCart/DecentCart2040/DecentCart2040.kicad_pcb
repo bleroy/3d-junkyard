@@ -6698,7 +6698,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194976 0.794975)
+			(mid -1.194977 0.794976)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -8952,7 +8952,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C26"
-			(at 0 -1.16 360)
+			(at 0 -1.16 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b04610bb-e474-4795-bd7d-ccf952de7726")
@@ -8964,7 +8964,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 2.533 -0.047 360)
+			(at 2.533 -0.047 0)
 			(layer "F.SilkS")
 			(uuid "d2816a41-6b2d-4841-89ed-9f23d87e0850")
 			(effects
@@ -9158,7 +9158,7 @@
 			(uuid "76dcb8bc-c050-4858-8fe3-2d5ad276032f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "398fa42a-9c34-4f7d-9213-034a9dd7e81d")
@@ -15088,7 +15088,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C40"
-			(at 0 -1.16 360)
+			(at 0 -1.16 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "045ba785-ab74-4b37-8839-c822ce57bd6c")
@@ -15100,7 +15100,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at -1.974 -0.06 360)
+			(at -1.974 -0.06 0)
 			(layer "F.SilkS")
 			(uuid "83ca15cc-19ba-40e3-a7e2-16d6fcfe030a")
 			(effects
@@ -15294,7 +15294,7 @@
 			(uuid "62efcd28-48b6-46e5-b99b-a67a854f6a7f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "6d9e0dba-9b45-4a41-9114-6f573ce90d7b")
@@ -28222,7 +28222,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C39"
-			(at 0 -1.16 360)
+			(at 0 -1.16 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e2f96ab-7377-4098-ba2a-c70b044b0aa9")
@@ -28234,7 +28234,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at -2.774 -0.044 360)
+			(at -2.774 -0.044 0)
 			(layer "F.SilkS")
 			(uuid "f8007e71-0f4b-4438-a2e6-845119de9402")
 			(effects
@@ -28428,7 +28428,7 @@
 			(uuid "ff5c7c5e-39af-4d20-92ec-4aa801e66632")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "a8906fe9-bedc-4f88-9329-bc53df6801f0")
@@ -40051,7 +40051,7 @@
 		(descr "0.91 inch OLED module 128x32 SSD1306")
 		(tags "SSD1306;OLED;0.91\";I2C;128x32")
 		(property "Reference" "J7"
-			(at 0 2.33 360)
+			(at 0 2.33 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "dee2a884-6110-479c-81c3-e2a2c28be6cd")
@@ -40064,7 +40064,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 0 -9.95 360)
+			(at 0 -9.95 0)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "13e7dd21-f809-49b8-9048-0d67cef2a19e")
