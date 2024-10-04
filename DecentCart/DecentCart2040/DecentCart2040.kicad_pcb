@@ -6698,7 +6698,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794976)
+			(mid -1.194979 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -40435,7 +40435,7 @@
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.wrl"
 			(offset
-				(xyz 0 0 6.5)
+				(xyz 0 0 3)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -40446,7 +40446,7 @@
 		)
 		(model "C:/Projects/3d-junkyard/DecentCart/3DModels/0.91in OLED Module - Without Glass.stp"
 			(offset
-				(xyz 17.5 -3.8 6.5)
+				(xyz 17.5 -3.8 3)
 			)
 			(scale
 				(xyz 1 1 1)
