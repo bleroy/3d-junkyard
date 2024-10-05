@@ -7,7 +7,8 @@
 This CircuitPython driver connects an Atari 130XE keyboard as an
 Altirra-compatible PC keyboard
 
-* Author: Bertrand Le Roy
+* Author: Bertrand Le Roy~
+* Rev 1.1
 """
 
 #Settings
@@ -33,10 +34,10 @@ key_matrix = [
     [Keycode.SIX,             None,          Keycode.FIVE,          Keycode.FOUR,          Keycode.THREE,           Keycode.TWO,                 Keycode.ONE,              Keycode.ESCAPE,                 None],
     [Keycode.U,               None,          Keycode.I,             Keycode.O,             Keycode.P,               Keycode.MINUS,               Keycode.EQUALS,           Keycode.RETURN,                 None],
     [Keycode.Y,               None,          Keycode.T,             Keycode.R,             Keycode.E,               Keycode.W,                   Keycode.Q,                Keycode.TAB,                    None],
-    [Keycode.F9,              Keycode.J,     Keycode.K,             Keycode.L,             Keycode.SEMICOLON,       SHIFTED | Keycode.EQUALS,    SHIFTED | Keycode.EIGHT,  Keycode.F10,                    Keycode.CONTROL],
+    [Keycode.F9,              Keycode.J,     Keycode.K,             Keycode.L,             Keycode.SEMICOLON,       SHIFTED | Keycode.EQUALS,    SHIFTED | Keycode.EIGHT,  None,                           Keycode.CONTROL],
     [None,                    Keycode.H,     Keycode.G,             Keycode.F,             Keycode.D,               Keycode.S,                   Keycode.A,                Keycode.CAPS_LOCK,              None],
-    [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.APPLICATION,      None,                           None],
-    [Keycode.F11,             Keycode.F6,    Keycode.B,             Keycode.V,             Keycode.C,               Keycode.X,                   Keycode.Z,                Keycode.F12,                    Keycode.SHIFT]]
+    [Keycode.N,               Keycode.SPACE, Keycode.M,             Keycode.COMMA,         Keycode.PERIOD,          Keycode.FORWARD_SLASH,       Keycode.F10,              None,                           None],
+    [Keycode.F11,             Keycode.F6,    Keycode.B,             Keycode.V,             Keycode.C,               Keycode.X,                   Keycode.Z,                None,                           Keycode.SHIFT]]
 
 # Shifted Atari keys have a different layout than PC shifted keys; this maps between the two so the character typed on the Atari keyboard results in the right character on the PC
 shifted_overrides = dict([
@@ -61,7 +62,27 @@ controlled_overrides = dict([
     (Keycode.MINUS, Keycode.UP_ARROW),
     (Keycode.EQUALS, Keycode.DOWN_ARROW),
     (SHIFTED | Keycode.EQUALS, Keycode.LEFT_ARROW),
-    (SHIFTED | Keycode.EIGHT, Keycode.RIGHT_ARROW)])
+    (SHIFTED | Keycode.EIGHT, Keycode.RIGHT_ARROW)
+    ])
+
+# CTRL+SHIFT overrides
+shift_controlled_overrides = dict([
+    # Help key on The400 Mini can be emulated with CTRL+SHIFT+Escape
+    (Keycode.ESCAPE, Keycode.F9),
+    # F1-F12 can be emulated with CTRL+SHIFT+1-0<>
+    (Keycode.ONE, Keycode.F1),
+    (Keycode.TWO, Keycode.F2),
+    (Keycode.THREE, Keycode.F3),
+    (Keycode.FOUR, Keycode.F4),
+    (Keycode.FIVE, Keycode.F5),
+    (Keycode.SIX, Keycode.F6),
+    (Keycode.SEVEN, Keycode.F7),
+    (Keycode.EIGHT, Keycode.F8),
+    (Keycode.NINE, Keycode.F9),
+    (Keycode.ZERO, Keycode.F10),
+    (SHIFTED | Keycode.COMMA, Keycode.F11),
+    (SHIFTED | Keycode.PERIOD, Keycode.F12)
+    ])
 
 GPIO_BASE = 0xd0000004
 
@@ -149,12 +170,16 @@ def scan_keeb():
     if not option_pin.value:
         currently_pressed.add(Keycode.F5)
     if not reset_pin.value:
-        currently_pressed.add(Keycode.F1)
+        currently_pressed.add(Keycode.F11)
     # Post-process the keys for shifted values, overrides, etc.
     normalized_pressed = set()
     for key in currently_pressed:
         if key == Keycode.SHIFT or key == Keycode.CONTROL:
             continue
+        if shift_pressed and control_pressed and key in shift_controlled_overrides:
+            key = shift_controlled_overrides[key]
+            shift_pressed = False
+            control_pressed = False
         if shift_pressed and key in shifted_overrides:
             key = shifted_overrides[key]
             shift_pressed = False
