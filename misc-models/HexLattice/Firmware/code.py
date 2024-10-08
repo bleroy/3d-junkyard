@@ -200,12 +200,7 @@ class FlashingMessage(Animation):
     def __init__(self, pixels=pixels, num_pixels=num_pixels, setting_count=1):
         super().__init__(pixels, num_pixels, setting_count)
         self.messages = [
-            "The Will Of The People",
-            "MUSE",
-            "Merry Christmas",
-            "Happy Holidays",
-            "Happy New Year",
-            "Happy Halloween"
+            "Accent Everything"
         ]
         self.message = (self.messages[0] + "   ").upper()
         self.setting_count = len(self.messages)
@@ -269,30 +264,33 @@ class ScrollingMessage(FlashingMessage):
         self.new_frame = True
         self.current_index = 0
         self.current_offset = -6
+        self.count = 0;
     def prepare_frame(self):
         current_c = self.message[self.current_index]
         next_c = self.message[self.current_index + 1] if self.current_index + 1 < len(self.message) else " "
         next_offset = self.current_offset - 6
-
+        color = colorwheel(self.count * 7 % 255)
+        self.count = self.count + 1
+        
         for i in range(self.num_pixels):
             current_translated_index = translate_horizontally(i, self.current_offset)
             self.frame.set_pixel(i, BLACK)
             if current_translated_index != -1:
                 pixel = super().pixel_for_char(current_translated_index, current_c)
                 if pixel != BLACK:
-                    self.frame.set_pixel(i, pixel)
+                    self.frame.set_pixel(i, color)
             next_translated_index = translate_horizontally(i, next_offset)
             if next_translated_index != -1:
                 pixel = super().pixel_for_char(next_translated_index, next_c)
                 if pixel != BLACK:
-                    self.frame.set_pixel(i, pixel)
+                    self.frame.set_pixel(i, color)
         # On step 12, there are temporarily 3 active characters on the display
         # The 3rd char can have only one pixel in screen, pixel 28
         if self.frame_number == 12 and self.current_index + 2 < len(self.message):
             third_char = self.message[self.current_index + 2]
             pixel = super().pixel_for_char(28, third_char)
             if pixel != BLACK:
-                self.frame.set_pixel(34, pixel)
+                self.frame.set_pixel(34, color)
         self.new_frame = False
     def next_frame(self):
         super().next_frame()
