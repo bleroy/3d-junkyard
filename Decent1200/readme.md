@@ -14,7 +14,7 @@ If you're looking to modify an XE computer, head over to [the DecentXE project](
 
 ## Current version
 
-The current revision of the Decent 1200 keyboard is: rev. 4m.
+The current revision of the Decent 1200 keyboard is: rev. 5m.
 
 ## Can I buy one?
 
