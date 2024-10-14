@@ -7933,12 +7933,6 @@
 		(uuid "c89e5f41-8be4-416f-bfcf-cddc529b4edd")
 	)
 	(junction
-		(at 254 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d7599fc6-0c69-4a04-a200-6b45815da49f")
-	)
-	(junction
 		(at 58.42 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9862,16 +9856,6 @@
 	)
 	(wire
 		(pts
-			(xy 254 67.31) (xy 266.7 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dcbde7ed-e7d4-4b15-ba08-d63de48fbd14")
-	)
-	(wire
-		(pts
 			(xy 137.795 171.45) (xy 137.795 173.355)
 		)
 		(stroke
@@ -10029,16 +10013,6 @@
 			(type default)
 		)
 		(uuid "f5f34479-13d6-4996-b827-939ad9e54219")
-	)
-	(wire
-		(pts
-			(xy 254 74.93) (xy 266.7 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f76f69cb-6888-4899-b899-2ea712a72349")
 	)
 	(wire
 		(pts
@@ -10357,17 +10331,6 @@
 		)
 		(uuid "4792a319-a644-493b-a550-14bea9f502d6")
 	)
-	(label "I2C_SCL"
-		(at 50.8 66.04 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "482ec310-6352-4b4d-9e0a-9a137d279187")
-	)
 	(label "A7"
 		(at 237.49 113.03 0)
 		(fields_autoplaced yes)
@@ -10446,7 +10409,7 @@
 		(uuid "5a6dd4f9-057c-4724-8abc-2c0853782d69")
 	)
 	(label "I2C_SCL"
-		(at 196.85 170.18 0)
+		(at 196.85 167.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10621,17 +10584,6 @@
 		)
 		(uuid "a446afb5-d67f-44a5-854e-68b5ac37adf6")
 	)
-	(label "I2C_SDA"
-		(at 50.8 68.58 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a6ed0fb6-a3ec-4fb8-adf9-f15713d26a3a")
-	)
 	(label "RD4"
 		(at 237.49 163.83 0)
 		(fields_autoplaced yes)
@@ -10655,7 +10607,7 @@
 		(uuid "ab8e4e65-22eb-410f-9dcc-9eb48f9ad748")
 	)
 	(label "I2C_SDA"
-		(at 196.85 167.64 0)
+		(at 196.85 170.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12304,6 +12256,28 @@
 			)
 		)
 	)
+	(global_label "GPIO29"
+		(shape bidirectional)
+		(at 50.8 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "76516955-8a01-4f12-93ff-3096b998538f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 61.7908 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "A0"
 		(shape input)
 		(at 45.72 207.01 0)
@@ -12581,6 +12555,28 @@
 		(uuid "9b490c52-8362-49da-9711-8c2b5d4f0e28")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 106.3996 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GPIO28"
+		(shape bidirectional)
+		(at 50.8 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9d59c9c9-36ab-4abc-a55f-3e348be814fb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 61.7908 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16511,7 +16507,7 @@
 			)
 		)
 		(property "Value" "LED_R"
-			(at 69.342 73.66 0)
+			(at 64.008 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22243,7 +22239,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 266.7 71.12 0)
+		(at 187.96 102.87 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22251,7 +22247,7 @@
 		(dnp no)
 		(uuid "af6decfb-db52-4e26-8264-f9629f0a0adf")
 		(property "Reference" "C14"
-			(at 271.526 70.358 0)
+			(at 191.262 101.346 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22259,7 +22255,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 271.526 72.136 0)
+			(at 188.468 85.598 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22267,7 +22263,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 267.6652 74.93 0)
+			(at 191.77 101.9048 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22276,7 +22272,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22285,7 +22281,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22294,7 +22290,7 @@
 			)
 		)
 		(property "JLCPCB Part #" "C52923"
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22303,7 +22299,7 @@
 			)
 		)
 		(property "JLCPCB Position Offset" ""
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22312,7 +22308,7 @@
 			)
 		)
 		(property "JLCPCB Layer Override" ""
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22321,7 +22317,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22330,7 +22326,7 @@
 			)
 		)
 		(property "Basic" "Basic"
-			(at 266.7 71.12 0)
+			(at 187.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25555,7 +25551,7 @@
 			)
 		)
 		(property "Value" "LED_G"
-			(at 69.342 71.12 0)
+			(at 63.8175 67.2408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
