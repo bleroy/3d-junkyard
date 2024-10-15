@@ -493,9 +493,13 @@
       "+3V3": "Power",
       "+5V": "Power",
       "+5V HOST": "Power",
+      "/VBUS": "Power",
+      "/VHOST": "Power",
       "/VREG_AVDD": "Power",
       "/VREG_LX": "Power",
+      "/VSYS": "Power",
       "GND": "Power",
+      "Net-(D3-K)": "Power",
       "VBUS": "Power"
     },
     "netclass_patterns": []

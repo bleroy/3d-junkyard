@@ -21,10 +21,10 @@
       "keepouts": false,
       "lockedItems": false,
       "otherItems": false,
-      "pads": false,
-      "text": false,
-      "tracks": false,
-      "vias": false,
+      "pads": true,
+      "text": true,
+      "tracks": true,
+      "vias": true,
       "zones": false
     },
     "visible_items": [
