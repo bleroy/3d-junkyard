@@ -1,3 +1,4 @@
+from collections import namedtuple
 import neopixel
 from rainbowio import colorwheel
 from board import *
@@ -264,33 +265,30 @@ class ScrollingMessage(FlashingMessage):
         self.new_frame = True
         self.current_index = 0
         self.current_offset = -6
-        self.count = 0;
     def prepare_frame(self):
         current_c = self.message[self.current_index]
         next_c = self.message[self.current_index + 1] if self.current_index + 1 < len(self.message) else " "
         next_offset = self.current_offset - 6
-        color = colorwheel(self.count * 7 % 255)
-        self.count = self.count + 1
-        
+
         for i in range(self.num_pixels):
             current_translated_index = translate_horizontally(i, self.current_offset)
             self.frame.set_pixel(i, BLACK)
             if current_translated_index != -1:
                 pixel = super().pixel_for_char(current_translated_index, current_c)
                 if pixel != BLACK:
-                    self.frame.set_pixel(i, color)
+                    self.frame.set_pixel(i, pixel)
             next_translated_index = translate_horizontally(i, next_offset)
             if next_translated_index != -1:
                 pixel = super().pixel_for_char(next_translated_index, next_c)
                 if pixel != BLACK:
-                    self.frame.set_pixel(i, color)
+                    self.frame.set_pixel(i, pixel)
         # On step 12, there are temporarily 3 active characters on the display
         # The 3rd char can have only one pixel in screen, pixel 28
         if self.frame_number == 12 and self.current_index + 2 < len(self.message):
             third_char = self.message[self.current_index + 2]
             pixel = super().pixel_for_char(28, third_char)
             if pixel != BLACK:
-                self.frame.set_pixel(34, color)
+                self.frame.set_pixel(34, pixel)
         self.new_frame = False
     def next_frame(self):
         super().next_frame()
@@ -307,11 +305,41 @@ class ScrollingMessage(FlashingMessage):
             self.current_offset += 1
         self.new_frame = True
 
+class Droplet:
+    def __init__(self, x = 0, y = 0):
+        self.x = x
+        self.y = y
+        
+class GhostInTheShell(Animation):
+    def __init__(self, pixels=pixels, num_pixels=num_pixels, setting_count=1):
+        super().__init__(pixels, num_pixels, setting_count)
+        self.droplets = []
+    def next_frame(self):
+        super().next_frame()
+        if (len(self.droplets) < 10):
+            self.droplets.append(Droplet(
+                x = random.random() * 8 - 4,
+                y = 5 + random.random() * 20
+            ))
+        for droplet in self.droplets:
+            droplet.y = droplet.y - 0.2
+            if droplet.y < -20:
+                self.droplets.remove(droplet)
+    def pixel_color(self, index, r, angle):
+        rad = math.radians(angle)
+        x = r * math.cos(rad)
+        y = r * math.sin(rad)
+        intensity = 0
+        for droplet in self.droplets:
+            if abs(droplet.x - x) < 0.5 and y > droplet.y:
+                intensity = intensity + 10 - min(y - droplet.y, 10)
+        return (int(min(5 * intensity + 10, 255)) * 255) & 0xFF00
+
 class White(Animation):
     def pixel_color(self, index, r, angle):
         return WHITE
 
-animations = [ScrollingMessage(), Rainbow(), Radiate(), Pulsate(), WakaWaka(), BeatingHeart(), White(), Off()]
+animations = [GhostInTheShell(), ScrollingMessage(), Rainbow(), Radiate(), Pulsate(), WakaWaka(), BeatingHeart(), White(), Off()]
 animation = animations[0]
 animation_index = 0
 
