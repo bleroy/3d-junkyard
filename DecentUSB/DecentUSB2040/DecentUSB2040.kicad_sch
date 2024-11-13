@@ -9929,10 +9929,6 @@
 		(uuid "6f0b4a0d-d237-4c6a-9dfa-c68063b3471d")
 	)
 	(no_connect
-		(at 267.97 67.31)
-		(uuid "7568e34d-c1aa-4b9d-9e58-2827b15a9a4e")
-	)
-	(no_connect
 		(at 196.85 168.91)
 		(uuid "784ad187-93df-4231-870b-dcf6bc83f202")
 	)
@@ -13022,6 +13018,28 @@
 		(uuid "0040b18d-67fc-4ce2-b0d4-0565053bab45")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 138.5123 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "NeoPixelData"
+		(shape output)
+		(at 267.97 67.31 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "033b4d48-5791-47be-8ff0-3911c71130f0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 283.4737 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19263,7 +19281,7 @@
 		(at 146.05 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -19633,7 +19651,7 @@
 		(at 99.06 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -20531,7 +20549,7 @@
 		(at 49.53 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -20978,7 +20996,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "DecenTKL:WS2812C"
 			(at 233.68 129.54 0)
 			(effects
 				(font
@@ -21007,7 +21025,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C5349953"
+		(property "JLCPCB Part #" "C4154872"
 			(at 232.41 121.92 0)
 			(effects
 				(font
@@ -21473,7 +21491,7 @@
 		(at 308.61 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -26877,7 +26895,7 @@
 		(at 307.34 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -27689,7 +27707,7 @@
 		(at 287.02 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "9c484c0e-bda0-495c-a996-d6ca7cfa2120")
@@ -27768,7 +27786,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp yes)
 		(uuid "9c8d87ae-a869-45c6-bfa2-2fd72b8d9169")
@@ -28383,6 +28401,24 @@
 			)
 		)
 		(property "JLCPCB Part #" "C701341"
+			(at 252.73 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" "270"
+			(at 252.73 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Position Offset" "0,-0.8"
 			(at 252.73 64.77 0)
 			(effects
 				(font
@@ -33052,7 +33088,7 @@
 		(at 189.23 179.07 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f8ebc01b-8a79-4a01-9046-b47f2cfa7b9b")
