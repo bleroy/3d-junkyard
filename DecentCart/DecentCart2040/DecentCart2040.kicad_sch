@@ -11693,7 +11693,7 @@
 		)
 	)
 	(global_label "GPIO22"
-		(shape bidirectional)
+		(shape input)
 		(at 228.6 142.24 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11737,7 +11737,7 @@
 		)
 	)
 	(global_label "GPIO21"
-		(shape bidirectional)
+		(shape input)
 		(at 228.6 139.7 0)
 		(fields_autoplaced yes)
 		(effects
@@ -13431,7 +13431,7 @@
 		)
 	)
 	(global_label "GPIO23"
-		(shape bidirectional)
+		(shape input)
 		(at 228.6 144.78 0)
 		(fields_autoplaced yes)
 		(effects
