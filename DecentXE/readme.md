@@ -52,7 +52,7 @@ I made a new version of the PCB for Choc switches which was also the first to ha
 
 Then there were demands to support more types of low-profile switches to allow for cheaper alternatives to Kailh Chocs.
 
-Around the same time, I had been trying to find reasonably affordable small batch key cap sets to make it possible to build a keyboard without depending on vintage parts. XLFreak is the one who designed and sourced new key caps from [WASD](https://www.wasdkeyboards.com/). The very wide space bar doesn't exist on modern keyboards, so we had to shuffle things around. I think the layout that came out of this is better than the original: we get a larger backspace key, an ISO return key, control moves to the left of the smaller 6.5U space bar, break to its right, caps moves to its modern place above left shift. I was able to lay out the PCB so it's compatible with both the vintage and the modern layouts with a single configuration header.
+Around the same time, I had been trying to find reasonably affordable small batch key cap sets to make it possible to build a keyboard without depending on vintage parts. XLFreak is the one who designed and sourced new key caps from [WASD](https://www.wasdkeyboards.com/) (no longer in activity). The very wide space bar doesn't exist on modern keyboards, so we had to shuffle things around. I think the layout that came out of this is better than the original: we get a larger backspace key, an ISO return key, control moves to the left of the smaller 6.5U space bar, break to its right, caps moves to its modern place above left shift. I was able to lay out the PCB so it's compatible with both the vintage and the modern layouts with a single configuration header.
 
 In order to simplify things and have a single unified PCB design, I designed a switch footprint that could accommodate four different kinds of switches: MX, Kailh Choc, Gateron low-pro and RedDragon low-pro.
 
@@ -100,7 +100,7 @@ If you're using vintage caps, you can pick any Kailh Choc v1 low-profile switch.
 
 ## Design
 
-The Decent XE project is built on [an original PCB design](./Keyboard/DecentXE-Modern.kicad_pcb), [a custom aluminum plate](./Plate/DecentXE-plate-modern.kicad_pcb), [MX-compatible switches](https://www.kailhswitch.com/mechanical-keyboard-switches/smt-key-switches/box-blue-white-switches-for-mechanical.html), [Kailh Choc v1 low-profile switches](http://www.kailh.com/en/Products/Ks/CS/), [custom key caps from WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html), 3D printed adapters and Durock v2 and Costar stabilizers.
+The Decent XE project is built on [an original PCB design](./Keyboard/DecentXE-Modern.kicad_pcb), [a custom aluminum plate](./Plate/DecentXE-plate-modern.kicad_pcb), [MX-compatible switches](https://www.kailhswitch.com/mechanical-keyboard-switches/smt-key-switches/box-blue-white-switches-for-mechanical.html), [Kailh Choc v1 low-profile switches](http://www.kailh.com/en/Products/Ks/CS/), [custom key caps from GoblinTech](https://goblintechkeys.com/collections/60-keycap), 3D printed adapters and Durock v2 and Costar stabilizers.
 
 ![The DecentXE keyboard assembly](./Media/DecentXE-modern-assembly.jpg)
 
@@ -131,13 +131,14 @@ It is also possible however to build and use this keyboard and use it with an em
 
 ### Key caps
 
-The best result will be obtained with [new key caps](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html).
+The best result will be obtained with [new key caps](https://goblintechkeys.com/collections/60-keycap).
 
-![Modern layout](Caps/wasd-inkscape-iso85-atari-130mx-White_Caps.svg)
+![Modern layout](Caps/Atari%20XE%20-%20White.svg)
+![Modern layout](Caps/Atari%20XE%20-%20Falcon.svg)
 
 Vintage key caps from an Atari XE computer can also be used to maintain a look that is indistinguishable from the original. Old-new stock of XE keyboards is also currently available without too much trouble and for a reasonable price.
 
-* Optimal: [MX-compatible set of key caps](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html)
+* Optimal: [MX-compatible set of key caps](https://goblintechkeys.com/collections/60-keycap)
 * Fine: vintage set of XE key caps
 
 ### Console keys (Help, Start, Select, Option, Reset)

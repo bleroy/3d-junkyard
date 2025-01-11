@@ -78,9 +78,9 @@ The project is designed around the conservation of the vintage look of the Atari
 
 You'll need a set of caps.
 
-If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html).
+If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [GoblinTech](https://goblintechkeys.com/collections/60-keycap).
 
-![The Decent 1200 modern layout](./Media/decent_atari_1200xl-layout.png)
+![The Decent 1200 modern layout](./Caps/Atari%201200XL.svg)
 
 If you have a complete set of vintage key caps, you'll need 55 [adapters](../DecentXL/Adapters/kailh-choc-to-xl-cross-x10.stl) (more affordable if printed as 6x sets of 10).
 
@@ -252,7 +252,7 @@ The back of the board shows the matrix the keyboard is built on. It's easy, from
 
 ## Appendix: Can I keep my vintage console keys?
 
-I would really encourage you not to try, as the new printed keys with vinyl stickers look really great. The problem with keeping the vintage console keys is that there's almost no clearance between the upper plane of the PCB as it needs to be for the rest of the keyboard and the bottom of the console keys at rest. Even low-profile switches are too tall to fit in there. Console keys would need to be on a second PCB positioned lower for this to work, which would be a lot more expensive and a less solid assembly.
+I would really encourage you not to try, as the new printed keys with vinyl stickers look really great. The problem with keeping the vintage console keys is that there's almost no clearance between the upper plane of the PCB as it needs to be for the rest of the keyboard and the bottom of the console keys at rest. Even low-profile switches are too tall to fit in there. Console keys would need to be on a second PCB positioned lower for this to work, which would be a lot more expensive and a less robust assembly.
 
 The only reasonable solution I found is to add the footprint of small tactile button and 3D print parts that can hold the console keys above them. The result is unpleasant and unreliable in my opinion. I'm still providing all the files to reproduce it, but I really don't recommend it.
 

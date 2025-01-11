@@ -84,11 +84,11 @@ The project is designed around the conservation of the vintage look of the Atari
 
 You'll need a set of caps.
 
-If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html). Make sure to specify a 2.25U left shift.
+If you've decided to go for modern, you'll need a set of modern caps that you can order from me or from [GoblinTech](https://goblintechkeys.com/collections/60-keycap). Make sure to specify a 2.25U left shift.
 
-![The DecentXL modern layout](./Caps/DecentXL-Charcoal-Caps.svg)
+![The DecentXL modern layout](./Caps/Atari%20XL.svg)
 
-The key cap set is defined by [this SVG file](./Caps/DecentXL-Charcoal-Caps.svg).
+The key cap set is defined by [this SVG file](./Caps/Atari%20XL.svg).
 
 If you have a complete set of vintage key caps, identify the type of cap by looking underneath one of your caps. Currently supported shapes are:
 
@@ -287,7 +287,7 @@ If you need them (vintage), add the cap adapters to your switches.
 
 Assemble the key caps onto the switches or cap adapters. If needed, don't forget to insert the stabilizer adapters into the relevant key caps before you press fit them onto the switches and stabilizers.
 
-Apply brushed metal stickers to the console keys. I find that holding the stickers with an Exacto knife is a good way to get the alignment precisely right. Take you time for this, as misalignments tend to be very visible with the keys so close to one another.
+Apply brushed metal stickers to the console keys. I find that holding the stickers with an Exacto knife is a good way to get the alignment precisely right. Take you time for this, as misalignments tend to be very visible with the keys so close to one another. Avoid touching the underside of the stickers as fingerprints can cause oxydation of the brushed metal layer in the sticker.
 
 ![3D-printed console keys](./Media/PrintedConsoleKeys.JPG)
 
