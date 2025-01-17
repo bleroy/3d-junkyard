@@ -258,7 +258,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -485,7 +485,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1104,7 +1104,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25762"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1284,6 +1284,7 @@
 		(property "Value" "GTIA"
 			(at 7.62 50.59 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "2d9ea78b-f821-4c47-8686-34d1f5be45ab")
 			(effects
 				(font
@@ -2125,7 +2126,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C15525"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2354,7 +2355,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25900"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2582,7 +2583,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C4109"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2811,7 +2812,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25133"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3400,7 +3401,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C137946"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4046,7 +4047,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4274,7 +4275,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4502,7 +4503,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25133"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4732,7 +4733,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25744"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5379,7 +5380,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C1525"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5608,7 +5609,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6173,7 +6174,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C1525"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6606,7 +6607,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25133"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6834,7 +6835,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7062,7 +7063,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C32949"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7290,7 +7291,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25132"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7518,7 +7519,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C11702"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7747,7 +7748,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25926"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7974,7 +7975,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25900"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8202,7 +8203,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C1525"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8709,7 +8710,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25077"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8937,7 +8938,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C43676"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9443,7 +9444,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C4908"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9671,7 +9672,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25900"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10169,7 +10170,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25133"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10399,7 +10400,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C25133"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10628,7 +10629,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C1525"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
