@@ -176,8 +176,6 @@ The plate is just an aluminum PCB. Download [the Gerber for the modern](./Decent
 
 ![DecentXL vintage aluminum plate](./Media/DecentXL-plate-mx-choc.png)
 
-There's also a printed plate to help with the alignment of console keys (to be made available shortly).
-
 ### Connectors
 
 The connector to the motherboard is [a flexible PCB](./DecentXL-Cable/production/gerber.zip). The fabrication house will usually ask you to specify what zones to apply rigidifiers to. There are two rectangles on the silkscreen that specify that.
