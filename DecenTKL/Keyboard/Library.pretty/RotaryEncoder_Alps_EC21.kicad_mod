@@ -1,0 +1,281 @@
+(footprint "RotaryEncoder_Alps_EC21"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Alps rotary encoder, EC21")
+	(tags "rotary encoder")
+	(property "Reference" "REF**"
+		(at -4.7 -7.2 0)
+		(layer "F.SilkS")
+		(uuid "8bce7838-a5d7-4535-9d0b-7de5c19333f0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RotaryEncoder_Alps_EC21"
+		(at 0 7.9 0)
+		(layer "F.Fab")
+		(uuid "209ecfaf-fd4a-40aa-b327-8f77000fa0a5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at -7.5 -2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "340606be-64c5-4bb6-87dc-7401960d763a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://tech.alpsalpine.com/e/products/detail/EC21A1540401/"
+		(at 0 11 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bd2665b5-93ff-4961-a218-3a586d5fa719")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -7.5 -2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "da80bfc3-6dd8-42ed-ad54-dc4b109c9bd6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -12.75 -4.45)
+		(end -12.15 -4.45)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29b7e0c7-f2ad-4691-bcac-778f09c36561")
+	)
+	(fp_line
+		(start -12.45 -4.15)
+		(end -12.75 -4.45)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "64ec4c2a-d4a9-4814-8879-213ba8ba4b74")
+	)
+	(fp_line
+		(start -12.15 -4.45)
+		(end -12.45 -4.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e4137e0c-bd59-4a66-aba4-d441e41d5af4")
+	)
+	(fp_line
+		(start -0.5 0)
+		(end 0.5 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5ba3f5c7-9816-47c1-8a2b-82333a792076")
+	)
+	(fp_line
+		(start 0 -0.5)
+		(end 0 0.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "56e4f55d-c410-4774-acc0-ecb541564950")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4.25 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "f59a3165-d92c-40e4-b4a6-dcae09061344")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4.2 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "7ea7e77e-1ca6-4c2f-97ee-7d34288120a6")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 12 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "a8f29db3-ac49-47ad-93cc-e376fff4d2c1")
+	)
+	(fp_line
+		(start -3 0)
+		(end 3 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ff70ba87-5741-48be-99a1-4d70b65bcd03")
+	)
+	(fp_line
+		(start 0 -3)
+		(end 0 3)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "684c6921-06f4-4f81-a2d3-0d2b357bd0de")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4.25 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "0678f681-5419-4e45-ae2a-146af4531d10")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 9.3 0)
+		(layer "F.Fab")
+		(uuid "4623396c-fad1-4148-8379-2dc086cc13a7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -8.25 0)
+		(size 2.2 2.2)
+		(drill 2.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "de3203f3-df6a-464d-b1e4-7927ce54f9ee")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 -8.5)
+		(size 2.5 2.5)
+		(drill 2.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "1f51c6bc-d468-443d-ba97-7c760eae8962")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 8.5)
+		(size 2.5 2.5)
+		(drill 2.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "ce203d44-94ef-4cbb-993e-ac5bdfd91859")
+	)
+	(pad "" np_thru_hole circle
+		(at 4 -8.5)
+		(size 2.2 2.2)
+		(drill 2.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "8bdf8d0f-964f-4908-a446-ebb06748eba0")
+	)
+	(pad "" np_thru_hole circle
+		(at 4 8.5)
+		(size 2.2 2.2)
+		(drill 2.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "bb656511-7803-42d7-ba64-ed0d1af3be9a")
+	)
+	(pad "" thru_hole circle
+		(at 6.25 -10.8)
+		(size 2.5 2.5)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c9c4388f-467f-40b0-8aad-30662d87df8b")
+	)
+	(pad "" thru_hole circle
+		(at 6.25 10.825)
+		(size 2.5 2.5)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9c7edd14-b5bf-4f9a-a619-5e4e281fd31f")
+	)
+	(pad "A" thru_hole oval
+		(at -12.5 -2.75)
+		(size 2 2.5)
+		(drill oval 1 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e639a60b-3f71-43e9-b95b-e5ad4f5444aa")
+	)
+	(pad "B" thru_hole oval
+		(at -12.5 2.75)
+		(size 2 2.5)
+		(drill oval 1 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "33c30940-ed2f-4d97-a712-8d311f94e083")
+	)
+	(pad "C" thru_hole oval
+		(at -12.5 0)
+		(size 2 2.5)
+		(drill oval 1 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9681dad1-6e1c-4cd5-bf04-6b467b290ff8")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Rotary_Encoder.3dshapes/RotaryEncoder_Alps_EC12E_Vertical_H20mm_CircularMountingHoles.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
