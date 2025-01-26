@@ -11955,7 +11955,6 @@
 	)
 	(label "QSPI_SD0"
 		(at 93.98 134.62 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11966,7 +11965,6 @@
 	)
 	(label "XOUT"
 		(at 134.62 160.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11977,7 +11975,6 @@
 	)
 	(label "XIN"
 		(at 134.62 152.4 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11988,7 +11985,6 @@
 	)
 	(label "QSPI_SCLK"
 		(at 134.62 146.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11999,7 +11995,6 @@
 	)
 	(label "I2C0_SDA"
 		(at 118.11 227.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12010,7 +12005,6 @@
 	)
 	(label "QSPI_SD2"
 		(at 134.62 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12021,7 +12015,6 @@
 	)
 	(label "QSPI_SS"
 		(at 134.62 130.81 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12032,7 +12025,6 @@
 	)
 	(label "USB_D+"
 		(at 250.19 102.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12043,7 +12035,6 @@
 	)
 	(label "VSYS"
 		(at 139.7 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12054,7 +12045,6 @@
 	)
 	(label "QSPI_SD3"
 		(at 134.62 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12065,7 +12055,6 @@
 	)
 	(label "QSPI_SS"
 		(at 19.685 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12076,7 +12065,6 @@
 	)
 	(label "SWD"
 		(at 145.796 189.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12087,7 +12075,6 @@
 	)
 	(label "USB_D-"
 		(at 250.19 111.76 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12098,7 +12085,6 @@
 	)
 	(label "USB_D-"
 		(at 127 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12109,7 +12095,6 @@
 	)
 	(label "FLASH_SS"
 		(at 43.18 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12120,7 +12105,6 @@
 	)
 	(label "QSPI_SD0"
 		(at 134.62 134.62 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12131,7 +12115,6 @@
 	)
 	(label "QSPI_SD3"
 		(at 93.98 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12142,7 +12125,6 @@
 	)
 	(label "USB_D+"
 		(at 127 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12153,7 +12135,6 @@
 	)
 	(label "SWCLK"
 		(at 145.796 184.15 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12164,7 +12145,6 @@
 	)
 	(label "VBUS"
 		(at 119.38 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12175,7 +12155,6 @@
 	)
 	(label "~{USB_BOOT}"
 		(at 111.76 130.81 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12186,7 +12165,6 @@
 	)
 	(label "VREG_LX"
 		(at 134.62 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12197,7 +12175,6 @@
 	)
 	(label "QSPI_SD1"
 		(at 134.62 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12208,7 +12185,6 @@
 	)
 	(label "QSPI_SD2"
 		(at 93.98 142.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12219,7 +12195,6 @@
 	)
 	(label "VREG_AVDD"
 		(at 136.525 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12230,7 +12205,6 @@
 	)
 	(label "I2C0_SCL"
 		(at 118.11 229.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18589,6 +18563,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C23733"
+			(at 135.89 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "becd51a3-09f9-406a-b468-bccdf0d36b9f")
 		)
@@ -18716,6 +18699,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 116.84 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part #" "C84474"
 			(at 116.84 115.57 0)
 			(effects
 				(font
@@ -19650,6 +19642,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 124.46 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part #" "C25105"
 			(at 124.46 97.79 0)
 			(effects
 				(font
@@ -21048,6 +21049,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 137.16 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part #" "C23733"
 			(at 137.16 73.66 0)
 			(effects
 				(font
@@ -23052,6 +23062,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C23733"
+			(at 101.6 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a9dcbc02-de9c-4aa6-b4dc-d05d6f5c29c8")
 		)
@@ -24400,6 +24419,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C23733"
+			(at 90.17 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "18237a55-fa23-450f-bfa1-0d66ac0f264f")
 		)
@@ -25273,7 +25301,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C223608"
+		(property "JLCPCB Part #" "C8598"
 			(at 130.81 40.64 0)
 			(effects
 				(font
