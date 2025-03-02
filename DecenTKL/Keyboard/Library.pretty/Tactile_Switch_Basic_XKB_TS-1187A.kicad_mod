@@ -195,4 +195,15 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "8dadb26a-0d1b-40c4-957b-4c47fdde1be3")
 	)
+	(model "C:/Projects/3d-junkyard/DecentCart/3DModels/TS-1187A.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

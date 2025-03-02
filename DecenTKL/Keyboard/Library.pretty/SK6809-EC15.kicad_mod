@@ -143,4 +143,15 @@
 		(thermal_bridge_angle 45)
 		(uuid "101c42b5-34aa-4165-a10f-e70c48fbff52")
 	)
+	(model "${KIPRJMOD}/shapes3D/SK6805-EC15.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 0)
+		)
+	)
 )
