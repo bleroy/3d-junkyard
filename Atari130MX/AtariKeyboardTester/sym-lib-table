@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "AtariKeyboardTester-rescue")(type "KiCad")(uri "${KIPRJMOD}/AtariKeyboardTester-rescue.kicad_sym")(options "")(descr ""))
-)
