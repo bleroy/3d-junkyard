@@ -1,4 +1,5 @@
 import digitalio
+import microcontroller
 import board
 import pwmio
 import neopixel
@@ -122,11 +123,9 @@ K_to_col = {
 # I/O utils
 ios = dict()
 def get_io(pin):
-    if pin is digitalio.DigitalInOut:
-        return pin
-    if pin not in ios:
+    if type(pin) == microcontroller.Pin and pin not in ios:
         ios[pin] = digitalio.DigitalInOut(pin)
-    return ios[pin]
+    return ios[pin] if pin in ios else pin
 
 # Setup the display
 # VCC is just GPIO16 set to high and GND is GPIO17 set to low.
@@ -392,7 +391,7 @@ class AtariXE(Mode):
         self.reset.value = True
         pixels[coordinates['F12'][2]] = modulate(ORANGE, led_intensity)
         # Setup the POWER pin with PWM
-        self.power = pwmio.PWMOut(self.power, frequency=1000, duty_cycle=10)
+        self.power = pwmio.PWMOut(self.power, frequency=1000, duty_cycle=10) if type(self.power) == microcontroller.Pin else self.power
         # Setup the default state of the keyboard visualization
         for row in self.matrix:
             for key in row:
