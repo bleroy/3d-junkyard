@@ -1,5 +1,6 @@
 import digitalio
 import board
+import pwmio
 import neopixel
 import math
 import random
@@ -10,6 +11,9 @@ import usb_host
 import usb.core
 import adafruit_usb_host_descriptors
 from rainbowio import colorwheel
+
+# Settings
+led_intensity = 0.01
 
 # Layout description:
 # Lines are arrays containing key descriptions.
@@ -22,7 +26,7 @@ keys = [
     ['Esc', ('F1', 1), 'F2', 'F3', 'F4', ('F5', 0.5), 'F6', 'F7', 'F8', ('F9', 0.5), 'F10', 'F11', 'F12', ('PrtSc', 0.5), 'ScrLck', 'Pause', ('Break', 0.5), 'Inverse', ('Power', 1)],
     ['`~', '1!', '2@', '3#', '4$', '5%', '6^', '7&', '8*', '9(', '0)', '-_', '=+', ('Backspace', 0, 2), ('Insert', 0.5), 'Home', 'PgUp', ('NumLck', 0.5), '/', '*', '-', ('Reset', 0.5)],
     [('Tab', 0, 1.5), 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[{', ']}', ('\|', 0, 1.5), ('Del', 0.5), 'End', 'PgDn', ('7', 0.5), '8', '9', ('+', 0, 1, 2), ('Option', 0.5)],
-    [('CapsLck', 0, 1.75), 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';:', '\'\"', ('Return', 0, 2.25), ('4', 4), '5', '6', ('Select', 1.5)],
+    [('CapsLock', 0, 1.75), 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';:', '\'\"', ('Return', 0, 2.25), ('4', 4), '5', '6', ('Select', 1.5)],
     [('LeftShift', 0, 2.25), 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',<', '.>', '/?', ('RightShift', 0, 2.75), ('Up', 1.5), ('1', 1.5), '2', '3', ('Enter', 0, 1, 2), ('Start', 0.5)],
     [('LeftControl', 0, 1.25), ('Win', 0, 1.25), ('LeftAlt', 0, 1.25), ('Space', 0, 6.25), ('RightAlt', 0, 1.25), ('Fn', 0, 1.25), ('Menu', 0, 1.25), ('RightControl', 0, 1.25), ('Left', 0.5), 'Down', 'Right', ('0', 0.5, 2), '.', ('Help', 1.5)]
 ]
@@ -31,7 +35,7 @@ keys = [
 leds = ['Power', 'Esc', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'PrtSc', 'ScrLck', 'Pause',
     '`~', '1!', '2@', '3#', '4$', '5%', '6^', '7&', '8*', '9(', '0)', '-_', '=+', 'Backspace', 'Insert', 'Home', 'PgUp',
     'Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[{', ']}', '\|', 'Del', 'End', 'PgDn',
-    'CapsLck', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';:', '\'\"', 'Return',
+    'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';:', '\'\"', 'Return',
     'LeftShift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',<', '.>', '/?', 'RightShift', 'Up',
     'LeftControl', 'Win', 'LeftAlt', 'Space', 'RightAlt', 'Fn', 'Menu', 'RightControl', 'Left', 'Down', 'Right',
     'NumLck', '/', '*', '-', '7', '8', '9', '+', '4', '5', '6', '1', '2', '3', 'Enter', '0', '.',
@@ -50,7 +54,7 @@ keymap = {
     0x29: "Esc", 0x3A: "F1", 0x3B: "F2", 0x3C: "F3", 0x3D: "F4", 0x3E: "F5", 0x3F: "F6", 0x40: "F7", 0x41: "F8", 0x42: "F9", 0x43: "F10", 0x44: "F11", 0x45: "F12", 0x46: "PrtSc", 0x47: "ScrLck", 0x48: "Pause",
     0x35: '`~', 0x1E: "1!", 0x1F: "2@", 0x20: "3#", 0x21: "4$", 0x22: "5%", 0x23: "6^", 0x24: "7&", 0x25: "8*", 0x26: "9(", 0x27: "0)", 0x2D: "-_", 0x2E: "=+", 0x2A: "Backspace", 0x49: 'Insert', 0x4A: 'Home', 0x4B: 'PgUp',
     0x2B: 'Tab', 0x14: 'Q', 0x1A: 'W', 0x08: 'E', 0x15: 'R', 0x17: 'T', 0x1C: 'Y', 0x18: 'U', 0x0C: 'I', 0x12: 'O', 0x13: 'P', 0x2F: '[{', 0x30: ']}', 0x31: '\|', 0x4C: 'Del', 0x4D: 'End', 0x4E: 'PgDn',
-    0x39: 'CapsLck', 0x04: 'A', 0x16: 'S', 0x07: 'D', 0x09: 'F', 0x0A: 'G', 0x0B: 'H', 0x0D: 'J', 0x0E: 'K', 0x0F: 'L', 0x33: ';:', 0x34: '\'\"', 0x28: 'Return',
+    0x39: 'CapsLock', 0x04: 'A', 0x16: 'S', 0x07: 'D', 0x09: 'F', 0x0A: 'G', 0x0B: 'H', 0x0D: 'J', 0x0E: 'K', 0x0F: 'L', 0x33: ';:', 0x34: '\'\"', 0x28: 'Return',
     0x102: 'LeftShift', 0x1D: 'Z', 0x1B: 'X', 0x06: 'C', 0x19: 'V', 0x05: 'B', 0x11: 'N', 0x10: 'M', 0x36: ',<', 0x37: '.>', 0x38: '/?', 0x120: 'RightShift', 0x52: 'Up',
     0x101: 'LeftControl', 0x108: 'Win', 0x104: 'LeftAlt', 0x2C: 'Space', 0x140: 'RightAlt', 0x180: 'Fn', 0x65: 'Menu', 0x110: 'RightControl', 0x50: 'Left', 0x51: 'Down', 0x4F: 'Right',
     0x53: 'NumLck', 0x54: '/', 0x55: '*', 0x56: '-', 0x5F: '7', 0x60: '8', 0x61: '9', 0x57: '+', 0x5C: '4', 0x5D: '5', 0x5E: '6', 0x59: '1', 0x5A: '2', 0x5B: '3', 0x58: 'Enter', 0x62: '0', 0x63: '.',
@@ -115,6 +119,15 @@ K_to_col = {
     (True,  True,  True ): 4
 }
 
+# I/O utils
+ios = dict()
+def get_io(pin):
+    if pin is digitalio.DigitalInOut:
+        return pin
+    if pin not in ios:
+        ios[pin] = digitalio.DigitalInOut(pin)
+    return ios[pin]
+
 # Setup the display
 # VCC is just GPIO16 set to high and GND is GPIO17 set to low.
 OLED_WIDTH = 128
@@ -127,7 +140,7 @@ oled = adafruit_ssd1306.SSD1306_I2C(OLED_WIDTH, OLED_HEIGHT, oledI2C)
 oledCol = 0
 
 # Setup the mode button
-mode_button = digitalio.DigitalInOut(board.GP26)
+mode_button = get_io(board.GP26)
 mode_button.switch_to_input(pull=digitalio.Pull.UP)
 
 def log(str):
@@ -196,7 +209,7 @@ class RadialRainbow(Animation):
         super().__init__()
         self.name = "Radial Rainbow"
     def paint(self, x, y):
-        return modulate(colorwheel((math.sqrt((x - center[0])**2 + (y - center[1])**2) * 20 + 256 - self.frame_number) % 256), 0.01)
+        return modulate(colorwheel((math.sqrt((x - center[0])**2 + (y - center[1])**2) * 20 + 256 - self.frame_number) % 256), led_intensity)
 
 class Droplet:
     def __init__(self, x = 0, y = 0):
@@ -257,8 +270,8 @@ class UsbKeyboardMode(Mode):
         self.win = False
 
     def init(self):
-        pixels.fill(modulate(ORANGE, 0.01))
-        pixels[coordinates['Power'][2]] = modulate(RED, 0.01)
+        pixels.fill(modulate(ORANGE, led_intensity))
+        pixels[coordinates['Power'][2]] = modulate(RED, led_intensity)
         pixels.show()
         print("Starting USB discovery")
         # HID protocol reference: https://usb.org/sites/default/files/hid1_11.pdf
@@ -310,10 +323,10 @@ class UsbKeyboardMode(Mode):
                        self.char if self.char != "" else "0x{:02x}".format(current_key_code))
                 if current_key_code in keymap:
                     (_, _, led_index) = coordinates[keymap[current_key_code]]
-                    pixels[led_index] = modulate(GREEN, 0.01)
+                    pixels[led_index] = modulate(GREEN, led_intensity)
                 if current_raw_code | 0x100 in keymap:
                     (_, _, led_index) = coordinates[keymap[current_raw_code | 0x100]]
-                    pixels[led_index] = modulate(GREEN, 0.01)
+                    pixels[led_index] = modulate(GREEN, led_intensity)
                 pixels.show()
 
             except usb.core.USBTimeoutError:
@@ -322,7 +335,93 @@ class UsbKeyboardMode(Mode):
                 self.keyboard = None
                 self.keyboard_interface_address = None
 
-modes = [UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
+class AtariXE(Mode):
+    def __init__(self):
+        self.name = "Atari XE"
+        self.row_pins = [board.GP14, board.GP15, board.GP13, board.GP16, board.GP8, board.GP19, board.GP6, board.GP7]
+        self.col_pins = [board.GP20, board.GP5, board.GP9, board.GP10, board.GP11, board.GP18, board.GP17, board.GP21]
+        self.matrix = [
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
+            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',       'F2',           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
+            ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
+        self.console = board.GP4
+        self.start = board.GP22
+        self.select = board.GP23
+        self.option = board.GP24
+        self.reset = board.GP25
+        self.power = board.GP3
+    def init(self):
+        pixels.fill(0)
+        # Setup the row pins
+        for pin in self.row_pins:
+            pin = get_io(pin)
+            pin.direction = digitalio.Direction.OUTPUT
+            pin.value = True
+        # Setup the column pins
+        for pin in self.col_pins:
+            pin = get_io(pin)
+            pin.direction = digitalio.Direction.INPUT
+            pin.pull = digitalio.Pull.UP
+        # Setup the console GND pin
+        self.console = get_io(self.console)
+        self.console.direction = digitalio.Direction.INPUT
+        self.console.pull = digitalio.Pull.UP
+        # Setup the START pin
+        self.start = get_io(self.start)
+        self.start.direction = digitalio.Direction.OUTPUT
+        self.start.value = True
+        pixels[coordinates['F9'][2]] = modulate(ORANGE, led_intensity)
+        # Setup the SELECT pin
+        self.select = get_io(self.select)
+        self.select.direction = digitalio.Direction.OUTPUT
+        self.select.value = True
+        pixels[coordinates['F10'][2]] = modulate(ORANGE, led_intensity)
+        # Setup the OPTION pin
+        self.option = get_io(self.option)
+        self.option.direction = digitalio.Direction.OUTPUT
+        self.option.value = True
+        pixels[coordinates['F11'][2]] = modulate(ORANGE, led_intensity)
+        # Setup the RESET pin
+        self.reset = get_io(self.reset)
+        self.reset.direction = digitalio.Direction.OUTPUT
+        self.reset.value = True
+        pixels[coordinates['F12'][2]] = modulate(ORANGE, led_intensity)
+        # Setup the POWER pin with PWM
+        self.power = pwmio.PWMOut(self.power, frequency=1000, duty_cycle=10)
+        # Setup the default state of the keyboard visualization
+        for row in self.matrix:
+            for key in row:
+                if key != None:
+                    (_, _, led_index) = coordinates[key]
+                    if led_index >= 0:
+                        pixels[led_index] = modulate(ORANGE, led_intensity)
+        # Manually setup right shift
+        pixels[coordinates['RightShift'][2]] = modulate(ORANGE, led_intensity)
+        # Setup the POWER LED
+        pixels[coordinates['Power'][2]] = modulate(RED, led_intensity)
+        pixels.show()
+    def loop(self):
+        # Scan the matrix
+        for row in range(len(self.row_pins)):
+            row_pin = get_io(self.row_pins[row])
+            row_pin.value = False
+            for col in range(len(self.col_pins)):
+                col_pin = get_io(self.col_pins[col])
+                if col_pin.value == False:
+                    key = self.matrix[row][col]
+                    if key != None:
+                        (_, _, led_index) = coordinates[key]
+                        pixels[led_index] = modulate(GREEN, led_intensity)
+                        pixels.show()
+            row_pin.value = True
+        pass
+
+modes = [AtariXE(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
 log('Mode: ' + modes[current_mode].name)
 modes[current_mode].init()
