@@ -342,6 +342,7 @@ class MatrixKeyboard(Mode):
         self.row_pins = []
         self.col_pins = []
         self.matrix = []
+        self.charmap = dict()
         self.console_pin = None
         self.console = None
         self.start_pin = None
@@ -415,6 +416,9 @@ class MatrixKeyboard(Mode):
         pixels.show()
     def loop(self):
         # Scan the matrix
+        shift = False
+        control = False
+        char = ''
         for row_pin in range(len(self.row_pins)):
             rowio = get_io(self.row_pins[row_pin])
             rowio.value = False
@@ -425,34 +429,60 @@ class MatrixKeyboard(Mode):
                     if key != None:
                         (_, _, led_index) = coordinates[key]
                         pixels[led_index] = modulate(GREEN, led_intensity)
-                        if key == 'LeftShift':
+                        if key == self.shift_key:
+                            shift = True
                             pixels[coordinates['RightShift'][2]] = modulate(GREEN, led_intensity)
+                        if key == self.control_key:
+                            control = True
+                        else:
+                            char = key
                         pixels.show()
             rowio.value = True
+        # Output the key pressed
+        if len(char) == 1:
+            if shift:
+                ch(char.upper())
+            elif control:
+                ch('CTRL + ' + char)
+            else:
+                ch(char.lower())
+        elif len(char) == 2:
+            if shift:
+                ch(char[1])
+            elif control:
+                ch('CTRL + ' + char[0])
+            else:
+                ch(char[0])
+        elif char != '':
+            ch(("SHIFT + " if shift else "") + ("CTRL + " if control else "") + char)
         # Check the console keys
         if self.start != None:
             self.start.value = False
             if self.console.value == False:
                 pixels[coordinates[self.start_key][2]] = modulate(GREEN, led_intensity)
                 pixels.show()
+                ch('<START>')
             self.start.value = True
         if self.select != None:
             self.select.value = False
             if self.console.value == False:
                 pixels[coordinates[self.select_key][2]] = modulate(GREEN, led_intensity)
                 pixels.show()
+                ch('<SELECT>')
             self.select.value = True
         if self.option != None:
             self.option.value = False
             if self.console.value == False:
                 pixels[coordinates[self.option_key][2]] = modulate(GREEN, led_intensity)
                 pixels.show()
+                ch('<OPTION>')
             self.option.value = True
         if self.reset != None:
             self.reset.value = False
             if self.console.value == False:
                 pixels[coordinates[self.reset_key][2]] = modulate(GREEN, led_intensity)
                 pixels.show()
+                ch('<RESET>')
             self.reset.value = True
 
 class AtariXE(MatrixKeyboard):
@@ -479,6 +509,8 @@ class AtariXE(MatrixKeyboard):
         self.reset_pin = board.GP25
         self.reset_key = 'F12'
         self.power_pin = board.GP3
+        self.shift_key = 'LeftShift'
+        self.control_key = 'CapsLock'
 
 class AtariXL(MatrixKeyboard):
     def __init__(self):
@@ -504,6 +536,8 @@ class AtariXL(MatrixKeyboard):
         self.reset_pin = board.GP24
         self.reset_key = 'F12'
         self.power_pin = board.GP25
+        self.shift_key = 'LeftShift'
+        self.control_key = 'CapsLock'
 
 modes = [AtariXE(), AtariXL(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
