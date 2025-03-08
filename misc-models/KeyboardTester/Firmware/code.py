@@ -350,9 +350,13 @@ class AtariXE(Mode):
             ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
         self.console = board.GP4
         self.start = board.GP22
+        self.start_key = 'F9'
         self.select = board.GP23
+        self.select_key = 'F10'
         self.option = board.GP24
+        self.option_key = 'F11'
         self.reset = board.GP25
+        self.reset_key = 'F12'
         self.power = board.GP3
     def init(self):
         pixels.fill(0)
@@ -416,9 +420,31 @@ class AtariXE(Mode):
                     if key != None:
                         (_, _, led_index) = coordinates[key]
                         pixels[led_index] = modulate(GREEN, led_intensity)
+                        if key == 'LeftShift':
+                            pixels[coordinates['RightShift'][2]] = modulate(GREEN, led_intensity)
                         pixels.show()
             row_pin.value = True
-        pass
+        # Check the console keys
+        self.start.value = False
+        if self.console.value == False:
+            pixels[coordinates[self.start_key][2]] = modulate(GREEN, led_intensity)
+            pixels.show()
+        self.start.value = True
+        self.select.value = False
+        if self.console.value == False:
+            pixels[coordinates[self.select_key][2]] = modulate(GREEN, led_intensity)
+            pixels.show()
+        self.select.value = True
+        self.option.value = False
+        if self.console.value == False:
+            pixels[coordinates[self.option_key][2]] = modulate(GREEN, led_intensity)
+            pixels.show()
+        self.option.value = True
+        self.reset.value = False
+        if self.console.value == False:
+            pixels[coordinates[self.reset_key][2]] = modulate(GREEN, led_intensity)
+            pixels.show()
+        self.reset.value = True
 
 modes = [AtariXE(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
