@@ -123,9 +123,11 @@ K_to_col = {
 # I/O utils
 ios = dict()
 def get_io(pin):
-    if type(pin) == microcontroller.Pin and pin not in ios:
+    if pin in ios:
+        return ios[pin]
+    if type(pin) == microcontroller.Pin:
         ios[pin] = digitalio.DigitalInOut(pin)
-    return ios[pin] if pin in ios else pin
+    return ios[pin]
 
 # Setup the display
 # VCC is just GPIO16 set to high and GND is GPIO17 set to low.
@@ -334,68 +336,71 @@ class UsbKeyboardMode(Mode):
                 self.keyboard = None
                 self.keyboard_interface_address = None
 
-class AtariXE(Mode):
+class MatrixKeyboard(Mode):
     def __init__(self):
-        self.name = "Atari XE"
-        self.row_pins = [board.GP14, board.GP15, board.GP13, board.GP16, board.GP8, board.GP19, board.GP6, board.GP7]
-        self.col_pins = [board.GP20, board.GP5, board.GP9, board.GP10, board.GP11, board.GP18, board.GP17, board.GP21]
-        self.matrix = [
-            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
-            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
-            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
-            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
-            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',       'F2',           'CapsLock'],
-            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
-            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
-            ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
-        self.console = board.GP4
-        self.start = board.GP22
-        self.start_key = 'F9'
-        self.select = board.GP23
-        self.select_key = 'F10'
-        self.option = board.GP24
-        self.option_key = 'F11'
-        self.reset = board.GP25
-        self.reset_key = 'F12'
-        self.power = board.GP3
+        self.name = "Matrix keyboard"
+        self.row_pins = []
+        self.col_pins = []
+        self.matrix = []
+        self.console_pin = None
+        self.console = None
+        self.start_pin = None
+        self.start = None
+        self.start_key = 'Start'
+        self.select_pin = None
+        self.select = None
+        self.select_key = 'Select'
+        self.option_pin = None
+        self.option = None
+        self.option_key = 'Option'
+        self.reset_pin = None
+        self.reset = None
+        self.reset_key = 'Reset'
+        self.power_pin = None
     def init(self):
         pixels.fill(0)
         # Setup the row pins
         for pin in self.row_pins:
-            pin = get_io(pin)
-            pin.direction = digitalio.Direction.OUTPUT
-            pin.value = True
+            pinio = get_io(pin)
+            pinio.direction = digitalio.Direction.OUTPUT
+            pinio.value = True
         # Setup the column pins
         for pin in self.col_pins:
-            pin = get_io(pin)
-            pin.direction = digitalio.Direction.INPUT
-            pin.pull = digitalio.Pull.UP
+            pinio = get_io(pin)
+            pinio.direction = digitalio.Direction.INPUT
+            pinio.pull = digitalio.Pull.UP
         # Setup the console GND pin
-        self.console = get_io(self.console)
-        self.console.direction = digitalio.Direction.INPUT
-        self.console.pull = digitalio.Pull.UP
+        if self.console_pin != None:
+            self.console = get_io(self.console_pin)
+            self.console.direction = digitalio.Direction.INPUT
+            self.console.pull = digitalio.Pull.UP
         # Setup the START pin
-        self.start = get_io(self.start)
-        self.start.direction = digitalio.Direction.OUTPUT
-        self.start.value = True
-        pixels[coordinates['F9'][2]] = modulate(ORANGE, led_intensity)
+        if self.start_pin != None:
+            self.start = get_io(self.start_pin)
+            self.start.direction = digitalio.Direction.OUTPUT
+            self.start.value = True
+            pixels[coordinates[self.start_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the SELECT pin
-        self.select = get_io(self.select)
-        self.select.direction = digitalio.Direction.OUTPUT
-        self.select.value = True
-        pixels[coordinates['F10'][2]] = modulate(ORANGE, led_intensity)
+        if self.select_pin != None:
+            self.select = get_io(self.select_pin)
+            self.select.direction = digitalio.Direction.OUTPUT
+            self.select.value = True
+            pixels[coordinates[self.select_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the OPTION pin
-        self.option = get_io(self.option)
-        self.option.direction = digitalio.Direction.OUTPUT
-        self.option.value = True
-        pixels[coordinates['F11'][2]] = modulate(ORANGE, led_intensity)
+        if self.option_pin != None:
+            self.option = get_io(self.option_pin)
+            self.option.direction = digitalio.Direction.OUTPUT
+            self.option.value = True
+            pixels[coordinates[self.option_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the RESET pin
-        self.reset = get_io(self.reset)
-        self.reset.direction = digitalio.Direction.OUTPUT
-        self.reset.value = True
-        pixels[coordinates['F12'][2]] = modulate(ORANGE, led_intensity)
+        if self.reset_pin != None:
+            self.reset = get_io(self.reset_pin)
+            self.reset.direction = digitalio.Direction.OUTPUT
+            self.reset.value = True
+            pixels[coordinates[self.reset_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the POWER pin with PWM
-        self.power = pwmio.PWMOut(self.power, frequency=1000, duty_cycle=10) if type(self.power) == microcontroller.Pin else self.power
+        if self.power_pin != None:
+            ios[self.power_pin] = pwmio.PWMOut(self.power_pin, frequency=1000, duty_cycle=10)
         # Setup the default state of the keyboard visualization
         for row in self.matrix:
             for key in row:
@@ -410,43 +415,97 @@ class AtariXE(Mode):
         pixels.show()
     def loop(self):
         # Scan the matrix
-        for row in range(len(self.row_pins)):
-            row_pin = get_io(self.row_pins[row])
-            row_pin.value = False
-            for col in range(len(self.col_pins)):
-                col_pin = get_io(self.col_pins[col])
-                if col_pin.value == False:
-                    key = self.matrix[row][col]
+        for row_pin in range(len(self.row_pins)):
+            rowio = get_io(self.row_pins[row_pin])
+            rowio.value = False
+            for col_pin in range(len(self.col_pins)):
+                colio = get_io(self.col_pins[col_pin])
+                if colio.value == False:
+                    key = self.matrix[row_pin][col_pin]
                     if key != None:
                         (_, _, led_index) = coordinates[key]
                         pixels[led_index] = modulate(GREEN, led_intensity)
                         if key == 'LeftShift':
                             pixels[coordinates['RightShift'][2]] = modulate(GREEN, led_intensity)
                         pixels.show()
-            row_pin.value = True
+            rowio.value = True
         # Check the console keys
-        self.start.value = False
-        if self.console.value == False:
-            pixels[coordinates[self.start_key][2]] = modulate(GREEN, led_intensity)
-            pixels.show()
-        self.start.value = True
-        self.select.value = False
-        if self.console.value == False:
-            pixels[coordinates[self.select_key][2]] = modulate(GREEN, led_intensity)
-            pixels.show()
-        self.select.value = True
-        self.option.value = False
-        if self.console.value == False:
-            pixels[coordinates[self.option_key][2]] = modulate(GREEN, led_intensity)
-            pixels.show()
-        self.option.value = True
-        self.reset.value = False
-        if self.console.value == False:
-            pixels[coordinates[self.reset_key][2]] = modulate(GREEN, led_intensity)
-            pixels.show()
-        self.reset.value = True
+        if self.start != None:
+            self.start.value = False
+            if self.console.value == False:
+                pixels[coordinates[self.start_key][2]] = modulate(GREEN, led_intensity)
+                pixels.show()
+            self.start.value = True
+        if self.select != None:
+            self.select.value = False
+            if self.console.value == False:
+                pixels[coordinates[self.select_key][2]] = modulate(GREEN, led_intensity)
+                pixels.show()
+            self.select.value = True
+        if self.option != None:
+            self.option.value = False
+            if self.console.value == False:
+                pixels[coordinates[self.option_key][2]] = modulate(GREEN, led_intensity)
+                pixels.show()
+            self.option.value = True
+        if self.reset != None:
+            self.reset.value = False
+            if self.console.value == False:
+                pixels[coordinates[self.reset_key][2]] = modulate(GREEN, led_intensity)
+                pixels.show()
+            self.reset.value = True
 
-modes = [AtariXE(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
+class AtariXE(MatrixKeyboard):
+    def __init__(self):
+        self.name = "Atari XE"
+        self.row_pins = [board.GP14, board.GP15, board.GP13, board.GP16, board.GP8, board.GP19, board.GP6, board.GP7]
+        self.col_pins = [board.GP20, board.GP5, board.GP9, board.GP10, board.GP11, board.GP18, board.GP17, board.GP21]
+        self.matrix = [
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
+            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',       'F2',           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
+            ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
+        self.console_pin = board.GP4
+        self.start_pin = board.GP22
+        self.start_key = 'F9'
+        self.select_pin = board.GP23
+        self.select_key = 'F10'
+        self.option_pin = board.GP24
+        self.option_key = 'F11'
+        self.reset_pin = board.GP25
+        self.reset_key = 'F12'
+        self.power_pin = board.GP3
+
+class AtariXL(MatrixKeyboard):
+    def __init__(self):
+        self.name = "Atari XL"
+        self.row_pins = [board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7, board.GP8, board.GP9]
+        self.col_pins = [board.GP11, board.GP12, board.GP13, board.GP14, board.GP15, board.GP16, board.GP17, board.GP10]
+        self.matrix = [
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
+            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',       'F2',           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
+            ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
+        self.console_pin = board.GP19
+        self.start_pin = board.GP21
+        self.start_key = 'F9'
+        self.select_pin = board.GP22
+        self.select_key = 'F10'
+        self.option_pin = board.GP23
+        self.option_key = 'F11'
+        self.reset_pin = board.GP24
+        self.reset_key = 'F12'
+        self.power_pin = board.GP25
+
+modes = [AtariXE(), AtariXL(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
 log('Mode: ' + modes[current_mode].name)
 modes[current_mode].init()
@@ -457,6 +516,16 @@ while True:
         current_mode = (current_mode + 1) % len(modes)
         cls()
         clear_keyboard()
+        # De-initialize GPIOs 2-25 that have been used by the previous mode
+        for pin in [board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7,
+                    board.GP8, board.GP9, board.GP10, board.GP11, board.GP12,
+                    board.GP13, board.GP14, board.GP15, board.GP16, board.GP17,
+                    board.GP18, board.GP19, board.GP20, board.GP21, board.GP22,
+                    board.GP23, board.GP24, board.GP25]:
+            if pin in ios:
+                pin = get_io(pin)
+                pin.deinit()
+        ios = dict()
         log('Mode: ' + modes[current_mode].name)
         modes[current_mode].init()
         while (mode_button.value == False):
