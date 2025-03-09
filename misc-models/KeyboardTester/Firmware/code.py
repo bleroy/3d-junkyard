@@ -446,7 +446,7 @@ class MatrixKeyboard(Mode):
                 ch('CTRL + ' + char)
             else:
                 ch(char.lower())
-        elif len(char) == 2:
+        elif len(char) == 2 and char[0] != 'F':
             if shift:
                 ch(char[1])
             elif control:
