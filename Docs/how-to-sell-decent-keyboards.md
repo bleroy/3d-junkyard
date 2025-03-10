@@ -18,6 +18,7 @@ us, the authors.
 
 I ([Bertrand Le Roy](https://forums.atariage.com/profile/76850-screamingattheradio/)) created
 the general design of the keyboards, in particular the PCBs.
+
 Jesse ([@XL Freak](https://forums.atariage.com/profile/63723-xl-freak/) on AtariAge) designed
 all the key caps.
 
@@ -25,7 +26,7 @@ The cost of a keyboard is roughly 1/3 key caps and 2/3 for everything else, so i
 to share part of the profit, you should split that share 1/3 - 2/3 between Jesse and I.
 
 Typical royalty rates are 10-15% of the sale price, so if you sell a keyboard for $300,
-15% of that would be $45, so you'd cut a share of $15 to Jesse and $30 to Bertrand.
+15% of that would be $45, so I suggest you cut a share of $15 to Jesse and $30 to me.
 
 ## What do you need in order to get started?
 
@@ -36,16 +37,18 @@ You'll also need a way to get payment from your buyers. I've been using a simple
 site, that's great too.
 
 Of course, you'll need to stock parts and supplies, some of which you can acquire as you
-handle order, some you'll need to have an inventory of, for example because buying in larger
-quantities is going to save you money.
+handle orders, some you'll need to have an inventory of, for example because buying in
+larger quantities is going to save you money.
 
 Depending on the quantities you order, you may be able to negotiate deals with suppliers.
 In most places, businesses can waive the sales tax on the supplies they use to manufacture goods.
 Consult your local government to obtain the relevant forms and procedures.
+Contact each supplier to ask them to setup your account so taxes are waived.
 
 Finally, some parts are 3D-printed, so you'll need access to a 3D printer, or to have those
-parts printed, for example by JLCPCB. Optionally, a vinyl cutter can be used to make console
-key stickers for XE keyboards.
+parts printed, for example by JLCPCB.
+
+You'll need access to a vinyl cutter to make console key stickers.
 
 ### Parts and supplies
 
@@ -91,7 +94,7 @@ Essentially, for all keyboards, the steps are:
    connector, it's necessary to solder it now because the connector may be inaccessible
    once the plate and switches have been assembled.
 1. Insert switches in the plate, verify pins are properly aligned.
-1. Carefully align the pins of the switches and bring the place and PCB together.
+1. Carefully align the pins of the switches and bring the plate and PCB together.
 1. Solder the switches.
 1. If there are console keys, solder the low-profile switches for them.
 1. Add the key caps.
@@ -100,7 +103,7 @@ Essentially, for all keyboards, the steps are:
    Keyboards can be tested in a real Atari machine, or you can build and use a
    [Decent Keyboard Tester](../misc-models/KeyboardTester/).
 
-### What if I messed up?
+### Troubleshooting
 
 #### Some keys don't work
 
@@ -150,7 +153,7 @@ should deal with misalignment of the switch.
 #### F#@#$%, I forgot to assemble the stabilizers before I soldered the switches
 
 Yeah, that sucks. Desoldering 57 switches is dangerous: the risk of damaging a pad
-is pretty high, especially on modern PCBs. You may have to dump that PCB once you're
+is pretty high, especially on modern PCBs. You may have to discard that PCB once you're
 done, but at least the switches should be reusable.
 
 #### I'm still stuck
