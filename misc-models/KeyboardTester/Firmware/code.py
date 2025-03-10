@@ -363,13 +363,13 @@ class MatrixKeyboard(Mode):
         # Setup the row pins
         for pin in self.row_pins:
             pinio = get_io(pin)
-            pinio.direction = digitalio.Direction.OUTPUT
-            pinio.value = True
+            pinio.direction = digitalio.Direction.INPUT
+            pinio.pull = digitalio.Pull.UP
         # Setup the column pins
         for pin in self.col_pins:
             pinio = get_io(pin)
-            pinio.direction = digitalio.Direction.INPUT
-            pinio.pull = digitalio.Pull.UP
+            pinio.direction = digitalio.Direction.OUTPUT
+            pinio.value = True
         # Setup the console GND pin
         if self.console_pin != None:
             self.console = get_io(self.console_pin)
@@ -416,15 +416,16 @@ class MatrixKeyboard(Mode):
         pixels.show()
     def loop(self):
         # Scan the matrix
+        # Diodes go from columns to rows
         shift = False
         control = False
         char = ''
-        for row_pin in range(len(self.row_pins)):
-            rowio = get_io(self.row_pins[row_pin])
-            rowio.value = False
-            for col_pin in range(len(self.col_pins)):
-                colio = get_io(self.col_pins[col_pin])
-                if colio.value == False:
+        for col_pin in range(len(self.col_pins)):
+            colio = get_io(self.col_pins[col_pin])
+            colio.value = False
+            for row_pin in range(len(self.row_pins)):
+                rowio = get_io(self.row_pins[row_pin])
+                if rowio.value == False:
                     key = self.matrix[row_pin][col_pin]
                     if key != None:
                         (_, _, led_index) = coordinates[key]
