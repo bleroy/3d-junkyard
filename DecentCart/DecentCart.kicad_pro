@@ -537,7 +537,9 @@
       "+5V": [
         "Power"
       ],
-      "+5V HOST": "Power",
+      "+5V HOST": [
+        "Power"
+      ],
       "/VBUS": [
         "Power"
       ],
@@ -556,7 +558,9 @@
       "Net-(D1-K)": [
         "Power"
       ],
-      "VBUS": "Power"
+      "VBUS": [
+        "Power"
+      ]
     },
     "netclass_patterns": []
   },
@@ -662,6 +666,12 @@
           "label": "Sim.Device",
           "name": "Sim.Device",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Rotation Offset",
+          "name": "JLCPCB Rotation Offset",
+          "show": true
         }
       ],
       "filter_string": "",
