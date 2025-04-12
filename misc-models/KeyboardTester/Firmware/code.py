@@ -360,7 +360,7 @@ class MatrixKeyboard(Mode):
         self.power_pin = None
         self.logo_leds = None
         self.frame_number = 0
-        self.last_char = None
+        self.last_key = None
         self.char_map = None
     def init(self):
         pixels.fill(0)
@@ -418,6 +418,11 @@ class MatrixKeyboard(Mode):
         # Setup the POWER LED
         pixels[coordinates['Power'][2]] = modulate(RED, led_intensity)
         pixels.show()
+    def reset_last_key(self):
+        if self.last_key != None:
+            (_, _, led_index) = coordinates[self.last_key]
+            pixels[led_index] = modulate(GREEN, led_intensity)
+        self.last_key = None
     def loop(self):
         # Scan the matrix
         shift = False
@@ -432,8 +437,10 @@ class MatrixKeyboard(Mode):
                 if colio.value == False:
                     key = self.matrix[row_pin][col_pin]
                     if key != None:
+                        if key != self.last_key:
+                            self.reset_last_key()
                         (_, _, led_index) = coordinates[key]
-                        pixels[led_index] = modulate(GREEN, led_intensity)
+                        pixels[led_index] = modulate(WHITE, led_intensity)
                         if key == self.shift_key:
                             shift = True
                             pixels[coordinates['RightShift'][2]] = modulate(GREEN, led_intensity)
@@ -442,7 +449,10 @@ class MatrixKeyboard(Mode):
                         if key != self.shift_key and key != self.control_key:
                             char = key
                         pixels.show()
+                        self.last_key = key
             rowio.value = True
+        if self.last_key != None:
+            self.reset_last_key()
         mapped_char = self.char_map[char] if char != '' and self.char_map != None and char in self.char_map else char
         # Output the key pressed
         if len(mapped_char) == 1:
@@ -451,7 +461,7 @@ class MatrixKeyboard(Mode):
             elif control and mapped_char != '<Control>':
                 ch('CTRL + ' + mapped_char)
             else:
-                ch(char.lower())
+                ch(mapped_char.lower())
         elif len(mapped_char) == 2 and mapped_char[0] != 'F':
             if shift:
                 ch(mapped_char[1])
@@ -465,30 +475,34 @@ class MatrixKeyboard(Mode):
         if self.start != None:
             self.start.value = True
             if self.console.value == True:
-                pixels[coordinates[self.start_key][2]] = modulate(GREEN, led_intensity)
+                pixels[coordinates[self.start_key][2]] = modulate(WHITE, led_intensity)
                 pixels.show()
                 ch('<Start>')
+                self.last_key = self.start_key
             self.start.value = False
         if self.select != None:
             self.select.value = True
             if self.console.value == True:
-                pixels[coordinates[self.select_key][2]] = modulate(GREEN, led_intensity)
+                pixels[coordinates[self.select_key][2]] = modulate(WHITE, led_intensity)
                 pixels.show()
                 ch('<Select>')
+                self.last_key = self.select_key
             self.select.value = False
         if self.option != None:
             self.option.value = True
             if self.console.value == True:
-                pixels[coordinates[self.option_key][2]] = modulate(GREEN, led_intensity)
+                pixels[coordinates[self.option_key][2]] = modulate(WHITE, led_intensity)
                 pixels.show()
                 ch('<Option>')
+                self.last_key = self.option_key
             self.option.value = False
         if self.reset != None:
             self.reset.value = True
             if self.console.value == True:
-                pixels[coordinates[self.reset_key][2]] = modulate(GREEN, led_intensity)
+                pixels[coordinates[self.reset_key][2]] = modulate(WHITE, led_intensity)
                 pixels.show()
                 ch('<Reset>')
+                self.last_key = self.reset_key
             self.reset.value = False
 
         if self.logo_leds != None:
@@ -525,7 +539,9 @@ class AtariXE(MatrixKeyboard):
         self.shift_key = 'LeftShift'
         self.control_key = 'CapsLock'
         self.logo_leds = ['0', '.', 'Enter', 'Help']
-        self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>', 'F8': '<Help>'}
+        self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>', 'F8': '<Help>',
+                         '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'Inverse': '<Inverse>', 'Break': '<Break>',
+                         'F1': '<F1>', 'F2': '<F2>', 'F3': '<F3>', 'F4': '<F4>', ',<': ',[', '.>': '.]'}
 
 class AtariXL(MatrixKeyboard):
     def __init__(self):
@@ -555,7 +571,9 @@ class AtariXL(MatrixKeyboard):
         self.shift_key = 'LeftShift'
         self.control_key = 'CapsLock'
         self.logo_leds = ['Insert', 'Home', 'PgUp', 'NumLck']
-        self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>', 'Help': '<Help>'}
+        self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>', 'Help': '<Help>',
+                         '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'Inverse': '<Inverse>', 'Break': '<Break>',
+                         'F1': '<F1>', 'F2': '<F2>', 'F3': '<F3>', 'F4': '<F4>', ',<': ',[', '.>': '.]'}
 
 modes = [AtariXE(), AtariXL(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
