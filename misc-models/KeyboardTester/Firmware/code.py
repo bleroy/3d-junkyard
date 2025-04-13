@@ -405,7 +405,7 @@ class MatrixKeyboard(Mode):
             pixels[coordinates[self.reset_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the POWER pin with PWM
         if self.power_pin != None:
-            ios[self.power_pin] = pwmio.PWMOut(self.power_pin, frequency=1000, duty_cycle=200)
+            ios[self.power_pin] = pwmio.PWMOut(self.power_pin, frequency=1000, duty_cycle=800)
         # Setup the default state of the keyboard visualization
         for row in self.matrix:
             for key in row:
@@ -560,13 +560,13 @@ class AtariXL(MatrixKeyboard):
             ['F3', 'Help',  'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
         self.console_pin = board.GP19
         self.start_pin = board.GP21
-        self.start_key = 'F9'
+        self.start_key = 'Start'
         self.select_pin = board.GP22
-        self.select_key = 'F10'
+        self.select_key = 'Select'
         self.option_pin = board.GP23
-        self.option_key = 'F11'
+        self.option_key = 'Option'
         self.reset_pin = board.GP24
-        self.reset_key = 'F12'
+        self.reset_key = 'Reset'
         self.power_pin = board.GP25
         self.shift_key = 'LeftShift'
         self.control_key = 'CapsLock'
