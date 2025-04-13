@@ -17536,7 +17536,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000616f916f")
 		(property "Reference" "J1"
 			(at 33.02 168.91 90)
@@ -17669,7 +17669,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000617001a3")
 		(property "Reference" "J4"
 			(at 104.648 168.656 90)
@@ -17775,7 +17775,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "02424f35-2e85-4951-a516-964c029e369a")
 		(property "Reference" "J2"
 			(at 33.528 153.416 90)
@@ -21090,7 +21090,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "64b02505-6cf9-4067-831f-f20f793559f8")
 		(property "Reference" "J3"
 			(at 30.48 139.7 90)
@@ -22185,7 +22185,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "8c0cc128-177d-4364-a53a-2e437100478a")
 		(property "Reference" "J11"
 			(at 132.588 151.13 90)
@@ -25181,7 +25181,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe910301-86ca-4ffc-8f21-bd2ec74934c5")
 		(property "Reference" "USB1-1"
