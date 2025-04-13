@@ -518,14 +518,14 @@ class AtariXE(MatrixKeyboard):
         self.row_pins = [board.GP14, board.GP15, board.GP13, board.GP16, board.GP8, board.GP19, board.GP6, board.GP7]
         self.col_pins = [board.GP20, board.GP5, board.GP9, board.GP10, board.GP11, board.GP12, board.GP18, board.GP17, board.GP21]
         self.matrix = [
-            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
-            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
-            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
-            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
-            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',       'F2',           'CapsLock'],
-            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
-            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
-            ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',      'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',      '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',      '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',       'Tab',          None],
+            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',  'F2',           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',       'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse', None,           None],
+            ['F3', 'F8',    'B',  'V',  'C',  'X',    'Z',       'F4',           'LeftShift']]
         self.console_pin = board.GP4
         self.start_pin = board.GP22
         self.start_key = 'F9'
@@ -550,14 +550,14 @@ class AtariXL(MatrixKeyboard):
         self.row_pins = [board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7, board.GP8, board.GP9]
         self.col_pins = [board.GP11, board.GP12, board.GP13, board.GP14, board.GP15, board.GP16, board.GP17, board.GP18, board.GP10]
         self.matrix = [
-            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
-            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
-            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
-            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
-            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',       'F2',           'CapsLock'],
-            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
-            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
-            ['F3', 'Help',  'B',  'V',  'C',  'X',    'Z',            'F4',           'LeftShift']]
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',      'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',      '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',      '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',       'Tab',          None],
+            ['F1', 'J',     'K',  'L',  ';:', '\'\"', 'Return',  'F2',           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',       'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse', None,           None],
+            ['F3', 'Help',  'B',  'V',  'C',  'X',    'Z',       'F4',           'LeftShift']]
         self.console_pin = board.GP19
         self.start_pin = board.GP21
         self.start_key = 'Start'
@@ -575,6 +575,36 @@ class AtariXL(MatrixKeyboard):
                          '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'Inverse': '<Inverse>', 'Break': '<Break>',
                          'F1': '<F1>', 'F2': '<F2>', 'F3': '<F3>', 'F4': '<F4>', ',<': ',[', '.>': '.]'}
 
+class Atari400(MatrixKeyboard):
+    def __init__(self):
+        super().__init__()
+        self.name = "Atari 400"
+        self.row_pins = [board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7, board.GP8, board.GP9]
+        self.col_pins = [board.GP11, board.GP12, board.GP13, board.GP14, board.GP15, board.GP16, board.GP17, board.GP18, board.GP10]
+        self.matrix = [
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',      'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',      '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',      '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',       'Tab',          None],
+            [None, 'J',     'K',  'L',  ';:', '\'\"', 'Return',  None,           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',       'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse', None,           None],
+            [None, None,    'B',  'V',  'C',  'X',    'Z',       None,           'LeftShift']]
+        self.console_pin = board.GP23
+        self.start_pin = board.GP22
+        self.start_key = 'Start'
+        self.select_pin = board.GP21
+        self.select_key = 'Select'
+        self.option_pin = board.GP20
+        self.option_key = 'Option'
+        self.reset_pin = board.GP19
+        self.reset_key = 'Reset'
+        self.shift_key = 'LeftShift'
+        self.control_key = 'CapsLock'
+        self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>',
+                         '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'Inverse': '<Inverse>', 'Break': '<Break>',
+                         ',<': ',[', '.>': '.]'}
+
 class Atari800(MatrixKeyboard):
     def __init__(self):
         super().__init__()
@@ -582,21 +612,21 @@ class Atari800(MatrixKeyboard):
         self.row_pins = [board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7, board.GP8, board.GP9]
         self.col_pins = [board.GP11, board.GP12, board.GP13, board.GP14, board.GP15, board.GP16, board.GP17, board.GP18, board.GP10]
         self.matrix = [
-            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',           'Backspace',    'Break'],
-            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',           '`~',           None],
-            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',           '\|',           None],
-            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',            'Tab',          None],
-            [None, 'J',     'K',  'L',  ';:', '\'\"', 'Return',       None,           'CapsLock'],
-            [None, 'H',     'G',  'F',  'D',  'S',    'A',            'RightControl', None],
-            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse',      None,           None],
-            [None, None,    'B',  'V',  'C',  'X',    'Z',            None,           'LeftShift']]
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',      'Backspace',    'Break'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',      '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',      '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',       'Tab',          None],
+            [None, 'J',     'K',  'L',  ';:', '\'\"', 'Return',  None,           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',       'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'Inverse', None,           None],
+            [None, None,    'B',  'V',  'C',  'X',    'Z',       None,           'LeftShift']]
         self.shift_key = 'LeftShift'
         self.control_key = 'CapsLock'
         self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>',
                          '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'Inverse': '<Inverse>', 'Break': '<Break>',
-                         'F1': '<F1>', 'F2': '<F2>', 'F3': '<F3>', 'F4': '<F4>', ',<': ',[', '.>': '.]'}
+                         ',<': ',[', '.>': '.]'}
 
-modes = [Atari800(), AtariXE(), AtariXL(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
+modes = [AtariXE(), AtariXL(), Atari400(), Atari800(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
 log('Mode: ' + modes[current_mode].name)
 modes[current_mode].init()
