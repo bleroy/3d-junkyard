@@ -26,7 +26,7 @@ Press the mode button repeatedly until you reach the mode for the keyboard to te
 
 Connect the keyboard to test.
 
-Start pressing each button on the keyboard. The corresponding LED on the tester should turn
+Start pressing each key on the keyboard. The corresponding LED on the tester should turn
 from orange to green. Continue doing that until all the lights are green.
 
 If a light remains orange after the corresponding key has been pressed, there is an issue
@@ -61,7 +61,7 @@ The connectors are:
 - DB15 at the bottom left of the board
 - USB-A connector to the right of the DB25 connector
 
-Don't solder the screen yet, as it's easier to do once the board is in the top half of the enclosure.
+Don't solder the display yet, as it's easier to do once the board is in the top half of the enclosure.
 
 ### The enclosure
 
