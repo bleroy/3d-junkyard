@@ -1,7 +1,6 @@
 import digitalio
 import microcontroller
 import board
-import pwmio
 import neopixel
 import math
 import random
@@ -96,30 +95,6 @@ YELLOW = 0xFFFF00
 ORANGE = 0xFF8000
 RED = 0xFF0000
 
-# (K3, K4, K5): row number
-K_to_row = {
-    (False, False, False): 6,
-    (True,  False, False): 1,
-    (False, True,  False): 4,
-    (True,  True,  False): 7,
-    (False, False, True ): 2,
-    (True,  False, True ): 8,
-    (False, True,  True ): 3,
-    (True,  True,  True ): 5
-}
-
-# (K0, K1, K2): col number
-K_to_col = {
-    (False, False, False): 7,
-    (True,  False, False): 6,
-    (False, True,  False): 3,
-    (True,  True,  False): 8,
-    (False, False, True ): 1,
-    (True,  False, True ): 5,
-    (False, True,  True ): 2,
-    (True,  True,  True ): 4
-}
-
 # I/O utils
 ios = dict()
 def get_io(pin):
@@ -168,9 +143,6 @@ def ch(chars):
 def cls():
     oled.fill(0)
     oled.show()
-
-log("DecentKeyboardTester")
-log("(c) B. Le Roy 2025")
 
 def modulate(color, intensity):
     intensity = max(0, min(1, intensity))
@@ -362,7 +334,11 @@ class MatrixKeyboard(Mode):
         self.frame_number = 0
         self.last_key = None
         self.char_map = None
+        self.row_count = 0
+        self.col_count = 0
     def init(self):
+        self.col_count = len(self.col_pins)
+        self.row_count = len(self.row_pins)
         pixels.fill(0)
         # Setup the row pins
         for pin in self.row_pins:
@@ -377,35 +353,37 @@ class MatrixKeyboard(Mode):
         # Setup the console GND pin
         if self.console_pin != None:
             self.console = get_io(self.console_pin)
-            self.console.direction = digitalio.Direction.INPUT
-            self.console.pull = digitalio.Pull.DOWN
+            self.console.direction = digitalio.Direction.OUTPUT
+            self.console.value = False
         # Setup the START pin
         if self.start_pin != None:
             self.start = get_io(self.start_pin)
-            self.start.direction = digitalio.Direction.OUTPUT
-            self.start.value = False
+            self.start.direction = digitalio.Direction.INPUT
+            self.start.pull = digitalio.Pull.UP
             pixels[coordinates[self.start_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the SELECT pin
         if self.select_pin != None:
             self.select = get_io(self.select_pin)
-            self.select.direction = digitalio.Direction.OUTPUT
-            self.select.value = False
+            self.select.direction = digitalio.Direction.INPUT
+            self.select.pull = digitalio.Pull.UP
             pixels[coordinates[self.select_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the OPTION pin
         if self.option_pin != None:
             self.option = get_io(self.option_pin)
-            self.option.direction = digitalio.Direction.OUTPUT
-            self.option.value = False
+            self.option.direction = digitalio.Direction.INPUT
+            self.option.pull = digitalio.Pull.UP
             pixels[coordinates[self.option_key][2]] = modulate(ORANGE, led_intensity)
         # Setup the RESET pin
         if self.reset_pin != None:
             self.reset = get_io(self.reset_pin)
-            self.reset.direction = digitalio.Direction.OUTPUT
-            self.reset.value = False
+            self.reset.direction = digitalio.Direction.INPUT
+            self.reset.pull = digitalio.Pull.UP
             pixels[coordinates[self.reset_key][2]] = modulate(ORANGE, led_intensity)
-        # Setup the POWER pin with PWM
+        # Setup the POWER pin high
         if self.power_pin != None:
-            ios[self.power_pin] = pwmio.PWMOut(self.power_pin, frequency=1000, duty_cycle=800)
+            powerio = get_io(self.power_pin)
+            powerio.direction = digitalio.Direction.OUTPUT
+            powerio.value = True
         # Setup the default state of the keyboard visualization
         for row in self.matrix:
             for key in row:
@@ -423,18 +401,22 @@ class MatrixKeyboard(Mode):
             (_, _, led_index) = coordinates[self.last_key]
             pixels[led_index] = modulate(GREEN, led_intensity)
         self.last_key = None
+    def activate_row(self, row, value):
+        rowio = get_io(self.row_pins[row])
+        rowio.value = not value
+    def read_col(self, col):
+        colio = get_io(self.col_pins[col])
+        return colio.value == False
     def loop(self):
         # Scan the matrix
         shift = False
         control = False
         char = ''
         mapped_char = ''
-        for row_pin in range(len(self.row_pins)):
-            rowio = get_io(self.row_pins[row_pin])
-            rowio.value = False
-            for col_pin in range(len(self.col_pins)):
-                colio = get_io(self.col_pins[col_pin])
-                if colio.value == False:
+        for row_pin in range(self.row_count):
+            self.activate_row(row_pin, True)
+            for col_pin in range(self.col_count):
+                if self.read_col(col_pin):
                     key = self.matrix[row_pin][col_pin]
                     if key != None:
                         if key != self.last_key:
@@ -450,7 +432,7 @@ class MatrixKeyboard(Mode):
                             char = key
                         pixels.show()
                         self.last_key = key
-            rowio.value = True
+            self.activate_row(row_pin, False)
         if self.last_key != None:
             self.reset_last_key()
         mapped_char = self.char_map[char] if char != '' and self.char_map != None and char in self.char_map else char
@@ -472,38 +454,26 @@ class MatrixKeyboard(Mode):
         elif mapped_char != '':
             ch(("SHIFT + " if shift and mapped_char != '<Shift>' else "") + ("CTRL + " if control and mapped_char != '<Control>' else "") + mapped_char)
         # Check the console keys
-        if self.start != None:
-            self.start.value = True
-            if self.console.value == True:
-                pixels[coordinates[self.start_key][2]] = modulate(WHITE, led_intensity)
-                pixels.show()
-                ch('<Start>')
-                self.last_key = self.start_key
-            self.start.value = False
-        if self.select != None:
-            self.select.value = True
-            if self.console.value == True:
-                pixels[coordinates[self.select_key][2]] = modulate(WHITE, led_intensity)
-                pixels.show()
-                ch('<Select>')
-                self.last_key = self.select_key
-            self.select.value = False
-        if self.option != None:
-            self.option.value = True
-            if self.console.value == True:
-                pixels[coordinates[self.option_key][2]] = modulate(WHITE, led_intensity)
-                pixels.show()
-                ch('<Option>')
-                self.last_key = self.option_key
-            self.option.value = False
-        if self.reset != None:
-            self.reset.value = True
-            if self.console.value == True:
-                pixels[coordinates[self.reset_key][2]] = modulate(WHITE, led_intensity)
-                pixels.show()
-                ch('<Reset>')
-                self.last_key = self.reset_key
-            self.reset.value = False
+        if self.start != None and self.start.value == False:
+            pixels[coordinates[self.start_key][2]] = modulate(WHITE, led_intensity)
+            pixels.show()
+            ch('<Start>')
+            self.last_key = self.start_key
+        if self.select != None and self.select.value == False:
+            pixels[coordinates[self.select_key][2]] = modulate(WHITE, led_intensity)
+            pixels.show()
+            ch('<Select>')
+            self.last_key = self.select_key
+        if self.option != None and self.option.value == False:
+            pixels[coordinates[self.option_key][2]] = modulate(WHITE, led_intensity)
+            pixels.show()
+            ch('<Option>')
+            self.last_key = self.option_key
+        if self.reset != None and self.reset.value == False:
+            pixels[coordinates[self.reset_key][2]] = modulate(WHITE, led_intensity)
+            pixels.show()
+            ch('<Reset>')
+            self.last_key = self.reset_key
 
         if self.logo_leds != None:
             for (i, led) in enumerate(self.logo_leds):
@@ -626,9 +596,119 @@ class Atari800(MatrixKeyboard):
                          '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'Inverse': '<Inverse>', 'Break': '<Break>',
                          ',<': ',[', '.>': '.]'}
 
-modes = [AtariXE(), AtariXL(), Atari400(), Atari800(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
+# Maps from col/row number to data line values for the 4051s
+
+# (K3, K4, K5): row number
+row_to_K = {
+    5: (False, False, False),
+    0: (True,  False, False),
+    3: (False, True,  False),
+    6: (True,  True,  False),
+    1: (False, False, True ),
+    7: (True,  False, True ),
+    2: (False, True,  True ),
+    4: (True,  True,  True )
+}
+
+# (K0, K1, K2): col number
+K_to_col = {
+    6: (False, False, False),
+    5: (True,  False, False),
+    2: (False, True,  False),
+    7: (True,  True,  False),
+    0: (False, False, True ),
+    4: (True,  False, True ),
+    1: (False, True,  True ),
+    3: (True,  True,  True )
+}
+
+class Scanning4051MatrixKeyboard(MatrixKeyboard):
+    def __init__(self):
+        super().__init__()
+        self.name = "Scanning matrix keyboard"
+        self.scan_pin = None
+    def init(self):
+        super().init()
+        # Col pins are outputs for scanning matrix mode except for the last one
+        for pin in self.col_pins:
+            pinio = get_io(pin)
+            pinio.direction = digitalio.Direction.OUTPUT
+        pinio = get_io(self.col_pins[3])
+        pinio.direction = digitalio.Direction.INPUT
+        pinio.pull = digitalio.Pull.UP
+        self.col_count = 9
+        self.row_count = 8
+        scan_io = get_io(self.scan_pin)
+        scan_io.direction = digitalio.Direction.INPUT
+    def activate_row(self, row, value):
+        # Set the three row pins to the binary value of the row number
+        K_values = row_to_K[row]
+        row_io = get_io(self.row_pins[0])
+        row_io.value = K_values[0]
+        row_io = get_io(self.row_pins[1])
+        row_io.value = K_values[1]
+        row_io = get_io(self.row_pins[2])
+        row_io.value = K_values[2]
+        #print("Row: " + str(row) + " " + str(K_values))
+    def read_col(self, col):
+        # Last col has its own pin
+        if col != 8:
+        # Set the three column pins to the binary value of the column number
+            K_values = K_to_col[col]
+            col_io = get_io(self.col_pins[0])
+            col_io.value = K_values[0]
+            col_io = get_io(self.col_pins[1])
+            col_io.value = K_values[1]
+            col_io = get_io(self.col_pins[2])
+            col_io.value = K_values[2]
+            # Then read the value of the scan pin
+            scan_io = get_io(self.scan_pin)
+            return scan_io.value == False
+        col_io = get_io(self.col_pins[3])
+        return col_io.value == False
+
+class Atari1200XL(Scanning4051MatrixKeyboard):
+    def __init__(self):
+        super().__init__()
+        self.name = "Atari 1200XL"
+        self.row_pins = [board.GP10, board.GP9, board.GP8]
+        self.col_pins = [board.GP13, board.GP12, board.GP11, board.GP16]
+        self.scan_pin = board.GP14
+        self.matrix = [
+            ['7&', None,    '8*', '9(', '0)', '-_',   '=+',      'Backspace',    'F12'],
+            ['6^', None,    '5%', '4$', '3#', '2@',   '1!',      '`~',           None],
+            ['U',  None,    'I',  'O',  'P',  '[{',   ']}',      '\|',           None],
+            ['Y',  None,    'T',  'R',  'E',  'W',    'Q',       'Tab',          None],
+            ['F5', 'J',     'K',  'L',  ';:', '\'\"', 'Return',  'F6',           'CapsLock'],
+            [None, 'H',     'G',  'F',  'D',  'S',    'A',       'RightControl', None],
+            ['N',  'Space', 'M',  ',<', '.>', '/?',   'F11',     None,           None],
+            ['F7', 'F10',   'B',  'V',  'C',  'X',    'Z',       'F8',           'LeftShift']]
+        self.power_pin = board.GP2
+        self.console_pin = board.GP3
+        self.start_pin = board.GP6
+        self.start_key = 'F2'
+        self.select_pin = board.GP5
+        self.select_key = 'F3'
+        self.option_pin = board.GP4
+        self.option_key = 'F4'
+        self.reset_pin = board.GP7
+        self.reset_key = 'Esc'
+        self.shift_key = 'LeftShift'
+        self.control_key = 'CapsLock'
+        self.logo_leds = ['0', '.', 'Enter', 'Help']
+        self.char_map = {'RightControl': '<Caps>', 'CapsLock': '<Control>', 'LeftShift': '<Shift>', '`~': 'Esc', '-_': '<', '=+': '>', 'F10': '<Help>',
+                         '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'F11': '<Inverse>', 'F12': '<Break>',
+                         'F6': '<F1>', 'F7': '<F2>', 'F8': '<F3>', 'F9': '<F4>', ',<': ',[', '.>': '.]'}
+
+modes = [Atari1200XL(), AtariXE(), AtariXL(), Atari400(), Atari800(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
+
+log("Decent Retro")
+log("Keyboard Tester")
+log("(c) B. Le Roy 2025")
+
 log('Mode: ' + modes[current_mode].name)
+
 modes[current_mode].init()
 
 while True:
