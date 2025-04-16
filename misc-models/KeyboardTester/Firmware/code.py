@@ -700,7 +700,7 @@ class Atari1200XL(Scanning4051MatrixKeyboard):
                          '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'F11': '<Inverse>', 'F12': '<Break>',
                          'F6': '<F1>', 'F7': '<F2>', 'F8': '<F3>', 'F9': '<F4>', ',<': ',[', '.>': '.]'}
 
-modes = [Atari1200XL(), AtariXE(), AtariXL(), Atari400(), Atari800(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
+modes = [AtariXE(), AtariXL(), Atari400(), Atari800(), Atari1200XL(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
 
 log("Decent Retro")
