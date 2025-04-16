@@ -66,7 +66,7 @@ You'll need 57 MX compatible switches.
 
 ### Stabilizers and adapters
 
-The Decent 800 keyboard uses two 2U Durock v2 stabilizers for the right shift and backspace keys, and one 6.25U Durock v2 stabilizer for the space bar.
+The Decent 800 keyboard uses three 2U Durock v2 stabilizers for the shift and backspace keys, and one 6.25U Durock v2 stabilizer for the space bar.
 
 ### PCB
 
