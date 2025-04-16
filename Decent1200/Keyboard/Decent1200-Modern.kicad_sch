@@ -11561,7 +11561,7 @@
 		)
 	)
 	(global_label "COL_1"
-		(shape output)
+		(shape input)
 		(at 25.4 158.75 0)
 		(fields_autoplaced yes)
 		(effects
