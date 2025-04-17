@@ -82,9 +82,9 @@ The plate is just an aluminum PCB. Download [the Gerber](./Plate/production/Dece
 
 ### Connectors
 
-The connector to the motherboard is a pair of cables with female Dupont connectors on both ends. LED power comes through a pair of wires that get soldered onto the power board on one end, and should have female Dupont connectors on the other side. We need 22 pins spaced 2.54mm (0.1") on a single line for the main keyboard signals and two for LED power. The cables should be at least 10cm long, but 15cm or 20cm will be more comfortable.
+The connector to the motherboard is a pair of cables with female Dupont connectors on both ends. LED power comes through a pair of wires that get soldered onto the power board on one end, and should have female Dupont connectors on the other side. We need 18 pins spaced 2.54mm (0.1") on a single line for the main keyboard signals and two for LED power. The cables should be at least 10cm long, but 15cm or 20cm will be more comfortable.
 
-You'll also need a 24 pin 2.54mm angled header.
+You'll also need a 20 pin 2.54mm angled header.
 
 ## Assembly
 
