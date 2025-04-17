@@ -92,9 +92,9 @@ Once you've gathered all the parts, you can assemble them in the following order
 
 ### Solder the connector
 
-The 24-pin angled header needs to be soldered before assembling the switches because the solder points will be between the PCB and the plate. That may make some switch solder points a little more difficult as they will be partially under the pins. Make sure to not let the connector pins through the board too much. Your solder points should be almost flush with the PCB because one of the stabilizers for the space bar will need to be assembled over that. Note that the screw for that stabilizers is a little tricky to set right.
+The 20-pin angled header needs to be soldered before assembling the switches because the solder points will be between the PCB and the plate. That may make some switch solder points a little more difficult as they will be partially under the pins. Make sure to not let the connector pins through the board too much. Your solder points should be almost flush with the PCB because one of the stabilizers for the space bar will need to be assembled over that. Note that the screw for that stabilizers is a little tricky to set right.
 
-Solder the 24-pin angled header under the PCB (solder on the top of the PCB, header under). Make sure to leave enough space between the PCB and the pins.
+Solder the 20-pin angled header under the PCB (solder on the top of the PCB, header under). Make sure to leave enough space between the PCB and the pins.
 
 ### Mount the stabilizers
 
