@@ -178,7 +178,7 @@ AtariAge forums.
 |20P angled pin headers        |    |    |      |     |    1|
 |24P angled pin headers        |    |    |      |    1|     |
 |6.5U Durock v2 stabilizer     |   1|   1|     1|    1|    1|
-|2U Durock v2 stabilizer       |   3|   3|     3|    1|    3|
+|2U Durock v2 stabilizer       |   3|   3|     4|    1|    3|
 |MX-style switches             |  57|  57|    56|   62|   57|
 |Kailh Choc v1 switches        |   5|   5|    11|     |     |
 |Key caps                      |  57|  57|    56|   62|   57|
