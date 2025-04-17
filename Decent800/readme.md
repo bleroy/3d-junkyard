@@ -90,6 +90,12 @@ You'll also need a 20 pin 2.54mm angled header.
 
 Once you've gathered all the parts, you can assemble them in the following order:
 
+### Solder the connector
+
+The 24-pin angled header needs to be soldered before assembling the switches because the solder points will be between the PCB and the plate. That may make some switch solder points a little more difficult as they will be partially under the pins. Make sure to not let the connector pins through the board too much. Your solder points should be almost flush with the PCB because one of the stabilizers for the space bar will need to be assembled over that. Note that the screw for that stabilizers is a little tricky to set right.
+
+Solder the 24-pin angled header under the PCB (solder on the top of the PCB, header under). Make sure to leave enough space between the PCB and the pins.
+
 ### Mount the stabilizers
 
 The stabilizers consist of a larger part that has the threaded part, a smaller part that slides into the previous one, a metal bar linking two assemblies of the two previous parts, and some hardware. The stabilizers are best assembled in this order: slide the smaller part into the larger one (make sure you orient it properly), then insert one end of the metal rod into that assembly and push it into place so it clicks and is properly secured. Once you've done that with both ends of the stabilizer, you should be able to verify both ends lift together and with no friction (some people like to lube their stabilizers by the way).
@@ -97,12 +103,6 @@ The stabilizers consist of a larger part that has the threaded part, a smaller p
 Once the stabilizers are assembled, you can put them in their respective places on the top side of the PCB. Insert the bottom, non-threaded part first, try to lay the stabilizer's surface flat on the PCB, and push the top threaded part into place. This usually moves the other end a bit, so make sure both ends are properly inserted all the way into the holes in the PCB.
 
 Turn the PCB over. Position one of the small washers around each of the screw holes for the stabilizers and secure it with a screw.
-
-### Solder the connector
-
-The 24-pin angled header needs to be soldered before assembling the switches because the solder points will be between the PCB and the plate. That will make some switch solder points a little more difficult as they will be partially under the pins.
-
-Solder the 24-pin angled header under the PCB (solder on the top of the PCB, header under). Make sure to leave enough space between the PCB and the pins.
 
 ### Mount the switches onto the plate
 
