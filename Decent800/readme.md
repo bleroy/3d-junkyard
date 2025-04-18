@@ -118,15 +118,13 @@ You can secure the boards together with tape or clothespins until you've soldere
 
 Solder each switch onto the PCBs.
 
-Note the console keys need to be soldered separately after being carefully aligned by hand. I usually solder one leg first, then adjust the alignment and solder the second one to secure it in place.
-
 ### Plug the cables
 
 Plug one end of your cables onto those headers.
 
 ### Add the key caps
 
-Assemble the key caps onto the switches starting with the stabilized keys. Don't add the caps to the console keys as that will make it difficult to get the keyboard through the tight console key holes.
+Assemble the key caps onto the switches starting with the stabilized keys.
 
 Your keyboard is now assembled. Let's mount it into the computer.
 
