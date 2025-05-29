@@ -171,8 +171,8 @@ AtariAge forums.
 |5P F/F Dupont                 |    |    |     1|     |     |
 |9P F/F Dupont                 |    |    |      |     |    2|
 |10P F/F Dupont                |    |    |     1|     |     |
-|10P M/F Dupont                |    |    |      |     |    1|
-|12P M/F Dupont                |    |    |      |     |    1|
+|10P M/F Dupont                |    |    |      |    1|     |
+|12P M/F Dupont                |    |    |      |    1|     |
 |2P F Dupont, other end tinned |    |    |      |    1|    1|
 |15P angled pin headers        |    |    |     1|     |     |
 |20P angled pin headers        |    |    |      |     |    1|
@@ -282,10 +282,10 @@ If you can find better ones, for example local suppliers, fantastic!
 
 ## Decent800
 
-- [PCB Gerber](../Decent800/Keyboard/production/Decent800_Rev_2.1.zip),
-  [BOM](../Decent800/Keyboard/production/Decent800_Rev_2.1-bom.csv) and
-  [positions](../Decent800/Keyboard/production/Decent800_Rev_2.1-positions.csv)
-- [Plate](../Decent800/Plate/production/Decent800-plate-gerber.zip) should
+- [PCB Gerber](../Decent800/Keyboard/production/Decent800_keyboard_3M.zip),
+  [BOM](../Decent800/Keyboard/production/Decent800_Rev_3M-bom.csv) and
+  [positions](../Decent800/Keyboard/production/Decent800_Rev_3M-positions.csv)
+- [Plate](../Decent800/Plate/production/Decent800_Rev3M.zip) should
   be made in aluminium with the default 1.6mm thickness and a black silkscreen.
 - [Caps](../Decent800/Caps/Decent_Atari_800.svg)
 - Printed brackets [1](../Decent800/Misc/Decent800%20brackets-ScrewColumn%201.stl),

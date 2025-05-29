@@ -8,7 +8,7 @@ If you're looking to modify an XE computer, head over to [the DecentXE project](
 
 ## Current version
 
-The current revision of the Decent 800 keyboard is: rev. 2.
+The current revision of the Decent 800 keyboard is: rev. 3M. There's an older revision that can take low-profile switches and printed adapters for vintage key caps that I'm not covering in this readme.
 
 ## Can I buy one?
 
@@ -34,7 +34,7 @@ With any type of switch, there is a wide array of choices. If you're new to the 
 
 ## Design
 
-![Decent 800 schematic](./Media/Decent800.svg)
+![Decent 800 schematic](./Media/Decent800-M.svg)
 
 The Decent 800 project is made of the following parts (this is not a BOM but a list of custom parts created for this project; see below for the actual BOM):
 
@@ -56,7 +56,7 @@ The project is designed around the conservation of the vintage look of the Atari
 
 ### Key caps
 
-You'll need a set of caps that you can order from me or from [WASD](https://www.wasdkeyboards.com/decentx-by-xl-freak-85-key-custom-cherry-mx-keycap-set.html).
+You'll need a set of caps that you can order from me or from GoblinTech.
 
 ![The Decent 800 modern layout](./Media/decent_atari_800_charcoalmakerpreview.png)
 
@@ -70,15 +70,15 @@ The Decent 800 keyboard uses three 2U Durock v2 stabilizers for the shift and ba
 
 ### PCB
 
-Use [the Gerber](./Keyboard/production/Decent800-Rev-2.zip), [BOM](./Keyboard/production/Decent800-Rev-2-BOM.csv) and [position](./Keyboard/production/Decent800-Rev-2-Positions.csv) files to order a PCB with all the SMD parts assembled.
+Use [the Gerber](./Keyboard/production/Decent800_keyboard_3M.zip), [BOM](./Keyboard/production/Decent800_Rev_3M-bom.csv) and [position](./Keyboard/production/Decent800_Rev_3M-positions.csv) files to order a PCB with all the SMD parts assembled.
 
-![The Decent800 PCB](./Media/Decent800-keyboard-front.png)
+![The Decent800 PCB](./Media/Decent800M-keyboard-front.png)
 
 ### Plate
 
-The plate is just an aluminum PCB. Download [the Gerber](./Plate/production/Decent800-plate-gerber.zip) and have it produced in 1.6mm aluminum. I recommend having this done in black.
+The plate is just an aluminum PCB. Download [the Gerber](./Plate/production/Decent800_Rev3M.zip) and have it produced in 1.6mm aluminum. I recommend having this done in black even though it's more expensive because the default white is very visible between the caps.
 
-![Decent 800 aluminum plate](./Media/Decent800-plate.png)
+![Decent 800 aluminum plate](./Media/Decent800M-plate.png)
 
 ### Connectors
 
@@ -166,7 +166,7 @@ Congratulations, you're done! Turn your computer on and enjoy your mechanical ke
 
 Defects and mistakes happen. If when testing your keyboard, you notice a key or a bunch of them don't work, testing and fixing the keyboard is usually quite easy.
 
-![The back of the Decent800 PCB](./Media/Decent800-keyboard-back.png)
+![The back of the Decent800 PCB](./Media/Decent800M-keyboard-back.png)
 
 The back of the board shows the matrix the keyboard is built on. It's easy, from the indications there to figure out what pins a switch is supposed to connect. It's like coordinates: the keyboard is essentially a matrix of switches with diodes behind them. You can test continuity using the connector pins and the diode testing mode of your multimeter. Connect your multimeter, press the switch. You can also test the switch directly, and test continuity from it to its neighbours and to the connectors. Most problems can be found this way, and if the keyboard needs repairs, it's usually easy to pull an additional wire to fix a damaged trace.
 
@@ -178,7 +178,7 @@ And of course, many thanks to all those who provided feedback on the [DecentXE k
 
 ## What about vintage?
 
-The current PCB suports vintage versions of the keyboard through the use of Kailh Choc v1 switches and printed adapters that bridge the gap between the footprint of the Kailh switches and the Atari key caps. The adapters can be printed from models that are in [the SCAD file for all adapters](../Atari130MX/Stems/keeb-stem.scad). Wide keys are offset, which necessitates weird positioning of the switch footprints on the PCB.
+The current PCB supports only modern switches and caps. The older version 2.1 supports vintage versions of the keyboard through the use of Kailh Choc v1 switches and printed adapters that bridge the gap between the footprint of the Kailh switches and the Atari key caps. The adapters can be printed from models that are in [the SCAD file for all adapters](../Atari130MX/Stems/keeb-stem.scad). Wide keys are offset, which necessitates weird positioning of the switch footprints on the PCB.
 
 There's a reason why I stopped producing vintage keyboards: they are of much lower quality than the modern ones, so if you want to go that route, you're on your own, sorry...
 
