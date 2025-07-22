@@ -257,8 +257,8 @@ If you can find better ones, for example local suppliers, fantastic!
 ## Decent1200
 
 - [PCB Gerber](../Decent1200/Keyboard/production/Decent1200_modern_keyboard_5m.zip),
-  [BOM](../Decent1200/Keyboard/production/Decent1200_keyboard_3-bom.csv) and
-  [positions](../Decent1200/Keyboard/production/Decent1200_keyboard_3-positions.csv)
+  [BOM](../Decent1200/Keyboard/production/Decent1200_modern_keyboard_5m-bom.csv) and
+  [positions](../Decent1200/Keyboard/production/Decent1200_modern_keyboard_5m-positions.csv)
 - [Plate](../Decent1200/Plate/production/Decent1200_plate_4m.zip) should
   be made in aluminium with the default 1.6mm thickness and a black silkscreen.
 - [Caps](../Decent1200/Caps/Atari%201200XL.svg)
