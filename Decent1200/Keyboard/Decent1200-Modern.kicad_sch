@@ -26876,7 +26876,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "LED"
 			(at 139.7 58.674 0)
 			(effects
 				(font
@@ -26930,7 +26930,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Position Offset" ""
+		(property "JLCPCB Position Offset" "0,5.5"
 			(at 139.7 63.5 0)
 			(effects
 				(font
