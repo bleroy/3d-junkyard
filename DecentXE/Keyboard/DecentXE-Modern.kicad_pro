@@ -60,8 +60,46 @@
         }
       ],
       "drc_exclusions": [
-        "solder_mask_bridge|38581244|52329067|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
-        "solder_mask_bridge|38779130|52436642|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7"
+        [
+          "solder_mask_bridge|26475281|45086287|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
+          ""
+        ],
+        [
+          "solder_mask_bridge|29904648|133165041|1c8d61a5-b797-423f-af1e-9249640b8d2a|3f679949-e7fa-4089-8836-2cd137240695",
+          ""
+        ],
+        [
+          "solder_mask_bridge|30102534|133057466|1c8d61a5-b797-423f-af1e-9249640b8d2a|3f679949-e7fa-4089-8836-2cd137240695",
+          ""
+        ],
+        [
+          "solder_mask_bridge|32076032|143996193|472ff713-992e-4df7-b724-866cbab90935|5e8f742f-6bc1-4fe3-b544-5976adb8810a",
+          ""
+        ],
+        [
+          "solder_mask_bridge|33349502|27600509|f123b200-c4bb-48c7-b81c-39312fc90a83|b4c006df-7e6e-4aa6-9ba4-e71e97c68209",
+          ""
+        ],
+        [
+          "solder_mask_bridge|38581244|52329067|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
+          ""
+        ],
+        [
+          "solder_mask_bridge|38779130|52436642|f41e9a1c-76b5-4284-9253-709e87b95a61|3e99f7f9-3a94-42fe-a5f3-d9ddbbf19cd7",
+          ""
+        ],
+        [
+          "solder_mask_bridge|41026954|123680756|1c8d61a5-b797-423f-af1e-9249640b8d2a|3f679949-e7fa-4089-8836-2cd137240695",
+          ""
+        ],
+        [
+          "solder_mask_bridge|76956498|138924509|472ff713-992e-4df7-b724-866cbab90935|5e8f742f-6bc1-4fe3-b544-5976adb8810a",
+          ""
+        ],
+        [
+          "solder_mask_bridge|78229968|32672193|f123b200-c4bb-48c7-b81c-39312fc90a83|b4c006df-7e6e-4aa6-9ba4-e71e97c68209",
+          ""
+        ]
       ],
       "meta": {
         "filename": "board_design_settings.json",
@@ -74,16 +112,19 @@
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
+        "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
+        "footprint_filters_mismatch": "ignore",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "hole_to_hole": "error",
         "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
@@ -94,9 +135,11 @@
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
+        "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
         "net_conflict": "warning",
+        "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
@@ -108,10 +151,13 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
+        "track_angle": "error",
         "track_dangling": "warning",
+        "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -126,6 +172,7 @@
         "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.025,
+        "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
@@ -143,10 +190,11 @@
       },
       "teardrop_options": [
         {
-          "td_onpadsmd": true,
+          "td_onpthpad": true,
           "td_onroundshapesonly": false,
+          "td_onsmdpad": true,
           "td_ontrackend": false,
-          "td_onviapad": true
+          "td_onvia": true
         }
       ],
       "teardrop_parameters": [
@@ -231,6 +279,7 @@
       "mfg": "",
       "mpn": ""
     },
+    "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -457,7 +506,7 @@
   },
   "meta": {
     "filename": "DecentXE-Modern.kicad_pro",
-    "version": 1
+    "version": 3
   },
   "net_settings": {
     "classes": [
@@ -472,6 +521,7 @@
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -480,7 +530,7 @@
       }
     ],
     "meta": {
-      "version": 3
+      "version": 4
     },
     "net_colors": null,
     "netclass_assignments": null,
