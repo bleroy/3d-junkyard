@@ -16,7 +16,7 @@ But wait!... That's not all. Since the project started, there's been multiple re
 
 ## Current version
 
-The current revision of the DecentXE keyboard is: **rev. 15.1**.
+The current revision of the DecentXE keyboard is: **rev. 15.2**.
 
 ## Can I buy one?
 
@@ -221,9 +221,9 @@ The [DecentXE KiCad project](./Keyboard/DecentXE-Modern.kicad_pcb) should have e
 ![The DecentXE main board](./Media/DecentXE-Modern-front.png)
 
 * Optimal:
-    - [DecentXE Modern main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Modern_15.1.zip)
-    - [DecentXE Modern BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_15.1-bom.csv)
-    - [DecentXE Modern Position file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_15.1-positions.csv)
+    - [DecentXE Modern main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Modern_15.2.zip)
+    - [DecentXE Modern BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2_bom.csv)
+    - [DecentXE Modern Position file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2-positions.csv)
 * Fine:
     - [DecentXE Vintage main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Vintage_15.zip)
     - [DecentXE Vintage BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Vintage_15-bom.csv)

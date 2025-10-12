@@ -222,9 +222,9 @@ If you can find better ones, for example local suppliers, fantastic!
 
 ### DecentXE
 
-- [PCB Gerber](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.1.zip),
-  [BOM](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.1-bom.csv) and
-  [positions](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.1-positions.csv)
+- [PCB Gerber](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2.zip),
+  [BOM](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2-bom.csv) and
+  [positions](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2-positions.csv)
 - [Plate](../DecentXE/Plate/production/Decent_XE_Keyboard_Plate_Modern_15m.zip) should
   be made in aluminium with the default 1.6mm thickness and a black silkscreen.
 - [Flex cable](../DecentXL/DecentXL-Cable/production/gerber.zip): tell the fabrication
