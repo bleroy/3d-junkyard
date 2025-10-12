@@ -240,9 +240,9 @@ If you can find better ones, for example local suppliers, fantastic!
 
 ### DecentXL
 
-- [PCB Gerber](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_4.1m.zip),
-  [BOM](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_4.1m-bom.csv) and
-  [positions](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_4.1m-positions.csv)
+- [PCB Gerber](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m.zip),
+  [BOM](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m-bom.csv) and
+  [positions](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m-positions.csv)
 - [Plate](../DecentXL/DecentXL-plate/production/DecentXL_plate_4m.zip) should
   be made in aluminium with the default 1.6mm thickness and a black silkscreen.
 - [Flex cable](../DecentXL/DecentXL-Cable/production/gerber.zip): tell the fabrication

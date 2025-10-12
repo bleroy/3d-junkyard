@@ -160,7 +160,7 @@ Contact me if you have an as yet unsupported shape of vintage cap. If you're OK 
 
 ### PCB
 
-For the modern version, use [the Gerber](./DecentXL-keyboard/production/DecentXL_keyboard_4.1m.zip), [BOM](./DecentXL-keyboard/production/DecentXL_keyboard_4.1m-bom.csv) and [position](./DecentXL-keyboard/production/DecentXL_keyboard_4.1m-positions.csv) files to order a PCB with all the SMD parts assembled.
+For the modern version, use [the Gerber](./DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m-bom.csv), [BOM](./DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m-bom.csv) and [position](./DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m-positions.csv) files to order a PCB with all the SMD parts assembled.
 
 ![The DecentXL Modern PCB](./Media/DecentXL-keyboard-modern-front.png)
 
