@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RPI_RMC20452T")(type "KiCad")(uri "${KIPRJMOD}/Library/RPI_RMC20452T.kicad_sym")(options "")(descr ""))
+)

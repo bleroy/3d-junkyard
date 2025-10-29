@@ -60,19 +60,23 @@
       ],
       "drc_exclusions": [
         [
-          "hole_clearance|130261333|55179500|c3381024-3958-4495-9f71-9ed9ea341567|0712ebc6-dd01-47c6-863e-04956f219b36",
+          "copper_edge_clearance|121836040|93520620|bfeccc57-58aa-4ef6-b792-892db04148aa|2bfed7ce-5434-4b98-b27e-608aa18b841c",
           ""
         ],
         [
-          "hole_clearance|131161333|55179500|c3381024-3958-4495-9f71-9ed9ea341567|cee1dbd9-4c28-4abe-b7b7-155880c35910",
+          "hole_clearance|150587568|58024779|fd7b3f91-39dc-4bd1-a18b-afdcf80c4839|18271dce-caa3-4971-bf6a-2f054207e6c7",
           ""
         ],
         [
-          "hole_clearance|134161333|55179500|3c697e1c-5b79-46d2-ba80-3fff4905dc2f|4003dab4-c1c1-4adf-9354-29075973d4a2",
+          "hole_clearance|150837568|58024779|fdf2f144-db1f-4fc8-b9b0-12302f46bdc0|18271dce-caa3-4971-bf6a-2f054207e6c7",
           ""
         ],
         [
-          "hole_clearance|135061333|55179500|3c697e1c-5b79-46d2-ba80-3fff4905dc2f|3c2ea61c-e5d2-47eb-8b2d-39a0673c6133",
+          "hole_clearance|156187568|58024779|af7958c8-19e4-4113-8ae3-2f7986243572|c2e3f6ee-6cf6-4505-8fa3-8bd1fdfb383d",
+          ""
+        ],
+        [
+          "hole_clearance|156437568|58024779|b11108e9-2b26-47bf-9647-60d48d11b215|c2e3f6ee-6cf6-4505-8fa3-8bd1fdfb383d",
           ""
         ]
       ],
@@ -472,6 +476,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -554,6 +559,9 @@
         "Power"
       ],
       "GND": [
+        "Power"
+      ],
+      "Net-(BT1-+)": [
         "Power"
       ],
       "Net-(D1-K)": [
@@ -673,6 +681,12 @@
           "label": "JLCPCB Rotation Offset",
           "name": "JLCPCB Rotation Offset",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": false
         }
       ],
       "filter_string": "",
