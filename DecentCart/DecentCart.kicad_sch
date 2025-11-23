@@ -24778,6 +24778,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C49451547"
+			(at 53.34 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "7"
 			(uuid "04374c12-cced-4cd2-8997-67a00436bc01")
 		)
