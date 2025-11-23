@@ -9609,16 +9609,16 @@
 		(uuid "04829f83-54e6-4af4-8f76-bbb99394eb85")
 	)
 	(junction
+		(at 113.03 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "04995da9-1b33-4d6b-8b3e-1d174629af84")
+	)
+	(junction
 		(at 140.97 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06ee02e8-6f15-489d-9507-fc03d75ae3c5")
-	)
-	(junction
-		(at 120.65 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "08b9c1bf-66d8-4632-bb77-9cfa5aad2e58")
 	)
 	(junction
 		(at 196.85 16.51)
@@ -9661,12 +9661,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0ec44b89-5878-475d-9ceb-2c5dfed7967e")
-	)
-	(junction
-		(at 120.65 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "134c6dcc-f5c6-4aea-bf95-fe1cb70067e9")
 	)
 	(junction
 		(at 179.07 118.11)
@@ -10551,6 +10545,12 @@
 		(uuid "aeaa706a-6ad5-4bab-a971-8023a94183b5")
 	)
 	(junction
+		(at 115.57 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b03e0371-8ced-42a2-9682-4d3435af95cd")
+	)
+	(junction
 		(at 114.3 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11340,16 +11340,6 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 116.84) (xy 120.65 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ef386ea-55c0-48f4-bd60-66ecb6097015")
-	)
-	(wire
-		(pts
 			(xy 237.49 71.12) (xy 237.49 85.09)
 		)
 		(stroke
@@ -11927,6 +11917,16 @@
 			(type default)
 		)
 		(uuid "2f3bc8ba-aa3c-48d2-aa3c-bac30851e9a9")
+	)
+	(wire
+		(pts
+			(xy 115.57 125.73) (xy 113.03 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fd4949f-bb4e-45ad-aea5-6eeec828700a")
 	)
 	(wire
 		(pts
@@ -13020,6 +13020,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 116.84) (xy 115.57 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "643ba295-800f-4b87-baba-83e3e01eff9d")
+	)
+	(wire
+		(pts
 			(xy 121.92 20.32) (xy 121.92 34.29)
 		)
 		(stroke
@@ -13077,16 +13087,6 @@
 			(type default)
 		)
 		(uuid "65c2cee6-386a-4c07-9dd8-41ca4b3a9bf1")
-	)
-	(wire
-		(pts
-			(xy 120.65 104.14) (xy 120.65 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65d2ce00-9765-4b58-9606-bbe7d6aaaacd")
 	)
 	(wire
 		(pts
@@ -14010,6 +14010,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 116.84) (xy 115.57 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9616bc52-d2be-4c52-bcd7-bed0f19b7c90")
+	)
+	(wire
+		(pts
 			(xy 25.4 152.4) (xy 30.48 152.4)
 		)
 		(stroke
@@ -14027,6 +14037,16 @@
 			(type default)
 		)
 		(uuid "96e40d44-7e6d-4b40-aea3-165c428df949")
+	)
+	(wire
+		(pts
+			(xy 115.57 106.68) (xy 113.03 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "971f8ec6-fd97-409d-a792-80b0a9532471")
 	)
 	(wire
 		(pts
@@ -14397,6 +14417,16 @@
 			(type default)
 		)
 		(uuid "ac7c893d-68af-4d8a-89e0-aaeb677779af")
+	)
+	(wire
+		(pts
+			(xy 113.03 106.68) (xy 113.03 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac87f28b-ed4d-4675-a172-7646fd1fedb6")
 	)
 	(wire
 		(pts
@@ -15337,6 +15367,16 @@
 			(type default)
 		)
 		(uuid "d35b450b-b30f-4a18-a3cc-4687d1747a7c")
+	)
+	(wire
+		(pts
+			(xy 113.03 116.84) (xy 115.57 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3623aa9-5279-494c-abed-97ceb742fca1")
 	)
 	(wire
 		(pts
@@ -25375,103 +25415,6 @@
 		)
 	)
 	(symbol
-		(lib_name "1N4148W_14")
-		(lib_id "Diode:1N4148W")
-		(at 116.84 116.84 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "692b9270-6124-4aeb-8ba7-4e48342b0feb")
-		(property "Reference" "D57"
-			(at 116.84 114.4072 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148W"
-			(at 116.84 119.3014 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Library:D_SOD-123"
-			(at 116.84 112.395 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 116.84 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 116.84 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part #" "C81598"
-			(at 116.84 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "FT Origin" ""
-			(at 116.84 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "FT Rotation Offset" ""
-			(at 116.84 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "be38cfa2-a68f-42b8-80a8-2821c1c25ccf")
-		)
-		(pin "2"
-			(uuid "782d0f60-23f1-4dc1-a1ea-c9148f3695e0")
-		)
-		(instances
-			(project "Decent400-internal"
-				(path "/bb8bfa28-ab9e-4457-bbf1-e505aca6ff00"
-					(reference "D57")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "UniversalSwitchWithLED:SW_WITHLED")
 		(at 127 34.29 0)
 		(unit 1)
@@ -27526,103 +27469,6 @@
 			(project "Decent400-internal"
 				(path "/bb8bfa28-ab9e-4457-bbf1-e505aca6ff00"
 					(reference "SW6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "1N4148W_14")
-		(lib_id "Diode:1N4148W")
-		(at 116.84 125.73 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d99f9ae-d961-4818-8544-881e6a15380f")
-		(property "Reference" "D58"
-			(at 116.84 123.2972 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148W"
-			(at 116.84 128.1914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Library:D_SOD-123"
-			(at 116.84 121.285 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 116.84 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 116.84 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part #" "C81598"
-			(at 116.84 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "FT Origin" ""
-			(at 116.84 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "FT Rotation Offset" ""
-			(at 116.84 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d5059c11-b45b-4075-b6fd-5b029b73521a")
-		)
-		(pin "2"
-			(uuid "85403417-4525-460d-8a6a-2f09409b6324")
-		)
-		(instances
-			(project "Decent400-internal"
-				(path "/bb8bfa28-ab9e-4457-bbf1-e505aca6ff00"
-					(reference "D58")
 					(unit 1)
 				)
 			)
@@ -32477,7 +32323,7 @@
 		(at 102.87 147.32 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "b53cedd6-2089-4fd9-8367-472df4eef4bb")
