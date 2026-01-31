@@ -253,6 +253,7 @@ If you can find better ones, for example local suppliers, fantastic!
 - [Console key stickers](../Decent1200/PrintedParts/ConsoleKeyStickers.svg)
 - [600XL LED diffuser](../DecentXL/Misc/LedDiffuser600XL.stl) and
   [800XL LED diffuser](../DecentXL/Misc/LedDiffuser800XL.stl)
+- [Left](../DecentXL/Brackets/DecentXL-Left-Bracket.stl) and [right brackets](../DecentXL/Brackets/DecentXL-Right-Bracket.stl)
 
 ## Decent1200
 
