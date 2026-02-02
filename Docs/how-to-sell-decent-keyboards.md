@@ -187,8 +187,8 @@ AtariAge forums.
 |Cap adapters (1)              |  10|    |      |     |     |
 |Printed padding               |   2|    |      |     |     |
 |Printed brackets              |    |   2|     2|     |    4|
-|Printed support block         |    |    |     1|     |     |
-|LED diffuser (2)              |    |   2|      |    1|     |
+|Printed support block         |   1|    |     1|     |     |
+|LED diffuser (2)              |   1|   2|      |    1|     |
 
 (1) Two sets of key cap adapters for the square and round types of XE 
 key caps so people have spares. Ask customer to specify which type
@@ -224,12 +224,12 @@ If you can find better ones, for example local suppliers, fantastic!
 
 ### DecentXE
 
-- [PCB Gerber](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2.zip),
-  [BOM](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2-bom.csv) and
-  [positions](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2-positions.csv)
-- [Plate](../DecentXE/Plate/production/Decent_XE_Keyboard_Plate_Modern_15m.zip) should
+- [PCB Gerber](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_16.zip),
+  [BOM](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_16-bom.csv) and
+  [positions](../DecentXE/Keyboard/production/Decent_XE_Keyboard_-_Modern_16-positions.csv)
+- [Plate](../DecentXE/Plate/production/Decent_XE_Keyboard_Plate_-_Modern_16m.zip) should
   be made in aluminium with the default 1.6mm thickness and a black silkscreen.
-- [Flex cable](../DecentXL/DecentXL-Cable/production/gerber.zip): tell the fabrication
+- [Flex cable](../DecentXL/DecentXL-Cable/production/DecentXL_Flexible_Cable_2.zip): tell the fabrication
   house to apply stiffeners to the two rectangles in the front silkscreen layer.
 - [Falcon caps](../DecentXE/Caps/Atari%20XE%20-%20Falcon.svg) and
   [white caps](../DecentXE/Caps/Atari%20XE%20-%20White.svg)
@@ -238,6 +238,8 @@ If you can find better ones, for example local suppliers, fantastic!
 - [Circle key adapters](../DecentXE/Stems/kailh-choc-to-xe-circle-set.stl) and
   [square key adapters](../DecentXE/Stems/kailh-choc-to-xe-square-set.stl)
 - [Printed padding](../DecentXE/Stabilizers/HeightPadding.stl)
+- [Printed support bracket](../DecentXE/Misc/XE-mid-keeb-support.stl)
+- [LED diffuser](../DecentXE/Misc/LED-red-lens.stl)
 
 ### DecentXL
 
@@ -246,7 +248,7 @@ If you can find better ones, for example local suppliers, fantastic!
   [positions](../DecentXL/DecentXL-keyboard/production/DecentXL_keyboard_-_Modern_4.2m-positions.csv)
 - [Plate](../DecentXL/DecentXL-plate/production/DecentXL_plate_4m.zip) should
   be made in aluminium with the default 1.6mm thickness and a black silkscreen.
-- [Flex cable](../DecentXL/DecentXL-Cable/production/gerber.zip): tell the fabrication
+- [Flex cable](../DecentXL/DecentXL-Cable/production/DecentXL_Flexible_Cable_2.zip): tell the fabrication
   house to apply stiffeners to the two rectangles in the front silkscreen layer.
 - [Caps](../DecentXL/Caps/Atari%20XL.svg)
 - [Console keys](../DecentXL/Caps/Console-set-XL-Choc-x10.stl) can be printed in clear resin

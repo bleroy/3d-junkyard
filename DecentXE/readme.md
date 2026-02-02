@@ -84,6 +84,17 @@ The PCB and plate have a consistent Harry Fatt typeface, and each key gets all i
 
 **Revision 15** splits the modern and vintage designs. This removes the requirement to have configuration headers and greatly simplifies the layout of the PCBs. I also stopped building assembled vintage keyboards myself with this version, instead focusing on the higher quality modern keyboards. The files for vintage remain available for thos who want to build their own.
 
+**Revision 16**
+
+[x] Power LED switched to red in BOM
+[x] Optional red LED diffuser 3D model
+[x] Mid-keyboard support 3D model
+[x] Back of the board padding 3D model for better fit in the XE case
+[x] Console keys have stabilization holes in PCB and plate
+[x] Plate covers the whole width of the keyboard and conoles keys area
+[x] PCB made 1.75mm deeper to reach the case's fins on the back of the keyboard area
+[x] Remove legends from plate front so it's a uniform black between key caps
+
 ## Options
 
 ### Key caps: vintage or modern?
@@ -270,7 +281,7 @@ The current solution is a custom flexible PCB that can plug directly into the At
 If your Atari connector is damaged, or you don't have one, it's also possible to solder [an adapter](../Atari130MX/Atari130MX-adapter/Atari130MX-adapter.kicad_pro) and use a standard 1mm pitch 26 position flat cable.
 
 * Optimal:
-    * [Flexible PCB](../DecentXL/DecentXL-Cable/production/gerber.zip).
+    * [Flexible PCB](../DecentXL/DecentXL-Cable/production/DecentXL_Flexible_Cable_2.zip).
 * Fine:
     * [FFC 26 position 1mm Type A](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5386/16129671?s=N4IgTCBcDaIIwFsEAIAOBLALgYwBbLADY10A7EAXQF8g) (contacts on the same side on both ends) ribbon cable, 15cm at least.  Here's also [an Amazon source](https://www.amazon.com/uxcell-Flexible-Cable-Ribbon-Player/dp/B07RWRX6YT/r).
     * [XE keyboard Adapter](../Atari130MX/Fabrication/DecentXE-adapter.zip)

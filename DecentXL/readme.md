@@ -178,7 +178,7 @@ The plate is just an aluminum PCB. Download [the Gerber for the modern](./Decent
 
 ### Connectors
 
-The connector to the motherboard is [a flexible PCB](./DecentXL-Cable/production/gerber.zip). The fabrication house will usually ask you to specify what zones to apply rigidifiers to. There are two rectangles on the silkscreen that specify that.
+The connector to the motherboard is [a flexible PCB](./DecentXL-Cable/production/DecentXL_Flexible_Cable_2.zip). The fabrication house will usually ask you to specify what zones to apply rigidifiers to. There are two rectangles on the silkscreen that specify that.
 
 [<img src="./Media/DecentXL-cable.png" alt="The custom flexible PCB" height="300"/>](./Media/DecentXL-cable.png)
 
