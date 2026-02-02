@@ -1,7 +1,7 @@
 (footprint "MX-ISO-RETURN-Hole"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "ISO Return MX switch metal plate hole with stabilizers https://cdn.sparkfun.com/datasheets/Components/Switches/MX%20Series.pdf")
 	(tags "MX keyswitch ISO Return PCB stabilizer")
@@ -29,18 +29,6 @@
 			)
 		)
 	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "27871647-6551-42ba-8add-06b3121eb86b")
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
 	(property "Datasheet" ""
 		(at 0 0 0)
 		(unlocked yes)
@@ -50,6 +38,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -62,6 +51,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -73,7 +63,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "ee0c4c2d-8567-49b1-8ef3-df5088ca4489")
 	)
 	(fp_line
@@ -83,7 +73,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "a89dbca1-b912-440d-bd9a-72440f2ddd1f")
 	)
 	(fp_line
@@ -93,7 +83,7 @@
 			(width 0.12)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "5159bb1d-09fc-4b98-a9b8-77b9b1cb6ed6")
 	)
 	(fp_line
@@ -103,7 +93,7 @@
 			(width 0.12)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "adfe3dd1-b962-4768-ad3d-2a85015c3b9b")
 	)
 	(fp_line
@@ -113,7 +103,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "ada9f860-520a-4111-ae60-ed8770ea640f")
 	)
 	(fp_line
@@ -123,7 +113,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "4f0024bd-63b8-4297-b43c-5f969daff9f8")
 	)
 	(fp_line
@@ -486,6 +476,7 @@
 		(layer "Edge.Cuts")
 		(uuid "a14f40d3-ab20-4c0d-b535-079c41f8beb4")
 	)
+	(embedded_fonts no)
 	(model "${KISYS3DMOD}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
 		(offset
 			(xyz 0 0 0)

@@ -1,7 +1,7 @@
 (footprint "MX-2-25U-Hole"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "2.25U MX switch metal plate hole with stabilizers https://cdn.sparkfun.com/datasheets/Components/Switches/MX%20Series.pdf")
 	(tags "MX keyswitch 2.25u PCB stabilizer")
@@ -29,18 +29,6 @@
 			)
 		)
 	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "2d0b3a08-2a88-454d-b3eb-d40855ff913f")
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
 	(property "Datasheet" ""
 		(at 0 0 0)
 		(unlocked yes)
@@ -50,6 +38,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -62,6 +51,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -73,7 +63,7 @@
 			(width 0.12)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "fdd507e8-1ffb-4d98-940d-77d13c449a30")
 	)
 	(fp_line
@@ -83,7 +73,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "ee0c4c2d-8567-49b1-8ef3-df5088ca4489")
 	)
 	(fp_line
@@ -93,7 +83,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "ada9f860-520a-4111-ae60-ed8770ea640f")
 	)
 	(fp_line
@@ -103,7 +93,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "4f0024bd-63b8-4297-b43c-5f969daff9f8")
 	)
 	(fp_line
@@ -466,6 +456,7 @@
 		(layer "Edge.Cuts")
 		(uuid "cb282b28-8681-44e5-9255-58268fe7b042")
 	)
+	(embedded_fonts no)
 	(model "${KISYS3DMOD}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
 		(offset
 			(xyz 0 0 0)

@@ -1,7 +1,7 @@
 (footprint "Decent XE Logo"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "G***"
 		(at 0 -3.25 0)
@@ -27,18 +27,6 @@
 			)
 		)
 	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "38d1c09e-1aeb-4284-91aa-602364e56884")
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
 	(property "Datasheet" ""
 		(at 0 0 0)
 		(unlocked yes)
@@ -48,6 +36,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -60,6 +49,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -76,7 +66,7 @@
 			(width 0)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.Cu")
 		(uuid "fbf90aa1-e70b-4c81-b897-731cf13cb9dc")
 	)
@@ -96,7 +86,7 @@
 			(width 0)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.Cu")
 		(uuid "a77bcc1a-b1c1-4c95-8fca-190f66d9b9c0")
 	)
@@ -230,8 +220,8 @@
 			(width 0)
 			(type solid)
 		)
-		(fill solid)
-		(layer "F.Cu")
+		(fill yes)
+		(layers "F.Cu" "F.Mask")
 		(uuid "7248abae-c534-4869-ae4b-207ca4b3ab70")
 	)
 	(fp_poly
@@ -242,8 +232,9 @@
 			(width 0.2)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.Mask")
 		(uuid "3e87db92-c3c0-4ff3-86ba-4611bbe2d9a0")
 	)
+	(embedded_fonts no)
 )

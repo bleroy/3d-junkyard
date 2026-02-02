@@ -1,7 +1,7 @@
 (footprint "Choc-1-00U-LED"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "1U Kailh Choc footprint with non-addressable monochromatic backlight LED")
 	(property "Reference" "REF**"
@@ -24,19 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "01140731-0b73-4b14-9476-8709d9599980")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -68,26 +55,6 @@
 		)
 	)
 	(attr smd)
-	(fp_line
-		(start -9.525 -4.445)
-		(end 9.525 -4.445)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "49915c20-7948-4f12-8042-adfcd9782917")
-	)
-	(fp_line
-		(start -9.525 14.605)
-		(end -9.525 -4.445)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "31661a0e-1491-413b-954a-1bcd23432c00")
-	)
 	(fp_line
 		(start 0.61 -0.51)
 		(end 1.26 -0.51)
@@ -129,13 +96,33 @@
 		(uuid "5fdba211-1c00-43f1-92dd-20af90eca0f9")
 	)
 	(fp_line
+		(start -9.525 -4.445)
+		(end 9.525 -4.445)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "49915c20-7948-4f12-8042-adfcd9782917")
+	)
+	(fp_line
+		(start -9.525 14.605)
+		(end -9.525 -4.445)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "31661a0e-1491-413b-954a-1bcd23432c00")
+	)
+	(fp_line
 		(start 9.525 -4.445)
 		(end 9.525 14.605)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "05ed6cf6-c26c-498c-a604-8fdfd32d16b5")
 	)
 	(fp_line
@@ -145,7 +132,7 @@
 			(width 0.1524)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "763a8ac4-32c4-4735-99a3-ad91d6d9ff14")
 	)
 	(fp_line
@@ -192,21 +179,21 @@
 		(at -5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "c3dce679-dc24-4a58-a047-bed22d504c96")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 5.08 180)
 		(size 5.25 5.25)
 		(drill 5.25)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "5d6da4ec-71f9-44db-a119-f2c22d474ba1")
 	)
 	(pad "" np_thru_hole oval
 		(at 5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "72aa79b7-b60a-4ee7-9f29-0e9c46e2712d")
 	)
 	(pad "1" thru_hole circle
@@ -228,13 +215,14 @@
 	(pad "3" smd rect
 		(at 0.75 0 90)
 		(size 0.8 0.8)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "daee1fbd-030c-4152-a4c1-3548ae1d5fad")
 	)
 	(pad "4" smd rect
 		(at -0.75 0 90)
 		(size 0.8 0.8)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "9f565822-f307-4eb0-afe4-4ee11e8bf37e")
 	)
+	(embedded_fonts no)
 )

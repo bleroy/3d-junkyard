@@ -1,7 +1,7 @@
 (footprint "MX-1-50U-Hole"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "1.50U MX switch metal plate hole")
 	(tags "MX keyswitch 1.50u PCB")
@@ -29,18 +29,6 @@
 			)
 		)
 	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "1db4a0bc-459d-4085-9b81-3c8032ed403c")
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
 	(property "Datasheet" ""
 		(at 0 0 0)
 		(unlocked yes)
@@ -50,6 +38,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -62,6 +51,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -73,7 +63,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "ee0c4c2d-8567-49b1-8ef3-df5088ca4489")
 	)
 	(fp_line
@@ -83,7 +73,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "a89dbca1-b912-440d-bd9a-72440f2ddd1f")
 	)
 	(fp_line
@@ -93,7 +83,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "ada9f860-520a-4111-ae60-ed8770ea640f")
 	)
 	(fp_line
@@ -103,7 +93,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(layer "F.SilkS")
+		(layer "Dwgs.User")
 		(uuid "4f0024bd-63b8-4297-b43c-5f969daff9f8")
 	)
 	(fp_line
@@ -146,6 +136,7 @@
 		(layer "Edge.Cuts")
 		(uuid "78e2a907-b982-491a-a534-03917abb5c89")
 	)
+	(embedded_fonts no)
 	(model "${KISYS3DMOD}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
 		(offset
 			(xyz 0 0 0)

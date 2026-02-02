@@ -1,7 +1,7 @@
 (footprint "Choc-1-50U-Atari-Fn-LED"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "1.5U Kailh Choc low-pro footprint with non-addressable monochromatic backlight LED with Atari function key outline")
 	(property "Reference" "REF**"
@@ -24,19 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "b158f936-4753-45c6-9f2d-6b6b8c20d170")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -149,6 +136,16 @@
 		(uuid "05ed6cf6-c26c-498c-a604-8fdfd32d16b5")
 	)
 	(fp_line
+		(start -23.8 14.6)
+		(end 23.7 -4.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "f6725e91-3616-4f66-9fa5-ed438bba8761")
+	)
+	(fp_line
 		(start -6.35 -1.27)
 		(end 6.35 -1.27)
 		(stroke
@@ -188,26 +185,40 @@
 		(layer "Cmts.User")
 		(uuid "89a713b8-4382-438f-b389-781f51338e95")
 	)
+	(pad "" np_thru_hole circle
+		(at -10.95 9.615 180)
+		(size 4.5 4.5)
+		(drill 4.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f41d5c2a-d389-4526-a74b-ff5929aaee72")
+	)
 	(pad "" np_thru_hole oval
 		(at -5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "91921585-8b73-4ecc-874c-d537346ceb41")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 5.08 180)
 		(size 5.25 5.25)
 		(drill 5.25)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "f575eeb7-5e38-488d-b00d-33027c46a343")
 	)
 	(pad "" np_thru_hole oval
 		(at 5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "7d5aedfb-1264-40ee-982c-c2f9cbea08f7")
+	)
+	(pad "" np_thru_hole circle
+		(at 10.95 0.545 180)
+		(size 4.5 4.5)
+		(drill 4.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "766e3ee3-c4b2-4e78-bc35-c7a15994b230")
 	)
 	(pad "1" thru_hole circle
 		(at -5 8.88)
@@ -228,13 +239,14 @@
 	(pad "3" smd rect
 		(at 0.75 0 90)
 		(size 0.8 0.8)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "f0026f28-69b3-48b1-b75b-dfcc3209685d")
 	)
 	(pad "4" smd rect
 		(at -0.75 0 90)
 		(size 0.8 0.8)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "acf1b86a-9b82-4509-bb7c-9d2acfaf2d48")
 	)
+	(embedded_fonts no)
 )
