@@ -182,16 +182,18 @@ AtariAge forums.
 |MX-style switches             |  57|  57|    56|   62|   57|
 |Kailh Choc v1 switches        |   5|   5|    11|     |     |
 |Key caps                      |  57|  57|    56|   62|   57|
-|Printed console keys          |   5|   5|    11|     |     |
-|Console key stickers          |   5|   5|    11|     |     |
-|Optional cap adapters (1)     |  10|    |      |     |     |
+|Printed console keys (1)      |Opt5|   5|    11|     |     |
+|Console key stickers (1)      |Opt5|   5|    11|     |     |
+|Cap adapters (1)              |  10|    |      |     |     |
 |Printed padding               |   2|    |      |     |     |
 |Printed brackets              |    |   2|     2|     |    4|
 |Printed support block         |    |    |     1|     |     |
 |LED diffuser (2)              |    |   2|      |    1|     |
 
-(1) Two sets of key cap adapters for the square and round types of XE key caps
-so that people can choose to use vintage console keys if they so choose.
+(1) Two sets of key cap adapters for the square and round types of XE 
+key caps so people have spares. Ask customer to specify which type
+of adapter (square or circle) they need for their vintage console keys.
+Provide printed console keys only if the customer asks for them.
 
 (2) The new power LED is small and bright, and should ideally be diffused.
 A printed translucent part of the right diameter can fulfill this role.
@@ -231,8 +233,7 @@ If you can find better ones, for example local suppliers, fantastic!
   house to apply stiffeners to the two rectangles in the front silkscreen layer.
 - [Falcon caps](../DecentXE/Caps/Atari%20XE%20-%20Falcon.svg) and
   [white caps](../DecentXE/Caps/Atari%20XE%20-%20White.svg)
-- [Console keys](../DecentXE/Caps/ConsoleKeySet-x2.stl) can be printed in clear resin
-  and covered with stickers to make shine-through console keys.
+- [Console keys](../DecentXE/Caps/ConsoleKeySet-x2.stl) can be printed in grey or clear resin covered with stickers to make shine-through console keys.
 - [Console key stickers](../DecentXE/Caps/ConsoleKeyStickers.svg)
 - [Circle key adapters](../DecentXE/Stems/kailh-choc-to-xe-circle-set.stl) and
   [square key adapters](../DecentXE/Stems/kailh-choc-to-xe-square-set.stl)

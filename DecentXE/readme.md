@@ -189,13 +189,23 @@ There are adapters in the repo for all types of vintage XE caps. You can even ge
 
 I also sell adapters separately from keyboards.
 
-### Board padding
+### Board padding (obsolete as of rev. 16)
 
 For the most stable results, you can add two [padding 3D-printed parts](./Stabilizers/HeightPadding.stl) on top of the main board at the bottom left and right:
 
 ![board padding, photo courtesy of Clint Thompson](https://content.invisioncic.com/r322239/monthly_2023_09/BracketsInstalled.thumb.jpg.fe8f180f29bf525ebd031a59c5525a9e.jpg)
 
 Those can be printed on any 3D printer as they don't require a lot of precision.
+
+[Additional padding](./Misc/XE-rev-before-16-depth-padding.stl) can be added to the back of the board to prevent the keyboard from moving to the back of the computer.
+
+### Mid-keyboard support
+
+While the XE case provides some support to the middle of the keyboard with a column, pressing the console keys can still cause some bending of the board. To prevent that, [support](./Misc/XE-mid-keeb-support.stl) can be added to the left of the console keys.
+
+### Power LED coloring
+
+If you have a board with a white power LED and your XE case has a transparent LED window, you can still make thepower LED shine red using a [LED diffuser](./Misc/LED-red-lens.stl) printed in transparent red.
 
 ### Stabilizers
 
@@ -221,9 +231,9 @@ The [DecentXE KiCad project](./Keyboard/DecentXE-Modern.kicad_pcb) should have e
 ![The DecentXE main board](./Media/DecentXE-Modern-front.png)
 
 * Optimal:
-    - [DecentXE Modern main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Modern_15.2.zip)
-    - [DecentXE Modern BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2_bom.csv)
-    - [DecentXE Modern Position file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_15.2-positions.csv)
+    - [DecentXE Modern main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Modern_16.zip)
+    - [DecentXE Modern BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_16-bom.csv)
+    - [DecentXE Modern Position file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_16-positions.csv)
 * Fine:
     - [DecentXE Vintage main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Vintage_15.zip)
     - [DecentXE Vintage BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Vintage_15-bom.csv)
@@ -238,7 +248,7 @@ While it is possible to build and operate a keyboard without a plate, it will no
 In terms of weight, the keyboard assembled with an aluminum plate is about 430g.
 
 * Optimal: 1.6mm aluminum PCB. Aluminum PCBs can be made for similar prices as regular PCBs nowadays, and that constitutes the best price / performance compromise currently available.
-    - [DecentXE Modern aluminum plate Gerber files](./Plate/production/Decent_XE_Keyboard_Plate_Modern_15m.zip)
+    - [DecentXE Modern aluminum plate Gerber files](./Plate/production/Decent_XE_Keyboard_Plate_-_Modern_16m.zip)
     - [DecentXE Vintage aluminum plate Gerber files](./Plate/production/Decent_XE_Keyboard_Plate_Vintage_15v.zip)
 * Great but expensive: laser-cut or waterjet-cut metal
 * Not fine: laser-cut acrylic. Really, don't even try, it'll shatter. Some other laser-cut plastics may be OK, but I can't help you with that, I don't know.
@@ -317,6 +327,10 @@ The stabilizers consist of a larger part that has the threaded part, a smaller p
 Once the stabilizers are assembled, you can put them in their respective places on the top side of the PCB. Insert the bottom, non-threaded part first, try to lay the stabilizer's surface flat on the PCB, and push the top threaded part into place. This usually moves the other end a bit, so make sure both ends are properly inserted all the way into the holes in the PCB.
 
 Turn the PCB over. Optionally position a small washers around each of the screw holes for the stabilizers. Secure the stabilizer into place with a screw. Repeat this for the space stabilizer, the left shift, the delete key and the return key.
+
+#### Solder the console key switches
+
+The console key switches go *under* the plate, and as such need to be soldered before the other switches are inserted into the plate and soldered.
 
 #### Add the cable
 
