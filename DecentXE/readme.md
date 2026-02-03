@@ -202,6 +202,8 @@ I also sell adapters separately from keyboards.
 
 ### Board padding (obsolete as of rev. 16)
 
+![A revision 15.2 keyboard with 3D-printed padding added for better stability](./Media/rev15-with-padding.jpg)
+
 For the most stable results, you can add two [padding 3D-printed parts](./Stabilizers/HeightPadding.stl) on top of the main board at the bottom left and right:
 
 ![board padding, photo courtesy of Clint Thompson](https://content.invisioncic.com/r322239/monthly_2023_09/BracketsInstalled.thumb.jpg.fe8f180f29bf525ebd031a59c5525a9e.jpg)
