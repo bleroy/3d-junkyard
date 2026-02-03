@@ -16,7 +16,7 @@ But wait!... That's not all. Since the project started, there's been multiple re
 
 ## Current version
 
-The current revision of the DecentXE keyboard is: **rev. 15.2**.
+The current revision of the DecentXE modern keyboard is: **rev. 16**.
 
 ## Can I buy one?
 
