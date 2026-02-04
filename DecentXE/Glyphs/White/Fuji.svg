@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.0527853,0,0,0.0527853,0.832882,1.48961)">
+        <g id="Fuji">
+            <g id="Left-leg" serif:id="Left leg" transform="matrix(1.16667,0,0,1.16667,-10,-7.92642)">
+                <path d="M35.653,55.229C45.096,40.93 44.884,10.498 44.884,3L51.837,3C51.81,5.887 53.355,34.899 48.456,53.169C43.557,71.439 25.273,91.932 3.166,91.932L3.166,78.971C9.666,78.971 26.21,69.527 35.653,55.229Z" style="fill-rule:nonzero;fill:rgb(96,96,96)"/>
+            </g>
+            <g id="Center" transform="matrix(1.16667,0,0,1.16667,-10,-7.92642)">
+                <rect x="53.768" y="3" width="12.463" height="89.117" style="fill:rgb(96,96,96)"/>
+            </g>
+            <g id="Right-leg" serif:id="Right leg" transform="matrix(1.16667,0,0,1.16667,-10,-7.92642)">
+                <path d="M84.347,55.229C74.904,40.93 75.116,10.498 75.116,3L68.163,3C68.19,5.887 66.645,34.899 71.544,53.169C76.443,71.439 94.727,91.932 116.834,91.932L116.834,78.971C110.334,78.971 93.79,69.527 84.347,55.229Z" style="fill-rule:nonzero;fill:rgb(96,96,96)"/>
+            </g>
+            <g id="Frame" transform="matrix(20.404,0,0,20.0461,-16.1929,-28.6346)">
+                <path d="M7.463,1.154L7.463,6.443C7.463,7.068 6.964,7.576 6.349,7.576L1.129,7.576C0.514,7.576 0.016,7.068 0.016,6.443L0.016,1.154C0.016,0.529 0.514,0.021 1.129,0.021L6.349,0.021C6.964,0.021 7.463,0.529 7.463,1.154ZM7.286,1.154C7.286,0.627 6.866,0.2 6.349,0.2L1.129,0.2C0.612,0.2 0.192,0.628 0.192,1.154L0.192,6.443C0.192,6.969 0.612,7.397 1.129,7.397L6.349,7.397C6.866,7.397 7.286,6.969 7.286,6.443L7.286,1.154Z" style="fill:rgb(96,96,96)"/>
+            </g>
+        </g>
+    </g>
+</svg>
