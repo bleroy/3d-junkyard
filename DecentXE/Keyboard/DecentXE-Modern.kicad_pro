@@ -604,8 +604,8 @@
         },
         {
           "group_by": false,
-          "label": "JLCPCB Rotation Offset",
-          "name": "JLCPCB Rotation Offset",
+          "label": "Rotation Offset",
+          "name": "Rotation Offset",
           "show": true
         },
         {
@@ -640,9 +640,9 @@
         },
         {
           "group_by": false,
-          "label": "JLCPCB Position Offset",
-          "name": "JLCPCB Position Offset",
-          "show": true
+          "label": "FT Origin",
+          "name": "FT Origin",
+          "show": false
         }
       ],
       "filter_string": "",
