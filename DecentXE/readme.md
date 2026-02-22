@@ -16,7 +16,7 @@ But wait!... That's not all. Since the project started, there's been multiple re
 
 ## Current version
 
-The current revision of the DecentXE modern keyboard is: **rev. 16**.
+The current revision of the DecentXE modern keyboard is: **rev. 16.1**.
 
 ## Can I buy one?
 
@@ -94,6 +94,11 @@ The PCB and plate have a consistent Harry Fatt typeface, and each key gets all i
 [x] Plate covers the whole width of the keyboard and conoles keys area
 [x] PCB made 1.75mm deeper to reach the case's fins on the back of the keyboard area
 [x] Remove legends from plate front so it's a uniform black between key caps
+
+**Revision 16.1**
+
+[x] Moved the cable slot and connector apart for easier assembly.
+[x] Rerouted the whole thing with wider power tracks.
 
 ## Options
 
@@ -244,9 +249,9 @@ The [DecentXE KiCad project](./Keyboard/DecentXE-Modern.kicad_pcb) should have e
 ![The DecentXE main board](./Media/DecentXE-Modern-front.png)
 
 * Optimal:
-    - [DecentXE Modern main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Modern_16.zip)
-    - [DecentXE Modern BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_16-bom.csv)
-    - [DecentXE Modern Position file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_16-positions.csv)
+    - [DecentXE Modern main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Modern_16.1.zip)
+    - [DecentXE Modern BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_16.1-bom.csv)
+    - [DecentXE Modern Position file](./Keyboard/production/Decent_XE_Keyboard_-_Modern_16.1-positions.csv)
 * Fine:
     - [DecentXE Vintage main board Gerber files](./Keyboard//production/Decent_XE_Keyboard_-_Vintage_15.zip)
     - [DecentXE Vintage BOM file](./Keyboard/production/Decent_XE_Keyboard_-_Vintage_15-bom.csv)
