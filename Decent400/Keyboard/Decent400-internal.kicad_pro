@@ -622,6 +622,12 @@
           "label": "Description",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Rotation Offset",
+          "name": "JLCPCB Rotation Offset",
+          "show": false
         }
       ],
       "filter_string": "",

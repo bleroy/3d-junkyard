@@ -17221,6 +17221,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 222.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 222.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "de06d188-6eeb-41ee-ba92-bf206c37332a")
 		)
@@ -17331,6 +17349,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a4737a7b-59b3-4300-a2db-312bdbb728a0")
 		)
@@ -17396,7 +17432,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.17 57.658 90)
 			(effects
 				(font
@@ -17423,7 +17459,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 90.17 55.88 0)
 			(effects
 				(font
@@ -17434,6 +17470,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 90.17 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 90.17 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 90.17 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17500,7 +17554,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 29.718 90)
 			(effects
 				(font
@@ -17527,7 +17581,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 27.94 0)
 			(effects
 				(font
@@ -17538,6 +17592,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17641,6 +17713,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 165.1 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 165.1 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 165.1 48.26 0)
 			(effects
 				(font
@@ -17759,6 +17849,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 222.25 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 222.25 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1f51cf48-5bd3-44b7-b2b8-fbde543e10df")
 		)
@@ -17824,7 +17932,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 191.77 161.798 90)
 			(effects
 				(font
@@ -17851,7 +17959,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 191.77 160.02 0)
 			(effects
 				(font
@@ -17862,6 +17970,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 191.77 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 191.77 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 191.77 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17951,7 +18077,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 76.2 0)
 			(effects
 				(font
@@ -17961,6 +18087,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 76.2 0)
 			(effects
 				(font
@@ -18028,7 +18172,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 71.628 90)
 			(effects
 				(font
@@ -18055,7 +18199,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 69.85 0)
 			(effects
 				(font
@@ -18066,6 +18210,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18177,6 +18339,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 69.85 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 69.85 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "51be4c59-e069-4cfd-8899-2205236442a9")
 		)
@@ -18271,7 +18451,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 104.14 0)
 			(effects
 				(font
@@ -18281,6 +18461,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 104.14 0)
 			(effects
 				(font
@@ -18348,7 +18546,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 223.52 99.568 90)
 			(effects
 				(font
@@ -18375,7 +18573,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 223.52 97.79 0)
 			(effects
 				(font
@@ -18386,6 +18584,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 223.52 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 223.52 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 223.52 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18499,6 +18715,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 34.29 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 34.29 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a493c0b8-e822-4f90-8569-f4d2f46dc7e2")
 		)
@@ -18584,7 +18818,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 78.74 76.2 0)
 			(effects
 				(font
@@ -18594,6 +18828,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 78.74 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 78.74 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 78.74 76.2 0)
 			(effects
 				(font
@@ -18690,7 +18942,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 97.79 20.32 0)
 			(effects
 				(font
@@ -18700,6 +18952,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 97.79 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 97.79 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 97.79 20.32 0)
 			(effects
 				(font
@@ -18767,7 +19037,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 71.12 127.508 90)
 			(effects
 				(font
@@ -18794,7 +19064,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 71.12 125.73 0)
 			(effects
 				(font
@@ -18805,6 +19075,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 71.12 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 71.12 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 71.12 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18871,7 +19159,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 223.52 29.718 90)
 			(effects
 				(font
@@ -18898,7 +19186,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 223.52 27.94 0)
 			(effects
 				(font
@@ -18909,6 +19197,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 223.52 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 223.52 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 223.52 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19004,7 +19310,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 76.2 0)
 			(effects
 				(font
@@ -19014,6 +19320,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 76.2 0)
 			(effects
 				(font
@@ -19118,6 +19442,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 69.85 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 69.85 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 69.85 118.11 0)
 			(effects
 				(font
@@ -19236,6 +19578,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 88.9 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 88.9 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d2aab8d2-5979-40f7-aaa4-1b4a11c3baf3")
 		)
@@ -19346,6 +19706,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 222.25 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 222.25 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "09b2717e-b910-4d89-8fdc-fca349eff133")
 		)
@@ -19440,7 +19818,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 231.14 34.29 0)
 			(effects
 				(font
@@ -19450,6 +19828,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 231.14 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 231.14 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 231.14 34.29 0)
 			(effects
 				(font
@@ -19545,7 +19941,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 118.11 0)
 			(effects
 				(font
@@ -19555,6 +19951,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 118.11 0)
 			(effects
 				(font
@@ -19622,7 +20036,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 99.568 90)
 			(effects
 				(font
@@ -19649,7 +20063,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 97.79 0)
 			(effects
 				(font
@@ -19660,6 +20074,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19755,7 +20187,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 34.29 0)
 			(effects
 				(font
@@ -19765,6 +20197,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 34.29 0)
 			(effects
 				(font
@@ -19861,7 +20311,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 20.32 0)
 			(effects
 				(font
@@ -19871,6 +20321,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 20.32 0)
 			(effects
 				(font
@@ -19938,7 +20406,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 99.568 90)
 			(effects
 				(font
@@ -19965,7 +20433,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 97.79 0)
 			(effects
 				(font
@@ -19976,6 +20444,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20079,6 +20565,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 165.1 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 165.1 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 165.1 62.23 0)
 			(effects
 				(font
@@ -20197,6 +20701,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 222.25 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 222.25 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "41fdb87d-3935-435c-981d-94915f10efde")
 		)
@@ -20307,6 +20829,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "39a7b690-9d18-4b3c-9ca9-105e6c8926f8")
 		)
@@ -20372,7 +20912,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 57.658 90)
 			(effects
 				(font
@@ -20399,7 +20939,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 55.88 0)
 			(effects
 				(font
@@ -20410,6 +20950,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20521,6 +21079,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 127 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 127 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4a58a6d9-3310-4cbd-a73d-ea3548e671b0")
 		)
@@ -20586,7 +21162,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 71.628 90)
 			(effects
 				(font
@@ -20613,7 +21189,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 69.85 0)
 			(effects
 				(font
@@ -20624,6 +21200,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20719,7 +21313,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 48.26 0)
 			(effects
 				(font
@@ -20729,6 +21323,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 48.26 0)
 			(effects
 				(font
@@ -20825,7 +21437,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 97.79 48.26 0)
 			(effects
 				(font
@@ -20835,6 +21447,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 97.79 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 97.79 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 97.79 48.26 0)
 			(effects
 				(font
@@ -20947,6 +21577,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 146.05 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 146.05 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3b5f9171-d681-49e1-b17f-0a007006c646")
 		)
@@ -21012,7 +21660,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 29.718 90)
 			(effects
 				(font
@@ -21039,7 +21687,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 27.94 0)
 			(effects
 				(font
@@ -21050,6 +21698,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21161,6 +21827,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ba6ad120-e24a-4584-92ee-3051f2937a79")
 		)
@@ -21226,7 +21910,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.17 43.688 90)
 			(effects
 				(font
@@ -21253,7 +21937,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 90.17 41.91 0)
 			(effects
 				(font
@@ -21264,6 +21948,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 90.17 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 90.17 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 90.17 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21375,6 +22077,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 88.9 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 88.9 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7537aa54-fecc-4b89-8c98-94d3b69844c4")
 		)
@@ -21469,7 +22189,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 118.11 0)
 			(effects
 				(font
@@ -21479,6 +22199,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 118.11 0)
 			(effects
 				(font
@@ -21591,6 +22329,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "72b4025d-f906-4d74-ba65-e070a65c428d")
 		)
@@ -21685,7 +22441,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 231.14 48.26 0)
 			(effects
 				(font
@@ -21695,6 +22451,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 231.14 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 231.14 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 231.14 48.26 0)
 			(effects
 				(font
@@ -21791,7 +22565,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 20.32 0)
 			(effects
 				(font
@@ -21801,6 +22575,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 20.32 0)
 			(effects
 				(font
@@ -21868,7 +22660,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 71.628 90)
 			(effects
 				(font
@@ -21895,7 +22687,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 69.85 0)
 			(effects
 				(font
@@ -21906,6 +22698,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22017,6 +22827,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "04626ad4-5633-4a23-b1c9-75938fed113a")
 		)
@@ -22082,7 +22910,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 85.598 90)
 			(effects
 				(font
@@ -22109,7 +22937,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 83.82 0)
 			(effects
 				(font
@@ -22120,6 +22948,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22186,7 +23032,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 85.598 90)
 			(effects
 				(font
@@ -22213,7 +23059,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 83.82 0)
 			(effects
 				(font
@@ -22224,6 +23070,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22335,6 +23199,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 88.9 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 88.9 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9a822f85-fd88-4ba5-9bc7-87d1715a8277")
 		)
@@ -22400,7 +23282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 71.628 90)
 			(effects
 				(font
@@ -22427,7 +23309,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 69.85 0)
 			(effects
 				(font
@@ -22438,6 +23320,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22504,7 +23404,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 99.568 90)
 			(effects
 				(font
@@ -22531,7 +23431,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 97.79 0)
 			(effects
 				(font
@@ -22542,6 +23442,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22608,7 +23526,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.17 29.718 90)
 			(effects
 				(font
@@ -22635,7 +23553,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 90.17 27.94 0)
 			(effects
 				(font
@@ -22646,6 +23564,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 90.17 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 90.17 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 90.17 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22712,7 +23648,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 71.12 131.318 90)
 			(effects
 				(font
@@ -22739,7 +23675,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 71.12 129.54 0)
 			(effects
 				(font
@@ -22750,6 +23686,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 71.12 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 71.12 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 71.12 129.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22816,7 +23770,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 109.22 113.538 90)
 			(effects
 				(font
@@ -22843,7 +23797,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 109.22 111.76 0)
 			(effects
 				(font
@@ -22854,6 +23808,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 109.22 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 109.22 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 109.22 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22965,6 +23937,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c8b25cc0-92d4-4190-b886-b009996b4d0b")
 		)
@@ -23030,7 +24020,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 127.508 90)
 			(effects
 				(font
@@ -23057,7 +24047,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 125.73 0)
 			(effects
 				(font
@@ -23068,6 +24058,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23134,7 +24142,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 57.658 90)
 			(effects
 				(font
@@ -23161,7 +24169,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 55.88 0)
 			(effects
 				(font
@@ -23172,6 +24180,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23238,7 +24264,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 43.688 90)
 			(effects
 				(font
@@ -23265,7 +24291,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 41.91 0)
 			(effects
 				(font
@@ -23276,6 +24302,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23342,7 +24386,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 113.538 90)
 			(effects
 				(font
@@ -23369,7 +24413,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 111.76 0)
 			(effects
 				(font
@@ -23380,6 +24424,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23491,6 +24553,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 146.05 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 146.05 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c5d5c76e-c713-43d0-aa83-249f72d44cba")
 		)
@@ -23556,7 +24636,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 113.538 90)
 			(effects
 				(font
@@ -23583,7 +24663,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 111.76 0)
 			(effects
 				(font
@@ -23594,6 +24674,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23689,7 +24787,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 48.26 0)
 			(effects
 				(font
@@ -23699,6 +24797,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 48.26 0)
 			(effects
 				(font
@@ -23795,7 +24911,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 78.74 20.32 0)
 			(effects
 				(font
@@ -23805,6 +24921,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 78.74 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 78.74 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 78.74 20.32 0)
 			(effects
 				(font
@@ -23901,7 +25035,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 48.26 0)
 			(effects
 				(font
@@ -23911,6 +25045,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 48.26 0)
 			(effects
 				(font
@@ -24015,6 +25167,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 127 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 127 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 127 62.23 0)
 			(effects
 				(font
@@ -24133,6 +25303,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 127 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 127 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2230affe-debb-4b3d-aba9-9c176a21d077")
 		)
@@ -24227,7 +25415,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 97.79 104.14 0)
 			(effects
 				(font
@@ -24237,6 +25425,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 97.79 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 97.79 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 97.79 104.14 0)
 			(effects
 				(font
@@ -24333,7 +25539,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 231.14 20.32 0)
 			(effects
 				(font
@@ -24343,6 +25549,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 231.14 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 231.14 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 231.14 20.32 0)
 			(effects
 				(font
@@ -24439,7 +25663,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 97.79 34.29 0)
 			(effects
 				(font
@@ -24449,6 +25673,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 97.79 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 97.79 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 97.79 34.29 0)
 			(effects
 				(font
@@ -24545,7 +25787,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 62.23 0)
 			(effects
 				(font
@@ -24555,6 +25797,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 62.23 0)
 			(effects
 				(font
@@ -24659,6 +25919,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 69.85 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 69.85 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 69.85 107.95 0)
 			(effects
 				(font
@@ -24777,6 +26055,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 69.85 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 69.85 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c15d116a-753f-40c4-b3d5-ec10f798f43a")
 		)
@@ -24842,7 +26138,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 85.598 90)
 			(effects
 				(font
@@ -24869,7 +26165,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 83.82 0)
 			(effects
 				(font
@@ -24880,6 +26176,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24975,7 +26289,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 104.14 0)
 			(effects
 				(font
@@ -24985,6 +26299,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 104.14 0)
 			(effects
 				(font
@@ -25089,6 +26421,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 146.05 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 146.05 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 146.05 104.14 0)
 			(effects
 				(font
@@ -25207,6 +26557,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 207.01 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 207.01 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6a59ecc7-ac14-4ad5-86f7-fa8bcbbaf458")
 		)
@@ -25266,7 +26634,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 208.28 161.798 90)
 			(effects
 				(font
@@ -25293,7 +26661,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 208.28 160.02 0)
 			(effects
 				(font
@@ -25304,6 +26672,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 208.28 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 208.28 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 208.28 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25393,7 +26779,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 20.32 0)
 			(effects
 				(font
@@ -25403,6 +26789,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 20.32 0)
 			(effects
 				(font
@@ -25499,7 +26903,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 62.23 0)
 			(effects
 				(font
@@ -25509,6 +26913,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 62.23 0)
 			(effects
 				(font
@@ -25604,7 +27026,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 76.2 0)
 			(effects
 				(font
@@ -25614,6 +27036,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 76.2 0)
 			(effects
 				(font
@@ -25718,6 +27158,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 107.95 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 107.95 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 107.95 104.14 0)
 			(effects
 				(font
@@ -25836,6 +27294,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 88.9 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 88.9 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "04e16aa2-1161-4cc6-a7ef-6458e50b0b94")
 		)
@@ -25901,7 +27377,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 224.79 161.798 90)
 			(effects
 				(font
@@ -25928,7 +27404,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 224.79 160.02 0)
 			(effects
 				(font
@@ -25939,6 +27415,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 224.79 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 224.79 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 224.79 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25999,7 +27493,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 43.688 90)
 			(effects
 				(font
@@ -26026,7 +27520,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 41.91 0)
 			(effects
 				(font
@@ -26037,6 +27531,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26148,6 +27660,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 127 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 127 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55763d83-c271-4ad0-a0f3-7778043ad933")
 		)
@@ -26213,7 +27743,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 223.52 57.658 90)
 			(effects
 				(font
@@ -26240,7 +27770,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 223.52 55.88 0)
 			(effects
 				(font
@@ -26251,6 +27781,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 223.52 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 223.52 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 223.52 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26362,6 +27910,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 127 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 127 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6dbbbec3-e6c6-46a4-a4f8-037106e158d5")
 		)
@@ -26427,7 +27993,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 71.12 85.598 90)
 			(effects
 				(font
@@ -26454,7 +28020,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 71.12 83.82 0)
 			(effects
 				(font
@@ -26465,6 +28031,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 71.12 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 71.12 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 71.12 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26568,6 +28152,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 165.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 165.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 165.1 104.14 0)
 			(effects
 				(font
@@ -26686,6 +28288,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c6706ef9-e5b1-4c20-96ca-9cbe71e5ccca")
 		)
@@ -26780,7 +28400,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 231.14 62.23 0)
 			(effects
 				(font
@@ -26790,6 +28410,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 231.14 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 231.14 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 231.14 62.23 0)
 			(effects
 				(font
@@ -26857,7 +28495,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 29.718 90)
 			(effects
 				(font
@@ -26884,7 +28522,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 27.94 0)
 			(effects
 				(font
@@ -26895,6 +28533,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26990,7 +28646,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 62.23 0)
 			(effects
 				(font
@@ -27000,6 +28656,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 62.23 0)
 			(effects
 				(font
@@ -27096,7 +28770,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 97.79 62.23 0)
 			(effects
 				(font
@@ -27106,6 +28780,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 97.79 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 97.79 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 97.79 62.23 0)
 			(effects
 				(font
@@ -27202,7 +28894,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 90.17 0)
 			(effects
 				(font
@@ -27212,6 +28904,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 90.17 0)
 			(effects
 				(font
@@ -27279,7 +28989,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 71.628 90)
 			(effects
 				(font
@@ -27306,7 +29016,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 69.85 0)
 			(effects
 				(font
@@ -27317,6 +29027,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27412,7 +29140,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 90.17 0)
 			(effects
 				(font
@@ -27422,6 +29150,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 90.17 0)
 			(effects
 				(font
@@ -27489,7 +29235,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 71.12 29.718 90)
 			(effects
 				(font
@@ -27516,7 +29262,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 71.12 27.94 0)
 			(effects
 				(font
@@ -27527,6 +29273,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 71.12 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 71.12 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 71.12 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27593,7 +29357,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 113.538 90)
 			(effects
 				(font
@@ -27620,7 +29384,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 111.76 0)
 			(effects
 				(font
@@ -27631,6 +29395,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27726,7 +29508,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 62.23 0)
 			(effects
 				(font
@@ -27736,6 +29518,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 62.23 0)
 			(effects
 				(font
@@ -27848,6 +29648,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2005a00d-31a9-476d-8b7b-ed04d7f25020")
 		)
@@ -27913,7 +29731,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 113.538 90)
 			(effects
 				(font
@@ -27940,7 +29758,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 111.76 0)
 			(effects
 				(font
@@ -27951,6 +29769,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28062,6 +29898,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 127 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 127 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f61f7042-6aaa-4f80-abea-c0d9b9d8268d")
 		)
@@ -28156,7 +30010,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 90.17 0)
 			(effects
 				(font
@@ -28166,6 +30020,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 90.17 0)
 			(effects
 				(font
@@ -28278,6 +30150,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 88.9 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 88.9 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a674a744-c7ef-4cd4-8376-5fb3b0584599")
 		)
@@ -28343,7 +30233,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 29.718 90)
 			(effects
 				(font
@@ -28370,7 +30260,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 27.94 0)
 			(effects
 				(font
@@ -28381,6 +30271,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28476,7 +30384,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 90.17 0)
 			(effects
 				(font
@@ -28486,6 +30394,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 90.17 0)
 			(effects
 				(font
@@ -28590,6 +30516,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 165.1 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 165.1 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 165.1 90.17 0)
 			(effects
 				(font
@@ -28708,6 +30652,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 165.1 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 165.1 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6051e622-922b-484b-ac65-496a4f4013e5")
 		)
@@ -28773,7 +30735,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 113.538 90)
 			(effects
 				(font
@@ -28800,7 +30762,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 111.76 0)
 			(effects
 				(font
@@ -28811,6 +30773,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28906,7 +30886,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 104.14 0)
 			(effects
 				(font
@@ -28916,6 +30896,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 104.14 0)
 			(effects
 				(font
@@ -29012,7 +31010,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 173.99 34.29 0)
 			(effects
 				(font
@@ -29022,6 +31020,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 173.99 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 173.99 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 173.99 34.29 0)
 			(effects
 				(font
@@ -29118,7 +31134,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 104.14 0)
 			(effects
 				(font
@@ -29128,6 +31144,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 104.14 0)
 			(effects
 				(font
@@ -29240,6 +31274,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "84247ee2-5152-4be8-a573-b08171c0771f")
 		)
@@ -29305,7 +31357,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 43.688 90)
 			(effects
 				(font
@@ -29332,7 +31384,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 41.91 0)
 			(effects
 				(font
@@ -29343,6 +31395,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29438,7 +31508,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 118.11 0)
 			(effects
 				(font
@@ -29448,6 +31518,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 118.11 0)
 			(effects
 				(font
@@ -29515,7 +31603,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 57.658 90)
 			(effects
 				(font
@@ -29542,7 +31630,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 55.88 0)
 			(effects
 				(font
@@ -29553,6 +31641,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29664,6 +31770,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 165.1 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 165.1 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "855ac67f-b905-46ad-b54d-a568583ac14b")
 		)
@@ -29758,7 +31882,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 20.32 0)
 			(effects
 				(font
@@ -29768,6 +31892,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 20.32 0)
 			(effects
 				(font
@@ -29835,7 +31977,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 127.508 90)
 			(effects
 				(font
@@ -29862,7 +32004,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 125.73 0)
 			(effects
 				(font
@@ -29873,6 +32015,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29939,7 +32099,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 127.508 90)
 			(effects
 				(font
@@ -29966,7 +32126,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 125.73 0)
 			(effects
 				(font
@@ -29977,6 +32137,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30080,6 +32258,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 146.05 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 146.05 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 146.05 20.32 0)
 			(effects
 				(font
@@ -30198,6 +32394,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 223.52 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 223.52 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0b3763fc-d151-4481-8a68-a8267496d67c")
 		)
@@ -30294,6 +32508,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 105.41 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 105.41 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30426,7 +32658,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 57.658 90)
 			(effects
 				(font
@@ -30453,7 +32685,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 55.88 0)
 			(effects
 				(font
@@ -30464,6 +32696,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30530,7 +32780,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 43.688 90)
 			(effects
 				(font
@@ -30557,7 +32807,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 185.42 41.91 0)
 			(effects
 				(font
@@ -30568,6 +32818,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 185.42 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 185.42 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 185.42 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30663,7 +32931,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 20.32 0)
 			(effects
 				(font
@@ -30673,6 +32941,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 20.32 0)
 			(effects
 				(font
@@ -30769,7 +33055,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 116.84 104.14 0)
 			(effects
 				(font
@@ -30779,6 +33065,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 116.84 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 116.84 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 116.84 104.14 0)
 			(effects
 				(font
@@ -30846,7 +33150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.17 113.538 90)
 			(effects
 				(font
@@ -30873,7 +33177,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 90.17 111.76 0)
 			(effects
 				(font
@@ -30884,6 +33188,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 90.17 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 90.17 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 90.17 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30979,7 +33301,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 193.04 76.2 0)
 			(effects
 				(font
@@ -30989,6 +33311,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 193.04 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 193.04 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 193.04 76.2 0)
 			(effects
 				(font
@@ -31101,6 +33441,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "602b25e0-d634-43de-bdaa-374a12ac9c2b")
 		)
@@ -31197,6 +33555,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 107.95 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 107.95 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 107.95 90.17 0)
 			(effects
 				(font
@@ -31315,6 +33691,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 127 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 127 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "636a1634-10a5-4042-8558-2ab9a0214e40")
 		)
@@ -31380,7 +33774,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 109.22 85.598 90)
 			(effects
 				(font
@@ -31407,7 +33801,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 109.22 83.82 0)
 			(effects
 				(font
@@ -31418,6 +33812,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 109.22 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 109.22 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 109.22 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31529,6 +33941,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 146.05 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 146.05 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c905f198-92dc-4f13-b7d7-ab0eb052b526")
 		)
@@ -31623,7 +34053,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 104.14 0)
 			(effects
 				(font
@@ -31633,6 +34063,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 104.14 0)
 			(effects
 				(font
@@ -31729,7 +34177,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 48.26 0)
 			(effects
 				(font
@@ -31739,6 +34187,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 48.26 0)
 			(effects
 				(font
@@ -31843,6 +34309,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 127 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 127 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 127 20.32 0)
 			(effects
 				(font
@@ -31961,6 +34445,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 107.95 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 107.95 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2f568ec0-0ea1-481f-b517-294faac1716e")
 		)
@@ -32071,6 +34573,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 146.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 146.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "deb74b2a-c77e-4fb4-aa22-85daff911957")
 		)
@@ -32164,7 +34684,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 48.26 0)
 			(effects
 				(font
@@ -32174,6 +34694,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 48.26 0)
 			(effects
 				(font
@@ -32241,7 +34779,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 99.568 90)
 			(effects
 				(font
@@ -32268,7 +34806,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 97.79 0)
 			(effects
 				(font
@@ -32279,6 +34817,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32374,7 +34930,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 231.14 90.17 0)
 			(effects
 				(font
@@ -32384,6 +34940,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 231.14 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 231.14 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 231.14 90.17 0)
 			(effects
 				(font
@@ -32496,6 +35070,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 190.5 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 190.5 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "923759ad-81fe-4ba9-a036-26b852cedb60")
 		)
@@ -32600,6 +35192,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ea51ca9d-51fb-4ebc-80db-cccbff3c01a1")
 		)
@@ -32665,7 +35275,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 223.52 71.628 90)
 			(effects
 				(font
@@ -32692,7 +35302,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 223.52 69.85 0)
 			(effects
 				(font
@@ -32703,6 +35313,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 223.52 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 223.52 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 223.52 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32798,7 +35426,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 116.84 76.2 0)
 			(effects
 				(font
@@ -32808,6 +35436,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 116.84 76.2 0)
 			(effects
 				(font
@@ -32920,6 +35566,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 222.25 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 222.25 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0fbb093a-c128-4936-8c0f-2dd96f1aa2a4")
 		)
@@ -33014,7 +35678,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 34.29 0)
 			(effects
 				(font
@@ -33024,6 +35688,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 34.29 0)
 			(effects
 				(font
@@ -33136,6 +35818,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "48ea4b64-272d-44c8-9ab2-d20f78b70244")
 		)
@@ -33230,7 +35930,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 78.74 118.11 0)
 			(effects
 				(font
@@ -33240,6 +35940,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 78.74 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 78.74 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 78.74 118.11 0)
 			(effects
 				(font
@@ -33336,7 +36054,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 90.17 0)
 			(effects
 				(font
@@ -33346,6 +36064,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 90.17 0)
 			(effects
 				(font
@@ -33442,7 +36178,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 62.23 0)
 			(effects
 				(font
@@ -33452,6 +36188,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 62.23 0)
 			(effects
 				(font
@@ -33564,6 +36318,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 165.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 165.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "288dde77-e849-4a41-a200-6a615c350a62")
 		)
@@ -33629,7 +36401,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 127.508 90)
 			(effects
 				(font
@@ -33656,7 +36428,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 125.73 0)
 			(effects
 				(font
@@ -33667,6 +36439,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33778,6 +36568,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "718da146-c2a4-41a8-b055-73fc686de831")
 		)
@@ -33843,7 +36651,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 127.508 90)
 			(effects
 				(font
@@ -33870,7 +36678,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 125.73 0)
 			(effects
 				(font
@@ -33881,6 +36689,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33976,7 +36802,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 212.09 118.11 0)
 			(effects
 				(font
@@ -33986,6 +36812,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 212.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 212.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 212.09 118.11 0)
 			(effects
 				(font
@@ -34053,7 +36897,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 85.598 90)
 			(effects
 				(font
@@ -34080,7 +36924,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 166.37 83.82 0)
 			(effects
 				(font
@@ -34091,6 +36935,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 166.37 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 166.37 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 166.37 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34186,7 +37048,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 135.89 34.29 0)
 			(effects
 				(font
@@ -34196,6 +37058,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 135.89 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 135.89 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 135.89 34.29 0)
 			(effects
 				(font
@@ -34292,7 +37172,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 118.11 0)
 			(effects
 				(font
@@ -34302,6 +37182,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 118.11 0)
 			(effects
 				(font
@@ -34398,7 +37296,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 34.29 0)
 			(effects
 				(font
@@ -34408,6 +37306,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 34.29 0)
 			(effects
 				(font
@@ -34475,7 +37391,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 85.598 90)
 			(effects
 				(font
@@ -34502,7 +37418,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 83.82 0)
 			(effects
 				(font
@@ -34513,6 +37429,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34579,7 +37513,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 241.3 161.798 90)
 			(effects
 				(font
@@ -34606,7 +37540,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 241.3 160.02 0)
 			(effects
 				(font
@@ -34617,6 +37551,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 241.3 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 241.3 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 241.3 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34706,7 +37658,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 154.94 76.2 0)
 			(effects
 				(font
@@ -34716,6 +37668,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 154.94 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 154.94 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 154.94 76.2 0)
 			(effects
 				(font
@@ -34828,6 +37798,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b44ed79e-c8c8-47a2-b92c-88ddeec06159")
 		)
@@ -34893,7 +37881,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 57.658 90)
 			(effects
 				(font
@@ -34920,7 +37908,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 55.88 0)
 			(effects
 				(font
@@ -34931,6 +37919,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35042,6 +38048,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c92cf19e-e893-4378-8ca9-039421837229")
 		)
@@ -35136,7 +38160,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "JLCPCB Part #" "C2128"
 			(at 116.84 90.17 0)
 			(effects
 				(font
@@ -35146,6 +38170,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
+			(at 116.84 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 116.84 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 116.84 90.17 0)
 			(effects
 				(font
@@ -35213,7 +38255,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 147.32 43.688 90)
 			(effects
 				(font
@@ -35240,7 +38282,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 147.32 41.91 0)
 			(effects
 				(font
@@ -35251,6 +38293,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 147.32 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 147.32 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 147.32 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35317,7 +38377,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.17 71.628 90)
 			(effects
 				(font
@@ -35344,7 +38404,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 90.17 69.85 0)
 			(effects
 				(font
@@ -35355,6 +38415,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 90.17 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 90.17 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 90.17 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35421,7 +38499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 109.22 99.568 90)
 			(effects
 				(font
@@ -35448,7 +38526,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 109.22 97.79 0)
 			(effects
 				(font
@@ -35459,6 +38537,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 109.22 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 109.22 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 109.22 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35570,6 +38666,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "35019c73-0e0d-4102-b2fe-415099abf858")
 		)
@@ -35635,7 +38749,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 223.52 43.688 90)
 			(effects
 				(font
@@ -35662,7 +38776,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 223.52 41.91 0)
 			(effects
 				(font
@@ -35673,6 +38787,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 223.52 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 223.52 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 223.52 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35739,7 +38871,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 204.47 99.568 90)
 			(effects
 				(font
@@ -35766,7 +38898,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 204.47 97.79 0)
 			(effects
 				(font
@@ -35777,6 +38909,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 204.47 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 204.47 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 204.47 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35888,6 +39038,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 184.15 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 184.15 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "772dfacc-2b02-412b-9813-d4825fbbdbd3")
 		)
@@ -35953,7 +39121,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 128.27 29.718 90)
 			(effects
 				(font
@@ -35980,7 +39148,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22775"
+		(property "JLCPCB Part #" "C25076"
 			(at 128.27 27.94 0)
 			(effects
 				(font
@@ -35991,6 +39159,24 @@
 		)
 		(property "JLCPCB Rotation Offset" ""
 			(at 128.27 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 128.27 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 128.27 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36094,6 +39280,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 203.2 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 203.2 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 203.2 104.14 0)
 			(effects
 				(font
@@ -36212,6 +39416,24 @@
 				(hide yes)
 			)
 		)
+		(property "FT Origin" ""
+			(at 203.2 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
+			(at 203.2 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e374389f-eea6-40d5-bb82-8f4666a2cf42")
 		)
@@ -36314,6 +39536,24 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" "180"
+			(at 146.05 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Origin" ""
+			(at 146.05 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "FT Rotation Offset" ""
 			(at 146.05 48.26 0)
 			(effects
 				(font
