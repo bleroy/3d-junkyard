@@ -62,14 +62,6 @@
       ],
       "drc_exclusions": [
         [
-          "solder_mask_bridge|19922163|31063359|2e1f33ec-46ca-4b8c-a72d-48d961bd2ec2|1396c11d-6b84-4cf6-9c76-cd559b431199",
-          ""
-        ],
-        [
-          "solder_mask_bridge|25393582|34014217|2e1f33ec-46ca-4b8c-a72d-48d961bd2ec2|acb0156f-78e3-4d3b-a03a-3911f0459996",
-          ""
-        ],
-        [
           "solder_mask_bridge|67929895|34269682|ee5c4105-545e-471c-8d33-35a531687973|5eceda4c-7523-4621-83fd-6c96aacb5065",
           ""
         ]
@@ -253,7 +245,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "4.3i"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -724,7 +716,7 @@
       {
         "filename": "Decent400-internal.kicad_sch",
         "name": "Decent400-internal",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "bb8bfa28-ab9e-4457-bbf1-e505aca6ff00"
       }
     ],
     "used_designators": "",
@@ -733,7 +725,7 @@
   "sheets": [
     [
       "bb8bfa28-ab9e-4457-bbf1-e505aca6ff00",
-      "Root"
+      "Decent400-internal"
     ]
   ],
   "text_variables": {},
