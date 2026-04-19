@@ -4,10 +4,14 @@ A repository of various 3D models and projects.
 
 So far:
 
-* [Atari 130MX](Atari130MX): a mechanical keyboard replacement for Atari XE computers that uses vintage Atari keycaps
-* [Dungeon Master](DungeonMaster): reverse-engineering Dungeon Master's rendering and running it in a browser
-* [Beyond the Jaggi lines](Jaggilines): reverse-engineering Rescue on Fractalus and running it in a browser
-* [JoyKeyMX](JoyKeyMX): a joypad compatible with Atari 8-bit and 7800 built with Cherry MX compatible switches
+* [DecentXE](./DecentXE): a mechanical keyboard for Atari XE computers
+* [DecentXL](./DecentXL/): a mechanical keyboard for Atari 600XL and 800XL computers
+* [Decent400](./Decent400/): a mechanical keyboard for Atari 400 computers
+* [Decent800](./Decent800/): a mechanical keyboard for Atari 800 computers
+* [Decent1200](./Decent1200/): a mechanical keyboard for Atari 1200XL computers 
+* [Dungeon Master](./DungeonMaster): reverse-engineering Dungeon Master's rendering and running it in a browser
+* [Beyond the Jaggi lines](./Jaggilines): reverse-engineering Rescue on Fractalus and running it in a browser
+* [JoyKeyMX](./JoyKeyMX): a joypad compatible with Atari 8-bit and 7800 built with Cherry MX compatible switches
 
 ## License
 

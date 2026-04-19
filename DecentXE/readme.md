@@ -4,13 +4,13 @@
 
 Whether you have an old Atari XE computer with a dead keyboard membrane, would like to use a XE keyboard with your favorite PC emulators, or just want to build a more modern XE keyboard, this is the project for you.
 
-![The DecentXE keyboard with modern graphite key caps](Media/ModernGraphite.jpg)
+![The DecentXE keyboard with modern graphite key caps](./Media/ModernGraphite.jpg)
 
 There are two versions of the keyboard: modern and vintage. Modern uses brand new MX-compatible key caps, while vintage uses the original Atari key caps and adapts them to modern switches.
 
 There's been a number of previous projects to put a modern keyboard on Atari 8-bit computers. I don't think anyone's done it while preserving the original keycaps though (would love to be proven wrong). Once assembled, you can't tell the difference from an aesthetic point of view... Check this out:
 
-![Vintage DecentXE keyboard](Media/Atari130MX.jpg)
+![Vintage DecentXE keyboard](./Media/Atari130MX.jpg)
 
 But wait!... That's not all. Since the project started, there's been multiple revisions, adaptations to all kinds of demands from other Atari enthusiasts, and you now have many options to build the keyboard of your dreams...
 
@@ -34,7 +34,7 @@ As I made the project public on [Atariage forums](https://forums.atariage.com/to
 
 The stabilizers were costar stabilizers for the left shift, which required some creative bending of the vintage stabilizer rod and always remained a little clunky. The space bar rod has a larger diameter and necessitated 3D-printed stabilizers that were, to be frank, terrible. They sorta did the job, just poorly.
 
-![Stems and stabilizers, comparison with stock parts](Media/stems-and-stabilizers.jpg)
+![Stems and stabilizers, comparison with stock parts](./Media/stems-and-stabilizers.jpg)
 
 The first plate I made was water-jet-cut steel. That was expensive and rusty. I quickly realized after that first attempt that PCB fabrication houses can make aluminum PCBs for cheap. Those are machined rather than laser or water-jet cut, but the quality is perfectly adequate for a fraction of the price. They are just PCBs without circuitry on them. I later learned how other handmade keyboard makers use the same trick, including with regular PCBs, although aluminum is clearly superior for this application.
 
@@ -116,7 +116,7 @@ If you're using vintage caps, you can pick any Kailh Choc v1 low-profile switch.
 
 ## Design
 
-The Decent XE project is built on [an original PCB design](./Keyboard/DecentXE-Modern.kicad_pcb), [a custom aluminum plate](./Plate/DecentXE-plate-modern.kicad_pcb), [MX-compatible switches](https://www.kailhswitch.com/mechanical-keyboard-switches/smt-key-switches/box-blue-white-switches-for-mechanical.html), [Kailh Choc v1 low-profile switches](http://www.kailh.com/en/Products/Ks/CS/), [custom key caps from GoblinTech](https://goblintechkeys.com/collections/60-keycap), 3D printed adapters and Durock v2 and Costar stabilizers.
+The Decent XE project is built on [an original PCB design](./Keyboard/DecentXE-Modern.kicad_pcb), [a custom aluminum plate](./Plate/DecentXE-plate-modern.kicad_pcb), [MX-compatible switches](https://www.kailhswitch.com/mechanical-keyboard-switches/smt-key-switches/box-blue-white-switches-for-mechanical.html), [Kailh Choc v1 low-profile switches](http://www.kailh.com/en/Products/Ks/CS/), custom key caps, 3D printed adapters and Durock v2 and Costar stabilizers.
 
 ![The DecentXE keyboard assembly](./Media/DecentXE-modern-assembly.jpg)
 
@@ -147,27 +147,40 @@ It is also possible however to build and use this keyboard and use it with an em
 
 ### Key caps
 
-The best result will be obtained with [new key caps](https://goblintechkeys.com/collections/60-keycap).
+The best result will be obtained with new key caps.
 
-![Modern layout](Caps/Atari%20XE%20-%20White.svg)
-![Modern layout](Caps/Atari%20XE%20-%20Falcon.svg)
+Key caps can be sourced from [ThockFactory](https://thockfactory.com/fr/configurator) or [GoblinTech](https://goblintechkeys.com/collections/60-keycap).
+
+#### ThockFactory
+
+Use the following configuration files in the ThockFactory configurator:
+
+* [Modern layout (white)](./Caps/Atari%20XE%20-%20White%20-%20Thock.json)
+* [Modern layout (Falcon)](./Caps/Atari%20XE%20-%20Falcon%20-%20Thock.json)
+
+#### GoblinTech
+
+Use the following templates when ordering from GoblinTech:
+
+* ![Modern layout (white)](Caps/Atari%20XE%20-%20White.svg)
+* ![Modern layout (Falcon)](Caps/Atari%20XE%20-%20Falcon.svg)
+
+#### Vintage
 
 Vintage key caps from an Atari XE computer can also be used to maintain a look that is indistinguishable from the original. Old-new stock of XE keyboards is also currently available without too much trouble and for a reasonable price.
 
-* Optimal: [MX-compatible set of key caps](https://goblintechkeys.com/collections/60-keycap)
+* Optimal: MX-compatible set of key caps
 * Fine: vintage set of XE key caps
 
 ### Console keys (Help, Start, Select, Option, Reset)
 
 If you're using modern key caps, you'll need to make a choice for console keys.
 
-The first solution is to [3D-print your own](./Caps/fn-console-set-choc.stl) and then paint them. I recommend [Tamiya Sea Grey model paint](https://www.tamiyausa.com/shop/acrylic-paint-flat-mini-10ml/acrylic-mini-xf-83-m-sea-gray/) for a pretty good match with the Atari XE case color. You can mask the legends when painting to make them stand out.
+The best solution is to re-use your vintage console keys with adapters.
 
-I'm also working on a set of vinyl stickers that could provide an alternative to painting and might even allow for shine-through caps. Stay tuned...
+Itś also possible to [3D-print your own](./Caps/fn-console-set-choc.stl) and then paint them. I recommend [Tamiya Sea Grey model paint](https://www.tamiyausa.com/shop/acrylic-paint-flat-mini-10ml/acrylic-mini-xf-83-m-sea-gray/) for a pretty good match with the Atari XE case color. You can mask the legends when painting to make them stand out.
 
-The alternative is to use vintage function keys on adapters. That choice will require using adapters on top of the low-profile switches for those five keys.
-
-* Good: 3D-printed
+* Fine: 3D-printed
 * Optimal: vintage function keys on adapters
 
 ### Switches
@@ -177,7 +190,7 @@ A choice of switches is highly personal and there are many options. Get a sample
 There are three main categories for switches:
 * linear (such as reds): the resistance from the switch is about constant as it's pressed.
 * tactile (such as browns): there's a slight bump of resistance as the switch is pressed, giving more feedback than linear switches.
-* clicky (such as whites): there's a bump in resistance, accompanied with an audible and satisfying clicking sound.
+* clicky (such as whites): there's a bump in resistance (or it feels like thereś one), accompanied with an audible and satisfying clicking sound.
 
 Console keys should now be mounted on Kailh Choc v1 low-profile switches, so you'll need to buy 5 that match the characteristics of your main keyboard choice (clicky, linear or tactile).
 
@@ -298,7 +311,7 @@ If your Atari connector is damaged, or you don't have one, it's also possible to
 
 Once you've sourced all the components, it's time to assemble. The following instructions attempt to reflect all the choices you may have made in selecting components.
 
-Jan Beta ha a great video where he shows the full assembly process (the mistake he makes with the config jumpers can no longer be made: those are gone from the design).
+Jan Beta has a great video where he shows the full assembly process (the mistake he makes with the config jumpers can no longer be made: those are gone from the design).
 
 [![Jan Beta's build](https://i.ytimg.com/vi/BoW_3545O0c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAcICik7P0jZZsuk3aPNOoPVTIaxA)](https://www.youtube.com/watch?v=BoW_3545O0c)
 
