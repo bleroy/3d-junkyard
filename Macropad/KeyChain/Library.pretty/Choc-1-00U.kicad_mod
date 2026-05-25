@@ -1,0 +1,198 @@
+(footprint "Choc-1-00U"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "1.00U Kailh Choc footprint")
+	(property "Reference" "SWAtari1"
+		(at 0 -3.12 0)
+		(layer "Cmts.User")
+		(hide yes)
+		(uuid "36e15d85-bc1a-440b-9ed8-d41c014b0cfd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Atari"
+		(at 4.7625 13.462 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a8a75cd3-060a-43dd-a8f6-5a66593f234d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c8f79801-429f-4cea-bd9d-763320019f1a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "07a8da2d-6869-4016-93a3-9ad4267b0cfd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "JLCPCB Part #" "C193191"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "95c7af4e-f126-4a3a-a333-5481043985e2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "JLCPCB Rotation Offset" "180"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63e1e361-7351-42b0-8e91-4eca86251754")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -8 -2.75)
+		(end 8 -2.75)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "d1b136a1-8e73-4bdb-b1d0-c99b7b1acefa")
+	)
+	(fp_line
+		(start -8 13.25)
+		(end -8 -2.75)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "fcbde2d5-99e8-416d-a64d-ce0fe8d4e059")
+	)
+	(fp_line
+		(start 8 -2.75)
+		(end 8 13.25)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "50a1250c-d363-4dc8-8938-5bd2a9474e9a")
+	)
+	(fp_line
+		(start 8 13.25)
+		(end -8 13.25)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "4c8b17b1-716e-47e3-b4ab-ee917e76d137")
+	)
+	(fp_line
+		(start -6.35 -1.27)
+		(end 6.35 -1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "c17bf4c9-8b16-427f-98e0-1f087eae104e")
+	)
+	(fp_line
+		(start -6.35 11.43)
+		(end -6.35 -1.27)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "44e672ef-d262-4c75-a307-9ab8ede7386c")
+	)
+	(fp_line
+		(start 6.35 -1.27)
+		(end 6.35 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "55a3ed1b-4512-440b-a324-1037905f482a")
+	)
+	(fp_line
+		(start 6.35 11.43)
+		(end -6.35 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "f16e6f8b-4913-455a-850c-aea472432d4f")
+	)
+	(pad "" np_thru_hole oval
+		(at -5.33 5.08 270)
+		(size 1.8 2.2)
+		(drill oval 1.8 2.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "419803ff-d19d-4e8e-86ac-efa8ec845311")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 5.08 180)
+		(size 5.25 5.25)
+		(drill 5.25)
+		(layers "*.Cu" "*.Mask")
+		(uuid "80826756-3830-4599-b0a9-07718c65658e")
+	)
+	(pad "" np_thru_hole oval
+		(at 5.33 5.08 270)
+		(size 1.8 2.2)
+		(drill oval 1.8 2.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "1424766b-99c7-4155-94bd-40e058e35306")
+	)
+	(pad "1" thru_hole circle
+		(at 0 10.98 90)
+		(size 2.2 2.2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5c17e787-fac2-4cff-b8a7-67df3d97690b")
+	)
+	(pad "2" thru_hole circle
+		(at -5 8.88 270)
+		(size 2.2 2.2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bd68e69b-a5db-4b7c-b684-c01b0f1d2947")
+	)
+	(embedded_fonts no)
+)
