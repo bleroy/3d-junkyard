@@ -1,7 +1,7 @@
 {
   "version": 19,
   "customLayout": true,
-  "name": "Atari XE Falcon",
+  "name": "Atari XE Graphite",
   "preset": "Custom Layout",
   "standard": "Mixed",
   "language": "English (US)",
@@ -24,7 +24,7 @@
           "id": 0,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -45,13 +45,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 1,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -90,13 +91,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 2,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -135,13 +137,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 3,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -180,13 +183,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 4,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -225,13 +229,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 5,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -270,13 +275,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 6,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -315,13 +321,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 7,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -360,13 +367,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 8,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -405,13 +413,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 9,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -450,13 +459,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 10,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -495,13 +505,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 11,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -540,13 +551,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 12,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -585,13 +597,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 13,
           "width": 2,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -631,7 +644,8 @@
               "textAlign": "left",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         }
       ]
     },
@@ -644,7 +658,7 @@
           "id": 0,
           "width": 1.5,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -699,7 +713,7 @@
               "italic": false,
               "underline": false,
               "textAlign": "center",
-              "color": "#545452"
+              "color": "#2c2521"
             },
             {
               "type": "Image",
@@ -718,13 +732,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 1,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -762,13 +777,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 2,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -806,13 +822,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 3,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -852,13 +869,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 4,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -896,13 +914,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 5,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -940,13 +959,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 6,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -984,13 +1004,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 7,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1028,13 +1049,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 8,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1072,13 +1094,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 9,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1116,13 +1139,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 10,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1160,13 +1184,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 11,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1222,13 +1247,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 12,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1284,14 +1310,15 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 13,
           "width": 1.5,
           "height": 2,
           "special": "iso-enter",
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1312,7 +1339,8 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         }
       ]
     },
@@ -1325,7 +1353,7 @@
           "id": 0,
           "width": 1.75,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1346,13 +1374,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 1,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1390,13 +1419,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 2,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1434,13 +1464,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 3,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1478,13 +1509,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 4,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1522,13 +1554,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 5,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1566,13 +1599,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 6,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1610,13 +1644,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 7,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1654,13 +1689,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 8,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1698,13 +1734,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 9,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1742,13 +1779,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 10,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1804,13 +1842,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 11,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1866,13 +1905,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 12,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1928,7 +1968,8 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         }
       ]
     },
@@ -1941,7 +1982,7 @@
           "id": 0,
           "width": 2.25,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -1962,13 +2003,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 1,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2007,13 +2049,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 2,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2051,13 +2094,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 3,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2097,13 +2141,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 4,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2141,13 +2186,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 5,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2185,13 +2231,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 6,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2229,13 +2276,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 7,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2273,13 +2321,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 8,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2335,13 +2384,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 9,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2397,13 +2447,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 10,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2442,13 +2493,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 11,
           "width": 1.75,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2469,13 +2521,14 @@
               "textAlign": "left",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 12,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2495,7 +2548,8 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         }
       ]
     },
@@ -2508,7 +2562,7 @@
           "id": 0,
           "width": 1.25,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2527,7 +2581,7 @@
               "italic": false,
               "underline": false,
               "textAlign": "center",
-              "color": "#545452"
+              "color": "#2c2521"
             },
             {
               "type": "Image",
@@ -2547,22 +2601,24 @@
               "color": "#F2F2F2"
             }
           ],
-          "margin": 2.5
+          "margin": 2.5,
+          "warnings": {}
         },
         {
           "id": 1,
           "width": 6.25,
           "height": 1,
-          "color": "#545452",
-          "image": "",
           "special": "sp",
-          "legends": []
+          "color": "#2c2521",
+          "image": "",
+          "legends": [],
+          "warnings": {}
         },
         {
           "id": 2,
           "width": 1.25,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2583,13 +2639,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 3,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2609,13 +2666,14 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 4,
           "width": 1,
           "height": 1,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
@@ -2635,14 +2693,15 @@
               "textAlign": "center",
               "color": "#F2F2F2"
             }
-          ]
+          ],
+          "warnings": {}
         },
         {
           "id": 5,
           "width": 1,
           "height": 1,
           "rowOverride": 4,
-          "color": "#545452",
+          "color": "#2c2521",
           "image": "",
           "legends": [
             {
