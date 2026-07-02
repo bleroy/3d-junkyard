@@ -207,6 +207,12 @@ The new power LED is quite small, and it's a good idea to diffuse its light. The
 
 [Model for the LED diffuser](./Misc/LedDiffuser600XL.stl)
 
+Thanks to [@Waynetho](https://forums.atariage.com/profile/67688-waynetho/), there's a model for the LED diffuser that mimics more closely the look of the old power LEDs:
+
+- [800XL "bulb" diffuser](./Misc/800XL%20LED%20diffuser.stl)
+- [600XL "bulb" diffuser](./Misc/600XL%20LED%20Diffuser.stl)
+- [Black washer for either model](./Misc/LED%20diffuser%20black%20washer.stl)
+
 ## Assembly
 
 Once you've gathered all the parts, you can assemble them in the following order:
