@@ -8,7 +8,7 @@
 		(at 0 -3.12 0)
 		(layer "Cmts.User")
 		(hide yes)
-		(uuid "36e15d85-bc1a-440b-9ed8-d41c014b0cfd")
+		(uuid "9287b67c-5e52-43fa-a3ab-e9b226db88b1")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 		(at 4.7625 13.462 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "a8a75cd3-060a-43dd-a8f6-5a66593f234d")
+		(uuid "baac6f9e-98c4-4dd8-8e49-6f6ddc34764e")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c8f79801-429f-4cea-bd9d-763320019f1a")
+		(uuid "c1a02011-ca58-47d9-baa3-6439c7285185")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44,7 +44,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "07a8da2d-6869-4016-93a3-9ad4267b0cfd")
+		(uuid "7860d63f-f161-4e8c-8538-85a7fe784509")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "95c7af4e-f126-4a3a-a333-5481043985e2")
+		(uuid "7f8f9c3f-deda-42d0-b2a1-2c39ab81c25f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -68,7 +68,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "63e1e361-7351-42b0-8e91-4eca86251754")
+		(uuid "167a79d5-5c6d-421a-a6b4-c5f6d7f48642")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -85,7 +85,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "d1b136a1-8e73-4bdb-b1d0-c99b7b1acefa")
+		(uuid "5fba5e7f-39ec-43a8-b1f3-6b2a41ed4571")
 	)
 	(fp_line
 		(start -8 13.25)
@@ -95,7 +95,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "fcbde2d5-99e8-416d-a64d-ce0fe8d4e059")
+		(uuid "0cb5da61-a234-4f41-98d5-f798f008e975")
 	)
 	(fp_line
 		(start 8 -2.75)
@@ -105,7 +105,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "50a1250c-d363-4dc8-8938-5bd2a9474e9a")
+		(uuid "0cd9dc43-696b-4983-81d8-277a24e33767")
 	)
 	(fp_line
 		(start 8 13.25)
@@ -115,7 +115,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "4c8b17b1-716e-47e3-b4ab-ee917e76d137")
+		(uuid "8dad2c10-c85f-4b7b-98b0-76afa3e339b8")
 	)
 	(fp_line
 		(start -6.35 -1.27)
@@ -125,7 +125,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "c17bf4c9-8b16-427f-98e0-1f087eae104e")
+		(uuid "191298f2-8bab-4eed-98f0-e619439390bd")
 	)
 	(fp_line
 		(start -6.35 11.43)
@@ -135,7 +135,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "44e672ef-d262-4c75-a307-9ab8ede7386c")
+		(uuid "960b5c74-ebd9-4ae8-ab5f-3e0e19e2f990")
 	)
 	(fp_line
 		(start 6.35 -1.27)
@@ -145,7 +145,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "55a3ed1b-4512-440b-a324-1037905f482a")
+		(uuid "32ab01c4-a9d8-4d37-b441-26991d2205ea")
 	)
 	(fp_line
 		(start 6.35 11.43)
@@ -155,28 +155,28 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "f16e6f8b-4913-455a-850c-aea472432d4f")
+		(uuid "18c38df5-fc21-4104-94f0-9f437888dc70")
 	)
 	(pad "" np_thru_hole oval
 		(at -5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "419803ff-d19d-4e8e-86ac-efa8ec845311")
+		(uuid "2683257f-1394-4de7-a2f6-bee7bf471437")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 5.08 180)
 		(size 5.25 5.25)
 		(drill 5.25)
 		(layers "*.Cu" "*.Mask")
-		(uuid "80826756-3830-4599-b0a9-07718c65658e")
+		(uuid "a48fd04a-519f-4d7f-a064-bb84a3e29d63")
 	)
 	(pad "" np_thru_hole oval
 		(at 5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "1424766b-99c7-4155-94bd-40e058e35306")
+		(uuid "1ac991d2-8753-4bfb-b17f-c19bc7ddd8e2")
 	)
 	(pad "1" thru_hole circle
 		(at 0 10.98 90)
@@ -184,7 +184,7 @@
 		(drill 1.2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "5c17e787-fac2-4cff-b8a7-67df3d97690b")
+		(uuid "c5406292-e18e-4801-9ef6-974c5004878f")
 	)
 	(pad "2" thru_hole circle
 		(at -5 8.88 270)
@@ -192,7 +192,30 @@
 		(drill 1.2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "bd68e69b-a5db-4b7c-b684-c01b0f1d2947")
+		(uuid "f1761a35-65c4-47c8-8392-f446394c79f2")
 	)
 	(embedded_fonts no)
+	(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-choc-low-profile-switch-1.snapshot.3/Kailh Choc Low Profile Switch.step"
+		(offset
+			(xyz 0 -5 2.15)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+	(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-lp-choc-pc-keycap-1.snapshot.3/Kailh LP Choc PC Keycap.step"
+		(opacity 0.7200)
+		(offset
+			(xyz 0 -5 2)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
 )

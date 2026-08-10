@@ -451,13 +451,7 @@
 		(path "/eb2ff194-1091-4c9b-be6f-2cec66213317/959c257f-2ce7-415f-a13c-9066fe2de47c")
 		(sheetname "/Key D/")
 		(sheetfile "key.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
-		(attr exclude_from_bom dnp)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -8 -2.75)
@@ -583,6 +577,29 @@
 			(uuid "0bcd698e-94b0-492f-a2aa-a240f8d1f8a2")
 		)
 		(embedded_fonts no)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-choc-low-profile-switch-1.snapshot.3/Kailh Choc Low Profile Switch.step"
+			(offset
+				(xyz 0 -5 2.15)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-lp-choc-pc-keycap-1.snapshot.3/Kailh LP Choc PC Keycap.step"
+			(opacity 0.7200)
+			(offset
+				(xyz 0 -5 2)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "MountingHole:MountingHole_2.2mm_M2_Pad_Via"
 		(layer "F.Cu")
@@ -947,13 +964,7 @@
 		(path "/be8e39cd-e9ae-418a-8e17-6aed13e894ce/959c257f-2ce7-415f-a13c-9066fe2de47c")
 		(sheetname "/Key B/")
 		(sheetfile "key.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
-		(attr exclude_from_bom dnp)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -8 -2.75)
@@ -1079,6 +1090,29 @@
 			(uuid "310070f5-ed42-4dda-9e6d-d325cab4ab66")
 		)
 		(embedded_fonts no)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-choc-low-profile-switch-1.snapshot.3/Kailh Choc Low Profile Switch.step"
+			(offset
+				(xyz 0 -5 2.15)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-lp-choc-pc-keycap-1.snapshot.3/Kailh LP Choc PC Keycap.step"
+			(opacity 0.7200)
+			(offset
+				(xyz 0 -5 2)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "Library:Choc-1-00U"
 		(layer "F.Cu")
@@ -1225,13 +1259,7 @@
 		(path "/442b7766-d4e3-4a2d-8f35-e4258596168b/959c257f-2ce7-415f-a13c-9066fe2de47c")
 		(sheetname "/Key C/")
 		(sheetfile "key.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
-		(attr exclude_from_bom dnp)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -8 -2.75)
@@ -1357,6 +1385,29 @@
 			(uuid "ec402a1e-9433-4a64-b427-1610c56268cb")
 		)
 		(embedded_fonts no)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-choc-low-profile-switch-1.snapshot.3/Kailh Choc Low Profile Switch.step"
+			(offset
+				(xyz 0 -5 2.15)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-lp-choc-pc-keycap-1.snapshot.3/Kailh LP Choc PC Keycap.step"
+			(opacity 0.7200)
+			(offset
+				(xyz 0 -5 2)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "MountingHole:MountingHole_2.2mm_M2_Pad_Via"
 		(layer "F.Cu")
@@ -1721,13 +1772,7 @@
 		(path "/a495d0e4-e772-4659-8336-b614cb397189/959c257f-2ce7-415f-a13c-9066fe2de47c")
 		(sheetname "/Key A/")
 		(sheetfile "key.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
-		(attr exclude_from_bom dnp)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -8 -2.75)
@@ -1853,6 +1898,29 @@
 			(uuid "234bb1ce-63db-4e50-9807-7f2c4aa01fd5")
 		)
 		(embedded_fonts no)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-choc-low-profile-switch-1.snapshot.3/Kailh Choc Low Profile Switch.step"
+			(offset
+				(xyz 0 -5 2.15)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "C:/Projects/3d-junkyard/Macropad/Models/kailh-lp-choc-pc-keycap-1.snapshot.3/Kailh LP Choc PC Keycap.step"
+			(opacity 0.7200)
+			(offset
+				(xyz 0 -5 2)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "MountingHole:MountingHole_2.2mm_M2_Pad_Via"
 		(layer "F.Cu")
