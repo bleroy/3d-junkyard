@@ -1,0 +1,125 @@
+(footprint "MX-1-50U-Atari-Fn-Hole"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "1.5U Kailh Choc low-pro plate footprint")
+	(property "Reference" "REF**"
+		(at 0 -3.12 0)
+		(layer "Cmts.User")
+		(hide yes)
+		(uuid "b45f03ba-ad80-4476-afd2-52ba9c9d25de")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Choc"
+		(at 0 13.462 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9bbf9638-18e8-4e8c-89c4-c982d51c0642")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0054beed-fa42-48c5-aa70-76e0aa2fed27")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e28b3434-c67d-4b38-ae11-58960bfdc18e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -23.8125 9.525)
+		(end -4.7625 -9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "31661a0e-1491-413b-954a-1bcd23432c00")
+	)
+	(fp_line
+		(start -4.7625 -9.525)
+		(end 23.8125 -9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "49915c20-7948-4f12-8042-adfcd9782917")
+	)
+	(fp_line
+		(start 4.7625 9.525)
+		(end -23.8125 9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "763a8ac4-32c4-4735-99a3-ad91d6d9ff14")
+	)
+	(fp_line
+		(start 23.8125 -9.525)
+		(end 4.7625 9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "05ed6cf6-c26c-498c-a604-8fdfd32d16b5")
+	)
+	(fp_rect
+		(start -6.875 -6.875)
+		(end 6.875 6.875)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "39891969-78f7-4921-ac8e-b3b538a60589")
+	)
+	(pad "" np_thru_hole circle
+		(at -10.95 4.535 180)
+		(size 4.5 4.5)
+		(drill 4.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f41d5c2a-d389-4526-a74b-ff5929aaee72")
+	)
+	(pad "" np_thru_hole circle
+		(at 10.95 -4.535 180)
+		(size 4.5 4.5)
+		(drill 4.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "766e3ee3-c4b2-4e78-bc35-c7a15994b230")
+	)
+	(embedded_fonts no)
+)
