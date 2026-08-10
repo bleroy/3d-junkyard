@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SVG palette generator</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Bertrand Le Roy">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 8px;
+    }
+    fieldset {
+      display: inline-block;
+    }
+    .svgFrame {
+      display: inline-block;
+      border: solid black 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SVG palette generator</h1>
+  <p>
+    <fieldset id="parameters">
+      <legend>Parameters</legend>
+    </fieldset>
+  </p>
+
+  <div class="svgFrame">
+    <svg width="1050" height="1050" viewBox="0 0 1050 1050" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+      <style>
+        svg {
+          display:block;
+          fill-rule:evenodd;
+          clip-rule:evenodd;
+        }
+        polygon.cell {
+          fill:#abcdef;
+          stroke:#abcdef;
+          stroke-linejoin:round;
+          stroke-width:50;
+        }
+        text.color {
+          font-family:monospace;
+          font-size:14pt;
+          font-weight:lighter;
+        }
+      </style>
+      <g id="template">
+          <polygon class="cell" points="50,50 50,100 100,100 100,50"/>
+          <text class="color" x="75" y="110" text-anchor="middle">#abcdef</text>
+      </g>
+    </svg>
+  </div>
+
+  <p><a id="downloadSvgLink">Download SVG</a> <a id="downloadPngLink">Download PNG</a></p>
+
+  <script>
+    // Color handling. Scroll down for parameters.
+    class Color {
+      toRGB() {return RGBColor(0, 0, 0);}
+      toHSL() {return HSLColor(0, 0, 0);}
+      toString() {return "hsl(0, 0, 0)";}
+    }
+
+    class RGBColor extends Color {
+      #R;#G;#B;
+
+      constructor(red, green, blue) {
+        super();
+       [this.#R, this.#G, this.#B] = isNaN(green) || isNaN(blue) ?
+          [(red & 0xFF0000) >> 16, (red & 0xFF00) >> 8, red & 0xFF] :
+          [red, green, blue];
+      }
+
+      get red() { return this.#R; }
+      get green() { return this.#G; }
+      get blue() { return this.#B; }
+
+      toRGB() {return this;}
+
+      toHSL() {
+        const [red, green, blue] = [this.#R / 255.0, this.#G / 255.0, this.#B / 255.0];
+        const max = Math.max(red, green, blue);
+        const min = Math.min(red, green, blue);
+        let [hue, sat, light] = [NaN, 0, (min + max)/2];
+        const d = max - min;
+        const epsilon = 1 / 100000;   // max Sat is 1, in this code
+
+        if (d !== 0) {
+            sat = (light === 0 || light === 1)
+                ? 0
+                : (max - light) / Math.min(light, 1 - light);
+
+            switch (max) {
+                case red:   hue = (green - blue) / d + (green < blue ? 6 : 0); break;
+                case green: hue = (blue - red) / d + 2; break;
+                case blue:  hue = (red - green) / d + 4;
+            }
+
+            hue = hue * 60;
+        }
+
+        // Very out of gamut colors can produce negative saturation
+        // If so, just rotate the hue by 180 and use a positive saturation
+        // see https://github.com/w3c/csswg-drafts/issues/9222
+        if (sat < 0) {
+            hue += 180;
+            sat = Math.abs(sat);
+        }
+
+        if (hue >= 360) {
+            hue -= 360;
+        }
+
+        if (sat <= epsilon) {
+            hue = NaN;
+        }
+
+        return new HSLColor(hue, sat * 100, light * 100);
+      }
+
+      toString() {
+        return `#${Math.round(this.#R).toString(16).padStart(2, "0")}${Math.round(this.#G).toString(16).padStart(2, "0")}${Math.round(this.#B).toString(16).padStart(2, "0")}`.toUpperCase();
+      }
+    }
+
+    class HSLColor extends Color {
+      #H;#S;#L;
+
+      constructor(hue, saturation, lightness) {
+        super();
+        this.#H = hue;
+        this.#S = saturation || 100.0;
+        this.#L = lightness || 50.0;
+      }
+
+      get hue() { return this.#H; }
+      get saturation() { return this.#S; }
+      get lightness() { return this.#L; }
+
+      toRGB() {
+        const sat = this.#S / 100;
+        const light = this.#L / 100;
+        const hue = this.#H;
+
+        function f(n) {
+          const k = (n + hue / 30) % 12;
+          const a = sat * Math.min(light, 1 - light);
+          return Math.round(255.0 * (light - a * Math.max(-1, Math.min(k - 3, 9 - k, 1))));
+        }
+
+        return new RGBColor(f(0), f(8), f(4));
+      }
+
+      toHSL() {return this;}
+
+      toString() { return `hsl(${this.#H}deg ${this.#S}% ${this.#L}%)`; }
+    }
+
+    class ColorDelta {
+      addTo(color) {return color;}
+      times(i) {return this;}
+    }
+
+    class RGBDelta extends ColorDelta {
+      #R;#G;#B;
+
+      constructor(red, green, blue) {
+        super();
+        this.#R = red;
+        this.#G = green;
+        this.#B = blue;
+      }
+
+      get red() {return this.#R;}
+      get green() {return this.#G;}
+      get blue() {return this.#B;}
+
+      static #combine(a, b) {
+        return Math.max(0, Math.min(255, a + b));
+      }
+
+      times(i) {return new RGBDelta(this.red * i, this.green * i, this.blue * i);}
+
+      addTo(color) {
+        const rgbColor = color.toRGB();
+        return new RGBColor(
+          RGBDelta.#combine(rgbColor.red, this.red),
+          RGBDelta.#combine(rgbColor.green, this.green),
+          RGBDelta.#combine(rgbColor.blue, this.blue));
+      }
+    }
+
+    class HueDelta extends ColorDelta {
+      #H;
+
+      constructor(hue) {
+        super();
+        this.#H = hue;
+      }
+
+      get hue() {return this.#H;}
+
+      times(i) {return new HueDelta(this.hue * i);}
+
+      addTo(color) {
+        if (this.hue == 0) return color;
+        const hslColor = color.toHSL();
+        let hue = hslColor.hue + this.hue;
+        if (hue < 0) hue += 360;
+        if (hue >= 360) hue -= 360;
+        return new HSLColor(hue, hslColor.saturation, hslColor.lightness);
+      }
+    }
+
+    class LightnessDelta extends ColorDelta {
+      #L;
+
+      constructor(lightness) {
+        super();
+        this.#L = lightness;
+      }
+
+      get lightness() {return this.#L;}
+
+      times(i) {return new LightnessDelta(this.lightness * i);}
+
+      addTo(color) {
+        if (this.lightness == 0) return color;
+        const hslColor = color.toHSL();
+        const lightness = Math.min(100, Math.max(0, hslColor.lightness + this.lightness));
+        return new HSLColor(hslColor.hue, hslColor.saturation, lightness);
+      }
+    }
+
+    class SaturationDelta extends ColorDelta {
+      #S;
+
+      constructor(saturation) {
+        super();
+        this.#S = saturation;
+      }
+
+      get saturation() {return this.#S;}
+
+      times(i) {return new SaturationDelta(this.saturation * i);}
+
+      addTo(color) {
+        if (this.saturation == 0) return color;
+        const hslColor = color.toHSL();
+        const saturation = Math.min(100, Math.max(0, hslColor.saturation + this.saturation));
+        return new HSLColor(hslColor.hue, saturation, hslColor.lightness);
+      }
+    }
+
+    // Basic HTML element factory
+    function el(tag, parent, attr) {
+      const el = document.createElement(tag);
+      for (const attrName in attr) {
+        el.setAttribute(attrName, attr[attrName]);
+      }
+      (parent || document.body).appendChild(el);
+      return el;
+    }
+
+    // Dynamic editors for parameters
+    class Editor {
+      get element() {}
+
+      get value() {}
+    }
+
+    class ColorEditor {
+      get element() {
+        
+      }
+    }
+
+    class PolymorphicEditor extends Editor {
+      #typeArray;
+
+      constructor(typeArray) {
+        this.#typeArray = typeArray;
+      }
+    }
+
+    // Modify the color parameters of the palette here:
+    const centerColor = new RGBColor(0xE5E3E4);
+    const verticalStep = new SaturationDelta(1);
+    const horizontalStep = new HueDelta(60);
+
+    // Modify the general features of the palette here:
+    const horizontalCellCount = 7;
+    const verticalCellCount = 5;
+    const cellWidth = 100;
+    const cellHeight = 100;
+    const cornerRadius = 50;
+    const margin = 20;
+
+    // Create the editors
+    const parametersFieldsetEl = document.getElementById("parameters")
+
+    // Palette generation
+    const templateEl = document.getElementById("template");
+    const svgEl = templateEl.parentElement;
+
+    templateEl.style.display = "none";
+    svgEl.setAttribute("viewBox", `0 0 ${horizontalCellCount * (cellWidth + margin) + margin} ${verticalCellCount * (cellHeight + margin) + margin}`);
+    svgEl.setAttribute("width", `${horizontalCellCount * (cellWidth + margin) + margin}`);
+    svgEl.setAttribute("height", `${verticalCellCount * (cellHeight + margin) + margin}`);
+
+    for (var i = -Math.floor(horizontalCellCount / 2); i < Math.ceil(horizontalCellCount / 2); i++) {
+        for (var j = -Math.floor(verticalCellCount / 2); j < Math.ceil(verticalCellCount / 2); j++) {
+            const color = horizontalStep.times(i).addTo(verticalStep.times(j).addTo(centerColor));
+            const colorCode = color.toString();
+
+            const copy = templateEl.cloneNode(true);
+            copy.setAttribute("id", `cell_${i}_${j}`);
+            copy.style.display = "inline";
+            copy.setAttribute("transform", `translate(${(i + Math.floor(horizontalCellCount / 2)) * (cellWidth + margin) + margin + cornerRadius / 2}, ${(j + Math.floor(verticalCellCount / 2)) * (cellHeight + margin) + margin + cornerRadius / 2})`);
+
+            const polygon = copy.getElementsByTagName("polygon")[0];
+            polygon.setAttribute("points", `0,0 ${cellWidth - cornerRadius},0 ${cellWidth - cornerRadius},${cellWidth - cornerRadius} 0,${cellWidth - cornerRadius}`);
+            polygon.style.strokeWidth = cornerRadius;
+            polygon.style.fill = colorCode;
+            polygon.style.stroke = colorCode;
+
+            const text = copy.getElementsByTagName("text")[0];
+            const rgbColor = color.toRGB();
+            text.innerHTML = rgbColor.toString();
+            text.setAttribute("x", (cellWidth - cornerRadius) / 2);
+            text.setAttribute("y", cellHeight - cornerRadius / 1.4);
+            text.style.fill = rgbColor.red + rgbColor.green + rgbColor.blue < 30 ? "white" : "black";
+
+            svgEl.appendChild(copy);
+        }
+    }
+
+    // Create the SVG download link
+    const downloadSvgLink = document.getElementById("downloadSvgLink");
+    const svgUrl = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(new XMLSerializer().serializeToString(svgEl))));
+    downloadSvgLink.href = svgUrl;
+    downloadSvgLink.download = "palette.svg";
+
+    // Create the PNG download link through a canvas object
+    const downloadPngLink = document.getElementById("downloadPngLink");
+    downloadPngLink.download = "palette.png";
+    const canvasElement = document.createElement('canvas');
+    canvasElement.width = svgEl.clientWidth * 5;
+    canvasElement.height = svgEl.clientHeight * 5;
+    const ctx = canvasElement.getContext('2d');
+    ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+    const img = document.createElement("img");
+    img.addEventListener("load", function(e) {
+      ctx.drawImage(img, 0, 0, canvasElement.width, canvasElement.height);
+      const pngUrl = canvasElement.toDataURL('image/png');
+      downloadPngLink.href = pngUrl;
+    });
+    img.src = svgUrl;
+
+    // Ucomment for debugging PNG generation
+    // document.body.appendChild(canvasElement);
+  </script>
+</body>
+</html>
