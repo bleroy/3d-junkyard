@@ -1,0 +1,95 @@
+(footprint "TactileSwitch"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Basic tactile switch")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "bb89dfda-5771-4d5d-89dd-8f68fde6c96a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Tactile"
+		(at 0 1.9 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e4b1c23b-83e9-4add-b51d-9ca6c32ffbad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588886944055513088-C720477.pdf?response-content-disposition=attachment%3B%20filename%3DC720477.pdf%3B%20filename%2A%3DUTF-8%27%27C720477.pdf&x-oss-date=20260522T081900Z&x-oss-expires=3600&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5mBH%2FHXiIpG84WgWH%2FDr0xhYcodqJXS1Dz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qbZiqBpN4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWkrmVsgXsnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkINlSIlqKWD5sagAGBHo9juQga0UU9jygNsHjyrAQeNxYHLKXh0uwJXaw9qKEM18tWHT1UMbquKqIkyVDbYPU8MvPD6GmsMOSzcApLXxnWDLUG3GBb75SmGYu1HkaqOTLl%2BHpMTr6TuT%2BtiM%2Fib1999m%2FpcGcr6A%2F5aEvae3nTbiSELaXVe3uugNXDRCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZ4TKceUgDGKZYrKL4mE1GPy6%2F20260522%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=2a304137787ed6ddbd56df183787f43c5b1f7a11adb004a0b29fe2d21053da7c"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b88e6fe-eb71-4b7a-b885-d3759d7905d1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83be385d-bdbd-4382-9b36-7a619ba02406")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -3 -1.5)
+		(end 3 1.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "374f9cbc-c753-4725-9a05-85ad8bc024a6")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "021fdf56-3707-4d91-acfe-a77dca1334f5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.225 0)
+		(size 1.05 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bed54966-0c15-4eda-b160-ac06d1d86992")
+	)
+	(pad "2" smd rect
+		(at 2.225 0)
+		(size 1.05 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5de954b0-83f4-44e0-8ce0-69daf62b2943")
+	)
+	(embedded_fonts no)
+)
