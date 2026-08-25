@@ -1,14 +1,14 @@
 (footprint "Choc-1-50U-LED"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "1.50U Kailh Choc footprint with non-addressable monochromatic backlight LED")
 	(property "Reference" "SWAtari1"
 		(at 0 -3.12 0)
 		(layer "Cmts.User")
 		(hide yes)
-		(uuid "273780ab-94de-460f-aa96-53f287023fa8")
+		(uuid "04b37457-9931-4786-9a96-20c820e1410c")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 		(at 4.7625 13.462 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6e6039bd-b297-4e69-af5b-55d0e18824ad")
+		(uuid "1ad82cc4-efb1-4bc5-a1de-68ba7714c52e")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1d670bd8-2b36-4889-995e-1577bfadd276")
+		(uuid "7a77e817-9b9e-4145-99bd-b382ef904273")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44,7 +44,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0f195fb7-6080-47b2-8c69-b968077fa34f")
+		(uuid "1b6c1b62-7c6b-424a-93e8-ec8a2ec95d56")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "95c7af4e-f126-4a3a-a333-5481043985e2")
+		(uuid "f6e02cee-8957-4c08-a74b-7d8b96a99cdf")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -68,7 +68,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "63e1e361-7351-42b0-8e91-4eca86251754")
+		(uuid "a8585f52-6bf0-4fdb-8016-fea7da17eb91")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -76,6 +76,7 @@
 			)
 		)
 	)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start 0.61 -0.51)
 		(end 1.26 -0.51)
@@ -84,7 +85,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "1d84cbd8-6bc8-4995-88f1-cfb17d4d4fec")
+		(uuid "a97dacae-c21c-4b2e-a9cb-9666d07df798")
 	)
 	(fp_line
 		(start 0.61 0.52)
@@ -94,7 +95,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "f62379e7-bcef-4c5f-9639-95da940dc078")
+		(uuid "ac5d5965-6153-4df5-9462-70add1d2b181")
 	)
 	(fp_line
 		(start 1.26 -0.51)
@@ -104,7 +105,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "dda50f86-38f4-4cd2-aab6-d0362ef6e65a")
+		(uuid "63790d65-1d90-4c7d-87e9-fb82479ef5f0")
 	)
 	(fp_line
 		(start 1.26 0.52)
@@ -114,7 +115,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "18c2d117-ed78-4fde-8a56-0ce367ee2958")
+		(uuid "c9cc1faa-b206-46a4-99fa-47ad7f404ba4")
 	)
 	(fp_line
 		(start -13 -2.75)
@@ -124,7 +125,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "d1b136a1-8e73-4bdb-b1d0-c99b7b1acefa")
+		(uuid "d7f27933-84ea-4a62-93ca-f398de1c3fbb")
 	)
 	(fp_line
 		(start -13 13.25)
@@ -134,7 +135,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "fcbde2d5-99e8-416d-a64d-ce0fe8d4e059")
+		(uuid "4b8cb640-f978-4043-96b8-a93f6f6b29d5")
 	)
 	(fp_line
 		(start 13 -2.75)
@@ -144,7 +145,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "50a1250c-d363-4dc8-8938-5bd2a9474e9a")
+		(uuid "af1bf6c3-f333-4c2c-be18-88e87755ad3e")
 	)
 	(fp_line
 		(start 13 13.25)
@@ -154,7 +155,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "4c8b17b1-716e-47e3-b4ab-ee917e76d137")
+		(uuid "eafea35d-c32c-4591-9621-0c8c4dccda36")
 	)
 	(fp_line
 		(start -6.35 -1.27)
@@ -164,7 +165,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "c17bf4c9-8b16-427f-98e0-1f087eae104e")
+		(uuid "1c7de5ec-07a8-4cc8-9fdf-f9ab50690cc6")
 	)
 	(fp_line
 		(start -6.35 11.43)
@@ -174,7 +175,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "44e672ef-d262-4c75-a307-9ab8ede7386c")
+		(uuid "1d5d56d2-161f-41da-874e-f6f89bc4a06d")
 	)
 	(fp_line
 		(start 6.35 -1.27)
@@ -184,7 +185,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "55a3ed1b-4512-440b-a324-1037905f482a")
+		(uuid "78592930-d4fb-400e-8e77-de0f36ecc2fc")
 	)
 	(fp_line
 		(start 6.35 11.43)
@@ -194,28 +195,28 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "f16e6f8b-4913-455a-850c-aea472432d4f")
+		(uuid "c92adc11-3469-4ec0-9364-9392f28fcd18")
 	)
 	(pad "" np_thru_hole oval
 		(at -5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "419803ff-d19d-4e8e-86ac-efa8ec845311")
+		(uuid "d3a5928f-3b9f-4ba6-bcd7-5c846b3f585d")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 5.08 180)
 		(size 5.25 5.25)
 		(drill 5.25)
 		(layers "*.Cu" "*.Mask")
-		(uuid "80826756-3830-4599-b0a9-07718c65658e")
+		(uuid "572c4e97-dd98-47c3-a059-dd5e72f1a9fb")
 	)
 	(pad "" np_thru_hole oval
 		(at 5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "1424766b-99c7-4155-94bd-40e058e35306")
+		(uuid "62fe91db-060d-4042-a480-e563ba0cd8f6")
 	)
 	(pad "1" thru_hole circle
 		(at 0 10.98 90)
@@ -223,7 +224,7 @@
 		(drill 1.2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "5c17e787-fac2-4cff-b8a7-67df3d97690b")
+		(uuid "0a278fa4-2655-46cf-82d8-1821cf0ae49d")
 	)
 	(pad "2" thru_hole circle
 		(at -5 8.88 270)
@@ -231,19 +232,30 @@
 		(drill 1.2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "bd68e69b-a5db-4b7c-b684-c01b0f1d2947")
+		(uuid "443560f5-6d45-4272-80f9-e9a46ab4f094")
 	)
 	(pad "3" smd rect
 		(at 0.75 0 90)
 		(size 0.8 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "184c1629-a553-4537-8f19-d45003f06462")
+		(uuid "971680f9-45bb-4faf-9a01-5b91a1b5fe30")
 	)
 	(pad "4" smd rect
 		(at -0.75 0 90)
 		(size 0.8 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "13737537-5cdd-4050-91b9-0aeaa2d87a7a")
+		(uuid "8636ca33-93de-497c-872a-cf2566abfe1c")
 	)
 	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

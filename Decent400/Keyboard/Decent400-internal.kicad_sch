@@ -18231,7 +18231,7 @@
 				)
 			)
 		)
-		(property "Value" "Caps"
+		(property "Value" "SW_LED"
 			(at 222.25 85.344 0)
 			(hide yes)
 			(show_name no)
@@ -18275,7 +18275,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 222.25 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -18286,7 +18286,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 222.25 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -18297,18 +18297,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 222.25 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 222.25 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -18379,7 +18368,7 @@
 				)
 			)
 		)
-		(property "Value" "LessThan"
+		(property "Value" "SW_LED"
 			(at 184.15 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -18423,7 +18412,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -18434,7 +18423,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -18445,18 +18434,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -18571,29 +18549,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 90.17 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 90.17 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 90.17 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -18604,7 +18560,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 90.17 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -18713,29 +18669,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -18746,7 +18680,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -18811,7 +18745,7 @@
 				)
 			)
 		)
-		(property "Value" "P"
+		(property "Value" "SW_LED"
 			(at 165.1 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -18855,7 +18789,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -18866,7 +18800,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -18877,18 +18811,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -18959,7 +18882,7 @@
 				)
 			)
 		)
-		(property "Value" "Return"
+		(property "Value" "SW_LED"
 			(at 222.25 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -19003,7 +18926,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "90"
 			(at 222.25 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -19014,7 +18937,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "90"
+		(property "LCSC Part #" "C2290"
 			(at 222.25 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -19025,18 +18948,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 222.25 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 222.25 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -19151,29 +19063,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 191.77 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 191.77 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 191.77 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -19184,7 +19074,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 191.77 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -19289,40 +19179,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -19431,29 +19299,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -19464,7 +19310,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -19529,7 +19375,7 @@
 				)
 			)
 		)
-		(property "Value" "Break"
+		(property "Value" "SW_LED"
 			(at 69.85 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -19573,7 +19419,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 69.85 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -19584,7 +19430,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 69.85 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -19595,18 +19441,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 69.85 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 69.85 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -19723,40 +19558,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -19865,29 +19678,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 223.52 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 223.52 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 223.52 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -19898,7 +19689,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 223.52 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -20009,7 +19800,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C720647"
+		(property "FT Rotation Offset" "270"
 			(at 34.29 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20020,29 +19811,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "270"
-			(at 34.29 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 34.29 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C720647"
 			(at 34.29 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20150,40 +19919,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 78.74 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 78.74 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 78.74 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 78.74 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 78.74 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -20294,40 +20041,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 97.79 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 97.79 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 97.79 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 97.79 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 97.79 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -20436,29 +20161,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 71.12 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 71.12 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 71.12 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -20469,7 +20172,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 71.12 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -20578,29 +20281,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 223.52 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 223.52 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 223.52 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -20611,7 +20292,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 223.52 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -20722,40 +20403,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -20820,7 +20479,7 @@
 				)
 			)
 		)
-		(property "Value" "Shift"
+		(property "Value" "SW_LED"
 			(at 69.85 113.284 0)
 			(hide yes)
 			(show_name no)
@@ -20864,7 +20523,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 69.85 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -20875,7 +20534,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 69.85 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -20886,18 +20545,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 69.85 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 69.85 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -20968,7 +20616,7 @@
 				)
 			)
 		)
-		(property "Value" "7"
+		(property "Value" "SW_LED"
 			(at 88.9 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -21012,7 +20660,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 88.9 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -21023,7 +20671,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 88.9 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -21034,18 +20682,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 88.9 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 88.9 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -21116,7 +20753,7 @@
 				)
 			)
 		)
-		(property "Value" "Tab"
+		(property "Value" "SW_LED"
 			(at 222.25 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -21160,7 +20797,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 222.25 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -21171,7 +20808,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 222.25 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -21182,18 +20819,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 222.25 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 222.25 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -21310,40 +20936,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 231.14 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 231.14 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 231.14 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 231.14 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 231.14 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -21453,40 +21057,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -21595,29 +21177,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -21628,7 +21188,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -21739,40 +21299,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -21883,40 +21421,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -22025,29 +21541,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -22058,7 +21552,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -22123,7 +21617,7 @@
 				)
 			)
 		)
-		(property "Value" "E"
+		(property "Value" "SW_LED"
 			(at 165.1 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -22167,7 +21661,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -22178,7 +21672,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -22189,18 +21683,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -22271,7 +21754,7 @@
 				)
 			)
 		)
-		(property "Value" "Del"
+		(property "Value" "SW_LED"
 			(at 222.25 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -22315,7 +21798,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 222.25 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -22326,7 +21809,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 222.25 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -22337,18 +21820,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 222.25 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 222.25 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -22419,7 +21891,7 @@
 				)
 			)
 		)
-		(property "Value" "Plus"
+		(property "Value" "SW_LED"
 			(at 184.15 71.374 0)
 			(hide yes)
 			(show_name no)
@@ -22463,7 +21935,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -22474,7 +21946,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -22485,18 +21957,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -22611,29 +22072,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -22644,7 +22083,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -22709,7 +22148,7 @@
 				)
 			)
 		)
-		(property "Value" "G"
+		(property "Value" "SW_LED"
 			(at 127 85.344 0)
 			(hide yes)
 			(show_name no)
@@ -22753,7 +22192,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -22764,7 +22203,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -22775,18 +22214,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -22901,29 +22329,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -22934,7 +22340,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -23045,40 +22451,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -23189,40 +22573,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 97.79 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 97.79 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 97.79 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 97.79 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 97.79 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -23287,7 +22649,7 @@
 				)
 			)
 		)
-		(property "Value" "4"
+		(property "Value" "SW_LED"
 			(at 146.05 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -23331,7 +22693,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -23342,7 +22704,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -23353,18 +22715,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -23479,29 +22830,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -23512,7 +22841,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -23577,7 +22906,7 @@
 				)
 			)
 		)
-		(property "Value" "Slash"
+		(property "Value" "SW_LED"
 			(at 184.15 99.314 0)
 			(hide yes)
 			(show_name no)
@@ -23621,7 +22950,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -23632,7 +22961,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -23643,18 +22972,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -23769,29 +23087,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 90.17 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 90.17 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 90.17 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -23802,7 +23098,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 90.17 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -23867,7 +23163,7 @@
 				)
 			)
 		)
-		(property "Value" "N"
+		(property "Value" "SW_LED"
 			(at 88.9 99.314 0)
 			(hide yes)
 			(show_name no)
@@ -23911,7 +23207,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -23922,7 +23218,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -23933,18 +23229,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 88.9 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -24061,40 +23346,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -24159,7 +23422,7 @@
 				)
 			)
 		)
-		(property "Value" "Z"
+		(property "Value" "SW_LED"
 			(at 203.2 113.284 0)
 			(hide yes)
 			(show_name no)
@@ -24203,7 +23466,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -24214,7 +23477,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -24225,18 +23488,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -24353,40 +23605,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 231.14 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 231.14 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 231.14 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 231.14 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 231.14 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -24497,40 +23727,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -24639,29 +23847,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -24672,7 +23858,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -24737,7 +23923,7 @@
 				)
 			)
 		)
-		(property "Value" "Q"
+		(property "Value" "SW_LED"
 			(at 203.2 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -24781,7 +23967,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -24792,7 +23978,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -24803,18 +23989,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -24929,29 +24104,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -24962,7 +24115,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -25071,29 +24224,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -25104,7 +24235,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -25169,7 +24300,7 @@
 				)
 			)
 		)
-		(property "Value" "U"
+		(property "Value" "SW_LED"
 			(at 88.9 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -25213,7 +24344,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -25224,7 +24355,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -25235,18 +24366,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 88.9 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -25361,29 +24481,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -25394,7 +24492,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -25503,29 +24601,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -25536,7 +24612,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -25645,29 +24721,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 90.17 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 90.17 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 90.17 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -25678,7 +24732,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 90.17 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -25787,29 +24841,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 71.12 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 71.12 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 71.12 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -25820,7 +24852,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 71.12 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -25929,29 +24961,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 109.22 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 109.22 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 109.22 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -25962,7 +24972,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 109.22 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -26027,7 +25037,7 @@
 				)
 			)
 		)
-		(property "Value" "Semicolon"
+		(property "Value" "SW_LED"
 			(at 165.1 71.374 0)
 			(hide yes)
 			(show_name no)
@@ -26071,7 +25081,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -26082,7 +25092,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -26093,18 +25103,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -26219,29 +25218,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -26252,7 +25229,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -26361,29 +25338,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -26394,7 +25349,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -26503,29 +25458,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -26536,7 +25469,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -26645,29 +25578,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -26678,7 +25589,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -26743,7 +25654,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "SW_LED"
 			(at 146.05 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -26787,7 +25698,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -26798,7 +25709,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -26809,18 +25720,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -26935,29 +25835,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -26968,7 +25846,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -27079,40 +25957,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -27223,40 +26079,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 78.74 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 78.74 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 78.74 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 78.74 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 78.74 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -27367,40 +26201,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -27465,7 +26277,7 @@
 				)
 			)
 		)
-		(property "Value" "T"
+		(property "Value" "SW_LED"
 			(at 127 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -27509,7 +26321,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -27520,7 +26332,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -27531,18 +26343,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -27613,7 +26414,7 @@
 				)
 			)
 		)
-		(property "Value" "5"
+		(property "Value" "SW_LED"
 			(at 127 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -27657,7 +26458,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -27668,7 +26469,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -27679,18 +26480,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -27807,40 +26597,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 97.79 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 97.79 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 97.79 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 97.79 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 97.79 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -27951,40 +26719,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 231.14 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 231.14 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 231.14 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 231.14 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 231.14 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -28095,40 +26841,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 97.79 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 97.79 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 97.79 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 97.79 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 97.79 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -28239,40 +26963,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -28337,7 +27039,7 @@
 				)
 			)
 		)
-		(property "Value" "Shift"
+		(property "Value" "SW_LED"
 			(at 69.85 103.124 0)
 			(hide yes)
 			(show_name no)
@@ -28381,7 +27083,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 69.85 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -28392,7 +27094,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 69.85 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -28403,18 +27105,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 69.85 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 69.85 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -28485,7 +27176,7 @@
 				)
 			)
 		)
-		(property "Value" "Control"
+		(property "Value" "SW_LED"
 			(at 69.85 71.374 0)
 			(hide yes)
 			(show_name no)
@@ -28529,7 +27220,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 69.85 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -28540,7 +27231,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 69.85 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -28551,18 +27242,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 69.85 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 69.85 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -28677,29 +27357,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -28710,7 +27368,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -28821,40 +27479,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -28919,7 +27555,7 @@
 				)
 			)
 		)
-		(property "Value" "Comma"
+		(property "Value" "SW_LED"
 			(at 146.05 99.314 0)
 			(hide yes)
 			(show_name no)
@@ -28963,7 +27599,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -28974,7 +27610,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -28985,18 +27621,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -29067,7 +27692,7 @@
 				)
 			)
 		)
-		(property "Value" "Select"
+		(property "Value" "SW_LED"
 			(at 207.01 147.574 0)
 			(hide yes)
 			(show_name no)
@@ -29111,7 +27736,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 207.01 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -29122,7 +27747,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 207.01 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -29133,18 +27758,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 207.01 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 207.01 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -29253,29 +27867,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 208.28 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 208.28 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 208.28 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -29286,7 +27878,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 208.28 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -29391,40 +27983,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -29535,40 +28105,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -29678,40 +28226,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -29776,7 +28302,7 @@
 				)
 			)
 		)
-		(property "Value" "Space"
+		(property "Value" "SW_LED"
 			(at 107.95 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -29820,7 +28346,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -29831,7 +28357,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -29842,18 +28368,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 107.95 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -29924,7 +28439,7 @@
 				)
 			)
 		)
-		(property "Value" "6"
+		(property "Value" "SW_LED"
 			(at 88.9 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -29968,7 +28483,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 88.9 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -29979,7 +28494,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 88.9 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -29990,18 +28505,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 88.9 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 88.9 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -30116,29 +28620,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 224.79 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 224.79 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 224.79 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -30149,7 +28631,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 224.79 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -30252,29 +28734,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -30285,7 +28745,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -30350,7 +28810,7 @@
 				)
 			)
 		)
-		(property "Value" "B"
+		(property "Value" "SW_LED"
 			(at 127 113.284 0)
 			(hide yes)
 			(show_name no)
@@ -30394,7 +28854,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -30405,7 +28865,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -30416,18 +28876,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -30542,29 +28991,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 223.52 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 223.52 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 223.52 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -30575,7 +29002,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 223.52 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -30640,7 +29067,7 @@
 				)
 			)
 		)
-		(property "Value" "I"
+		(property "Value" "SW_LED"
 			(at 127 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -30684,7 +29111,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -30695,7 +29122,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -30706,18 +29133,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -30832,29 +29248,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 71.12 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 71.12 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 71.12 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -30865,7 +29259,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 71.12 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -30930,7 +29324,7 @@
 				)
 			)
 		)
-		(property "Value" "Period"
+		(property "Value" "SW_LED"
 			(at 165.1 99.314 0)
 			(hide yes)
 			(show_name no)
@@ -30974,7 +29368,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -30985,7 +29379,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -30996,18 +29390,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -31078,7 +29461,7 @@
 				)
 			)
 		)
-		(property "Value" "Dash"
+		(property "Value" "SW_LED"
 			(at 184.15 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -31122,7 +29505,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -31133,7 +29516,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -31144,18 +29527,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -31272,40 +29644,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 231.14 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 231.14 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 231.14 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 231.14 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 231.14 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -31414,29 +29764,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -31447,7 +29775,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -31558,40 +29886,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -31702,40 +30008,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 97.79 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 97.79 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 97.79 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 97.79 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 97.79 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -31846,40 +30130,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -31988,29 +30250,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -32021,7 +30261,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -32132,40 +30372,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -32274,29 +30492,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 71.12 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 71.12 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 71.12 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -32307,7 +30503,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 71.12 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -32416,29 +30612,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -32449,7 +30623,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -32560,40 +30734,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -32658,7 +30810,7 @@
 				)
 			)
 		)
-		(property "Value" "2"
+		(property "Value" "SW_LED"
 			(at 184.15 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -32702,7 +30854,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -32713,7 +30865,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -32724,18 +30876,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -32850,29 +30991,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -32883,7 +31002,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -32948,7 +31067,7 @@
 				)
 			)
 		)
-		(property "Value" "M"
+		(property "Value" "SW_LED"
 			(at 127 99.314 0)
 			(hide yes)
 			(show_name no)
@@ -32992,7 +31111,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -33003,7 +31122,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -33014,18 +31133,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -33142,40 +31250,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -33240,7 +31326,7 @@
 				)
 			)
 		)
-		(property "Value" "Y"
+		(property "Value" "SW_LED"
 			(at 88.9 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -33284,7 +31370,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -33295,7 +31381,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -33306,18 +31392,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -33432,29 +31507,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -33465,7 +31518,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -33576,40 +31629,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -33674,7 +31705,7 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "SW_LED"
 			(at 165.1 85.344 0)
 			(hide yes)
 			(show_name no)
@@ -33718,7 +31749,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -33729,7 +31760,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -33740,18 +31771,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -33822,7 +31842,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "SW_LED"
 			(at 165.1 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -33866,7 +31886,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -33877,7 +31897,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -33888,18 +31908,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -34014,29 +32023,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -34047,7 +32034,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -34158,40 +32145,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -34302,40 +32267,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 173.99 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 173.99 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 173.99 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 173.99 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 173.99 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -34446,40 +32389,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -34544,7 +32465,7 @@
 				)
 			)
 		)
-		(property "Value" "S"
+		(property "Value" "SW_LED"
 			(at 184.15 85.344 0)
 			(hide yes)
 			(show_name no)
@@ -34588,7 +32509,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -34599,7 +32520,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -34610,18 +32531,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -34736,29 +32646,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -34769,7 +32657,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -34880,40 +32768,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -35022,29 +32888,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -35055,7 +32899,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -35120,7 +32964,7 @@
 				)
 			)
 		)
-		(property "Value" "3"
+		(property "Value" "SW_LED"
 			(at 165.1 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -35164,7 +33008,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -35175,7 +33019,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -35186,18 +33030,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -35314,40 +33147,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -35456,29 +33267,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -35489,7 +33278,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -35598,29 +33387,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -35631,7 +33398,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -35696,7 +33463,7 @@
 				)
 			)
 		)
-		(property "Value" "9"
+		(property "Value" "SW_LED"
 			(at 146.05 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -35740,7 +33507,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -35751,7 +33518,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -35762,18 +33529,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -35844,7 +33600,7 @@
 				)
 			)
 		)
-		(property "Value" "Option"
+		(property "Value" "SW_LED"
 			(at 223.52 147.574 0)
 			(hide yes)
 			(show_name no)
@@ -35888,7 +33644,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 223.52 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -35899,7 +33655,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 223.52 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -35910,18 +33666,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 223.52 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 223.52 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -35971,9 +33716,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "b53cedd6-2089-4fd9-8367-472df4eef4bb")
 		(property "Reference" "J1"
@@ -36020,39 +33765,6 @@
 		)
 		(property "Description" "Generic connector, single row, 01x24, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 105.41 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Part #" ""
-			(at 105.41 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 105.41 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 105.41 147.32 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36237,29 +33949,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -36270,7 +33960,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -36379,29 +34069,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 185.42 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 185.42 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 185.42 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -36412,7 +34080,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 185.42 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -36523,40 +34191,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -36667,40 +34313,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 116.84 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 116.84 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 116.84 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 116.84 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 116.84 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -36809,29 +34433,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 90.17 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 90.17 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 90.17 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -36842,7 +34444,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 90.17 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -36953,40 +34555,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 193.04 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 193.04 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 193.04 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 193.04 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 193.04 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37051,7 +34631,7 @@
 				)
 			)
 		)
-		(property "Value" "Reset"
+		(property "Value" "SW_LED"
 			(at 240.03 147.574 0)
 			(hide yes)
 			(show_name no)
@@ -37095,7 +34675,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 240.03 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -37106,7 +34686,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 240.03 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -37117,18 +34697,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 240.03 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 240.03 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -37193,7 +34762,7 @@
 				)
 			)
 		)
-		(property "Value" "H"
+		(property "Value" "SW_LED"
 			(at 107.95 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -37237,7 +34806,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 107.95 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -37248,7 +34817,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 107.95 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -37259,18 +34828,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 107.95 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 107.95 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -37341,7 +34899,7 @@
 				)
 			)
 		)
-		(property "Value" "K"
+		(property "Value" "SW_LED"
 			(at 127 71.374 0)
 			(hide yes)
 			(show_name no)
@@ -37385,7 +34943,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37396,7 +34954,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37407,18 +34965,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37533,29 +35080,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 109.22 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 109.22 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 109.22 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -37566,7 +35091,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 109.22 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -37631,7 +35156,7 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "SW_LED"
 			(at 146.05 71.374 0)
 			(hide yes)
 			(show_name no)
@@ -37675,7 +35200,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37686,7 +35211,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37697,18 +35222,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37825,40 +35339,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -37969,40 +35461,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -38067,7 +35537,7 @@
 				)
 			)
 		)
-		(property "Value" "8"
+		(property "Value" "SW_LED"
 			(at 127 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -38111,7 +35581,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 127 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -38122,7 +35592,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 127 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -38133,18 +35603,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 127 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 127 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -38215,7 +35674,7 @@
 				)
 			)
 		)
-		(property "Value" "J"
+		(property "Value" "SW_LED"
 			(at 107.95 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -38259,7 +35718,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 107.95 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -38270,7 +35729,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 107.95 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -38281,18 +35740,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 107.95 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 107.95 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -38363,7 +35811,7 @@
 				)
 			)
 		)
-		(property "Value" "V"
+		(property "Value" "SW_LED"
 			(at 146.05 113.284 0)
 			(hide yes)
 			(show_name no)
@@ -38407,7 +35855,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -38418,7 +35866,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -38429,18 +35877,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -38556,40 +35993,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -38698,29 +36113,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -38731,7 +36124,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -38842,40 +36235,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 231.14 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 231.14 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 231.14 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 231.14 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 231.14 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -38940,7 +36311,7 @@
 				)
 			)
 		)
-		(property "Value" "Start"
+		(property "Value" "SW_LED"
 			(at 190.5 147.574 0)
 			(hide yes)
 			(show_name no)
@@ -38984,7 +36355,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 190.5 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -38995,7 +36366,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 190.5 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -39006,18 +36377,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 190.5 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 190.5 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -39082,7 +36442,7 @@
 				)
 			)
 		)
-		(property "Value" "1"
+		(property "Value" "SW_LED"
 			(at 203.2 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -39126,7 +36486,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39137,7 +36497,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39148,18 +36508,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39274,29 +36623,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 223.52 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 223.52 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 223.52 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -39307,7 +36634,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 223.52 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -39418,40 +36745,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 116.84 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 116.84 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 116.84 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 116.84 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 116.84 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -39516,7 +36821,7 @@
 				)
 			)
 		)
-		(property "Value" "Esc"
+		(property "Value" "SW_LED"
 			(at 222.25 29.464 0)
 			(hide yes)
 			(show_name no)
@@ -39560,7 +36865,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 222.25 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39571,7 +36876,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 222.25 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39582,18 +36887,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 222.25 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 222.25 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39710,40 +37004,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -39808,7 +37080,7 @@
 				)
 			)
 		)
-		(property "Value" "Star"
+		(property "Value" "SW_LED"
 			(at 203.2 71.374 0)
 			(hide yes)
 			(show_name no)
@@ -39852,7 +37124,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -39863,7 +37135,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -39874,18 +37146,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -40002,40 +37263,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 78.74 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 78.74 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 78.74 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 78.74 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 78.74 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -40146,40 +37385,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -40290,40 +37507,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -40388,7 +37583,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "SW_LED"
 			(at 165.1 113.284 0)
 			(hide yes)
 			(show_name no)
@@ -40432,7 +37627,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 165.1 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -40443,7 +37638,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 165.1 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -40454,18 +37649,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 165.1 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 165.1 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -40580,29 +37764,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -40613,7 +37775,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -40678,7 +37840,7 @@
 				)
 			)
 		)
-		(property "Value" "W"
+		(property "Value" "SW_LED"
 			(at 184.15 57.404 0)
 			(hide yes)
 			(show_name no)
@@ -40722,7 +37884,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -40733,7 +37895,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -40744,18 +37906,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -40870,29 +38021,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -40903,7 +38032,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -41014,40 +38143,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 212.09 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 212.09 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 212.09 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 212.09 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 212.09 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -41156,29 +38263,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 166.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 166.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 166.37 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -41189,7 +38274,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 166.37 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -41300,40 +38385,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 135.89 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 135.89 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 135.89 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 135.89 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 135.89 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -41444,40 +38507,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -41588,40 +38629,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -41730,29 +38749,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -41763,7 +38760,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -41872,29 +38869,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 241.3 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 241.3 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 241.3 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -41905,7 +38880,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 241.3 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -42010,40 +38985,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 154.94 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 154.94 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 154.94 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 154.94 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 154.94 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -42108,7 +39061,7 @@
 				)
 			)
 		)
-		(property "Value" "Equal"
+		(property "Value" "SW_LED"
 			(at 203.2 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -42152,7 +39105,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -42163,7 +39116,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -42174,18 +39127,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -42300,29 +39242,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -42333,7 +39253,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -42398,7 +39318,7 @@
 				)
 			)
 		)
-		(property "Value" "F"
+		(property "Value" "SW_LED"
 			(at 146.05 85.344 0)
 			(hide yes)
 			(show_name no)
@@ -42442,7 +39362,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -42453,7 +39373,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -42464,18 +39384,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -42592,40 +39501,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2128"
-			(at 116.84 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 116.84 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
-			(at 116.84 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Rotation Offset" ""
+			(at 116.84 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
 			(at 116.84 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -42734,29 +39621,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 147.32 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 147.32 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 147.32 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -42767,7 +39632,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 147.32 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -42876,29 +39741,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 90.17 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 90.17 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 90.17 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -42909,7 +39752,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 90.17 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -43018,29 +39861,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 109.22 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 109.22 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 109.22 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -43051,7 +39872,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 109.22 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -43116,7 +39937,7 @@
 				)
 			)
 		)
-		(property "Value" "A"
+		(property "Value" "SW_LED"
 			(at 203.2 85.344 0)
 			(hide yes)
 			(show_name no)
@@ -43160,7 +39981,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -43171,7 +39992,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -43182,18 +40003,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -43308,29 +40118,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 223.52 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 223.52 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 223.52 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -43341,7 +40129,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 223.52 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -43450,29 +40238,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 204.47 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 204.47 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 204.47 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -43483,7 +40249,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 204.47 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -43548,7 +40314,7 @@
 				)
 			)
 		)
-		(property "Value" "X"
+		(property "Value" "SW_LED"
 			(at 184.15 113.284 0)
 			(hide yes)
 			(show_name no)
@@ -43592,7 +40358,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -43603,7 +40369,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -43614,18 +40380,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 184.15 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -43740,29 +40495,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
-			(at 128.27 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 128.27 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Origin" ""
+		(property "FT Rotation Offset" ""
 			(at 128.27 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -43773,7 +40506,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" ""
+		(property "LCSC Part #" "C25076"
 			(at 128.27 27.94 90)
 			(hide yes)
 			(show_name no)
@@ -43838,7 +40571,7 @@
 				)
 			)
 		)
-		(property "Value" "Atari"
+		(property "Value" "SW_LED"
 			(at 203.2 99.314 0)
 			(hide yes)
 			(show_name no)
@@ -43882,7 +40615,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -43893,7 +40626,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -43904,18 +40637,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -43986,7 +40708,7 @@
 				)
 			)
 		)
-		(property "Value" "GreaterThan"
+		(property "Value" "SW_LED"
 			(at 203.2 15.494 0)
 			(hide yes)
 			(show_name no)
@@ -44030,7 +40752,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 203.2 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -44041,7 +40763,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 203.2 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -44052,18 +40774,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 203.2 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 203.2 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -44134,7 +40845,7 @@
 				)
 			)
 		)
-		(property "Value" "O"
+		(property "Value" "SW_LED"
 			(at 146.05 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -44178,7 +40889,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C193191"
+		(property "FT Rotation Offset" "180"
 			(at 146.05 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -44189,7 +40900,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Rotation Offset" "180"
+		(property "LCSC Part #" "C2290"
 			(at 146.05 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -44200,18 +40911,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
-			(at 146.05 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FT Rotation Offset" ""
+		(property "FT Position Offset" "0,5.85"
 			(at 146.05 48.26 0)
 			(hide yes)
 			(show_name no)
