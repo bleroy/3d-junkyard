@@ -40,3 +40,4 @@ DecentCart/Media/harryfatt.otf
 *.kicad_prl
 Thumbs.db
 .history
+*.af~lock~
