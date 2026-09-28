@@ -498,7 +498,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "DecentXE-plate-modern.kicad_pro",
+    "filename": "DecentXE-plate-modern-low-cost.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -535,7 +535,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Fabrication/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

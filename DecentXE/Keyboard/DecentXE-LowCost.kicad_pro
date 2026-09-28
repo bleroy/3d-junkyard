@@ -594,7 +594,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "",
+    "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -742,7 +742,7 @@
         "uuid": "2f215f15-3d52-4c91-93e6-3ea03a95622f"
       }
     ],
-    "used_designators": "",
+    "used_designators": "H1-2",
     "variants": []
   },
   "sheets": [
