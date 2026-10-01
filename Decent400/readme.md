@@ -1,22 +1,24 @@
 # Decent 400 mechanical keyboard replacement for Atari 400 computers
 
-![The Decent 400 keyboard](./Media/Decent400i.jpg)
+![The Decent 400 keyboard](./Media/Decent400-low-pro.jpg)
 
 If you always wished the Atari 400 had a real keyboard, this is the project for you.
 
 There's been a number of aftermarket keyboards for the Atari 400, but they all faced a big issue: the original membrane "keyboard"'s "keys" are much smaller than standard key caps. There just isn't enough space in the case for a sane layout with full-sized keys. It took a lot of attempts before coming up with the realization that there was an untapped degree of freedom in the design: the spacing of the keys. This is even more true of low-profile key caps, and given how infinitely taller MX switches and caps are compared to the original membrane thing, it made sense to try to build the Decent400 as a low-profile mechanical keyboard. I was finally able in late 2025 to fit the original layout of the computer in its very small space, with modern switches.
 
-There was one final obstacle though, which is that as I ḿ writing this readme, no company in the world will print low-profile key caps. My only option was to somehow find a way to do it myself. When I heard about the [Eufymake](https://www.eufymake.com/) kickstarter for a UV printer capable of transferring a full-color design onto any material, it was clear it could be the last piece to the puzzle. It was a big investment, but I bet on it and waited and waited and waited. Finally, the printer arrived and check this out:
+There was one final obstacle though, which is that as I'm writing this readme, no company in the world will print custom low-profile key caps. My only option was to somehow find a way to do it myself. When I heard about the [Eufymake](https://www.eufymake.com/) kickstarter for a UV printer capable of transferring a full-color design onto any material, it was clear it could be the last piece to the puzzle. It was a big investment, but I bet on it and waited and waited and waited. Finally, the printer arrived and check this out:
 
-** photos here **
+![Side-by-side comparison with the vintage membrane](./Media/Decent400-low-pro-side-by-side.jpg)
 
-![Side view of the Decent400](./Media/Decent400i-flush.jpg)
+It even has the relief white outline on each key, a very satisfying detail...
+
+The keyboard can be built with your choice of Kailh Choc v1 switches. I prefer the clicky Robins myself, but perfectly good tactile and linear options do exist if that's your preference.
 
 If you're looking to modify an XE computer, head over to [the DecentXE project](../Atari130MX/). For 600XL and 800XL keyboards, go to [the DecentXL project](../DecentXL/). For the 1200XL keyboard, go to [the Decent1200 project](../Decent1200/). For the 800, go to [the Decent800 project](../Decent800/).
 
 ## Current version
 
-The current revision of the Decent 400 keyboard is: rev. 4.2i.
+The current revision of the Decent 400 keyboard is: rev. 5.
 
 ## Can I buy one?
 
@@ -66,14 +68,14 @@ The project is designed around the conservation of the vintage look of the Atari
 
 ### Key caps
 
-The key caps are the hardest part to source because at the time of writing, nobodyś printing custom low-profile caps.
+The key caps are the hardest part to source because at the time of writing, nobody's printing custom low-profile caps.
 
 As UV printers are becoming relatively affordable, it has become possible to print blank caps at home.
 
-You'll need a set of blank caps that can be printed in a Eufymake UV printer.
-I'm providing a set of templates and printing support to make it easier to get conistent results.
+You'll need a set of blank caps that can be printed in a UV printer.
+I'm providing a set of templates and printing support to make it easier to get consistent results.
 
-[![The Decent 400 modern layout](./Caps/Decent_Atari_400_REAL400_Black_MakerPreview.png)](./Caps/Decent400-EufyMake.svg)
+![Bird-eye view of the Decent400](./Media/Decent400-low-pro-above.jpg)
 
 The space bar key cap is almost impossible to source and must be [printed with black filament](./Caps/SpaceBar-Choc-v1-6U25.3mf).
 
@@ -88,7 +90,7 @@ Make sure you order the correct low-profile stabilizers.
 
 ### PCB
 
-Use [the Gerber](./Keyboard/production/Decent400_keyboard_4.2i.zip), [BOM](./Keyboard/production/bom.csv) and [position](./Keyboard/production/positions.csv) files to order a PCB with all the SMD parts assembled.
+Use [the Gerber](./Keyboard/production/Decent400_keyboard_5.zip), [BOM](./Keyboard/production/bom.csv) and [position](./Keyboard/production/positions.csv) files to order a PCB with all the SMD parts assembled.
 
 ![The Decent400 PCB](./Media/Decent400i-keyboard-front.png)
 
@@ -185,8 +187,6 @@ Connect the two power lines to the remaining two pins on the connector board.
 Close the case, making sure to hold the keyboard while you're doing it and screw it shut. Now would be a good time to add those console key caps.
 
 Congratulations, you're done! Turn your computer on and enjoy your mechanical keyboard. It's a good idea to go into BASIC and check every key works. There are also [keyboard testers](https://forums.atariage.com/index.php?app=core&module=attach&section=attach&attach_rel_module=post&attach_id=443022) that will allow for a complete check.
-
-![Turning it on](./Media/Decent400i-on.jpg)
 
 ## Troubleshooting
 
