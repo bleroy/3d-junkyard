@@ -18,7 +18,7 @@ How expensive is it? It depends on what you're ordering, but this is a made-to-o
 
 ## Project history
 
-This is a brand new design that uses a lot of lessons learned from building the [DecentXE](https://github.com/bleroy/3d-junkyard/tree/main/Atari130MX) and the [award-winning DecentXL](https://github.com/bleroy/3d-junkyard/tree/main/DecentXL), but adapts to the specificities of the 800.
+This is a brand new design that uses a lot of lessons learned from building the [DecentXE](https://github.com/bleroy/3d-junkyard/tree/main/DecentXE) and the [award-winning DecentXL](https://github.com/bleroy/3d-junkyard/tree/main/DecentXL), but adapts to the specificities of the 800.
 
 ## Options
 
@@ -39,9 +39,9 @@ With any type of switch, there is a wide array of choices. If you're new to the 
 The Decent 800 project is made of the following parts (this is not a BOM but a list of custom parts created for this project; see below for the actual BOM):
 
 * A PCB with adjustable blue backlighting.
-* An aluminum plate to hold the switches firmly aligned and rigidify the assembly.
+* An aluminum or FR4 plate to hold the switches firmly aligned and rigidify the assembly.
 * A custom set of MX-compatible modern key caps.
-* Four 3D-printed small brackets.
+* Two 3D-printed brackets.
 * Cables.
 
 ## Bill of materials
@@ -56,7 +56,7 @@ The project is designed around the conservation of the vintage look of the Atari
 
 ### Key caps
 
-You'll need a set of caps that you can order from me or from GoblinTech.
+You'll need a set of caps that you can order from me or from ThockFactory.
 
 ![The Decent 800 modern layout](./Media/decent_atari_800_charcoalmakerpreview.png)
 
@@ -76,7 +76,7 @@ Use [the Gerber](./Keyboard/production/Decent800_keyboard_3M.zip), [BOM](./Keybo
 
 ### Plate
 
-The plate is just an aluminum PCB. Download [the Gerber](./Plate/production/Decent800_Rev3M.zip) and have it produced in 1.6mm aluminum. I recommend having this done in black even though it's more expensive because the default white is very visible between the caps.
+The plate is just an aluminum or FR4 PCB. Download [the Gerber](./Plate/production/Decent800_Rev3M.zip) and have it produced in 1.6mm aluminum or FR4. I recommend having this done in black even if it's more expensive because the default white is very visible between the caps.
 
 ![Decent 800 aluminum plate](./Media/Decent800M-plate.png)
 
@@ -136,11 +136,10 @@ Once the top of the case is free, carefully lift it and unplug the keyboard cabl
 
 Carefully unscrew the old keyboard from the top of the case. Leave the "pull open" part in place (unlike what's on the photo below, that was a mistake).
 
-Get the new keyboard in place under the top of the case. The fit is very tight as the plate should actually enter the hole and only the main PCB should remain visible.
+Add the two brackets around the PCB and plate, then carefully add the resulting assembly over the four columns around the keyboard opening.
+Secure with the four original screws.
 
 ![Positioning the new keyboard in the case](./Media/Decent800-assembly.jpg)
-
-Add the four printed parts to hold the keyboard in place like on the above photo.
 
 ### Connect the LED power lines
 
