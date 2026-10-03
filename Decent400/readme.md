@@ -10,7 +10,7 @@ There was one final obstacle though, which is that as I'm writing this readme, n
 
 ![Side-by-side comparison with the vintage membrane](./Media/Decent400-low-pro-side-by-side.jpg)
 
-It even has the relief white outline on each key, a very satisfying detail...
+It even has the raised white outline on each key, a very satisfying detail...
 
 The keyboard can be built with your choice of Kailh Choc v1 switches. I prefer the clicky Robins myself, but perfectly good tactile and linear options do exist if that's your preference.
 
