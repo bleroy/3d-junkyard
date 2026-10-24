@@ -1,14 +1,14 @@
-(footprint "Choc-1-00U-LED"
-	(version 20241229)
+(footprint "Choc-1-00U"
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "1U Kailh Choc footprint with non-addressable monochromatic backlight LED")
+	(descr "1U Kailh Choc footprint")
 	(property "Reference" "REF**"
 		(at 0 -3.12 0)
 		(layer "Cmts.User")
 		(hide yes)
-		(uuid "9c97db98-dfe2-455c-80b1-cf93c801bc35")
+		(uuid "2915ef73-e182-4914-af86-792394b527d5")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 		(at 4.7625 13.462 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1b4c13d1-006a-417b-92e7-8e372f30505c")
+		(uuid "908fea2a-da0e-482a-aa38-da60a83a6d9c")
 		(effects
 			(font
 				(size 1 1)
@@ -33,7 +33,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "43a40772-43e9-4096-868a-e955a5e5857b")
+		(uuid "e859d8f3-092f-4f20-910f-8c7fb52b0642")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -46,7 +46,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "a99bc00c-6b77-4e5f-b3e1-e4929601985d")
+		(uuid "c46a343e-c5f7-4df2-a539-6085028cf712")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -55,46 +55,7 @@
 		)
 	)
 	(attr smd)
-	(fp_line
-		(start 0.61 -0.51)
-		(end 1.26 -0.51)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "073e9e38-2c54-4192-93f6-99e3fb0d76dd")
-	)
-	(fp_line
-		(start 0.61 0.52)
-		(end 1.26 0.52)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "a8b55198-8aa1-4962-a70a-6a6a6171f91a")
-	)
-	(fp_line
-		(start 1.26 -0.51)
-		(end 1.26 -0.37)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "4b7f679a-1832-4ca5-bcd1-abe7f52d64c7")
-	)
-	(fp_line
-		(start 1.26 0.52)
-		(end 1.26 0.38)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "5fdba211-1c00-43f1-92dd-20af90eca0f9")
-	)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -9.525 -4.445)
 		(end 9.525 -4.445)
@@ -103,7 +64,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "49915c20-7948-4f12-8042-adfcd9782917")
+		(uuid "6e7a6854-3387-4216-9e39-2602cc233519")
 	)
 	(fp_line
 		(start -9.525 14.605)
@@ -113,7 +74,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "31661a0e-1491-413b-954a-1bcd23432c00")
+		(uuid "e29980da-ff62-4717-a99d-0aa01cb14cc0")
 	)
 	(fp_line
 		(start 9.525 -4.445)
@@ -123,7 +84,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "05ed6cf6-c26c-498c-a604-8fdfd32d16b5")
+		(uuid "83f407f8-f855-45b6-b9fc-f1b293472a45")
 	)
 	(fp_line
 		(start 9.525 14.605)
@@ -133,7 +94,7 @@
 			(type solid)
 		)
 		(layer "Dwgs.User")
-		(uuid "763a8ac4-32c4-4735-99a3-ad91d6d9ff14")
+		(uuid "3febc6ac-dac0-43fb-82c0-433de23c2e6a")
 	)
 	(fp_line
 		(start -6.35 -1.27)
@@ -143,7 +104,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "803281fc-e640-4023-a307-31a70548e948")
+		(uuid "04c65104-83b3-4b3b-846f-22f13ced8ea5")
 	)
 	(fp_line
 		(start -6.35 11.43)
@@ -153,7 +114,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "096b1bd1-8dba-452e-a7eb-8591c488fdfe")
+		(uuid "b72332de-43a4-43b1-b35e-55a9bb90dfa6")
 	)
 	(fp_line
 		(start 6.35 -1.27)
@@ -163,7 +124,7 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "e80cff32-a262-497c-b723-ce152c86f4bd")
+		(uuid "6b7092ab-b8a0-4ca8-8d4c-1e81dcdfd501")
 	)
 	(fp_line
 		(start 6.35 11.43)
@@ -173,28 +134,28 @@
 			(type solid)
 		)
 		(layer "Cmts.User")
-		(uuid "271e2a9e-9fd3-4206-8475-685d594f8011")
+		(uuid "55020233-c108-4af1-9d75-f5998b84712e")
 	)
 	(pad "" np_thru_hole oval
 		(at -5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "c3dce679-dc24-4a58-a047-bed22d504c96")
+		(uuid "4e5fd3a1-42a3-47c6-ad5e-f1b4c315766f")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 5.08 180)
-		(size 5.25 5.25)
-		(drill 5.25)
+		(size 3.5 3.5)
+		(drill 3.5)
 		(layers "*.Cu" "*.Mask")
-		(uuid "5d6da4ec-71f9-44db-a119-f2c22d474ba1")
+		(uuid "727c9884-9c58-4906-9206-bfc907e7dbb3")
 	)
 	(pad "" np_thru_hole oval
 		(at 5.33 5.08 270)
 		(size 1.8 2.2)
 		(drill oval 1.8 2.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "72aa79b7-b60a-4ee7-9f29-0e9c46e2712d")
+		(uuid "261bee28-61ef-4cbc-bc30-63d43efeebd3")
 	)
 	(pad "1" thru_hole circle
 		(at -5 8.88)
@@ -202,7 +163,7 @@
 		(drill 1.4986)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "d66f0618-b22b-4dba-be10-76e1c17d543c")
+		(uuid "26489b5e-0b1b-4fc3-8575-85bfb80c3473")
 	)
 	(pad "2" thru_hole circle
 		(at 0 10.98 90)
@@ -210,19 +171,18 @@
 		(drill 1.4986)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "949f8304-cb62-4014-8dc3-9146e947ad99")
-	)
-	(pad "3" smd rect
-		(at 0.75 0 90)
-		(size 0.8 0.8)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "daee1fbd-030c-4152-a4c1-3548ae1d5fad")
-	)
-	(pad "4" smd rect
-		(at -0.75 0 90)
-		(size 0.8 0.8)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "9f565822-f307-4eb0-afe4-4ee11e8bf37e")
+		(uuid "cb2676f0-4458-4602-b7d2-4cc481b12f85")
 	)
 	(embedded_fonts no)
+	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/KEY-TH_CPG135001D0X.step"
+		(offset
+			(xyz 0 -5 3)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
 )

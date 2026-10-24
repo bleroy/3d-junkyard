@@ -1,0 +1,127 @@
+(footprint "1.5U Atari Console Key Stabilizer holes"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "df08da46-3928-4a69-a6ab-b356dc1d7904")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "1.5U Stab"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "072d62a2-2558-4325-beda-9f30d22bae16")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c913c7f5-ae93-46dc-8127-787d204be87f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "345d5d09-a1c8-41c3-9d0f-b533adca3521")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -23.8125 9.525)
+		(end -4.7625 -9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "36493a32-2cdf-4797-8b4e-cf1a8b4a82fb")
+	)
+	(fp_line
+		(start -4.7625 -9.525)
+		(end 23.8125 -9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7ea8e116-b9b0-4a9f-a8ad-79dd066a836e")
+	)
+	(fp_line
+		(start 4.7625 9.525)
+		(end -23.8125 9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c15aedcc-ad23-4de0-bca3-0b43929eb06b")
+	)
+	(fp_line
+		(start 23.8125 -9.525)
+		(end 4.7625 9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a90d7746-6061-42e3-9787-09739ee109fa")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 4.7625 12.025 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5367314c-0a2a-42f9-9e84-27954ba108ba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -10.95 4.535 180)
+		(size 6 6)
+		(drill 6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "2726b023-2c40-434d-ba7b-263da55332fa")
+	)
+	(pad "" np_thru_hole circle
+		(at 10.95 -4.535 180)
+		(size 6 6)
+		(drill 6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "fcb7fa6f-05ba-4499-ba8b-d086ff34e051")
+	)
+	(embedded_fonts no)
+)
