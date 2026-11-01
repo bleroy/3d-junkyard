@@ -9379,8 +9379,8 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C3646938"
-			(at 242.57 135.89 0)
+		(property "FT Origin" ""
+			(at 242.57 135.89 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9390,7 +9390,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
+		(property "LCSC Part #" "C559117"
 			(at 242.57 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -9481,17 +9481,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 20.32 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 20.32 24.13 0)
 			(hide yes)
@@ -9503,7 +9492,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 20.32 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -9594,17 +9583,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 20.32 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 20.32 38.1 0)
 			(hide yes)
@@ -9616,7 +9594,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 20.32 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9707,17 +9685,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 20.32 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 20.32 52.07 0)
 			(hide yes)
@@ -9729,7 +9696,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 20.32 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -9820,17 +9787,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 20.32 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 20.32 66.04 0)
 			(hide yes)
@@ -9842,7 +9798,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 20.32 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -9933,17 +9889,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 39.37 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 39.37 80.01 0)
 			(hide yes)
@@ -9955,7 +9900,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 39.37 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -10046,17 +9991,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 39.37 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 39.37 93.98 0)
 			(hide yes)
@@ -10068,7 +10002,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 39.37 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10159,17 +10093,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 39.37 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 39.37 107.95 0)
 			(hide yes)
@@ -10181,7 +10104,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 39.37 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -10272,17 +10195,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 39.37 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 39.37 121.92 0)
 			(hide yes)
@@ -10294,7 +10206,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 39.37 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -10385,17 +10297,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 20.32 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 20.32 107.95 0)
 			(hide yes)
@@ -10407,7 +10308,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 20.32 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -10498,17 +10399,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 80.01 0)
 			(hide yes)
@@ -10520,7 +10410,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -10611,17 +10501,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 93.98 0)
 			(hide yes)
@@ -10633,7 +10512,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10724,17 +10603,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 107.95 0)
 			(hide yes)
@@ -10746,7 +10614,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -10837,17 +10705,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 121.92 0)
 			(hide yes)
@@ -10859,7 +10716,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -10950,17 +10807,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 24.13 0)
 			(hide yes)
@@ -10972,7 +10818,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -11063,17 +10909,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 38.1 0)
 			(hide yes)
@@ -11085,7 +10920,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11176,17 +11011,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 52.07 0)
 			(hide yes)
@@ -11198,7 +11022,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -11289,17 +11113,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 58.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 58.42 66.04 0)
 			(hide yes)
@@ -11311,7 +11124,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 58.42 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -11402,17 +11215,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 80.01 0)
 			(hide yes)
@@ -11424,7 +11226,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -11515,17 +11317,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 93.98 0)
 			(hide yes)
@@ -11537,7 +11328,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11628,17 +11419,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 107.95 0)
 			(hide yes)
@@ -11650,7 +11430,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -11741,17 +11521,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 121.92 0)
 			(hide yes)
@@ -11763,7 +11532,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -11854,17 +11623,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 24.13 0)
 			(hide yes)
@@ -11876,7 +11634,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -11967,17 +11725,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 38.1 0)
 			(hide yes)
@@ -11989,7 +11736,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -12080,17 +11827,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 52.07 0)
 			(hide yes)
@@ -12102,7 +11838,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -12193,17 +11929,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 77.47 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 77.47 66.04 0)
 			(hide yes)
@@ -12215,7 +11940,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 77.47 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -12306,17 +12031,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 80.01 0)
 			(hide yes)
@@ -12328,7 +12042,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -12419,17 +12133,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 93.98 0)
 			(hide yes)
@@ -12441,7 +12144,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -12532,17 +12235,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 107.95 0)
 			(hide yes)
@@ -12554,7 +12246,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -12645,17 +12337,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 121.92 0)
 			(hide yes)
@@ -12667,7 +12348,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -12758,17 +12439,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 24.13 0)
 			(hide yes)
@@ -12780,7 +12450,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -12871,17 +12541,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 38.1 0)
 			(hide yes)
@@ -12893,7 +12552,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -12984,17 +12643,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 52.07 0)
 			(hide yes)
@@ -13006,7 +12654,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -13097,17 +12745,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 96.52 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 96.52 66.04 0)
 			(hide yes)
@@ -13119,7 +12756,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 96.52 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -13210,17 +12847,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 80.01 0)
 			(hide yes)
@@ -13232,7 +12858,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -13323,17 +12949,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 93.98 0)
 			(hide yes)
@@ -13345,7 +12960,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -13436,17 +13051,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 107.95 0)
 			(hide yes)
@@ -13458,7 +13062,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -13549,17 +13153,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 121.92 0)
 			(hide yes)
@@ -13571,7 +13164,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -13662,17 +13255,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 24.13 0)
 			(hide yes)
@@ -13684,7 +13266,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -13775,17 +13357,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 38.1 0)
 			(hide yes)
@@ -13797,7 +13368,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -13888,17 +13459,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 52.07 0)
 			(hide yes)
@@ -13910,7 +13470,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -14001,17 +13561,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 115.57 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 115.57 66.04 0)
 			(hide yes)
@@ -14023,7 +13572,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 115.57 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -14114,17 +13663,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 80.01 0)
 			(hide yes)
@@ -14136,7 +13674,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -14227,17 +13765,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 93.98 0)
 			(hide yes)
@@ -14249,7 +13776,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -14340,17 +13867,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 107.95 0)
 			(hide yes)
@@ -14362,7 +13878,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -14453,17 +13969,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 121.92 0)
 			(hide yes)
@@ -14475,7 +13980,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -14566,17 +14071,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 24.13 0)
 			(hide yes)
@@ -14588,7 +14082,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -14679,17 +14173,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 38.1 0)
 			(hide yes)
@@ -14701,7 +14184,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -14792,17 +14275,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 52.07 0)
 			(hide yes)
@@ -14814,7 +14286,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -14905,17 +14377,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 134.62 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 134.62 66.04 0)
 			(hide yes)
@@ -14927,7 +14388,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 134.62 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -15018,17 +14479,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 153.67 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 153.67 24.13 0)
 			(hide yes)
@@ -15040,7 +14490,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 153.67 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -15131,17 +14581,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 153.67 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 153.67 38.1 0)
 			(hide yes)
@@ -15153,7 +14592,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 153.67 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -15244,17 +14683,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 153.67 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 153.67 52.07 0)
 			(hide yes)
@@ -15266,7 +14694,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "270"
+		(property "FT Rotation Offset" "180"
 			(at 153.67 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -15357,17 +14785,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 153.67 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 153.67 66.04 0)
 			(hide yes)
@@ -15379,7 +14796,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 153.67 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -15470,17 +14887,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 153.67 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 153.67 93.98 0)
 			(hide yes)
@@ -15492,7 +14898,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 153.67 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -15583,17 +14989,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 172.72 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 172.72 24.13 0)
 			(hide yes)
@@ -15605,7 +15000,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 172.72 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -15696,17 +15091,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 172.72 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 172.72 80.01 0)
 			(hide yes)
@@ -15718,7 +15102,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 172.72 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -15809,17 +15193,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 172.72 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 172.72 121.92 0)
 			(hide yes)
@@ -15831,7 +15204,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 172.72 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -15922,17 +15295,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 26.67 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 26.67 152.4 0)
 			(hide yes)
@@ -15944,7 +15306,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 26.67 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -16035,17 +15397,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 43.18 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 43.18 152.4 0)
 			(hide yes)
@@ -16057,7 +15408,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 43.18 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -16148,17 +15499,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 59.69 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 59.69 152.4 0)
 			(hide yes)
@@ -16170,7 +15510,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 59.69 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -16261,17 +15601,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 76.2 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 76.2 152.4 0)
 			(hide yes)
@@ -16283,7 +15612,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 76.2 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -16374,17 +15703,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 172.72 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" "Anchor"
 			(at 172.72 111.76 0)
 			(hide yes)
@@ -16396,7 +15714,7 @@
 				)
 			)
 		)
-		(property "Rotation Offset" "180"
+		(property "FT Rotation Offset" "180"
 			(at 172.72 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -16489,17 +15807,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
-			(at 29.21 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "FT Origin" ""
 			(at 29.21 185.42 0)
 			(hide yes)
@@ -16541,7 +15848,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0848be2c-abea-4c7a-9783-f54eb5de425c")
 		(property "Reference" "TP7"
@@ -16620,7 +15927,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "086cc9fd-9e2e-4caa-a913-3f5d27367369")
 		(property "Reference" "TP18"
@@ -16777,7 +16084,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -16812,7 +16119,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0b69f46a-5f18-4816-9c68-504189b0c7a0")
 		(property "Reference" "J4"
@@ -16898,7 +16205,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0d4e1f84-0769-49f6-bc3f-9950232256e6")
 		(property "Reference" "TP14"
@@ -16977,7 +16284,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0fd8c443-711d-4196-91f1-c82e3ee2565d")
 		(property "Reference" "TP4"
@@ -17056,7 +16363,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "107657ef-03c0-435c-ac89-adfe35fc1593")
 		(property "Reference" "TP32"
 			(at 265.176 92.964 0)
@@ -17212,7 +16519,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -17247,7 +16554,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1aa84136-24a2-4d74-baee-98870041476d")
 		(property "Reference" "TP9"
@@ -17404,7 +16711,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 48.26 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -17517,7 +16824,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 162.56 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -17630,7 +16937,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -17665,7 +16972,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "299eb0fa-2c6c-4274-a015-411f9b6b7175")
 		(property "Reference" "TP30"
 			(at 273.558 72.644 90)
@@ -17821,7 +17128,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -17934,7 +17241,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -17969,7 +17276,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2fb9e934-50e0-4683-8566-e2de00152583")
 		(property "Reference" "TP17"
@@ -18259,7 +17566,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C152192"
+		(property "LCSC Part #" "C31540447"
 			(at 228.6 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -18390,7 +17697,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 48.26 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -18471,6 +17778,17 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
+			(at 273.05 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FT Rotation Offset" "180"
 			(at 273.05 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -18583,7 +17901,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 162.56 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -18696,7 +18014,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -18731,7 +18049,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "4e7494ed-33a6-4151-9d31-0a3bd684255d")
 		(property "Reference" "TP31"
 			(at 259.842 104.394 0)
@@ -18940,7 +18258,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25117"
+		(property "LCSC Part #" "C25117"
 			(at 100.33 170.18 90)
 			(hide yes)
 			(show_name no)
@@ -19053,7 +18371,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -19166,7 +18484,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -19279,7 +18597,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 162.56 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -19392,7 +18710,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -19505,7 +18823,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -19618,7 +18936,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 162.56 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -19731,7 +19049,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -19920,7 +19238,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "5acdf272-8175-4d3c-aeb0-58fe4c29241d")
 		(property "Reference" "TP29"
 			(at 247.396 72.644 90)
@@ -20074,7 +19392,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -20109,7 +19427,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5f62aefa-c921-46a5-8129-d9ad96ead25b")
 		(property "Reference" "TP16"
@@ -20188,7 +19506,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "609d6597-6f48-4f75-b030-a79f1b3464fa")
 		(property "Reference" "TP5"
@@ -20345,7 +19663,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -20458,7 +19776,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -20493,7 +19811,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6864ace3-71d8-4096-a139-8eb9f7ae00c8")
 		(property "Reference" "TP22"
@@ -20650,7 +19968,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 29.21 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -20685,7 +20003,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "6b32e178-d271-4da9-b750-100f2e3e6d99")
 		(property "Reference" "TP25"
 			(at 247.396 67.564 90)
@@ -20839,7 +20157,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 181.61 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -20874,7 +20192,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6f7673f9-2faf-412f-b33b-64820ff51d46")
 		(property "Reference" "TP23"
@@ -21107,7 +20425,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 48.26 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -21142,7 +20460,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7d71049f-b0b9-47bf-a18a-b7aa8b9811c2")
 		(property "Reference" "TP21"
@@ -21299,7 +20617,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 29.21 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -21334,7 +20652,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7ed756ee-f742-4bbc-989d-3555b5ab901c")
 		(property "Reference" "TP8"
@@ -21491,7 +20809,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -21604,7 +20922,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8596dec9-fb0f-45e0-85f1-5f26c855c262")
 		(property "Reference" "TP27"
 			(at 247.396 70.104 90)
@@ -21758,7 +21076,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 29.21 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -21871,7 +21189,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -21906,7 +21224,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "8a38c95e-a554-4c02-afe7-cc24f9ee18cd")
 		(property "Reference" "TP11"
@@ -22063,7 +21381,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -22098,7 +21416,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "8d229a13-9361-44dc-9266-025690f88f80")
 		(property "Reference" "TP13"
@@ -22331,7 +21649,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -22366,7 +21684,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "90defb78-3c18-4018-84ba-5ccec394cf89")
 		(property "Reference" "TP28"
 			(at 273.558 70.104 90)
@@ -22499,7 +21817,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25117"
+		(property "LCSC Part #" "C25117"
 			(at 254 100.33 90)
 			(hide yes)
 			(show_name no)
@@ -22667,6 +21985,17 @@
 				)
 			)
 		)
+		(property "FT Rotation Offset" "180"
+			(at 273.05 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "96d8213d-2a43-454d-9e6b-a6ffa851d047")
 		)
@@ -22738,6 +22067,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 213.36 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C1525"
+			(at 213.36 82.55 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22925,7 +22265,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -22960,7 +22300,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9f31197b-4378-4493-8a4e-f287948ef145")
 		(property "Reference" "TP12"
@@ -23039,7 +22379,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9f3841ac-6180-4457-a301-c1baa39040ce")
 		(property "Reference" "TP3"
@@ -23196,7 +22536,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -23385,7 +22725,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -23498,7 +22838,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -23533,7 +22873,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a56cad9a-3d45-43ae-aa4e-b873cf66e012")
 		(property "Reference" "TP20"
@@ -23690,7 +23030,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -23803,7 +23143,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b61ec5aa-079f-49e9-91aa-bacdebf9268e")
 		(property "Reference" "J1"
@@ -23895,7 +23235,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "b662b039-bda3-4068-9583-3c861c8313fd")
 		(property "Reference" "TP26"
 			(at 273.558 67.564 90)
@@ -24129,7 +23469,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 181.61 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -24242,7 +23582,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 48.26 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -24355,7 +23695,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c73a44f7-094b-400a-80c6-038211f02832")
 		(property "Reference" "TP24"
@@ -24512,7 +23852,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -24625,7 +23965,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -24660,7 +24000,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "cbb05e96-2f10-4c69-95c9-51fe40d72dc6")
 		(property "Reference" "J6"
 			(at 167.64 179.7051 90)
@@ -24897,7 +24237,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 29.21 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -24932,7 +24272,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "cf5061d2-a156-4e0d-b92a-299df026f19d")
 		(property "Reference" "TP1"
@@ -25011,7 +24351,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "cf91d410-8453-472e-ac52-0c4486396e91")
 		(property "Reference" "TP6"
@@ -25168,7 +24508,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -25281,7 +24621,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -25394,7 +24734,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -25485,7 +24825,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C8598"
+		(property "LCSC Part #" "C8598"
 			(at 148.59 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -25575,7 +24915,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C25076"
+		(property "LCSC Part #" "C25076"
 			(at 232.41 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -25764,7 +25104,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "dc873b46-7efc-42ab-b3bd-cf9215ed0341")
 		(property "Reference" "J5"
@@ -25928,7 +25268,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -26041,7 +25381,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 162.56 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -26154,7 +25494,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 86.36 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -26189,7 +25529,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e283713f-201e-421e-b8bc-33d57d67c324")
 		(property "Reference" "TP19"
@@ -26323,8 +25663,8 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2915299"
-			(at 82.55 181.61 0)
+		(property "FT Origin" ""
+			(at 82.55 181.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26334,7 +25674,7 @@
 				)
 			)
 		)
-		(property "FT Origin" ""
+		(property "LCSC Part #" "C2915299"
 			(at 82.55 181.61 90)
 			(hide yes)
 			(show_name no)
@@ -26595,7 +25935,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -26708,7 +26048,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 29.21 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -26743,7 +26083,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e9432171-8fc1-4b8c-bfef-2b24086a4d3b")
 		(property "Reference" "TP15"
@@ -26900,7 +26240,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -27013,7 +26353,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -27126,7 +26466,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -27239,7 +26579,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -27352,7 +26692,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 143.51 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -27465,7 +26805,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 67.31 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -27578,7 +26918,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -27613,7 +26953,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "f9277a95-02be-4105-a081-4a361e1555ee")
 		(property "Reference" "TP2"
 			(at 137.668 184.912 0)
@@ -27691,7 +27031,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f9e63ce4-c328-4873-bbd1-3d5647c435ab")
 		(property "Reference" "TP10"
@@ -27848,7 +27188,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 181.61 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -27961,7 +27301,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 105.41 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -28074,7 +27414,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C81598"
+		(property "LCSC Part #" "C81598"
 			(at 124.46 93.98 0)
 			(hide yes)
 			(show_name no)

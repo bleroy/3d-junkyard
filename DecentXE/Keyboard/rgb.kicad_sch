@@ -1205,7 +1205,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C1525"
+		(property "LCSC Part #" "C1525"
 			(at 68.58 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -1896,7 +1896,18 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C5149201"
+		(property "FT Rotation Offset" "180"
+			(at 43.18 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C5378731"
 			(at 43.18 44.45 0)
 			(hide yes)
 			(show_name no)
