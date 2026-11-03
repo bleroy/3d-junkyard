@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 321 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="Space-1" serif:id="Space 1" transform="matrix(0.24,0,0,0.24,-31.0394,-11.0551)">
-        <g id="Global-background" serif:id="Global background" transform="matrix(27.8051,0,0,2.88209,-3200.87,-381.554)">
-            <path d="M119.769,160.665C119.769,157.404 119.903,154.277 120.142,151.971C120.381,149.666 120.706,148.37 121.044,148.37L166.495,148.37C166.833,148.37 167.157,149.666 167.396,151.971C167.635,154.277 167.769,157.404 167.769,160.665L167.769,189.351C167.769,192.612 167.635,195.739 167.396,198.044C167.157,200.35 166.833,201.645 166.495,201.645L121.044,201.645C120.706,201.645 120.381,200.35 120.142,198.044C119.903,195.739 119.769,192.612 119.769,189.351L119.769,160.665Z" style="fill:rgb(230,230,230);"/>
+<svg
+   width="112.78379mm"
+   height="13mm"
+   viewBox="0 0 426.26945 49.133859"
+   version="1.1"
+   xml:space="preserve"
+   style="clip-rule:evenodd;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
+   id="svg9"
+   sodipodi:docname="Spacebar-wide.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:serif="http://www.serif.com/"><defs
+   id="defs13" /><sodipodi:namedview
+   id="namedview11"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:document-units="mm"
+   inkscape:zoom="3.7694704"
+   inkscape:cx="159.96942"
+   inkscape:cy="18.570248"
+   inkscape:window-width="3424"
+   inkscape:window-height="1401"
+   inkscape:window-x="0"
+   inkscape:window-y="126"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg9" />
+    <g
+   id="Space-1"
+   serif:id="Space 1"
+   transform="matrix(0.31999993,0,0,0.31999993,-41.384913,-14.740032)">
+        <g
+   id="Global-background"
+   serif:id="Global background"
+   transform="matrix(27.8051,0,0,2.88209,-3200.87,-381.554)">
+            <path
+   d="m 119.769,160.665 c 0,-3.261 0.134,-6.388 0.373,-8.694 0.239,-2.305 0.564,-3.601 0.902,-3.601 h 45.451 c 0.338,0 0.662,1.296 0.901,3.601 0.239,2.306 0.373,5.433 0.373,8.694 v 28.686 c 0,3.261 -0.134,6.388 -0.373,8.693 -0.239,2.306 -0.563,3.601 -0.901,3.601 h -45.451 c -0.338,0 -0.663,-1.295 -0.902,-3.601 -0.239,-2.305 -0.373,-5.432 -0.373,-8.693 z"
+   style="fill:#e6e6e6"
+   id="path2" />
         </g>
-        <g id="Bottom-background" serif:id="Bottom background" transform="matrix(31.3532,0,0,2.88209,-3710.56,-381.554)">
-            <path d="M163.909,151.649C164.366,151.649 164.737,155.685 164.737,160.665C164.737,168.925 164.737,181.09 164.737,189.351C164.737,194.33 164.366,198.367 163.909,198.367C158.559,198.367 128.951,198.367 123.601,198.367C123.143,198.367 122.772,194.33 122.772,189.351C122.772,181.09 122.772,168.925 122.772,160.665C122.772,155.685 123.143,151.649 123.601,151.649C128.951,151.649 158.559,151.649 163.909,151.649Z" style="fill:rgb(92,60,28);"/>
+        <g
+   id="Bottom-background"
+   serif:id="Bottom background"
+   transform="matrix(31.3532,0,0,2.88209,-3710.56,-381.554)">
+            <path
+   d="m 163.909,151.649 c 0.457,0 0.828,4.036 0.828,9.016 0,8.26 0,20.425 0,28.686 0,4.979 -0.371,9.016 -0.828,9.016 -5.35,0 -34.958,0 -40.308,0 -0.458,0 -0.829,-4.037 -0.829,-9.016 0,-8.261 0,-20.426 0,-28.686 0,-4.98 0.371,-9.016 0.829,-9.016 5.35,0 34.958,0 40.308,0 z"
+   style="fill:#5c3c1c"
+   id="path5" />
         </g>
     </g>
 </svg>
