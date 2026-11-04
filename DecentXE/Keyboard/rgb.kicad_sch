@@ -867,10 +867,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5379e4af-40c6-4733-8836-89113c83b6eb")
+			(uuid "4092ac38-4b14-4a81-bd4b-b46362d0f21a")
 		)
 		(instances
-			(project "DecentXE-LowPro"
+			(project "DecentXE-Rainbow.kicad_pro"
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/0441d5a0-ecac-4b5b-9834-10635263fd2d"
 					(reference "#PWR058")
 					(unit 1)
@@ -893,6 +893,10 @@
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2ad863f3-1e0a-4cf6-b99b-c2e6193779ca"
 					(reference "#PWR086")
+					(unit 1)
+				)
+				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2cd4f1b5-fde1-465b-a2e5-46fbb6342453"
+					(reference "#PWR0142")
 					(unit 1)
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2e7d1ffe-c059-4b89-a7a2-7245af302121"
@@ -1217,13 +1221,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "7f62034e-4aae-4a0f-bc62-8ac48d54f376")
+			(uuid "c6438bc6-59d3-44f0-bfc2-1065d0f8cf67")
 		)
 		(pin "2"
-			(uuid "bc637690-94c7-45fe-a69f-775087b2bb7c")
+			(uuid "5785a203-b686-495b-8391-822af65a8992")
 		)
 		(instances
-			(project "DecentXE-LowPro"
+			(project "DecentXE-Rainbow.kicad_pro"
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/0441d5a0-ecac-4b5b-9834-10635263fd2d"
 					(reference "C27")
 					(unit 1)
@@ -1246,6 +1250,10 @@
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2ad863f3-1e0a-4cf6-b99b-c2e6193779ca"
 					(reference "C41")
+					(unit 1)
+				)
+				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2cd4f1b5-fde1-465b-a2e5-46fbb6342453"
+					(reference "C68")
 					(unit 1)
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2e7d1ffe-c059-4b89-a7a2-7245af302121"
@@ -1558,10 +1566,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "7cbc55a1-63e8-494b-881a-ed89775e4a2c")
+			(uuid "1c8df9f0-16bb-47e3-9a80-535e852614dc")
 		)
 		(instances
-			(project "DecentXE-LowPro"
+			(project "DecentXE-Rainbow.kicad_pro"
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/0441d5a0-ecac-4b5b-9834-10635263fd2d"
 					(reference "#PWR057")
 					(unit 1)
@@ -1584,6 +1592,10 @@
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2ad863f3-1e0a-4cf6-b99b-c2e6193779ca"
 					(reference "#PWR085")
+					(unit 1)
+				)
+				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2cd4f1b5-fde1-465b-a2e5-46fbb6342453"
+					(reference "#PWR0141")
 					(unit 1)
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2e7d1ffe-c059-4b89-a7a2-7245af302121"
@@ -1919,19 +1931,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "70e02469-294e-4290-a0de-94dffecadb6b")
+			(uuid "993549bc-3f22-4123-a214-594a36932a92")
 		)
 		(pin "4"
-			(uuid "be06a89d-b6c3-436f-92a7-2b4db5fe2757")
+			(uuid "5f80d234-664f-4637-9144-75790db05677")
 		)
 		(pin "3"
-			(uuid "d99c1f56-39f7-4fe8-b88f-c3fbe81f3c4c")
+			(uuid "cf2d1029-12d3-4ed6-81f6-99338b094389")
 		)
 		(pin "2"
-			(uuid "4d70a84c-5d6a-44b5-98db-7b5874a9700f")
+			(uuid "dd486dd9-68b5-4d4e-aed6-84d2f377d808")
 		)
 		(instances
-			(project "DecentXE-LowPro"
+			(project "DecentXE-Rainbow.kicad_pro"
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/0441d5a0-ecac-4b5b-9834-10635263fd2d"
 					(reference "D28")
 					(unit 1)
@@ -1954,6 +1966,10 @@
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2ad863f3-1e0a-4cf6-b99b-c2e6193779ca"
 					(reference "D42")
+					(unit 1)
+				)
+				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2cd4f1b5-fde1-465b-a2e5-46fbb6342453"
+					(reference "D126")
 					(unit 1)
 				)
 				(path "/2f215f15-3d52-4c91-93e6-3ea03a95622f/2e7d1ffe-c059-4b89-a7a2-7245af302121"

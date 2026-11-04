@@ -1,0 +1,212 @@
+(footprint "Choc-1-50U-Atari-Console"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "1.5U Kailh Choc low-pro footprint with Atari function key outline")
+	(property "Reference" "REF**"
+		(at 0 -3.12 0)
+		(layer "Cmts.User")
+		(hide yes)
+		(uuid "54cd49bc-5f00-4ecb-b883-48f27e1b3d8d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Choc"
+		(at 0 13.462 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2669ff5a-24e9-43f6-b8f2-be2ad2f374c2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "37136431-0627-44f7-9340-159285a57b7a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7e06f34b-5ff5-4656-b09b-abf3433159b7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -23.8125 9.525)
+		(end -4.7625 -9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f852e506-8800-47ae-b77d-6ca1d1ca4703")
+	)
+	(fp_line
+		(start -4.7625 -9.525)
+		(end 23.8125 -9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a227c050-85dc-46f2-8226-1efb84aebb00")
+	)
+	(fp_line
+		(start 4.7625 9.525)
+		(end -23.8125 9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bcbbae66-6af5-4090-94f1-8749d2bcc69a")
+	)
+	(fp_line
+		(start 23.8125 -9.525)
+		(end 4.7625 9.525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "48d9d8a0-cdd2-4cc5-b09d-2a41574b863c")
+	)
+	(fp_line
+		(start -23.8 9.52)
+		(end 23.7 -9.48)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "dd602297-ee9e-4dbb-9c98-cb0c8e4a5d2d")
+	)
+	(fp_line
+		(start -6.35 -6.35)
+		(end 6.35 -6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "28f6f6fd-f22e-43ee-9891-07a051369b76")
+	)
+	(fp_line
+		(start -6.35 6.35)
+		(end -6.35 -6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "0be07b9c-8140-4383-a05e-f878a77422e4")
+	)
+	(fp_line
+		(start 6.35 -6.35)
+		(end 6.35 6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "21870c96-de2a-4084-9183-eed070fe0b69")
+	)
+	(fp_line
+		(start 6.35 6.35)
+		(end -6.35 6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "e05fb9e1-f6b3-45f5-b737-e22dad66e9fa")
+	)
+	(pad "" np_thru_hole circle
+		(at -10.95 4.535 180)
+		(size 6 6)
+		(drill 6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "668f0392-78e6-4559-9134-1e6663d0775e")
+	)
+	(pad "" np_thru_hole oval
+		(at -5.33 0 270)
+		(size 1.8 2.2)
+		(drill oval 1.8 2.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f0e983f9-ed8e-4d41-8661-e7f08382fab1")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0 180)
+		(size 3.5 3.5)
+		(drill 3.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "2671858e-34c6-475e-abed-1e13940b4866")
+	)
+	(pad "" np_thru_hole oval
+		(at 5.33 0 270)
+		(size 1.8 2.2)
+		(drill oval 1.8 2.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "604a255f-774a-4eae-9539-f129cc0c33d8")
+	)
+	(pad "" np_thru_hole circle
+		(at 10.95 -4.535 180)
+		(size 6 6)
+		(drill 6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "b089ae63-0c0d-4d29-a904-7e5ad771599d")
+	)
+	(pad "1" thru_hole circle
+		(at -5 3.8)
+		(size 2.5 2.5)
+		(drill 1.4986)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e95267e8-1c66-43ba-89ad-c3922c5f426b")
+	)
+	(pad "2" thru_hole circle
+		(at 0 5.9 90)
+		(size 2.5 2.5)
+		(drill 1.4986)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "347d66b5-da8d-43f7-82f9-3768be9771a3")
+	)
+	(embedded_fonts no)
+	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/KEY-TH_CPG135001D0X.step"
+		(offset
+			(xyz 0 0 3)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
+)
