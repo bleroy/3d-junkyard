@@ -236,6 +236,7 @@ class UsbKeyboardMode(Mode):
         self.name = "USB Keyboard"
         self.keyboard = None
         self.keyboard_interface_address = None
+        self.buffer = array.array("b", [0]*8)
         self.char = ""
         self.control = False
         self.alt = False
@@ -246,65 +247,60 @@ class UsbKeyboardMode(Mode):
         pixels.fill(modulate(ORANGE, led_intensity))
         pixels[coordinates['Power'][2]] = modulate(RED, led_intensity)
         pixels.show()
-        print("Starting USB discovery")
+        log("Starting USB discovery")
         # HID protocol reference: https://usb.org/sites/default/files/hid1_11.pdf
         for device in usb.core.find(find_all=True):
-            config_descriptor = adafruit_usb_host_descriptors.get_configuration_descriptor(
-                device, 0
-            )
-
-            i = 0
-            while i < len(config_descriptor):
-                descriptor_len = config_descriptor[i]
-                descriptor_type = config_descriptor[i + 1]
-                if descriptor_type == adafruit_usb_host_descriptors.DESC_INTERFACE:
-                    interface_protocol = config_descriptor[i + 7]
-                    if interface_protocol == 1 and self.keyboard == None:
-                        log(f"{device.product}")
-                        self.keyboard = device
-                elif descriptor_type == adafruit_usb_host_descriptors.DESC_ENDPOINT:
-                    endpoint_address = config_descriptor[i + 2]
-                    if (endpoint_address & DIR_IN) and device == self.keyboard and interface_protocol == 1:
-                        self.keyboard_interface_address = endpoint_address
-                i += descriptor_len
+            kbd_interface_index, self.keyboard_interface_address = adafruit_usb_host_descriptors.find_boot_keyboard_endpoint(device)
+            self.keyboard = device
 
         if self.keyboard != None and self.keyboard_interface_address != None:
+            log(f"{device.product} keyboard found...")
+            # detach device from kernel if needed
+            if self.keyboard.is_kernel_driver_active(0):
+                self.keyboard.detach_kernel_driver(0)
             self.keyboard.set_configuration()
+        else:
+            log("Keyboard not found...")
+        log("Discovery done")
+
     def loop(self):
         if self.keyboard != None:
             try:
-                buffer = array.array("i", range(1))
+                self.keyboard.read(self.keyboard_interface_address, self.buffer, timeout=10)
+                current_modifier = self.buffer[0]
+                #log(str(current_modifier)) if current_modifier != 0 else None
 
-                self.keyboard.read(self.keyboard_interface_address, buffer)
-                current_raw_code = buffer[0]
-                print(current_raw_code) if current_raw_code != 0 else None
+                for i in range(2, 8):
+                    current_key_code = self.buffer[i]
 
-                current_key_code = (current_raw_code & 0xFF0000) >> 16
-                current_modifier = current_raw_code & 0xFFFF
+                    # Skip if no key or error rollover
+                    if current_key_code in {0, 1}:
+                        continue
 
-                self.char = keymap[current_key_code] if current_key_code in keymap else ""
-                self.control = current_modifier & CONTROL != 0
-                self.alt = current_modifier & ALT != 0
-                self.shift = current_modifier & SHIFT != 0
-                self.win = current_modifier & WIN != 0
+                    self.char = keymap[current_key_code] if current_key_code in keymap else ""
+                    self.control = current_modifier & CONTROL != 0
+                    self.alt = current_modifier & ALT != 0
+                    self.shift = current_modifier & SHIFT != 0
+                    self.win = current_modifier & WIN != 0
 
-                if current_key_code != 0:
-                    ch(("CTRL + " if self.control else "") +
-                       ("ALT + " if self.alt else "") +
-                       ("SHIFT + " if self.shift else "") +
-                       ("WIN + " if self.win else "") +
-                       self.char if self.char != "" else "0x{:02x}".format(current_key_code))
-                if current_key_code in keymap:
-                    (_, _, led_index) = coordinates[keymap[current_key_code]]
-                    pixels[led_index] = modulate(GREEN, led_intensity)
-                if current_raw_code | 0x100 in keymap:
-                    (_, _, led_index) = coordinates[keymap[current_raw_code | 0x100]]
-                    pixels[led_index] = modulate(GREEN, led_intensity)
-                pixels.show()
+                    if current_key_code != 0:
+                        ch(("CTRL + " if self.control else "") +
+                        ("ALT + " if self.alt else "") +
+                        ("SHIFT + " if self.shift else "") +
+                        ("WIN + " if self.win else "") +
+                        self.char if self.char != "" else "0x{:02x}".format(current_key_code))
+                    if current_key_code in keymap:
+                        (_, _, led_index) = coordinates[keymap[current_key_code]]
+                        pixels[led_index] = modulate(GREEN, led_intensity)
+                    if current_key_code | 0x100 in keymap:
+                        (_, _, led_index) = coordinates[keymap[current_key_code | 0x100]]
+                        pixels[led_index] = modulate(GREEN, led_intensity)
+                    pixels.show()
 
             except usb.core.USBTimeoutError:
                 pass
             except usb.core.USBError:
+                log("Keyboard likely disconnected")
                 self.keyboard = None
                 self.keyboard_interface_address = None
 
@@ -700,7 +696,7 @@ class Atari1200XL(Scanning4051MatrixKeyboard):
                          '[{': '-_', ']}': '=|', "'\"": '+\\', 'Return': '*^', '\|': '<Return>', 'F11': '<Inverse>', 'F12': '<Break>',
                          'F6': '<F1>', 'F7': '<F2>', 'F8': '<F3>', 'F9': '<F4>', ',<': ',[', '.>': '.]'}
 
-modes = [AtariXE(), AtariXL(), Atari400(), Atari800(), Atari1200XL(), UsbKeyboardMode(), GhostInTheShell(), RadialRainbow()]
+modes = [UsbKeyboardMode(), AtariXE(), AtariXL(), Atari400(), Atari800(), Atari1200XL(), GhostInTheShell(), RadialRainbow()]
 current_mode = 0
 
 log("Decent Retro")
