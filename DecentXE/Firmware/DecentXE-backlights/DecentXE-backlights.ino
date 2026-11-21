@@ -13,8 +13,8 @@
 #include <EEPROM.h>
 #include <avr/pgmspace.h>
 
-// #define DECENTXE       // DecentXE Rainbow
-#define DECENTXE_LP     // DecentXE low-profile
+#define DECENTXE       // DecentXE Rainbow
+// #define DECENTXE_LP     // DecentXE low-profile
 // #define DECENTXL       // DecentXL Rainbow
 
 // #define DIAGNOSTICS_MODE // Uncomment to get diagnostics on some of the LEDs
@@ -36,10 +36,11 @@ enum effect
   RAINBOW_RTL = 4,
   RAINBOW_LTR = 5,
   RAINBOW_RADIAL = 6,
-  GHOST_IN_THE_SHELL = 7,
-  RANDOMIZED = 8
+  BEACH_BALL = 7,
+  GHOST_IN_THE_SHELL = 8,
+  RANDOMIZED = 9
 };
-#define MAX_EFFECT 8
+#define MAX_EFFECT 9
 
 #define RED     0
 #define YELLOW  6000
@@ -49,17 +50,28 @@ enum effect
 #define PURPLE  30000
 
 #if defined DECENTXE
-// TODO Add DecentXE board LED layout
-
-#elif defined DECENTXE_LP
-#define LED_COUNT 66
+#define LED_COUNT 67
 const uint8_t led_coords[LED_COUNT][2] PROGMEM = {
-  { 255, 0 }, { 228, 0 }, { 201, 0 }, { 174, 0 }, { 150, 0 },
+  { 255, 0 }, { 228, 0 }, { 201, 0 }, { 174, 0 }, { 148, 0 },
   { 0, 30 }, { 18, 30 }, { 36, 30 }, { 54, 30 }, { 72, 30 }, { 90, 30 }, { 107, 30 }, { 127, 30 }, { 143, 30 }, { 161, 30 }, { 179, 30 }, { 197, 30 }, { 215, 30 }, { 233, 30 }, { 251, 30 },
   { 246, 48 }, { 224, 48 }, { 206, 48 }, { 188, 48 }, { 170, 48 }, { 152, 48 }, { 134, 48 }, { 116, 48 }, { 99, 48 }, { 81, 48 }, { 63, 48 }, { 45, 48 }, { 27, 48 }, { 4, 48 },
   { 7, 66 }, { 31, 66 }, { 49, 66 }, { 67, 66 }, { 85, 66 }, { 103, 66 }, { 121, 66 }, { 139, 66 }, { 157, 66 }, { 175, 66 }, { 193, 66 }, { 210, 66 }, { 228, 66 }, { 249, 66 },
   { 251, 84 }, { 226, 84 }, { 202, 84 }, { 184, 84 }, { 166, 84 }, { 148, 84 }, { 130, 84 }, { 112, 84 }, { 94, 84 }, { 76, 84 }, { 58, 84 }, { 40, 84 }, { 16, 84 },
-  { 76, 102 }, { 101, 102 }, { 125, 102 }, { 150, 102 }, { 175, 102 }
+  { 76, 102 }, { 101, 102 }, { 125, 102 }, { 150, 102 }, { 175, 102 }, {180, 102}
+};
+#define CENTER_X 127
+#define CENTER_Y 60
+#define HEIGHT   102
+
+#elif defined DECENTXE_LP
+#define LED_COUNT 66
+const uint8_t led_coords[LED_COUNT][2] PROGMEM = {
+  { 255, 0 }, { 228, 0 }, { 201, 0 }, { 174, 0 }, { 148, 0 },
+  { 0, 30 }, { 18, 30 }, { 36, 30 }, { 54, 30 }, { 72, 30 }, { 90, 30 }, { 107, 30 }, { 127, 30 }, { 143, 30 }, { 161, 30 }, { 179, 30 }, { 197, 30 }, { 215, 30 }, { 242, 30 },
+  { 249, 57 }, {237, 46}, { 224, 48 }, { 206, 48 }, { 188, 48 }, { 170, 48 }, { 152, 48 }, { 134, 48 }, { 116, 48 }, { 99, 48 }, { 81, 48 }, { 63, 48 }, { 45, 48 }, { 27, 48 }, { 4, 48 },
+  { 7, 66 }, { 31, 66 }, { 49, 66 }, { 67, 66 }, { 85, 66 }, { 103, 66 }, { 121, 66 }, { 139, 66 }, { 157, 66 }, { 175, 66 }, { 193, 66 }, { 210, 66 }, { 228, 66 },
+  { 251, 84 }, { 226, 84 }, { 202, 84 }, { 184, 84 }, { 166, 84 }, { 148, 84 }, { 130, 84 }, { 112, 84 }, { 94, 84 }, { 76, 84 }, { 58, 84 }, { 40, 84 }, { 11, 84 },
+  {57, 102}, {72, 102}, { 99, 102 }, { 125, 102 }, { 152, 102 }, { 178, 102 }, { 194, 102 }
 };
 #define CENTER_X 127
 #define CENTER_Y 60
@@ -103,7 +115,7 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(LED_COUNT, PIXEL_PIN);
 // Converts a hue in hundredths of degrees (0-36000)) to an RGB pixel color
 uint32_t hue(uint16_t hue) 
 {
-  return pixels.ColorHSV(((uint32_t)hue << 16) / MAX_HUE, 255);
+  return pixels.ColorHSV(((uint32_t)hue << 16) / MAX_HUE, 255, 255);
 }
 
 // Converts RGB components into a pixel color
@@ -195,8 +207,17 @@ void loop()
       {
         float x = fetchCoord(i, 0) - CENTER_X;
         float y = fetchCoord(i, 1) - CENTER_Y;
-        uint8_t distFromCenter = (int)sqrt(x*x + y*y);
+        uint8_t distFromCenter = sqrt(x*x + y*y);
         pixels.setPixelColor(i, hue((((moment >> 2) + 255 - distFromCenter) * MAX_HUE / 255) % MAX_HUE));
+      }
+      break;
+    case BEACH_BALL:
+      for(int i=0; i < LED_COUNT; i++)
+      {
+        float x = 0.0 + fetchCoord(i, 0) - CENTER_X;
+        float y = 0.0 + fetchCoord(i, 1) - CENTER_Y;
+        uint16_t angle = atan2f(y, x) * MAX_HUE / M_PI + MAX_HUE;
+        pixels.setPixelColor(i, hue(((angle >> 1) + (moment << 4)) % MAX_HUE));
       }
       break;
     case GHOST_IN_THE_SHELL:
